@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DVLD
+namespace DVLD_PresentationLayer
 {
     internal static class Program
     {

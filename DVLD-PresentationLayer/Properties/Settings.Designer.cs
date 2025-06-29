@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DVLD.Properties
+namespace DVLD_PresentationLayer.Properties
 {
 
 

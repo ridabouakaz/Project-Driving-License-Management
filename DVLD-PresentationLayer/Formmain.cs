@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DVLD
+namespace DVLD_PresentationLayer
 {
-    public partial class Form1 : Form
+    public partial class Formmain : Form
     {
-        public Form1()
+        public Formmain()
         {
             InitializeComponent();
         }
