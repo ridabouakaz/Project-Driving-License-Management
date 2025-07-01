@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace DVLD_PresentationLayer
 {
-    public partial class Formmain : Form
+    public partial class Form1 : Form
     {
-        public Formmain()
+        public Form1()
         {
             InitializeComponent();
         }
-
     }
 }

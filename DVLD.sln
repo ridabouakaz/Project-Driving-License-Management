@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DVLD-BusinessLayer", "DVLD-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DVLD-DataAccessLayer", "DVLD-DataAccessLayer\DVLD-DataAccessLayer.csproj", "{89A4D1A7-F643-4ACA-89CE-81FC01AAD0C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DVLD-PresentationLayer", "DVLD-PresentationLayer\DVLD-PresentationLayer.csproj", "{BB110F58-EAAB-48DA-BDBA-E0016B46CAF5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DVLD-PresentationLayer", "DVLD-PresentationLayer\DVLD-PresentationLayer.csproj", "{466FB683-DD68-462E-993D-9FF0D64E58F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{89A4D1A7-F643-4ACA-89CE-81FC01AAD0C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89A4D1A7-F643-4ACA-89CE-81FC01AAD0C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89A4D1A7-F643-4ACA-89CE-81FC01AAD0C3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BB110F58-EAAB-48DA-BDBA-E0016B46CAF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BB110F58-EAAB-48DA-BDBA-E0016B46CAF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BB110F58-EAAB-48DA-BDBA-E0016B46CAF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BB110F58-EAAB-48DA-BDBA-E0016B46CAF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{466FB683-DD68-462E-993D-9FF0D64E58F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{466FB683-DD68-462E-993D-9FF0D64E58F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{466FB683-DD68-462E-993D-9FF0D64E58F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{466FB683-DD68-462E-993D-9FF0D64E58F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
