@@ -11,12 +11,13 @@ using Guna.UI2.WinForms;
 
 namespace DVLD_PresentationLayer
 {
-    public partial class Form1 : Form
+    public partial class FOmain : Form
     {
-        public Form1()
+        public FOmain()
         {
             InitializeComponent();
         }
 
+   
     }
 }
