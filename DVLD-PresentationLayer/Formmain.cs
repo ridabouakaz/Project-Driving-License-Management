@@ -7,17 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Guna.UI2.WinForms;
 
 namespace DVLD_PresentationLayer
 {
-    public partial class FOmain : Form
+    public partial class Formmain : Form
     {
-        public FOmain()
+        public Formmain()
         {
             InitializeComponent();
         }
 
-   
     }
 }

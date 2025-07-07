@@ -35,6 +35,10 @@ namespace DVLD_PresentationLayer
             this.SMItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.hiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SMItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.driversToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.acToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sadsaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,47 +47,79 @@ namespace DVLD_PresentationLayer
             this.menuStrip1.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
             this.menuStrip1.ForeColor = System.Drawing.Color.White;
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(64, 64);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.SMItem1,
-            this.SMItem2});
+            this.SMItem2,
+            this.driversToolStripMenuItem,
+            this.usersToolStripMenuItem,
+            this.acToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(10, 20, 10, 20);
-            this.menuStrip1.Size = new System.Drawing.Size(1087, 556);
+            this.menuStrip1.Size = new System.Drawing.Size(1301, 108);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // SMItem1
             // 
             this.SMItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.hiToolStripMenuItem});
+            this.hiToolStripMenuItem,
+            this.sadsaToolStripMenuItem});
             this.SMItem1.Image = ((System.Drawing.Image)(resources.GetObject("SMItem1.Image")));
-             this.SMItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.SizeToFit;
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(64, 64); // حجم متوسط
             this.SMItem1.Name = "SMItem1";
+            this.SMItem1.Size = new System.Drawing.Size(244, 68);
             this.SMItem1.Text = "Application";
             // 
             // hiToolStripMenuItem
             // 
             this.hiToolStripMenuItem.Name = "hiToolStripMenuItem";
-            this.hiToolStripMenuItem.Size = new System.Drawing.Size(132, 42);
-            this.hiToolStripMenuItem.Text = "hi";
+            this.hiToolStripMenuItem.Size = new System.Drawing.Size(229, 42);
+            this.hiToolStripMenuItem.Text = "aplliction";
             // 
             // SMItem2
             // 
+            this.SMItem2.Image = ((System.Drawing.Image)(resources.GetObject("SMItem2.Image")));
             this.SMItem2.Name = "SMItem2";
-            this.SMItem2.Size = new System.Drawing.Size(120, 516);
+            this.SMItem2.Size = new System.Drawing.Size(184, 68);
             this.SMItem2.Text = "people";
+            // 
+            // driversToolStripMenuItem
+            // 
+            this.driversToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("driversToolStripMenuItem.Image")));
+            this.driversToolStripMenuItem.Name = "driversToolStripMenuItem";
+            this.driversToolStripMenuItem.Size = new System.Drawing.Size(187, 68);
+            this.driversToolStripMenuItem.Text = "Drivers";
+            // 
+            // usersToolStripMenuItem
+            // 
+            this.usersToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("usersToolStripMenuItem.Image")));
+            this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
+            this.usersToolStripMenuItem.Size = new System.Drawing.Size(165, 68);
+            this.usersToolStripMenuItem.Text = "Users";
+            // 
+            // acToolStripMenuItem
+            // 
+            this.acToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("acToolStripMenuItem.Image")));
+            this.acToolStripMenuItem.Name = "acToolStripMenuItem";
+            this.acToolStripMenuItem.Size = new System.Drawing.Size(312, 68);
+            this.acToolStripMenuItem.Text = "Account Settings";
+            // 
+            // sadsaToolStripMenuItem
+            // 
+            this.sadsaToolStripMenuItem.Name = "sadsaToolStripMenuItem";
+            this.sadsaToolStripMenuItem.Size = new System.Drawing.Size(229, 42);
+            this.sadsaToolStripMenuItem.Text = "sadsa";
             // 
             // FOmain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1087, 499);
+            this.ClientSize = new System.Drawing.Size(1301, 499);
             this.Controls.Add(this.menuStrip1);
             this.Name = "FOmain";
             this.Text = "Main";
+            this.Load += new System.EventHandler(this.FOmain_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -97,6 +133,10 @@ namespace DVLD_PresentationLayer
         private System.Windows.Forms.ToolStripMenuItem SMItem1;
         private System.Windows.Forms.ToolStripMenuItem SMItem2;
         private System.Windows.Forms.ToolStripMenuItem hiToolStripMenuItem;
+        private ToolStripMenuItem driversToolStripMenuItem;
+        private ToolStripMenuItem usersToolStripMenuItem;
+        private ToolStripMenuItem acToolStripMenuItem;
+        private ToolStripMenuItem sadsaToolStripMenuItem;
     }
 }
 
