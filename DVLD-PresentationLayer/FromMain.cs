@@ -21,7 +21,7 @@ namespace DVLD_PresentationLayer
         private void FOmain_Load(object sender, EventArgs e)
         {
             menuStrip1.Renderer = new MyRenderer();
-        }
 
+        }
     }
 }
