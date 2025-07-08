@@ -33,13 +33,16 @@ namespace DVLD_PresentationLayer
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FOmain));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.SMItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.hiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sadsaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.SMItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.driversToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.acToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SMItemApplication = new System.Windows.Forms.ToolStripMenuItem();
+            this.SMItemDrivingLicensesServices = new System.Windows.Forms.ToolStripMenuItem();
+            this.SMItemManageApplictions = new System.Windows.Forms.ToolStripMenuItem();
+            this.SMItemDetainLicenses = new System.Windows.Forms.ToolStripMenuItem();
+            this.SMItemManageApplicationTypes = new System.Windows.Forms.ToolStripMenuItem();
+            this.SMItempeople = new System.Windows.Forms.ToolStripMenuItem();
+            this.SMItemdrivers = new System.Windows.Forms.ToolStripMenuItem();
+            this.SMItemusers = new System.Windows.Forms.ToolStripMenuItem();
+            this.SMItemAccountSettings = new System.Windows.Forms.ToolStripMenuItem();
+            this.manageTypeTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,11 +53,11 @@ namespace DVLD_PresentationLayer
             this.menuStrip1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(64, 64);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.SMItem1,
-            this.SMItem2,
-            this.driversToolStripMenuItem,
-            this.usersToolStripMenuItem,
-            this.acToolStripMenuItem});
+            this.SMItemApplication,
+            this.SMItempeople,
+            this.SMItemdrivers,
+            this.SMItemusers,
+            this.SMItemAccountSettings});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(10, 20, 10, 20);
@@ -62,55 +65,77 @@ namespace DVLD_PresentationLayer
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // SMItem1
+            // SMItemApplication
             // 
-            this.SMItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.hiToolStripMenuItem,
-            this.sadsaToolStripMenuItem});
-            this.SMItem1.Image = ((System.Drawing.Image)(resources.GetObject("SMItem1.Image")));
-            this.SMItem1.Name = "SMItem1";
-            this.SMItem1.Size = new System.Drawing.Size(217, 68);
-            this.SMItem1.Text = "Application";
+            this.SMItemApplication.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.SMItemDrivingLicensesServices,
+            this.SMItemManageApplictions,
+            this.SMItemDetainLicenses,
+            this.SMItemManageApplicationTypes,
+            this.manageTypeTestToolStripMenuItem});
+            this.SMItemApplication.Image = ((System.Drawing.Image)(resources.GetObject("SMItemApplication.Image")));
+            this.SMItemApplication.Name = "SMItemApplication";
+            this.SMItemApplication.Size = new System.Drawing.Size(217, 68);
+            this.SMItemApplication.Text = "Application";
             // 
-            // hiToolStripMenuItem
+            // SMItemDrivingLicensesServices
             // 
-            this.hiToolStripMenuItem.Name = "hiToolStripMenuItem";
-            this.hiToolStripMenuItem.Size = new System.Drawing.Size(202, 30);
-            this.hiToolStripMenuItem.Text = "aplliction";
+            this.SMItemDrivingLicensesServices.Name = "SMItemDrivingLicensesServices";
+            this.SMItemDrivingLicensesServices.Size = new System.Drawing.Size(391, 30);
+            this.SMItemDrivingLicensesServices.Text = "Driving Licenses Services";
             // 
-            // sadsaToolStripMenuItem
+            // SMItemManageApplictions
             // 
-            this.sadsaToolStripMenuItem.Name = "sadsaToolStripMenuItem";
-            this.sadsaToolStripMenuItem.Size = new System.Drawing.Size(202, 30);
-            this.sadsaToolStripMenuItem.Text = "Lincese";
+            this.SMItemManageApplictions.Name = "SMItemManageApplictions";
+            this.SMItemManageApplictions.Size = new System.Drawing.Size(391, 30);
+            this.SMItemManageApplictions.Text = "Manage Applictions";
             // 
-            // SMItem2
+            // SMItemDetainLicenses
             // 
-            this.SMItem2.Image = ((System.Drawing.Image)(resources.GetObject("SMItem2.Image")));
-            this.SMItem2.Name = "SMItem2";
-            this.SMItem2.Size = new System.Drawing.Size(165, 68);
-            this.SMItem2.Text = "people";
+            this.SMItemDetainLicenses.Name = "SMItemDetainLicenses";
+            this.SMItemDetainLicenses.Size = new System.Drawing.Size(391, 30);
+            this.SMItemDetainLicenses.Text = "Detain Licenses";
             // 
-            // driversToolStripMenuItem
+            // SMItemManageApplicationTypes
             // 
-            this.driversToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("driversToolStripMenuItem.Image")));
-            this.driversToolStripMenuItem.Name = "driversToolStripMenuItem";
-            this.driversToolStripMenuItem.Size = new System.Drawing.Size(172, 68);
-            this.driversToolStripMenuItem.Text = "Drivers";
+            this.SMItemManageApplicationTypes.Name = "SMItemManageApplicationTypes";
+            this.SMItemManageApplicationTypes.Size = new System.Drawing.Size(391, 30);
+            this.SMItemManageApplicationTypes.Text = "Manage Application Types";
             // 
-            // usersToolStripMenuItem
+            // manageTypeTestToolStripMenuItem
             // 
-            this.usersToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("usersToolStripMenuItem.Image")));
-            this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
-            this.usersToolStripMenuItem.Size = new System.Drawing.Size(153, 68);
-            this.usersToolStripMenuItem.Text = "Users";
+            this.manageTypeTestToolStripMenuItem.Name = "SMItemManageTestTypes";
+            this.manageTypeTestToolStripMenuItem.Size = new System.Drawing.Size(391, 30);
+            this.manageTypeTestToolStripMenuItem.Text = "Manage Test Types";
             // 
-            // acToolStripMenuItem
+            // SMItempeople
             // 
-            this.acToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("acToolStripMenuItem.Image")));
-            this.acToolStripMenuItem.Name = "acToolStripMenuItem";
-            this.acToolStripMenuItem.Size = new System.Drawing.Size(280, 68);
-            this.acToolStripMenuItem.Text = "Account Settings";
+            this.SMItempeople.Image = ((System.Drawing.Image)(resources.GetObject("SMItempeople.Image")));
+            this.SMItempeople.Name = "SMItempeople";
+            this.SMItempeople.Size = new System.Drawing.Size(165, 68);
+            this.SMItempeople.Text = "people";
+            // 
+            // SMItemdrivers
+            // 
+            this.SMItemdrivers.Image = ((System.Drawing.Image)(resources.GetObject("SMItemdrivers.Image")));
+            this.SMItemdrivers.Name = "SMItemdrivers";
+            this.SMItemdrivers.Size = new System.Drawing.Size(172, 68);
+            this.SMItemdrivers.Text = "Drivers";
+            // 
+            // SMItemusers
+            // 
+            this.SMItemusers.Image = ((System.Drawing.Image)(resources.GetObject("SMItemusers.Image")));
+            this.SMItemusers.Name = "SMItemusers";
+            this.SMItemusers.Size = new System.Drawing.Size(153, 68);
+            this.SMItemusers.Text = "Users";
+            // 
+            // SMItemAccountSettings
+            // 
+            this.SMItemAccountSettings.Image = ((System.Drawing.Image)(resources.GetObject("SMItemAccountSettings.Image")));
+            this.SMItemAccountSettings.Name = "SMItemAccountSettings";
+            this.SMItemAccountSettings.Size = new System.Drawing.Size(280, 68);
+            this.SMItemAccountSettings.Text = "Account Settings";
+  
             // 
             // FOmain
             // 
@@ -131,13 +156,16 @@ namespace DVLD_PresentationLayer
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem SMItem1;
-        private System.Windows.Forms.ToolStripMenuItem SMItem2;
-        private System.Windows.Forms.ToolStripMenuItem hiToolStripMenuItem;
-        private ToolStripMenuItem driversToolStripMenuItem;
-        private ToolStripMenuItem usersToolStripMenuItem;
-        private ToolStripMenuItem acToolStripMenuItem;
-        private ToolStripMenuItem sadsaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem SMItemApplication;
+        private System.Windows.Forms.ToolStripMenuItem SMItempeople;
+        private System.Windows.Forms.ToolStripMenuItem SMItemDrivingLicensesServices;
+        private ToolStripMenuItem SMItemdrivers;
+        private ToolStripMenuItem SMItemusers;
+        private ToolStripMenuItem SMItemAccountSettings;
+        private ToolStripMenuItem SMItemManageApplictions;
+        private ToolStripMenuItem SMItemDetainLicenses;
+        private ToolStripMenuItem SMItemManageApplicationTypes;
+        private ToolStripMenuItem manageTypeTestToolStripMenuItem;
     }
 }
 

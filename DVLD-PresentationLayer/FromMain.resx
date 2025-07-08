@@ -121,10 +121,10 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="SMItem1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="SMItemApplication.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAfASURBVHhe7Vvp
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAfASURBVHhe7Vvp
         jxVFEG/v+4j3Ec9oVDDhm1eMQTDxjNeK+jcoh5ooQbwV0USNxgP9pAmKCYYv6hevkAgusMx0d/XuQ1iU
         Q1iVKB5gAhjYNVV9zEzNzG6/vd7uxl9SedPV1TVVfVb39BPif0wwAJwmpH5eSFBCwj9EKUjLk6dy8YkF
         CfeIFHYJCX3VZP4Wqb6bF5sYQOcl9DpnPxVKTRUAxxBpfb1Q8JnLOzDxKgG7vW95BfN4dkAK810l/DWx
@@ -161,10 +161,10 @@
         0UaRAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="SMItem2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="SMItempeople.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAASTSURBVHhe3ZpP
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAASTSURBVHhe3ZpP
         qxxFFMVrpSgaiJv456u4DxjUkODKDyD4byMxnyCQLyW60OdLnP4bBoPZZe9CjWBAeHKrp3vimXO7T1XX
         vIH8oHhzzz11u2r6NlPz3guhNE+evBrq7uvQdOeh7p7FEV+3X8XcEmvnn5S2fS/UbRvq7sIZTfR4rJ1/
         UuKdmxb/NNTd7fDj4zfjaPqboeoeT5tgd3Lt/JNjbTsufrt9C9Oh76/uNnYRqv5LTK+ef3Lq7sFuA7cx
@@ -187,10 +187,10 @@
         5lG1k8EWo2ovBWxjqvZSwDamakfkP67bR5Rna8X7AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="driversToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="SMItemdrivers.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAZqSURBVHhe7Vtp
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAZqSURBVHhe7Vtp
         iFxFEC5vvO8L7/tAFM8/ihFFvG+MxiOiQVEU1B+CFxoVNV5oRFE8MMYjmICiKFnPqMQ1xtfVXT2ZRF2J
         iFHBJCaaa3OuVL+Zl5nqfjPvzc7szOB+8JHsvO6q6pnururqegDDGMYwhgyTJ28Eik4FtI8C0kRQ9AUg
         fQ1Ib4GiJ0CZc6GvbzPZrftRLO4AaJ8CpPmANFCb9h9AegWI9pRiuhPK3gxIC/2B1uVSQHMfTJu2sRTZ
@@ -221,10 +221,10 @@
         rdz1Wg73O4xh/P/wH3QBjE7W6YC2AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="usersToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="SMItemusers.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAARGSURBVHhe3ZpL
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAARGSURBVHhe3ZpL
         qFxFEIZ/jUoivlYS34qIiK8IRgTxhajowo2gZCEo6CZIMEHEjQFBRXzgQkHc+IKghqCIirqQqxDHJJ6u
         7uq5A4mIMcQg6hVFkaAmGelzRozVPXPPmTmP7vvBv7tT/dedc3q6qwqom82bl0H3b4Tip0H8CcgOQLwA
         4j9B/B2IvwTxFih+AERnyY+nS5YdC80PjpIcltQhKPsxFF8tw6WFMdeD+JtAglW0CVl2ogwdP9reB+K/
@@ -246,10 +246,10 @@
         zI888A+PIg0XvkXJ3AAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="acToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="SMItemAccountSettings.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAASqSURBVHhe7ZtN
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAASqSURBVHhe7ZtN
         iBxFFMefHyh+HFQED4YEv/CgJ0HEgF/BQ4IfSDB68CSKetCDJkLQi0RBDxIPCoo5iB8H2YMeFJSgxtOq
         OPWqXo2t4qoJ5EMMmBATooKZkVfd7E6/VzvbM9M93b3OD/6w7Lyq96/Z7urqerUAZUJ0LRh6Fgx9AYZ+
         BKQTQfwz/87SM+DcNbJZ+7H2VkD6BpD6BfUVoL9ZdtM+kuR8QJqLDLCo3g99tBLEdYBEkUGNKOdCX60i
