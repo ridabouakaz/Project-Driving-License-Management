@@ -32,38 +32,44 @@ namespace DVLD_PresentationLayer
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FOmain));
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.MSMain = new System.Windows.Forms.MenuStrip();
             this.SMItemApplications = new System.Windows.Forms.ToolStripMenuItem();
             this.SMItemDrivingLicensesServices = new System.Windows.Forms.ToolStripMenuItem();
+            this.SMItemnewDrivingLicenses = new System.Windows.Forms.ToolStripMenuItem();
+            this.SMItemrenewDrivingLicenses = new System.Windows.Forms.ToolStripMenuItem();
+            this.SMItemreplacementForLostOrDamagedLicenses = new System.Windows.Forms.ToolStripMenuItem();
             this.SMItemManageApplications = new System.Windows.Forms.ToolStripMenuItem();
             this.SMItemDetainLicenses = new System.Windows.Forms.ToolStripMenuItem();
             this.SMItemManageApplicationTypes = new System.Windows.Forms.ToolStripMenuItem();
-            this.manageTypeTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SMItemmanageTestTypes = new System.Windows.Forms.ToolStripMenuItem();
             this.SMItempeople = new System.Windows.Forms.ToolStripMenuItem();
             this.SMItemdrivers = new System.Windows.Forms.ToolStripMenuItem();
             this.SMItemusers = new System.Windows.Forms.ToolStripMenuItem();
             this.SMItemAccountSettings = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
+            this.SMItemCurrentUserInfo = new System.Windows.Forms.ToolStripMenuItem();
+            this.SMItemchangePassword = new System.Windows.Forms.ToolStripMenuItem();
+            this.SMItemSingOut = new System.Windows.Forms.ToolStripMenuItem();
+            this.MSMain.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // MSMain
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.Control;
-            this.menuStrip1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
-            this.menuStrip1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(64, 64);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MSMain.BackColor = System.Drawing.SystemColors.Control;
+            this.MSMain.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
+            this.MSMain.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.MSMain.ImageScalingSize = new System.Drawing.Size(64, 64);
+            this.MSMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.SMItemApplications,
             this.SMItempeople,
             this.SMItemdrivers,
             this.SMItemusers,
             this.SMItemAccountSettings});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(10, 20, 10, 20);
-            this.menuStrip1.Size = new System.Drawing.Size(1448, 108);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.MSMain.Location = new System.Drawing.Point(0, 0);
+            this.MSMain.Name = "MSMain";
+            this.MSMain.Padding = new System.Windows.Forms.Padding(10, 20, 10, 20);
+            this.MSMain.Size = new System.Drawing.Size(1448, 108);
+            this.MSMain.TabIndex = 0;
+            this.MSMain.Text = "MSMain";
             // 
             // SMItemApplications
             // 
@@ -72,7 +78,7 @@ namespace DVLD_PresentationLayer
             this.SMItemManageApplications,
             this.SMItemDetainLicenses,
             this.SMItemManageApplicationTypes,
-            this.manageTypeTestToolStripMenuItem});
+            this.SMItemmanageTestTypes});
             this.SMItemApplications.Image = ((System.Drawing.Image)(resources.GetObject("SMItemApplications.Image")));
             this.SMItemApplications.Name = "SMItemApplications";
             this.SMItemApplications.Size = new System.Drawing.Size(229, 68);
@@ -80,9 +86,29 @@ namespace DVLD_PresentationLayer
             // 
             // SMItemDrivingLicensesServices
             // 
+            this.SMItemDrivingLicensesServices.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.SMItemnewDrivingLicenses,this.SMItemrenewDrivingLicenses,this.SMItemreplacementForLostOrDamagedLicenses});
             this.SMItemDrivingLicensesServices.Name = "SMItemDrivingLicensesServices";
             this.SMItemDrivingLicensesServices.Size = new System.Drawing.Size(391, 30);
             this.SMItemDrivingLicensesServices.Text = "Driving Licenses Services";
+            // 
+            // SMItemnewDrivingLicenses
+            // 
+            this.SMItemnewDrivingLicenses.Name = "SMItemnewDrivingLicenses";
+            this.SMItemnewDrivingLicenses.Size = new System.Drawing.Size(340, 30);
+            this.SMItemnewDrivingLicenses.Text = "New Driving Licenses";
+            // 
+            // SMItemrenewDrivingLicenses
+            // 
+            this.SMItemrenewDrivingLicenses.Name = "SMItemrenewDrivingLicenses";
+            this.SMItemrenewDrivingLicenses.Size = new System.Drawing.Size(340, 30);
+            this.SMItemrenewDrivingLicenses.Text = "Renew Driving Licenses";
+            // 
+            // SMItemreplacementForLostOrDamagedLicenses
+            // 
+            this.SMItemreplacementForLostOrDamagedLicenses.Name = "SMItemreplacementForLostOrDamagedLicenses";
+            this.SMItemreplacementForLostOrDamagedLicenses.Size = new System.Drawing.Size(340, 30);
+            this.SMItemreplacementForLostOrDamagedLicenses.Text = "Replacement For Lost Or Damaged Licenses";
             // 
             // SMItemManageApplications
             // 
@@ -102,11 +128,11 @@ namespace DVLD_PresentationLayer
             this.SMItemManageApplicationTypes.Size = new System.Drawing.Size(391, 30);
             this.SMItemManageApplicationTypes.Text = "Manage Application Types";
             // 
-            // manageTypeTestToolStripMenuItem
+            // SMItemmanageTestTypes
             // 
-            this.manageTypeTestToolStripMenuItem.Name = "manageTypeTestToolStripMenuItem";
-            this.manageTypeTestToolStripMenuItem.Size = new System.Drawing.Size(391, 30);
-            this.manageTypeTestToolStripMenuItem.Text = "Manage Test Types";
+            this.SMItemmanageTestTypes.Name = "SMItemmanageTestTypes";
+            this.SMItemmanageTestTypes.Size = new System.Drawing.Size(391, 30);
+            this.SMItemmanageTestTypes.Text = "Manage Test Types";
             // 
             // SMItempeople
             // 
@@ -131,22 +157,44 @@ namespace DVLD_PresentationLayer
             // 
             // SMItemAccountSettings
             // 
+            this.SMItemAccountSettings.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.SMItemCurrentUserInfo,
+            this.SMItemchangePassword,
+            this.SMItemSingOut});
             this.SMItemAccountSettings.Image = ((System.Drawing.Image)(resources.GetObject("SMItemAccountSettings.Image")));
             this.SMItemAccountSettings.Name = "SMItemAccountSettings";
             this.SMItemAccountSettings.Size = new System.Drawing.Size(280, 68);
             this.SMItemAccountSettings.Text = "Account Settings";
+            // 
+            // SMItemCurrentUserInfo
+            // 
+            this.SMItemCurrentUserInfo.Name = "SMItemCurrentUserInfo";
+            this.SMItemCurrentUserInfo.Size = new System.Drawing.Size(297, 30);
+            this.SMItemCurrentUserInfo.Text = "Current User Info";
+            // 
+            // SMItemchangePassword
+            // 
+            this.SMItemchangePassword.Name = "SMItemchangePassword";
+            this.SMItemchangePassword.Size = new System.Drawing.Size(297, 30);
+            this.SMItemchangePassword.Text = "Change Password";
+            // 
+            // SMItemSingOut
+            // 
+            this.SMItemSingOut.Name = "SMItemSingOut";
+            this.SMItemSingOut.Size = new System.Drawing.Size(297, 30);
+            this.SMItemSingOut.Text = "Sign Out";
             // 
             // FOmain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1448, 499);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.MSMain);
             this.Name = "FOmain";
             this.Text = "Main";
             this.Load += new System.EventHandler(this.FOmain_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.MSMain.ResumeLayout(false);
+            this.MSMain.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,7 +202,7 @@ namespace DVLD_PresentationLayer
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip MSMain;
         private System.Windows.Forms.ToolStripMenuItem SMItemApplications;
         private System.Windows.Forms.ToolStripMenuItem SMItempeople;
         private System.Windows.Forms.ToolStripMenuItem SMItemDrivingLicensesServices;
@@ -164,7 +212,14 @@ namespace DVLD_PresentationLayer
         private ToolStripMenuItem SMItemManageApplications;
         private ToolStripMenuItem SMItemDetainLicenses;
         private ToolStripMenuItem SMItemManageApplicationTypes;
-        private ToolStripMenuItem manageTypeTestToolStripMenuItem;
+        private ToolStripMenuItem SMItemmanageTestTypes;
+        private ToolStripMenuItem SMItemCurrentUserInfo;
+        private ToolStripMenuItem SMItemchangePassword;
+        private ToolStripMenuItem SMItemSingOut;
+        private ToolStripMenuItem SMItemnewDrivingLicenses;
+        private ToolStripMenuItem SMItemrenewDrivingLicenses;
+        private ToolStripMenuItem SMItemreplacementForLostOrDamagedLicenses;
+
     }
 }
 
