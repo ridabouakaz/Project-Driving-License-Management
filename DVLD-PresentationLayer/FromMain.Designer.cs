@@ -173,21 +173,21 @@ namespace DVLD_PresentationLayer
             // 
             this.SMItemManageDetainedLicenses.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
             this.SMItemManageDetainedLicenses.Name = "SMItemManageDetainedLicenses";
-            this.SMItemManageDetainedLicenses.Size = new System.Drawing.Size(395, 30);
+            this.SMItemManageDetainedLicenses.Size = new System.Drawing.Size(365, 26);
             this.SMItemManageDetainedLicenses.Text = "Manage Detained Licenses";
             // 
             // SMItemDetainedLicense
             // 
             this.SMItemDetainedLicense.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
             this.SMItemDetainedLicense.Name = "SMItemDetainedLicense";
-            this.SMItemDetainedLicense.Size = new System.Drawing.Size(395, 30);
+            this.SMItemDetainedLicense.Size = new System.Drawing.Size(365, 26);
             this.SMItemDetainedLicense.Text = "Detained License";
             // 
             // SMItemReleaseDetainedLicenses
             // 
             this.SMItemReleaseDetainedLicenses.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
             this.SMItemReleaseDetainedLicenses.Name = "SMItemReleaseDetainedLicenses";
-            this.SMItemReleaseDetainedLicenses.Size = new System.Drawing.Size(395, 30);
+            this.SMItemReleaseDetainedLicenses.Size = new System.Drawing.Size(365, 26);
             this.SMItemReleaseDetainedLicenses.Text = "Release Detained Licenses";
             // 
             // SMItemManageApplicationTypes
@@ -240,21 +240,21 @@ namespace DVLD_PresentationLayer
             // 
             this.SMItemCurrentUserInfo.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SMItemCurrentUserInfo.Name = "SMItemCurrentUserInfo";
-            this.SMItemCurrentUserInfo.Size = new System.Drawing.Size(339, 34);
+            this.SMItemCurrentUserInfo.Size = new System.Drawing.Size(298, 30);
             this.SMItemCurrentUserInfo.Text = "Current User Info";
             // 
             // SMItemchangePassword
             // 
             this.SMItemchangePassword.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SMItemchangePassword.Name = "SMItemchangePassword";
-            this.SMItemchangePassword.Size = new System.Drawing.Size(339, 34);
+            this.SMItemchangePassword.Size = new System.Drawing.Size(298, 30);
             this.SMItemchangePassword.Text = "Change Password";
             // 
             // SMItemSingOut
             // 
             this.SMItemSingOut.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SMItemSingOut.Name = "SMItemSingOut";
-            this.SMItemSingOut.Size = new System.Drawing.Size(339, 34);
+            this.SMItemSingOut.Size = new System.Drawing.Size(298, 30);
             this.SMItemSingOut.Text = "Sign Out";
             // 
             // FOmain
