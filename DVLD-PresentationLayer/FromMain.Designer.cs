@@ -44,6 +44,9 @@ namespace DVLD_PresentationLayer
             this.SMItemSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.SMItemManageApplications = new System.Windows.Forms.ToolStripMenuItem();
             this.SMItemDetainLicenses = new System.Windows.Forms.ToolStripMenuItem();
+            this.SMItemManageDetainedLicenses = new System.Windows.Forms.ToolStripMenuItem();
+            this.SMItemDetainedLicense = new System.Windows.Forms.ToolStripMenuItem();
+            this.SMItemReleaseDetainedLicenses = new System.Windows.Forms.ToolStripMenuItem();
             this.SMItemManageApplicationTypes = new System.Windows.Forms.ToolStripMenuItem();
             this.SMItemManageTestTypes = new System.Windows.Forms.ToolStripMenuItem();
             this.SMItempeople = new System.Windows.Forms.ToolStripMenuItem();
@@ -107,7 +110,7 @@ namespace DVLD_PresentationLayer
             // 
             this.SMItemNewDrivingLicenses.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SMItemNewDrivingLicenses.Name = "SMItemNewDrivingLicenses";
-            this.SMItemNewDrivingLicenses.Size = new System.Drawing.Size(540, 48);
+            this.SMItemNewDrivingLicenses.Size = new System.Drawing.Size(540, 26);
             this.SMItemNewDrivingLicenses.Text = "New Driving Licenses";
             // 
             // SMItemSeparator1
@@ -119,29 +122,29 @@ namespace DVLD_PresentationLayer
             // 
             this.SMItemRenewDrivingLicenses.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SMItemRenewDrivingLicenses.Name = "SMItemRenewDrivingLicenses";
-            this.SMItemRenewDrivingLicenses.Size = new System.Drawing.Size(540, 48);
+            this.SMItemRenewDrivingLicenses.Size = new System.Drawing.Size(540, 26);
             this.SMItemRenewDrivingLicenses.Text = "Renew Driving Licenses";
             // 
             // SMItemReplacementForLostOrDamagedLicenses
             // 
             this.SMItemReplacementForLostOrDamagedLicenses.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SMItemReplacementForLostOrDamagedLicenses.Name = "SMItemReplacementForLostOrDamagedLicenses";
-            this.SMItemReplacementForLostOrDamagedLicenses.Size = new System.Drawing.Size(540, 48);
+            this.SMItemReplacementForLostOrDamagedLicenses.Size = new System.Drawing.Size(540, 26);
             this.SMItemReplacementForLostOrDamagedLicenses.Text = "Replacement For Lost Or Damaged Licenses";
             // 
             // SMItemReleaseDetainedDrivingLicense
             // 
             this.SMItemReleaseDetainedDrivingLicense.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SMItemReleaseDetainedDrivingLicense.Name = "SMItemReleaseDetainedDrivingLicense";
-            this.SMItemReleaseDetainedDrivingLicense.Size = new System.Drawing.Size(540, 48);
+            this.SMItemReleaseDetainedDrivingLicense.Size = new System.Drawing.Size(540, 26);
             this.SMItemReleaseDetainedDrivingLicense.Text = "Release Detained Driving License";
             // 
             // SMItemRetakeTest
             // 
             this.SMItemRetakeTest.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SMItemRetakeTest.Name = "SMItemRetakeTest";
-            this.SMItemRetakeTest.Size = new System.Drawing.Size(540, 30);
-            this.SMItemRetakeTest.Text = "Retake Test\n";
+            this.SMItemRetakeTest.Size = new System.Drawing.Size(540, 26);
+            this.SMItemRetakeTest.Text = "Retake Test";
             // 
             // SMItemSeparator2
             // 
@@ -157,10 +160,35 @@ namespace DVLD_PresentationLayer
             // 
             // SMItemDetainLicenses
             // 
+            this.SMItemDetainLicenses.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.SMItemManageDetainedLicenses,
+            this.SMItemDetainedLicense,
+            this.SMItemReleaseDetainedLicenses});
             this.SMItemDetainLicenses.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SMItemDetainLicenses.Name = "SMItemDetainLicenses";
             this.SMItemDetainLicenses.Size = new System.Drawing.Size(392, 30);
             this.SMItemDetainLicenses.Text = "Detain Licenses";
+            // 
+            // SMItemManageDetainedLicenses
+            // 
+            this.SMItemManageDetainedLicenses.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
+            this.SMItemManageDetainedLicenses.Name = "SMItemManageDetainedLicenses";
+            this.SMItemManageDetainedLicenses.Size = new System.Drawing.Size(395, 30);
+            this.SMItemManageDetainedLicenses.Text = "Manage Detained Licenses";
+            // 
+            // SMItemDetainedLicense
+            // 
+            this.SMItemDetainedLicense.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
+            this.SMItemDetainedLicense.Name = "SMItemDetainedLicense";
+            this.SMItemDetainedLicense.Size = new System.Drawing.Size(395, 30);
+            this.SMItemDetainedLicense.Text = "Detained License";
+            // 
+            // SMItemReleaseDetainedLicenses
+            // 
+            this.SMItemReleaseDetainedLicenses.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
+            this.SMItemReleaseDetainedLicenses.Name = "SMItemReleaseDetainedLicenses";
+            this.SMItemReleaseDetainedLicenses.Size = new System.Drawing.Size(395, 30);
+            this.SMItemReleaseDetainedLicenses.Text = "Release Detained Licenses";
             // 
             // SMItemManageApplicationTypes
             // 
@@ -210,18 +238,21 @@ namespace DVLD_PresentationLayer
             // 
             // SMItemCurrentUserInfo
             // 
+            this.SMItemCurrentUserInfo.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SMItemCurrentUserInfo.Name = "SMItemCurrentUserInfo";
             this.SMItemCurrentUserInfo.Size = new System.Drawing.Size(339, 34);
             this.SMItemCurrentUserInfo.Text = "Current User Info";
             // 
             // SMItemchangePassword
             // 
+            this.SMItemchangePassword.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SMItemchangePassword.Name = "SMItemchangePassword";
             this.SMItemchangePassword.Size = new System.Drawing.Size(339, 34);
             this.SMItemchangePassword.Text = "Change Password";
             // 
             // SMItemSingOut
             // 
+            this.SMItemSingOut.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SMItemSingOut.Name = "SMItemSingOut";
             this.SMItemSingOut.Size = new System.Drawing.Size(339, 34);
             this.SMItemSingOut.Text = "Sign Out";
@@ -264,6 +295,9 @@ namespace DVLD_PresentationLayer
         private ToolStripMenuItem SMItemRetakeTest;
         private ToolStripSeparator SMItemSeparator1;
         private ToolStripSeparator SMItemSeparator2;
+        private ToolStripMenuItem SMItemManageDetainedLicenses;
+        private ToolStripMenuItem SMItemDetainedLicense;
+        private ToolStripMenuItem SMItemReleaseDetainedLicenses;
     }
 }
 
