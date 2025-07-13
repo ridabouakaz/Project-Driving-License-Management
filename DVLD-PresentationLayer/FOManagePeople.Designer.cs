@@ -55,7 +55,7 @@ namespace DVLD_PresentationLayer
             this.dGViewShowInformation.ReadOnly = true;
             this.dGViewShowInformation.RowHeadersWidth = 51;
             this.dGViewShowInformation.RowTemplate.Height = 24;
-            this.dGViewShowInformation.Size = new System.Drawing.Size(1345, 441);
+            this.dGViewShowInformation.Size = new System.Drawing.Size(1323, 261);
             this.dGViewShowInformation.TabIndex = 0;
             // 
             // LblManagePeople
@@ -65,7 +65,7 @@ namespace DVLD_PresentationLayer
             this.LblManagePeople.BackColor = System.Drawing.Color.Transparent;
             this.LblManagePeople.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold);
             this.LblManagePeople.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
-            this.LblManagePeople.Location = new System.Drawing.Point(533, 143);
+            this.LblManagePeople.Location = new System.Drawing.Point(522, 143);
             this.LblManagePeople.Name = "LblManagePeople";
             this.LblManagePeople.Size = new System.Drawing.Size(315, 54);
             this.LblManagePeople.TabIndex = 1;
@@ -77,7 +77,7 @@ namespace DVLD_PresentationLayer
             this.PBManagePeople.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.PBManagePeople.Image = ((System.Drawing.Image)(resources.GetObject("PBManagePeople.Image")));
             this.PBManagePeople.ImageRotate = 0F;
-            this.PBManagePeople.Location = new System.Drawing.Point(623, 15);
+            this.PBManagePeople.Location = new System.Drawing.Point(612, 15);
             this.PBManagePeople.Name = "PBManagePeople";
             this.PBManagePeople.Size = new System.Drawing.Size(137, 125);
             this.PBManagePeople.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -86,36 +86,32 @@ namespace DVLD_PresentationLayer
             // 
             // BtnAddPerson
             // 
+            this.BtnAddPerson.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnAddPerson.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.BtnAddPerson.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnAddPerson.BackgroundImage")));
             this.BtnAddPerson.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BtnAddPerson.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-       
-
-            this.BtnAddPerson.FlatAppearance.BorderSize = 1;
             this.BtnAddPerson.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.BtnAddPerson.FlatAppearance.MouseOverBackColor = Color.LightGray;
-            this.BtnAddPerson.FlatAppearance.MouseDownBackColor = Color.Gray;
-
+            this.BtnAddPerson.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.BtnAddPerson.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.BtnAddPerson.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAddPerson.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BtnAddPerson.Location = new System.Drawing.Point(1302, 228);
+            this.BtnAddPerson.Location = new System.Drawing.Point(1280, 228);
             this.BtnAddPerson.Name = "BtnAddPerson";
             this.BtnAddPerson.Size = new System.Drawing.Size(90, 45);
             this.BtnAddPerson.TabIndex = 3;
-            this.BtnAddPerson.Text = "";
             this.BtnAddPerson.UseVisualStyleBackColor = false;
-            this.BtnAddPerson.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top )| System.Windows.Forms.AnchorStyles.Right));
-
             // 
             // FOManagePeople
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1439, 853);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.ClientSize = new System.Drawing.Size(1417, 673);
             this.Controls.Add(this.BtnAddPerson);
             this.Controls.Add(this.PBManagePeople);
             this.Controls.Add(this.LblManagePeople);
             this.Controls.Add(this.dGViewShowInformation);
+            this.MinimumSize = new System.Drawing.Size(1024, 700);
             this.Name = "FOManagePeople";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -124,6 +120,9 @@ namespace DVLD_PresentationLayer
             ((System.ComponentModel.ISupportInitialize)(this.PBManagePeople)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+            this.Size = new Size(1280, 720);
+            this.BackColor = Color.FromArgb(245, 245, 245);
+
 
         }
 
