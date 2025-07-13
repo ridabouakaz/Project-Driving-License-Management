@@ -35,6 +35,7 @@ namespace DVLD_PresentationLayer
             this.dGViewShowInformation = new System.Windows.Forms.DataGridView();
             this.LblManagePeople = new System.Windows.Forms.Label();
             this.PBManagePeople = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.BtnAddPerson = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dGViewShowInformation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBManagePeople)).BeginInit();
             this.SuspendLayout();
@@ -44,6 +45,9 @@ namespace DVLD_PresentationLayer
             this.dGViewShowInformation.AllowUserToAddRows = false;
             this.dGViewShowInformation.AllowUserToDeleteRows = false;
             this.dGViewShowInformation.AllowUserToOrderColumns = true;
+            this.dGViewShowInformation.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dGViewShowInformation.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dGViewShowInformation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGViewShowInformation.Location = new System.Drawing.Point(47, 279);
@@ -53,11 +57,10 @@ namespace DVLD_PresentationLayer
             this.dGViewShowInformation.RowTemplate.Height = 24;
             this.dGViewShowInformation.Size = new System.Drawing.Size(1345, 441);
             this.dGViewShowInformation.TabIndex = 0;
-            this.dGViewShowInformation.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
             // 
             // LblManagePeople
             // 
+            this.LblManagePeople.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LblManagePeople.AutoSize = true;
             this.LblManagePeople.BackColor = System.Drawing.Color.Transparent;
             this.LblManagePeople.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold);
@@ -67,11 +70,10 @@ namespace DVLD_PresentationLayer
             this.LblManagePeople.Size = new System.Drawing.Size(315, 54);
             this.LblManagePeople.TabIndex = 1;
             this.LblManagePeople.Text = "Manage People";
-            this.LblManagePeople.Anchor = AnchorStyles.Top;
-
             // 
             // PBManagePeople
             // 
+            this.PBManagePeople.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.PBManagePeople.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.PBManagePeople.Image = ((System.Drawing.Image)(resources.GetObject("PBManagePeople.Image")));
             this.PBManagePeople.ImageRotate = 0F;
@@ -81,7 +83,28 @@ namespace DVLD_PresentationLayer
             this.PBManagePeople.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PBManagePeople.TabIndex = 2;
             this.PBManagePeople.TabStop = false;
-            this.PBManagePeople.Anchor = AnchorStyles.Top ;
+            // 
+            // BtnAddPerson
+            // 
+            this.BtnAddPerson.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnAddPerson.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnAddPerson.BackgroundImage")));
+            this.BtnAddPerson.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnAddPerson.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+       
+
+            this.BtnAddPerson.FlatAppearance.BorderSize = 1;
+            this.BtnAddPerson.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BtnAddPerson.FlatAppearance.MouseOverBackColor = Color.LightGray;
+            this.BtnAddPerson.FlatAppearance.MouseDownBackColor = Color.Gray;
+
+            this.BtnAddPerson.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BtnAddPerson.Location = new System.Drawing.Point(1302, 228);
+            this.BtnAddPerson.Name = "BtnAddPerson";
+            this.BtnAddPerson.Size = new System.Drawing.Size(90, 45);
+            this.BtnAddPerson.TabIndex = 3;
+            this.BtnAddPerson.Text = "";
+            this.BtnAddPerson.UseVisualStyleBackColor = false;
+            this.BtnAddPerson.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top )| System.Windows.Forms.AnchorStyles.Right));
 
             // 
             // FOManagePeople
@@ -89,6 +112,7 @@ namespace DVLD_PresentationLayer
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1439, 853);
+            this.Controls.Add(this.BtnAddPerson);
             this.Controls.Add(this.PBManagePeople);
             this.Controls.Add(this.LblManagePeople);
             this.Controls.Add(this.dGViewShowInformation);
@@ -108,5 +132,6 @@ namespace DVLD_PresentationLayer
         private System.Windows.Forms.DataGridView dGViewShowInformation;
         private System.Windows.Forms.Label LblManagePeople;
         private Guna.UI2.WinForms.Guna2PictureBox PBManagePeople;
+        private Button BtnAddPerson;
     }
 }
