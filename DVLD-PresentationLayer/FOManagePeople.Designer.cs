@@ -34,12 +34,6 @@ namespace DVLD_PresentationLayer
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FOManagePeople));
             this.dGViewShowInformation = new System.Windows.Forms.DataGridView();
-            this.LblManagePeople = new System.Windows.Forms.Label();
-            this.BtnAddPerson = new System.Windows.Forms.Button();
-            this.PBManagePeople = new System.Windows.Forms.PictureBox();
-            this.LblFilterBy = new System.Windows.Forms.Label();
-            this.LblRecoreds = new System.Windows.Forms.Label();
-            this.BtnAddClose = new System.Windows.Forms.Button();
             this.SMItemCRUDpeople = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.SMItemViewDetails = new System.Windows.Forms.ToolStripMenuItem();
             this.SMItemSeparatorCRUDPeople1 = new System.Windows.Forms.ToolStripSeparator();
@@ -49,9 +43,16 @@ namespace DVLD_PresentationLayer
             this.SMItemSeparatorCRUDPeople2 = new System.Windows.Forms.ToolStripSeparator();
             this.SMItemSendEmail = new System.Windows.Forms.ToolStripMenuItem();
             this.SMItemCallPerson = new System.Windows.Forms.ToolStripMenuItem();
+            this.LblManagePeople = new System.Windows.Forms.Label();
+            this.BtnAddPerson = new System.Windows.Forms.Button();
+            this.PBManagePeople = new System.Windows.Forms.PictureBox();
+            this.LblFilterBy = new System.Windows.Forms.Label();
+            this.LblRecoreds = new System.Windows.Forms.Label();
+            this.BtnAddClose = new System.Windows.Forms.Button();
+            this.CBFilterBy = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dGViewShowInformation)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBManagePeople)).BeginInit();
             this.SMItemCRUDpeople.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PBManagePeople)).BeginInit();
             this.SuspendLayout();
             // 
             // dGViewShowInformation
@@ -72,6 +73,85 @@ namespace DVLD_PresentationLayer
             this.dGViewShowInformation.RowTemplate.Height = 24;
             this.dGViewShowInformation.Size = new System.Drawing.Size(1439, 481);
             this.dGViewShowInformation.TabIndex = 0;
+            // 
+            // SMItemCRUDpeople
+            // 
+            this.SMItemCRUDpeople.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.SMItemCRUDpeople.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.SMItemViewDetails,
+            this.SMItemSeparatorCRUDPeople1,
+            this.SMItemAddPerson,
+            this.SMItemEditPerson,
+            this.SMItemDeletePerson,
+            this.SMItemSeparatorCRUDPeople2,
+            this.SMItemSendEmail,
+            this.SMItemCallPerson});
+            this.SMItemCRUDpeople.Name = "SMItemCRUDpeople";
+            this.SMItemCRUDpeople.Size = new System.Drawing.Size(200, 244);
+            // 
+            // SMItemViewDetails
+            // 
+            this.SMItemViewDetails.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.SMItemViewDetails.Image = ((System.Drawing.Image)(resources.GetObject("SMItemViewDetails.Image")));
+            this.SMItemViewDetails.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.SMItemViewDetails.Name = "SMItemViewDetails";
+            this.SMItemViewDetails.Size = new System.Drawing.Size(199, 38);
+            this.SMItemViewDetails.Text = "View Details";
+            // 
+            // SMItemSeparatorCRUDPeople1
+            // 
+            this.SMItemSeparatorCRUDPeople1.Name = "SMItemSeparatorCRUDPeople1";
+            this.SMItemSeparatorCRUDPeople1.Size = new System.Drawing.Size(196, 6);
+            // 
+            // SMItemAddPerson
+            // 
+            this.SMItemAddPerson.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.SMItemAddPerson.Image = ((System.Drawing.Image)(resources.GetObject("SMItemAddPerson.Image")));
+            this.SMItemAddPerson.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.SMItemAddPerson.Name = "SMItemAddPerson";
+            this.SMItemAddPerson.Size = new System.Drawing.Size(199, 38);
+            this.SMItemAddPerson.Text = "Add Person";
+            // 
+            // SMItemEditPerson
+            // 
+            this.SMItemEditPerson.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.SMItemEditPerson.Image = ((System.Drawing.Image)(resources.GetObject("SMItemEditPerson.Image")));
+            this.SMItemEditPerson.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.SMItemEditPerson.Name = "SMItemEditPerson";
+            this.SMItemEditPerson.Size = new System.Drawing.Size(199, 38);
+            this.SMItemEditPerson.Text = "Edit Person";
+            // 
+            // SMItemDeletePerson
+            // 
+            this.SMItemDeletePerson.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.SMItemDeletePerson.Image = ((System.Drawing.Image)(resources.GetObject("SMItemDeletePerson.Image")));
+            this.SMItemDeletePerson.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.SMItemDeletePerson.Name = "SMItemDeletePerson";
+            this.SMItemDeletePerson.Size = new System.Drawing.Size(199, 38);
+            this.SMItemDeletePerson.Text = "Delete Person";
+            // 
+            // SMItemSeparatorCRUDPeople2
+            // 
+            this.SMItemSeparatorCRUDPeople2.Name = "SMItemSeparatorCRUDPeople2";
+            this.SMItemSeparatorCRUDPeople2.Size = new System.Drawing.Size(196, 6);
+            // 
+            // SMItemSendEmail
+            // 
+            this.SMItemSendEmail.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.SMItemSendEmail.Image = ((System.Drawing.Image)(resources.GetObject("SMItemSendEmail.Image")));
+            this.SMItemSendEmail.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.SMItemSendEmail.Name = "SMItemSendEmail";
+            this.SMItemSendEmail.Size = new System.Drawing.Size(199, 38);
+            this.SMItemSendEmail.Text = "Send Email";
+            // 
+            // SMItemCallPerson
+            // 
+            this.SMItemCallPerson.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.SMItemCallPerson.Image = ((System.Drawing.Image)(resources.GetObject("SMItemCallPerson.Image")));
+            this.SMItemCallPerson.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.SMItemCallPerson.Name = "SMItemCallPerson";
+            this.SMItemCallPerson.Size = new System.Drawing.Size(199, 38);
+            this.SMItemCallPerson.Text = "Call Person";
             // 
             // LblManagePeople
             // 
@@ -160,92 +240,37 @@ namespace DVLD_PresentationLayer
             this.BtnAddClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnAddClose.UseVisualStyleBackColor = false;
             // 
-            // SMItemCRUDpeople
+            // CBFilterBy
             // 
-            this.SMItemCRUDpeople.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.SMItemCRUDpeople.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.SMItemViewDetails,
-            this.SMItemSeparatorCRUDPeople1,
-            this.SMItemAddPerson,
-            this.SMItemEditPerson,
-            this.SMItemDeletePerson,
-            this.SMItemSeparatorCRUDPeople2,
-            this.SMItemSendEmail,
-            this.SMItemCallPerson});
-            this.SMItemCRUDpeople.Name = "SMItemCRUDpeople";
-            this.SMItemCRUDpeople.Size = new System.Drawing.Size(227, 272);
-            this.SMItemCRUDpeople.Renderer = new MyRenderer();
-
-            // 
-            // SMItemViewDetails
-            // 
-            this.SMItemViewDetails.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.SMItemViewDetails.Image = ((System.Drawing.Image)(resources.GetObject("SMItemViewDetails.Image")));
-            this.SMItemViewDetails.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.SMItemViewDetails.Name = "SMItemViewDetails";
-            this.SMItemViewDetails.Size = new System.Drawing.Size(226, 38);
-            this.SMItemViewDetails.Text = "View Details";
-            // 
-            // SMItemSeparatorCRUDPeople1
-            // 
-            this.SMItemSeparatorCRUDPeople1.Name = "SMItemSeparatorCRUDPeople1";
-            this.SMItemSeparatorCRUDPeople1.Size = new System.Drawing.Size(223, 6);
-            // 
-            // SMItemAddPerson
-            // 
-            this.SMItemAddPerson.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.SMItemAddPerson.Image = ((System.Drawing.Image)(resources.GetObject("SMItemAddPerson.Image")));
-            this.SMItemAddPerson.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.SMItemAddPerson.Name = "SMItemAddPerson";
-            this.SMItemAddPerson.Size = new System.Drawing.Size(226, 38);
-            this.SMItemAddPerson.Text = "Add Person";
-            // 
-            // SMItemEditPerson
-            // 
-            this.SMItemEditPerson.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.SMItemEditPerson.Image = ((System.Drawing.Image)(resources.GetObject("SMItemEditPerson.Image")));
-            this.SMItemEditPerson.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.SMItemEditPerson.Name = "SMItemEditPerson";
-            this.SMItemEditPerson.Size = new System.Drawing.Size(226, 38);
-            this.SMItemEditPerson.Text = "Edit Person";
-            // 
-            // SMItemDeletePerson
-            // 
-            this.SMItemDeletePerson.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.SMItemDeletePerson.Image = ((System.Drawing.Image)(resources.GetObject("SMItemDeletePerson.Image")));
-            this.SMItemDeletePerson.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.SMItemDeletePerson.Name = "SMItemDeletePerson";
-            this.SMItemDeletePerson.Size = new System.Drawing.Size(226, 38);
-            this.SMItemDeletePerson.Text = "Delete Person";
-            // 
-            // SMItemSeparatorCRUDPeople2
-            // 
-            this.SMItemSeparatorCRUDPeople2.Name = "SMItemSeparatorCRUDPeople2";
-            this.SMItemSeparatorCRUDPeople2.Size = new System.Drawing.Size(223, 6);
-            // 
-            // SMItemSendEmail
-            // 
-            this.SMItemSendEmail.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.SMItemSendEmail.Image = ((System.Drawing.Image)(resources.GetObject("SMItemSendEmail.Image")));
-            this.SMItemSendEmail.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.SMItemSendEmail.Name = "SMItemSendEmail";
-            this.SMItemSendEmail.Size = new System.Drawing.Size(226, 38);
-            this.SMItemSendEmail.Text = "Send Email";
-            // 
-            // SMItemCallPerson
-            // 
-            this.SMItemCallPerson.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.SMItemCallPerson.Image = ((System.Drawing.Image)(resources.GetObject("SMItemCallPerson.Image")));
-            this.SMItemCallPerson.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.SMItemCallPerson.Name = "SMItemCallPerson";
-            this.SMItemCallPerson.Size = new System.Drawing.Size(226, 38);
-            this.SMItemCallPerson.Text = "Call Person";
+            this.CBFilterBy.BackColor = System.Drawing.Color.LightGray;
+            this.CBFilterBy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBFilterBy.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.CBFilterBy.ForeColor = System.Drawing.Color.Black;
+            this.CBFilterBy.FormattingEnabled = true;
+            this.CBFilterBy.Items.AddRange(new object[] {
+            "None",
+            "Person ID",
+            "National No",
+            "First Name",
+            "Second Name",
+            "Third Name",
+            "Last Name",
+            "Nationality",
+            "Gender",
+            "Phone",
+            "Email"});
+            this.CBFilterBy.Location = new System.Drawing.Point(145, 245);
+            this.CBFilterBy.Name = "CBFilterBy";
+            this.CBFilterBy.Size = new System.Drawing.Size(208, 31);
+            this.CBFilterBy.TabIndex = 7;
+            this.CBFilterBy.SelectedIndex = 0;
             // 
             // FOManagePeople
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1533, 932);
+            this.Controls.Add(this.CBFilterBy);
             this.Controls.Add(this.BtnAddClose);
             this.Controls.Add(this.LblRecoreds);
             this.Controls.Add(this.LblFilterBy);
@@ -258,8 +283,8 @@ namespace DVLD_PresentationLayer
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manage People";
             ((System.ComponentModel.ISupportInitialize)(this.dGViewShowInformation)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBManagePeople)).EndInit();
             this.SMItemCRUDpeople.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PBManagePeople)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -283,5 +308,6 @@ namespace DVLD_PresentationLayer
         private ToolStripSeparator SMItemSeparatorCRUDPeople2;
         private ToolStripMenuItem SMItemSendEmail;
         private ToolStripMenuItem SMItemCallPerson;
+        private ComboBox CBFilterBy;
     }
 }
