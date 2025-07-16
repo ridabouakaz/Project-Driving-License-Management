@@ -17,5 +17,9 @@ namespace DVLD_PresentationLayer
             InitializeComponent();
         }
 
+        private void FOManagePeople_Load(object sender, EventArgs e)
+        {
+            CBFilterBy.SelectedIndex = 0;
+        }
     }
 }

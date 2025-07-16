@@ -242,7 +242,7 @@ namespace DVLD_PresentationLayer
             // 
             // CBFilterBy
             // 
-            this.CBFilterBy.BackColor = System.Drawing.Color.LightGray;
+            this.CBFilterBy.BackColor = System.Drawing.Color.WhiteSmoke;
             this.CBFilterBy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBFilterBy.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.CBFilterBy.ForeColor = System.Drawing.Color.Black;
@@ -263,7 +263,6 @@ namespace DVLD_PresentationLayer
             this.CBFilterBy.Name = "CBFilterBy";
             this.CBFilterBy.Size = new System.Drawing.Size(208, 31);
             this.CBFilterBy.TabIndex = 7;
-            this.CBFilterBy.SelectedIndex = 0;
             // 
             // FOManagePeople
             // 
@@ -282,6 +281,7 @@ namespace DVLD_PresentationLayer
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manage People";
+            this.Load += new System.EventHandler(this.FOManagePeople_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dGViewShowInformation)).EndInit();
             this.SMItemCRUDpeople.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PBManagePeople)).EndInit();
