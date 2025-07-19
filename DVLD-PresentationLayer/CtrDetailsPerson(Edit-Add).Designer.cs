@@ -37,7 +37,8 @@ namespace DVLD_PresentationLayer
             this.LblAddress = new System.Windows.Forms.Label();
             this.LblFirstName = new System.Windows.Forms.Label();
             this.LblSecondName = new System.Windows.Forms.Label();
-            this.LblThrid = new System.Windows.Forms.Label();
+            this.LblThridName = new System.Windows.Forms.Label();
+            this.LblLastName = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // LblName
@@ -118,40 +119,53 @@ namespace DVLD_PresentationLayer
             this.LblSecondName.BackColor = System.Drawing.Color.Transparent;
             this.LblSecondName.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.LblSecondName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblSecondName.Location = new System.Drawing.Point(421, 29);
+            this.LblSecondName.Location = new System.Drawing.Point(403, 29);
             this.LblSecondName.Name = "LblSecondName";
             this.LblSecondName.Size = new System.Drawing.Size(66, 23);
             this.LblSecondName.TabIndex = 6;
             this.LblSecondName.Text = "Second";
             // 
-            // LblThrid
+            // LblThridName
             // 
-            this.LblThrid.AutoSize = true;
-            this.LblThrid.BackColor = System.Drawing.Color.Transparent;
-            this.LblThrid.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.LblThrid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblThrid.Location = new System.Drawing.Point(626, 29);
-            this.LblThrid.Name = "LblThrid";
-            this.LblThrid.Size = new System.Drawing.Size(49, 23);
-            this.LblThrid.TabIndex = 7;
-            this.LblThrid.Text = "Thrid";
+            this.LblThridName.AutoSize = true;
+            this.LblThridName.BackColor = System.Drawing.Color.Transparent;
+            this.LblThridName.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.LblThridName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblThridName.Location = new System.Drawing.Point(595, 29);
+            this.LblThridName.Name = "LblThridName";
+            this.LblThridName.Size = new System.Drawing.Size(49, 23);
+            this.LblThridName.TabIndex = 7;
+            this.LblThridName.Text = "Thrid";
+            // 
+            // LblLastName
+            // 
+            this.LblLastName.AutoSize = true;
+            this.LblLastName.BackColor = System.Drawing.Color.Transparent;
+            this.LblLastName.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.LblLastName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblLastName.Location = new System.Drawing.Point(770, 29);
+            this.LblLastName.Name = "LblLastName";
+            this.LblLastName.Size = new System.Drawing.Size(40, 23);
+            this.LblLastName.TabIndex = 8;
+            this.LblLastName.Text = "Last";
             // 
             // CtrDetailsPerson_Edit_Add_
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = ColorTranslator.FromHtml("#E6F0FA");
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.LblLastName);
             this.Controls.Add(this.LblAddress);
             this.Controls.Add(this.LblEmail);
             this.Controls.Add(this.LblGender);
             this.Controls.Add(this.LblNationalNo);
             this.Controls.Add(this.LblName);
-            this.Controls.Add(this.LblThrid);
+            this.Controls.Add(this.LblThridName);
             this.Controls.Add(this.LblSecondName);
             this.Controls.Add(this.LblFirstName);
             this.Name = "CtrDetailsPerson_Edit_Add_";
-            this.Size = new System.Drawing.Size(805, 367);
+            this.Size = new System.Drawing.Size(896, 367);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,6 +180,7 @@ namespace DVLD_PresentationLayer
         private System.Windows.Forms.Label LblAddress;
         private System.Windows.Forms.Label LblFirstName;
         private System.Windows.Forms.Label LblSecondName;
-        private System.Windows.Forms.Label LblThrid;
+        private System.Windows.Forms.Label LblThridName;
+        private System.Windows.Forms.Label LblLastName;
     }
 }
