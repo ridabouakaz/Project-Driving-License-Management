@@ -1,4 +1,5 @@
 ﻿using System.Drawing;
+using System.Windows.Forms;
 
 namespace DVLD_PresentationLayer
 {
@@ -30,6 +31,7 @@ namespace DVLD_PresentationLayer
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CtrDetailsPerson_Edit_Add_));
             this.LblName = new System.Windows.Forms.Label();
             this.LblNationalNo = new System.Windows.Forms.Label();
             this.LblGender = new System.Windows.Forms.Label();
@@ -39,6 +41,14 @@ namespace DVLD_PresentationLayer
             this.LblSecondName = new System.Windows.Forms.Label();
             this.LblThridName = new System.Windows.Forms.Label();
             this.LblLastName = new System.Windows.Forms.Label();
+            this.pBName = new System.Windows.Forms.PictureBox();
+            this.pBNationalNo = new System.Windows.Forms.PictureBox();
+            this.pBEmail = new System.Windows.Forms.PictureBox();
+            this.pBAddress = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pBName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBNationalNo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBEmail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBAddress)).BeginInit();
             this.SuspendLayout();
             // 
             // LblName
@@ -59,7 +69,7 @@ namespace DVLD_PresentationLayer
             this.LblNationalNo.BackColor = System.Drawing.Color.Transparent;
             this.LblNationalNo.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.LblNationalNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblNationalNo.Location = new System.Drawing.Point(28, 113);
+            this.LblNationalNo.Location = new System.Drawing.Point(28, 109);
             this.LblNationalNo.Name = "LblNationalNo";
             this.LblNationalNo.Size = new System.Drawing.Size(125, 25);
             this.LblNationalNo.TabIndex = 1;
@@ -71,7 +81,7 @@ namespace DVLD_PresentationLayer
             this.LblGender.BackColor = System.Drawing.Color.Transparent;
             this.LblGender.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.LblGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblGender.Location = new System.Drawing.Point(28, 158);
+            this.LblGender.Location = new System.Drawing.Point(28, 153);
             this.LblGender.Name = "LblGender";
             this.LblGender.Size = new System.Drawing.Size(84, 25);
             this.LblGender.TabIndex = 2;
@@ -83,7 +93,7 @@ namespace DVLD_PresentationLayer
             this.LblEmail.BackColor = System.Drawing.Color.Transparent;
             this.LblEmail.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.LblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblEmail.Location = new System.Drawing.Point(28, 201);
+            this.LblEmail.Location = new System.Drawing.Point(28, 197);
             this.LblEmail.Name = "LblEmail";
             this.LblEmail.Size = new System.Drawing.Size(64, 25);
             this.LblEmail.TabIndex = 3;
@@ -95,7 +105,7 @@ namespace DVLD_PresentationLayer
             this.LblAddress.BackColor = System.Drawing.Color.Transparent;
             this.LblAddress.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.LblAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblAddress.Location = new System.Drawing.Point(28, 242);
+            this.LblAddress.Location = new System.Drawing.Point(28, 241);
             this.LblAddress.Name = "LblAddress";
             this.LblAddress.Size = new System.Drawing.Size(88, 25);
             this.LblAddress.TabIndex = 4;
@@ -149,12 +159,52 @@ namespace DVLD_PresentationLayer
             this.LblLastName.TabIndex = 8;
             this.LblLastName.Text = "Last";
             // 
+            // pBName
+            // 
+            this.pBName.Image = ((System.Drawing.Image)(resources.GetObject("pBName.Image")));
+            this.pBName.Location = new System.Drawing.Point(157, 66);
+            this.pBName.Name = "pBName";
+            this.pBName.Size = new System.Drawing.Size(24, 24);
+            this.pBName.TabIndex = 9;
+            this.pBName.TabStop = false;
+            // 
+            // pBNationalNo
+            // 
+            this.pBNationalNo.Image = ((System.Drawing.Image)(resources.GetObject("pBNationalNo.Image")));
+            this.pBNationalNo.Location = new System.Drawing.Point(157, 110);
+            this.pBNationalNo.Name = "pBNationalNo";
+            this.pBNationalNo.Size = new System.Drawing.Size(24, 24);
+            this.pBNationalNo.TabIndex = 10;
+            this.pBNationalNo.TabStop = false;
+            // 
+            // pBEmail
+            // 
+            this.pBEmail.Image = ((System.Drawing.Image)(resources.GetObject("pBEmail.Image")));
+            this.pBEmail.Location = new System.Drawing.Point(157, 198);
+            this.pBEmail.Name = "pBEmail";
+            this.pBEmail.Size = new System.Drawing.Size(24, 24);
+            this.pBEmail.TabIndex = 11;
+            this.pBEmail.TabStop = false;
+            // 
+            // pBAddress
+            // 
+            this.pBAddress.Image = ((System.Drawing.Image)(resources.GetObject("pBAddress.Image")));
+            this.pBAddress.Location = new System.Drawing.Point(157, 242);
+            this.pBAddress.Name = "pBAddress";
+            this.pBAddress.Size = new System.Drawing.Size(24, 24);
+            this.pBAddress.TabIndex = 12;
+            this.pBAddress.TabStop = false;
+            // 
             // CtrDetailsPerson_Edit_Add_
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = ColorTranslator.FromHtml("#E6F0FA");
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(240)))), ((int)(((byte)(250)))));
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.pBAddress);
+            this.Controls.Add(this.pBEmail);
+            this.Controls.Add(this.pBNationalNo);
+            this.Controls.Add(this.pBName);
             this.Controls.Add(this.LblLastName);
             this.Controls.Add(this.LblAddress);
             this.Controls.Add(this.LblEmail);
@@ -166,6 +216,10 @@ namespace DVLD_PresentationLayer
             this.Controls.Add(this.LblFirstName);
             this.Name = "CtrDetailsPerson_Edit_Add_";
             this.Size = new System.Drawing.Size(896, 367);
+            ((System.ComponentModel.ISupportInitialize)(this.pBName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBNationalNo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBEmail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBAddress)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,5 +236,9 @@ namespace DVLD_PresentationLayer
         private System.Windows.Forms.Label LblSecondName;
         private System.Windows.Forms.Label LblThridName;
         private System.Windows.Forms.Label LblLastName;
+        private System.Windows.Forms.PictureBox pBName;
+        private PictureBox pBNationalNo;
+        private PictureBox pBEmail;
+        private PictureBox pBAddress;
     }
 }
