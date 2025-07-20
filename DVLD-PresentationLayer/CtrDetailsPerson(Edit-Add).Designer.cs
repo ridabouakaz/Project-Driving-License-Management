@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace DVLD_PresentationLayer
@@ -47,6 +48,9 @@ namespace DVLD_PresentationLayer
             this.PBAddress = new System.Windows.Forms.PictureBox();
             this.PBMan = new System.Windows.Forms.PictureBox();
             this.plGender = new System.Windows.Forms.Panel();
+            this.PBFemale = new System.Windows.Forms.PictureBox();
+            this.RBFemale = new System.Windows.Forms.RadioButton();
+            this.RBMale = new System.Windows.Forms.RadioButton();
             this.TBFirstName = new System.Windows.Forms.TextBox();
             this.TBSecondName = new System.Windows.Forms.TextBox();
             this.TBThridName = new System.Windows.Forms.TextBox();
@@ -60,19 +64,17 @@ namespace DVLD_PresentationLayer
             this.PBDateOfBrith = new System.Windows.Forms.PictureBox();
             this.PBPhone = new System.Windows.Forms.PictureBox();
             this.PBCountry = new System.Windows.Forms.PictureBox();
-            this.RBMale = new System.Windows.Forms.RadioButton();
-            this.RBFemale = new System.Windows.Forms.RadioButton();
-            this.PBFemale = new System.Windows.Forms.PictureBox();
+            this.DTPcontroluser = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.PBName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBNationalNo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBEmail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBAddress)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBMan)).BeginInit();
             this.plGender.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PBFemale)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBDateOfBrith)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBPhone)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBCountry)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBFemale)).BeginInit();
             this.SuspendLayout();
             // 
             // LblName
@@ -239,6 +241,37 @@ namespace DVLD_PresentationLayer
             this.plGender.Size = new System.Drawing.Size(206, 24);
             this.plGender.TabIndex = 14;
             // 
+            // PBFemale
+            // 
+            this.PBFemale.Image = ((System.Drawing.Image)(resources.GetObject("PBFemale.Image")));
+            this.PBFemale.Location = new System.Drawing.Point(94, 0);
+            this.PBFemale.Name = "PBFemale";
+            this.PBFemale.Size = new System.Drawing.Size(24, 24);
+            this.PBFemale.TabIndex = 28;
+            this.PBFemale.TabStop = false;
+            // 
+            // RBFemale
+            // 
+            this.RBFemale.AutoSize = true;
+            this.RBFemale.Location = new System.Drawing.Point(124, 3);
+            this.RBFemale.Name = "RBFemale";
+            this.RBFemale.Size = new System.Drawing.Size(74, 20);
+            this.RBFemale.TabIndex = 30;
+            this.RBFemale.TabStop = true;
+            this.RBFemale.Text = "Female";
+            this.RBFemale.UseVisualStyleBackColor = true;
+            // 
+            // RBMale
+            // 
+            this.RBMale.AutoSize = true;
+            this.RBMale.Location = new System.Drawing.Point(34, 3);
+            this.RBMale.Name = "RBMale";
+            this.RBMale.Size = new System.Drawing.Size(58, 20);
+            this.RBMale.TabIndex = 29;
+            this.RBMale.TabStop = true;
+            this.RBMale.Text = "Male";
+            this.RBMale.UseVisualStyleBackColor = true;
+            // 
             // TBFirstName
             // 
             this.TBFirstName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(243)))), ((int)(((byte)(247)))));
@@ -380,36 +413,16 @@ namespace DVLD_PresentationLayer
             this.PBCountry.TabIndex = 27;
             this.PBCountry.TabStop = false;
             // 
-            // RBMale
+            // DTPcontroluser
             // 
-            this.RBMale.AutoSize = true;
-            this.RBMale.Location = new System.Drawing.Point(34, 3);
-            this.RBMale.Name = "RBMale";
-            this.RBMale.Size = new System.Drawing.Size(58, 20);
-            this.RBMale.TabIndex = 29;
-            this.RBMale.TabStop = true;
-            this.RBMale.Text = "Male";
-            this.RBMale.UseVisualStyleBackColor = true;
-            // 
-            // RBFemale
-            // 
-            this.RBFemale.AutoSize = true;
-            this.RBFemale.Location = new System.Drawing.Point(124, 3);
-            this.RBFemale.Name = "RBFemale";
-            this.RBFemale.Size = new System.Drawing.Size(74, 20);
-            this.RBFemale.TabIndex = 30;
-            this.RBFemale.TabStop = true;
-            this.RBFemale.Text = "Female";
-            this.RBFemale.UseVisualStyleBackColor = true;
-            // 
-            // PBFemale
-            // 
-            this.PBFemale.Image = ((System.Drawing.Image)(resources.GetObject("PBFemale.Image")));
-            this.PBFemale.Location = new System.Drawing.Point(94, 0);
-            this.PBFemale.Name = "PBFemale";
-            this.PBFemale.Size = new System.Drawing.Size(24, 24);
-            this.PBFemale.TabIndex = 28;
-            this.PBFemale.TabStop = false;
+            this.DTPcontroluser.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.DTPcontroluser.Location = new System.Drawing.Point(540, 111);
+            this.DTPcontroluser.MinDate = new System.DateTime(2007, 1, 1, 0, 0, 0, 0);
+            this.DTPcontroluser.Name = "DTPcontroluser";
+            this.DTPcontroluser.Size = new System.Drawing.Size(153, 22);
+            this.DTPcontroluser.TabIndex = 28;
+            this.DTPcontroluser.Format = DateTimePickerFormat.Short;
+            this.DTPcontroluser.Value = DateTime.Today.AddYears(-18);
             // 
             // CtrDetailsPerson_Edit_Add_
             // 
@@ -417,6 +430,7 @@ namespace DVLD_PresentationLayer
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(240)))), ((int)(((byte)(250)))));
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.DTPcontroluser);
             this.Controls.Add(this.PBCountry);
             this.Controls.Add(this.PBPhone);
             this.Controls.Add(this.PBDateOfBrith);
@@ -453,10 +467,10 @@ namespace DVLD_PresentationLayer
             ((System.ComponentModel.ISupportInitialize)(this.PBMan)).EndInit();
             this.plGender.ResumeLayout(false);
             this.plGender.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PBFemale)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBDateOfBrith)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBPhone)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBCountry)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBFemale)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -495,5 +509,6 @@ namespace DVLD_PresentationLayer
         private RadioButton RBMale;
         private RadioButton RBFemale;
         private PictureBox PBFemale;
+        private DateTimePicker DTPcontroluser;
     }
 }
