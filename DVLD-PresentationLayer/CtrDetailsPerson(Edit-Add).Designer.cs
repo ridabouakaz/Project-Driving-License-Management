@@ -65,6 +65,9 @@ namespace DVLD_PresentationLayer
             this.PBPhone = new System.Windows.Forms.PictureBox();
             this.PBCountry = new System.Windows.Forms.PictureBox();
             this.DTPcontroluser = new System.Windows.Forms.DateTimePicker();
+            this.TBPhone = new System.Windows.Forms.TextBox();
+            this.CBCountry = new System.Windows.Forms.ComboBox();
+            this.PBImagePerson = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.PBName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBNationalNo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBEmail)).BeginInit();
@@ -75,6 +78,7 @@ namespace DVLD_PresentationLayer
             ((System.ComponentModel.ISupportInitialize)(this.PBDateOfBrith)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBPhone)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBCountry)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBImagePerson)).BeginInit();
             this.SuspendLayout();
             // 
             // LblName
@@ -415,14 +419,45 @@ namespace DVLD_PresentationLayer
             // 
             // DTPcontroluser
             // 
+            this.DTPcontroluser.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DTPcontroluser.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.DTPcontroluser.Location = new System.Drawing.Point(540, 111);
             this.DTPcontroluser.MinDate = new System.DateTime(2007, 1, 1, 0, 0, 0, 0);
             this.DTPcontroluser.Name = "DTPcontroluser";
             this.DTPcontroluser.Size = new System.Drawing.Size(153, 22);
             this.DTPcontroluser.TabIndex = 28;
-            this.DTPcontroluser.Format = DateTimePickerFormat.Short;
-            this.DTPcontroluser.Value = DateTime.Today.AddYears(-18);
+            this.DTPcontroluser.Value = new System.DateTime(2007, 7, 20, 0, 0, 0, 0);
+            // 
+            // TBPhone
+            // 
+            this.TBPhone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(243)))), ((int)(((byte)(247)))));
+            this.TBPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TBPhone.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TBPhone.ForeColor = System.Drawing.Color.Black;
+            this.TBPhone.Location = new System.Drawing.Point(539, 153);
+            this.TBPhone.Name = "TBPhone";
+            this.TBPhone.Size = new System.Drawing.Size(154, 27);
+            this.TBPhone.TabIndex = 29;
+            // 
+            // CBCountry
+            // 
+            this.CBCountry.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(243)))), ((int)(((byte)(247)))));
+            this.CBCountry.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBCountry.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.CBCountry.ForeColor = System.Drawing.Color.Black;
+            this.CBCountry.FormattingEnabled = true;
+            this.CBCountry.Location = new System.Drawing.Point(539, 198);
+            this.CBCountry.Name = "CBCountry";
+            this.CBCountry.Size = new System.Drawing.Size(154, 28);
+            this.CBCountry.TabIndex = 30;
+            // 
+            // PBImagePerson
+            // 
+            this.PBImagePerson.Location = new System.Drawing.Point(730, 111);
+            this.PBImagePerson.Name = "PBImagePerson";
+            this.PBImagePerson.Size = new System.Drawing.Size(128, 128);
+            this.PBImagePerson.TabIndex = 31;
+            this.PBImagePerson.TabStop = false;
             // 
             // CtrDetailsPerson_Edit_Add_
             // 
@@ -430,6 +465,9 @@ namespace DVLD_PresentationLayer
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(240)))), ((int)(((byte)(250)))));
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.PBImagePerson);
+            this.Controls.Add(this.CBCountry);
+            this.Controls.Add(this.TBPhone);
             this.Controls.Add(this.DTPcontroluser);
             this.Controls.Add(this.PBCountry);
             this.Controls.Add(this.PBPhone);
@@ -471,6 +509,7 @@ namespace DVLD_PresentationLayer
             ((System.ComponentModel.ISupportInitialize)(this.PBDateOfBrith)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBPhone)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBCountry)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBImagePerson)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -510,5 +549,8 @@ namespace DVLD_PresentationLayer
         private RadioButton RBFemale;
         private PictureBox PBFemale;
         private DateTimePicker DTPcontroluser;
+        private TextBox TBPhone;
+        private ComboBox CBCountry;
+        private PictureBox PBImagePerson;
     }
 }
