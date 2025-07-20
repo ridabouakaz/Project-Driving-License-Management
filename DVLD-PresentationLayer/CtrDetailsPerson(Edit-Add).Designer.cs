@@ -54,12 +54,25 @@ namespace DVLD_PresentationLayer
             this.TBNationalNo = new System.Windows.Forms.TextBox();
             this.TBEmail = new System.Windows.Forms.TextBox();
             this.TBAddress = new System.Windows.Forms.TextBox();
+            this.LblDateOfBirth = new System.Windows.Forms.Label();
+            this.LblPhone = new System.Windows.Forms.Label();
+            this.LblCountry = new System.Windows.Forms.Label();
+            this.PBDateOfBrith = new System.Windows.Forms.PictureBox();
+            this.PBPhone = new System.Windows.Forms.PictureBox();
+            this.PBCountry = new System.Windows.Forms.PictureBox();
+            this.RBMale = new System.Windows.Forms.RadioButton();
+            this.RBFemale = new System.Windows.Forms.RadioButton();
+            this.PBFemale = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.PBName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBNationalNo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBEmail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBAddress)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBMan)).BeginInit();
             this.plGender.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PBDateOfBrith)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBPhone)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBCountry)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBFemale)).BeginInit();
             this.SuspendLayout();
             // 
             // LblName
@@ -217,10 +230,13 @@ namespace DVLD_PresentationLayer
             // 
             // plGender
             // 
+            this.plGender.Controls.Add(this.PBFemale);
+            this.plGender.Controls.Add(this.RBFemale);
+            this.plGender.Controls.Add(this.RBMale);
             this.plGender.Controls.Add(this.PBMan);
             this.plGender.Location = new System.Drawing.Point(157, 154);
             this.plGender.Name = "plGender";
-            this.plGender.Size = new System.Drawing.Size(188, 24);
+            this.plGender.Size = new System.Drawing.Size(206, 24);
             this.plGender.TabIndex = 14;
             // 
             // TBFirstName
@@ -301,12 +317,112 @@ namespace DVLD_PresentationLayer
             this.TBAddress.Size = new System.Drawing.Size(502, 111);
             this.TBAddress.TabIndex = 21;
             // 
+            // LblDateOfBirth
+            // 
+            this.LblDateOfBirth.AutoSize = true;
+            this.LblDateOfBirth.BackColor = System.Drawing.Color.Transparent;
+            this.LblDateOfBirth.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.LblDateOfBirth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblDateOfBirth.Location = new System.Drawing.Point(371, 109);
+            this.LblDateOfBirth.Name = "LblDateOfBirth";
+            this.LblDateOfBirth.Size = new System.Drawing.Size(133, 25);
+            this.LblDateOfBirth.TabIndex = 22;
+            this.LblDateOfBirth.Text = "Date Of Birth:";
+            // 
+            // LblPhone
+            // 
+            this.LblPhone.AutoSize = true;
+            this.LblPhone.BackColor = System.Drawing.Color.Transparent;
+            this.LblPhone.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.LblPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblPhone.Location = new System.Drawing.Point(430, 153);
+            this.LblPhone.Name = "LblPhone";
+            this.LblPhone.Size = new System.Drawing.Size(74, 25);
+            this.LblPhone.TabIndex = 23;
+            this.LblPhone.Text = "Phone:";
+            // 
+            // LblCountry
+            // 
+            this.LblCountry.AutoSize = true;
+            this.LblCountry.BackColor = System.Drawing.Color.Transparent;
+            this.LblCountry.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.LblCountry.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblCountry.Location = new System.Drawing.Point(413, 197);
+            this.LblCountry.Name = "LblCountry";
+            this.LblCountry.Size = new System.Drawing.Size(91, 25);
+            this.LblCountry.TabIndex = 24;
+            this.LblCountry.Text = "Country:";
+            // 
+            // PBDateOfBrith
+            // 
+            this.PBDateOfBrith.Image = ((System.Drawing.Image)(resources.GetObject("PBDateOfBrith.Image")));
+            this.PBDateOfBrith.Location = new System.Drawing.Point(510, 110);
+            this.PBDateOfBrith.Name = "PBDateOfBrith";
+            this.PBDateOfBrith.Size = new System.Drawing.Size(24, 24);
+            this.PBDateOfBrith.TabIndex = 25;
+            this.PBDateOfBrith.TabStop = false;
+            // 
+            // PBPhone
+            // 
+            this.PBPhone.Image = ((System.Drawing.Image)(resources.GetObject("PBPhone.Image")));
+            this.PBPhone.Location = new System.Drawing.Point(510, 154);
+            this.PBPhone.Name = "PBPhone";
+            this.PBPhone.Size = new System.Drawing.Size(24, 24);
+            this.PBPhone.TabIndex = 26;
+            this.PBPhone.TabStop = false;
+            // 
+            // PBCountry
+            // 
+            this.PBCountry.Image = ((System.Drawing.Image)(resources.GetObject("PBCountry.Image")));
+            this.PBCountry.Location = new System.Drawing.Point(510, 200);
+            this.PBCountry.Name = "PBCountry";
+            this.PBCountry.Size = new System.Drawing.Size(24, 24);
+            this.PBCountry.TabIndex = 27;
+            this.PBCountry.TabStop = false;
+            // 
+            // RBMale
+            // 
+            this.RBMale.AutoSize = true;
+            this.RBMale.Location = new System.Drawing.Point(34, 3);
+            this.RBMale.Name = "RBMale";
+            this.RBMale.Size = new System.Drawing.Size(58, 20);
+            this.RBMale.TabIndex = 29;
+            this.RBMale.TabStop = true;
+            this.RBMale.Text = "Male";
+            this.RBMale.UseVisualStyleBackColor = true;
+            // 
+            // RBFemale
+            // 
+            this.RBFemale.AutoSize = true;
+            this.RBFemale.Location = new System.Drawing.Point(124, 3);
+            this.RBFemale.Name = "RBFemale";
+            this.RBFemale.Size = new System.Drawing.Size(74, 20);
+            this.RBFemale.TabIndex = 30;
+            this.RBFemale.TabStop = true;
+            this.RBFemale.Text = "Female";
+            this.RBFemale.UseVisualStyleBackColor = true;
+            // 
+            // PBFemale
+            // 
+            this.PBFemale.Image = ((System.Drawing.Image)(resources.GetObject("PBFemale.Image")));
+            this.PBFemale.Location = new System.Drawing.Point(94, 0);
+            this.PBFemale.Name = "PBFemale";
+            this.PBFemale.Size = new System.Drawing.Size(24, 24);
+            this.PBFemale.TabIndex = 28;
+            this.PBFemale.TabStop = false;
+            // 
             // CtrDetailsPerson_Edit_Add_
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(240)))), ((int)(((byte)(250)))));
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.PBCountry);
+            this.Controls.Add(this.PBPhone);
+            this.Controls.Add(this.PBDateOfBrith);
+            this.Controls.Add(this.LblCountry);
+            this.Controls.Add(this.LblPhone);
+            this.Controls.Add(this.LblDateOfBirth);
             this.Controls.Add(this.TBAddress);
             this.Controls.Add(this.TBEmail);
             this.Controls.Add(this.TBNationalNo);
@@ -336,6 +452,11 @@ namespace DVLD_PresentationLayer
             ((System.ComponentModel.ISupportInitialize)(this.PBAddress)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBMan)).EndInit();
             this.plGender.ResumeLayout(false);
+            this.plGender.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PBDateOfBrith)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBPhone)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBCountry)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBFemale)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -365,5 +486,14 @@ namespace DVLD_PresentationLayer
         private TextBox TBNationalNo;
         private TextBox TBEmail;
         private TextBox TBAddress;
+        private Label LblDateOfBirth;
+        private Label LblPhone;
+        private Label LblCountry;
+        private PictureBox PBDateOfBrith;
+        private PictureBox PBPhone;
+        private PictureBox PBCountry;
+        private RadioButton RBMale;
+        private RadioButton RBFemale;
+        private PictureBox PBFemale;
     }
 }
