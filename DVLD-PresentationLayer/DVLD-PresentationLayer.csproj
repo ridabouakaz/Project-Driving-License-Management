@@ -55,6 +55,12 @@
     <Compile Include="CtrDetailsPerson%28Edit-Add%29.Designer.cs">
       <DependentUpon>CtrDetailsPerson%28Edit-Add%29.cs</DependentUpon>
     </Compile>
+    <Compile Include="FOAddEditPersonInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FOAddEditPersonInfo.Designer.cs">
+      <DependentUpon>FOAddEditPersonInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FOManagePeople.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CtrDetailsPerson%28Edit-Add%29.resx">
       <DependentUpon>CtrDetailsPerson%28Edit-Add%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOAddEditPersonInfo.resx">
+      <DependentUpon>FOAddEditPersonInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FOManagePeople.resx">
       <DependentUpon>FOManagePeople.cs</DependentUpon>

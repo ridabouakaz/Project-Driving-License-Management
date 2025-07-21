@@ -475,7 +475,6 @@ namespace DVLD_PresentationLayer
             // 
             // BtnAddClose
             // 
-            this.BtnAddClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnAddClose.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.BtnAddClose.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.BtnAddClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
@@ -485,7 +484,7 @@ namespace DVLD_PresentationLayer
             this.BtnAddClose.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BtnAddClose.Image = ((System.Drawing.Image)(resources.GetObject("BtnAddClose.Image")));
             this.BtnAddClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAddClose.Location = new System.Drawing.Point(418, 368);
+            this.BtnAddClose.Location = new System.Drawing.Point(421, 368);
             this.BtnAddClose.Name = "BtnAddClose";
             this.BtnAddClose.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.BtnAddClose.Size = new System.Drawing.Size(127, 40);
@@ -497,7 +496,6 @@ namespace DVLD_PresentationLayer
             // 
             // BtnAddSave
             // 
-            this.BtnAddSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnAddSave.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.BtnAddSave.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.BtnAddSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
@@ -507,7 +505,7 @@ namespace DVLD_PresentationLayer
             this.BtnAddSave.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BtnAddSave.Image = ((System.Drawing.Image)(resources.GetObject("BtnAddSave.Image")));
             this.BtnAddSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAddSave.Location = new System.Drawing.Point(566, 368);
+            this.BtnAddSave.Location = new System.Drawing.Point(569, 368);
             this.BtnAddSave.Name = "BtnAddSave";
             this.BtnAddSave.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.BtnAddSave.Size = new System.Drawing.Size(127, 40);
@@ -558,7 +556,7 @@ namespace DVLD_PresentationLayer
             this.Controls.Add(this.LblSecondName);
             this.Controls.Add(this.LblFirstName);
             this.Name = "CtrDetailsPerson_Edit_Add_";
-            this.Size = new System.Drawing.Size(896, 428);
+            this.Size = new System.Drawing.Size(902, 428);
             ((System.ComponentModel.ISupportInitialize)(this.PBName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBNationalNo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBEmail)).EndInit();
