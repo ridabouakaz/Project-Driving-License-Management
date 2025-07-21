@@ -68,6 +68,9 @@ namespace DVLD_PresentationLayer
             this.TBPhone = new System.Windows.Forms.TextBox();
             this.CBCountry = new System.Windows.Forms.ComboBox();
             this.PBImagePerson = new System.Windows.Forms.PictureBox();
+            this.LLSetImage = new System.Windows.Forms.LinkLabel();
+            this.BtnAddClose = new System.Windows.Forms.Button();
+            this.BtnAddSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PBName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBNationalNo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBEmail)).BeginInit();
@@ -459,12 +462,70 @@ namespace DVLD_PresentationLayer
             this.PBImagePerson.TabIndex = 31;
             this.PBImagePerson.TabStop = false;
             // 
+            // LLSetImage
+            // 
+            this.LLSetImage.AutoSize = true;
+            this.LLSetImage.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.LLSetImage.Location = new System.Drawing.Point(751, 253);
+            this.LLSetImage.Name = "LLSetImage";
+            this.LLSetImage.Size = new System.Drawing.Size(87, 23);
+            this.LLSetImage.TabIndex = 33;
+            this.LLSetImage.TabStop = true;
+            this.LLSetImage.Text = "Set Image";
+            // 
+            // BtnAddClose
+            // 
+            this.BtnAddClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnAddClose.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnAddClose.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BtnAddClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.BtnAddClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.BtnAddClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAddClose.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.BtnAddClose.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BtnAddClose.Image = ((System.Drawing.Image)(resources.GetObject("BtnAddClose.Image")));
+            this.BtnAddClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnAddClose.Location = new System.Drawing.Point(418, 368);
+            this.BtnAddClose.Name = "BtnAddClose";
+            this.BtnAddClose.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.BtnAddClose.Size = new System.Drawing.Size(127, 40);
+            this.BtnAddClose.TabIndex = 34;
+            this.BtnAddClose.Text = "Close";
+            this.BtnAddClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnAddClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnAddClose.UseVisualStyleBackColor = false;
+            // 
+            // BtnAddSave
+            // 
+            this.BtnAddSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnAddSave.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnAddSave.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BtnAddSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.BtnAddSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.BtnAddSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAddSave.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.BtnAddSave.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BtnAddSave.Image = ((System.Drawing.Image)(resources.GetObject("BtnAddSave.Image")));
+            this.BtnAddSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnAddSave.Location = new System.Drawing.Point(566, 368);
+            this.BtnAddSave.Name = "BtnAddSave";
+            this.BtnAddSave.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.BtnAddSave.Size = new System.Drawing.Size(127, 40);
+            this.BtnAddSave.TabIndex = 35;
+            this.BtnAddSave.Text = "Save";
+            this.BtnAddSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnAddSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnAddSave.UseVisualStyleBackColor = false;
+            // 
             // CtrDetailsPerson_Edit_Add_
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(240)))), ((int)(((byte)(250)))));
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.BtnAddSave);
+            this.Controls.Add(this.BtnAddClose);
+            this.Controls.Add(this.LLSetImage);
             this.Controls.Add(this.PBImagePerson);
             this.Controls.Add(this.CBCountry);
             this.Controls.Add(this.TBPhone);
@@ -497,7 +558,7 @@ namespace DVLD_PresentationLayer
             this.Controls.Add(this.LblSecondName);
             this.Controls.Add(this.LblFirstName);
             this.Name = "CtrDetailsPerson_Edit_Add_";
-            this.Size = new System.Drawing.Size(896, 388);
+            this.Size = new System.Drawing.Size(896, 428);
             ((System.ComponentModel.ISupportInitialize)(this.PBName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBNationalNo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBEmail)).EndInit();
@@ -552,5 +613,8 @@ namespace DVLD_PresentationLayer
         private TextBox TBPhone;
         private ComboBox CBCountry;
         private PictureBox PBImagePerson;
+        private LinkLabel LLSetImage;
+        private Button BtnAddClose;
+        private Button BtnAddSave;
     }
 }
