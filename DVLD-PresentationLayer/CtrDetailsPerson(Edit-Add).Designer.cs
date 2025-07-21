@@ -88,11 +88,11 @@ namespace DVLD_PresentationLayer
             // 
             this.LblName.AutoSize = true;
             this.LblName.BackColor = System.Drawing.Color.Transparent;
-            this.LblName.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.LblName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.LblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.LblName.Location = new System.Drawing.Point(28, 65);
             this.LblName.Name = "LblName";
-            this.LblName.Size = new System.Drawing.Size(69, 25);
+            this.LblName.Size = new System.Drawing.Size(73, 28);
             this.LblName.TabIndex = 0;
             this.LblName.Text = "Name:";
             // 
@@ -100,11 +100,11 @@ namespace DVLD_PresentationLayer
             // 
             this.LblNationalNo.AutoSize = true;
             this.LblNationalNo.BackColor = System.Drawing.Color.Transparent;
-            this.LblNationalNo.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.LblNationalNo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.LblNationalNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.LblNationalNo.Location = new System.Drawing.Point(28, 109);
             this.LblNationalNo.Name = "LblNationalNo";
-            this.LblNationalNo.Size = new System.Drawing.Size(125, 25);
+            this.LblNationalNo.Size = new System.Drawing.Size(133, 28);
             this.LblNationalNo.TabIndex = 1;
             this.LblNationalNo.Text = "National No:";
             // 
@@ -112,11 +112,11 @@ namespace DVLD_PresentationLayer
             // 
             this.LblGender.AutoSize = true;
             this.LblGender.BackColor = System.Drawing.Color.Transparent;
-            this.LblGender.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.LblGender.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.LblGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.LblGender.Location = new System.Drawing.Point(28, 153);
             this.LblGender.Name = "LblGender";
-            this.LblGender.Size = new System.Drawing.Size(84, 25);
+            this.LblGender.Size = new System.Drawing.Size(86, 28);
             this.LblGender.TabIndex = 2;
             this.LblGender.Text = "Gender:";
             // 
@@ -124,11 +124,11 @@ namespace DVLD_PresentationLayer
             // 
             this.LblEmail.AutoSize = true;
             this.LblEmail.BackColor = System.Drawing.Color.Transparent;
-            this.LblEmail.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.LblEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.LblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.LblEmail.Location = new System.Drawing.Point(28, 197);
             this.LblEmail.Name = "LblEmail";
-            this.LblEmail.Size = new System.Drawing.Size(64, 25);
+            this.LblEmail.Size = new System.Drawing.Size(69, 28);
             this.LblEmail.TabIndex = 3;
             this.LblEmail.Text = "Email:";
             // 
@@ -136,11 +136,11 @@ namespace DVLD_PresentationLayer
             // 
             this.LblAddress.AutoSize = true;
             this.LblAddress.BackColor = System.Drawing.Color.Transparent;
-            this.LblAddress.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.LblAddress.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.LblAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.LblAddress.Location = new System.Drawing.Point(28, 241);
             this.LblAddress.Name = "LblAddress";
-            this.LblAddress.Size = new System.Drawing.Size(88, 25);
+            this.LblAddress.Size = new System.Drawing.Size(92, 28);
             this.LblAddress.TabIndex = 4;
             this.LblAddress.Text = "Address:";
             // 
@@ -148,11 +148,11 @@ namespace DVLD_PresentationLayer
             // 
             this.LblFirstName.AutoSize = true;
             this.LblFirstName.BackColor = System.Drawing.Color.Transparent;
-            this.LblFirstName.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.LblFirstName.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.LblFirstName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblFirstName.Location = new System.Drawing.Point(243, 29);
+            this.LblFirstName.Location = new System.Drawing.Point(286, 29);
             this.LblFirstName.Name = "LblFirstName";
-            this.LblFirstName.Size = new System.Drawing.Size(41, 23);
+            this.LblFirstName.Size = new System.Drawing.Size(47, 25);
             this.LblFirstName.TabIndex = 5;
             this.LblFirstName.Text = "First";
             // 
@@ -160,11 +160,11 @@ namespace DVLD_PresentationLayer
             // 
             this.LblSecondName.AutoSize = true;
             this.LblSecondName.BackColor = System.Drawing.Color.Transparent;
-            this.LblSecondName.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.LblSecondName.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.LblSecondName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblSecondName.Location = new System.Drawing.Point(406, 29);
+            this.LblSecondName.Location = new System.Drawing.Point(505, 29);
             this.LblSecondName.Name = "LblSecondName";
-            this.LblSecondName.Size = new System.Drawing.Size(66, 23);
+            this.LblSecondName.Size = new System.Drawing.Size(74, 25);
             this.LblSecondName.TabIndex = 6;
             this.LblSecondName.Text = "Second";
             // 
@@ -172,11 +172,11 @@ namespace DVLD_PresentationLayer
             // 
             this.LblThridName.AutoSize = true;
             this.LblThridName.BackColor = System.Drawing.Color.Transparent;
-            this.LblThridName.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.LblThridName.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.LblThridName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblThridName.Location = new System.Drawing.Point(590, 29);
+            this.LblThridName.Location = new System.Drawing.Point(741, 29);
             this.LblThridName.Name = "LblThridName";
-            this.LblThridName.Size = new System.Drawing.Size(49, 23);
+            this.LblThridName.Size = new System.Drawing.Size(56, 25);
             this.LblThridName.TabIndex = 7;
             this.LblThridName.Text = "Thrid";
             // 
@@ -184,18 +184,18 @@ namespace DVLD_PresentationLayer
             // 
             this.LblLastName.AutoSize = true;
             this.LblLastName.BackColor = System.Drawing.Color.Transparent;
-            this.LblLastName.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.LblLastName.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.LblLastName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblLastName.Location = new System.Drawing.Point(768, 29);
+            this.LblLastName.Location = new System.Drawing.Point(927, 29);
             this.LblLastName.Name = "LblLastName";
-            this.LblLastName.Size = new System.Drawing.Size(40, 23);
+            this.LblLastName.Size = new System.Drawing.Size(45, 25);
             this.LblLastName.TabIndex = 8;
             this.LblLastName.Text = "Last";
             // 
             // PBName
             // 
             this.PBName.Image = ((System.Drawing.Image)(resources.GetObject("PBName.Image")));
-            this.PBName.Location = new System.Drawing.Point(157, 66);
+            this.PBName.Location = new System.Drawing.Point(191, 69);
             this.PBName.Name = "PBName";
             this.PBName.Size = new System.Drawing.Size(24, 24);
             this.PBName.TabIndex = 9;
@@ -283,73 +283,73 @@ namespace DVLD_PresentationLayer
             // 
             this.TBFirstName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(243)))), ((int)(((byte)(247)))));
             this.TBFirstName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TBFirstName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TBFirstName.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.TBFirstName.ForeColor = System.Drawing.Color.Black;
-            this.TBFirstName.Location = new System.Drawing.Point(191, 65);
+            this.TBFirstName.Location = new System.Drawing.Point(221, 65);
             this.TBFirstName.Name = "TBFirstName";
-            this.TBFirstName.Size = new System.Drawing.Size(154, 27);
+            this.TBFirstName.Size = new System.Drawing.Size(184, 30);
             this.TBFirstName.TabIndex = 15;
             // 
             // TBSecondName
             // 
             this.TBSecondName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(243)))), ((int)(((byte)(247)))));
             this.TBSecondName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TBSecondName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TBSecondName.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.TBSecondName.ForeColor = System.Drawing.Color.Black;
-            this.TBSecondName.Location = new System.Drawing.Point(364, 65);
+            this.TBSecondName.Location = new System.Drawing.Point(455, 63);
             this.TBSecondName.Name = "TBSecondName";
-            this.TBSecondName.Size = new System.Drawing.Size(154, 27);
+            this.TBSecondName.Size = new System.Drawing.Size(184, 30);
             this.TBSecondName.TabIndex = 16;
             // 
             // TBThridName
             // 
             this.TBThridName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(243)))), ((int)(((byte)(247)))));
             this.TBThridName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TBThridName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TBThridName.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.TBThridName.ForeColor = System.Drawing.Color.Black;
-            this.TBThridName.Location = new System.Drawing.Point(539, 65);
+            this.TBThridName.Location = new System.Drawing.Point(674, 63);
             this.TBThridName.Name = "TBThridName";
-            this.TBThridName.Size = new System.Drawing.Size(154, 27);
+            this.TBThridName.Size = new System.Drawing.Size(184, 30);
             this.TBThridName.TabIndex = 17;
             // 
             // TBLastName
             // 
             this.TBLastName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(243)))), ((int)(((byte)(247)))));
             this.TBLastName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TBLastName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TBLastName.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.TBLastName.ForeColor = System.Drawing.Color.Black;
-            this.TBLastName.Location = new System.Drawing.Point(717, 65);
+            this.TBLastName.Location = new System.Drawing.Point(876, 68);
             this.TBLastName.Name = "TBLastName";
-            this.TBLastName.Size = new System.Drawing.Size(154, 27);
+            this.TBLastName.Size = new System.Drawing.Size(184, 30);
             this.TBLastName.TabIndex = 18;
             // 
             // TBNationalNo
             // 
             this.TBNationalNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(243)))), ((int)(((byte)(247)))));
             this.TBNationalNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TBNationalNo.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TBNationalNo.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.TBNationalNo.ForeColor = System.Drawing.Color.Black;
             this.TBNationalNo.Location = new System.Drawing.Point(191, 109);
             this.TBNationalNo.Name = "TBNationalNo";
-            this.TBNationalNo.Size = new System.Drawing.Size(154, 27);
+            this.TBNationalNo.Size = new System.Drawing.Size(154, 30);
             this.TBNationalNo.TabIndex = 19;
             // 
             // TBEmail
             // 
             this.TBEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(243)))), ((int)(((byte)(247)))));
             this.TBEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TBEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TBEmail.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.TBEmail.ForeColor = System.Drawing.Color.Black;
             this.TBEmail.Location = new System.Drawing.Point(191, 197);
             this.TBEmail.Name = "TBEmail";
-            this.TBEmail.Size = new System.Drawing.Size(154, 27);
+            this.TBEmail.Size = new System.Drawing.Size(154, 30);
             this.TBEmail.TabIndex = 20;
             // 
             // TBAddress
             // 
             this.TBAddress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(243)))), ((int)(((byte)(247)))));
             this.TBAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TBAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TBAddress.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.TBAddress.ForeColor = System.Drawing.Color.Black;
             this.TBAddress.Location = new System.Drawing.Point(191, 241);
             this.TBAddress.Multiline = true;
@@ -361,11 +361,11 @@ namespace DVLD_PresentationLayer
             // 
             this.LblDateOfBirth.AutoSize = true;
             this.LblDateOfBirth.BackColor = System.Drawing.Color.Transparent;
-            this.LblDateOfBirth.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.LblDateOfBirth.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.LblDateOfBirth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblDateOfBirth.Location = new System.Drawing.Point(371, 109);
+            this.LblDateOfBirth.Location = new System.Drawing.Point(464, 109);
             this.LblDateOfBirth.Name = "LblDateOfBirth";
-            this.LblDateOfBirth.Size = new System.Drawing.Size(133, 25);
+            this.LblDateOfBirth.Size = new System.Drawing.Size(145, 28);
             this.LblDateOfBirth.TabIndex = 22;
             this.LblDateOfBirth.Text = "Date Of Birth:";
             // 
@@ -373,11 +373,11 @@ namespace DVLD_PresentationLayer
             // 
             this.LblPhone.AutoSize = true;
             this.LblPhone.BackColor = System.Drawing.Color.Transparent;
-            this.LblPhone.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.LblPhone.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.LblPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.LblPhone.Location = new System.Drawing.Point(430, 153);
             this.LblPhone.Name = "LblPhone";
-            this.LblPhone.Size = new System.Drawing.Size(74, 25);
+            this.LblPhone.Size = new System.Drawing.Size(76, 28);
             this.LblPhone.TabIndex = 23;
             this.LblPhone.Text = "Phone:";
             // 
@@ -385,18 +385,18 @@ namespace DVLD_PresentationLayer
             // 
             this.LblCountry.AutoSize = true;
             this.LblCountry.BackColor = System.Drawing.Color.Transparent;
-            this.LblCountry.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.LblCountry.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.LblCountry.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.LblCountry.Location = new System.Drawing.Point(413, 197);
             this.LblCountry.Name = "LblCountry";
-            this.LblCountry.Size = new System.Drawing.Size(91, 25);
+            this.LblCountry.Size = new System.Drawing.Size(93, 28);
             this.LblCountry.TabIndex = 24;
             this.LblCountry.Text = "Country:";
             // 
             // PBDateOfBrith
             // 
             this.PBDateOfBrith.Image = ((System.Drawing.Image)(resources.GetObject("PBDateOfBrith.Image")));
-            this.PBDateOfBrith.Location = new System.Drawing.Point(510, 110);
+            this.PBDateOfBrith.Location = new System.Drawing.Point(615, 110);
             this.PBDateOfBrith.Name = "PBDateOfBrith";
             this.PBDateOfBrith.Size = new System.Drawing.Size(24, 24);
             this.PBDateOfBrith.TabIndex = 25;
@@ -424,7 +424,7 @@ namespace DVLD_PresentationLayer
             // 
             this.DTPcontroluser.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DTPcontroluser.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.DTPcontroluser.Location = new System.Drawing.Point(540, 111);
+            this.DTPcontroluser.Location = new System.Drawing.Point(685, 109);
             this.DTPcontroluser.MinDate = new System.DateTime(2007, 1, 1, 0, 0, 0, 0);
             this.DTPcontroluser.Name = "DTPcontroluser";
             this.DTPcontroluser.Size = new System.Drawing.Size(153, 22);
@@ -435,28 +435,28 @@ namespace DVLD_PresentationLayer
             // 
             this.TBPhone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(243)))), ((int)(((byte)(247)))));
             this.TBPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TBPhone.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TBPhone.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.TBPhone.ForeColor = System.Drawing.Color.Black;
             this.TBPhone.Location = new System.Drawing.Point(539, 153);
             this.TBPhone.Name = "TBPhone";
-            this.TBPhone.Size = new System.Drawing.Size(154, 27);
+            this.TBPhone.Size = new System.Drawing.Size(154, 30);
             this.TBPhone.TabIndex = 29;
             // 
             // CBCountry
             // 
             this.CBCountry.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(243)))), ((int)(((byte)(247)))));
             this.CBCountry.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CBCountry.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.CBCountry.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.CBCountry.ForeColor = System.Drawing.Color.Black;
             this.CBCountry.FormattingEnabled = true;
             this.CBCountry.Location = new System.Drawing.Point(539, 198);
             this.CBCountry.Name = "CBCountry";
-            this.CBCountry.Size = new System.Drawing.Size(154, 28);
+            this.CBCountry.Size = new System.Drawing.Size(154, 31);
             this.CBCountry.TabIndex = 30;
             // 
             // PBImagePerson
             // 
-            this.PBImagePerson.Location = new System.Drawing.Point(730, 111);
+            this.PBImagePerson.Location = new System.Drawing.Point(890, 111);
             this.PBImagePerson.Name = "PBImagePerson";
             this.PBImagePerson.Size = new System.Drawing.Size(128, 128);
             this.PBImagePerson.TabIndex = 31;
@@ -465,10 +465,10 @@ namespace DVLD_PresentationLayer
             // LLSetImage
             // 
             this.LLSetImage.AutoSize = true;
-            this.LLSetImage.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.LLSetImage.Location = new System.Drawing.Point(751, 253);
+            this.LLSetImage.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.LLSetImage.Location = new System.Drawing.Point(908, 259);
             this.LLSetImage.Name = "LLSetImage";
-            this.LLSetImage.Size = new System.Drawing.Size(87, 23);
+            this.LLSetImage.Size = new System.Drawing.Size(95, 25);
             this.LLSetImage.TabIndex = 33;
             this.LLSetImage.TabStop = true;
             this.LLSetImage.Text = "Set Image";
@@ -484,10 +484,10 @@ namespace DVLD_PresentationLayer
             this.BtnAddClose.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BtnAddClose.Image = ((System.Drawing.Image)(resources.GetObject("BtnAddClose.Image")));
             this.BtnAddClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAddClose.Location = new System.Drawing.Point(421, 368);
+            this.BtnAddClose.Location = new System.Drawing.Point(410, 368);
             this.BtnAddClose.Name = "BtnAddClose";
             this.BtnAddClose.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.BtnAddClose.Size = new System.Drawing.Size(127, 40);
+            this.BtnAddClose.Size = new System.Drawing.Size(142, 48);
             this.BtnAddClose.TabIndex = 34;
             this.BtnAddClose.Text = "Close";
             this.BtnAddClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -505,10 +505,10 @@ namespace DVLD_PresentationLayer
             this.BtnAddSave.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BtnAddSave.Image = ((System.Drawing.Image)(resources.GetObject("BtnAddSave.Image")));
             this.BtnAddSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAddSave.Location = new System.Drawing.Point(569, 368);
+            this.BtnAddSave.Location = new System.Drawing.Point(566, 368);
             this.BtnAddSave.Name = "BtnAddSave";
             this.BtnAddSave.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.BtnAddSave.Size = new System.Drawing.Size(127, 40);
+            this.BtnAddSave.Size = new System.Drawing.Size(130, 48);
             this.BtnAddSave.TabIndex = 35;
             this.BtnAddSave.Text = "Save";
             this.BtnAddSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -520,7 +520,6 @@ namespace DVLD_PresentationLayer
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(240)))), ((int)(((byte)(250)))));
-            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.BtnAddSave);
             this.Controls.Add(this.BtnAddClose);
             this.Controls.Add(this.LLSetImage);
@@ -556,7 +555,7 @@ namespace DVLD_PresentationLayer
             this.Controls.Add(this.LblSecondName);
             this.Controls.Add(this.LblFirstName);
             this.Name = "CtrDetailsPerson_Edit_Add_";
-            this.Size = new System.Drawing.Size(902, 428);
+            this.Size = new System.Drawing.Size(1058, 451);
             ((System.ComponentModel.ISupportInitialize)(this.PBName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBNationalNo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBEmail)).EndInit();
