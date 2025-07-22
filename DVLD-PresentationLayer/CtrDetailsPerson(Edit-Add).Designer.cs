@@ -197,7 +197,7 @@ namespace DVLD_PresentationLayer
             this.PBName.Image = ((System.Drawing.Image)(resources.GetObject("PBName.Image")));
             this.PBName.Location = new System.Drawing.Point(177, 68);
             this.PBName.Name = "PBName";
-            this.PBName.Size = new System.Drawing.Size(24, 24);
+            this.PBName.Size = new System.Drawing.Size(32, 32);
             this.PBName.TabIndex = 9;
             this.PBName.TabStop = false;
             // 
@@ -206,7 +206,7 @@ namespace DVLD_PresentationLayer
             this.PBNationalNo.Image = ((System.Drawing.Image)(resources.GetObject("PBNationalNo.Image")));
             this.PBNationalNo.Location = new System.Drawing.Point(177, 113);
             this.PBNationalNo.Name = "PBNationalNo";
-            this.PBNationalNo.Size = new System.Drawing.Size(24, 24);
+            this.PBNationalNo.Size = new System.Drawing.Size(32, 32);
             this.PBNationalNo.TabIndex = 10;
             this.PBNationalNo.TabStop = false;
             // 
@@ -215,7 +215,7 @@ namespace DVLD_PresentationLayer
             this.PBEmail.Image = ((System.Drawing.Image)(resources.GetObject("PBEmail.Image")));
             this.PBEmail.Location = new System.Drawing.Point(177, 200);
             this.PBEmail.Name = "PBEmail";
-            this.PBEmail.Size = new System.Drawing.Size(24, 24);
+            this.PBEmail.Size = new System.Drawing.Size(32, 32);
             this.PBEmail.TabIndex = 11;
             this.PBEmail.TabStop = false;
             // 
@@ -224,7 +224,7 @@ namespace DVLD_PresentationLayer
             this.PBAddress.Image = ((System.Drawing.Image)(resources.GetObject("PBAddress.Image")));
             this.PBAddress.Location = new System.Drawing.Point(177, 245);
             this.PBAddress.Name = "PBAddress";
-            this.PBAddress.Size = new System.Drawing.Size(24, 24);
+            this.PBAddress.Size = new System.Drawing.Size(32, 32);
             this.PBAddress.TabIndex = 12;
             this.PBAddress.TabStop = false;
             // 
@@ -233,7 +233,7 @@ namespace DVLD_PresentationLayer
             this.PBMan.Image = ((System.Drawing.Image)(resources.GetObject("PBMan.Image")));
             this.PBMan.Location = new System.Drawing.Point(0, 0);
             this.PBMan.Name = "PBMan";
-            this.PBMan.Size = new System.Drawing.Size(24, 24);
+            this.PBMan.Size = new System.Drawing.Size(32, 32);
             this.PBMan.TabIndex = 13;
             this.PBMan.TabStop = false;
             // 
@@ -253,7 +253,7 @@ namespace DVLD_PresentationLayer
             this.PBFemale.Image = ((System.Drawing.Image)(resources.GetObject("PBFemale.Image")));
             this.PBFemale.Location = new System.Drawing.Point(111, 1);
             this.PBFemale.Name = "PBFemale";
-            this.PBFemale.Size = new System.Drawing.Size(24, 24);
+            this.PBFemale.Size = new System.Drawing.Size(32, 32);
             this.PBFemale.TabIndex = 28;
             this.PBFemale.TabStop = false;
             // 
@@ -400,7 +400,7 @@ namespace DVLD_PresentationLayer
             this.PBDateOfBrith.Image = ((System.Drawing.Image)(resources.GetObject("PBDateOfBrith.Image")));
             this.PBDateOfBrith.Location = new System.Drawing.Point(638, 111);
             this.PBDateOfBrith.Name = "PBDateOfBrith";
-            this.PBDateOfBrith.Size = new System.Drawing.Size(24, 24);
+            this.PBDateOfBrith.Size = new System.Drawing.Size(32, 32);
             this.PBDateOfBrith.TabIndex = 25;
             this.PBDateOfBrith.TabStop = false;
             // 
@@ -409,7 +409,7 @@ namespace DVLD_PresentationLayer
             this.PBPhone.Image = ((System.Drawing.Image)(resources.GetObject("PBPhone.Image")));
             this.PBPhone.Location = new System.Drawing.Point(638, 153);
             this.PBPhone.Name = "PBPhone";
-            this.PBPhone.Size = new System.Drawing.Size(24, 24);
+            this.PBPhone.Size = new System.Drawing.Size(32, 32);
             this.PBPhone.TabIndex = 26;
             this.PBPhone.TabStop = false;
             // 
@@ -418,7 +418,7 @@ namespace DVLD_PresentationLayer
             this.PBCountry.Image = ((System.Drawing.Image)(resources.GetObject("PBCountry.Image")));
             this.PBCountry.Location = new System.Drawing.Point(638, 197);
             this.PBCountry.Name = "PBCountry";
-            this.PBCountry.Size = new System.Drawing.Size(24, 24);
+            this.PBCountry.Size = new System.Drawing.Size(32, 32);
             this.PBCountry.TabIndex = 27;
             this.PBCountry.TabStop = false;
             // 
@@ -458,9 +458,9 @@ namespace DVLD_PresentationLayer
             // 
             // PBImagePerson
             // 
-            this.PBImagePerson.Location = new System.Drawing.Point(932, 111);
+            this.PBImagePerson.Location = new System.Drawing.Point(918, 111);
             this.PBImagePerson.Name = "PBImagePerson";
-            this.PBImagePerson.Size = new System.Drawing.Size(128, 128);
+            this.PBImagePerson.Size = new System.Drawing.Size(142, 128);
             this.PBImagePerson.TabIndex = 31;
             this.PBImagePerson.TabStop = false;
             // 
@@ -468,7 +468,7 @@ namespace DVLD_PresentationLayer
             // 
             this.LLSetImage.AutoSize = true;
             this.LLSetImage.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.LLSetImage.Location = new System.Drawing.Point(953, 257);
+            this.LLSetImage.Location = new System.Drawing.Point(944, 252);
             this.LLSetImage.Name = "LLSetImage";
             this.LLSetImage.Size = new System.Drawing.Size(95, 25);
             this.LLSetImage.TabIndex = 33;
@@ -486,7 +486,7 @@ namespace DVLD_PresentationLayer
             this.BtnAddClose.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BtnAddClose.Image = ((System.Drawing.Image)(resources.GetObject("BtnAddClose.Image")));
             this.BtnAddClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAddClose.Location = new System.Drawing.Point(598, 368);
+            this.BtnAddClose.Location = new System.Drawing.Point(565, 368);
             this.BtnAddClose.Name = "BtnAddClose";
             this.BtnAddClose.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.BtnAddClose.Size = new System.Drawing.Size(142, 48);
@@ -507,7 +507,7 @@ namespace DVLD_PresentationLayer
             this.BtnAddSave.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BtnAddSave.Image = ((System.Drawing.Image)(resources.GetObject("BtnAddSave.Image")));
             this.BtnAddSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAddSave.Location = new System.Drawing.Point(758, 368);
+            this.BtnAddSave.Location = new System.Drawing.Point(728, 368);
             this.BtnAddSave.Name = "BtnAddSave";
             this.BtnAddSave.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.BtnAddSave.Size = new System.Drawing.Size(130, 48);
@@ -522,6 +522,7 @@ namespace DVLD_PresentationLayer
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(240)))), ((int)(((byte)(250)))));
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.BtnAddSave);
             this.Controls.Add(this.BtnAddClose);
             this.Controls.Add(this.LLSetImage);
@@ -557,7 +558,7 @@ namespace DVLD_PresentationLayer
             this.Controls.Add(this.LblSecondName);
             this.Controls.Add(this.LblFirstName);
             this.Name = "CtrDetailsPerson_Edit_Add_";
-            this.Size = new System.Drawing.Size(1109, 451);
+            this.Size = new System.Drawing.Size(1107, 449);
             ((System.ComponentModel.ISupportInitialize)(this.PBName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBNationalNo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBEmail)).EndInit();
