@@ -36,10 +36,9 @@ namespace DVLD_PresentationLayer
             // ctrDetailsPerson_Edit_Add_1
             // 
             this.ctrDetailsPerson_Edit_Add_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(240)))), ((int)(((byte)(250)))));
-            this.ctrDetailsPerson_Edit_Add_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ctrDetailsPerson_Edit_Add_1.Location = new System.Drawing.Point(31, 120);
             this.ctrDetailsPerson_Edit_Add_1.Name = "ctrDetailsPerson_Edit_Add_1";
-            this.ctrDetailsPerson_Edit_Add_1.Size = new System.Drawing.Size(1058, 451);
+            this.ctrDetailsPerson_Edit_Add_1.Size = new System.Drawing.Size(1097, 451);
             this.ctrDetailsPerson_Edit_Add_1.TabIndex = 0;
             // 
             // FOAddEditPersonInfo
@@ -47,7 +46,7 @@ namespace DVLD_PresentationLayer
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(235)))), ((int)(((byte)(245)))));
-            this.ClientSize = new System.Drawing.Size(1118, 583);
+            this.ClientSize = new System.Drawing.Size(1160, 594);
             this.Controls.Add(this.ctrDetailsPerson_Edit_Add_1);
             this.Name = "FOAddEditPersonInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
