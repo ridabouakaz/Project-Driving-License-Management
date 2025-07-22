@@ -458,9 +458,9 @@ namespace DVLD_PresentationLayer
             // 
             // PBImagePerson
             // 
-            this.PBImagePerson.Location = new System.Drawing.Point(918, 111);
+            this.PBImagePerson.Location = new System.Drawing.Point(911, 111);
             this.PBImagePerson.Name = "PBImagePerson";
-            this.PBImagePerson.Size = new System.Drawing.Size(142, 128);
+            this.PBImagePerson.Size = new System.Drawing.Size(158, 128);
             this.PBImagePerson.TabIndex = 31;
             this.PBImagePerson.TabStop = false;
             // 
@@ -468,7 +468,7 @@ namespace DVLD_PresentationLayer
             // 
             this.LLSetImage.AutoSize = true;
             this.LLSetImage.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.LLSetImage.Location = new System.Drawing.Point(944, 252);
+            this.LLSetImage.Location = new System.Drawing.Point(943, 252);
             this.LLSetImage.Name = "LLSetImage";
             this.LLSetImage.Size = new System.Drawing.Size(95, 25);
             this.LLSetImage.TabIndex = 33;
