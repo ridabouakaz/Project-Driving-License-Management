@@ -17,10 +17,6 @@ namespace DVLD_PresentationLayer
             InitializeComponent();
         }
 
-        public Image PersonImage
-        {
-            get { return PBImagePerson.Image; }
-            set { PBImagePerson.Image = value; }
-        }
+        
     }
 }
