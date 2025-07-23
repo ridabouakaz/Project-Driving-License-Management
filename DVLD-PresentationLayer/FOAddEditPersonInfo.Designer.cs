@@ -106,7 +106,10 @@ namespace DVLD_PresentationLayer
             this.Controls.Add(this.LblPersonID);
             this.Controls.Add(this.LblAddEditPerson);
             this.Controls.Add(this.ctrDetailsPerson_Edit_Add_1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FOAddEditPersonInfo";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add / Edit Person Info";
             ((System.ComponentModel.ISupportInitialize)(this.PBPersonID)).EndInit();

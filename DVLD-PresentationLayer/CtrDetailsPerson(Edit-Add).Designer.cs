@@ -245,7 +245,7 @@ namespace DVLD_PresentationLayer
             this.plGender.Controls.Add(this.PBMan);
             this.plGender.Location = new System.Drawing.Point(177, 157);
             this.plGender.Name = "plGender";
-            this.plGender.Size = new System.Drawing.Size(228, 34);
+            this.plGender.Size = new System.Drawing.Size(235, 34);
             this.plGender.TabIndex = 14;
             // 
             // PBFemale
