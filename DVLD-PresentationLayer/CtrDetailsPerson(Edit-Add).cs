@@ -16,7 +16,26 @@ namespace DVLD_PresentationLayer
         {
             InitializeComponent();
         }
+        public Image PersonImage
+        {
+            get { return PBImagePerson.Image; }
+            set { PBImagePerson.Image = value; }
+        }
 
-        
+        private void RBMale_CheckedChanged(object sender, EventArgs e)
+        {
+            if (RBMale.Checked)
+            {
+                PersonImage = Image.FromFile(@"E:\DVLD\packagesImages\ControlUser(Edit-Add)PackagesImages\Male.png");
+            }
+        }
+
+        private void RBFemale_CheckedChanged(object sender, EventArgs e)
+        {
+            if (RBFemale.Checked)
+            {
+                PersonImage = Image.FromFile(@"E:\DVLD\packagesImages\ControlUser(Edit-Add)PackagesImages\FeMale.png");
+            }
+        }
     }
 }

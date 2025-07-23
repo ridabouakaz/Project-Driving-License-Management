@@ -91,6 +91,7 @@ namespace DVLD_PresentationLayer
             this.ctrDetailsPerson_Edit_Add_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ctrDetailsPerson_Edit_Add_1.Location = new System.Drawing.Point(31, 120);
             this.ctrDetailsPerson_Edit_Add_1.Name = "ctrDetailsPerson_Edit_Add_1";
+            this.ctrDetailsPerson_Edit_Add_1.PersonImage = null;
             this.ctrDetailsPerson_Edit_Add_1.Size = new System.Drawing.Size(1097, 451);
             this.ctrDetailsPerson_Edit_Add_1.TabIndex = 0;
             // 

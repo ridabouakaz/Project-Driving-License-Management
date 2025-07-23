@@ -268,6 +268,7 @@ namespace DVLD_PresentationLayer
             this.RBFemale.TabStop = true;
             this.RBFemale.Text = "Female";
             this.RBFemale.UseVisualStyleBackColor = true;
+            this.RBFemale.CheckedChanged += new System.EventHandler(this.RBFemale_CheckedChanged);
             // 
             // RBMale
             // 
@@ -280,6 +281,7 @@ namespace DVLD_PresentationLayer
             this.RBMale.TabStop = true;
             this.RBMale.Text = "Male";
             this.RBMale.UseVisualStyleBackColor = true;
+            this.RBMale.CheckedChanged += new System.EventHandler(this.RBMale_CheckedChanged);
             // 
             // TBFirstName
             // 
@@ -460,7 +462,8 @@ namespace DVLD_PresentationLayer
             // 
             this.PBImagePerson.Location = new System.Drawing.Point(911, 111);
             this.PBImagePerson.Name = "PBImagePerson";
-            this.PBImagePerson.Size = new System.Drawing.Size(158, 128);
+            this.PBImagePerson.Size = new System.Drawing.Size(158, 166);
+            this.PBImagePerson.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PBImagePerson.TabIndex = 31;
             this.PBImagePerson.TabStop = false;
             // 
@@ -468,7 +471,7 @@ namespace DVLD_PresentationLayer
             // 
             this.LLSetImage.AutoSize = true;
             this.LLSetImage.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.LLSetImage.Location = new System.Drawing.Point(943, 252);
+            this.LLSetImage.Location = new System.Drawing.Point(937, 278);
             this.LLSetImage.Name = "LLSetImage";
             this.LLSetImage.Size = new System.Drawing.Size(95, 25);
             this.LLSetImage.TabIndex = 33;
