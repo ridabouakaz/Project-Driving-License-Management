@@ -43,38 +43,36 @@ namespace DVLD_PresentationLayer
 
         public string FirstName
         {
-            get => TBFirstName.Text;
+            get => TBFirstName.Text.Trim();
             set => TBFirstName.Text = value;
         }
         public string SecondName
         {
-            get => TBSecondName.Text;
+            get => TBSecondName.Text.Trim();
             set => TBSecondName.Text = value;
         }
         public string LastName
 
         {
-            get => TBLastName.Text;
+            get => TBLastName.Text.Trim();
             set => TBLastName.Text = value;
         }
         public string NationalNo
         {
-            get => TBNationalNo.Text;
+            get => TBNationalNo.Text.Trim();
             set => TBNationalNo.Text = value;
         }
         public TextBox NationalNumberTextBox => TBNationalNo;
 
         public string Phone
         {
-            get => TBPhone
-.Text;
-            set => TBPhone
-.Text = value;
+            get => TBPhone.Text.Trim();
+            set => TBPhone.Text = value;
         }
 
         public string Email
         {
-            get => TBEmail.Text;
+            get => TBEmail.Text.Trim();
             set => TBEmail.Text = value;
         }
         public string Country
@@ -90,7 +88,7 @@ namespace DVLD_PresentationLayer
         }
         public string Address
         {
-            get => TBAddress.Text;
+            get => TBAddress.Text.Trim();
             set => TBAddress.Text = value;
         }
         public Gender SelectedGender
