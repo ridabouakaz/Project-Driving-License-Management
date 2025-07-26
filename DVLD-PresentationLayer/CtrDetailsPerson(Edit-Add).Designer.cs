@@ -32,6 +32,7 @@ namespace DVLD_PresentationLayer
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CtrDetailsPerson_Edit_Add_));
             this.LblName = new System.Windows.Forms.Label();
             this.LblNationalNo = new System.Windows.Forms.Label();
@@ -71,6 +72,7 @@ namespace DVLD_PresentationLayer
             this.LLSetImage = new System.Windows.Forms.LinkLabel();
             this.BtnAddClose = new System.Windows.Forms.Button();
             this.BtnAddSave = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.PBName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBNationalNo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBEmail)).BeginInit();
@@ -82,6 +84,7 @@ namespace DVLD_PresentationLayer
             ((System.ComponentModel.ISupportInitialize)(this.PBPhone)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBCountry)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBImagePerson)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // LblName
@@ -337,6 +340,7 @@ namespace DVLD_PresentationLayer
             this.TBNationalNo.Name = "TBNationalNo";
             this.TBNationalNo.Size = new System.Drawing.Size(184, 30);
             this.TBNationalNo.TabIndex = 19;
+            this.TBNationalNo.Validating += new System.ComponentModel.CancelEventHandler(this.TBNationalNo_Validating);
             // 
             // TBEmail
             // 
@@ -477,6 +481,7 @@ namespace DVLD_PresentationLayer
             this.LLSetImage.TabIndex = 33;
             this.LLSetImage.TabStop = true;
             this.LLSetImage.Text = "Set Image";
+            this.LLSetImage.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LLSetImage_LinkClicked);
             // 
             // BtnAddClose
             // 
@@ -519,6 +524,10 @@ namespace DVLD_PresentationLayer
             this.BtnAddSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnAddSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnAddSave.UseVisualStyleBackColor = false;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // CtrDetailsPerson_Edit_Add_
             // 
@@ -574,6 +583,7 @@ namespace DVLD_PresentationLayer
             ((System.ComponentModel.ISupportInitialize)(this.PBPhone)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBCountry)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBImagePerson)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -619,5 +629,6 @@ namespace DVLD_PresentationLayer
         private LinkLabel LLSetImage;
         private Button BtnAddClose;
         private Button BtnAddSave;
+        private ErrorProvider errorProvider1;
     }
 }

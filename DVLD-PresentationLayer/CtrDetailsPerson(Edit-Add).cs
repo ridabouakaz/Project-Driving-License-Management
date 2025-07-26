@@ -27,6 +27,20 @@ namespace DVLD_PresentationLayer
             get { return PBImagePerson.Image; }
             set { PBImagePerson.Image = value; }
         }
+        public Image UserImage { get; private set; }
+        private void LLSetImage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            using (var ofd = new OpenFileDialog())
+            {
+                ofd.Filter = "Images|*.png;*.jpg";
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    UserImage = Image.FromFile(ofd.FileName);
+                    PBImagePerson.Image = UserImage;
+                }
+            }
+        }
+
         public string FirstName
         {
             get => TBFirstName.Text;
@@ -40,16 +54,16 @@ namespace DVLD_PresentationLayer
         public string LastName
 
         {
-            get => TBLastName
-.Text;
-            set => TBLastName
-.Text = value;
+            get => TBLastName.Text;
+            set => TBLastName.Text = value;
         }
         public string NationalNo
         {
             get => TBNationalNo.Text;
             set => TBNationalNo.Text = value;
         }
+        public TextBox NationalNumberTextBox => TBNationalNo;
+
         public string Phone
         {
             get => TBPhone
@@ -75,15 +89,9 @@ namespace DVLD_PresentationLayer
             set => DTPcontroluser.Value = value;
         }
         public string Address
-
-
         {
-            get => TBAddress
-
-.Text;
-            set => TBAddress
-
-.Text = value;
+            get => TBAddress.Text;
+            set => TBAddress.Text = value;
         }
         public Gender SelectedGender
         {
@@ -111,7 +119,10 @@ namespace DVLD_PresentationLayer
                 PersonImage = Image.FromFile(@"E:\DVLD\packagesImages\ControlUser(Edit-Add)PackagesImages\FeMale.png");
             }
         }
-
-  
+        public event CancelEventHandler NationalNumberValidating;
+        private void TBNationalNo_Validating(object sender, CancelEventArgs e)
+        {
+            NationalNumberValidating?.Invoke(this, e);
+        }
     }
 }

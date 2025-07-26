@@ -30,13 +30,16 @@ namespace DVLD_PresentationLayer
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FOAddEditPersonInfo));
             this.LblAddEditPerson = new System.Windows.Forms.Label();
             this.LblPersonID = new System.Windows.Forms.Label();
             this.PBPersonID = new System.Windows.Forms.PictureBox();
             this.LbNumberlPersonID = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.ctrDetailsPerson_Edit_Add_1 = new DVLD_PresentationLayer.CtrDetailsPerson_Edit_Add_();
             ((System.ComponentModel.ISupportInitialize)(this.PBPersonID)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // LblAddEditPerson
@@ -85,13 +88,27 @@ namespace DVLD_PresentationLayer
             this.LbNumberlPersonID.TabIndex = 12;
             this.LbNumberlPersonID.Text = "N/A";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // ctrDetailsPerson_Edit_Add_1
             // 
+            this.ctrDetailsPerson_Edit_Add_1.Address = "";
             this.ctrDetailsPerson_Edit_Add_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(240)))), ((int)(((byte)(250)))));
+            this.ctrDetailsPerson_Edit_Add_1.BirthDate = new System.DateTime(2007, 7, 20, 0, 0, 0, 0);
             this.ctrDetailsPerson_Edit_Add_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ctrDetailsPerson_Edit_Add_1.Country = "";
+            this.ctrDetailsPerson_Edit_Add_1.Email = "";
+            this.ctrDetailsPerson_Edit_Add_1.FirstName = "";
+            this.ctrDetailsPerson_Edit_Add_1.LastName = "";
             this.ctrDetailsPerson_Edit_Add_1.Location = new System.Drawing.Point(31, 120);
             this.ctrDetailsPerson_Edit_Add_1.Name = "ctrDetailsPerson_Edit_Add_1";
-            this.ctrDetailsPerson_Edit_Add_1.PersonImage = null;
+            this.ctrDetailsPerson_Edit_Add_1.NationalNo = "";
+            this.ctrDetailsPerson_Edit_Add_1.PersonImage = ((System.Drawing.Image)(resources.GetObject("ctrDetailsPerson_Edit_Add_1.PersonImage")));
+            this.ctrDetailsPerson_Edit_Add_1.Phone = "";
+            this.ctrDetailsPerson_Edit_Add_1.SecondName = "";
+            this.ctrDetailsPerson_Edit_Add_1.SelectedGender = DVLD_PresentationLayer.CtrDetailsPerson_Edit_Add_.Gender.Female;
             this.ctrDetailsPerson_Edit_Add_1.Size = new System.Drawing.Size(1097, 451);
             this.ctrDetailsPerson_Edit_Add_1.TabIndex = 0;
             // 
@@ -112,7 +129,9 @@ namespace DVLD_PresentationLayer
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add / Edit Person Info";
+            this.Load += new System.EventHandler(this.FOAddEditPersonInfo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PBPersonID)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -125,5 +144,6 @@ namespace DVLD_PresentationLayer
         private System.Windows.Forms.Label LblPersonID;
         private System.Windows.Forms.PictureBox PBPersonID;
         private System.Windows.Forms.Label LbNumberlPersonID;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

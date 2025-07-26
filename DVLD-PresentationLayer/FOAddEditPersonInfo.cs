@@ -16,7 +16,19 @@ namespace DVLD_PresentationLayer
         {
             InitializeComponent();
         }
+        private void FOAddEditPersonInfo_Load(object sender, EventArgs e)
+        {
+            ctrDetailsPerson_Edit_Add_1.NationalNumberValidating += CtrDetailsPerson1_NationalNumberValidating;
 
- 
+        }
+        private void CtrDetailsPerson1_NationalNumberValidating(object sender, CancelEventArgs e)
+        {
+            string nationalNo = ctrDetailsPerson_Edit_Add_1.NationalNo;
+
+                errorProvider1.SetError(ctrDetailsPerson_Edit_Add_1.NationalNumberTextBox, "Gg");
+                //e.Cancel = true;
+        }
+
+        
     }
 }
