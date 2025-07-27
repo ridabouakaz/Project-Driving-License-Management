@@ -29,7 +29,7 @@ namespace DVLD_PresentationLayer
             set { PBImagePerson.Image = value; }
         }
         public Image UserImage { get; private set; }
-        private void LLSetImage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void LLSetImage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) 
         {
             using (var ofd = new OpenFileDialog())
             {
@@ -138,6 +138,9 @@ namespace DVLD_PresentationLayer
         private void CtrDetailsPerson_Edit_Add__Load(object sender, EventArgs e)
         {
             _FillCountriesInComoboBox();
+            CBCountry.SelectedIndex = 2;
+            this.CBCountry.MaxDropDownItems = 5;
+
         }
     }
 }
