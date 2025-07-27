@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DVLD_BusinessLayer;
 
 namespace DVLD_PresentationLayer
 {
@@ -81,6 +82,18 @@ namespace DVLD_PresentationLayer
             get => CBCountry.Text;
             set => CBCountry.Text = value;
         }
+        private void _FillCountriesInComoboBox()
+        {
+            DataTable dtCountries = clsCountry.GetAllCountries();
+
+            foreach (DataRow row in dtCountries.Rows)
+            {
+
+                CBCountry.Items.Add(row["CountryName"]);
+
+            }
+
+        }
         public DateTime BirthDate
         {
             get => DTPcontroluser.Value;
@@ -121,6 +134,10 @@ namespace DVLD_PresentationLayer
         private void TBNationalNo_Validating(object sender, CancelEventArgs e)
         {
             NationalNumberValidating?.Invoke(this, e);
+        }
+        private void CtrDetailsPerson_Edit_Add__Load(object sender, EventArgs e)
+        {
+            _FillCountriesInComoboBox();
         }
     }
 }

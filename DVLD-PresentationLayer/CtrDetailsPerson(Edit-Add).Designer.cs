@@ -571,6 +571,7 @@ namespace DVLD_PresentationLayer
             this.Controls.Add(this.LblFirstName);
             this.Name = "CtrDetailsPerson_Edit_Add_";
             this.Size = new System.Drawing.Size(1107, 449);
+            this.Load += new System.EventHandler(this.CtrDetailsPerson_Edit_Add__Load);
             ((System.ComponentModel.ISupportInitialize)(this.PBName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBNationalNo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBEmail)).EndInit();
