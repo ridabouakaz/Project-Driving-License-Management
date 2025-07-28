@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Contracts;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DVLD_BusinessLayer;
+using static DVLD_BusinessLayer.clsCountry;
 namespace DVLD_PresentationLayer
 {
     public partial class FOAddEditPersonInfo : Form
@@ -18,7 +20,6 @@ namespace DVLD_PresentationLayer
             InitializeComponent();
  
         }
-  
         private void FOAddEditPersonInfo_Load(object sender, EventArgs e)
         {
             ctrDetailsPerson_Edit_Add_1.NationalNumberValidating += CtrDetailsPerson1_NationalNumberValidating;

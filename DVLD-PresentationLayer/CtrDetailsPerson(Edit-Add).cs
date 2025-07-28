@@ -82,6 +82,8 @@ namespace DVLD_PresentationLayer
             get => CBCountry.Text;
             set => CBCountry.Text = value;
         }
+        public ComboBox CountryComboBox => CBCountry;
+
         private void _FillCountriesInComoboBox()
         {
             DataTable dtCountries = clsCountry.GetAllCountries();
@@ -139,8 +141,6 @@ namespace DVLD_PresentationLayer
         {
             _FillCountriesInComoboBox();
             CBCountry.SelectedIndex = 2;
-            this.CBCountry.MaxDropDownItems = 5;
-
         }
     }
 }
