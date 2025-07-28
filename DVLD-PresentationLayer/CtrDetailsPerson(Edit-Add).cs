@@ -141,6 +141,7 @@ namespace DVLD_PresentationLayer
         {
             _FillCountriesInComoboBox();
             CBCountry.SelectedIndex = 2;
+            CBCountry.DropDownHeight = CBCountry.ItemHeight * 5;
         }
     }
 }

@@ -460,7 +460,6 @@ namespace DVLD_PresentationLayer
             this.CBCountry.Location = new System.Drawing.Point(674, 193);
             this.CBCountry.Name = "CBCountry";
             this.CBCountry.Size = new System.Drawing.Size(184, 31);
-            this.CBCountry.DropDownHeight = CBCountry.ItemHeight * 5;
             this.CBCountry.TabIndex = 30;
             // 
             // PBImagePerson
