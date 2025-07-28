@@ -41,7 +41,7 @@ namespace DVLD_PresentationLayer
             this.LblAddress = new System.Windows.Forms.Label();
             this.LblFirstName = new System.Windows.Forms.Label();
             this.LblSecondName = new System.Windows.Forms.Label();
-            this.LblThridName = new System.Windows.Forms.Label();
+            this.LblThirdName = new System.Windows.Forms.Label();
             this.LblLastName = new System.Windows.Forms.Label();
             this.PBName = new System.Windows.Forms.PictureBox();
             this.PBNationalNo = new System.Windows.Forms.PictureBox();
@@ -54,7 +54,7 @@ namespace DVLD_PresentationLayer
             this.RBMale = new System.Windows.Forms.RadioButton();
             this.TBFirstName = new System.Windows.Forms.TextBox();
             this.TBSecondName = new System.Windows.Forms.TextBox();
-            this.TBThridName = new System.Windows.Forms.TextBox();
+            this.TBThirdName = new System.Windows.Forms.TextBox();
             this.TBLastName = new System.Windows.Forms.TextBox();
             this.TBNationalNo = new System.Windows.Forms.TextBox();
             this.TBEmail = new System.Windows.Forms.TextBox();
@@ -171,17 +171,17 @@ namespace DVLD_PresentationLayer
             this.LblSecondName.TabIndex = 6;
             this.LblSecondName.Text = "Second";
             // 
-            // LblThridName
+            // LblThirdName
             // 
-            this.LblThridName.AutoSize = true;
-            this.LblThridName.BackColor = System.Drawing.Color.Transparent;
-            this.LblThridName.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.LblThridName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblThridName.Location = new System.Drawing.Point(741, 29);
-            this.LblThridName.Name = "LblThridName";
-            this.LblThridName.Size = new System.Drawing.Size(56, 25);
-            this.LblThridName.TabIndex = 7;
-            this.LblThridName.Text = "Thrid";
+            this.LblThirdName.AutoSize = true;
+            this.LblThirdName.BackColor = System.Drawing.Color.Transparent;
+            this.LblThirdName.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.LblThirdName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblThirdName.Location = new System.Drawing.Point(741, 29);
+            this.LblThirdName.Name = "LblThirdName";
+            this.LblThirdName.Size = new System.Drawing.Size(56, 25);
+            this.LblThirdName.TabIndex = 7;
+            this.LblThirdName.Text = "Third";
             // 
             // LblLastName
             // 
@@ -308,16 +308,16 @@ namespace DVLD_PresentationLayer
             this.TBSecondName.Size = new System.Drawing.Size(184, 30);
             this.TBSecondName.TabIndex = 16;
             // 
-            // TBThridName
+            // TBThirdName
             // 
-            this.TBThridName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(243)))), ((int)(((byte)(247)))));
-            this.TBThridName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TBThridName.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.TBThridName.ForeColor = System.Drawing.Color.Black;
-            this.TBThridName.Location = new System.Drawing.Point(674, 68);
-            this.TBThridName.Name = "TBThridName";
-            this.TBThridName.Size = new System.Drawing.Size(184, 30);
-            this.TBThridName.TabIndex = 17;
+            this.TBThirdName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(243)))), ((int)(((byte)(247)))));
+            this.TBThirdName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TBThirdName.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.TBThirdName.ForeColor = System.Drawing.Color.Black;
+            this.TBThirdName.Location = new System.Drawing.Point(674, 68);
+            this.TBThirdName.Name = "TBThirdName";
+            this.TBThirdName.Size = new System.Drawing.Size(184, 30);
+            this.TBThirdName.TabIndex = 17;
             // 
             // TBLastName
             // 
@@ -552,7 +552,7 @@ namespace DVLD_PresentationLayer
             this.Controls.Add(this.TBEmail);
             this.Controls.Add(this.TBNationalNo);
             this.Controls.Add(this.TBLastName);
-            this.Controls.Add(this.TBThridName);
+            this.Controls.Add(this.TBThirdName);
             this.Controls.Add(this.TBSecondName);
             this.Controls.Add(this.TBFirstName);
             this.Controls.Add(this.plGender);
@@ -566,7 +566,7 @@ namespace DVLD_PresentationLayer
             this.Controls.Add(this.LblGender);
             this.Controls.Add(this.LblNationalNo);
             this.Controls.Add(this.LblName);
-            this.Controls.Add(this.LblThridName);
+            this.Controls.Add(this.LblThirdName);
             this.Controls.Add(this.LblSecondName);
             this.Controls.Add(this.LblFirstName);
             this.Name = "CtrDetailsPerson_Edit_Add_";
@@ -599,7 +599,7 @@ namespace DVLD_PresentationLayer
         private System.Windows.Forms.Label LblAddress;
         private System.Windows.Forms.Label LblFirstName;
         private System.Windows.Forms.Label LblSecondName;
-        private System.Windows.Forms.Label LblThridName;
+        private System.Windows.Forms.Label LblThirdName;
         private System.Windows.Forms.Label LblLastName;
         private System.Windows.Forms.PictureBox PBName;
         private PictureBox PBNationalNo;
@@ -609,7 +609,7 @@ namespace DVLD_PresentationLayer
         private Panel plGender;
         private TextBox TBFirstName;
         private TextBox TBSecondName;
-        private TextBox TBThridName;
+        private TextBox TBThirdName;
         private TextBox TBLastName;
         private TextBox TBNationalNo;
         private TextBox TBEmail;

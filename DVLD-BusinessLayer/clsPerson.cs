@@ -5,19 +5,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DVLD_DataAccessLayer;
-
+using DVLD_Common;
 namespace DVLD_BusinessLayer
 {
     public class clsPerson
     {
         public enum enMode { AddNew = 0, Update = 1 };
-        public enum Gender { Male = 0, Female = 1 };
         public enMode Mode = enMode.AddNew;
 
         public int ID { set; get; }
         public string FirstName { set; get; }
         public string SecondName { set; get; }
-        public string ThridName { set; get; }
+        public string ThirdName { set; get; }
         public string LastName { set; get; }
         public string NationalNo { set; get; }
         public string Phone { set; get; }
@@ -33,7 +32,7 @@ namespace DVLD_BusinessLayer
             this.ID = -1;
             this.FirstName = "";
             this.SecondName = "";
-            this.ThridName = "";
+            this.ThirdName = "";
             this.LastName = "";
             this.NationalNo = "";
             this.Email = "";
@@ -49,7 +48,7 @@ namespace DVLD_BusinessLayer
         private clsPerson(int ID,
     string FirstName,
     string SecondName,
-    string ThridName,
+    string ThirdName,
     string LastName,
     string NationalNo,
     string Email,
@@ -63,7 +62,7 @@ namespace DVLD_BusinessLayer
             this.ID = ID;
             this.FirstName = FirstName;
             this.SecondName = SecondName;
-            this.ThridName = ThridName;
+            this.ThirdName = ThirdName;
             this.LastName = LastName;
             this.NationalNo = NationalNo;
             this.Email = Email;
@@ -81,7 +80,7 @@ namespace DVLD_BusinessLayer
             this.ID = clsPersonDataAccess.AddNewPerson(
         this.FirstName,
         this.SecondName,
-        this.ThridName,
+        this.ThirdName,
         this.LastName,
         this.NationalNo,
         this.Email,
@@ -101,7 +100,7 @@ namespace DVLD_BusinessLayer
                     this.ID,
                     this.FirstName,
                     this.SecondName,
-                    this.ThridName,
+                    this.ThirdName,
                     this.LastName,
                     this.NationalNo,
                     this.Email,
@@ -116,7 +115,7 @@ namespace DVLD_BusinessLayer
         }
         public static clsPerson Find(int ID)
         {
-            string firstName = "", secondName = "", thridName = "", lastName = "";
+            string firstName = "", secondName = "", thirdName = "", lastName = "";
             string nationalNo = "", email = "", phone = "", address = "", imagePath = "";
             DateTime dateOfBirth = DateTime.Now;
             int countryID = -1;
@@ -126,7 +125,7 @@ namespace DVLD_BusinessLayer
                 ID,
                 ref firstName,
                 ref secondName,
-                ref thridName,
+                ref thirdName,
                 ref lastName,
                 ref nationalNo,
                 ref email,
@@ -144,7 +143,7 @@ namespace DVLD_BusinessLayer
                     ID,
                     firstName,
                     secondName,
-                    thridName,
+                    thirdName,
                     lastName,
                     nationalNo,
                     email,

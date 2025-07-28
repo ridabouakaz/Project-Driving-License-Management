@@ -15,7 +15,7 @@ namespace DVLD_DataAccessLayer
     int ID,
     ref string FirstName,
     ref string SecondName,
-    ref string ThridName,
+    ref string ThirdName,
     ref string LastName,
     ref string NationalNo,
     ref string Email,
@@ -47,7 +47,7 @@ namespace DVLD_DataAccessLayer
 
                         FirstName = reader["FirstName"].ToString();
                         SecondName = reader["SecondName"].ToString();
-                        ThridName = reader["ThridName"].ToString();
+                        ThirdName = reader["ThirdName"].ToString();
                         LastName = reader["LastName"].ToString();
                         NationalNo = reader["NationalNo"].ToString();
                         Email = reader["Email"].ToString();
@@ -75,7 +75,7 @@ namespace DVLD_DataAccessLayer
             return isFound;
         }
         public static int AddNewPerson(
-    string FirstName, string SecondName, string ThridName, string LastName,
+    string FirstName, string SecondName, string ThirdName, string LastName,
     string NationalNo, string Email, string Phone, string Address,
     DateTime DateOfBirth, int CountryID, string ImagePath, int Gender)
         {
@@ -84,10 +84,10 @@ namespace DVLD_DataAccessLayer
             using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
             {
                 string query = @"INSERT INTO People 
-                        (FirstName, SecondName, ThridName, LastName, NationalNo, 
+                        (FirstName, SecondName, ThirdName, LastName, NationalNo, 
                          Email, Phone, Address, DateOfBirth, CountryID, ImagePath, Gender)
                         VALUES 
-                        (@FirstName, @SecondName, @ThridName, @LastName, @NationalNo, 
+                        (@FirstName, @SecondName, @ThirdName, @LastName, @NationalNo, 
                          @Email, @Phone, @Address, @DateOfBirth, @CountryID, @ImagePath, @Gender);
                         SELECT SCOPE_IDENTITY();";
 
@@ -95,7 +95,7 @@ namespace DVLD_DataAccessLayer
                 {
                     command.Parameters.AddWithValue("@FirstName", FirstName);
                     command.Parameters.AddWithValue("@SecondName", SecondName);
-                    command.Parameters.AddWithValue("@ThridName", ThridName);
+                    command.Parameters.AddWithValue("@ThirdName", ThirdName);
                     command.Parameters.AddWithValue("@LastName", LastName);
                     command.Parameters.AddWithValue("@NationalNo", NationalNo);
                     command.Parameters.AddWithValue("@Email", Email);
@@ -130,7 +130,7 @@ namespace DVLD_DataAccessLayer
             return PersonID;
         }
         public static bool UpdatePerson(
-    int ID, string FirstName, string SecondName, string ThridName, string LastName,
+    int ID, string FirstName, string SecondName, string ThirdName, string LastName,
     string NationalNo, string Email, string Phone, string Address,
     DateTime DateOfBirth, int CountryID, string ImagePath, int Gender)
         {
@@ -141,7 +141,7 @@ namespace DVLD_DataAccessLayer
                 string query = @"UPDATE People  
                          SET FirstName = @FirstName,
                              SecondName = @SecondName,
-                             ThridName = @ThridName,
+                             ThirdName = @ThirdName,
                              LastName = @LastName,
                              NationalNo = @NationalNo,
                              Email = @Email, 
@@ -158,7 +158,7 @@ namespace DVLD_DataAccessLayer
                     command.Parameters.AddWithValue("@PersonID", ID);
                     command.Parameters.AddWithValue("@FirstName", FirstName);
                     command.Parameters.AddWithValue("@SecondName", SecondName);
-                    command.Parameters.AddWithValue("@ThridName", ThridName);
+                    command.Parameters.AddWithValue("@ThirdName", ThirdName);
                     command.Parameters.AddWithValue("@LastName", LastName);
                     command.Parameters.AddWithValue("@NationalNo", NationalNo);
                     command.Parameters.AddWithValue("@Email", Email);

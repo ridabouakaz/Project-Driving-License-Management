@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DVLD_BusinessLayer;
-
+using DVLD_Common;
 namespace DVLD_PresentationLayer
 {
     public partial class CtrDetailsPerson_Edit_Add_ : UserControl
@@ -17,12 +17,12 @@ namespace DVLD_PresentationLayer
         {
             InitializeComponent();
         }
-        public enum Gender
-        {
-            Male,
-            Female
-        }
 
+        public string ImagePath
+        {
+            get => PBImagePerson.ImageLocation;
+            set => PBImagePerson.ImageLocation = value;
+        }
         public Image PersonImage
         {
             get { return PBImagePerson.Image; }
@@ -52,10 +52,10 @@ namespace DVLD_PresentationLayer
             get => TBSecondName.Text.Trim();
             set => TBSecondName.Text = value;
         }
-        public string ThridName
+        public string ThirdName
         {
-            get => TBThridName.Text.Trim();
-            set => TBThridName.Text = value;
+            get => TBThirdName.Text.Trim();
+            set => TBThirdName.Text = value;
         }
         public string LastName
 
@@ -141,6 +141,12 @@ namespace DVLD_PresentationLayer
         private void TBNationalNo_Validating(object sender, CancelEventArgs e)
         {
             NationalNumberValidating?.Invoke(this, e);
+        }
+
+        public event EventHandler SaveButtonClick;
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            SaveButtonClick?.Invoke(this, EventArgs.Empty);
         }
         private void CtrDetailsPerson_Edit_Add__Load(object sender, EventArgs e)
         {

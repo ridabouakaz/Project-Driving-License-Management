@@ -1,5 +1,5 @@
 ﻿using System.Drawing;
-
+using DVLD_Common;
 namespace DVLD_PresentationLayer
 {
     partial class FOAddEditPersonInfo
@@ -108,7 +108,7 @@ namespace DVLD_PresentationLayer
             this.ctrDetailsPerson_Edit_Add_1.PersonImage = ((System.Drawing.Image)(resources.GetObject("ctrDetailsPerson_Edit_Add_1.PersonImage")));
             this.ctrDetailsPerson_Edit_Add_1.Phone = "";
             this.ctrDetailsPerson_Edit_Add_1.SecondName = "";
-            this.ctrDetailsPerson_Edit_Add_1.SelectedGender = DVLD_PresentationLayer.CtrDetailsPerson_Edit_Add_.Gender.Female;
+            this.ctrDetailsPerson_Edit_Add_1.SelectedGender = Gender.Female;
             this.ctrDetailsPerson_Edit_Add_1.Size = new System.Drawing.Size(1097, 451);
             this.ctrDetailsPerson_Edit_Add_1.TabIndex = 0;
             // 
