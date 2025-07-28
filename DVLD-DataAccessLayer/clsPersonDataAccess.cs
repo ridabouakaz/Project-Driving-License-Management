@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DVLD_DataAccessLayer
 {
@@ -29,7 +31,7 @@ namespace DVLD_DataAccessLayer
 
             using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
             {
-                string query = "SELECT * FROM Contacts WHERE PersonID = @PersonID";
+                string query = "SELECT * FROM People WHERE PersonID = @PersonID";
 
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@PersonID", ID);
@@ -72,6 +74,221 @@ namespace DVLD_DataAccessLayer
 
             return isFound;
         }
+        public static int AddNewPerson(
+    string FirstName, string SecondName, string ThridName, string LastName,
+    string NationalNo, string Email, string Phone, string Address,
+    DateTime DateOfBirth, int CountryID, string ImagePath, int Gender)
+        {
+            int PersonID = -1;
+
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                string query = @"INSERT INTO People 
+                        (FirstName, SecondName, ThridName, LastName, NationalNo, 
+                         Email, Phone, Address, DateOfBirth, CountryID, ImagePath, Gender)
+                        VALUES 
+                        (@FirstName, @SecondName, @ThridName, @LastName, @NationalNo, 
+                         @Email, @Phone, @Address, @DateOfBirth, @CountryID, @ImagePath, @Gender);
+                        SELECT SCOPE_IDENTITY();";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@FirstName", FirstName);
+                    command.Parameters.AddWithValue("@SecondName", SecondName);
+                    command.Parameters.AddWithValue("@ThridName", ThridName);
+                    command.Parameters.AddWithValue("@LastName", LastName);
+                    command.Parameters.AddWithValue("@NationalNo", NationalNo);
+                    command.Parameters.AddWithValue("@Email", Email);
+                    command.Parameters.AddWithValue("@Phone", Phone);
+                    command.Parameters.AddWithValue("@Address", Address);
+                    command.Parameters.AddWithValue("@DateOfBirth", DateOfBirth);
+                    command.Parameters.AddWithValue("@CountryID", CountryID);
+                    command.Parameters.AddWithValue("@Gender", Gender);
+
+                    if (!string.IsNullOrEmpty(ImagePath))
+                        command.Parameters.AddWithValue("@ImagePath", ImagePath);
+                    else
+                        command.Parameters.AddWithValue("@ImagePath", DBNull.Value);
+
+                    try
+                    {
+                        connection.Open();
+                        object result = command.ExecuteScalar();
+
+                        if (result != null && int.TryParse(result.ToString(), out int insertedID))
+                        {
+                            PersonID = insertedID;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error adding new person: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+
+            return PersonID;
+        }
+        public static bool UpdatePerson(
+    int ID, string FirstName, string SecondName, string ThridName, string LastName,
+    string NationalNo, string Email, string Phone, string Address,
+    DateTime DateOfBirth, int CountryID, string ImagePath, int Gender)
+        {
+            int rowsAffected = 0;
+
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                string query = @"UPDATE People  
+                         SET FirstName = @FirstName,
+                             SecondName = @SecondName,
+                             ThridName = @ThridName,
+                             LastName = @LastName,
+                             NationalNo = @NationalNo,
+                             Email = @Email, 
+                             Phone = @Phone, 
+                             Address = @Address, 
+                             DateOfBirth = @DateOfBirth,
+                             CountryID = @CountryID,
+                             ImagePath = @ImagePath,
+                             Gender = @Gender
+                         WHERE ContactID = @ContactID";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@PersonID", ID);
+                    command.Parameters.AddWithValue("@FirstName", FirstName);
+                    command.Parameters.AddWithValue("@SecondName", SecondName);
+                    command.Parameters.AddWithValue("@ThridName", ThridName);
+                    command.Parameters.AddWithValue("@LastName", LastName);
+                    command.Parameters.AddWithValue("@NationalNo", NationalNo);
+                    command.Parameters.AddWithValue("@Email", Email);
+                    command.Parameters.AddWithValue("@Phone", Phone);
+                    command.Parameters.AddWithValue("@Address", Address);
+                    command.Parameters.AddWithValue("@DateOfBirth", DateOfBirth);
+                    command.Parameters.AddWithValue("@CountryID", CountryID);
+                    command.Parameters.AddWithValue("@Gender", Gender);
+
+                    if (!string.IsNullOrEmpty(ImagePath))
+                        command.Parameters.AddWithValue("@ImagePath", ImagePath);
+                    else
+                        command.Parameters.AddWithValue("@ImagePath", DBNull.Value);
+
+                    try
+                    {
+                        connection.Open();
+                        rowsAffected = command.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error updating person: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
+                    }
+                }
+            }
+
+            return (rowsAffected > 0);
+        }
+        public static DataTable GetAllPeople()
+        {
+
+            DataTable dt = new DataTable();
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+
+            string query = "SELECT * FROM People";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            try
+            {
+                connection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+
+                {
+                    dt.Load(reader);
+                }
+
+                reader.Close();
+
+
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error retrieving people: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return dt;
+
+        }
+        public static bool DeletePerson(int PersonID)
+        {
+            int rowsAffected = 0;
+
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                string query = @"DELETE FROM People 
+                         WHERE PersonID = @PersonID";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@PersonID", PersonID);
+
+                    try
+                    {
+                        connection.Open();
+                        rowsAffected = command.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error deleting person: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+
+            return (rowsAffected > 0);
+        }
+
+        public static bool IsPersonExist(int ID)
+        {
+            bool isFound = false;
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+
+            string query = "SELECT Found=1 FROM People WHERE PersonID = @PersonID";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@PersonID", ID);
+
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                isFound = reader.HasRows;
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error checking if person exists: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                isFound = false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return isFound;
+        }
 
     }
+
 }

@@ -52,6 +52,11 @@ namespace DVLD_PresentationLayer
             get => TBSecondName.Text.Trim();
             set => TBSecondName.Text = value;
         }
+        public string ThridName
+        {
+            get => TBThridName.Text.Trim();
+            set => TBThridName.Text = value;
+        }
         public string LastName
 
         {
