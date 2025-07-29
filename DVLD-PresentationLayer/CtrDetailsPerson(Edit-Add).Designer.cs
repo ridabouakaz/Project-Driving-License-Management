@@ -296,6 +296,7 @@ namespace DVLD_PresentationLayer
             this.TBFirstName.Name = "TBFirstName";
             this.TBFirstName.Size = new System.Drawing.Size(184, 30);
             this.TBFirstName.TabIndex = 15;
+            this.TBFirstName.Validating += new System.ComponentModel.CancelEventHandler(this.TBFirstName_Validating);
             // 
             // TBSecondName
             // 
@@ -307,6 +308,7 @@ namespace DVLD_PresentationLayer
             this.TBSecondName.Name = "TBSecondName";
             this.TBSecondName.Size = new System.Drawing.Size(184, 30);
             this.TBSecondName.TabIndex = 16;
+            this.TBSecondName.Validating += new System.ComponentModel.CancelEventHandler(this.TBSecondName_Validating);
             // 
             // TBThirdName
             // 
@@ -318,6 +320,7 @@ namespace DVLD_PresentationLayer
             this.TBThirdName.Name = "TBThirdName";
             this.TBThirdName.Size = new System.Drawing.Size(184, 30);
             this.TBThirdName.TabIndex = 17;
+            this.TBThirdName.Validating += new System.ComponentModel.CancelEventHandler(this.TBThirdName_Validating);
             // 
             // TBLastName
             // 
@@ -329,6 +332,7 @@ namespace DVLD_PresentationLayer
             this.TBLastName.Name = "TBLastName";
             this.TBLastName.Size = new System.Drawing.Size(184, 30);
             this.TBLastName.TabIndex = 18;
+            this.TBLastName.Validating += new System.ComponentModel.CancelEventHandler(this.TBLastName_Validating);
             // 
             // TBNationalNo
             // 
@@ -352,6 +356,7 @@ namespace DVLD_PresentationLayer
             this.TBEmail.Name = "TBEmail";
             this.TBEmail.Size = new System.Drawing.Size(184, 30);
             this.TBEmail.TabIndex = 20;
+            this.TBEmail.Validating += new System.ComponentModel.CancelEventHandler(this.TBEmail_Validating);
             // 
             // TBAddress
             // 
@@ -433,11 +438,11 @@ namespace DVLD_PresentationLayer
             this.DTPcontroluser.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DTPcontroluser.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.DTPcontroluser.Location = new System.Drawing.Point(674, 109);
-            this.DTPcontroluser.MinDate = new System.DateTime(2007, 1, 1, 0, 0, 0, 0);
+            this.DTPcontroluser.MaxDate = new System.DateTime(2100, 1, 1, 0, 0, 0, 0);
             this.DTPcontroluser.Name = "DTPcontroluser";
             this.DTPcontroluser.Size = new System.Drawing.Size(184, 22);
             this.DTPcontroluser.TabIndex = 28;
-            this.DTPcontroluser.Value = new System.DateTime(2007, 7, 20, 0, 0, 0, 0);
+            this.DTPcontroluser.Value = new System.DateTime(2025, 7, 29, 0, 0, 0, 0);
             // 
             // TBPhone
             // 

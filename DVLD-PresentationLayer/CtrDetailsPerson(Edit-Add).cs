@@ -47,22 +47,30 @@ namespace DVLD_PresentationLayer
             get => TBFirstName.Text.Trim();
             set => TBFirstName.Text = value;
         }
+        public TextBox FirstNameTextBox => TBFirstName;
+
         public string SecondName
         {
             get => TBSecondName.Text.Trim();
             set => TBSecondName.Text = value;
         }
+        public TextBox SecondNameTextBox => TBSecondName;
+
         public string ThirdName
         {
             get => TBThirdName.Text.Trim();
             set => TBThirdName.Text = value;
         }
+        public TextBox ThirdNameTextBox => TBThirdName;
+
         public string LastName
 
         {
             get => TBLastName.Text.Trim();
             set => TBLastName.Text = value;
         }
+        public TextBox LastNameTextBox => TBLastName;
+
         public string NationalNo
         {
             get => TBNationalNo.Text.Trim();
@@ -81,6 +89,8 @@ namespace DVLD_PresentationLayer
             get => TBEmail.Text.Trim();
             set => TBEmail.Text = value;
         }
+        public TextBox EmailTextBox => TBEmail;
+
         public string Country
 
         {
@@ -89,6 +99,11 @@ namespace DVLD_PresentationLayer
         }
         public ComboBox CountryComboBox => CBCountry;
 
+        private void _defaultCBCountry()
+        {
+            CBCountry.SelectedIndex = 2;
+            CBCountry.DropDownHeight = CBCountry.ItemHeight * 5;
+        }
         private void _FillCountriesInComoboBox()
         {
             DataTable dtCountries = clsCountry.GetAllCountries();
@@ -105,6 +120,11 @@ namespace DVLD_PresentationLayer
         {
             get => DTPcontroluser.Value;
             set => DTPcontroluser.Value = value;
+        }
+        private void _defaultBirthDate()
+        {
+            DTPcontroluser.Value = DateTime.Today;
+            DTPcontroluser.MaxDate = DateTime.Today.AddYears(-18);
         }
         public string Address
         {
@@ -142,7 +162,12 @@ namespace DVLD_PresentationLayer
         {
             NationalNumberValidating?.Invoke(this, e);
         }
+        public event CancelEventHandler EmailValidating;
+        private void TBEmail_Validating(object sender, CancelEventArgs e)
+        {
+            EmailValidating?.Invoke(this, e);
 
+        }
         public event EventHandler SaveButtonClick;
         private void BtnAddSave_Click(object sender, EventArgs e)
         {
@@ -152,10 +177,35 @@ namespace DVLD_PresentationLayer
         private void CtrDetailsPerson_Edit_Add__Load(object sender, EventArgs e)
         {
             _FillCountriesInComoboBox();
-            CBCountry.SelectedIndex = 2;
-            CBCountry.DropDownHeight = CBCountry.ItemHeight * 5;
-        }
+            _defaultBirthDate();
+            _defaultCBCountry();
 
-       
+        }
+        public event CancelEventHandler FirstNameValidating;
+        private void TBFirstName_Validating(object sender, CancelEventArgs e)
+        {
+            FirstNameValidating?.Invoke(this, e);
+        }
+        public event CancelEventHandler SecondNameValidating;
+
+        private void TBSecondName_Validating(object sender, CancelEventArgs e)
+        {
+            SecondNameValidating?.Invoke(this, e);
+
+        }
+        public event CancelEventHandler ThirdNameValidating;
+
+        private void TBThirdName_Validating(object sender, CancelEventArgs e)
+        {
+            ThirdNameValidating?.Invoke(this, e);
+
+        }
+        public event CancelEventHandler LastNameValidating;
+
+        private void TBLastName_Validating(object sender, CancelEventArgs e)
+        {
+            LastNameValidating?.Invoke(this, e);
+
+        }
     }
 }

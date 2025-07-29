@@ -6,9 +6,11 @@ using System.Diagnostics.Contracts;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DVLD_BusinessLayer;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static DVLD_BusinessLayer.clsCountry;
 namespace DVLD_PresentationLayer
 {
@@ -81,16 +83,105 @@ namespace DVLD_PresentationLayer
 
         private void FOAddEditPersonInfo_Load(object sender, EventArgs e)
         {
+            ctrDetailsPerson_Edit_Add_1.FirstNameValidating += CtrDetailsPerson1_FirstName_Validating;
+            ctrDetailsPerson_Edit_Add_1.SecondNameValidating += CtrDetailsPerson1_SecondName_Validating;
+            ctrDetailsPerson_Edit_Add_1.ThirdNameValidating += CtrDetailsPerson1_ThirdName_Validating;
+            ctrDetailsPerson_Edit_Add_1.LastNameValidating += CtrDetailsPerson1_LastName_Validating;
+
             ctrDetailsPerson_Edit_Add_1.NationalNumberValidating += CtrDetailsPerson1_NationalNumberValidating;
+            ctrDetailsPerson_Edit_Add_1.EmailValidating += CtrDetailsPerson1_Email_Validating;
             ctrDetailsPerson_Edit_Add_1.SaveButtonClick += CtrDetailsPerson1_SaveButtonClick;
             _LoadData();
+        }
+        private void CtrDetailsPerson1_FirstName_Validating(object sender, CancelEventArgs e)
+        {
+            string FirstName = ctrDetailsPerson_Edit_Add_1.FirstName.Trim();
+
+            if (string.IsNullOrWhiteSpace(FirstName))
+            {
+                e.Cancel = true; // يمنع مغادرة الـ TextBox
+                errorProvider1.SetError(ctrDetailsPerson_Edit_Add_1.FirstNameTextBox, "Please enter a value");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(ctrDetailsPerson_Edit_Add_1.FirstNameTextBox, "");
+            }
+        }
+        private void CtrDetailsPerson1_SecondName_Validating(object sender, CancelEventArgs e)
+        {
+            string SecondName = ctrDetailsPerson_Edit_Add_1.SecondName.Trim();
+
+            if (string.IsNullOrWhiteSpace(SecondName))
+            {
+                e.Cancel = true; // يمنع مغادرة الـ TextBox
+                errorProvider1.SetError(ctrDetailsPerson_Edit_Add_1.SecondNameTextBox, "Please enter a value");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(ctrDetailsPerson_Edit_Add_1.SecondNameTextBox, "");
+            }
+        }
+        private void CtrDetailsPerson1_ThirdName_Validating(object sender, CancelEventArgs e)
+        {
+            string ThirdName = ctrDetailsPerson_Edit_Add_1.ThirdName.Trim();
+
+            if (string.IsNullOrWhiteSpace(ThirdName))
+            {
+                e.Cancel = true; // يمنع مغادرة الـ TextBox
+                errorProvider1.SetError(ctrDetailsPerson_Edit_Add_1.ThirdNameTextBox, "Please enter a value");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(ctrDetailsPerson_Edit_Add_1.ThirdNameTextBox, "");
+            }
+        }
+        private void CtrDetailsPerson1_LastName_Validating(object sender, CancelEventArgs e)
+        {
+            string LastName = ctrDetailsPerson_Edit_Add_1.LastName.Trim();
+
+            if (string.IsNullOrWhiteSpace(LastName))
+            {
+                e.Cancel = true; // يمنع مغادرة الـ TextBox
+                errorProvider1.SetError(ctrDetailsPerson_Edit_Add_1.LastNameTextBox, "Please enter a value");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(ctrDetailsPerson_Edit_Add_1.LastNameTextBox, "");
+            }
+        }
+        private void CtrDetailsPerson1_Email_Validating(object sender, CancelEventArgs e)
+        {
+            string email = ctrDetailsPerson_Edit_Add_1.Email.Trim();
+            string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+
+            if (!Regex.IsMatch(email, pattern))
+            {
+                e.Cancel = true; // يمنع مغادرة الـ TextBox
+                errorProvider1.SetError(ctrDetailsPerson_Edit_Add_1.EmailTextBox, "Please enter a valid email address");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(ctrDetailsPerson_Edit_Add_1.EmailTextBox, "");
+            }
         }
         private void CtrDetailsPerson1_NationalNumberValidating(object sender, CancelEventArgs e)
         {
             string nationalNo = ctrDetailsPerson_Edit_Add_1.NationalNo;
-
-                errorProvider1.SetError(ctrDetailsPerson_Edit_Add_1.NationalNumberTextBox, "Gg");
-                //e.Cancel = true;
+            if (clsPerson.isNationalNumberExist(nationalNo)|| string.IsNullOrWhiteSpace(nationalNo))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(ctrDetailsPerson_Edit_Add_1.NationalNumberTextBox, "Please enter a valid National Number");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(ctrDetailsPerson_Edit_Add_1.NationalNumberTextBox, "");
+            }
         }
         private void CtrDetailsPerson1_SaveButtonClick(object sender, EventArgs e)
         {

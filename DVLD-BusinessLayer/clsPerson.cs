@@ -198,5 +198,9 @@ namespace DVLD_BusinessLayer
         {
             return clsPersonDataAccess.IsPersonExist(ID);
         }
+        public static bool isNationalNumberExist(string NationalNo)
+        {
+            return clsPersonDataAccess.IsNationalNoExist(NationalNo);
+        }
     }
 }
