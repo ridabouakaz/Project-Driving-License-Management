@@ -524,6 +524,7 @@ namespace DVLD_PresentationLayer
             this.BtnAddSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnAddSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnAddSave.UseVisualStyleBackColor = false;
+            this.BtnAddSave.Click += new System.EventHandler(this.BtnAddSave_Click);
             // 
             // errorProvider1
             // 

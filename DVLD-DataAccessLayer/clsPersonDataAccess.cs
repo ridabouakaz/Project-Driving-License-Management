@@ -22,9 +22,9 @@ namespace DVLD_DataAccessLayer
     ref string Phone,
     ref string Address,
     ref DateTime DateOfBirth,
-    ref int CountryID,
+    ref int NationalityCountryID,
     ref string ImagePath,
-    ref int Gender
+    ref int Gendor
 )
         {
             bool isFound = false;
@@ -54,13 +54,13 @@ namespace DVLD_DataAccessLayer
                         Phone = reader["Phone"].ToString();
                         Address = reader["Address"].ToString();
                         DateOfBirth = Convert.ToDateTime(reader["DateOfBirth"]);
-                        CountryID = Convert.ToInt32(reader["CountryID"]);
+                        NationalityCountryID = Convert.ToInt32(reader["NationalityCountryID"]);
 
                         ImagePath = reader["ImagePath"] != DBNull.Value
                                     ? reader["ImagePath"].ToString()
                                     : "";
 
-                        Gender = reader["Gender"] != DBNull.Value
+                        Gendor = reader["Gender"] != DBNull.Value
                                  ? Convert.ToInt32(reader["Gender"])
                                  : 0; // Default: Male
                     }
@@ -77,7 +77,7 @@ namespace DVLD_DataAccessLayer
         public static int AddNewPerson(
     string FirstName, string SecondName, string ThirdName, string LastName,
     string NationalNo, string Email, string Phone, string Address,
-    DateTime DateOfBirth, int CountryID, string ImagePath, int Gender)
+    DateTime DateOfBirth, int NationalityCountryID, string ImagePath, int Gendor)
         {
             int PersonID = -1;
 
@@ -85,10 +85,10 @@ namespace DVLD_DataAccessLayer
             {
                 string query = @"INSERT INTO People 
                         (FirstName, SecondName, ThirdName, LastName, NationalNo, 
-                         Email, Phone, Address, DateOfBirth, CountryID, ImagePath, Gender)
+                         Email, Phone, Address, DateOfBirth, NationalityCountryID, ImagePath, Gendor)
                         VALUES 
                         (@FirstName, @SecondName, @ThirdName, @LastName, @NationalNo, 
-                         @Email, @Phone, @Address, @DateOfBirth, @CountryID, @ImagePath, @Gender);
+                         @Email, @Phone, @Address, @DateOfBirth, @NationalityCountryID, @ImagePath, @Gendor);
                         SELECT SCOPE_IDENTITY();";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
@@ -102,8 +102,8 @@ namespace DVLD_DataAccessLayer
                     command.Parameters.AddWithValue("@Phone", Phone);
                     command.Parameters.AddWithValue("@Address", Address);
                     command.Parameters.AddWithValue("@DateOfBirth", DateOfBirth);
-                    command.Parameters.AddWithValue("@CountryID", CountryID);
-                    command.Parameters.AddWithValue("@Gender", Gender);
+                    command.Parameters.AddWithValue("@NationalityCountryID", NationalityCountryID);
+                    command.Parameters.AddWithValue("@Gendor", Gendor);
 
                     if (!string.IsNullOrEmpty(ImagePath))
                         command.Parameters.AddWithValue("@ImagePath", ImagePath);
@@ -132,7 +132,7 @@ namespace DVLD_DataAccessLayer
         public static bool UpdatePerson(
     int ID, string FirstName, string SecondName, string ThirdName, string LastName,
     string NationalNo, string Email, string Phone, string Address,
-    DateTime DateOfBirth, int CountryID, string ImagePath, int Gender)
+    DateTime DateOfBirth, int NationalityCountryID, string ImagePath, int Gendor)
         {
             int rowsAffected = 0;
 
@@ -150,8 +150,8 @@ namespace DVLD_DataAccessLayer
                              DateOfBirth = @DateOfBirth,
                              CountryID = @CountryID,
                              ImagePath = @ImagePath,
-                             Gender = @Gender
-                         WHERE ContactID = @ContactID";
+                             Gendor = @Gendor
+                         WHERE NationalityCountryID = @NationalityCountryID";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
@@ -165,8 +165,8 @@ namespace DVLD_DataAccessLayer
                     command.Parameters.AddWithValue("@Phone", Phone);
                     command.Parameters.AddWithValue("@Address", Address);
                     command.Parameters.AddWithValue("@DateOfBirth", DateOfBirth);
-                    command.Parameters.AddWithValue("@CountryID", CountryID);
-                    command.Parameters.AddWithValue("@Gender", Gender);
+                    command.Parameters.AddWithValue("@NationalityCountryID", NationalityCountryID);
+                    command.Parameters.AddWithValue("@Gendor", Gendor);
 
                     if (!string.IsNullOrEmpty(ImagePath))
                         command.Parameters.AddWithValue("@ImagePath", ImagePath);

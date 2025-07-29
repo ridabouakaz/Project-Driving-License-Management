@@ -144,9 +144,10 @@ namespace DVLD_PresentationLayer
         }
 
         public event EventHandler SaveButtonClick;
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnAddSave_Click(object sender, EventArgs e)
         {
             SaveButtonClick?.Invoke(this, EventArgs.Empty);
+
         }
         private void CtrDetailsPerson_Edit_Add__Load(object sender, EventArgs e)
         {
@@ -154,5 +155,7 @@ namespace DVLD_PresentationLayer
             CBCountry.SelectedIndex = 2;
             CBCountry.DropDownHeight = CBCountry.ItemHeight * 5;
         }
+
+       
     }
 }

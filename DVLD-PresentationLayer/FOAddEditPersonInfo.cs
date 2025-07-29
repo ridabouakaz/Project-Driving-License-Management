@@ -83,6 +83,7 @@ namespace DVLD_PresentationLayer
         {
             ctrDetailsPerson_Edit_Add_1.NationalNumberValidating += CtrDetailsPerson1_NationalNumberValidating;
             ctrDetailsPerson_Edit_Add_1.SaveButtonClick += CtrDetailsPerson1_SaveButtonClick;
+            _LoadData();
         }
         private void CtrDetailsPerson1_NationalNumberValidating(object sender, CancelEventArgs e)
         {
@@ -93,6 +94,11 @@ namespace DVLD_PresentationLayer
         }
         private void CtrDetailsPerson1_SaveButtonClick(object sender, EventArgs e)
         {
+            if (ctrDetailsPerson_Edit_Add_1.CountryComboBox.SelectedIndex == -1)
+            {
+                MessageBox.Show("⚠️ الرجاء اختيار الدولة.", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             int countryID = clsCountry.Find(ctrDetailsPerson_Edit_Add_1.CountryComboBox.Text).ID;
 
             // تعبئة بيانات الـ Contact
@@ -123,7 +129,7 @@ namespace DVLD_PresentationLayer
             {
                 MessageBox.Show("❌ Error: Data was not saved successfully.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
+            this.Close();
         }
 
     }

@@ -15,9 +15,6 @@ namespace DVLD_BusinessLayer
 
     public int ID { set; get; }
     public string CountryName { set; get; }
-    public string Code { set; get; }
-    public string PhoneCode { set; get; }
-
 
     public clsCountry()
 
@@ -29,13 +26,12 @@ namespace DVLD_BusinessLayer
 
     }
 
-    private clsCountry(int ID, string CountryName, string Code, string PhoneCode)
+    private clsCountry(int ID, string CountryName)
 
     {
         this.ID = ID;
         this.CountryName = CountryName;
-        this.Code = Code;
-        this.PhoneCode = PhoneCode;
+
 
         Mode = enMode.Update;
 
@@ -45,7 +41,7 @@ namespace DVLD_BusinessLayer
     {
         //call DataAccess Layer 
 
-        this.ID = clsCountryData.AddNewCountry(this.CountryName, this.Code, this.PhoneCode);
+        this.ID = clsCountryData.AddNewCountry(this.CountryName);
 
         return (this.ID != -1);
     }
@@ -54,7 +50,7 @@ namespace DVLD_BusinessLayer
     {
         //call DataAccess Layer 
 
-        return clsCountryData.UpdateCountry(this.ID, this.CountryName, this.Code, this.PhoneCode);
+        return clsCountryData.UpdateCountry(this.ID, this.CountryName);
 
     }
     public static clsCountry Find(int ID)
@@ -67,9 +63,9 @@ namespace DVLD_BusinessLayer
 
         int CountryID = -1;
 
-        if (clsCountryData.GetCountryInfoByID(ID, ref CountryName, ref Code, ref PhoneCode))
+        if (clsCountryData.GetCountryInfoByID(ID, ref CountryName))
 
-            return new clsCountry(ID, CountryName, Code, PhoneCode);
+            return new clsCountry(ID, CountryName);
         else
             return null;
 
@@ -83,9 +79,9 @@ namespace DVLD_BusinessLayer
         string PhoneCode = "";
 
 
-        if (clsCountryData.GetCountryInfoByName(CountryName, ref ID, ref Code, ref PhoneCode))
+        if (clsCountryData.GetCountryInfoByName(CountryName, ref ID))
 
-            return new clsCountry(ID, CountryName, Code, PhoneCode);
+            return new clsCountry(ID, CountryName);
         else
             return null;
 

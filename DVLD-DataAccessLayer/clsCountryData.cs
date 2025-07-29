@@ -11,8 +11,8 @@ namespace DVLD_DataAccessLayer
     public class clsCountryData
     {
 
-        public static bool GetCountryInfoByID(int ID, ref string CountryName,
-                                      ref string Code, ref string PhoneCode)
+        public static bool GetCountryInfoByID(int ID, ref string CountryName
+                                     )
         {
             bool isFound = false;
 
@@ -37,23 +37,7 @@ namespace DVLD_DataAccessLayer
 
                     CountryName = (string)reader["CountryName"];
 
-                    if (reader["Code"] != DBNull.Value)
-                    {
-                        Code = (string)reader["Code"];
-                    }
-                    else
-                    {
-                        Code = "";
-                    }
-
-                    if (reader["PhoneCode"] != DBNull.Value)
-                    {
-                        PhoneCode = (string)reader["PhoneCode"];
-                    }
-                    else
-                    {
-                        PhoneCode = "";
-                    }
+             
 
                 }
                 else
@@ -80,8 +64,8 @@ namespace DVLD_DataAccessLayer
         }
 
 
-        public static bool GetCountryInfoByName(string CountryName, ref int ID,
-                                                ref string Code, ref string PhoneCode)
+        public static bool GetCountryInfoByName(string CountryName, ref int ID
+                                               )
         {
             bool isFound = false;
 
@@ -106,24 +90,6 @@ namespace DVLD_DataAccessLayer
 
                     ID = (int)reader["CountryID"];
 
-                    if (reader["Code"] != DBNull.Value)
-                    {
-                        Code = (string)reader["Code"];
-                    }
-                    else
-                    {
-                        Code = "";
-                    }
-
-                    if (reader["PhoneCode"] != DBNull.Value)
-                    {
-                        PhoneCode = (string)reader["PhoneCode"];
-                    }
-                    else
-                    {
-                        PhoneCode = "";
-                    }
-
                 }
                 else
                 {
@@ -149,7 +115,7 @@ namespace DVLD_DataAccessLayer
         }
 
 
-        public static int AddNewCountry(string CountryName, string Code, string PhoneCode)
+        public static int AddNewCountry(string CountryName)
         {
             //this function will return the new contact id if succeeded and -1 if not.
             int CountryID = -1;
@@ -163,17 +129,6 @@ namespace DVLD_DataAccessLayer
             SqlCommand command = new SqlCommand(query, connection);
 
             command.Parameters.AddWithValue("@CountryName", CountryName);
-
-            if (Code != "")
-                command.Parameters.AddWithValue("@Code", Code);
-            else
-                command.Parameters.AddWithValue("@Code", System.DBNull.Value);
-
-            if (PhoneCode != "")
-                command.Parameters.AddWithValue("@PhoneCode", PhoneCode);
-            else
-                command.Parameters.AddWithValue("@PhoneCode", System.DBNull.Value);
-
 
             try
             {
@@ -203,24 +158,21 @@ namespace DVLD_DataAccessLayer
             return CountryID;
         }
 
-        public static bool UpdateCountry(int ID, string CountryName, string Code, string PhoneCode)
+        public static bool UpdateCountry(int ID, string CountryName)
         {
 
             int rowsAffected = 0;
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
             string query = @"Update  Countries  
-                            set CountryName=@CountryName,
-                                Code=@Code,
-                                PhoneCode=@PhoneCode
+                            set CountryName=@CountryName
                                 where CountryID = @CountryID";
 
             SqlCommand command = new SqlCommand(query, connection);
 
             command.Parameters.AddWithValue("@CountryID", ID);
             command.Parameters.AddWithValue("@CountryName", CountryName);
-            command.Parameters.AddWithValue("@Code", Code);
-            command.Parameters.AddWithValue("@PhoneCode", PhoneCode);
+
 
             try
             {
