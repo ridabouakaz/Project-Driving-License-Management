@@ -21,12 +21,10 @@ namespace DVLD_PresentationLayer
         int _PersonID;
         clsPerson _Person;
 
-        public FOAddEditPersonInfo()
+        public FOAddEditPersonInfo(int PersonID)
         {
             InitializeComponent();
-            int PersonID = -1;
             _PersonID = PersonID;
-
             if (_PersonID == -1)
                 _Mode = enMode.AddNew;
             else
@@ -79,8 +77,6 @@ namespace DVLD_PresentationLayer
             //this will select the country in the combobox.
             ctrDetailsPerson_Edit_Add_1.CountryComboBox.SelectedIndex = ctrDetailsPerson_Edit_Add_1.CountryComboBox.FindString(clsCountry.Find(_Person.CountryID).CountryName);
         }
-
-
         private void FOAddEditPersonInfo_Load(object sender, EventArgs e)
         {
             ctrDetailsPerson_Edit_Add_1.FirstNameValidating += CtrDetailsPerson1_FirstName_Validating;

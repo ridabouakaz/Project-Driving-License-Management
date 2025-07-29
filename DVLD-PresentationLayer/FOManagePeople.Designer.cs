@@ -60,8 +60,8 @@ namespace DVLD_PresentationLayer
             this.dGViewShowInformation.AllowUserToAddRows = false;
             this.dGViewShowInformation.AllowUserToDeleteRows = false;
             this.dGViewShowInformation.AllowUserToOrderColumns = true;
-            this.dGViewShowInformation.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.dGViewShowInformation.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dGViewShowInformation.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dGViewShowInformation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
