@@ -20,12 +20,7 @@ namespace DVLD_PresentationLayer
         {
             dGViewShowInformation.DataSource = clsPerson.GetAllPeople();
         }
- 
 
-        private void SMItemDeletePerson_Click(object sender, EventArgs e)
-        {
-
-        }
         private void FOManagePeople_Load(object sender, EventArgs e)
         {
             CBFilterBy.SelectedIndex = 0;
@@ -58,6 +53,26 @@ namespace DVLD_PresentationLayer
             FOAddEditPersonInfo frm = new FOAddEditPersonInfo(-1);
             frm.ShowDialog();
             _RefreshPeopleList();
+
+        }
+
+        private void SMItemDeletePerson_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to delete person [" + dGViewShowInformation.CurrentRow.Cells[0].Value + "]", "Confirm Delete", MessageBoxButtons.OKCancel) == DialogResult.OK)
+
+            {
+
+                //Perform Delele and refresh
+                if (clsPerson.DeletePeople((int)dGViewShowInformation.CurrentRow.Cells[0].Value))
+                {
+                    MessageBox.Show("person Deleted Successfully.");
+                    _RefreshPeopleList();
+                }
+
+                else
+                    MessageBox.Show("person is not deleted.");
+
+            }
         }
     }
 }

@@ -132,6 +132,7 @@ namespace DVLD_PresentationLayer
             this.SMItemDeletePerson.Name = "SMItemDeletePerson";
             this.SMItemDeletePerson.Size = new System.Drawing.Size(226, 38);
             this.SMItemDeletePerson.Text = "Delete Person";
+            this.SMItemDeletePerson.Click += new System.EventHandler(this.SMItemDeletePerson_Click);
             // 
             // SMItemSeparatorCRUDPeople2
             // 
