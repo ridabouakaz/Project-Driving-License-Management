@@ -60,9 +60,10 @@ namespace DVLD_PresentationLayer
             this.dGViewShowInformation.AllowUserToAddRows = false;
             this.dGViewShowInformation.AllowUserToDeleteRows = false;
             this.dGViewShowInformation.AllowUserToOrderColumns = true;
-            this.dGViewShowInformation.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.dGViewShowInformation.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dGViewShowInformation.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGViewShowInformation.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dGViewShowInformation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGViewShowInformation.ContextMenuStrip = this.SMItemCRUDpeople;
@@ -87,7 +88,7 @@ namespace DVLD_PresentationLayer
             this.SMItemSendEmail,
             this.SMItemCallPerson});
             this.SMItemCRUDpeople.Name = "SMItemCRUDpeople";
-            this.SMItemCRUDpeople.Size = new System.Drawing.Size(200, 244);
+            this.SMItemCRUDpeople.Size = new System.Drawing.Size(227, 272);
             // 
             // SMItemViewDetails
             // 
@@ -95,7 +96,7 @@ namespace DVLD_PresentationLayer
             this.SMItemViewDetails.Image = ((System.Drawing.Image)(resources.GetObject("SMItemViewDetails.Image")));
             this.SMItemViewDetails.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SMItemViewDetails.Name = "SMItemViewDetails";
-            this.SMItemViewDetails.Size = new System.Drawing.Size(199, 38);
+            this.SMItemViewDetails.Size = new System.Drawing.Size(226, 38);
             this.SMItemViewDetails.Text = "View Details";
             // 
             // SMItemSeparatorCRUDPeople1
@@ -118,8 +119,9 @@ namespace DVLD_PresentationLayer
             this.SMItemEditPerson.Image = ((System.Drawing.Image)(resources.GetObject("SMItemEditPerson.Image")));
             this.SMItemEditPerson.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SMItemEditPerson.Name = "SMItemEditPerson";
-            this.SMItemEditPerson.Size = new System.Drawing.Size(199, 38);
+            this.SMItemEditPerson.Size = new System.Drawing.Size(226, 38);
             this.SMItemEditPerson.Text = "Edit Person";
+            this.SMItemEditPerson.Click += new System.EventHandler(this.SMItemEditPerson_Click);
             // 
             // SMItemDeletePerson
             // 
@@ -182,6 +184,7 @@ namespace DVLD_PresentationLayer
             this.BtnAddPerson.Size = new System.Drawing.Size(90, 45);
             this.BtnAddPerson.TabIndex = 3;
             this.BtnAddPerson.UseVisualStyleBackColor = false;
+            this.BtnAddPerson.Click += new System.EventHandler(this.BtnAddPerson_Click);
             // 
             // PBManagePeople
             // 
@@ -239,6 +242,7 @@ namespace DVLD_PresentationLayer
             this.BtnAddClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnAddClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnAddClose.UseVisualStyleBackColor = false;
+            this.BtnAddClose.Click += new System.EventHandler(this.BtnAddClose_Click);
             // 
             // CBFilterBy
             // 

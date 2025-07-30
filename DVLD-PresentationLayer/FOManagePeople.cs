@@ -20,15 +20,7 @@ namespace DVLD_PresentationLayer
         {
             dGViewShowInformation.DataSource = clsPerson.GetAllPeople();
         }
-  
-     
-        private void SMItemEditPerson_Click(object sender, EventArgs e)
-        {
-
-            FOAddEditPersonInfo frm = new FOAddEditPersonInfo((int)dGViewShowInformation.CurrentRow.Cells[0].Value);
-            frm.ShowDialog();
-            _RefreshPeopleList();
-        }
+ 
 
         private void SMItemDeletePerson_Click(object sender, EventArgs e)
         {
@@ -41,9 +33,9 @@ namespace DVLD_PresentationLayer
 
         }
 
+   
         private void BtnAddPerson_Click(object sender, EventArgs e)
         {
-
             FOAddEditPersonInfo frm = new FOAddEditPersonInfo(-1);
             frm.ShowDialog();
             _RefreshPeopleList();
@@ -52,6 +44,13 @@ namespace DVLD_PresentationLayer
         private void BtnAddClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void SMItemEditPerson_Click(object sender, EventArgs e)
+        {
+            FOAddEditPersonInfo frm = new FOAddEditPersonInfo((int)dGViewShowInformation.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+            _RefreshPeopleList();
         }
     }
 }
