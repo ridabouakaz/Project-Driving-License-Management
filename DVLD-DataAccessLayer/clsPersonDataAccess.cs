@@ -6,7 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using DVLDShared;
+using static DVLDShared.DVLDShared;
 namespace DVLD_DataAccessLayer
 {
     public class clsPersonDataAccess
@@ -24,7 +25,7 @@ namespace DVLD_DataAccessLayer
     ref DateTime DateOfBirth,
     ref int NationalityCountryID,
     ref string ImagePath,
-    ref int Gendor
+    ref Gender Gender
 )
         {
             bool isFound = false;
@@ -59,10 +60,11 @@ namespace DVLD_DataAccessLayer
                         ImagePath = reader["ImagePath"] != DBNull.Value
                                     ? reader["ImagePath"].ToString()
                                     : "";
+                        Gender = reader["Gender"] != DBNull.Value
+         ? (Gender)Convert.ToInt32(reader["Gender"])
+         : Gender.Male; // Default: Male
 
-                        Gendor = reader["Gender"] != DBNull.Value
-                                 ? Convert.ToInt32(reader["Gender"])
-                                 : 0; // Default: Male
+
                     }
                 }
                 catch (Exception ex)
@@ -77,7 +79,7 @@ namespace DVLD_DataAccessLayer
         public static int AddNewPerson(
     string FirstName, string SecondName, string ThirdName, string LastName,
     string NationalNo, string Email, string Phone, string Address,
-    DateTime DateOfBirth, int NationalityCountryID, string ImagePath, int Gendor)
+    DateTime DateOfBirth, int NationalityCountryID, string ImagePath, Gender Gender)
         {
             int PersonID = -1;
 
@@ -85,10 +87,10 @@ namespace DVLD_DataAccessLayer
             {
                 string query = @"INSERT INTO People 
                         (FirstName, SecondName, ThirdName, LastName, NationalNo, 
-                         Email, Phone, Address, DateOfBirth, NationalityCountryID, ImagePath, Gendor)
+                         Email, Phone, Address, DateOfBirth, NationalityCountryID, ImagePath, Gender)
                         VALUES 
                         (@FirstName, @SecondName, @ThirdName, @LastName, @NationalNo, 
-                         @Email, @Phone, @Address, @DateOfBirth, @NationalityCountryID, @ImagePath, @Gendor);
+                         @Email, @Phone, @Address, @DateOfBirth, @NationalityCountryID, @ImagePath, @Gender);
                         SELECT SCOPE_IDENTITY();";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
@@ -103,7 +105,7 @@ namespace DVLD_DataAccessLayer
                     command.Parameters.AddWithValue("@Address", Address);
                     command.Parameters.AddWithValue("@DateOfBirth", DateOfBirth);
                     command.Parameters.AddWithValue("@NationalityCountryID", NationalityCountryID);
-                    command.Parameters.AddWithValue("@Gendor", Gendor);
+                    command.Parameters.AddWithValue("@Gender", Gender);
 
                     if (!string.IsNullOrEmpty(ImagePath))
                         command.Parameters.AddWithValue("@ImagePath", ImagePath);
@@ -132,7 +134,7 @@ namespace DVLD_DataAccessLayer
         public static bool UpdatePerson(
     int ID, string FirstName, string SecondName, string ThirdName, string LastName,
     string NationalNo, string Email, string Phone, string Address,
-    DateTime DateOfBirth, int NationalityCountryID, string ImagePath, int Gendor)
+    DateTime DateOfBirth, int NationalityCountryID, string ImagePath, Gender Gender)
         {
             int rowsAffected = 0;
 
@@ -150,7 +152,7 @@ namespace DVLD_DataAccessLayer
                              DateOfBirth = @DateOfBirth,
                              CountryID = @CountryID,
                              ImagePath = @ImagePath,
-                             Gendor = @Gendor
+                             Gender = @Gender
                          WHERE NationalityCountryID = @NationalityCountryID";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
@@ -166,7 +168,7 @@ namespace DVLD_DataAccessLayer
                     command.Parameters.AddWithValue("@Address", Address);
                     command.Parameters.AddWithValue("@DateOfBirth", DateOfBirth);
                     command.Parameters.AddWithValue("@NationalityCountryID", NationalityCountryID);
-                    command.Parameters.AddWithValue("@Gendor", Gendor);
+                    command.Parameters.AddWithValue("@Gender", Gender);
 
                     if (!string.IsNullOrEmpty(ImagePath))
                         command.Parameters.AddWithValue("@ImagePath", ImagePath);

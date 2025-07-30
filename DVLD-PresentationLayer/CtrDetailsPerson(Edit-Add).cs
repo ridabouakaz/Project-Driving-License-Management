@@ -8,7 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DVLD_BusinessLayer;
-using DVLD_Common;
+using DVLDShared;
+using static DVLDShared.DVLDShared;
 namespace DVLD_PresentationLayer
 {
     public partial class CtrDetailsPerson_Edit_Add_ : UserControl
@@ -174,6 +175,12 @@ namespace DVLD_PresentationLayer
             SaveButtonClick?.Invoke(this, EventArgs.Empty);
 
         }
+        public event EventHandler CloseButtonClick;
+
+        private void BtnAddClose_Click(object sender, EventArgs e)
+        {
+            CloseButtonClick?.Invoke(this, EventArgs.Empty);
+        }
         private void CtrDetailsPerson_Edit_Add__Load(object sender, EventArgs e)
         {
             _FillCountriesInComoboBox();
@@ -207,5 +214,7 @@ namespace DVLD_PresentationLayer
             LastNameValidating?.Invoke(this, e);
 
         }
+
+      
     }
 }

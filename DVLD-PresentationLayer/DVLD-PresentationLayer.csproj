@@ -116,9 +116,9 @@
       <Project>{79ef87a5-7c40-4391-9d20-e61e5912a24e}</Project>
       <Name>DVLD-BusinessLayer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DVLD-Common\DVLD-Common.csproj">
-      <Project>{084686a8-517d-44ba-a524-69a967a911d1}</Project>
-      <Name>DVLD-Common</Name>
+    <ProjectReference Include="..\DVLDShared\DVLDShared.csproj">
+      <Project>{3bf40a9a-7b78-4270-880e-32d8a6c032c8}</Project>
+      <Name>DVLDShared</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

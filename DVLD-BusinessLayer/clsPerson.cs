@@ -4,8 +4,9 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DVLDShared;
 using DVLD_DataAccessLayer;
-using DVLD_Common;
+using static DVLDShared.DVLDShared;
 namespace DVLD_BusinessLayer
 {
     public class clsPerson
@@ -89,7 +90,7 @@ namespace DVLD_BusinessLayer
         this.DateOfBirth,
         this.CountryID,
         this.ImagePath,
-        (int)this.PersonGender // نحول Gender enum إلى int
+        this.PersonGender 
     );
             return (this.ID != -1);
         }
@@ -109,7 +110,7 @@ namespace DVLD_BusinessLayer
                     this.DateOfBirth,
                     this.CountryID,
                     this.ImagePath,
-                    (int)this.PersonGender // Enum → int
+                    this.PersonGender // Enum → int
                 );
 
         }
@@ -119,7 +120,7 @@ namespace DVLD_BusinessLayer
             string nationalNo = "", email = "", phone = "", address = "", imagePath = "";
             DateTime dateOfBirth = DateTime.Now;
             int countryID = -1;
-            int gender = 0;
+            Gender Gender = 0;
 
             bool isFound = clsPersonDataAccess.GetPersonInfoByID(
                 ID,
@@ -134,7 +135,7 @@ namespace DVLD_BusinessLayer
                 ref dateOfBirth,
                 ref countryID,
                 ref imagePath,
-                ref gender
+                ref Gender
             );
 
             if (isFound)
@@ -152,7 +153,7 @@ namespace DVLD_BusinessLayer
                     dateOfBirth,
                     countryID,
                     imagePath,
-                    (Gender)gender // convert int → Enum
+                    Gender 
                 );
             }
             else

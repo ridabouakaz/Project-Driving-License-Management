@@ -53,20 +53,16 @@ namespace DVLD_PresentationLayer
 
             LblAddEditPerson.Text = "Update Person";
             LbNumberlPersonID.Text = _Person.ID.ToString();
-
             ctrDetailsPerson_Edit_Add_1.FirstName = _Person.FirstName;
             ctrDetailsPerson_Edit_Add_1.SecondName = _Person.SecondName;
             ctrDetailsPerson_Edit_Add_1.ThirdName = _Person.ThirdName;
             ctrDetailsPerson_Edit_Add_1.LastName = _Person.LastName;
             ctrDetailsPerson_Edit_Add_1.NationalNo = _Person.NationalNo;
-
             ctrDetailsPerson_Edit_Add_1.Email = _Person.Email;
             ctrDetailsPerson_Edit_Add_1.Phone = _Person.Phone;
             ctrDetailsPerson_Edit_Add_1.Address = _Person.Address;
-
             ctrDetailsPerson_Edit_Add_1.BirthDate = _Person.DateOfBirth;
             ctrDetailsPerson_Edit_Add_1.CountryComboBox.SelectedIndex = ctrDetailsPerson_Edit_Add_1.CountryComboBox.FindString(clsCountry.Find(_Person.CountryID).CountryName);
-
             if (!string.IsNullOrEmpty(_Person.ImagePath))
                 ctrDetailsPerson_Edit_Add_1.PersonImage = Image.FromFile(_Person.ImagePath);
             else
@@ -87,8 +83,10 @@ namespace DVLD_PresentationLayer
             ctrDetailsPerson_Edit_Add_1.NationalNumberValidating += CtrDetailsPerson1_NationalNumberValidating;
             ctrDetailsPerson_Edit_Add_1.EmailValidating += CtrDetailsPerson1_Email_Validating;
             ctrDetailsPerson_Edit_Add_1.SaveButtonClick += CtrDetailsPerson1_SaveButtonClick;
+            ctrDetailsPerson_Edit_Add_1.CloseButtonClick += CtrDetailsPerson1_CloseButtonClick;
             _LoadData();
         }
+
         private void CtrDetailsPerson1_FirstName_Validating(object sender, CancelEventArgs e)
         {
             string FirstName = ctrDetailsPerson_Edit_Add_1.FirstName.Trim();
@@ -181,14 +179,8 @@ namespace DVLD_PresentationLayer
         }
         private void CtrDetailsPerson1_SaveButtonClick(object sender, EventArgs e)
         {
-            if (ctrDetailsPerson_Edit_Add_1.CountryComboBox.SelectedIndex == -1)
-            {
-                MessageBox.Show("⚠️ الرجاء اختيار الدولة.", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
             int countryID = clsCountry.Find(ctrDetailsPerson_Edit_Add_1.CountryComboBox.Text).ID;
 
-            // تعبئة بيانات الـ Contact
             _Person.FirstName = ctrDetailsPerson_Edit_Add_1.FirstName;
             _Person.SecondName = ctrDetailsPerson_Edit_Add_1.SecondName;
             _Person.ThirdName = ctrDetailsPerson_Edit_Add_1.ThirdName;
@@ -200,13 +192,10 @@ namespace DVLD_PresentationLayer
             _Person.DateOfBirth = ctrDetailsPerson_Edit_Add_1.BirthDate;
             _Person.CountryID = countryID;
 
-            // أخذ قيمة الجندر من الـ UserControl
             _Person.PersonGender = ctrDetailsPerson_Edit_Add_1.SelectedGender;
 
-            // معالجة الصورة
             _Person.ImagePath = ctrDetailsPerson_Edit_Add_1.ImagePath?? "";
 
-            // حفظ البيانات
             if (_Person.Save())
             {
                 MessageBox.Show("✅ Data Saved Successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -216,6 +205,10 @@ namespace DVLD_PresentationLayer
             {
                 MessageBox.Show("❌ Error: Data was not saved successfully.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            this.Close();
+        }
+        private void CtrDetailsPerson1_CloseButtonClick(object sender, EventArgs e)
+        {
             this.Close();
         }
 

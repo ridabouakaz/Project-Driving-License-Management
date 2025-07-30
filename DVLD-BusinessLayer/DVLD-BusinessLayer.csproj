@@ -49,13 +49,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DVLD-Common\DVLD-Common.csproj">
-      <Project>{084686a8-517d-44ba-a524-69a967a911d1}</Project>
-      <Name>DVLD-Common</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DVLD-DataAccessLayer\DVLD-DataAccessLayer.csproj">
       <Project>{89a4d1a7-f643-4aca-89ce-81fc01aad0c3}</Project>
       <Name>DVLD-DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DVLDShared\DVLDShared.csproj">
+      <Project>{3bf40a9a-7b78-4270-880e-32d8a6c032c8}</Project>
+      <Name>DVLDShared</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
