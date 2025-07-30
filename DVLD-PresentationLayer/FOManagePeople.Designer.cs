@@ -102,7 +102,7 @@ namespace DVLD_PresentationLayer
             // SMItemSeparatorCRUDPeople1
             // 
             this.SMItemSeparatorCRUDPeople1.Name = "SMItemSeparatorCRUDPeople1";
-            this.SMItemSeparatorCRUDPeople1.Size = new System.Drawing.Size(196, 6);
+            this.SMItemSeparatorCRUDPeople1.Size = new System.Drawing.Size(223, 6);
             // 
             // SMItemAddPerson
             // 
@@ -110,8 +110,9 @@ namespace DVLD_PresentationLayer
             this.SMItemAddPerson.Image = ((System.Drawing.Image)(resources.GetObject("SMItemAddPerson.Image")));
             this.SMItemAddPerson.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SMItemAddPerson.Name = "SMItemAddPerson";
-            this.SMItemAddPerson.Size = new System.Drawing.Size(199, 38);
+            this.SMItemAddPerson.Size = new System.Drawing.Size(226, 38);
             this.SMItemAddPerson.Text = "Add Person";
+            this.SMItemAddPerson.Click += new System.EventHandler(this.SMItemAddPerson_Click);
             // 
             // SMItemEditPerson
             // 
@@ -129,13 +130,13 @@ namespace DVLD_PresentationLayer
             this.SMItemDeletePerson.Image = ((System.Drawing.Image)(resources.GetObject("SMItemDeletePerson.Image")));
             this.SMItemDeletePerson.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SMItemDeletePerson.Name = "SMItemDeletePerson";
-            this.SMItemDeletePerson.Size = new System.Drawing.Size(199, 38);
+            this.SMItemDeletePerson.Size = new System.Drawing.Size(226, 38);
             this.SMItemDeletePerson.Text = "Delete Person";
             // 
             // SMItemSeparatorCRUDPeople2
             // 
             this.SMItemSeparatorCRUDPeople2.Name = "SMItemSeparatorCRUDPeople2";
-            this.SMItemSeparatorCRUDPeople2.Size = new System.Drawing.Size(196, 6);
+            this.SMItemSeparatorCRUDPeople2.Size = new System.Drawing.Size(223, 6);
             // 
             // SMItemSendEmail
             // 
@@ -143,7 +144,7 @@ namespace DVLD_PresentationLayer
             this.SMItemSendEmail.Image = ((System.Drawing.Image)(resources.GetObject("SMItemSendEmail.Image")));
             this.SMItemSendEmail.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SMItemSendEmail.Name = "SMItemSendEmail";
-            this.SMItemSendEmail.Size = new System.Drawing.Size(199, 38);
+            this.SMItemSendEmail.Size = new System.Drawing.Size(226, 38);
             this.SMItemSendEmail.Text = "Send Email";
             // 
             // SMItemCallPerson
@@ -152,7 +153,7 @@ namespace DVLD_PresentationLayer
             this.SMItemCallPerson.Image = ((System.Drawing.Image)(resources.GetObject("SMItemCallPerson.Image")));
             this.SMItemCallPerson.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SMItemCallPerson.Name = "SMItemCallPerson";
-            this.SMItemCallPerson.Size = new System.Drawing.Size(199, 38);
+            this.SMItemCallPerson.Size = new System.Drawing.Size(226, 38);
             this.SMItemCallPerson.Text = "Call Person";
             // 
             // LblManagePeople

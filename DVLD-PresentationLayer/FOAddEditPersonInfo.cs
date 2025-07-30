@@ -86,7 +86,6 @@ namespace DVLD_PresentationLayer
             ctrDetailsPerson_Edit_Add_1.CloseButtonClick += CtrDetailsPerson1_CloseButtonClick;
             _LoadData();
         }
-
         private void CtrDetailsPerson1_FirstName_Validating(object sender, CancelEventArgs e)
         {
             string FirstName = ctrDetailsPerson_Edit_Add_1.FirstName.Trim();

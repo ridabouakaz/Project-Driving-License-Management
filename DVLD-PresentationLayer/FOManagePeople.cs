@@ -52,5 +52,12 @@ namespace DVLD_PresentationLayer
             frm.ShowDialog();
             _RefreshPeopleList();
         }
+
+        private void SMItemAddPerson_Click(object sender, EventArgs e)
+        {
+            FOAddEditPersonInfo frm = new FOAddEditPersonInfo(-1);
+            frm.ShowDialog();
+            _RefreshPeopleList();
+        }
     }
 }
