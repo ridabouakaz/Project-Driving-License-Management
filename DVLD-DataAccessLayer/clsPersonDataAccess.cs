@@ -150,7 +150,7 @@ namespace DVLD_DataAccessLayer
                              Phone = @Phone, 
                              Address = @Address, 
                              DateOfBirth = @DateOfBirth,
-                             CountryID = @CountryID,
+                             NationalityCountryID = @NationalityCountryID,
                              ImagePath = @ImagePath,
                              Gender = @Gender
                          WHERE NationalityCountryID = @NationalityCountryID";

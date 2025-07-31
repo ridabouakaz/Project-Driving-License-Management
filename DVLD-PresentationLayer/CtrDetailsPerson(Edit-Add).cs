@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DVLD_BusinessLayer;
@@ -30,16 +31,20 @@ namespace DVLD_PresentationLayer
             set { PBImagePerson.Image = value; }
         }
         public Image UserImage { get; private set; }
-        private void LLSetImage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) 
+        private void LLSetImage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            using (var ofd = new OpenFileDialog())
+            OFDialogPictureImage.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
+            OFDialogPictureImage.FilterIndex = 1;
+            OFDialogPictureImage.RestoreDirectory = true;
+
+            if (OFDialogPictureImage.ShowDialog() == DialogResult.OK)
             {
-                ofd.Filter = "Images|*.png;*.jpg";
-                if (ofd.ShowDialog() == DialogResult.OK)
-                {
-                    UserImage = Image.FromFile(ofd.FileName);
-                    PBImagePerson.Image = UserImage;
-                }
+                // Process the selected file
+                string selectedFilePath = OFDialogPictureImage.FileName;
+                //MessageBox.Show("Selected Image is:" + selectedFilePath);
+
+                PBImagePerson.Load(selectedFilePath);
+                // ...
             }
         }
 

@@ -73,6 +73,7 @@ namespace DVLD_PresentationLayer
             this.BtnAddClose = new System.Windows.Forms.Button();
             this.BtnAddSave = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.OFDialogPictureImage = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.PBName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBNationalNo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBEmail)).BeginInit();
@@ -536,6 +537,10 @@ namespace DVLD_PresentationLayer
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // OFDialogPictureImage
+            // 
+            this.OFDialogPictureImage.FileName = "OFDialogPictureImage";
+            // 
             // CtrDetailsPerson_Edit_Add_
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -638,5 +643,6 @@ namespace DVLD_PresentationLayer
         private Button BtnAddClose;
         private Button BtnAddSave;
         private ErrorProvider errorProvider1;
+        private OpenFileDialog OFDialogPictureImage;
     }
 }

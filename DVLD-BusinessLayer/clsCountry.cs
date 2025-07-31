@@ -37,28 +37,10 @@ namespace DVLD_BusinessLayer
 
     }
 
-    private bool _AddNewCountry()
-    {
-        //call DataAccess Layer 
-
-        this.ID = clsCountryData.AddNewCountry(this.CountryName);
-
-        return (this.ID != -1);
-    }
-
-    private bool _UpdateContact()
-    {
-        //call DataAccess Layer 
-
-        return clsCountryData.UpdateCountry(this.ID, this.CountryName);
-
-    }
     public static clsCountry Find(int ID)
     {
 
         string CountryName = "";
-        string Code = "";
-        string PhoneCode = "";
 
 
         int CountryID = -1;
@@ -75,8 +57,7 @@ namespace DVLD_BusinessLayer
     {
 
         int ID = -1;
-        string Code = "";
-        string PhoneCode = "";
+ 
 
 
         if (clsCountryData.GetCountryInfoByName(CountryName, ref ID))
@@ -86,36 +67,7 @@ namespace DVLD_BusinessLayer
             return null;
 
     }
-    public bool Save()
-    {
-
-
-        switch (Mode)
-        {
-            case enMode.AddNew:
-                if (_AddNewCountry())
-                {
-
-                    Mode = enMode.Update;
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-
-            case enMode.Update:
-
-                return _UpdateContact();
-
-        }
-
-
-
-
-        return false;
-    }
-
+    
     public static DataTable GetAllCountries()
     {
         return clsCountryData.GetAllCountries();

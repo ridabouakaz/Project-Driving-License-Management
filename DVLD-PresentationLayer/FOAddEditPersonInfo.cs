@@ -192,9 +192,10 @@ namespace DVLD_PresentationLayer
             _Person.CountryID = countryID;
 
             _Person.PersonGender = ctrDetailsPerson_Edit_Add_1.SelectedGender;
-
-            _Person.ImagePath = ctrDetailsPerson_Edit_Add_1.ImagePath?? "";
-
+            if (ctrDetailsPerson_Edit_Add_1.ImagePath != null)
+                _Person.ImagePath = ctrDetailsPerson_Edit_Add_1.ImagePath;
+            else
+                _Person.ImagePath = "";
             if (_Person.Save())
             {
                 MessageBox.Show("✅ Data Saved Successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);

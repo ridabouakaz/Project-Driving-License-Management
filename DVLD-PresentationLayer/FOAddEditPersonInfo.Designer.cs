@@ -95,11 +95,12 @@ namespace DVLD_PresentationLayer
             // 
             this.ctrDetailsPerson_Edit_Add_1.Address = "";
             this.ctrDetailsPerson_Edit_Add_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(240)))), ((int)(((byte)(250)))));
-            this.ctrDetailsPerson_Edit_Add_1.BirthDate = new System.DateTime(2007, 7, 20, 0, 0, 0, 0);
+            this.ctrDetailsPerson_Edit_Add_1.BirthDate = new System.DateTime(2007, 7, 31, 0, 0, 0, 0);
             this.ctrDetailsPerson_Edit_Add_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ctrDetailsPerson_Edit_Add_1.Country = "";
+            this.ctrDetailsPerson_Edit_Add_1.Country = "Algeria";
             this.ctrDetailsPerson_Edit_Add_1.Email = "";
             this.ctrDetailsPerson_Edit_Add_1.FirstName = "";
+            this.ctrDetailsPerson_Edit_Add_1.ImagePath = null;
             this.ctrDetailsPerson_Edit_Add_1.LastName = "";
             this.ctrDetailsPerson_Edit_Add_1.Location = new System.Drawing.Point(31, 120);
             this.ctrDetailsPerson_Edit_Add_1.Name = "ctrDetailsPerson_Edit_Add_1";
@@ -110,6 +111,7 @@ namespace DVLD_PresentationLayer
             this.ctrDetailsPerson_Edit_Add_1.SelectedGender = DVLDShared.DVLDShared.Gender.Male;
             this.ctrDetailsPerson_Edit_Add_1.Size = new System.Drawing.Size(1097, 451);
             this.ctrDetailsPerson_Edit_Add_1.TabIndex = 0;
+            this.ctrDetailsPerson_Edit_Add_1.ThirdName = "";
             // 
             // FOAddEditPersonInfo
             // 
