@@ -315,7 +315,7 @@ namespace DVLD_PresentationLayer
         }
 
         #endregion
-
+        
         private System.Windows.Forms.DataGridView dGViewShowInformation;
         private System.Windows.Forms.Label LblManagePeople;
         private Button BtnAddPerson;
