@@ -13,58 +13,58 @@ namespace DVLD_BusinessLayer
         {
             DataView ApplyFilter(DataTable data);
         }
-        public DataView FilterByPersonID(DataTable data, string name)
+        public DataView FilterByPersonID(DataTable data, int PersonID)
         {
             DataView view = new DataView(data);
-            view.RowFilter = $"FirstName LIKE '%{name}%'";
+            view.RowFilter = $"PersonID LIKE '%{PersonID}%'";
             return view;
         }
-        public DataView FilterByNationalNo(DataTable data, string name)
+        public DataView FilterByNationalNo(DataTable data, string NationalNo)
         {
             DataView view = new DataView(data);
-            view.RowFilter = $"FirstName LIKE '%{name}%'";
+            view.RowFilter = $"FirstName LIKE '%{NationalNo}%'";
             return view;
         }
-        public DataView FilterByFirstName(DataTable data, string name)
+        public DataView FilterByFirstName(DataTable data, string FirstName)
         {
             DataView view = new DataView(data);
-            view.RowFilter = $"FirstName LIKE '%{name}%'";
+            view.RowFilter = $"FirstName LIKE '%{FirstName}%'";
             return view;
         }
-        public DataView FilterBySecondName(DataTable data, string name)
+        public DataView FilterBySecondName(DataTable data, string SecondName)
         {
             DataView view = new DataView(data);
-            view.RowFilter = $"FirstName LIKE '%{name}%'";
+            view.RowFilter = $"SecondName LIKE '%{SecondName}%'";
             return view;
         }
-        public DataView FilterByThirdName(DataTable data, string name)
+        public DataView FilterByThirdName(DataTable data, string ThirdName)
         {
             DataView view = new DataView(data);
-            view.RowFilter = $"FirstName LIKE '%{name}%'";
+            view.RowFilter = $"ThirdName LIKE '%{ThirdName}%'";
             return view;
         }
-        public DataView FilterByLastName(DataTable data, string name)
+        public DataView FilterByLastName(DataTable data, string LastName)
         {
             DataView view = new DataView(data);
-            view.RowFilter = $"FirstName LIKE '%{name}%'";
+            view.RowFilter = $"LastName LIKE '%{LastName}%'";
             return view;
         }
-        public DataView FilterByPhone(DataTable data, string name)
+        public DataView FilterByPhone(DataTable data, string Phone)
         {
             DataView view = new DataView(data);
-            view.RowFilter = $"FirstName LIKE '%{name}%'";
+            view.RowFilter = $"Phone LIKE '%{Phone}%'";
             return view;
         }
-        public DataView FilterByEmail(DataTable data, string name)
+        public DataView FilterByEmail(DataTable data, string Email)
         {
             DataView view = new DataView(data);
-            view.RowFilter = $"FirstName LIKE '%{name}%'";
+            view.RowFilter = $"Email LIKE '%{Email}%'";
             return view;
         }
-        public DataView FilterByGender(DataTable data, string name)
+        public DataView FilterByGender(DataTable data, string Gender)
         {
             DataView view = new DataView(data);
-            view.RowFilter = $"FirstName LIKE '%{name}%'";
+            view.RowFilter = $"Gender LIKE '%{Gender}%'";
             return view;
         }
         public DataView FilterByCountry(DataTable data, int countryId)

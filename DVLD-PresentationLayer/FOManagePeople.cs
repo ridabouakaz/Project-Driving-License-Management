@@ -16,6 +16,19 @@ namespace DVLD_PresentationLayer
         {
             InitializeComponent();
         }
+        private void dGViewShowInformation_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex == 5)
+            {
+                if (e.Value is int genderValue)
+                {
+                    e.Value = genderValue == 0 ? "Male" : "Female";
+                    e.FormattingApplied = true;
+                }
+
+            }
+        }
+
         private void _RefreshPeopleList()
         {
             dGViewShowInformation.DataSource = clsPerson.GetAllPeople();
@@ -75,5 +88,6 @@ namespace DVLD_PresentationLayer
 
             }
         }
+
     }
 }

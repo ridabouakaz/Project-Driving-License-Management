@@ -78,6 +78,7 @@ namespace DVLD_PresentationLayer
             this.dGViewShowInformation.RowTemplate.Height = 24;
             this.dGViewShowInformation.Size = new System.Drawing.Size(1439, 481);
             this.dGViewShowInformation.TabIndex = 0;
+            this.dGViewShowInformation.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dGViewShowInformation_CellFormatting);
             // 
             // SMItemCRUDpeople
             // 
@@ -284,8 +285,7 @@ namespace DVLD_PresentationLayer
             this.LblTotalRecoreds.Name = "LblTotalRecoreds";
             this.LblTotalRecoreds.Size = new System.Drawing.Size(24, 28);
             this.LblTotalRecoreds.TabIndex = 8;
-            this.LblTotalRecoreds.Text = (clsPerson.GetAllPeople().Rows.Count).ToString();
-
+            this.LblTotalRecoreds.Text = "2";
             // 
             // FOManagePeople
             // 
