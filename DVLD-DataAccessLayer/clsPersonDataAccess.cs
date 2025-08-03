@@ -196,7 +196,7 @@ namespace DVLD_DataAccessLayer
             DataTable dt = new DataTable();
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
-            string query = "SELECT * FROM People";
+            string query = "select PersonID,NationalNo,FirstName, SecondName, ThirdName, LastName,Gender,DateOfBirth,Countries.CountryName as Nationality,Phone,Email from People\r\n INNER JOIN\r\n                         Countries ON People.NationalityCountryID = Countries.CountryID ";
 
             SqlCommand command = new SqlCommand(query, connection);
 

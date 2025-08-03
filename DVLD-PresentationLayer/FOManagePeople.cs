@@ -31,8 +31,10 @@ namespace DVLD_PresentationLayer
 
         private void _RefreshPeopleList()
         {
-            dGViewShowInformation.DataSource = clsPerson.GetAllPeople();
-            this.LblTotalRecoreds.Text = (clsPerson.GetAllPeople().Rows.Count).ToString();
+            DataTable peopleTable = clsPerson.GetAllPeople();
+
+            dGViewShowInformation.DataSource = peopleTable;
+            LblTotalRecoreds.Text = peopleTable.Rows.Count.ToString();
         }
 
         private void FOManagePeople_Load(object sender, EventArgs e)
