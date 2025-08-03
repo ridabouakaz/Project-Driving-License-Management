@@ -16,19 +16,6 @@ namespace DVLD_PresentationLayer
         {
             InitializeComponent();
         }
-        private void dGViewShowInformation_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            if (dGViewShowInformation.Columns[e.ColumnIndex].Name == "Gender")
-            {
-                if (e.Value != null && e.Value != DBNull.Value)
-                {
-                    int genderValue = Convert.ToInt32(e.Value);
-                    e.Value = genderValue == 0 ? "Male" : "Female";
-                    e.FormattingApplied = true;
-                }
-            }
-        }
-
         private void _RefreshPeopleList()
         {
             DataTable peopleTable = clsPerson.GetAllPeople();

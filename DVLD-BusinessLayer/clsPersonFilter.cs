@@ -13,66 +13,136 @@ namespace DVLD_BusinessLayer
         {
             DataView ApplyFilter(DataTable data);
         }
-        public DataView FilterByPersonID(DataTable data, int PersonID)
+        public class PersonIdFilter : IPersonFilter
         {
-            DataView view = new DataView(data);
-            view.RowFilter = $"PersonID LIKE '%{PersonID}%'";
-            return view;
+            private readonly int _personId;
+            public PersonIdFilter(int personId) => _personId = personId;
+
+            public DataView ApplyFilter(DataTable data)
+            {
+                var view = new DataView(data);
+                view.RowFilter = $"Convert(PersonID, 'System.String') LIKE '%{_personId}%'";
+                return view;
+            }
         }
-        public DataView FilterByNationalNo(DataTable data, string NationalNo)
+
+        public class NationalNoFilter : IPersonFilter
         {
-            DataView view = new DataView(data);
-            view.RowFilter = $"FirstName LIKE '%{NationalNo}%'";
-            return view;
+            private readonly string _nationalNo;
+            public NationalNoFilter(string nationalNo) => _nationalNo = nationalNo;
+
+            public DataView ApplyFilter(DataTable data)
+            {
+                var view = new DataView(data);
+                view.RowFilter = $"NationalNo LIKE '%{_nationalNo}%'";
+                return view;
+            }
         }
-        public DataView FilterByFirstName(DataTable data, string FirstName)
+
+        public class FirstNameFilter : IPersonFilter
         {
-            DataView view = new DataView(data);
-            view.RowFilter = $"FirstName LIKE '%{FirstName}%'";
-            return view;
+            private readonly string _firstName;
+            public FirstNameFilter(string firstName) => _firstName = firstName;
+
+            public DataView ApplyFilter(DataTable data)
+            {
+                var view = new DataView(data);
+                view.RowFilter = $"FirstName LIKE '%{_firstName}%'";
+                return view;
+            }
         }
-        public DataView FilterBySecondName(DataTable data, string SecondName)
+
+        public class SecondNameFilter : IPersonFilter
         {
-            DataView view = new DataView(data);
-            view.RowFilter = $"SecondName LIKE '%{SecondName}%'";
-            return view;
+            private readonly string _secondName;
+            public SecondNameFilter(string secondName) => _secondName = secondName;
+
+            public DataView ApplyFilter(DataTable data)
+            {
+                var view = new DataView(data);
+                view.RowFilter = $"SecondName LIKE '%{_secondName}%'";
+                return view;
+            }
         }
-        public DataView FilterByThirdName(DataTable data, string ThirdName)
+
+        public class ThirdNameFilter : IPersonFilter
         {
-            DataView view = new DataView(data);
-            view.RowFilter = $"ThirdName LIKE '%{ThirdName}%'";
-            return view;
+            private readonly string _thirdName;
+            public ThirdNameFilter(string thirdName) => _thirdName = thirdName;
+
+            public DataView ApplyFilter(DataTable data)
+            {
+                var view = new DataView(data);
+                view.RowFilter = $"ThirdName LIKE '%{_thirdName}%'";
+                return view;
+            }
         }
-        public DataView FilterByLastName(DataTable data, string LastName)
+
+        public class LastNameFilter : IPersonFilter
         {
-            DataView view = new DataView(data);
-            view.RowFilter = $"LastName LIKE '%{LastName}%'";
-            return view;
+            private readonly string _lastName;
+            public LastNameFilter(string lastName) => _lastName = lastName;
+
+            public DataView ApplyFilter(DataTable data)
+            {
+                var view = new DataView(data);
+                view.RowFilter = $"LastName LIKE '%{_lastName}%'";
+                return view;
+            }
         }
-        public DataView FilterByPhone(DataTable data, string Phone)
+
+        public class PhoneFilter : IPersonFilter
         {
-            DataView view = new DataView(data);
-            view.RowFilter = $"Phone LIKE '%{Phone}%'";
-            return view;
+            private readonly string _phone;
+            public PhoneFilter(string phone) => _phone = phone;
+
+            public DataView ApplyFilter(DataTable data)
+            {
+                var view = new DataView(data);
+                view.RowFilter = $"Phone LIKE '%{_phone}%'";
+                return view;
+            }
         }
-        public DataView FilterByEmail(DataTable data, string Email)
+
+        public class EmailFilter : IPersonFilter
         {
-            DataView view = new DataView(data);
-            view.RowFilter = $"Email LIKE '%{Email}%'";
-            return view;
+            private readonly string _email;
+            public EmailFilter(string email) => _email = email;
+
+            public DataView ApplyFilter(DataTable data)
+            {
+                var view = new DataView(data);
+                view.RowFilter = $"Email LIKE '%{_email}%'";
+                return view;
+            }
         }
-        public DataView FilterByGender(DataTable data, string Gender)
+
+        public class GenderFilter : IPersonFilter
         {
-            DataView view = new DataView(data);
-            view.RowFilter = $"Gender LIKE '%{Gender}%'";
-            return view;
+            private readonly string _gender;
+            public GenderFilter(string gender) => _gender = gender;
+
+            public DataView ApplyFilter(DataTable data)
+            {
+                var view = new DataView(data);
+                view.RowFilter = $"Gender LIKE '%{_gender}%'";
+                return view;
+            }
         }
-        public DataView FilterByCountry(DataTable data, int countryId)
+
+        public class CountryFilter : IPersonFilter
         {
-            DataView view = new DataView(data);
-            view.RowFilter = $"CountryID = {countryId}";
-            return view;
+            private readonly string _nationality;
+            public CountryFilter(string nationality) => _nationality = nationality;
+
+            public DataView ApplyFilter(DataTable data)
+            {
+                var view = new DataView(data);
+                view.RowFilter = $"Nationality = '{_nationality}'";
+                return view;
+            }
         }
+
 
 
 

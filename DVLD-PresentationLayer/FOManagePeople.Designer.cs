@@ -78,8 +78,7 @@ namespace DVLD_PresentationLayer
             this.dGViewShowInformation.RowTemplate.Height = 24;
             this.dGViewShowInformation.Size = new System.Drawing.Size(1439, 481);
             this.dGViewShowInformation.TabIndex = 0;
-            this.dGViewShowInformation.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dGViewShowInformation_CellFormatting);
-            // 
+                // 
             // SMItemCRUDpeople
             // 
             this.SMItemCRUDpeople.ImageScalingSize = new System.Drawing.Size(20, 20);
