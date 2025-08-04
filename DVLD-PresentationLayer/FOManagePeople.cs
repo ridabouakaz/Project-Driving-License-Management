@@ -14,15 +14,13 @@ namespace DVLD_PresentationLayer
     public partial class FOManagePeople : Form
     {
         private DataTable _peopleTable;
-
         public FOManagePeople()
         {
             InitializeComponent();
         }
-
         private void _RefreshPeopleList()
         {
-            DataTable _peopleTable = clsPerson.GetAllPeople();
+            _peopleTable = clsPerson.GetAllPeople();
             dGViewShowInformation.DataSource = _peopleTable;
             LblTotalRecoreds.Text = _peopleTable.Rows.Count.ToString();
         }
@@ -84,14 +82,10 @@ namespace DVLD_PresentationLayer
         private void CBFilterBy_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            TBsearch.Visible = CBFilterBy.SelectedItem.ToString() != "None";
+            MTBsearch.Visible = CBFilterBy.SelectedItem.ToString() != "None";
             ApplyFilter();
         }
 
-        private void TBsearch_TextChanged(object sender, EventArgs e)
-        {
-            ApplyFilter();
-        }
         private void ApplyFilter()
         {
             if (_peopleTable == null) return;
@@ -101,35 +95,49 @@ namespace DVLD_PresentationLayer
             switch (CBFilterBy.SelectedItem.ToString())
             {
                 case "Person ID":
-                    if (int.TryParse(TBsearch.Text, out int id))
+                    this.MTBsearch.Mask = "000000";
+                    this.MTBsearch.PromptChar = ' ';
+                    if (int.TryParse(MTBsearch.Text, out int id))
                         filter = new PersonIdFilter(id);
                     break;
                 case "National No":
-                    filter = new NationalNoFilter(TBsearch.Text);
+                    this.MTBsearch.Mask = "";
+                    filter = new NationalNoFilter(MTBsearch.Text);
                     break;
                 case "First Name":
-                    filter = new FirstNameFilter(TBsearch.Text);
+                    this.MTBsearch.Mask = "";
+                    filter = new FirstNameFilter(MTBsearch.Text);
                     break;
                 case "Second Name":
-                    filter = new SecondNameFilter(TBsearch.Text);
+                    this.MTBsearch.Mask = "";
+                    filter = new SecondNameFilter(MTBsearch.Text);
                     break;
                 case "Third Name":
-                    filter = new ThirdNameFilter(TBsearch.Text);
+                    this.MTBsearch.Mask = "";
+                    filter = new ThirdNameFilter(MTBsearch.Text);
                     break;
                 case "Last Name":
-                    filter = new LastNameFilter(TBsearch.Text);
+                    this.MTBsearch.Mask = "";
+                    filter = new LastNameFilter(MTBsearch.Text);
                     break;
                 case "Nationality":
-                    filter = new CountryFilter(TBsearch.Text);
+                    this.MTBsearch.Mask = "";
+                    filter = new CountryFilter(MTBsearch.Text);
                     break;
                 case "Gender":
-                    filter = new GenderFilter(TBsearch.Text);
+                    this.MTBsearch.Mask = "";
+                    filter = new GenderFilter(MTBsearch.Text);
                     break;
                 case "Phone":
-                    filter = new PhoneFilter(TBsearch.Text);
+                    this.MTBsearch.Mask = "0000000000";
+                    this.MTBsearch.PromptChar = ' ';
+                    this.MTBsearch.SkipLiterals = true;
+
+                    filter = new PhoneFilter(MTBsearch.Text);
                     break;
                 case "Email":
-                    filter = new EmailFilter(TBsearch.Text);
+                    this.MTBsearch.Mask = "";
+                    filter = new EmailFilter(MTBsearch.Text);
                     break;
             }
 
@@ -139,6 +147,11 @@ namespace DVLD_PresentationLayer
 
             dGViewShowInformation.DataSource = view;
             LblTotalRecoreds.Text = view.Count.ToString();
+        }
+        private void MTBsearch_TextChanged(object sender, EventArgs e)
+        {
+            ApplyFilter();
+
         }
     }
 }

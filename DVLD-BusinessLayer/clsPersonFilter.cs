@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static DVLDShared.DVLDShared;
 
 namespace DVLD_BusinessLayer
 {
@@ -138,7 +139,7 @@ namespace DVLD_BusinessLayer
             public DataView ApplyFilter(DataTable data)
             {
                 var view = new DataView(data);
-                view.RowFilter = $"Nationality = '{_nationality}'";
+                view.RowFilter = $"Nationality LIKE '%{_nationality}%'";
                 return view;
             }
         }

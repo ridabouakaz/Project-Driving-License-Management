@@ -34,7 +34,6 @@ namespace DVLD_PresentationLayer
         /// </summary>
         private void InitializeComponent()
         {
-            
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FOManagePeople));
             this.dGViewShowInformation = new System.Windows.Forms.DataGridView();
@@ -55,7 +54,7 @@ namespace DVLD_PresentationLayer
             this.BtnAddClose = new System.Windows.Forms.Button();
             this.CBFilterBy = new System.Windows.Forms.ComboBox();
             this.LblTotalRecoreds = new System.Windows.Forms.Label();
-            this.TBsearch = new System.Windows.Forms.TextBox();
+            this.MTBsearch = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dGViewShowInformation)).BeginInit();
             this.SMItemCRUDpeople.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBManagePeople)).BeginInit();
@@ -79,7 +78,7 @@ namespace DVLD_PresentationLayer
             this.dGViewShowInformation.RowHeadersWidth = 51;
             this.dGViewShowInformation.RowTemplate.Height = 24;
             this.dGViewShowInformation.Size = new System.Drawing.Size(1439, 481);
-            this.dGViewShowInformation.TabIndex = 0;
+            this.dGViewShowInformation.TabIndex = 3;
             // 
             // SMItemCRUDpeople
             // 
@@ -190,7 +189,7 @@ namespace DVLD_PresentationLayer
             this.BtnAddPerson.Location = new System.Drawing.Point(1396, 228);
             this.BtnAddPerson.Name = "BtnAddPerson";
             this.BtnAddPerson.Size = new System.Drawing.Size(90, 45);
-            this.BtnAddPerson.TabIndex = 3;
+            this.BtnAddPerson.TabIndex = 2;
             this.BtnAddPerson.UseVisualStyleBackColor = false;
             this.BtnAddPerson.Click += new System.EventHandler(this.BtnAddPerson_Click);
             // 
@@ -245,7 +244,7 @@ namespace DVLD_PresentationLayer
             this.BtnAddClose.Name = "BtnAddClose";
             this.BtnAddClose.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.BtnAddClose.Size = new System.Drawing.Size(155, 50);
-            this.BtnAddClose.TabIndex = 6;
+            this.BtnAddClose.TabIndex = 4;
             this.BtnAddClose.Text = "Close";
             this.BtnAddClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnAddClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -274,7 +273,7 @@ namespace DVLD_PresentationLayer
             this.CBFilterBy.Location = new System.Drawing.Point(145, 245);
             this.CBFilterBy.Name = "CBFilterBy";
             this.CBFilterBy.Size = new System.Drawing.Size(208, 31);
-            this.CBFilterBy.TabIndex = 7;
+            this.CBFilterBy.TabIndex = 0;
             this.CBFilterBy.SelectedIndexChanged += new System.EventHandler(this.CBFilterBy_SelectedIndexChanged);
             // 
             // LblTotalRecoreds
@@ -289,24 +288,24 @@ namespace DVLD_PresentationLayer
             this.LblTotalRecoreds.TabIndex = 8;
             this.LblTotalRecoreds.Text = "2";
             // 
-            // TBsearch
+            // MTBsearch
             // 
-            this.TBsearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(243)))), ((int)(((byte)(247)))));
-            this.TBsearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TBsearch.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.TBsearch.ForeColor = System.Drawing.Color.Black;
-            this.TBsearch.Location = new System.Drawing.Point(371, 245);
-            this.TBsearch.Name = "TBsearch";
-            this.TBsearch.Size = new System.Drawing.Size(184, 30);
-            this.TBsearch.TabIndex = 17;
-            this.TBsearch.TextChanged += new System.EventHandler(this.TBsearch_TextChanged);
+            this.MTBsearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(243)))), ((int)(((byte)(247)))));
+            this.MTBsearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MTBsearch.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.MTBsearch.ForeColor = System.Drawing.Color.Black;
+            this.MTBsearch.Location = new System.Drawing.Point(371, 245);
+            this.MTBsearch.Name = "MTBsearch";
+            this.MTBsearch.Size = new System.Drawing.Size(184, 30);
+            this.MTBsearch.TabIndex = 1;
+            this.MTBsearch.TextChanged += new System.EventHandler(this.MTBsearch_TextChanged);
             // 
             // FOManagePeople
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1533, 932);
-            this.Controls.Add(this.TBsearch);
+            this.Controls.Add(this.MTBsearch);
             this.Controls.Add(this.LblTotalRecoreds);
             this.Controls.Add(this.CBFilterBy);
             this.Controls.Add(this.BtnAddClose);
@@ -349,6 +348,6 @@ namespace DVLD_PresentationLayer
         private ToolStripMenuItem SMItemCallPerson;
         private ComboBox CBFilterBy;
         private Label LblTotalRecoreds;
-        private TextBox TBsearch;
+        private MaskedTextBox MTBsearch;
     }
 }
