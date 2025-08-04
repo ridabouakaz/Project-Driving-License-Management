@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DVLD_BusinessLayer;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 using static DVLD_BusinessLayer.clsCountry;
 namespace DVLD_PresentationLayer
 {
@@ -179,7 +180,13 @@ namespace DVLD_PresentationLayer
         private void CtrDetailsPerson1_SaveButtonClick(object sender, EventArgs e)
         {
             int countryID = clsCountry.Find(ctrDetailsPerson_Edit_Add_1.CountryComboBox.Text).ID;
+            if (ctrDetailsPerson_Edit_Add_1.FirstName=="" || ctrDetailsPerson_Edit_Add_1.SecondName == "" || ctrDetailsPerson_Edit_Add_1.ThirdName == "" || ctrDetailsPerson_Edit_Add_1.LastName == ""
+                || ctrDetailsPerson_Edit_Add_1.NationalNo == "")
+            {
 
+                MessageBox.Show("❌ Error: Please fill in all required fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return ;
+            }
             _Person.FirstName = ctrDetailsPerson_Edit_Add_1.FirstName;
             _Person.SecondName = ctrDetailsPerson_Edit_Add_1.SecondName;
             _Person.ThirdName = ctrDetailsPerson_Edit_Add_1.ThirdName;

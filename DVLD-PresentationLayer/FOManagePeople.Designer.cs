@@ -34,6 +34,7 @@ namespace DVLD_PresentationLayer
         /// </summary>
         private void InitializeComponent()
         {
+            
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FOManagePeople));
             this.dGViewShowInformation = new System.Windows.Forms.DataGridView();
@@ -54,6 +55,7 @@ namespace DVLD_PresentationLayer
             this.BtnAddClose = new System.Windows.Forms.Button();
             this.CBFilterBy = new System.Windows.Forms.ComboBox();
             this.LblTotalRecoreds = new System.Windows.Forms.Label();
+            this.TBsearch = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dGViewShowInformation)).BeginInit();
             this.SMItemCRUDpeople.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBManagePeople)).BeginInit();
@@ -78,7 +80,7 @@ namespace DVLD_PresentationLayer
             this.dGViewShowInformation.RowTemplate.Height = 24;
             this.dGViewShowInformation.Size = new System.Drawing.Size(1439, 481);
             this.dGViewShowInformation.TabIndex = 0;
-                // 
+            // 
             // SMItemCRUDpeople
             // 
             this.SMItemCRUDpeople.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -273,6 +275,7 @@ namespace DVLD_PresentationLayer
             this.CBFilterBy.Name = "CBFilterBy";
             this.CBFilterBy.Size = new System.Drawing.Size(208, 31);
             this.CBFilterBy.TabIndex = 7;
+            this.CBFilterBy.SelectedIndexChanged += new System.EventHandler(this.CBFilterBy_SelectedIndexChanged);
             // 
             // LblTotalRecoreds
             // 
@@ -286,11 +289,24 @@ namespace DVLD_PresentationLayer
             this.LblTotalRecoreds.TabIndex = 8;
             this.LblTotalRecoreds.Text = "2";
             // 
+            // TBsearch
+            // 
+            this.TBsearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(243)))), ((int)(((byte)(247)))));
+            this.TBsearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TBsearch.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.TBsearch.ForeColor = System.Drawing.Color.Black;
+            this.TBsearch.Location = new System.Drawing.Point(371, 245);
+            this.TBsearch.Name = "TBsearch";
+            this.TBsearch.Size = new System.Drawing.Size(184, 30);
+            this.TBsearch.TabIndex = 17;
+            this.TBsearch.TextChanged += new System.EventHandler(this.TBsearch_TextChanged);
+            // 
             // FOManagePeople
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1533, 932);
+            this.Controls.Add(this.TBsearch);
             this.Controls.Add(this.LblTotalRecoreds);
             this.Controls.Add(this.CBFilterBy);
             this.Controls.Add(this.BtnAddClose);
@@ -333,5 +349,6 @@ namespace DVLD_PresentationLayer
         private ToolStripMenuItem SMItemCallPerson;
         private ComboBox CBFilterBy;
         private Label LblTotalRecoreds;
+        private TextBox TBsearch;
     }
 }
