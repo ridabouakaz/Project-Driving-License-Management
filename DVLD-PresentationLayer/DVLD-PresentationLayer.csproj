@@ -85,6 +85,9 @@
     <EmbeddedResource Include="CtrDetailsPerson%28Edit-Add%29.resx">
       <DependentUpon>CtrDetailsPerson%28Edit-Add%29.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CtrDetailsPerson.resx">
+      <DependentUpon>CtrDetailsPerson.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FOAddEditPersonInfo.resx">
       <DependentUpon>FOAddEditPersonInfo.cs</DependentUpon>
     </EmbeddedResource>
