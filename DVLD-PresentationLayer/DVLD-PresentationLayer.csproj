@@ -55,6 +55,12 @@
     <Compile Include="CtrDetailsPerson%28Edit-Add%29.Designer.cs">
       <DependentUpon>CtrDetailsPerson%28Edit-Add%29.cs</DependentUpon>
     </Compile>
+    <Compile Include="CtrDetailsPerson.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrDetailsPerson.Designer.cs">
+      <DependentUpon>CtrDetailsPerson.cs</DependentUpon>
+    </Compile>
     <Compile Include="FOAddEditPersonInfo.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -79,6 +79,9 @@ namespace DVLD_PresentationLayer
             this.dGViewShowInformation.RowTemplate.Height = 24;
             this.dGViewShowInformation.Size = new System.Drawing.Size(1439, 481);
             this.dGViewShowInformation.TabIndex = 3;
+            this.dGViewShowInformation.DefaultCellStyle.Font = new Font("Verdana", 11);
+            this.dGViewShowInformation.ColumnHeadersDefaultCellStyle.Font = new Font("Calibri", 13, FontStyle.Bold);
+
             // 
             // SMItemCRUDpeople
             // 
@@ -169,7 +172,7 @@ namespace DVLD_PresentationLayer
             this.LblManagePeople.BackColor = System.Drawing.Color.Transparent;
             this.LblManagePeople.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold);
             this.LblManagePeople.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
-            this.LblManagePeople.Location = new System.Drawing.Point(580, 143);
+            this.LblManagePeople.Location = new System.Drawing.Point(620, 159);
             this.LblManagePeople.Name = "LblManagePeople";
             this.LblManagePeople.Size = new System.Drawing.Size(315, 54);
             this.LblManagePeople.TabIndex = 1;
@@ -198,7 +201,7 @@ namespace DVLD_PresentationLayer
             this.PBManagePeople.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.PBManagePeople.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.PBManagePeople.Image = ((System.Drawing.Image)(resources.GetObject("PBManagePeople.Image")));
-            this.PBManagePeople.Location = new System.Drawing.Point(670, 15);
+            this.PBManagePeople.Location = new System.Drawing.Point(710, 31);
             this.PBManagePeople.Name = "PBManagePeople";
             this.PBManagePeople.Size = new System.Drawing.Size(137, 125);
             this.PBManagePeople.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -329,7 +332,7 @@ namespace DVLD_PresentationLayer
         }
 
         #endregion
-        
+
         private System.Windows.Forms.DataGridView dGViewShowInformation;
         private System.Windows.Forms.Label LblManagePeople;
         private Button BtnAddPerson;

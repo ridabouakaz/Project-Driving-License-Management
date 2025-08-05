@@ -17,6 +17,9 @@ namespace DVLD_PresentationLayer
         public FOManagePeople()
         {
             InitializeComponent();
+          
+            this.Size = new Size(1400, 750);
+
         }
         private void _RefreshPeopleList()
         {
@@ -29,6 +32,7 @@ namespace DVLD_PresentationLayer
         {
             CBFilterBy.SelectedIndex = 0;
             _RefreshPeopleList();
+
 
         }
 
