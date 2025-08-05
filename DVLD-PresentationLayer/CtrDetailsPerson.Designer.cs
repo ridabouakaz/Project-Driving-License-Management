@@ -33,6 +33,8 @@ namespace DVLD_PresentationLayer
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CtrDetailsPerson));
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.OFDialogPictureImage = new System.Windows.Forms.OpenFileDialog();
             this.LblName = new System.Windows.Forms.Label();
             this.LblNationalNo = new System.Windows.Forms.Label();
             this.LblGender = new System.Windows.Forms.Label();
@@ -50,8 +52,6 @@ namespace DVLD_PresentationLayer
             this.PBCountry = new System.Windows.Forms.PictureBox();
             this.PBImagePerson = new System.Windows.Forms.PictureBox();
             this.LLEditPersonInfo = new System.Windows.Forms.LinkLabel();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.OFDialogPictureImage = new System.Windows.Forms.OpenFileDialog();
             this.LblPersonID = new System.Windows.Forms.Label();
             this.PBGender = new System.Windows.Forms.PictureBox();
             this.LblTypeGender = new System.Windows.Forms.Label();
@@ -64,6 +64,7 @@ namespace DVLD_PresentationLayer
             this.LblvalueCountry = new System.Windows.Forms.Label();
             this.LblValuePersonID = new System.Windows.Forms.Label();
             this.GBUserControlDetailesPerson = new System.Windows.Forms.GroupBox();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBNationalNo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBEmail)).BeginInit();
@@ -72,10 +73,17 @@ namespace DVLD_PresentationLayer
             ((System.ComponentModel.ISupportInitialize)(this.PBPhone)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBCountry)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBImagePerson)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBGender)).BeginInit();
             this.GBUserControlDetailesPerson.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // OFDialogPictureImage
+            // 
+            this.OFDialogPictureImage.FileName = "OFDialogPictureImage";
             // 
             // LblName
             // 
@@ -259,14 +267,6 @@ namespace DVLD_PresentationLayer
             this.LLEditPersonInfo.TabStop = true;
             this.LLEditPersonInfo.Text = "Edit Person Info";
             // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // OFDialogPictureImage
-            // 
-            this.OFDialogPictureImage.FileName = "OFDialogPictureImage";
-            // 
             // LblPersonID
             // 
             this.LblPersonID.AutoSize = true;
@@ -429,7 +429,7 @@ namespace DVLD_PresentationLayer
             this.GBUserControlDetailesPerson.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.GBUserControlDetailesPerson.Location = new System.Drawing.Point(3, 3);
             this.GBUserControlDetailesPerson.Name = "GBUserControlDetailesPerson";
-            this.GBUserControlDetailesPerson.Size = new System.Drawing.Size(1101, 447);
+            this.GBUserControlDetailesPerson.Size = new System.Drawing.Size(1081, 408);
             this.GBUserControlDetailesPerson.TabIndex = 47;
             this.GBUserControlDetailesPerson.TabStop = false;
             this.GBUserControlDetailesPerson.Text = "Person Information";
@@ -438,11 +438,11 @@ namespace DVLD_PresentationLayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(240)))), ((int)(((byte)(250)))));
-            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(235)))), ((int)(((byte)(245)))));
             this.Controls.Add(this.GBUserControlDetailesPerson);
             this.Name = "CtrDetailsPerson";
-            this.Size = new System.Drawing.Size(1107, 449);
+            this.Size = new System.Drawing.Size(1114, 449);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBNationalNo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBEmail)).EndInit();
@@ -451,7 +451,6 @@ namespace DVLD_PresentationLayer
             ((System.ComponentModel.ISupportInitialize)(this.PBPhone)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBCountry)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBImagePerson)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBGender)).EndInit();
             this.GBUserControlDetailesPerson.ResumeLayout(false);
             this.GBUserControlDetailesPerson.PerformLayout();
@@ -460,37 +459,36 @@ namespace DVLD_PresentationLayer
         }
 
         #endregion
-
-        private System.Windows.Forms.Label LblName;
-        private System.Windows.Forms.Label LblNationalNo;
-        private System.Windows.Forms.Label LblGender;
-        private System.Windows.Forms.Label LblEmail;
-        private System.Windows.Forms.Label LblAddress;
-        private System.Windows.Forms.PictureBox PBName;
-        private PictureBox PBNationalNo;
-        private PictureBox PBEmail;
-        private PictureBox PBAddress;
-        private Label LblDateOfBirth;
-        private Label LblPhone;
-        private Label LblCountry;
-        private PictureBox PBDateOfBrith;
-        private PictureBox PBPhone;
-        private PictureBox PBCountry;
-        private PictureBox PBImagePerson;
-        private LinkLabel LLEditPersonInfo;
         private ErrorProvider errorProvider1;
         private OpenFileDialog OFDialogPictureImage;
-        private Label LblPersonID;
-        private PictureBox PBGender;
-        private Label LblTypeGender;
-        private Label LblFullName;
-        private Label LblNumberNationalNo;
-        private Label LblvalueEmail;
-        private Label LblvalueAddress;
-        private Label LblvalueDateOfBrith;
-        private Label LblvaluePhone;
-        private Label LblvalueCountry;
-        private Label LblValuePersonID;
         private GroupBox GBUserControlDetailesPerson;
+        private Label LblValuePersonID;
+        private Label LblvalueCountry;
+        private Label LblvaluePhone;
+        private Label LblvalueDateOfBrith;
+        private Label LblvalueAddress;
+        private Label LblvalueEmail;
+        private Label LblNumberNationalNo;
+        private Label LblFullName;
+        private Label LblTypeGender;
+        private PictureBox PBGender;
+        private Label LblPersonID;
+        private LinkLabel LLEditPersonInfo;
+        private PictureBox PBImagePerson;
+        private PictureBox PBCountry;
+        private PictureBox PBPhone;
+        private PictureBox PBDateOfBrith;
+        private Label LblCountry;
+        private Label LblPhone;
+        private Label LblDateOfBirth;
+        private PictureBox PBAddress;
+        private PictureBox PBEmail;
+        private PictureBox PBNationalNo;
+        private PictureBox PBName;
+        private Label LblAddress;
+        private Label LblEmail;
+        private Label LblGender;
+        private Label LblNationalNo;
+        private Label LblName;
     }
 }

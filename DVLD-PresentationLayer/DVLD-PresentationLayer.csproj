@@ -73,6 +73,12 @@
     <Compile Include="FOManagePeople.Designer.cs">
       <DependentUpon>FOManagePeople.cs</DependentUpon>
     </Compile>
+    <Compile Include="FOPersonInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FOPersonInfo.Designer.cs">
+      <DependentUpon>FOPersonInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FromMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FOManagePeople.resx">
       <DependentUpon>FOManagePeople.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOPersonInfo.resx">
+      <DependentUpon>FOPersonInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FromMain.resx">
       <DependentUpon>FromMain.cs</DependentUpon>
