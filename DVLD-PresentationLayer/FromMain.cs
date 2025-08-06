@@ -16,12 +16,12 @@ namespace DVLD_PresentationLayer
         {
             InitializeComponent();
         }
-
-        private void FOmain_Load(object sender, EventArgs e)
+        private void SMItempeople_Click(object sender, EventArgs e)
         {
-            MSMain.Renderer = new MyRenderer();
+            FOAddEditPersonInfo frm = new FOAddEditPersonInfo(-1);
 
         }
 
+ 
     }
 }

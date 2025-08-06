@@ -72,8 +72,7 @@ namespace DVLD_PresentationLayer
 
 
             ctrDetailsPerson_Edit_Add_1.SelectedGender = _Person.PersonGender;
-            //this will select the country in the combobox.
-            ctrDetailsPerson_Edit_Add_1.CountryComboBox.SelectedIndex = ctrDetailsPerson_Edit_Add_1.CountryComboBox.FindString(clsCountry.Find(_Person.CountryID).CountryName);
+      
         }
         private void FOAddEditPersonInfo_Load(object sender, EventArgs e)
         {

@@ -48,7 +48,12 @@ namespace DVLD_PresentationLayer
         {
             this.Close();
         }
-
+        private void SMItemViewDetails_Click(object sender, EventArgs e)
+        {
+            FOPersonInfo frm = new FOPersonInfo((int)dGViewShowInformation.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+            _RefreshPeopleList();
+        }
         private void SMItemEditPerson_Click(object sender, EventArgs e)
         {
             FOAddEditPersonInfo frm = new FOAddEditPersonInfo((int)dGViewShowInformation.CurrentRow.Cells[0].Value);
@@ -157,5 +162,7 @@ namespace DVLD_PresentationLayer
             ApplyFilter();
 
         }
+
+      
     }
 }

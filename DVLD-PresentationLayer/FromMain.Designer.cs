@@ -210,6 +210,7 @@ namespace DVLD_PresentationLayer
             this.SMItempeople.Name = "SMItempeople";
             this.SMItempeople.Size = new System.Drawing.Size(181, 68);
             this.SMItempeople.Text = "people";
+            this.SMItempeople.Click += new System.EventHandler(this.SMItempeople_Click);
             // 
             // SMItemdrivers
             // 
@@ -265,7 +266,6 @@ namespace DVLD_PresentationLayer
             this.Controls.Add(this.MSMain);
             this.Name = "FOmain";
             this.Text = "Main";
-            this.Load += new System.EventHandler(this.FOmain_Load);
             this.MSMain.ResumeLayout(false);
             this.MSMain.PerformLayout();
             this.ResumeLayout(false);

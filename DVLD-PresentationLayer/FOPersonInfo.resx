@@ -120,4 +120,17 @@
   <metadata name="errorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="BtnAddSave.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAE0SURBVFhH7ZdB
+        bsJADEVZ9Qq0iJ6ngolAQjhKdzSOOAIcAbgQHKBiR5eVeoCmd2BFNVIwreOZeIQEWYylv4mf7Rc2KJ1O
+        GwoAHoYpbgzgjwE8STmz/DlPnSs+Rq9Fl45JZaa45ot4iBV6Cu7TK+F784bFtbi4BPDrZTJ/oqN/i8NS
+        tKyPc0pwUIqWbeJECQ5J0bIaribBASlaVssZwMO9BYhVwYNJ0aeBhhpnb898XgoN8IaUBHCrkaiO7/i8
+        FBrijVslCkSBKNB6gWMyxcUoy3sEBpadNSku7S5hf4NAist/266oSqJ24wIIzfPfpYF8z3sBebc7hjB7
+        FHp+AV8vJL49USAKtEqgdDX589C49xTfFwHh08w9GBbXngTyFQnYj9NKgn4J12BohD2lvWVvksA96xep
+        n+kLP6bVHQAAAABJRU5ErkJggg==
+</value>
+  </data>
 </root>
