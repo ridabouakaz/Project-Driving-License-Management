@@ -266,6 +266,7 @@ namespace DVLD_PresentationLayer
             this.Controls.Add(this.MSMain);
             this.Name = "FOmain";
             this.Text = "Main";
+            this.Load += new System.EventHandler(this.FOmain_Load);
             this.MSMain.ResumeLayout(false);
             this.MSMain.PerformLayout();
             this.ResumeLayout(false);

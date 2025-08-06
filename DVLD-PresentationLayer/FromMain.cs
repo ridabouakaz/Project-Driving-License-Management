@@ -18,10 +18,13 @@ namespace DVLD_PresentationLayer
         }
         private void SMItempeople_Click(object sender, EventArgs e)
         {
-            FOAddEditPersonInfo frm = new FOAddEditPersonInfo(-1);
-
+            FOManagePeople frm = new FOManagePeople();
+            frm.ShowDialog();
         }
 
- 
+        private void FOmain_Load(object sender, EventArgs e)
+        {
+            MSMain.Renderer = new MyRenderer();
+        }
     }
 }

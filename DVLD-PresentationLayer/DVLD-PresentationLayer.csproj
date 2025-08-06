@@ -85,6 +85,7 @@
     <Compile Include="FromMain.Designer.cs">
       <DependentUpon>FromMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyRenderer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CtrDetailsPerson%28Edit-Add%29.resx">
