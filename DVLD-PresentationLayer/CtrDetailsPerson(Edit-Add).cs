@@ -107,7 +107,7 @@ namespace DVLD_PresentationLayer
 
         private void _defaultCBCountry()
         {
-            CBCountry.SelectedIndex = 2;
+            CBCountry.SelectedIndex = CBCountry.FindString("Algeria");
             CBCountry.DropDownHeight = CBCountry.ItemHeight * 5;
         }
         private void _FillCountriesInComoboBox()

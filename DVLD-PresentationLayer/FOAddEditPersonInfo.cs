@@ -72,7 +72,7 @@ namespace DVLD_PresentationLayer
 
 
             ctrDetailsPerson_Edit_Add_1.SelectedGender = _Person.PersonGender;
-      
+
         }
         private void FOAddEditPersonInfo_Load(object sender, EventArgs e)
         {
@@ -87,65 +87,37 @@ namespace DVLD_PresentationLayer
             ctrDetailsPerson_Edit_Add_1.CloseButtonClick += CtrDetailsPerson1_CloseButtonClick;
             _LoadData();
         }
-        private void CtrDetailsPerson1_FirstName_Validating(object sender, CancelEventArgs e)
+        private void ValidateRequiredField(string value, TextBox textBox, CancelEventArgs e)
         {
-            string FirstName = ctrDetailsPerson_Edit_Add_1.FirstName.Trim();
-
-            if (string.IsNullOrWhiteSpace(FirstName))
+            if (string.IsNullOrWhiteSpace(value))
             {
-                e.Cancel = true; // يمنع مغادرة الـ TextBox
-                errorProvider1.SetError(ctrDetailsPerson_Edit_Add_1.FirstNameTextBox, "Please enter a value");
+                e.Cancel = true;
+                errorProvider1.SetError(textBox, "Please enter a value");
             }
             else
             {
                 e.Cancel = false;
-                errorProvider1.SetError(ctrDetailsPerson_Edit_Add_1.FirstNameTextBox, "");
+                errorProvider1.SetError(textBox, "");
             }
+        }
+        private void CtrDetailsPerson1_FirstName_Validating(object sender, CancelEventArgs e)
+        {
+            ValidateRequiredField(ctrDetailsPerson_Edit_Add_1.FirstName, ctrDetailsPerson_Edit_Add_1.FirstNameTextBox, e);
         }
         private void CtrDetailsPerson1_SecondName_Validating(object sender, CancelEventArgs e)
         {
-            string SecondName = ctrDetailsPerson_Edit_Add_1.SecondName.Trim();
+            ValidateRequiredField(ctrDetailsPerson_Edit_Add_1.SecondName, ctrDetailsPerson_Edit_Add_1.SecondNameTextBox, e);
 
-            if (string.IsNullOrWhiteSpace(SecondName))
-            {
-                e.Cancel = true; // يمنع مغادرة الـ TextBox
-                errorProvider1.SetError(ctrDetailsPerson_Edit_Add_1.SecondNameTextBox, "Please enter a value");
-            }
-            else
-            {
-                e.Cancel = false;
-                errorProvider1.SetError(ctrDetailsPerson_Edit_Add_1.SecondNameTextBox, "");
-            }
         }
         private void CtrDetailsPerson1_ThirdName_Validating(object sender, CancelEventArgs e)
         {
-            string ThirdName = ctrDetailsPerson_Edit_Add_1.ThirdName.Trim();
+            ValidateRequiredField(ctrDetailsPerson_Edit_Add_1.ThirdName, ctrDetailsPerson_Edit_Add_1.ThirdNameTextBox, e);
 
-            if (string.IsNullOrWhiteSpace(ThirdName))
-            {
-                e.Cancel = true; // يمنع مغادرة الـ TextBox
-                errorProvider1.SetError(ctrDetailsPerson_Edit_Add_1.ThirdNameTextBox, "Please enter a value");
-            }
-            else
-            {
-                e.Cancel = false;
-                errorProvider1.SetError(ctrDetailsPerson_Edit_Add_1.ThirdNameTextBox, "");
-            }
         }
         private void CtrDetailsPerson1_LastName_Validating(object sender, CancelEventArgs e)
         {
-            string LastName = ctrDetailsPerson_Edit_Add_1.LastName.Trim();
+            ValidateRequiredField(ctrDetailsPerson_Edit_Add_1.LastName, ctrDetailsPerson_Edit_Add_1.LastNameTextBox, e);
 
-            if (string.IsNullOrWhiteSpace(LastName))
-            {
-                e.Cancel = true; // يمنع مغادرة الـ TextBox
-                errorProvider1.SetError(ctrDetailsPerson_Edit_Add_1.LastNameTextBox, "Please enter a value");
-            }
-            else
-            {
-                e.Cancel = false;
-                errorProvider1.SetError(ctrDetailsPerson_Edit_Add_1.LastNameTextBox, "");
-            }
         }
         private void CtrDetailsPerson1_Email_Validating(object sender, CancelEventArgs e)
         {
@@ -179,6 +151,13 @@ namespace DVLD_PresentationLayer
         }
         private void CtrDetailsPerson1_SaveButtonClick(object sender, EventArgs e)
         {
+
+            if (!this.ValidateChildren())
+            {
+                MessageBox.Show("❌ Please correct the errors before saving.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             int countryID = clsCountry.Find(ctrDetailsPerson_Edit_Add_1.CountryComboBox.Text).ID;
             if (ctrDetailsPerson_Edit_Add_1.FirstName=="" || ctrDetailsPerson_Edit_Add_1.SecondName == "" || ctrDetailsPerson_Edit_Add_1.ThirdName == "" || ctrDetailsPerson_Edit_Add_1.LastName == ""
                 || ctrDetailsPerson_Edit_Add_1.NationalNo == "")
@@ -187,14 +166,14 @@ namespace DVLD_PresentationLayer
                 MessageBox.Show("❌ Error: Please fill in all required fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return ;
             }
-            _Person.FirstName = ctrDetailsPerson_Edit_Add_1.FirstName;
-            _Person.SecondName = ctrDetailsPerson_Edit_Add_1.SecondName;
-            _Person.ThirdName = ctrDetailsPerson_Edit_Add_1.ThirdName;
-            _Person.LastName = ctrDetailsPerson_Edit_Add_1.LastName;
-            _Person.NationalNo = ctrDetailsPerson_Edit_Add_1.NationalNo;
-            _Person.Email = ctrDetailsPerson_Edit_Add_1.Email;
-            _Person.Phone = ctrDetailsPerson_Edit_Add_1.Phone;
-            _Person.Address = ctrDetailsPerson_Edit_Add_1.Address;
+            _Person.FirstName = ctrDetailsPerson_Edit_Add_1.FirstName.Trim();
+            _Person.SecondName = ctrDetailsPerson_Edit_Add_1.SecondName.Trim();
+            _Person.ThirdName = ctrDetailsPerson_Edit_Add_1.ThirdName.Trim();
+            _Person.LastName = ctrDetailsPerson_Edit_Add_1.LastName.Trim();
+            _Person.NationalNo = ctrDetailsPerson_Edit_Add_1.NationalNo.Trim();
+            _Person.Email = ctrDetailsPerson_Edit_Add_1.Email.Trim();
+            _Person.Phone = ctrDetailsPerson_Edit_Add_1.Phone.Trim();
+            _Person.Address = ctrDetailsPerson_Edit_Add_1.Address.Trim();
             _Person.DateOfBirth = ctrDetailsPerson_Edit_Add_1.BirthDate;
             _Person.CountryID = countryID;
 

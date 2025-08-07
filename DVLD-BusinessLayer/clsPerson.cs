@@ -27,6 +27,7 @@ namespace DVLD_BusinessLayer
         public DateTime DateOfBirth { set; get; }
         public string ImagePath { set; get; }
         public int CountryID { set; get; }
+        public clsCountry Country;
         public Gender PersonGender { get; set; }
         public clsPerson()
 
