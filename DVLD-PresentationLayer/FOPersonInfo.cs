@@ -66,8 +66,6 @@ namespace DVLD_PresentationLayer
 
             if (ctrDetailsPerson1.ImagePath != null)
                 _Person.ImagePath = ctrDetailsPerson1.ImagePath;
-            else
-                _Person.ImagePath = "";
 
             if (_Person.Save())
             {

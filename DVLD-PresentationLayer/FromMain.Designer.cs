@@ -74,7 +74,7 @@ namespace DVLD_PresentationLayer
             this.MSMain.Location = new System.Drawing.Point(0, 0);
             this.MSMain.Name = "MSMain";
             this.MSMain.Padding = new System.Windows.Forms.Padding(10, 20, 10, 20);
-            this.MSMain.Size = new System.Drawing.Size(1448, 108);
+            this.MSMain.Size = new System.Drawing.Size(1700, 108);
             this.MSMain.TabIndex = 0;
             this.MSMain.Text = "MSMain";
             // 
@@ -262,9 +262,11 @@ namespace DVLD_PresentationLayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1448, 499);
+            this.ClientSize = new System.Drawing.Size(1700, 700);
             this.Controls.Add(this.MSMain);
             this.Name = "FOmain";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
             this.Load += new System.EventHandler(this.FOmain_Load);
             this.MSMain.ResumeLayout(false);

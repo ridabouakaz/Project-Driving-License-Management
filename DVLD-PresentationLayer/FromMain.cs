@@ -15,13 +15,13 @@ namespace DVLD_PresentationLayer
         public FOmain()
         {
             InitializeComponent();
+            this.Size = new System.Drawing.Size(1500, 800);
         }
         private void SMItempeople_Click(object sender, EventArgs e)
         {
             FOManagePeople frm = new FOManagePeople();
             frm.ShowDialog();
         }
-
         private void FOmain_Load(object sender, EventArgs e)
         {
             MSMain.Renderer = new MyRenderer();
