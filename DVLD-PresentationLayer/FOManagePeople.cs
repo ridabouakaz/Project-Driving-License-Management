@@ -38,7 +38,7 @@ namespace DVLD_PresentationLayer
 
         private void BtnAddPerson_Click(object sender, EventArgs e)
         {
-            FOAddEditPersonInfo frm = new FOAddEditPersonInfo(-1);
+            FOAddEditPersonInfo frm = new FOAddEditPersonInfo();
             frm.ShowDialog();
             _RefreshPeopleList();
             

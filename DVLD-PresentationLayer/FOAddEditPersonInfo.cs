@@ -27,22 +27,22 @@ namespace DVLD_PresentationLayer
         {
             InitializeComponent();
             _PersonID = PersonID;
-            if (_PersonID == -1)
-                _Mode = enMode.AddNew;
-            else
-                _Mode = enMode.Update;
+            _Mode = enMode.Update;
+            _LoadData();
 
+        }
+        public FOAddEditPersonInfo()
+        {
+            InitializeComponent();
+            _Mode = enMode.AddNew;
+            LblAddEditPerson.Text = "Add New person";
+            _Person = new clsPerson();
+            return;
         }
         private void _LoadData()
         {
 
-            if (_Mode == enMode.AddNew)
-            {
-                LblAddEditPerson.Text = "Add New person";
-                _Person = new clsPerson();
-                return;
-            }
-
+      
             _Person = clsPerson.Find(_PersonID);
 
             if (_PersonID == null)
@@ -85,7 +85,6 @@ namespace DVLD_PresentationLayer
             ctrDetailsPerson_Edit_Add_1.EmailValidating += CtrDetailsPerson1_Email_Validating;
             ctrDetailsPerson_Edit_Add_1.SaveButtonClick += CtrDetailsPerson1_SaveButtonClick;
             ctrDetailsPerson_Edit_Add_1.CloseButtonClick += CtrDetailsPerson1_CloseButtonClick;
-            _LoadData();
         }
         private void ValidateRequiredField(string value, TextBox textBox, CancelEventArgs e)
         {

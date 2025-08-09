@@ -153,7 +153,7 @@ namespace DVLD_DataAccessLayer
                              NationalityCountryID = @NationalityCountryID,
                              ImagePath = @ImagePath,
                              Gender = @Gender
-                         WHERE NationalityCountryID = @NationalityCountryID";
+                         WHERE PersonID = @PersonID";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
