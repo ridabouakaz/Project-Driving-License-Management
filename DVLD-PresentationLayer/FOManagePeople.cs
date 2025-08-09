@@ -18,7 +18,7 @@ namespace DVLD_PresentationLayer
         {
             InitializeComponent();
           
-            this.Size = new Size(1400, 750);
+            this.Size = new Size(1400, 650);
 
         }
         private void _RefreshPeopleList()

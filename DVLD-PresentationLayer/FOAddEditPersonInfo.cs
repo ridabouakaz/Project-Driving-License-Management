@@ -14,6 +14,7 @@ using DVLD_BusinessLayer;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 using static DVLD_BusinessLayer.clsCountry;
+using DVLDShared;
 namespace DVLD_PresentationLayer
 {
     public partial class FOAddEditPersonInfo : Form
@@ -120,10 +121,7 @@ namespace DVLD_PresentationLayer
         }
         private void CtrDetailsPerson1_Email_Validating(object sender, CancelEventArgs e)
         {
-            string email = ctrDetailsPerson_Edit_Add_1.Email.Trim();
-            string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
-
-            if (!Regex.IsMatch(email, pattern))
+            if (!clsValidatoin.ValidateEmail(ctrDetailsPerson_Edit_Add_1.Email.Trim()))
             {
                 e.Cancel = true; // يمنع مغادرة الـ TextBox
                 errorProvider1.SetError(ctrDetailsPerson_Edit_Add_1.EmailTextBox, "Please enter a valid email address");

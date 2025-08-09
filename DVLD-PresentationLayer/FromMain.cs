@@ -15,7 +15,7 @@ namespace DVLD_PresentationLayer
         public FOmain()
         {
             InitializeComponent();
-            this.Size = new System.Drawing.Size(1500, 800);
+            this.Size = new System.Drawing.Size(1600, 850);
         }
         private void SMItempeople_Click(object sender, EventArgs e)
         {
