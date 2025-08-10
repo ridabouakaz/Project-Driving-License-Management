@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 using DVLD_BusinessLayer;
 using static DVLD_BusinessLayer.PersonFilterService;
@@ -76,12 +77,12 @@ namespace DVLD_PresentationLayer
             {
 
                 //Perform Delele and refresh
+                File.Delete(clsPerson.ReturnPathDeletePeople((int)dGViewShowInformation.CurrentRow.Cells[0].Value));
                 if (clsPerson.DeletePeople((int)dGViewShowInformation.CurrentRow.Cells[0].Value))
                 {
-                    MessageBox.Show("person Deleted Successfully.");
+                   MessageBox.Show("person Deleted Successfully.");
                     _RefreshPeopleList();
                 }
-
                 else
                     MessageBox.Show("person is not deleted.");
 

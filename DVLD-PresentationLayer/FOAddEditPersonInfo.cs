@@ -15,6 +15,8 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 using static DVLD_BusinessLayer.clsCountry;
 using DVLDShared;
+using System.Runtime.InteropServices.WindowsRuntime;
+using System.Web.Management;
 namespace DVLD_PresentationLayer
 {
     public partial class FOAddEditPersonInfo : Form
@@ -123,7 +125,7 @@ namespace DVLD_PresentationLayer
         {
             if (!clsValidatoin.ValidateEmail(ctrDetailsPerson_Edit_Add_1.Email.Trim()))
             {
-                e.Cancel = true; // يمنع مغادرة الـ TextBox
+                e.Cancel = true; 
                 errorProvider1.SetError(ctrDetailsPerson_Edit_Add_1.EmailTextBox, "Please enter a valid email address");
             }
             else
@@ -135,8 +137,10 @@ namespace DVLD_PresentationLayer
         private void CtrDetailsPerson1_NationalNumberValidating(object sender, CancelEventArgs e)
         {
             string nationalNo = ctrDetailsPerson_Edit_Add_1.NationalNo;
-            if (clsPerson.isNationalNumberExist(nationalNo)|| string.IsNullOrWhiteSpace(nationalNo))
+            if (clsPerson.isNationalNumberExist(nationalNo) || string.IsNullOrWhiteSpace(nationalNo))
             {
+                if (ctrDetailsPerson_Edit_Add_1.NationalNo == _Person.NationalNo)
+                    return;
                 e.Cancel = true;
                 errorProvider1.SetError(ctrDetailsPerson_Edit_Add_1.NationalNumberTextBox, "Please enter a valid National Number");
             }
@@ -146,6 +150,40 @@ namespace DVLD_PresentationLayer
                 errorProvider1.SetError(ctrDetailsPerson_Edit_Add_1.NationalNumberTextBox, "");
             }
         }
+
+        private bool _HandlePersonImage()
+        {
+            if (_Person.ImagePath != ctrDetailsPerson_Edit_Add_1.ImagePath)
+            {
+                if (_Person.ImagePath != "")
+                {
+                    try
+                    {
+                        File.Delete(_Person.ImagePath);
+                    }
+                    catch (IOException)
+                    {
+
+                        throw;
+                    }
+                }
+            }
+            if (ctrDetailsPerson_Edit_Add_1.ImagePath != null)
+            {
+                string SourceImageFill = ctrDetailsPerson_Edit_Add_1.ImagePath;
+                if (clsUtil.copyImageToProjectImagesFolder(ref SourceImageFill))
+                {
+                    ctrDetailsPerson_Edit_Add_1.ImagePath = SourceImageFill;
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("❌ Error: Image could not be copied to the project folder.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return true;
+                }
+            }
+            return true; 
+        }
         private void CtrDetailsPerson1_SaveButtonClick(object sender, EventArgs e)
         {
 
@@ -154,15 +192,11 @@ namespace DVLD_PresentationLayer
                 MessageBox.Show("❌ Please correct the errors before saving.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
-            int countryID = clsCountry.Find(ctrDetailsPerson_Edit_Add_1.CountryComboBox.Text).ID;
-            if (ctrDetailsPerson_Edit_Add_1.FirstName=="" || ctrDetailsPerson_Edit_Add_1.SecondName == "" || ctrDetailsPerson_Edit_Add_1.ThirdName == "" || ctrDetailsPerson_Edit_Add_1.LastName == ""
-                || ctrDetailsPerson_Edit_Add_1.NationalNo == "")
+            if (!_HandlePersonImage())
             {
-
-                MessageBox.Show("❌ Error: Please fill in all required fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return ;
+                return;
             }
+            int countryID = clsCountry.Find(ctrDetailsPerson_Edit_Add_1.CountryComboBox.Text).ID;
             _Person.FirstName = ctrDetailsPerson_Edit_Add_1.FirstName.Trim();
             _Person.SecondName = ctrDetailsPerson_Edit_Add_1.SecondName.Trim();
             _Person.ThirdName = ctrDetailsPerson_Edit_Add_1.ThirdName.Trim();

@@ -256,7 +256,28 @@ namespace DVLD_DataAccessLayer
 
             return (rowsAffected > 0);
         }
+        public static string GetFilePathById(int id)
+        {
+            string path = string.Empty;
 
+            using (SqlConnection conn = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                string query = "SELECT ImagePath FROM People WHERE PersonID = @PersonID";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@PersonID", id);
+                    conn.Open();
+
+                    object result = cmd.ExecuteScalar();
+                    if (result != null && result != DBNull.Value)
+                    {
+                        path = result.ToString();
+                    }
+                }
+            }
+
+            return path;
+        }
         public static bool IsPersonExist(int ID)
         {
             bool isFound = false;

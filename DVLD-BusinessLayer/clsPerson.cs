@@ -196,7 +196,10 @@ namespace DVLD_BusinessLayer
         {
             return clsPersonDataAccess.DeletePerson(ID);
         }
-
+        public static string ReturnPathDeletePeople(int ID)
+        {
+            return clsPersonDataAccess.GetFilePathById(ID);
+        }
         public static bool isPeopleExist(int ID)
         {
             return clsPersonDataAccess.IsPersonExist(ID);
