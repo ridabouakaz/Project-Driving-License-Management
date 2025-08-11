@@ -32,8 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FOPersonInfo));
             this.LblPersonInfo = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.ctrDetailsPerson1 = new DVLD_PresentationLayer.CtrDetailsPerson();
             this.BtnAddSave = new System.Windows.Forms.Button();
+            this.ctrDetailsPerson1 = new DVLD_PresentationLayer.CtrDetailsPerson();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,26 +42,17 @@
             this.LblPersonInfo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LblPersonInfo.AutoSize = true;
             this.LblPersonInfo.BackColor = System.Drawing.Color.Transparent;
-            this.LblPersonInfo.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold);
+            this.LblPersonInfo.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold);
             this.LblPersonInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
-            this.LblPersonInfo.Location = new System.Drawing.Point(413, 36);
+            this.LblPersonInfo.Location = new System.Drawing.Point(456, 9);
             this.LblPersonInfo.Name = "LblPersonInfo";
-            this.LblPersonInfo.Size = new System.Drawing.Size(292, 54);
+            this.LblPersonInfo.Size = new System.Drawing.Size(269, 50);
             this.LblPersonInfo.TabIndex = 2;
             this.LblPersonInfo.Text = "Person Details";
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // ctrDetailsPerson1
-            // 
-            this.ctrDetailsPerson1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(235)))), ((int)(((byte)(245)))));
-            this.ctrDetailsPerson1.ImagePath = null;
-            this.ctrDetailsPerson1.Location = new System.Drawing.Point(31, 108);
-            this.ctrDetailsPerson1.Name = "ctrDetailsPerson1";
-            this.ctrDetailsPerson1.Size = new System.Drawing.Size(1101, 421);
-            this.ctrDetailsPerson1.TabIndex = 13;
             // 
             // BtnAddSave
             // 
@@ -74,7 +65,7 @@
             this.BtnAddSave.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BtnAddSave.Image = ((System.Drawing.Image)(resources.GetObject("BtnAddSave.Image")));
             this.BtnAddSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAddSave.Location = new System.Drawing.Point(986, 525);
+            this.BtnAddSave.Location = new System.Drawing.Point(990, 484);
             this.BtnAddSave.Name = "BtnAddSave";
             this.BtnAddSave.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.BtnAddSave.Size = new System.Drawing.Size(130, 48);
@@ -85,12 +76,22 @@
             this.BtnAddSave.UseVisualStyleBackColor = false;
             this.BtnAddSave.Click += new System.EventHandler(this.BtnAddSave_Click);
             // 
+            // ctrDetailsPerson1
+            // 
+            this.ctrDetailsPerson1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(235)))), ((int)(((byte)(245)))));
+            this.ctrDetailsPerson1.ImagePath = null;
+            this.ctrDetailsPerson1.Location = new System.Drawing.Point(31, 68);
+            this.ctrDetailsPerson1.Name = "ctrDetailsPerson1";
+            this.ctrDetailsPerson1.PersonData = null;
+            this.ctrDetailsPerson1.Size = new System.Drawing.Size(1101, 421);
+            this.ctrDetailsPerson1.TabIndex = 13;
+            // 
             // FOPersonInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(235)))), ((int)(((byte)(245)))));
-            this.ClientSize = new System.Drawing.Size(1160, 606);
+            this.ClientSize = new System.Drawing.Size(1160, 544);
             this.Controls.Add(this.BtnAddSave);
             this.Controls.Add(this.ctrDetailsPerson1);
             this.Controls.Add(this.LblPersonInfo);

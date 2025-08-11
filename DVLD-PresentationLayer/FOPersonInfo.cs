@@ -22,7 +22,7 @@ namespace DVLD_PresentationLayer
         clsPerson _Person;
         public FOPersonInfo(int PersonID)
         {
-            InitializeComponent();
+             InitializeComponent();
             ctrDetailsPerson1.BorderStyle = BorderStyle.None;
             _PersonID = PersonID;
             if (_PersonID == -1)
@@ -42,8 +42,8 @@ namespace DVLD_PresentationLayer
 
                 return;
             }
-            ctrDetailsPerson1.PersonData = _Person;
-    
+  ctrDetailsPerson1.PersonData= _Person;
+
         }
 
         private void FOPersonInfo_Load(object sender, EventArgs e)

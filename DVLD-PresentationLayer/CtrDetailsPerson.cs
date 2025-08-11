@@ -31,7 +31,22 @@ namespace DVLD_PresentationLayer
                 FillUIFromPerson();
             }
         }
-        private void FillUIFromPerson() {
+        private void FillUIFromPerson()
+        {
+            if (_Person == null)
+            {
+                ValuePersonID = string.Empty;
+                FullName = string.Empty;
+                NumberNationalNo = string.Empty;
+                valueEmail = string.Empty;
+                valuePhone = string.Empty;
+                valueAddress = string.Empty;
+                DateOfBrith = string.Empty;
+                valueCountry = string.Empty;
+                ImagePerson = null;
+                TypeGender = Gender.Male;
+                return;
+            }
             ValuePersonID = _Person.ID.ToString();
             FullName = _Person.FirstName + " " + _Person.SecondName + " " + _Person.ThirdName + " " + _Person.LastName;
             NumberNationalNo = _Person.NationalNo;
