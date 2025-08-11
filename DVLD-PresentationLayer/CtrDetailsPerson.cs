@@ -3,21 +3,56 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DVLD_BusinessLayer;
+using DVLD_PresentationLayer;
 using static DVLDShared.DVLDShared;
 
 namespace DVLD_PresentationLayer
 {
     public partial class CtrDetailsPerson : UserControl
     {
+        private clsPerson _Person;
+
         public CtrDetailsPerson()
         {
             InitializeComponent();
         }
-
+        public clsPerson PersonData
+        {
+            get => _Person;
+            set
+            {
+                _Person = value;
+                FillUIFromPerson();
+            }
+        }
+        private void FillUIFromPerson() {
+            ValuePersonID = _Person.ID.ToString();
+            FullName = _Person.FirstName + " " + _Person.SecondName + " " + _Person.ThirdName + " " + _Person.LastName;
+            NumberNationalNo = _Person.NationalNo;
+            valueEmail = _Person.Email;
+            valuePhone = _Person.Phone;
+            valueAddress = _Person.Address;
+            DateOfBrith = _Person.DateOfBirth.ToString("dd/MM/yyyy");
+            valueCountry = (clsCountry.Find(_Person.CountryID).CountryName);
+            if (!string.IsNullOrEmpty(_Person.ImagePath) && File.Exists(_Person.ImagePath))
+            {
+                using (var fs = new FileStream(_Person.ImagePath, FileMode.Open, FileAccess.Read))
+                {
+                    ImagePerson = Image.FromStream(fs);
+                }
+            }
+            else
+            {
+                ImagePerson = null;
+            }
+            TypeGender = _Person.PersonGender;
+        }
         public string FullName
         {
             set => LblFullName.Text = value;
