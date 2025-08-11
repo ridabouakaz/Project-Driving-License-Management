@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DVLD_BusinessLayer;
+using DVLDShared;
 using static DVLDShared.DVLDShared;
 
 namespace DVLD_PresentationLayer
@@ -49,10 +51,17 @@ namespace DVLD_PresentationLayer
             ctrDetailsPerson1.valueAddress = _Person.Address;
             ctrDetailsPerson1.DateOfBrith = _Person.DateOfBirth.ToString("dd/MM/yyyy");
             ctrDetailsPerson1.valueCountry = (clsCountry.Find(_Person.CountryID).CountryName);
-            if (!string.IsNullOrEmpty(_Person.ImagePath))
-                ctrDetailsPerson1.ImagePerson = Image.FromFile(_Person.ImagePath);
+            if (!string.IsNullOrEmpty(_Person.ImagePath) && File.Exists(_Person.ImagePath))
+            {
+                using (var fs = new FileStream(_Person.ImagePath, FileMode.Open, FileAccess.Read))
+                {
+                    ctrDetailsPerson1.ImagePerson = Image.FromStream(fs);
+                }
+            }
             else
+            {
                 ctrDetailsPerson1.ImagePerson = null;
+            }
             ctrDetailsPerson1.TypeGender = _Person.PersonGender;
         }
 
@@ -60,12 +69,43 @@ namespace DVLD_PresentationLayer
         {
             _LoadData();
         }
+        private bool _HandlePersonImage()
+        {
+            if (_Person.ImagePath != ctrDetailsPerson1.ImagePath)
+            {
+                if (_Person.ImagePath != "")
+                {
+                    try
+                    {
+                        File.Delete(_Person.ImagePath);
+                    }
+                    catch (IOException)
+                    {
 
+                        throw;
+                    }
+                }
+            }
+            if (ctrDetailsPerson1.ImagePath != null)
+            {
+                string SourceImageFill = ctrDetailsPerson1.ImagePath;
+                if (clsUtil.copyImageToProjectImagesFolder(ref SourceImageFill))
+                {
+                    ctrDetailsPerson1.ImagePath = SourceImageFill;
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("❌ Error: Image could not be copied to the project folder.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return true;
+                }
+            }
+            return true;
+        }
         private void BtnAddSave_Click(object sender, EventArgs e)
         {
 
-            if (ctrDetailsPerson1.ImagePath != null)
-                _Person.ImagePath = ctrDetailsPerson1.ImagePath;
+            _HandlePersonImage();
 
             if (_Person.Save())
             {

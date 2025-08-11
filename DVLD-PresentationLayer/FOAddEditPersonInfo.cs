@@ -68,10 +68,17 @@ namespace DVLD_PresentationLayer
             ctrDetailsPerson_Edit_Add_1.Address = _Person.Address;
             ctrDetailsPerson_Edit_Add_1.BirthDate = _Person.DateOfBirth;
             ctrDetailsPerson_Edit_Add_1.CountryComboBox.SelectedIndex = ctrDetailsPerson_Edit_Add_1.CountryComboBox.FindString(clsCountry.Find(_Person.CountryID).CountryName);
-            if (!string.IsNullOrEmpty(_Person.ImagePath))
-                ctrDetailsPerson_Edit_Add_1.PersonImage = Image.FromFile(_Person.ImagePath);
+            if (!string.IsNullOrEmpty(_Person.ImagePath) && File.Exists(_Person.ImagePath))
+            {
+                using (var fs = new FileStream(_Person.ImagePath, FileMode.Open, FileAccess.Read))
+                {
+                    ctrDetailsPerson_Edit_Add_1.PersonImage = Image.FromStream(fs);
+                }
+            }
             else
+            {
                 ctrDetailsPerson_Edit_Add_1.PersonImage = null;
+            }
 
 
             ctrDetailsPerson_Edit_Add_1.SelectedGender = _Person.PersonGender;
