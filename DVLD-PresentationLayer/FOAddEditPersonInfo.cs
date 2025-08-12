@@ -158,56 +158,20 @@ namespace DVLD_PresentationLayer
             }
         }
 
-        private bool _HandlePersonImage()
-        {
-            if (_Person.ImagePath != ctrDetailsPerson_Edit_Add_1.ImagePath)
-            {
-                if (_Person.ImagePath != "")
-                {
-                    try
-                    {
-                        File.Delete(_Person.ImagePath);
-                    }
-                    catch (IOException)
-                    {
 
-                        throw;
-                    }
-                }
-            }
-            if (_Person.ImagePath == ctrDetailsPerson_Edit_Add_1.ImagePath)
-            {
-                return true;
-            }
-            if (ctrDetailsPerson_Edit_Add_1.ImagePath != null)
-            {
-                string SourceImageFill = ctrDetailsPerson_Edit_Add_1.ImagePath;
-                if (clsUtil.copyImageToProjectImagesFolder(ref SourceImageFill))
-                {
-                    ctrDetailsPerson_Edit_Add_1.ImagePath = SourceImageFill;
-                    _Person.ImagePath = ctrDetailsPerson_Edit_Add_1.ImagePath;
-                    return true;
-                }
-                else
-                {
-                    MessageBox.Show("❌ Error: Image could not be copied to the project folder.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return true;
-                }
-            }
-            return true; 
-        }
         private void CtrDetailsPerson1_SaveButtonClick(object sender, EventArgs e)
         {
-
+            string tempImagePath = _Person.ImagePath;
             if (!this.ValidateChildren())
             {
                 MessageBox.Show("❌ Please correct the errors before saving.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (!_HandlePersonImage())
+            if (!clsUtil.HandlePersonImage(ref tempImagePath, ctrDetailsPerson_Edit_Add_1.ImagePath))
             {
                 return;
             }
+            _Person.ImagePath = tempImagePath;
             int countryID = clsCountry.Find(ctrDetailsPerson_Edit_Add_1.CountryComboBox.Text).ID;
             _Person.FirstName = ctrDetailsPerson_Edit_Add_1.FirstName.Trim();
             _Person.SecondName = ctrDetailsPerson_Edit_Add_1.SecondName.Trim();

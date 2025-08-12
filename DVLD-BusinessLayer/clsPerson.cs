@@ -208,6 +208,6 @@ namespace DVLD_BusinessLayer
         {
             return clsPersonDataAccess.IsNationalNoExist(NationalNo);
         }
-       
+      
     }
 }

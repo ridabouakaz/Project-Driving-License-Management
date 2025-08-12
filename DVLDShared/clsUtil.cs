@@ -58,20 +58,44 @@ namespace DVLDShared
             sourceFile = DestinationFile;
             return true;
         }
+        public static bool HandlePersonImage(ref string personImagePath, string newImagePath)
+        {
+            if (personImagePath != newImagePath)
+            {
+                if (!string.IsNullOrEmpty(personImagePath))
+                {
+                    try
+                    {
+                        File.Delete(personImagePath);
+                    }
+                    catch (IOException)
+                    {
+                        throw;
+                    }
+                }
+            }
 
+            if (personImagePath == newImagePath)
+            {
+                return true;
+            }
 
+            if (!string.IsNullOrEmpty(newImagePath))
+            {
+                string sourceImageFile = newImagePath;
+                if (clsUtil.copyImageToProjectImagesFolder(ref sourceImageFile))
+                {
+                    personImagePath = sourceImageFile;
 
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
 
-
-
-
-
-
-
-
-
-
-
-
+            return true;
+        }
     }
 }

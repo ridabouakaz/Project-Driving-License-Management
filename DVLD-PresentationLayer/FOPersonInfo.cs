@@ -16,7 +16,7 @@ namespace DVLD_PresentationLayer
 {
     public partial class FOPersonInfo : Form
     {
-        public enum enMode { AddNew = 0, Update = 1 };
+        public enum enMode {Update = 1 };
         private enMode _Mode;
         int _PersonID;
         clsPerson _Person;
@@ -25,11 +25,8 @@ namespace DVLD_PresentationLayer
              InitializeComponent();
             ctrDetailsPerson1.BorderStyle = BorderStyle.None;
             _PersonID = PersonID;
-            if (_PersonID == -1)
-                MessageBox.Show("please choose person to show Details", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            else
-                _Mode = enMode.Update;
-
+            _Mode = enMode.Update;
+            _LoadData();
         }
         private void _LoadData()
         { 
@@ -44,56 +41,14 @@ namespace DVLD_PresentationLayer
             }
             ctrDetailsPerson1.PersonData= _Person;
         }
-
-        private void FOPersonInfo_Load(object sender, EventArgs e)
-        {
-            _LoadData();
-        }
-        private bool _HandlePersonImage()
-        {
-            if (_Person.ImagePath != ctrDetailsPerson1.ImagePath)
-            {
-                if (_Person.ImagePath != "")
-                {
-                    try
-                    {
-                        File.Delete(_Person.ImagePath);
-                    }
-                    catch (IOException)
-                    {
-
-                        throw;
-                    }
-                }
-            }
-            if (_Person.ImagePath == ctrDetailsPerson1.ImagePath)
-            {
-                return true;
-            }
-            if (ctrDetailsPerson1.ImagePath != null)
-            {
-                string SourceImageFill = ctrDetailsPerson1.ImagePath;
-                if (clsUtil.copyImageToProjectImagesFolder(ref SourceImageFill))
-                {
-                    ctrDetailsPerson1.ImagePath = SourceImageFill;
-                    _Person.ImagePath = ctrDetailsPerson1.ImagePath;
-                    return true;
-                }
-                else
-                {
-                    MessageBox.Show("❌ Error: Image could not be copied to the project folder.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return true;
-                }
-            }
-            return true;
-        }
         private void BtnAddSave_Click(object sender, EventArgs e)
         {
-
-            _HandlePersonImage();
-            //FOAddEditPersonInfo frm = new FOAddEditPersonInfo(_PersonID);
-            //frm.ShowDialog();
-
+            string tempImagePath = _Person.ImagePath;
+            if (!clsUtil.HandlePersonImage(ref tempImagePath, ctrDetailsPerson1.ImagePath))
+            {
+                MessageBox.Show("❌ Error: Handle Person Image was not saved successfully.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            _Person.ImagePath = tempImagePath;
             if (_Person.Save())
             {
                 MessageBox.Show("✅ Data Saved Successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -104,7 +59,6 @@ namespace DVLD_PresentationLayer
                 MessageBox.Show("❌ Error: Data was not saved successfully.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             this.Close();
-          
         }
     }
 }
