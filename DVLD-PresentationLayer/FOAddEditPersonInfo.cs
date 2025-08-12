@@ -175,12 +175,17 @@ namespace DVLD_PresentationLayer
                     }
                 }
             }
+            if (_Person.ImagePath == ctrDetailsPerson_Edit_Add_1.ImagePath)
+            {
+                return true;
+            }
             if (ctrDetailsPerson_Edit_Add_1.ImagePath != null)
             {
                 string SourceImageFill = ctrDetailsPerson_Edit_Add_1.ImagePath;
                 if (clsUtil.copyImageToProjectImagesFolder(ref SourceImageFill))
                 {
                     ctrDetailsPerson_Edit_Add_1.ImagePath = SourceImageFill;
+                    _Person.ImagePath = ctrDetailsPerson_Edit_Add_1.ImagePath;
                     return true;
                 }
                 else

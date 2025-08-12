@@ -35,16 +35,16 @@ namespace DVLD_PresentationLayer
         {
             if (_Person == null)
             {
-                ValuePersonID = string.Empty;
-                FullName = string.Empty;
-                NumberNationalNo = string.Empty;
-                valueEmail = string.Empty;
-                valuePhone = string.Empty;
-                valueAddress = string.Empty;
-                DateOfBrith = string.Empty;
-                valueCountry = string.Empty;
+                ValuePersonID = "[????????]";
+                FullName = "[????????]";
+                NumberNationalNo = "[????????]";
+                valueEmail = "[????????]";
+                valuePhone = "[????????]";
+                valueAddress = "[????????]";
+                DateOfBrith = "[????????]";
+                valueCountry = "[????????]";
                 ImagePerson = null;
-                TypeGender = Gender.Male;
+                LblTypeGender.Text = "[????????]";
                 return;
             }
             ValuePersonID = _Person.ID.ToString();
@@ -57,10 +57,7 @@ namespace DVLD_PresentationLayer
             valueCountry = (clsCountry.Find(_Person.CountryID).CountryName);
             if (!string.IsNullOrEmpty(_Person.ImagePath) && File.Exists(_Person.ImagePath))
             {
-                using (var fs = new FileStream(_Person.ImagePath, FileMode.Open, FileAccess.Read))
-                {
-                    ImagePerson = Image.FromStream(fs);
-                }
+                    PBImagePerson.ImageLocation = _Person.ImagePath;
             }
             else
             {
@@ -136,5 +133,6 @@ namespace DVLD_PresentationLayer
                 // ...
             }
         }
+
     }
 }

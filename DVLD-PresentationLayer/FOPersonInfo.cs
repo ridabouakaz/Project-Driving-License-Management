@@ -42,8 +42,7 @@ namespace DVLD_PresentationLayer
 
                 return;
             }
-  ctrDetailsPerson1.PersonData= _Person;
-
+            ctrDetailsPerson1.PersonData= _Person;
         }
 
         private void FOPersonInfo_Load(object sender, EventArgs e)
@@ -67,12 +66,17 @@ namespace DVLD_PresentationLayer
                     }
                 }
             }
+            if (_Person.ImagePath == ctrDetailsPerson1.ImagePath)
+            {
+                return true;
+            }
             if (ctrDetailsPerson1.ImagePath != null)
             {
                 string SourceImageFill = ctrDetailsPerson1.ImagePath;
                 if (clsUtil.copyImageToProjectImagesFolder(ref SourceImageFill))
                 {
                     ctrDetailsPerson1.ImagePath = SourceImageFill;
+                    _Person.ImagePath = ctrDetailsPerson1.ImagePath;
                     return true;
                 }
                 else
@@ -87,6 +91,8 @@ namespace DVLD_PresentationLayer
         {
 
             _HandlePersonImage();
+            //FOAddEditPersonInfo frm = new FOAddEditPersonInfo(_PersonID);
+            //frm.ShowDialog();
 
             if (_Person.Save())
             {
