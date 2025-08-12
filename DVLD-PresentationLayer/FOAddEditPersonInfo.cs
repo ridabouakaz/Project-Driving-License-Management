@@ -55,19 +55,11 @@ namespace DVLD_PresentationLayer
 
                 return;
             }
-
             LblAddEditPerson.Text = "Update Person";
             LbNumberlPersonID.Text = _Person.ID.ToString();
-            ctrDetailsPerson_Edit_Add_1.FirstName = _Person.FirstName;
-            ctrDetailsPerson_Edit_Add_1.SecondName = _Person.SecondName;
-            ctrDetailsPerson_Edit_Add_1.ThirdName = _Person.ThirdName;
-            ctrDetailsPerson_Edit_Add_1.LastName = _Person.LastName;
-            ctrDetailsPerson_Edit_Add_1.NationalNo = _Person.NationalNo;
-            ctrDetailsPerson_Edit_Add_1.Email = _Person.Email;
-            ctrDetailsPerson_Edit_Add_1.Phone = _Person.Phone;
-            ctrDetailsPerson_Edit_Add_1.Address = _Person.Address;
-            ctrDetailsPerson_Edit_Add_1.BirthDate = _Person.DateOfBirth;
-            ctrDetailsPerson_Edit_Add_1.CountryComboBox.SelectedIndex = ctrDetailsPerson_Edit_Add_1.CountryComboBox.FindString(clsCountry.Find(_Person.CountryID).CountryName);
+            ctrDetailsPerson_Edit_Add_1.PersonData = _Person;
+          
+
             if (!string.IsNullOrEmpty(_Person.ImagePath) && File.Exists(_Person.ImagePath))
             {
                 using (var fs = new FileStream(_Person.ImagePath, FileMode.Open, FileAccess.Read))

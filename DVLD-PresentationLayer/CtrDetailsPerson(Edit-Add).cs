@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.IO;
 using System.Text;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
@@ -15,9 +16,55 @@ namespace DVLD_PresentationLayer
 {
     public partial class CtrDetailsPerson_Edit_Add_ : UserControl
     {
+        private clsPerson _Person;
+
         public CtrDetailsPerson_Edit_Add_()
         {
             InitializeComponent();
+        }
+
+        public clsPerson PersonData
+        {
+            get => _Person;
+            set
+            {
+                _Person = value;
+                FillUIFromPerson();
+            }
+        }
+        private void FillUIFromPerson()
+        {
+            if (_Person == null)
+            {
+                // تعيين القيم الافتراضية
+                ImagePath = null;
+                FirstName = "[????????]";
+                SecondName = "[????????]";
+                ThirdName = "[????????]";
+                LastName = "[????????]";
+                NationalNo = "[????????]";
+                Phone = "[????????]";
+                Email = "[????????]";
+                Country = "[????????]";
+                Address = "[????????]";
+                SelectedGender = Gender.Male;
+                BirthDate = DateTime.Now;
+                return;
+            }
+            ImagePath = !string.IsNullOrEmpty(_Person.ImagePath) && File.Exists(_Person.ImagePath)
+                        ? _Person.ImagePath
+                        : null;
+            FirstName = _Person.FirstName;
+            SecondName = _Person.SecondName;
+            ThirdName = _Person.ThirdName;
+            LastName = _Person.LastName;
+            NationalNo = _Person.NationalNo;
+            Phone = _Person.Phone;
+            Email = _Person.Email;
+            Country = clsCountry.Find(_Person.CountryID)?.CountryName ?? "";
+            Address = _Person.Address;
+            SelectedGender = _Person.PersonGender;
+            BirthDate = _Person.DateOfBirth;
         }
 
         public string ImagePath
