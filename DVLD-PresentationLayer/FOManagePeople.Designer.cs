@@ -35,7 +35,6 @@ namespace DVLD_PresentationLayer
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FOManagePeople));
@@ -75,7 +74,7 @@ namespace DVLD_PresentationLayer
             this.dGViewShowInformation.BackgroundColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("tahoma", 12F);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 12F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -85,7 +84,7 @@ namespace DVLD_PresentationLayer
             this.dGViewShowInformation.ContextMenuStrip = this.SMItemCRUDpeople;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("tahoma ", 11F);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -290,7 +289,7 @@ namespace DVLD_PresentationLayer
             "Gender",
             "Phone",
             "Email"});
-            this.CBFilterBy.Location = new System.Drawing.Point(145, 245);
+            this.CBFilterBy.Location = new System.Drawing.Point(154, 245);
             this.CBFilterBy.Name = "CBFilterBy";
             this.CBFilterBy.Size = new System.Drawing.Size(208, 31);
             this.CBFilterBy.TabIndex = 0;
