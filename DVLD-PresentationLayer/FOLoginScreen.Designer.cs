@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.signup_showPass = new System.Windows.Forms.CheckBox();
+            this.RBRememberMe = new System.Windows.Forms.CheckBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.signup_password = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.LblPassword = new System.Windows.Forms.Label();
             this.signup_username = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.LblUsername = new System.Windows.Forms.Label();
+            this.LblLoginaccount = new System.Windows.Forms.Label();
             this.exit = new System.Windows.Forms.Label();
             this.PnlBackGround = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -43,25 +43,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // signup_showPass
+            // RBRememberMe
             // 
-            this.signup_showPass.AutoSize = true;
-            this.signup_showPass.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.signup_showPass.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signup_showPass.Location = new System.Drawing.Point(567, 276);
-            this.signup_showPass.Name = "signup_showPass";
-            this.signup_showPass.Size = new System.Drawing.Size(120, 20);
-            this.signup_showPass.TabIndex = 20;
-            this.signup_showPass.Text = "Show Password";
-            this.signup_showPass.UseVisualStyleBackColor = true;
+            this.RBRememberMe.AutoSize = true;
+            this.RBRememberMe.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RBRememberMe.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RBRememberMe.Location = new System.Drawing.Point(567, 276);
+            this.RBRememberMe.Name = "RBRememberMe";
+            this.RBRememberMe.Size = new System.Drawing.Size(117, 20);
+            this.RBRememberMe.TabIndex = 20;
+            this.RBRememberMe.Text = "Remember Me.";
+            this.RBRememberMe.UseVisualStyleBackColor = true;
             // 
             // btnLogin
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(0, 134, 167);
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(134)))), ((int)(((byte)(167)))));
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.FlatAppearance.BorderSize = 0;
-            this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(167)))), ((int)(((byte)(209)))));
+            this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(167)))), ((int)(((byte)(209)))));
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
@@ -82,15 +82,15 @@
             this.signup_password.Size = new System.Drawing.Size(322, 35);
             this.signup_password.TabIndex = 18;
             // 
-            // label4
+            // LblPassword
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(361, 210);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 21);
-            this.label4.TabIndex = 17;
-            this.label4.Text = "Password:";
+            this.LblPassword.AutoSize = true;
+            this.LblPassword.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPassword.Location = new System.Drawing.Point(361, 210);
+            this.LblPassword.Name = "LblPassword";
+            this.LblPassword.Size = new System.Drawing.Size(87, 21);
+            this.LblPassword.TabIndex = 17;
+            this.LblPassword.Text = "Password:";
             // 
             // signup_username
             // 
@@ -101,25 +101,25 @@
             this.signup_username.Size = new System.Drawing.Size(322, 35);
             this.signup_username.TabIndex = 16;
             // 
-            // label2
+            // LblUsername
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(361, 128);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 21);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Username:";
+            this.LblUsername.AutoSize = true;
+            this.LblUsername.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblUsername.Location = new System.Drawing.Point(361, 128);
+            this.LblUsername.Name = "LblUsername";
+            this.LblUsername.Size = new System.Drawing.Size(91, 21);
+            this.LblUsername.TabIndex = 15;
+            this.LblUsername.Text = "Username:";
             // 
-            // label3
+            // LblLoginaccount
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(360, 57);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(256, 29);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Login To your account ";
+            this.LblLoginaccount.AutoSize = true;
+            this.LblLoginaccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblLoginaccount.Location = new System.Drawing.Point(360, 57);
+            this.LblLoginaccount.Name = "LblLoginaccount";
+            this.LblLoginaccount.Size = new System.Drawing.Size(256, 29);
+            this.LblLoginaccount.TabIndex = 14;
+            this.LblLoginaccount.Text = "Login To your account ";
             // 
             // exit
             // 
@@ -131,10 +131,11 @@
             this.exit.Size = new System.Drawing.Size(22, 22);
             this.exit.TabIndex = 13;
             this.exit.Text = "X";
+            this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
             // PnlBackGround
             // 
-            this.PnlBackGround.BackColor = System.Drawing.ColorTranslator.FromHtml("#00A7D1");
+            this.PnlBackGround.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(167)))), ((int)(((byte)(209)))));
             this.PnlBackGround.Controls.Add(this.pictureBox1);
             this.PnlBackGround.Controls.Add(this.LblDrivingLicenseManagement);
             this.PnlBackGround.Dock = System.Windows.Forms.DockStyle.Left;
@@ -169,13 +170,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(725, 452);
-            this.Controls.Add(this.signup_showPass);
+            this.Controls.Add(this.RBRememberMe);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.signup_password);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.LblPassword);
             this.Controls.Add(this.signup_username);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.LblUsername);
+            this.Controls.Add(this.LblLoginaccount);
             this.Controls.Add(this.exit);
             this.Controls.Add(this.PnlBackGround);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -192,13 +193,13 @@
 
         #endregion
 
-        private System.Windows.Forms.CheckBox signup_showPass;
+        private System.Windows.Forms.CheckBox RBRememberMe;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.TextBox signup_password;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label LblPassword;
         private System.Windows.Forms.TextBox signup_username;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label LblUsername;
+        private System.Windows.Forms.Label LblLoginaccount;
         private System.Windows.Forms.Label exit;
         private System.Windows.Forms.Panel PnlBackGround;
         private System.Windows.Forms.PictureBox pictureBox1;
