@@ -29,19 +29,17 @@
         private void InitializeComponent()
         {
             this.signup_showPass = new System.Windows.Forms.CheckBox();
-            this.sigunp_btn = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.signup_password = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.signup_username = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.exit = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.PnlBackGround = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.signup_loginBtn = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel2.SuspendLayout();
+            this.LblDrivingLicenseManagement = new System.Windows.Forms.Label();
+            this.PnlBackGround.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,22 +55,22 @@
             this.signup_showPass.Text = "Show Password";
             this.signup_showPass.UseVisualStyleBackColor = true;
             // 
-            // sigunp_btn
+            // btnLogin
             // 
-            this.sigunp_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
-            this.sigunp_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.sigunp_btn.FlatAppearance.BorderSize = 0;
-            this.sigunp_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.sigunp_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.sigunp_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sigunp_btn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sigunp_btn.ForeColor = System.Drawing.Color.White;
-            this.sigunp_btn.Location = new System.Drawing.Point(365, 317);
-            this.sigunp_btn.Name = "sigunp_btn";
-            this.sigunp_btn.Size = new System.Drawing.Size(116, 48);
-            this.sigunp_btn.TabIndex = 19;
-            this.sigunp_btn.Text = "SIGN UP";
-            this.sigunp_btn.UseVisualStyleBackColor = false;
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(0, 134, 167);
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Location = new System.Drawing.Point(365, 317);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(116, 48);
+            this.btnLogin.TabIndex = 19;
+            this.btnLogin.Text = "Log in ";
+            this.btnLogin.UseVisualStyleBackColor = false;
             // 
             // signup_password
             // 
@@ -116,12 +114,12 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(360, 57);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(208, 27);
+            this.label3.Size = new System.Drawing.Size(256, 29);
             this.label3.TabIndex = 14;
-            this.label3.Text = "Register Account";
+            this.label3.Text = "Login To your account ";
             // 
             // exit
             // 
@@ -134,18 +132,16 @@
             this.exit.TabIndex = 13;
             this.exit.Text = "X";
             // 
-            // panel2
+            // PnlBackGround
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.signup_loginBtn);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(344, 452);
-            this.panel2.TabIndex = 12;
+            this.PnlBackGround.BackColor = System.Drawing.ColorTranslator.FromHtml("#00A7D1");
+            this.PnlBackGround.Controls.Add(this.pictureBox1);
+            this.PnlBackGround.Controls.Add(this.LblDrivingLicenseManagement);
+            this.PnlBackGround.Dock = System.Windows.Forms.DockStyle.Left;
+            this.PnlBackGround.Location = new System.Drawing.Point(0, 0);
+            this.PnlBackGround.Name = "PnlBackGround";
+            this.PnlBackGround.Size = new System.Drawing.Size(344, 452);
+            this.PnlBackGround.TabIndex = 12;
             // 
             // pictureBox1
             // 
@@ -156,66 +152,38 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // label6
+            // LblDrivingLicenseManagement
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(24, 209);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(291, 22);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Employee Management System";
+            this.LblDrivingLicenseManagement.AutoSize = true;
+            this.LblDrivingLicenseManagement.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDrivingLicenseManagement.ForeColor = System.Drawing.Color.White;
+            this.LblDrivingLicenseManagement.Location = new System.Drawing.Point(30, 209);
+            this.LblDrivingLicenseManagement.Name = "LblDrivingLicenseManagement";
+            this.LblDrivingLicenseManagement.Size = new System.Drawing.Size(272, 22);
+            this.LblDrivingLicenseManagement.TabIndex = 2;
+            this.LblDrivingLicenseManagement.Text = "Driving License Management";
             // 
-            // signup_loginBtn
-            // 
-            this.signup_loginBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
-            this.signup_loginBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.signup_loginBtn.FlatAppearance.BorderSize = 0;
-            this.signup_loginBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Purple;
-            this.signup_loginBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
-            this.signup_loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.signup_loginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signup_loginBtn.ForeColor = System.Drawing.Color.White;
-            this.signup_loginBtn.Location = new System.Drawing.Point(28, 377);
-            this.signup_loginBtn.Name = "signup_loginBtn";
-            this.signup_loginBtn.Size = new System.Drawing.Size(288, 50);
-            this.signup_loginBtn.TabIndex = 1;
-            this.signup_loginBtn.Text = "SIGN IN";
-            this.signup_loginBtn.UseVisualStyleBackColor = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(78, 343);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(163, 22);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Login your Account";
-            // 
-            // RegisterForm
+            // FOLoginScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(725, 452);
             this.Controls.Add(this.signup_showPass);
-            this.Controls.Add(this.sigunp_btn);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.signup_password);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.signup_username);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.exit);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.PnlBackGround);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "RegisterForm";
+            this.Name = "FOLoginScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegisterForm";
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.PnlBackGround.ResumeLayout(false);
+            this.PnlBackGround.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -225,17 +193,15 @@
         #endregion
 
         private System.Windows.Forms.CheckBox signup_showPass;
-        private System.Windows.Forms.Button sigunp_btn;
+        private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.TextBox signup_password;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox signup_username;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label exit;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel PnlBackGround;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button signup_loginBtn;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label LblDrivingLicenseManagement;
     }
 }

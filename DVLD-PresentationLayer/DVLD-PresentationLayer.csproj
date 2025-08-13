@@ -103,6 +103,9 @@
     <EmbeddedResource Include="FOAddEditPersonInfo.resx">
       <DependentUpon>FOAddEditPersonInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FOLoginScreen.resx">
+      <DependentUpon>FOLoginScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FOManagePeople.resx">
       <DependentUpon>FOManagePeople.cs</DependentUpon>
     </EmbeddedResource>
