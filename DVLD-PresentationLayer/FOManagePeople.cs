@@ -14,7 +14,7 @@ namespace DVLD_PresentationLayer
 {
     public partial class FOManagePeople : Form
     {
-        private DataTable _peopleTable;
+        private static DataTable _peopleTable = clsPerson.GetAllPeople();
         public FOManagePeople()
         {
             InitializeComponent();
@@ -24,7 +24,6 @@ namespace DVLD_PresentationLayer
         }
         private void _RefreshPeopleList()
         {
-            _peopleTable = clsPerson.GetAllPeople();
             dGViewShowInformation.DataSource = _peopleTable;
             LblTotalRecoreds.Text = _peopleTable.Rows.Count.ToString();
         }
