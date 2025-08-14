@@ -150,7 +150,8 @@ namespace DVLD_PresentationLayer
             }
         }
 
-
+        public delegate void DataBackEventHandler(object sender, int PersonID);
+        public event DataBackEventHandler DataBack;
         private void CtrDetailsPerson1_SaveButtonClick(object sender, EventArgs e)
         {
             string tempImagePath = _Person.ImagePath;
@@ -184,6 +185,7 @@ namespace DVLD_PresentationLayer
             if (_Person.Save())
             {
                 MessageBox.Show("✅ Data Saved Successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DataBack?.Invoke(this, _PersonID);
                 _Mode = enMode.Update;
             }
             else

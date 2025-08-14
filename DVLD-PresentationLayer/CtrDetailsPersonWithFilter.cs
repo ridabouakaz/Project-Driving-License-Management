@@ -16,5 +16,15 @@ namespace DVLD_PresentationLayer
         {
             InitializeComponent();
         }
+
+        private void BtnAddPerson_Click(object sender, EventArgs e)
+        {
+            FOAddEditPersonInfo fOAddEditPersonInfo = new FOAddEditPersonInfo();
+            fOAddEditPersonInfo.DataBack += FOAddEditPersonInfo_DataBack;
+        }
+        private void FOAddEditPersonInfo_DataBack(object sender, int PersonID)
+        {
+         
+        }
     }
 }

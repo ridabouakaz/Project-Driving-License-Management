@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CtrDetailsPersonWithFilter));
             this.GBUserControlDetailesPersonWithFilter = new System.Windows.Forms.GroupBox();
+            this.BtnAddPerson = new System.Windows.Forms.Button();
+            this.BtnSearchPerson = new System.Windows.Forms.Button();
+            this.MTBsearch = new System.Windows.Forms.MaskedTextBox();
             this.CBFindBy = new System.Windows.Forms.ComboBox();
             this.LblFindBy = new System.Windows.Forms.Label();
             this.ctrDetailsPerson1 = new DVLD_PresentationLayer.CtrDetailsPerson();
-            this.MTBsearch = new System.Windows.Forms.MaskedTextBox();
-            this.BtnSearchPerson = new System.Windows.Forms.Button();
-            this.BtnAddPerson = new System.Windows.Forms.Button();
             this.GBUserControlDetailesPersonWithFilter.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,6 +54,52 @@
             this.GBUserControlDetailesPersonWithFilter.TabIndex = 1;
             this.GBUserControlDetailesPersonWithFilter.TabStop = false;
             this.GBUserControlDetailesPersonWithFilter.Text = "Filter";
+            // 
+            // BtnAddPerson
+            // 
+            this.BtnAddPerson.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnAddPerson.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnAddPerson.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnAddPerson.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BtnAddPerson.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.BtnAddPerson.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.BtnAddPerson.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAddPerson.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BtnAddPerson.Image = ((System.Drawing.Image)(resources.GetObject("BtnAddPerson.Image")));
+            this.BtnAddPerson.Location = new System.Drawing.Point(751, 40);
+            this.BtnAddPerson.Name = "BtnAddPerson";
+            this.BtnAddPerson.Size = new System.Drawing.Size(56, 32);
+            this.BtnAddPerson.TabIndex = 4;
+            this.BtnAddPerson.UseVisualStyleBackColor = false;
+            this.BtnAddPerson.Click += new System.EventHandler(this.BtnAddPerson_Click);
+            // 
+            // BtnSearchPerson
+            // 
+            this.BtnSearchPerson.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnSearchPerson.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnSearchPerson.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnSearchPerson.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BtnSearchPerson.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.BtnSearchPerson.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.BtnSearchPerson.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSearchPerson.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BtnSearchPerson.Image = ((System.Drawing.Image)(resources.GetObject("BtnSearchPerson.Image")));
+            this.BtnSearchPerson.Location = new System.Drawing.Point(664, 40);
+            this.BtnSearchPerson.Name = "BtnSearchPerson";
+            this.BtnSearchPerson.Size = new System.Drawing.Size(56, 32);
+            this.BtnSearchPerson.TabIndex = 3;
+            this.BtnSearchPerson.UseVisualStyleBackColor = false;
+            // 
+            // MTBsearch
+            // 
+            this.MTBsearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(243)))), ((int)(((byte)(247)))));
+            this.MTBsearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MTBsearch.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.MTBsearch.ForeColor = System.Drawing.Color.Black;
+            this.MTBsearch.Location = new System.Drawing.Point(413, 42);
+            this.MTBsearch.Name = "MTBsearch";
+            this.MTBsearch.Size = new System.Drawing.Size(213, 30);
+            this.MTBsearch.TabIndex = 2;
             // 
             // CBFindBy
             // 
@@ -92,51 +138,6 @@
             this.ctrDetailsPerson1.PersonData = null;
             this.ctrDetailsPerson1.Size = new System.Drawing.Size(1032, 383);
             this.ctrDetailsPerson1.TabIndex = 0;
-            // 
-            // MTBsearch
-            // 
-            this.MTBsearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(243)))), ((int)(((byte)(247)))));
-            this.MTBsearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.MTBsearch.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.MTBsearch.ForeColor = System.Drawing.Color.Black;
-            this.MTBsearch.Location = new System.Drawing.Point(413, 42);
-            this.MTBsearch.Name = "MTBsearch";
-            this.MTBsearch.Size = new System.Drawing.Size(213, 30);
-            this.MTBsearch.TabIndex = 2;
-            // 
-            // BtnSearchPerson
-            // 
-            this.BtnSearchPerson.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnSearchPerson.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.BtnSearchPerson.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BtnSearchPerson.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.BtnSearchPerson.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.BtnSearchPerson.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
-            this.BtnSearchPerson.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSearchPerson.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BtnSearchPerson.Image = ((System.Drawing.Image)(resources.GetObject("BtnSearchPerson.Image")));
-            this.BtnSearchPerson.Location = new System.Drawing.Point(664, 40);
-            this.BtnSearchPerson.Name = "BtnSearchPerson";
-            this.BtnSearchPerson.Size = new System.Drawing.Size(56, 32);
-            this.BtnSearchPerson.TabIndex = 3;
-            this.BtnSearchPerson.UseVisualStyleBackColor = false;
-            // 
-            // BtnAddPerson
-            // 
-            this.BtnAddPerson.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnAddPerson.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.BtnAddPerson.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BtnAddPerson.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.BtnAddPerson.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.BtnAddPerson.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
-            this.BtnAddPerson.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAddPerson.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BtnAddPerson.Image = ((System.Drawing.Image)(resources.GetObject("BtnAddPerson.Image")));
-            this.BtnAddPerson.Location = new System.Drawing.Point(751, 40);
-            this.BtnAddPerson.Name = "BtnAddPerson";
-            this.BtnAddPerson.Size = new System.Drawing.Size(56, 32);
-            this.BtnAddPerson.TabIndex = 4;
-            this.BtnAddPerson.UseVisualStyleBackColor = false;
             // 
             // CtrDetailsPersonWithFilter
             // 

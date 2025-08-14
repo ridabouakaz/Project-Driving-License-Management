@@ -249,7 +249,7 @@ namespace DVLD_PresentationLayer
             // 
             this.LLEditPersonInfo.AutoSize = true;
             this.LLEditPersonInfo.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.LLEditPersonInfo.Location = new System.Drawing.Point(838, 69);
+            this.LLEditPersonInfo.Location = new System.Drawing.Point(820, 67);
             this.LLEditPersonInfo.Name = "LLEditPersonInfo";
             this.LLEditPersonInfo.Size = new System.Drawing.Size(144, 25);
             this.LLEditPersonInfo.TabIndex = 33;
@@ -440,7 +440,7 @@ namespace DVLD_PresentationLayer
             // 
             // PBImagePerson
             // 
-            this.PBImagePerson.Location = new System.Drawing.Point(824, 123);
+            this.PBImagePerson.Location = new System.Drawing.Point(815, 109);
             this.PBImagePerson.Name = "PBImagePerson";
             this.PBImagePerson.Size = new System.Drawing.Size(158, 166);
             this.PBImagePerson.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
