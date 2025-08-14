@@ -97,6 +97,12 @@
     <Compile Include="FOPersonInfo.Designer.cs">
       <DependentUpon>FOPersonInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="ForTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForTest.Designer.cs">
+      <DependentUpon>ForTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="FromMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FOPersonInfo.resx">
       <DependentUpon>FOPersonInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForTest.resx">
+      <DependentUpon>ForTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FromMain.resx">
       <DependentUpon>FromMain.cs</DependentUpon>

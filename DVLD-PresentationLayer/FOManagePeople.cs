@@ -160,7 +160,6 @@ namespace DVLD_PresentationLayer
         private void MTBsearch_TextChanged(object sender, EventArgs e)
         {
             ApplyFilter();
-
         }
 
       

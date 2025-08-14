@@ -89,6 +89,7 @@
             this.BtnSearchPerson.Size = new System.Drawing.Size(56, 32);
             this.BtnSearchPerson.TabIndex = 3;
             this.BtnSearchPerson.UseVisualStyleBackColor = false;
+            this.BtnSearchPerson.Click += new System.EventHandler(this.BtnSearchPerson_Click);
             // 
             // MTBsearch
             // 
@@ -116,6 +117,8 @@
             this.CBFindBy.Name = "CBFindBy";
             this.CBFindBy.Size = new System.Drawing.Size(262, 31);
             this.CBFindBy.TabIndex = 2;
+            this.CBFindBy.SelectedIndexChanged += new System.EventHandler(this.CBFindBy_SelectedIndexChanged);
+            this.CBFindBy.TextChanged += new System.EventHandler(this.CBFindBy_TextChanged);
             // 
             // LblFindBy
             // 
@@ -148,6 +151,7 @@
             this.Controls.Add(this.ctrDetailsPerson1);
             this.Name = "CtrDetailsPersonWithFilter";
             this.Size = new System.Drawing.Size(1101, 542);
+            this.Load += new System.EventHandler(this.CtrDetailsPersonWithFilter_Load);
             this.GBUserControlDetailesPersonWithFilter.ResumeLayout(false);
             this.GBUserControlDetailesPersonWithFilter.PerformLayout();
             this.ResumeLayout(false);
