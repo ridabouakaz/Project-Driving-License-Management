@@ -28,9 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ctrDetailsPerson1 = new DVLD_PresentationLayer.CtrDetailsPerson();
             this.GBUserControlDetailesPersonWithFilter = new System.Windows.Forms.GroupBox();
+            this.ctrDetailsPerson1 = new DVLD_PresentationLayer.CtrDetailsPerson();
             this.SuspendLayout();
+            // 
+            // GBUserControlDetailesPersonWithFilter
+            // 
+            this.GBUserControlDetailesPersonWithFilter.BackColor = System.Drawing.SystemColors.Window;
+            this.GBUserControlDetailesPersonWithFilter.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.GBUserControlDetailesPersonWithFilter.Location = new System.Drawing.Point(49, 48);
+            this.GBUserControlDetailesPersonWithFilter.Name = "GBUserControlDetailesPersonWithFilter";
+            this.GBUserControlDetailesPersonWithFilter.Size = new System.Drawing.Size(1010, 89);
+            this.GBUserControlDetailesPersonWithFilter.TabIndex = 1;
+            this.GBUserControlDetailesPersonWithFilter.TabStop = false;
+            this.GBUserControlDetailesPersonWithFilter.Text = "Filter";
             // 
             // ctrDetailsPerson1
             // 
@@ -41,15 +52,6 @@
             this.ctrDetailsPerson1.PersonData = null;
             this.ctrDetailsPerson1.Size = new System.Drawing.Size(1032, 383);
             this.ctrDetailsPerson1.TabIndex = 0;
-            // 
-            // GBUserControlDetailesPersonWithFilter
-            // 
-            this.GBUserControlDetailesPersonWithFilter.Location = new System.Drawing.Point(49, 48);
-            this.GBUserControlDetailesPersonWithFilter.Name = "GBUserControlDetailesPersonWithFilter";
-            this.GBUserControlDetailesPersonWithFilter.Size = new System.Drawing.Size(1010, 89);
-            this.GBUserControlDetailesPersonWithFilter.TabIndex = 1;
-            this.GBUserControlDetailesPersonWithFilter.TabStop = false;
-            this.GBUserControlDetailesPersonWithFilter.Text = "groupBox1";
             // 
             // CtrDetailsPersonWithFilter
             // 
@@ -65,8 +67,7 @@
         }
 
         #endregion
-
-        private CtrDetailsPerson ctrDetailsPerson1;
         private System.Windows.Forms.GroupBox GBUserControlDetailesPersonWithFilter;
+        private CtrDetailsPerson ctrDetailsPerson1;
     }
 }

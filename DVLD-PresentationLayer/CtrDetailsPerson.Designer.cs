@@ -388,7 +388,7 @@ namespace DVLD_PresentationLayer
             // 
             // GBUserControlDetailesPerson
             // 
-            this.GBUserControlDetailesPerson.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(235)))), ((int)(((byte)(245)))));
+            this.GBUserControlDetailesPerson.BackColor = System.Drawing.Color.White;
             this.GBUserControlDetailesPerson.Controls.Add(this.pictureBox1);
             this.GBUserControlDetailesPerson.Controls.Add(this.LblValuePersonID);
             this.GBUserControlDetailesPerson.Controls.Add(this.LblvalueCountry);
