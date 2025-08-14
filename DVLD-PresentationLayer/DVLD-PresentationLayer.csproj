@@ -61,6 +61,12 @@
     <Compile Include="CtrDetailsPerson.Designer.cs">
       <DependentUpon>CtrDetailsPerson.cs</DependentUpon>
     </Compile>
+    <Compile Include="CtrDetailsPersonWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrDetailsPersonWithFilter.Designer.cs">
+      <DependentUpon>CtrDetailsPersonWithFilter.cs</DependentUpon>
+    </Compile>
     <Compile Include="FOAddEditPersonInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CtrDetailsPerson.resx">
       <DependentUpon>CtrDetailsPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrDetailsPersonWithFilter.resx">
+      <DependentUpon>CtrDetailsPersonWithFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FOAddEditPersonInfo.resx">
       <DependentUpon>FOAddEditPersonInfo.cs</DependentUpon>

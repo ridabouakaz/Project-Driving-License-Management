@@ -65,7 +65,7 @@
             this.BtnAddSave.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BtnAddSave.Image = ((System.Drawing.Image)(resources.GetObject("BtnAddSave.Image")));
             this.BtnAddSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAddSave.Location = new System.Drawing.Point(990, 484);
+            this.BtnAddSave.Location = new System.Drawing.Point(923, 452);
             this.BtnAddSave.Name = "BtnAddSave";
             this.BtnAddSave.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.BtnAddSave.Size = new System.Drawing.Size(130, 48);
