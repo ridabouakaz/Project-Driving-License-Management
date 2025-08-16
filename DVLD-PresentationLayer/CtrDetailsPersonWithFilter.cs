@@ -16,26 +16,24 @@ namespace DVLD_PresentationLayer
     {
 
         private clsPerson _Person;
-
         private void ApplyFind()
         {
-            
+
             switch (CBFindBy.SelectedItem.ToString())
             {
                 case "Person ID":
-                    this.MTBsearch.Mask = "000000";
-                    this.MTBsearch.PromptChar = ' ';
                     if (int.TryParse(MTBsearch.Text, out int id))
                         _Person = clsPerson.Find(id);
                     break;
                 case "National No":
-                    this.MTBsearch.Mask = "";
-                    _Person = clsPerson.Find(MTBsearch.Text);
+                    if (!string.IsNullOrWhiteSpace(MTBsearch.Text))
+                        _Person = clsPerson.Find(MTBsearch.Text);
                     break;
             }
+            MTBsearch.Text = "";
             if (_Person == null)
             {
-                MessageBox.Show("No person found with the given criteria.", "Search Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No person found with the given criteria.", "Search Result", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             ctrDetailsPerson1.PersonData = _Person;
@@ -62,14 +60,27 @@ namespace DVLD_PresentationLayer
 
         private void CBFindBy_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MTBsearch.Visible = CBFindBy.SelectedItem.ToString() != "None";
-            ApplyFind();
-        }
-        private void CBFindBy_TextChanged(object sender, EventArgs e)
-        {
-            ApplyFind();
+            string selected = CBFindBy.SelectedItem.ToString();
+            switch (selected)
+            {
+                case "Person ID":
+                    MTBsearch.Mask = "000000";
+                    MTBsearch.PromptChar = ' ';
+                    MTBsearch.Visible = true;
+                    break;
 
+                case "National No":
+                    MTBsearch.Mask = "";
+                    MTBsearch.Visible = true;
+                    break;
+
+                case "None":
+                    MTBsearch.Visible = false;
+                    MTBsearch.Mask = "";
+                    break;
+            }
         }
+
 
         private void CtrDetailsPersonWithFilter_Load(object sender, EventArgs e)
         {

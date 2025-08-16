@@ -118,7 +118,6 @@
             this.CBFindBy.Size = new System.Drawing.Size(262, 31);
             this.CBFindBy.TabIndex = 2;
             this.CBFindBy.SelectedIndexChanged += new System.EventHandler(this.CBFindBy_SelectedIndexChanged);
-            this.CBFindBy.TextChanged += new System.EventHandler(this.CBFindBy_TextChanged);
             // 
             // LblFindBy
             // 
