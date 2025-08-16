@@ -21,6 +21,9 @@ namespace DVLD_PresentationLayer
 {
     public partial class FOAddEditPersonInfo : Form
     {
+
+        public delegate void DataBackEventHandler(object sender, int PersonID);
+        public event DataBackEventHandler DataBack;
         public enum enMode { AddNew = 0, Update = 1 };
         private enMode _Mode;
         int _PersonID;
@@ -150,8 +153,6 @@ namespace DVLD_PresentationLayer
             }
         }
 
-        public delegate void DataBackEventHandler(object sender, int PersonID);
-        public event DataBackEventHandler DataBack;
         private void CtrDetailsPerson1_SaveButtonClick(object sender, EventArgs e)
         {
             string tempImagePath = _Person.ImagePath;
@@ -164,7 +165,8 @@ namespace DVLD_PresentationLayer
             {
                 return;
             }
-            _Person.ImagePath = tempImagePath;
+            //_Person.ImagePath = tempImagePath;
+            ctrDetailsPerson_Edit_Add_1.ImagePath = tempImagePath;
             int countryID = clsCountry.Find(ctrDetailsPerson_Edit_Add_1.CountryComboBox.Text).ID;
             _Person.FirstName = ctrDetailsPerson_Edit_Add_1.FirstName.Trim();
             _Person.SecondName = ctrDetailsPerson_Edit_Add_1.SecondName.Trim();
