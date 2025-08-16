@@ -47,6 +47,7 @@ namespace DVLD_PresentationLayer
         {
             FOAddEditPersonInfo fOAddEditPersonInfo = new FOAddEditPersonInfo();
             fOAddEditPersonInfo.DataBack += FOAddEditPersonInfo_DataBack;
+            fOAddEditPersonInfo.ShowDialog();
         }
         private void FOAddEditPersonInfo_DataBack(object sender, int PersonID)
         {

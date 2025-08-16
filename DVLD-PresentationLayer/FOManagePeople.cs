@@ -79,7 +79,7 @@ namespace DVLD_PresentationLayer
                 File.Delete(clsPerson.ReturnPathDeletePeople((int)dGViewShowInformation.CurrentRow.Cells[0].Value));
                 if (clsPerson.DeletePeople((int)dGViewShowInformation.CurrentRow.Cells[0].Value))
                 {
-                   MessageBox.Show("person Deleted Successfully.");
+                    MessageBox.Show("person Deleted Successfully.");
                     _RefreshPeopleList();
                 }
                 else

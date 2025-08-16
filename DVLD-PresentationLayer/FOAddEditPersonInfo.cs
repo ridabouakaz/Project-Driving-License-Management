@@ -185,8 +185,8 @@ namespace DVLD_PresentationLayer
             if (_Person.Save())
             {
                 MessageBox.Show("✅ Data Saved Successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                DataBack?.Invoke(this, _PersonID);
                 _Mode = enMode.Update;
+                DataBack?.Invoke(this, _Person.ID);
             }
             else
             {
