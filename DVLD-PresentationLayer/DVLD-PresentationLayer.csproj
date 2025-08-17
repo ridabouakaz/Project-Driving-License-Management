@@ -73,6 +73,12 @@
     <Compile Include="FOAddEditPersonInfo.Designer.cs">
       <DependentUpon>FOAddEditPersonInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="FOAddEditUserInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FOAddEditUserInfo.Designer.cs">
+      <DependentUpon>FOAddEditUserInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FOLoginScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FOAddEditPersonInfo.resx">
       <DependentUpon>FOAddEditPersonInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOAddEditUserInfo.resx">
+      <DependentUpon>FOAddEditUserInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FOLoginScreen.resx">
       <DependentUpon>FOLoginScreen.cs</DependentUpon>
