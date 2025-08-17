@@ -31,8 +31,8 @@
             this.LblAddEditUser = new System.Windows.Forms.Label();
             this.TCAddEditUser = new System.Windows.Forms.TabControl();
             this.TPPersonalInfo = new System.Windows.Forms.TabPage();
-            this.ctrDetailsPersonWithFilter1 = new DVLD_PresentationLayer.CtrDetailsPersonWithFilter();
             this.TPLoginInfo = new System.Windows.Forms.TabPage();
+            this.ctrDetailsPersonWithFilter1 = new DVLD_PresentationLayer.CtrDetailsPersonWithFilter();
             this.TCAddEditUser.SuspendLayout();
             this.TPPersonalInfo.SuspendLayout();
             this.SuspendLayout();
@@ -54,7 +54,7 @@
             // 
             this.TCAddEditUser.Controls.Add(this.TPPersonalInfo);
             this.TCAddEditUser.Controls.Add(this.TPLoginInfo);
-            this.TCAddEditUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TCAddEditUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TCAddEditUser.Location = new System.Drawing.Point(12, 85);
             this.TCAddEditUser.Name = "TCAddEditUser";
             this.TCAddEditUser.SelectedIndex = 0;
@@ -65,35 +65,34 @@
             // 
             this.TPPersonalInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TPPersonalInfo.Controls.Add(this.ctrDetailsPersonWithFilter1);
-            this.TPPersonalInfo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.TPPersonalInfo.Location = new System.Drawing.Point(4, 31);
+            this.TPPersonalInfo.Font = new System.Drawing.Font("Segoe UI Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TPPersonalInfo.Location = new System.Drawing.Point(4, 38);
             this.TPPersonalInfo.Name = "TPPersonalInfo";
             this.TPPersonalInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.TPPersonalInfo.Size = new System.Drawing.Size(1346, 753);
+            this.TPPersonalInfo.Size = new System.Drawing.Size(1346, 746);
             this.TPPersonalInfo.TabIndex = 0;
             this.TPPersonalInfo.Text = "Personal Info";
             this.TPPersonalInfo.UseVisualStyleBackColor = true;
+            // 
+            // TPLoginInfo
+            // 
+            this.TPLoginInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TPLoginInfo.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TPLoginInfo.Location = new System.Drawing.Point(4, 38);
+            this.TPLoginInfo.Name = "TPLoginInfo";
+            this.TPLoginInfo.Padding = new System.Windows.Forms.Padding(3);
+            this.TPLoginInfo.Size = new System.Drawing.Size(1346, 746);
+            this.TPLoginInfo.TabIndex = 1;
+            this.TPLoginInfo.Text = "Login Info";
+            this.TPLoginInfo.UseVisualStyleBackColor = true;
             // 
             // ctrDetailsPersonWithFilter1
             // 
             this.ctrDetailsPersonWithFilter1.BackColor = System.Drawing.Color.White;
             this.ctrDetailsPersonWithFilter1.Location = new System.Drawing.Point(0, 0);
-            this.ctrDetailsPersonWithFilter1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ctrDetailsPersonWithFilter1.Name = "ctrDetailsPersonWithFilter1";
-            this.ctrDetailsPersonWithFilter1.Size = this.ctrDetailsPersonWithFilter1.PreferredSize;
+            this.ctrDetailsPersonWithFilter1.Size = new System.Drawing.Size(1342, 476);
             this.ctrDetailsPersonWithFilter1.TabIndex = 0;
-            // 
-            // TPLoginInfo
-            // 
-            this.TPLoginInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TPLoginInfo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.TPLoginInfo.Location = new System.Drawing.Point(4, 31);
-            this.TPLoginInfo.Name = "TPLoginInfo";
-            this.TPLoginInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.TPLoginInfo.Size = new System.Drawing.Size(1346, 753);
-            this.TPLoginInfo.TabIndex = 1;
-            this.TPLoginInfo.Text = "Login Info";
-            this.TPLoginInfo.UseVisualStyleBackColor = true;
             // 
             // FOAddEditUserInfo
             // 

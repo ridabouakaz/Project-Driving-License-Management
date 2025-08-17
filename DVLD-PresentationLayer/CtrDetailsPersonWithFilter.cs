@@ -42,7 +42,6 @@ namespace DVLD_PresentationLayer
         {
             InitializeComponent();
         }
-
         private void BtnAddPerson_Click(object sender, EventArgs e)
         {
             FOAddEditPersonInfo fOAddEditPersonInfo = new FOAddEditPersonInfo();
