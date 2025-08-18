@@ -97,7 +97,6 @@
             this.BtnAddNext.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnAddNext.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnAddNext.UseVisualStyleBackColor = false;
-
             // 
             // TPLoginInfo
             // 
@@ -106,7 +105,7 @@
             this.TPLoginInfo.Location = new System.Drawing.Point(4, 37);
             this.TPLoginInfo.Name = "TPLoginInfo";
             this.TPLoginInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.TPLoginInfo.Size = new System.Drawing.Size(978, 620);
+            this.TPLoginInfo.Size = new System.Drawing.Size(978, 644);
             this.TPLoginInfo.TabIndex = 1;
             this.TPLoginInfo.Text = "Login Info";
             this.TPLoginInfo.UseVisualStyleBackColor = true;
