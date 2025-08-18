@@ -50,14 +50,13 @@
             this.GBUserControlDetailesPersonWithFilter.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.GBUserControlDetailesPersonWithFilter.Location = new System.Drawing.Point(49, 48);
             this.GBUserControlDetailesPersonWithFilter.Name = "GBUserControlDetailesPersonWithFilter";
-            this.GBUserControlDetailesPersonWithFilter.Size = new System.Drawing.Size(1010, 89);
+            this.GBUserControlDetailesPersonWithFilter.Size = new System.Drawing.Size(1066, 89);
             this.GBUserControlDetailesPersonWithFilter.TabIndex = 1;
             this.GBUserControlDetailesPersonWithFilter.TabStop = false;
             this.GBUserControlDetailesPersonWithFilter.Text = "Filter";
             // 
             // BtnAddPerson
             // 
-            this.BtnAddPerson.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnAddPerson.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.BtnAddPerson.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.BtnAddPerson.FlatAppearance.BorderColor = System.Drawing.Color.Black;
@@ -66,7 +65,7 @@
             this.BtnAddPerson.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAddPerson.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BtnAddPerson.Image = ((System.Drawing.Image)(resources.GetObject("BtnAddPerson.Image")));
-            this.BtnAddPerson.Location = new System.Drawing.Point(751, 40);
+            this.BtnAddPerson.Location = new System.Drawing.Point(830, 40);
             this.BtnAddPerson.Name = "BtnAddPerson";
             this.BtnAddPerson.Size = new System.Drawing.Size(56, 32);
             this.BtnAddPerson.TabIndex = 4;
@@ -75,7 +74,6 @@
             // 
             // BtnSearchPerson
             // 
-            this.BtnSearchPerson.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnSearchPerson.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.BtnSearchPerson.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.BtnSearchPerson.FlatAppearance.BorderColor = System.Drawing.Color.Black;
@@ -84,7 +82,7 @@
             this.BtnSearchPerson.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSearchPerson.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BtnSearchPerson.Image = ((System.Drawing.Image)(resources.GetObject("BtnSearchPerson.Image")));
-            this.BtnSearchPerson.Location = new System.Drawing.Point(664, 40);
+            this.BtnSearchPerson.Location = new System.Drawing.Point(726, 39);
             this.BtnSearchPerson.Name = "BtnSearchPerson";
             this.BtnSearchPerson.Size = new System.Drawing.Size(56, 32);
             this.BtnSearchPerson.TabIndex = 3;
@@ -97,7 +95,7 @@
             this.MTBsearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.MTBsearch.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.MTBsearch.ForeColor = System.Drawing.Color.Black;
-            this.MTBsearch.Location = new System.Drawing.Point(413, 42);
+            this.MTBsearch.Location = new System.Drawing.Point(438, 40);
             this.MTBsearch.Name = "MTBsearch";
             this.MTBsearch.Size = new System.Drawing.Size(213, 30);
             this.MTBsearch.TabIndex = 2;
@@ -113,7 +111,7 @@
             "None",
             "Person ID",
             "National No"});
-            this.CBFindBy.Location = new System.Drawing.Point(126, 42);
+            this.CBFindBy.Location = new System.Drawing.Point(154, 40);
             this.CBFindBy.Name = "CBFindBy";
             this.CBFindBy.Size = new System.Drawing.Size(262, 31);
             this.CBFindBy.TabIndex = 2;
@@ -135,10 +133,10 @@
             // 
             this.ctrDetailsPerson1.BackColor = System.Drawing.Color.White;
             this.ctrDetailsPerson1.ImagePath = null;
-            this.ctrDetailsPerson1.Location = new System.Drawing.Point(52, 142);
+            this.ctrDetailsPerson1.Location = new System.Drawing.Point(37, 152);
             this.ctrDetailsPerson1.Name = "ctrDetailsPerson1";
             this.ctrDetailsPerson1.PersonData = null;
-            this.ctrDetailsPerson1.Size = new System.Drawing.Size(1006, 387);
+            this.ctrDetailsPerson1.Size = new System.Drawing.Size(1091, 387);
             this.ctrDetailsPerson1.TabIndex = 2;
             // 
             // CtrDetailsPersonWithFilter
@@ -149,7 +147,7 @@
             this.Controls.Add(this.ctrDetailsPerson1);
             this.Controls.Add(this.GBUserControlDetailesPersonWithFilter);
             this.Name = "CtrDetailsPersonWithFilter";
-            this.Size = new System.Drawing.Size(1101, 542);
+            this.Size = new System.Drawing.Size(1141, 542);
             this.Load += new System.EventHandler(this.CtrDetailsPersonWithFilter_Load);
             this.GBUserControlDetailesPersonWithFilter.ResumeLayout(false);
             this.GBUserControlDetailesPersonWithFilter.PerformLayout();

@@ -266,7 +266,5 @@ namespace DVLD_PresentationLayer
             LastNameValidating?.Invoke(this, e);
 
         }
-
-      
     }
 }
