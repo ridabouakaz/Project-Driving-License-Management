@@ -48,9 +48,9 @@
             this.GBUserControlDetailesPersonWithFilter.Controls.Add(this.CBFindBy);
             this.GBUserControlDetailesPersonWithFilter.Controls.Add(this.LblFindBy);
             this.GBUserControlDetailesPersonWithFilter.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.GBUserControlDetailesPersonWithFilter.Location = new System.Drawing.Point(49, 48);
+            this.GBUserControlDetailesPersonWithFilter.Location = new System.Drawing.Point(21, 48);
             this.GBUserControlDetailesPersonWithFilter.Name = "GBUserControlDetailesPersonWithFilter";
-            this.GBUserControlDetailesPersonWithFilter.Size = new System.Drawing.Size(1066, 89);
+            this.GBUserControlDetailesPersonWithFilter.Size = new System.Drawing.Size(1071, 89);
             this.GBUserControlDetailesPersonWithFilter.TabIndex = 1;
             this.GBUserControlDetailesPersonWithFilter.TabStop = false;
             this.GBUserControlDetailesPersonWithFilter.Text = "Filter";
@@ -133,10 +133,10 @@
             // 
             this.ctrDetailsPerson1.BackColor = System.Drawing.Color.White;
             this.ctrDetailsPerson1.ImagePath = null;
-            this.ctrDetailsPerson1.Location = new System.Drawing.Point(37, 152);
+            this.ctrDetailsPerson1.Location = new System.Drawing.Point(11, 143);
             this.ctrDetailsPerson1.Name = "ctrDetailsPerson1";
             this.ctrDetailsPerson1.PersonData = null;
-            this.ctrDetailsPerson1.Size = new System.Drawing.Size(1091, 387);
+            this.ctrDetailsPerson1.Size = new System.Drawing.Size(1081, 387);
             this.ctrDetailsPerson1.TabIndex = 2;
             // 
             // CtrDetailsPersonWithFilter
@@ -147,7 +147,7 @@
             this.Controls.Add(this.ctrDetailsPerson1);
             this.Controls.Add(this.GBUserControlDetailesPersonWithFilter);
             this.Name = "CtrDetailsPersonWithFilter";
-            this.Size = new System.Drawing.Size(1141, 542);
+            this.Size = new System.Drawing.Size(1132, 542);
             this.Load += new System.EventHandler(this.CtrDetailsPersonWithFilter_Load);
             this.GBUserControlDetailesPersonWithFilter.ResumeLayout(false);
             this.GBUserControlDetailesPersonWithFilter.PerformLayout();
