@@ -108,7 +108,6 @@
             this.CBFindBy.ForeColor = System.Drawing.Color.Black;
             this.CBFindBy.FormattingEnabled = true;
             this.CBFindBy.Items.AddRange(new object[] {
-            "None",
             "Person ID",
             "National No"});
             this.CBFindBy.Location = new System.Drawing.Point(154, 40);

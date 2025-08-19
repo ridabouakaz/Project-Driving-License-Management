@@ -177,13 +177,15 @@ namespace DVLD_BusinessLayer
         {
             return clsUserDataAccess.DeleteUser(ID);
         }
-     
+
         public static bool isUsersExist(int ID)
         {
             return clsUserDataAccess.IsUserExist(ID);
         }
-       
+        public static bool isUsersExistByPersonID(int ID)
+        {
+            return clsUserDataAccess.IsUserExistByPersonID(ID);
+        }
 
-    
-}
+    }
 }

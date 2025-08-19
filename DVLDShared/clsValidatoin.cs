@@ -15,7 +15,20 @@ namespace DVLDShared
         {
             string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
             var Regex = new Regex(pattern);
-            return Regex.IsMatch(EmailAddress) ;
+            return Regex.IsMatch(EmailAddress);
         }
+
+        public static bool ValidateRequiredField(string password, string passwordConfirm)
+        {
+            if (password!= passwordConfirm)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+        
     }
 }

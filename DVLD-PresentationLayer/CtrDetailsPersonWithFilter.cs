@@ -73,11 +73,6 @@ namespace DVLD_PresentationLayer
                     MTBsearch.Mask = "";
                     MTBsearch.Visible = true;
                     break;
-
-                case "None":
-                    MTBsearch.Visible = false;
-                    MTBsearch.Mask = "";
-                    break;
             }
         }
         private void CtrDetailsPersonWithFilter_Load(object sender, EventArgs e)
@@ -94,6 +89,14 @@ namespace DVLD_PresentationLayer
                 ctrDetailsPerson1.PersonData = _Person;
             }
         }
-        
+        public int PersonID
+        {
+            get { return _Person.ID; }
+            set
+            {
+                _Person.ID = value;
+            }
+        }
+
     }
 }

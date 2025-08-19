@@ -165,6 +165,7 @@
     <Compile Include="clsCountryData.cs" />
     <Compile Include="clsDataAccessSettings.cs" />
     <Compile Include="clsPersonDataAccess.cs" />
+    <Compile Include="clsUserDataAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
