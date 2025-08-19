@@ -18,7 +18,10 @@ namespace DVLD_PresentationLayer
         }
         private void BtnAddNext_Click(object sender, EventArgs e)
         {
-
+            if (ctrDetailsPersonWithFilter1.PersonData ==null)
+            {
+                MessageBox.Show("Please enter the person data before proceeding.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

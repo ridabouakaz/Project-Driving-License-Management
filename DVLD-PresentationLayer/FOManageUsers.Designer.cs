@@ -273,7 +273,7 @@ namespace DVLD_PresentationLayer
             "User Name",
             "Person ID",
             "Full Name",
-            "Is Active",});
+            "Is ActiveStatus",});
             this.CBFilterBy.Location = new System.Drawing.Point(154, 245);
             this.CBFilterBy.Name = "CBFilterBy";
             this.CBFilterBy.Size = new System.Drawing.Size(208, 31);

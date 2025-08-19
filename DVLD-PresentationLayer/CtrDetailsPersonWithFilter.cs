@@ -80,13 +80,20 @@ namespace DVLD_PresentationLayer
                     break;
             }
         }
-
-
         private void CtrDetailsPersonWithFilter_Load(object sender, EventArgs e)
         {
             CBFindBy.SelectedIndex = 0;
         }
 
+        public clsPerson PersonData
+        {
+            get { return _Person; }
+            set
+            {
+                _Person = value;
+                ctrDetailsPerson1.PersonData = _Person;
+            }
+        }
         
     }
 }
