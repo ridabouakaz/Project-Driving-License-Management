@@ -44,7 +44,7 @@
             this.LblPersonInfo.BackColor = System.Drawing.Color.Transparent;
             this.LblPersonInfo.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold);
             this.LblPersonInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
-            this.LblPersonInfo.Location = new System.Drawing.Point(421, 9);
+            this.LblPersonInfo.Location = new System.Drawing.Point(483, 9);
             this.LblPersonInfo.Name = "LblPersonInfo";
             this.LblPersonInfo.Size = new System.Drawing.Size(269, 50);
             this.LblPersonInfo.TabIndex = 2;
@@ -65,7 +65,7 @@
             this.BtnAddSave.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BtnAddSave.Image = ((System.Drawing.Image)(resources.GetObject("BtnAddSave.Image")));
             this.BtnAddSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAddSave.Location = new System.Drawing.Point(922, 451);
+            this.BtnAddSave.Location = new System.Drawing.Point(1045, 454);
             this.BtnAddSave.Name = "BtnAddSave";
             this.BtnAddSave.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.BtnAddSave.Size = new System.Drawing.Size(130, 48);
@@ -83,7 +83,7 @@
             this.ctrDetailsPerson1.Location = new System.Drawing.Point(31, 68);
             this.ctrDetailsPerson1.Name = "ctrDetailsPerson1";
             this.ctrDetailsPerson1.PersonData = null;
-            this.ctrDetailsPerson1.Size = new System.Drawing.Size(1101, 421);
+            this.ctrDetailsPerson1.Size = new System.Drawing.Size(1153, 421);
             this.ctrDetailsPerson1.TabIndex = 13;
             // 
             // FOPersonInfo
@@ -91,7 +91,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1090, 544);
+            this.ClientSize = new System.Drawing.Size(1214, 544);
             this.Controls.Add(this.BtnAddSave);
             this.Controls.Add(this.ctrDetailsPerson1);
             this.Controls.Add(this.LblPersonInfo);

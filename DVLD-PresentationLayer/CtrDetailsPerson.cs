@@ -116,7 +116,9 @@ namespace DVLD_PresentationLayer
         {
             set => PBImagePerson.Image = value;
         }
-        private void LLEditPersonInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+
+  
+          private void LLEditPersonInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             OFDialogPictureImage.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
             OFDialogPictureImage.FilterIndex = 1;
@@ -132,6 +134,5 @@ namespace DVLD_PresentationLayer
                 // ...
             }
         }
-
     }
 }

@@ -16,7 +16,9 @@ namespace DVLD_PresentationLayer
         {
             InitializeComponent();
         }
+        private void BtnAddNext_Click(object sender, EventArgs e)
+        {
 
-        
+        }
     }
 }
