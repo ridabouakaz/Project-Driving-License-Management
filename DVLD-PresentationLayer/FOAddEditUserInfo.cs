@@ -82,5 +82,11 @@ namespace DVLD_PresentationLayer
         {
             ValidateRequiredField(Password, PasswordTextBox, e);
         }
+
+        private void TBUserName_Validating(object sender, CancelEventArgs e)
+        {
+            ValidateRequiredField(UserName, UserNameTextBox, e);
+
+        }
     }
 }

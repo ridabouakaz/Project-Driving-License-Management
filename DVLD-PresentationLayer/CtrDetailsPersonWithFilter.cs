@@ -91,11 +91,7 @@ namespace DVLD_PresentationLayer
         }
         public int PersonID
         {
-            get { return _Person.ID; }
-            set
-            {
-                _Person.ID = value;
-            }
+            get { return _Person?.ID ?? 0; }
         }
 
     }

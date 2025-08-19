@@ -36,7 +36,7 @@
             this.ctrDetailsPersonWithFilter1 = new DVLD_PresentationLayer.CtrDetailsPersonWithFilter();
             this.BtnAddNext = new System.Windows.Forms.Button();
             this.TPLoginInfo = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.LblIsActive = new System.Windows.Forms.Label();
+            this.CBIsActive = new System.Windows.Forms.CheckBox();
             this.TBPasswordConfirm = new System.Windows.Forms.TextBox();
             this.TBPassword = new System.Windows.Forms.TextBox();
             this.TBUserName = new System.Windows.Forms.TextBox();
@@ -50,6 +50,7 @@
             this.LblUserName = new System.Windows.Forms.Label();
             this.LblPassword = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.TCAddEditUser)).BeginInit();
             this.TCAddEditUser.SuspendLayout();
             this.TPPersonalInfo.SuspendLayout();
@@ -144,7 +145,7 @@
             // 
             this.TPLoginInfo.BackColor = System.Drawing.Color.White;
             this.TPLoginInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TPLoginInfo.Controls.Add(this.LblIsActive);
+            this.TPLoginInfo.Controls.Add(this.CBIsActive);
             this.TPLoginInfo.Controls.Add(this.TBPasswordConfirm);
             this.TPLoginInfo.Controls.Add(this.TBPassword);
             this.TPLoginInfo.Controls.Add(this.TBUserName);
@@ -169,17 +170,15 @@
             this.TPLoginInfo.Text = "Login Info";
             this.TPLoginInfo.ThemesEnabled = false;
             // 
-            // LblIsActive
+            // CBIsActive
             // 
-            this.LblIsActive.AutoSize = true;
-            this.LblIsActive.BackColor = System.Drawing.Color.Transparent;
-            this.LblIsActive.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblIsActive.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblIsActive.Location = new System.Drawing.Point(295, 322);
-            this.LblIsActive.Name = "LblIsActive";
-            this.LblIsActive.Size = new System.Drawing.Size(88, 28);
-            this.LblIsActive.TabIndex = 56;
-            this.LblIsActive.Text = "Is Active";
+            this.CBIsActive.AutoSize = true;
+            this.CBIsActive.Location = new System.Drawing.Point(291, 315);
+            this.CBIsActive.Name = "CBIsActive";
+            this.CBIsActive.Size = new System.Drawing.Size(82, 21);
+            this.CBIsActive.TabIndex = 57;
+            this.CBIsActive.Text = "Is Active";
+            this.CBIsActive.UseVisualStyleBackColor = true;
             // 
             // TBPasswordConfirm
             // 
@@ -215,6 +214,7 @@
             this.TBUserName.Name = "TBUserName";
             this.TBUserName.Size = new System.Drawing.Size(170, 30);
             this.TBUserName.TabIndex = 53;
+            this.TBUserName.Validating += new System.ComponentModel.CancelEventHandler(this.TBUserName_Validating);
             // 
             // LblValueUserID
             // 
@@ -328,6 +328,16 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(291, 315);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(82, 21);
+            this.checkBox1.TabIndex = 57;
+            this.checkBox1.Text = "Is Active";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // FOAddEditUserInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -377,7 +387,8 @@
         private System.Windows.Forms.TextBox TBPasswordConfirm;
         private System.Windows.Forms.TextBox TBPassword;
         private System.Windows.Forms.TextBox TBUserName;
-        private System.Windows.Forms.Label LblIsActive;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.CheckBox CBIsActive;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
