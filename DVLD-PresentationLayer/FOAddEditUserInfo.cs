@@ -86,7 +86,7 @@ namespace DVLD_PresentationLayer
             Password= _User.Password;
             PasswordConfirm = _User.Password;
             IsActive = _User.isActive;
-
+            ctrDetailsPersonWithFilter1.PersonData = clsPerson.Find(_User.PersonID);
         }
 
         private void ValidateRequiredField(string value, TextBox textBox, CancelEventArgs e)
@@ -114,6 +114,7 @@ namespace DVLD_PresentationLayer
                 MessageBox.Show("Selected Person Alredy has a User , choose another one.", "Selected another Person", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;
             }
+            TPLoginInfo.Enabled = true;
             TCAddEditUser.SelectedTab = TPLoginInfo;
         }
 
