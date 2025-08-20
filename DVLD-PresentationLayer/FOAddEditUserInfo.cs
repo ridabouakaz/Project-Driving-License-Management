@@ -5,19 +5,22 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static DVLDShared.DVLDShared;
 
 namespace DVLD_PresentationLayer
 {
     public partial class FOAddEditUserInfo : Form
     {
-        public FOAddEditUserInfo()
-        {
-            InitializeComponent();
-        }
+
+        public enum enMode { AddNew = 0, Update = 1 };
+        private enMode _Mode;
+        int _UserID;
+        clsUser _User;
         public string UserName
         {
             get => TBUserName.Text.Trim();
@@ -36,6 +39,56 @@ namespace DVLD_PresentationLayer
             set => TBPasswordConfirm.Text = value;
         }
         public TextBox PasswordConfirmTextBox => TBPasswordConfirm;
+
+        public ActiveStatus IsActive
+        {
+            get => CBIsActive.Checked ? ActiveStatus.Yes : ActiveStatus.No;
+            set
+            {
+                if (value == ActiveStatus.Yes)
+                    CBIsActive.Checked = true;
+                else
+                    CBIsActive.Checked = false;
+            }
+        }
+        public FOAddEditUserInfo()
+        {
+            InitializeComponent();
+            _Mode = enMode.AddNew;
+            LblAddEditUser.Text = "Add New User";
+            _User = new clsUser();
+            return;
+        }
+        public FOAddEditUserInfo(int UserID)
+        {
+            InitializeComponent();
+            _UserID = UserID;
+            _Mode = enMode.Update;
+            _LoadData();
+
+        }
+        private void _LoadData()
+        {
+
+
+            _User = clsUser.Find(_UserID);
+
+            if (_UserID == null)
+            {
+                MessageBox.Show("This form will be closed because No Contact with ID = " + _UserID);
+                this.Close();
+
+                return;
+            }
+            LblAddEditUser.Text = "Update User";
+            LblValueUserID.Text = _User.ID.ToString();
+            UserName = _User.UserName;
+            Password= _User.Password;
+            PasswordConfirm = _User.Password;
+            IsActive = _User.isActive;
+
+        }
+
         private void ValidateRequiredField(string value, TextBox textBox, CancelEventArgs e)
         {
             if (string.IsNullOrWhiteSpace(value))
@@ -87,6 +140,41 @@ namespace DVLD_PresentationLayer
         {
             ValidateRequiredField(UserName, UserNameTextBox, e);
 
+        }
+
+        private void BtnAddClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
+
+        private void BtnAddSave_Click(object sender, EventArgs e)
+        {
+            if (!this.ValidateChildren())
+            {
+                MessageBox.Show("❌ Please correct the errors before saving.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            _User.UserName = UserName.Trim();
+            _User.Password = Password.Trim();
+            _User.isActive= IsActive;
+            _User.PersonID = ctrDetailsPersonWithFilter1.PersonID;
+            if (_User.Save())
+            {
+                MessageBox.Show("✅ Data Saved Successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                _Mode = enMode.Update;
+            }
+            else
+            {
+                MessageBox.Show("❌ Error: Data was not saved successfully.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            this.Close();
+        }
+
+        private void FOAddEditUserInfo_Load(object sender, EventArgs e)
+        {
+            TPLoginInfo.Enabled = false;
         }
     }
 }

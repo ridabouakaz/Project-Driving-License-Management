@@ -33,7 +33,6 @@
             this.LblAddEditUser = new System.Windows.Forms.Label();
             this.TCAddEditUser = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
             this.TPPersonalInfo = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.ctrDetailsPersonWithFilter1 = new DVLD_PresentationLayer.CtrDetailsPersonWithFilter();
             this.BtnAddNext = new System.Windows.Forms.Button();
             this.TPLoginInfo = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.CBIsActive = new System.Windows.Forms.CheckBox();
@@ -51,6 +50,9 @@
             this.LblPassword = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.BtnAddClose = new System.Windows.Forms.Button();
+            this.BtnAddSave = new System.Windows.Forms.Button();
+            this.ctrDetailsPersonWithFilter1 = new DVLD_PresentationLayer.CtrDetailsPersonWithFilter();
             ((System.ComponentModel.ISupportInitialize)(this.TCAddEditUser)).BeginInit();
             this.TCAddEditUser.SuspendLayout();
             this.TPPersonalInfo.SuspendLayout();
@@ -111,15 +113,6 @@
             this.TPPersonalInfo.Text = "Personal Info";
             this.TPPersonalInfo.ThemesEnabled = false;
             // 
-            // ctrDetailsPersonWithFilter1
-            // 
-            this.ctrDetailsPersonWithFilter1.BackColor = System.Drawing.Color.White;
-            this.ctrDetailsPersonWithFilter1.Location = new System.Drawing.Point(21, 20);
-            this.ctrDetailsPersonWithFilter1.Name = "ctrDetailsPersonWithFilter1";
-            this.ctrDetailsPersonWithFilter1.PersonData = null;
-            this.ctrDetailsPersonWithFilter1.Size = new System.Drawing.Size(979, 478);
-            this.ctrDetailsPersonWithFilter1.TabIndex = 6;
-            // 
             // BtnAddNext
             // 
             this.BtnAddNext.BackColor = System.Drawing.Color.White;
@@ -173,9 +166,10 @@
             // CBIsActive
             // 
             this.CBIsActive.AutoSize = true;
+            this.CBIsActive.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CBIsActive.Location = new System.Drawing.Point(291, 315);
             this.CBIsActive.Name = "CBIsActive";
-            this.CBIsActive.Size = new System.Drawing.Size(82, 21);
+            this.CBIsActive.Size = new System.Drawing.Size(91, 24);
             this.CBIsActive.TabIndex = 57;
             this.CBIsActive.Text = "Is Active";
             this.CBIsActive.UseVisualStyleBackColor = true;
@@ -186,7 +180,7 @@
             this.TBPasswordConfirm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TBPasswordConfirm.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.TBPasswordConfirm.ForeColor = System.Drawing.Color.Black;
-            this.TBPasswordConfirm.Location = new System.Drawing.Point(291, 269);
+            this.TBPasswordConfirm.Location = new System.Drawing.Point(291, 264);
             this.TBPasswordConfirm.Name = "TBPasswordConfirm";
             this.TBPasswordConfirm.Size = new System.Drawing.Size(170, 30);
             this.TBPasswordConfirm.TabIndex = 55;
@@ -198,7 +192,7 @@
             this.TBPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TBPassword.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.TBPassword.ForeColor = System.Drawing.Color.Black;
-            this.TBPassword.Location = new System.Drawing.Point(291, 212);
+            this.TBPassword.Location = new System.Drawing.Point(291, 207);
             this.TBPassword.Name = "TBPassword";
             this.TBPassword.Size = new System.Drawing.Size(170, 30);
             this.TBPassword.TabIndex = 54;
@@ -210,7 +204,7 @@
             this.TBUserName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TBUserName.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.TBUserName.ForeColor = System.Drawing.Color.Black;
-            this.TBUserName.Location = new System.Drawing.Point(291, 152);
+            this.TBUserName.Location = new System.Drawing.Point(291, 150);
             this.TBUserName.Name = "TBUserName";
             this.TBUserName.Size = new System.Drawing.Size(170, 30);
             this.TBUserName.TabIndex = 53;
@@ -338,12 +332,67 @@
             this.checkBox1.Text = "Is Active";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
+            // BtnAddClose
+            // 
+            this.BtnAddClose.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnAddClose.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BtnAddClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.BtnAddClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.BtnAddClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAddClose.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.BtnAddClose.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BtnAddClose.Image = ((System.Drawing.Image)(resources.GetObject("BtnAddClose.Image")));
+            this.BtnAddClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnAddClose.Location = new System.Drawing.Point(741, 777);
+            this.BtnAddClose.Name = "BtnAddClose";
+            this.BtnAddClose.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.BtnAddClose.Size = new System.Drawing.Size(142, 48);
+            this.BtnAddClose.TabIndex = 35;
+            this.BtnAddClose.Text = "Close";
+            this.BtnAddClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnAddClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnAddClose.UseVisualStyleBackColor = false;
+            this.BtnAddClose.Click += new System.EventHandler(this.BtnAddClose_Click);
+            // 
+            // BtnAddSave
+            // 
+            this.BtnAddSave.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnAddSave.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BtnAddSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.BtnAddSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.BtnAddSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAddSave.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.BtnAddSave.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BtnAddSave.Image = ((System.Drawing.Image)(resources.GetObject("BtnAddSave.Image")));
+            this.BtnAddSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnAddSave.Location = new System.Drawing.Point(910, 777);
+            this.BtnAddSave.Name = "BtnAddSave";
+            this.BtnAddSave.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.BtnAddSave.Size = new System.Drawing.Size(130, 48);
+            this.BtnAddSave.TabIndex = 36;
+            this.BtnAddSave.Text = "Save";
+            this.BtnAddSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnAddSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnAddSave.UseVisualStyleBackColor = false;
+            this.BtnAddSave.Click += new System.EventHandler(this.BtnAddSave_Click);
+            // 
+            // ctrDetailsPersonWithFilter1
+            // 
+            this.ctrDetailsPersonWithFilter1.BackColor = System.Drawing.Color.White;
+            this.ctrDetailsPersonWithFilter1.Location = new System.Drawing.Point(21, 20);
+            this.ctrDetailsPersonWithFilter1.Name = "ctrDetailsPersonWithFilter1";
+            this.ctrDetailsPersonWithFilter1.PersonData = null;
+            this.ctrDetailsPersonWithFilter1.Size = new System.Drawing.Size(979, 478);
+            this.ctrDetailsPersonWithFilter1.TabIndex = 6;
+            // 
             // FOAddEditUserInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(235)))), ((int)(((byte)(245)))));
             this.ClientSize = new System.Drawing.Size(1054, 910);
+            this.Controls.Add(this.BtnAddSave);
+            this.Controls.Add(this.BtnAddClose);
             this.Controls.Add(this.TCAddEditUser);
             this.Controls.Add(this.LblAddEditUser);
             this.MaximizeBox = false;
@@ -352,6 +401,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FOAddEditUserInfo";
+            this.Load += new System.EventHandler(this.FOAddEditUserInfo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TCAddEditUser)).EndInit();
             this.TCAddEditUser.ResumeLayout(false);
             this.TPPersonalInfo.ResumeLayout(false);
@@ -390,5 +440,7 @@
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.CheckBox CBIsActive;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button BtnAddClose;
+        private System.Windows.Forms.Button BtnAddSave;
     }
 }
