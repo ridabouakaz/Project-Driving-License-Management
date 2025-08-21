@@ -43,10 +43,10 @@ namespace DVLD_BusinessLayer
                 }
             }
 
-            public class PersonIdFilter : IPersonFilter
+            public class IdPersonFilter : IUserFilter
             {
                 private readonly int _personId;
-                public PersonIdFilter(int personId) => _personId = personId;
+                public IdPersonFilter(int personId) => _personId = personId;
 
                 public DataView ApplyFilter(DataTable data)
                 {
@@ -78,7 +78,7 @@ namespace DVLD_BusinessLayer
                     var view = new DataView(data);
                     if (_ActiveStatus != "All")
                     {
-                        view.RowFilter = $"Is Active LIKE '%{_ActiveStatus}%'";
+                        view.RowFilter = $"IsActive LIKE '%{_ActiveStatus}%'";
                     }
                     return view;
                 }

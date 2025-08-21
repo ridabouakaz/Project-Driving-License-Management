@@ -210,7 +210,7 @@ namespace DVLD_DataAccessLayer
             DataTable dt = new DataTable();
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
-            string query = "select users.UserID,users.PersonID, (people.FirstName+' '+people.SecondName+' '+people.ThirdName+' '+people.LastName) as 'Full Name',Users.UserName,Users.IsActive from users\r\ninner join people on  users.PersonID =people.PersonID";
+            string query = "select users.UserID,users.PersonID, (people.FirstName+' '+people.SecondName+' '+people.ThirdName+' '+people.LastName) as 'FullName',Users.UserName,\r\nCASE        WHEN IsActive = 0 THEN 'Yes'        WHEN IsActive = 1 THEN 'No'        ELSE 'Unknown'    END AS \"IsActive\"\r\nfrom users\r\ninner join people on  users.PersonID =people.PersonID";
 
             SqlCommand command = new SqlCommand(query, connection);
 

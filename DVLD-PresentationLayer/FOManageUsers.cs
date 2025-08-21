@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static DVLD_BusinessLayer.clsUserFilter.UserFilterService;
 using static DVLD_BusinessLayer.PersonFilterService;
 
 namespace DVLD_PresentationLayer
@@ -28,7 +29,7 @@ namespace DVLD_PresentationLayer
         }
         private void SMItemViewDetails_Click(object sender, EventArgs e)
         {
-            FOPersonInfo frm = new FOPersonInfo((int)dGViewShowInformation.CurrentRow.Cells[0].Value);
+            FOPersonInfo frm = new FOPersonInfo((int)dGViewShowInformation.CurrentRow.Cells[1].Value);
             frm.ShowDialog();
             _RefreshPeopleList();
         }
@@ -75,10 +76,10 @@ namespace DVLD_PresentationLayer
 
         private void ApplyFilter()
         {
-            if (_peopleTable == null) return;
+            if (_UsersTable == null) return;
 
-            IPersonFilter filter = null;
-
+            IUserFilter filter = null;
+            
             switch (CBFilterBy.SelectedItem.ToString())
             {
 
@@ -86,35 +87,80 @@ namespace DVLD_PresentationLayer
                     this.MTBsearch.Mask = "000000";
                     this.MTBsearch.PromptChar = ' ';
                     if (int.TryParse(MTBsearch.Text, out int id))
-                        filter = new PersonIdFilter(id);
+                        filter = new UserIdFilter(id);
                     break;
                 case "User Name":
                     this.MTBsearch.Mask = "";
-                    filter = new NationalNoFilter(MTBsearch.Text);
+                    filter = new UserNameFilter(MTBsearch.Text);
                     break;
-                   case "Person ID":
+                case "Person ID":
                     this.MTBsearch.Mask = "0000000000";
                     this.MTBsearch.PromptChar = ' ';
                     this.MTBsearch.SkipLiterals = true;
-                    filter = new PhoneFilter(MTBsearch.Text);
+                    if (int.TryParse(MTBsearch.Text, out int Personid))
+                        filter = new IdPersonFilter(Personid);
                     break;
                 case "Full Name":
                     this.MTBsearch.Mask = "";
-                    filter = new SecondNameFilter(MTBsearch.Text);
+                    filter = new FullNameFilter(MTBsearch.Text);
                     break;
                 case "Is ActiveStatus":
                     this.MTBsearch.Mask = "";
-                    filter = new ThirdNameFilter(MTBsearch.Text);
+                    filter = new ActiveStatusFilter(CBActiveStatusBy.SelectedItem.ToString());
                     break;
              
             }
 
             DataView view = (filter != null)
-                ? filter.ApplyFilter(_peopleTable)
-                : new DataView(_peopleTable);
+                ? filter.ApplyFilter(_UsersTable)
+                : new DataView(_UsersTable);
 
             dGViewShowInformation.DataSource = view;
             LblTotalRecoreds.Text = view.Count.ToString();
+        }
+
+        private void CBFilterBy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selected = CBFilterBy.SelectedItem.ToString();
+
+            if (selected == "Is ActiveStatus")
+            {
+                MTBsearch.Visible = false;
+                CBActiveStatusBy.Visible = true;
+            }
+            else if (selected == "None")
+            {
+                MTBsearch.Visible = false;
+                CBActiveStatusBy.Visible = false;
+            }
+            else
+            {
+                MTBsearch.Visible = true;
+                CBActiveStatusBy.Visible = false;
+            }
+            ApplyFilter();
+        }
+        private void FOManageUsers_Load(object sender, EventArgs e)
+        {
+            CBFilterBy.SelectedIndex = 0;
+            CBActiveStatusBy.SelectedIndex = 0;
+            _RefreshPeopleList();
+        }
+
+        private void MTBsearch_TextChanged(object sender, EventArgs e)
+        {
+            ApplyFilter();
+        }
+
+        private void CBActiveStatusBy_TextChanged(object sender, EventArgs e)
+        {
+            ApplyFilter();
+
+        }
+
+        private void BtnAddClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
