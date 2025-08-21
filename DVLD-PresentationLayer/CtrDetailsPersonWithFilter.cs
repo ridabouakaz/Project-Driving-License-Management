@@ -93,7 +93,7 @@ namespace DVLD_PresentationLayer
         {
             get { return _Person?.ID ?? 0; }
         }
-        public void isFreez()
+        public void DisablePersonDetails()
         {
             GBUserControlDetailesPersonWithFilter.Enabled = false;
         }

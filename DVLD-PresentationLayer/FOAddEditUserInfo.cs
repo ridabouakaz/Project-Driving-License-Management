@@ -56,6 +56,7 @@ namespace DVLD_PresentationLayer
             InitializeComponent();
             _Mode = enMode.AddNew;
             LblAddEditUser.Text = "Add New User";
+            TPLoginInfo.Enabled = false;
             _User = new clsUser();
             return;
         }
@@ -64,6 +65,9 @@ namespace DVLD_PresentationLayer
             InitializeComponent();
             _UserID = UserID;
             _Mode = enMode.Update;
+            ctrDetailsPersonWithFilter1.DisablePersonDetails();
+            BtnAddNext.Visible = false;
+            TPLoginInfo.Enabled = true;
             _LoadData();
 
         }
@@ -173,9 +177,6 @@ namespace DVLD_PresentationLayer
             this.Close();
         }
 
-        private void FOAddEditUserInfo_Load(object sender, EventArgs e)
-        {
-            TPLoginInfo.Enabled = false;
-        }
+
     }
 }

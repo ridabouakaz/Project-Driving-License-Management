@@ -40,8 +40,8 @@ namespace DVLD_DataAccessLayer
                         isFound = true;
 
                         PersonID = (int)reader["PersonID"];
-                        UserName = reader["SecondName"].ToString();
-                        Password = reader["ThirdName"].ToString();
+                        UserName = reader["UserName"].ToString();
+                        Password = reader["Password"].ToString();
                         isActive = reader["isActive"] != DBNull.Value? (ActiveStatus)Convert.ToInt32(reader["isActive"]): ActiveStatus.Yes; 
 
                     }
@@ -178,7 +178,7 @@ namespace DVLD_DataAccessLayer
                          SET PersonID = @PersonID,
                              UserName = @UserName,
                              Password = @Password,
-                             isActive = @isActive,WHERE UserID = @UserID";
+                             isActive = @isActive WHERE UserID = @UserID";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {

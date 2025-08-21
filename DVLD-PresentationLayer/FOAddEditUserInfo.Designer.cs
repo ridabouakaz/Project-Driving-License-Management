@@ -401,7 +401,6 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FOAddEditUserInfo";
-            this.Load += new System.EventHandler(this.FOAddEditUserInfo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TCAddEditUser)).EndInit();
             this.TCAddEditUser.ResumeLayout(false);
             this.TPPersonalInfo.ResumeLayout(false);
