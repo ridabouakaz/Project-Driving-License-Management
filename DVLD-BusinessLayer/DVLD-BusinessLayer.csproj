@@ -48,6 +48,7 @@
     <Compile Include="clsPerson.cs" />
     <Compile Include="clsPersonFilter.cs" />
     <Compile Include="clsUser.cs" />
+    <Compile Include="clsUserFilter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

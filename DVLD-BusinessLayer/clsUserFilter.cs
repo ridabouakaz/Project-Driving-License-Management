@@ -4,6 +4,8 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static DVLD_BusinessLayer.PersonFilterService;
+using static DVLDShared.DVLDShared;
 
 namespace DVLD_BusinessLayer
 {
@@ -28,77 +30,59 @@ namespace DVLD_BusinessLayer
                 }
             }
 
-            public class NationalNoFilter : IUserFilter
+            public class UserNameFilter : IUserFilter
             {
-                private readonly string _nationalNo;
-                public NationalNoFilter(string nationalNo) => _nationalNo = nationalNo;
+                private readonly string _UserName;
+                public UserNameFilter(string UserName) => _UserName = UserName;
 
                 public DataView ApplyFilter(DataTable data)
                 {
                     var view = new DataView(data);
-                    view.RowFilter = $"NationalNo LIKE '%{_nationalNo}%'";
+                    view.RowFilter = $"UserName LIKE '%{_UserName}%'";
                     return view;
                 }
             }
 
-            public class FirstNameFilter : IUserFilter
+            public class PersonIdFilter : IPersonFilter
             {
-                private readonly string _firstName;
-                public FirstNameFilter(string firstName) => _firstName = firstName;
+                private readonly int _personId;
+                public PersonIdFilter(int personId) => _personId = personId;
 
                 public DataView ApplyFilter(DataTable data)
                 {
                     var view = new DataView(data);
-                    view.RowFilter = $"FirstName LIKE '%{_firstName}%'";
+                    view.RowFilter = $"Convert(PersonID, 'System.String') LIKE '%{_personId}%'";
                     return view;
                 }
             }
 
-            public class SecondNameFilter : IUserFilter
+            public class FullNameFilter : IUserFilter
             {
-                private readonly string _secondName;
-                public SecondNameFilter(string secondName) => _secondName = secondName;
+                private readonly string _FullName;
+                public FullNameFilter(string FullName) => _FullName = FullName;
 
                 public DataView ApplyFilter(DataTable data)
                 {
                     var view = new DataView(data);
-                    view.RowFilter = $"SecondName LIKE '%{_secondName}%'";
+                    view.RowFilter = $"FullName LIKE '%{_FullName}%'";
                     return view;
                 }
             }
-
-            public class ThirdNameFilter : IUserFilter
+            public class ActiveStatusFilter : IUserFilter
             {
-                private readonly string _thirdName;
-                public ThirdNameFilter(string thirdName) => _thirdName = thirdName;
+                private readonly string _ActiveStatus;
+                public ActiveStatusFilter(string ActiveStatus) => _ActiveStatus = ActiveStatus;
 
                 public DataView ApplyFilter(DataTable data)
                 {
                     var view = new DataView(data);
-                    view.RowFilter = $"ThirdName LIKE '%{_thirdName}%'";
+                    if (_ActiveStatus != "All")
+                    {
+                        view.RowFilter = $"Is Active LIKE '%{_ActiveStatus}%'";
+                    }
                     return view;
                 }
             }
-
-           
-
-          
-
-          
-            public class GenderFilter : IUserFilter
-            {
-                private readonly string _gender;
-                public GenderFilter(string gender) => _gender = gender;
-
-                public DataView ApplyFilter(DataTable data)
-                {
-                    var view = new DataView(data);
-                    view.RowFilter = $"Gender LIKE '%{_gender}%'";
-                    return view;
-                }
-            }
-
-            
 
         }
     }

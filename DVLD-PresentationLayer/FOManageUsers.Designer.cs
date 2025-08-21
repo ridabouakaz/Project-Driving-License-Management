@@ -31,8 +31,8 @@ namespace DVLD_PresentationLayer
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FOManageUsers));
             this.dGViewShowInformation = new System.Windows.Forms.DataGridView();
             this.SMItemCRUDUsers = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -68,24 +68,24 @@ namespace DVLD_PresentationLayer
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dGViewShowInformation.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGViewShowInformation.BackgroundColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 12F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dGViewShowInformation.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 12F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dGViewShowInformation.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dGViewShowInformation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGViewShowInformation.ContextMenuStrip = this.SMItemCRUDUsers;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dGViewShowInformation.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dGViewShowInformation.DefaultCellStyle = dataGridViewCellStyle4;
             this.dGViewShowInformation.Location = new System.Drawing.Point(47, 279);
             this.dGViewShowInformation.Name = "dGViewShowInformation";
             this.dGViewShowInformation.ReadOnly = true;
@@ -117,11 +117,12 @@ namespace DVLD_PresentationLayer
             this.SMItemViewDetails.Name = "SMItemViewDetails";
             this.SMItemViewDetails.Size = new System.Drawing.Size(188, 38);
             this.SMItemViewDetails.Text = "View Details";
+            this.SMItemViewDetails.Click += new System.EventHandler(this.SMItemViewDetails_Click);
             // 
             // SMItemSeparatorCRUDUsers1
             // 
             this.SMItemSeparatorCRUDUsers1.Name = "SMItemSeparatorCRUDUsers1";
-            this.SMItemSeparatorCRUDUsers1.Size = new System.Drawing.Size(185, 6);
+            this.SMItemSeparatorCRUDUsers1.Size = new System.Drawing.Size(223, 6);
             // 
             // SMItemAddUser
             // 
@@ -129,8 +130,9 @@ namespace DVLD_PresentationLayer
             this.SMItemAddUser.Image = ((System.Drawing.Image)(resources.GetObject("SMItemAddUser.Image")));
             this.SMItemAddUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SMItemAddUser.Name = "SMItemAddUser";
-            this.SMItemAddUser.Size = new System.Drawing.Size(188, 38);
+            this.SMItemAddUser.Size = new System.Drawing.Size(226, 38);
             this.SMItemAddUser.Text = "Add User";
+            this.SMItemAddUser.Click += new System.EventHandler(this.SMItemAddUser_Click);
             // 
             // SMItemEditUser
             // 
@@ -138,8 +140,9 @@ namespace DVLD_PresentationLayer
             this.SMItemEditUser.Image = ((System.Drawing.Image)(resources.GetObject("SMItemEditUser.Image")));
             this.SMItemEditUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SMItemEditUser.Name = "SMItemEditUser";
-            this.SMItemEditUser.Size = new System.Drawing.Size(188, 38);
+            this.SMItemEditUser.Size = new System.Drawing.Size(226, 38);
             this.SMItemEditUser.Text = "Edit User";
+            this.SMItemEditUser.Click += new System.EventHandler(this.SMItemEditUser_Click);
             // 
             // SMItemDeleteUser
             // 
@@ -147,13 +150,14 @@ namespace DVLD_PresentationLayer
             this.SMItemDeleteUser.Image = ((System.Drawing.Image)(resources.GetObject("SMItemDeleteUser.Image")));
             this.SMItemDeleteUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SMItemDeleteUser.Name = "SMItemDeleteUser";
-            this.SMItemDeleteUser.Size = new System.Drawing.Size(188, 38);
+            this.SMItemDeleteUser.Size = new System.Drawing.Size(226, 38);
             this.SMItemDeleteUser.Text = "Delete User";
+            this.SMItemDeleteUser.Click += new System.EventHandler(this.SMItemDeleteUser_Click);
             // 
             // SMItemSeparatorCRUDUsers2
             // 
             this.SMItemSeparatorCRUDUsers2.Name = "SMItemSeparatorCRUDUsers2";
-            this.SMItemSeparatorCRUDUsers2.Size = new System.Drawing.Size(185, 6);
+            this.SMItemSeparatorCRUDUsers2.Size = new System.Drawing.Size(223, 6);
             // 
             // SMItemSendEmail
             // 
@@ -161,7 +165,7 @@ namespace DVLD_PresentationLayer
             this.SMItemSendEmail.Image = ((System.Drawing.Image)(resources.GetObject("SMItemSendEmail.Image")));
             this.SMItemSendEmail.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SMItemSendEmail.Name = "SMItemSendEmail";
-            this.SMItemSendEmail.Size = new System.Drawing.Size(188, 38);
+            this.SMItemSendEmail.Size = new System.Drawing.Size(226, 38);
             this.SMItemSendEmail.Text = "Send Email";
             // 
             // SMItemCallUser
@@ -170,7 +174,7 @@ namespace DVLD_PresentationLayer
             this.SMItemCallUser.Image = ((System.Drawing.Image)(resources.GetObject("SMItemCallUser.Image")));
             this.SMItemCallUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SMItemCallUser.Name = "SMItemCallUser";
-            this.SMItemCallUser.Size = new System.Drawing.Size(188, 38);
+            this.SMItemCallUser.Size = new System.Drawing.Size(226, 38);
             this.SMItemCallUser.Text = "Call User";
             // 
             // LblManageUsers
@@ -202,6 +206,7 @@ namespace DVLD_PresentationLayer
             this.BtnAddUser.Size = new System.Drawing.Size(90, 45);
             this.BtnAddUser.TabIndex = 2;
             this.BtnAddUser.UseVisualStyleBackColor = false;
+            this.BtnAddUser.Click += new System.EventHandler(this.BtnAddUser_Click);
             // 
             // PBManageUsers
             // 
@@ -273,7 +278,7 @@ namespace DVLD_PresentationLayer
             "User Name",
             "Person ID",
             "Full Name",
-            "Is ActiveStatus",});
+            "Is ActiveStatus"});
             this.CBFilterBy.Location = new System.Drawing.Point(154, 245);
             this.CBFilterBy.Name = "CBFilterBy";
             this.CBFilterBy.Size = new System.Drawing.Size(208, 31);
