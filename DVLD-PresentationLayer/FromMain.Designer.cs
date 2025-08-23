@@ -56,6 +56,7 @@ namespace DVLD_PresentationLayer
             this.SMItemCurrentUserInfo = new System.Windows.Forms.ToolStripMenuItem();
             this.SMItemchangePassword = new System.Windows.Forms.ToolStripMenuItem();
             this.SMItemSingOut = new System.Windows.Forms.ToolStripMenuItem();
+            this.SMItemSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.MSMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -231,6 +232,7 @@ namespace DVLD_PresentationLayer
             this.SMItemAccountSettings.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.SMItemCurrentUserInfo,
             this.SMItemchangePassword,
+            this.SMItemSeparator3,
             this.SMItemSingOut});
             this.SMItemAccountSettings.Image = ((System.Drawing.Image)(resources.GetObject("SMItemAccountSettings.Image")));
             this.SMItemAccountSettings.Name = "SMItemAccountSettings";
@@ -239,7 +241,10 @@ namespace DVLD_PresentationLayer
             // 
             // SMItemCurrentUserInfo
             // 
+            this.SMItemCurrentUserInfo.AutoSize = false;
             this.SMItemCurrentUserInfo.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SMItemCurrentUserInfo.Image = ((System.Drawing.Image)(resources.GetObject("SMItemCurrentUserInfo.Image")));
+            this.SMItemCurrentUserInfo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SMItemCurrentUserInfo.Name = "SMItemCurrentUserInfo";
             this.SMItemCurrentUserInfo.Size = new System.Drawing.Size(298, 30);
             this.SMItemCurrentUserInfo.Text = "Current User Info";
@@ -247,16 +252,25 @@ namespace DVLD_PresentationLayer
             // SMItemchangePassword
             // 
             this.SMItemchangePassword.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SMItemchangePassword.Image = ((System.Drawing.Image)(resources.GetObject("SMItemchangePassword.Image")));
+            this.SMItemchangePassword.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SMItemchangePassword.Name = "SMItemchangePassword";
-            this.SMItemchangePassword.Size = new System.Drawing.Size(298, 30);
+            this.SMItemchangePassword.Size = new System.Drawing.Size(302, 30);
             this.SMItemchangePassword.Text = "Change Password";
             // 
             // SMItemSingOut
             // 
             this.SMItemSingOut.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SMItemSingOut.Image = ((System.Drawing.Image)(resources.GetObject("SMItemSingOut.Image")));
+            this.SMItemSingOut.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SMItemSingOut.Name = "SMItemSingOut";
-            this.SMItemSingOut.Size = new System.Drawing.Size(298, 30);
+            this.SMItemSingOut.Size = new System.Drawing.Size(302, 30);
             this.SMItemSingOut.Text = "Sign Out";
+            // 
+            // SMItemSeparator3
+            // 
+            this.SMItemSeparator3.Name = "SMItemSeparator3";
+            this.SMItemSeparator3.Size = new System.Drawing.Size(339, 6);
             // 
             // FOmain
             // 
@@ -301,6 +315,7 @@ namespace DVLD_PresentationLayer
         private ToolStripMenuItem SMItemManageDetainedLicenses;
         private ToolStripMenuItem SMItemDetainedLicense;
         private ToolStripMenuItem SMItemReleaseDetainedLicenses;
+        private ToolStripSeparator SMItemSeparator3;
     }
 }
 
