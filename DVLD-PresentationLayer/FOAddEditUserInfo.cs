@@ -45,10 +45,8 @@ namespace DVLD_PresentationLayer
             get => CBIsActive.Checked ? ActiveStatus.Yes : ActiveStatus.No;
             set
             {
-                if (value == ActiveStatus.Yes)
-                    CBIsActive.Checked = true;
-                else
-                    CBIsActive.Checked = false;
+          
+                    CBIsActive.Checked = (value == ActiveStatus.Yes);
             }
         }
         public FOAddEditUserInfo()
@@ -152,7 +150,6 @@ namespace DVLD_PresentationLayer
             this.Close();
 
         }
-
         private void BtnAddSave_Click(object sender, EventArgs e)
         {
             if (!this.ValidateChildren())

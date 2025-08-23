@@ -94,7 +94,32 @@ namespace DVLD_BusinessLayer
                 return null;
         }
 
+        public static clsUser Find(string UserName, string Password)
+        {
+            int PersonID = 1;
+            ActiveStatus isActive = 0;
+            int ID = 1;
+            bool isFound = clsUserDataAccess.GetUserInfoByUserNameandPassword(
+                UserName,
+                Password,
+                ref PersonID,
+                ref ID,
+                ref isActive
+            );
 
+            if (isFound)
+            {
+                return new clsUser(
+                    ID,
+                     PersonID,
+                 UserName,
+                 Password,
+                 isActive
+                );
+            }
+            else
+                return null;
+        }
 
         //public static clsUser Find(int NationalNo)
         //{
@@ -121,12 +146,12 @@ namespace DVLD_BusinessLayer
         //        ref Gender
         //    );
 
-            //if (isFound)
-            //{
-            //    return new clsUser(
-            //        ID,
-            //        firstName,
-            //        secondName,
+        //if (isFound)
+        //{
+        //    return new clsUser(
+        //        ID,
+        //        firstName,
+        //        secondName,
         //            thirdName,
         //            lastName,
         //            NationalNo,

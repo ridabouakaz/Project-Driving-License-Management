@@ -55,71 +55,109 @@ namespace DVLD_DataAccessLayer
 
             return isFound;
         }
-        
-//        public static bool GetUserInfoByNationalNo(
-//   string NationalNo,
-//   ref string FirstName,
-//   ref string SecondName,
-//   ref string ThirdName,
-//   ref string LastName,
-//   ref int ID,
-//   ref string Email,
-//   ref string Phone,
-//   ref string Address,
-//   ref DateTime DateOfBirth,
-//   ref int NationalityCountryID,
-//   ref string ImagePath,
-//   ref Gender Gender
-//)
-//        {
-//            bool isFound = false;
+        public static bool GetUserInfoByUserNameandPassword(
+            string UserName,
+            string Password,
+               ref int PersonID,
+               ref int ID,
+               ref ActiveStatus isActive
+)
+        {
+            bool isFound = false;
 
-//            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
-//            {
-//                string query = "SELECT * FROM Users WHERE NationalNo = @NationalNo";
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                string query = "SELECT * FROM Users WHERE UserName = @UserName and Password = @Password";
 
-//                SqlCommand command = new SqlCommand(query, connection);
-//                command.Parameters.AddWithValue("@NationalNo", NationalNo);
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@UserName", UserName);
+                command.Parameters.AddWithValue("@Password", Password);
+                try
+                {
+                    connection.Open();
+                    SqlDataReader reader = command.ExecuteReader();
 
-//                try
-//                {
-//                    connection.Open();
-//                    SqlDataReader reader = command.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        isFound = true;
+                        PersonID = (int)reader["PersonID"];
+                        ID = (int)reader["UserID"];
+                        isActive = reader["isActive"] != DBNull.Value ? (ActiveStatus)Convert.ToInt32(reader["isActive"]) : ActiveStatus.Yes;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Handle error (log or throw)
+                    isFound = false;
+                }
+            }
 
-//                    if (reader.Read())
-//                    {
-//                        isFound = true;
-//                        ID = Convert.ToInt32(reader["UserID"]);
-//                        FirstName = reader["FirstName"].ToString();
-//                        SecondName = reader["SecondName"].ToString();
-//                        ThirdName = reader["ThirdName"].ToString();
-//                        LastName = reader["LastName"].ToString();
-//                        NationalNo = reader["NationalNo"].ToString();
-//                        Email = reader["Email"].ToString();
-//                        Phone = reader["Phone"].ToString();
-//                        Address = reader["Address"].ToString();
-//                        DateOfBirth = Convert.ToDateTime(reader["DateOfBirth"]);
-//                        NationalityCountryID = Convert.ToInt32(reader["NationalityCountryID"]);
+            return isFound;
+        }
+        //        public static bool GetUserInfoByNationalNo(
+        //   string NationalNo,
+        //   ref string FirstName,
+        //   ref string SecondName,
+        //   ref string ThirdName,
+        //   ref string LastName,
+        //   ref int ID,
+        //   ref string Email,
+        //   ref string Phone,
+        //   ref string Address,
+        //   ref DateTime DateOfBirth,
+        //   ref int NationalityCountryID,
+        //   ref string ImagePath,
+        //   ref Gender Gender
+        //)
+        //        {
+        //            bool isFound = false;
 
-//                        ImagePath = reader["ImagePath"] != DBNull.Value
-//                                    ? reader["ImagePath"].ToString()
-//                                    : "";
-//                        Gender = reader["Gender"] != DBNull.Value
-//         ? (Gender)Convert.ToInt32(reader["Gender"])
-//         : Gender.Male; // Default: Male
+        //            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+        //            {
+        //                string query = "SELECT * FROM Users WHERE NationalNo = @NationalNo";
+
+        //                SqlCommand command = new SqlCommand(query, connection);
+        //                command.Parameters.AddWithValue("@NationalNo", NationalNo);
+
+        //                try
+        //                {
+        //                    connection.Open();
+        //                    SqlDataReader reader = command.ExecuteReader();
+
+        //                    if (reader.Read())
+        //                    {
+        //                        isFound = true;
+        //                        ID = Convert.ToInt32(reader["UserID"]);
+        //                        FirstName = reader["FirstName"].ToString();
+        //                        SecondName = reader["SecondName"].ToString();
+        //                        ThirdName = reader["ThirdName"].ToString();
+        //                        LastName = reader["LastName"].ToString();
+        //                        NationalNo = reader["NationalNo"].ToString();
+        //                        Email = reader["Email"].ToString();
+        //                        Phone = reader["Phone"].ToString();
+        //                        Address = reader["Address"].ToString();
+        //                        DateOfBirth = Convert.ToDateTime(reader["DateOfBirth"]);
+        //                        NationalityCountryID = Convert.ToInt32(reader["NationalityCountryID"]);
+
+        //                        ImagePath = reader["ImagePath"] != DBNull.Value
+        //                                    ? reader["ImagePath"].ToString()
+        //                                    : "";
+        //                        Gender = reader["Gender"] != DBNull.Value
+        //         ? (Gender)Convert.ToInt32(reader["Gender"])
+        //         : Gender.Male; // Default: Male
 
 
-//                    }
-//                }
-//                catch (Exception ex)
-//                {
-//                    // Handle error (log or throw)
-//                    isFound = false;
-//                }
-//            }
+        //                    }
+        //                }
+        //                catch (Exception ex)
+        //                {
+        //                    // Handle error (log or throw)
+        //                    isFound = false;
+        //                }
+        //            }
 
-//            return isFound;
-//        }
+        //            return isFound;
+        //        }
 
 
         public static int AddNewUser(
