@@ -32,19 +32,39 @@ namespace DVLD_PresentationLayer
         public FOUserInfo(clsUser User)
         {
             InitializeComponent();
+            _LoadData(User);
         }
         private void _LoadData()
         {
             _User = clsUser.Find(_UserID);
-            _Person=clsPerson.Find(_User.PersonID);
+            _Person = clsPerson.Find(_User.PersonID);
             if (_UserID == null)
             {
-                MessageBox.Show("This form will be closed because No Contact with ID = " + _PersonID);
+                MessageBox.Show("This form will be closed because No Contact with ID = " + _UserID);
                 this.Close();
 
                 return;
             }
-            ctrDetailsUser1.PersonData = _Person;
+            ctrDetailsUser1.Personinformation = _Person;
+            ctrDetailsUser1.UserData= _User;
+        }
+        private void _LoadData(clsUser User)
+        {
+            _User = User;
+            _Person = clsPerson.Find(_User.PersonID);
+            if (_UserID == null)
+            {
+                MessageBox.Show("This form will be closed because No Contact with ID = " + _UserID);
+                this.Close();
+
+                return;
+            }
+            ctrDetailsUser1.Personinformation = _Person;
+            ctrDetailsUser1.UserData = _User;
+        }
+        private void BtnAddClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

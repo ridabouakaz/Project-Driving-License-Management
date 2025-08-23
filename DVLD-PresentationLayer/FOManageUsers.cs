@@ -29,7 +29,7 @@ namespace DVLD_PresentationLayer
         }
         private void SMItemViewDetails_Click(object sender, EventArgs e)
         {
-            FOPersonInfo frm = new FOPersonInfo((int)dGViewShowInformation.CurrentRow.Cells[1].Value);
+            FOUserInfo frm = new FOUserInfo((int)dGViewShowInformation.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
             _RefreshPeopleList();
         }
