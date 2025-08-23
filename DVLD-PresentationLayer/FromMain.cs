@@ -13,10 +13,12 @@ namespace DVLD_PresentationLayer
 {
     public partial class FOmain : Form
     {
-        public FOmain()
+        private clsUser _currentUser;   
+        public FOmain(clsUser currentUser)
         {
             InitializeComponent();
             this.Size = new System.Drawing.Size(1600, 850);
+            _currentUser = currentUser;
         }
         private void SMItempeople_Click(object sender, EventArgs e)
         {
@@ -26,6 +28,17 @@ namespace DVLD_PresentationLayer
         private void FOmain_Load(object sender, EventArgs e)
         {
             MSMain.Renderer = new MyRenderer();
+        }
+        private void SMItemCurrentUserInfo_Click(object sender, EventArgs e)
+        {
+            FOUserInfo frm = new FOUserInfo(_currentUser);
+            frm.ShowDialog();
+        }
+
+        private void SMItemusers_Click(object sender, EventArgs e)
+        {
+            FOManageUsers frm = new FOManageUsers();
+            frm.ShowDialog();
         }
     }
 }

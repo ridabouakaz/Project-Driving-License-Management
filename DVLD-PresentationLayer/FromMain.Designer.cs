@@ -55,8 +55,8 @@ namespace DVLD_PresentationLayer
             this.SMItemAccountSettings = new System.Windows.Forms.ToolStripMenuItem();
             this.SMItemCurrentUserInfo = new System.Windows.Forms.ToolStripMenuItem();
             this.SMItemchangePassword = new System.Windows.Forms.ToolStripMenuItem();
-            this.SMItemSingOut = new System.Windows.Forms.ToolStripMenuItem();
             this.SMItemSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.SMItemSingOut = new System.Windows.Forms.ToolStripMenuItem();
             this.MSMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -226,6 +226,7 @@ namespace DVLD_PresentationLayer
             this.SMItemusers.Name = "SMItemusers";
             this.SMItemusers.Size = new System.Drawing.Size(166, 68);
             this.SMItemusers.Text = "Users";
+            this.SMItemusers.Click += new System.EventHandler(this.SMItemusers_Click);
             // 
             // SMItemAccountSettings
             // 
@@ -248,6 +249,7 @@ namespace DVLD_PresentationLayer
             this.SMItemCurrentUserInfo.Name = "SMItemCurrentUserInfo";
             this.SMItemCurrentUserInfo.Size = new System.Drawing.Size(298, 30);
             this.SMItemCurrentUserInfo.Text = "Current User Info";
+            this.SMItemCurrentUserInfo.Click += new System.EventHandler(this.SMItemCurrentUserInfo_Click);
             // 
             // SMItemchangePassword
             // 
@@ -258,6 +260,11 @@ namespace DVLD_PresentationLayer
             this.SMItemchangePassword.Size = new System.Drawing.Size(302, 30);
             this.SMItemchangePassword.Text = "Change Password";
             // 
+            // SMItemSeparator3
+            // 
+            this.SMItemSeparator3.Name = "SMItemSeparator3";
+            this.SMItemSeparator3.Size = new System.Drawing.Size(299, 6);
+            // 
             // SMItemSingOut
             // 
             this.SMItemSingOut.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -266,11 +273,6 @@ namespace DVLD_PresentationLayer
             this.SMItemSingOut.Name = "SMItemSingOut";
             this.SMItemSingOut.Size = new System.Drawing.Size(302, 30);
             this.SMItemSingOut.Text = "Sign Out";
-            // 
-            // SMItemSeparator3
-            // 
-            this.SMItemSeparator3.Name = "SMItemSeparator3";
-            this.SMItemSeparator3.Size = new System.Drawing.Size(339, 6);
             // 
             // FOmain
             // 

@@ -16,7 +16,7 @@ namespace DVLD_PresentationLayer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FOmain());
+            Application.Run(new FOLoginScreen());
         }
     }
 }

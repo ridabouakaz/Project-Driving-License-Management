@@ -50,7 +50,7 @@ namespace DVLD_PresentationLayer
                 if (_User.isActive != ActiveStatus.No)
                 {
                     this.Hide();
-                    using (FOmain frm = new FOmain())
+                    using (FOmain frm = new FOmain(_User))
                     {
                         frm.ShowDialog(); 
                     }
