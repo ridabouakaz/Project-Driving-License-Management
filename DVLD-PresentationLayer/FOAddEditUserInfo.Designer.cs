@@ -184,6 +184,7 @@
             this.TBPasswordConfirm.Name = "TBPasswordConfirm";
             this.TBPasswordConfirm.Size = new System.Drawing.Size(170, 30);
             this.TBPasswordConfirm.TabIndex = 55;
+            this.TBPasswordConfirm.UseSystemPasswordChar = true;
             this.TBPasswordConfirm.Validating += new System.ComponentModel.CancelEventHandler(this.TBPasswordConfirm_Validating);
             // 
             // TBPassword
@@ -196,6 +197,7 @@
             this.TBPassword.Name = "TBPassword";
             this.TBPassword.Size = new System.Drawing.Size(170, 30);
             this.TBPassword.TabIndex = 54;
+            this.TBPassword.UseSystemPasswordChar = true;
             this.TBPassword.Validating += new System.ComponentModel.CancelEventHandler(this.TBPassword_Validating);
             // 
             // TBUserName

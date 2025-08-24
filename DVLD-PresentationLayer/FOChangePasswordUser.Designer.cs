@@ -33,7 +33,6 @@
             this.LblChangePasswordUser = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.BtnAddClose = new System.Windows.Forms.Button();
-            this.ctrDetailsUser1 = new DVLD_PresentationLayer.CtrDetailsUser();
             this.BtnAddSave = new System.Windows.Forms.Button();
             this.LblPassword = new System.Windows.Forms.Label();
             this.LblConfirmPassword = new System.Windows.Forms.Label();
@@ -44,6 +43,7 @@
             this.TBPassword = new System.Windows.Forms.TextBox();
             this.TBPasswordConfirm = new System.Windows.Forms.TextBox();
             this.TBCurrentPassword = new System.Windows.Forms.TextBox();
+            this.ctrDetailsUser1 = new DVLD_PresentationLayer.CtrDetailsUser();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBPasswordConfirm)).BeginInit();
@@ -88,15 +88,6 @@
             this.BtnAddClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnAddClose.UseVisualStyleBackColor = false;
             this.BtnAddClose.Click += new System.EventHandler(this.BtnAddClose_Click);
-            // 
-            // ctrDetailsUser1
-            // 
-            this.ctrDetailsUser1.BackColor = System.Drawing.Color.White;
-            this.ctrDetailsUser1.Location = new System.Drawing.Point(12, 62);
-            this.ctrDetailsUser1.Name = "ctrDetailsUser1";
-            this.ctrDetailsUser1.Size = new System.Drawing.Size(1191, 525);
-            this.ctrDetailsUser1.TabIndex = 3;
-            this.ctrDetailsUser1.UserData = null;
             // 
             // BtnAddSave
             // 
@@ -202,6 +193,7 @@
             this.TBPassword.Name = "TBPassword";
             this.TBPassword.Size = new System.Drawing.Size(170, 30);
             this.TBPassword.TabIndex = 55;
+            this.TBPassword.UseSystemPasswordChar = true;
             this.TBPassword.Validating += new System.ComponentModel.CancelEventHandler(this.TBPassword_Validating);
             // 
             // TBPasswordConfirm
@@ -214,6 +206,7 @@
             this.TBPasswordConfirm.Name = "TBPasswordConfirm";
             this.TBPasswordConfirm.Size = new System.Drawing.Size(170, 30);
             this.TBPasswordConfirm.TabIndex = 56;
+            this.TBPasswordConfirm.UseSystemPasswordChar = true;
             this.TBPasswordConfirm.Validating += new System.ComponentModel.CancelEventHandler(this.TBPasswordConfirm_Validating);
             // 
             // TBCurrentPassword
@@ -226,7 +219,17 @@
             this.TBCurrentPassword.Name = "TBCurrentPassword";
             this.TBCurrentPassword.Size = new System.Drawing.Size(170, 30);
             this.TBCurrentPassword.TabIndex = 57;
+            this.TBCurrentPassword.UseSystemPasswordChar = true;
             this.TBCurrentPassword.Validating += new System.ComponentModel.CancelEventHandler(this.TBCurrentPassword_Validating);
+            // 
+            // ctrDetailsUser1
+            // 
+            this.ctrDetailsUser1.BackColor = System.Drawing.Color.White;
+            this.ctrDetailsUser1.Location = new System.Drawing.Point(12, 62);
+            this.ctrDetailsUser1.Name = "ctrDetailsUser1";
+            this.ctrDetailsUser1.Size = new System.Drawing.Size(1191, 525);
+            this.ctrDetailsUser1.TabIndex = 3;
+            this.ctrDetailsUser1.UserData = null;
             // 
             // FOChangePasswordUser
             // 
