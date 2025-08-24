@@ -41,7 +41,6 @@ namespace DVLD_PresentationLayer
             this.SMItemAddUser = new System.Windows.Forms.ToolStripMenuItem();
             this.SMItemEditUser = new System.Windows.Forms.ToolStripMenuItem();
             this.SMItemDeleteUser = new System.Windows.Forms.ToolStripMenuItem();
-            this.SMItemSeparatorCRUDUsers2 = new System.Windows.Forms.ToolStripSeparator();
             this.SMItemSendEmail = new System.Windows.Forms.ToolStripMenuItem();
             this.SMItemCallUser = new System.Windows.Forms.ToolStripMenuItem();
             this.LblManageUsers = new System.Windows.Forms.Label();
@@ -54,6 +53,8 @@ namespace DVLD_PresentationLayer
             this.LblTotalRecoreds = new System.Windows.Forms.Label();
             this.MTBsearch = new System.Windows.Forms.MaskedTextBox();
             this.CBActiveStatusBy = new System.Windows.Forms.ComboBox();
+            this.SMItemChangePasswordUser = new System.Windows.Forms.ToolStripMenuItem();
+            this.SMItemSeparatorCRUDUsers2 = new System.Windows.Forms.ToolStripSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.dGViewShowInformation)).BeginInit();
             this.SMItemCRUDUsers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBManageUsers)).BeginInit();
@@ -104,11 +105,12 @@ namespace DVLD_PresentationLayer
             this.SMItemAddUser,
             this.SMItemEditUser,
             this.SMItemDeleteUser,
+            this.SMItemChangePasswordUser,
             this.SMItemSeparatorCRUDUsers2,
             this.SMItemSendEmail,
             this.SMItemCallUser});
             this.SMItemCRUDUsers.Name = "SMItemCRUDUsers";
-            this.SMItemCRUDUsers.Size = new System.Drawing.Size(189, 244);
+            this.SMItemCRUDUsers.Size = new System.Drawing.Size(227, 310);
             // 
             // SMItemViewDetails
             // 
@@ -116,14 +118,14 @@ namespace DVLD_PresentationLayer
             this.SMItemViewDetails.Image = ((System.Drawing.Image)(resources.GetObject("SMItemViewDetails.Image")));
             this.SMItemViewDetails.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SMItemViewDetails.Name = "SMItemViewDetails";
-            this.SMItemViewDetails.Size = new System.Drawing.Size(188, 38);
+            this.SMItemViewDetails.Size = new System.Drawing.Size(226, 38);
             this.SMItemViewDetails.Text = "View Details";
             this.SMItemViewDetails.Click += new System.EventHandler(this.SMItemViewDetails_Click);
             // 
             // SMItemSeparatorCRUDUsers1
             // 
             this.SMItemSeparatorCRUDUsers1.Name = "SMItemSeparatorCRUDUsers1";
-            this.SMItemSeparatorCRUDUsers1.Size = new System.Drawing.Size(185, 6);
+            this.SMItemSeparatorCRUDUsers1.Size = new System.Drawing.Size(223, 6);
             // 
             // SMItemAddUser
             // 
@@ -131,7 +133,7 @@ namespace DVLD_PresentationLayer
             this.SMItemAddUser.Image = ((System.Drawing.Image)(resources.GetObject("SMItemAddUser.Image")));
             this.SMItemAddUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SMItemAddUser.Name = "SMItemAddUser";
-            this.SMItemAddUser.Size = new System.Drawing.Size(188, 38);
+            this.SMItemAddUser.Size = new System.Drawing.Size(226, 38);
             this.SMItemAddUser.Text = "Add User";
             this.SMItemAddUser.Click += new System.EventHandler(this.SMItemAddUser_Click);
             // 
@@ -141,7 +143,7 @@ namespace DVLD_PresentationLayer
             this.SMItemEditUser.Image = ((System.Drawing.Image)(resources.GetObject("SMItemEditUser.Image")));
             this.SMItemEditUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SMItemEditUser.Name = "SMItemEditUser";
-            this.SMItemEditUser.Size = new System.Drawing.Size(188, 38);
+            this.SMItemEditUser.Size = new System.Drawing.Size(226, 38);
             this.SMItemEditUser.Text = "Edit User";
             this.SMItemEditUser.Click += new System.EventHandler(this.SMItemEditUser_Click);
             // 
@@ -151,14 +153,9 @@ namespace DVLD_PresentationLayer
             this.SMItemDeleteUser.Image = ((System.Drawing.Image)(resources.GetObject("SMItemDeleteUser.Image")));
             this.SMItemDeleteUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SMItemDeleteUser.Name = "SMItemDeleteUser";
-            this.SMItemDeleteUser.Size = new System.Drawing.Size(188, 38);
+            this.SMItemDeleteUser.Size = new System.Drawing.Size(226, 38);
             this.SMItemDeleteUser.Text = "Delete User";
             this.SMItemDeleteUser.Click += new System.EventHandler(this.SMItemDeleteUser_Click);
-            // 
-            // SMItemSeparatorCRUDUsers2
-            // 
-            this.SMItemSeparatorCRUDUsers2.Name = "SMItemSeparatorCRUDUsers2";
-            this.SMItemSeparatorCRUDUsers2.Size = new System.Drawing.Size(185, 6);
             // 
             // SMItemSendEmail
             // 
@@ -166,7 +163,7 @@ namespace DVLD_PresentationLayer
             this.SMItemSendEmail.Image = ((System.Drawing.Image)(resources.GetObject("SMItemSendEmail.Image")));
             this.SMItemSendEmail.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SMItemSendEmail.Name = "SMItemSendEmail";
-            this.SMItemSendEmail.Size = new System.Drawing.Size(188, 38);
+            this.SMItemSendEmail.Size = new System.Drawing.Size(226, 38);
             this.SMItemSendEmail.Text = "Send Email";
             // 
             // SMItemCallUser
@@ -175,7 +172,7 @@ namespace DVLD_PresentationLayer
             this.SMItemCallUser.Image = ((System.Drawing.Image)(resources.GetObject("SMItemCallUser.Image")));
             this.SMItemCallUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SMItemCallUser.Name = "SMItemCallUser";
-            this.SMItemCallUser.Size = new System.Drawing.Size(188, 38);
+            this.SMItemCallUser.Size = new System.Drawing.Size(226, 38);
             this.SMItemCallUser.Text = "Call User";
             // 
             // LblManageUsers
@@ -328,6 +325,20 @@ namespace DVLD_PresentationLayer
             this.CBActiveStatusBy.TabIndex = 9;
             this.CBActiveStatusBy.TextChanged += new System.EventHandler(this.CBActiveStatusBy_TextChanged);
             // 
+            // SMItemChangePasswordUser
+            // 
+            this.SMItemChangePasswordUser.Image = ((System.Drawing.Image)(resources.GetObject("SMItemChangePasswordUser.Image")));
+            this.SMItemChangePasswordUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.SMItemChangePasswordUser.Name = "SMItemChangePasswordUser";
+            this.SMItemChangePasswordUser.Size = new System.Drawing.Size(226, 38);
+            this.SMItemChangePasswordUser.Text = "Change Password";
+            this.SMItemChangePasswordUser.Click += new System.EventHandler(this.SMItemChangePasswordUser_Click);
+            // 
+            // SMItemSeparatorCRUDUsers2
+            // 
+            this.SMItemSeparatorCRUDUsers2.Name = "SMItemSeparatorCRUDUsers2";
+            this.SMItemSeparatorCRUDUsers2.Size = new System.Drawing.Size(223, 6);
+            // 
             // FOManageUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -371,12 +382,13 @@ namespace DVLD_PresentationLayer
         private ToolStripMenuItem SMItemAddUser;
         private ToolStripMenuItem SMItemEditUser;
         private ToolStripMenuItem SMItemDeleteUser;
-        private ToolStripSeparator SMItemSeparatorCRUDUsers2;
         private ToolStripMenuItem SMItemSendEmail;
         private ToolStripMenuItem SMItemCallUser;
         private ComboBox CBFilterBy;
         private Label LblTotalRecoreds;
         private MaskedTextBox MTBsearch;
         private ComboBox CBActiveStatusBy;
+        private ToolStripMenuItem SMItemChangePasswordUser;
+        private ToolStripSeparator SMItemSeparatorCRUDUsers2;
     }
 }

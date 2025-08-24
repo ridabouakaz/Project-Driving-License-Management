@@ -47,5 +47,11 @@ namespace DVLD_PresentationLayer
             FOLoginScreen frm = new FOLoginScreen();
             frm.ShowDialog();
         }
+
+        private void SMItemchangePassword_Click(object sender, EventArgs e)
+        {
+            FOChangePasswordUser frm = new FOChangePasswordUser(_currentUser.ID);
+            frm.ShowDialog();
+        }
     }
 }

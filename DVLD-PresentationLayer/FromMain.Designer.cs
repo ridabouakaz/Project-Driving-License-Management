@@ -259,6 +259,7 @@ namespace DVLD_PresentationLayer
             this.SMItemchangePassword.Name = "SMItemchangePassword";
             this.SMItemchangePassword.Size = new System.Drawing.Size(302, 30);
             this.SMItemchangePassword.Text = "Change Password";
+            this.SMItemchangePassword.Click += new System.EventHandler(this.SMItemchangePassword_Click);
             // 
             // SMItemSeparator3
             // 

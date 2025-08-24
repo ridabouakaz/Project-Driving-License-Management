@@ -71,7 +71,11 @@ namespace DVLD_PresentationLayer
             frm.ShowDialog();
             _RefreshPeopleList();
         }
-
+        private void SMItemChangePasswordUser_Click(object sender, EventArgs e)
+        {
+            FOChangePasswordUser frm = new FOChangePasswordUser((int)dGViewShowInformation.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+        }
 
 
         private void ApplyFilter()
@@ -162,5 +166,7 @@ namespace DVLD_PresentationLayer
         {
             this.Close();
         }
+
+        
     }
 }
