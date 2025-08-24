@@ -31,13 +31,20 @@ namespace DVLD_PresentationLayer
         }
         private void SMItemCurrentUserInfo_Click(object sender, EventArgs e)
         {
-            FOUserInfo frm = new FOUserInfo(_currentUser);
+            FOUserInfo frm = new FOUserInfo(_currentUser.ID);
             frm.ShowDialog();
         }
 
         private void SMItemusers_Click(object sender, EventArgs e)
         {
             FOManageUsers frm = new FOManageUsers();
+            frm.ShowDialog();
+        }
+
+        private void SMItemSingOut_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FOLoginScreen frm = new FOLoginScreen();
             frm.ShowDialog();
         }
     }

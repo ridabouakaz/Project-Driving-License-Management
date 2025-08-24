@@ -273,6 +273,7 @@ namespace DVLD_PresentationLayer
             this.SMItemSingOut.Name = "SMItemSingOut";
             this.SMItemSingOut.Size = new System.Drawing.Size(302, 30);
             this.SMItemSingOut.Text = "Sign Out";
+            this.SMItemSingOut.Click += new System.EventHandler(this.SMItemSingOut_Click);
             // 
             // FOmain
             // 
