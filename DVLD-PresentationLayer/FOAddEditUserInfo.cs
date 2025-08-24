@@ -52,22 +52,30 @@ namespace DVLD_PresentationLayer
         public FOAddEditUserInfo()
         {
             InitializeComponent();
-            _Mode = enMode.AddNew;
-            LblAddEditUser.Text = "Add New User";
-            TPLoginInfo.Enabled = false;
-            _User = new clsUser();
-            return;
+            LoadUserData();
         }
         public FOAddEditUserInfo(int UserID)
         {
             InitializeComponent();
+            LoadUserData(UserID);
+
+        }
+        public void LoadUserData(int UserID)
+        {
             _UserID = UserID;
             _Mode = enMode.Update;
             ctrDetailsPersonWithFilter1.DisablePersonDetails();
             BtnAddNext.Visible = false;
             TPLoginInfo.Enabled = true;
             _LoadData();
-
+        }
+        public void LoadUserData()
+        {
+            _Mode = enMode.AddNew;
+            LblAddEditUser.Text = "Add New User";
+            TPLoginInfo.Enabled = false;
+            _User = new clsUser();
+            return;
         }
         private void _LoadData()
         {

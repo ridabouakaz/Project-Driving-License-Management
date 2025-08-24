@@ -15,7 +15,7 @@ namespace DVLD_PresentationLayer
 {
     public partial class FOChangePasswordUser : Form
     {
-        public enum enMode { AddNew = 0, Update = 1 };
+        public enum enMode {Update = 1 };
         private enMode _Mode;
         int _UserID;
         clsUser _User;
@@ -41,6 +41,10 @@ namespace DVLD_PresentationLayer
         public FOChangePasswordUser(int UserID)
         {
             InitializeComponent();
+            LoadPersonData(UserID);
+        }
+        public void LoadPersonData(int UserID)
+        {
             _UserID = UserID;
             _LoadData();
         }

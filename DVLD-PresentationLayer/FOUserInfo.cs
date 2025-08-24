@@ -24,15 +24,18 @@ namespace DVLD_PresentationLayer
         public FOUserInfo(int UserID)
         {
             InitializeComponent();
-            _UserID = UserID;
+            LoadUserData(UserID);
+        }
+        public void LoadUserData(int userID)
+        {
+            _UserID = userID;
             _LoadData();
         }
-
         private void _LoadData()
         {
             _User = clsUser.Find(_UserID);
             _Person = clsPerson.Find(_User.PersonID);
-            if (_UserID == null)
+            if (_User == null)
             {
                 MessageBox.Show("This form will be closed because No Contact with ID = " + _UserID);
                 this.Close();

@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using System.Security.Cryptography;
 using static DVLDShared.DVLDShared;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using DVLDShared;
 
 namespace DVLD_PresentationLayer
 {
@@ -19,46 +20,7 @@ namespace DVLD_PresentationLayer
     {
         private static clsUser _User = null;
         private string path = @"E:\DVLD\Shared\RememberMe.txt";
-        private string Encrypt(string text)
-        {
-            byte[] data = Encoding.UTF8.GetBytes(text);
-            byte[] encrypted = ProtectedData.Protect(data, null, DataProtectionScope.CurrentUser);
-            return Convert.ToBase64String(encrypted);
-        }
-        private string Decrypt(string cipher)
-        {
-            try
-            {
-                byte[] data = Convert.FromBase64String(cipher);
-                byte[] decrypted = ProtectedData.Unprotect(data, null, DataProtectionScope.CurrentUser);
-                return Encoding.UTF8.GetString(decrypted);
-            }
-            catch
-            {
-                return "";
-            }
-        }
-        private void SaveLoginInfo(string username, string password, bool rememberMe)
-        {
-             string path = @"E:\DVLD\Shared\RememberMe.txt";
-       
-
-            if (rememberMe)
-            {
-                string[] lines =
-                {
-            Encrypt(username),
-            Encrypt(password),
-            "true"
-        };
-                File.WriteAllLines(path, lines);
-            }
-            else
-            {
-                if (File.Exists(path))
-                    File.Delete(path); // امسح الملف لو المستخدم ما حبش يتذكر
-            }
-        }
+      
         public FOLoginScreen()
         {
             InitializeComponent();
@@ -73,12 +35,12 @@ namespace DVLD_PresentationLayer
             get => signup_password.Text;
             set => signup_password.Text = value;
         }
-        public byte RememberMe
+        public bool RememberMe
         {
-            get => (byte)(RBRememberMe.Checked? 1: 0);
+            get => (RBRememberMe.Checked? true: false);
             set
             {
-                RBRememberMe.Checked =(value==1);
+                RBRememberMe.Checked =(value== true);
             }
         }
         private void exit_Click(object sender, EventArgs e)
@@ -93,7 +55,7 @@ namespace DVLD_PresentationLayer
                 if (_User.isActive != ActiveStatus.No)
                 {
                 
-                    SaveLoginInfo( Username,  Password, RBRememberMe.Checked);
+                    clsUtil.SaveLoginInfo( Username,  Password, RBRememberMe.Checked);
                     this.Hide();
                     using (FOmain frm = new FOmain(_User))
                     {
@@ -129,8 +91,8 @@ namespace DVLD_PresentationLayer
                 string[] lines = File.ReadAllLines(path);
                 if (lines.Length >= 3 && lines[2] == "true")
                 {
-                    Username = Decrypt(lines[0]);
-                    Password = Decrypt(lines[1]);
+                    Username = clsUtil.Decrypt(lines[0]);
+                    Password = clsUtil.Decrypt(lines[1]);
                     RBRememberMe.Checked = true;
                 }
             }

@@ -32,10 +32,14 @@ namespace DVLD_PresentationLayer
         public FOAddEditPersonInfo(int PersonID)
         {
             InitializeComponent();
+            LoadPersonData(PersonID);
+
+        }
+        public void LoadPersonData(int PersonID)
+        {
             _PersonID = PersonID;
             _Mode = enMode.Update;
             _LoadData();
-
         }
         public FOAddEditPersonInfo()
         {

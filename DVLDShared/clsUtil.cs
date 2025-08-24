@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Security.Cryptography;
 
 namespace DVLDShared
 {
@@ -96,6 +97,46 @@ namespace DVLDShared
             }
 
             return true;
+        }
+        public static string Encrypt(string text)
+        {
+            byte[] data = Encoding.UTF8.GetBytes(text);
+            byte[] encrypted = ProtectedData.Protect(data, null, DataProtectionScope.CurrentUser);
+            return Convert.ToBase64String(encrypted);
+        }
+        public static string Decrypt(string cipher)
+        {
+            try
+            {
+                byte[] data = Convert.FromBase64String(cipher);
+                byte[] decrypted = ProtectedData.Unprotect(data, null, DataProtectionScope.CurrentUser);
+                return Encoding.UTF8.GetString(decrypted);
+            }
+            catch
+            {
+                return "";
+            }
+        }
+        public static void SaveLoginInfo(string username, string password, bool rememberMe)
+        {
+            string path = @"E:\DVLD\Shared\RememberMe.txt";
+
+
+            if (rememberMe)
+            {
+                string[] lines =
+                {
+            Encrypt(username),
+            Encrypt(password),
+            "true"
+        };
+                File.WriteAllLines(path, lines);
+            }
+            else
+            {
+                if (File.Exists(path))
+                    File.Delete(path);
+            }
         }
     }
 }
