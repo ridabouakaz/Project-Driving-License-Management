@@ -13,42 +13,43 @@ namespace DVLD_PresentationLayer
 {
     public partial class FOUserInfo : Form
     {
-       
-        int _UserID;
-        clsUser _User;
-        clsPerson _Person;
+        private int _UserID;
+        private clsUser _User;
+        private clsPerson _Person;
+
         public FOUserInfo()
         {
             InitializeComponent();
         }
-        public FOUserInfo(int UserID)
-        {
-            InitializeComponent();
-            LoadUserData(UserID);
-        }
-        public void LoadUserData(int userID)
+
+        public FOUserInfo(int userID) : this()
         {
             _UserID = userID;
-            _LoadData();
         }
-        private void _LoadData()
+        private bool TryLoadUserData(int userID)
         {
-            _User = clsUser.Find(_UserID);
-            _Person = clsPerson.Find(_User.PersonID);
+            _User = clsUser.Find(userID);
             if (_User == null)
-            {
-                MessageBox.Show("This form will be closed because No Contact with ID = " + _UserID);
-                this.Close();
+                return false;
 
-                return;
-            }
-            ctrDetailsUser1.Personinformation = _Person;
-            ctrDetailsUser1.UserData= _User;
+            _Person = clsPerson.Find(_User.PersonID);
+            return _Person != null;
         }
-    
         private void BtnAddClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
+        }
+        private void FOUserInfo_Load(object sender, EventArgs e)
+        {
+            if (!TryLoadUserData(_UserID))
+            {
+                MessageBox.Show($"This form will be closed because no user found with ID = {_UserID}",
+                                "User Not Found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Close();
+                return;
+            }
+
+            ctrDetailsUser1.LoadUserInfo(_User, _Person);
         }
     }
 }

@@ -16,7 +16,6 @@ namespace DVLD_PresentationLayer
 {
     public partial class FOAddEditUserInfo : Form
     {
-
         public enum enMode { AddNew = 0, Update = 1 };
         private enMode _Mode;
         int _UserID;
@@ -39,58 +38,54 @@ namespace DVLD_PresentationLayer
             set => TBPasswordConfirm.Text = value;
         }
         public TextBox PasswordConfirmTextBox => TBPasswordConfirm;
-
         public ActiveStatus IsActive
         {
             get => CBIsActive.Checked ? ActiveStatus.Yes : ActiveStatus.No;
             set
             {
-          
-                    CBIsActive.Checked = (value == ActiveStatus.Yes);
+                              CBIsActive.Checked = (value == ActiveStatus.Yes);
             }
         }
         public FOAddEditUserInfo()
         {
             InitializeComponent();
-            LoadUserData();
+            _Mode = enMode.AddNew;
         }
         public FOAddEditUserInfo(int UserID)
         {
             InitializeComponent();
-            LoadUserData(UserID);
-
-        }
-        public void LoadUserData(int UserID)
-        {
             _UserID = UserID;
             _Mode = enMode.Update;
-            ctrDetailsPersonWithFilter1.DisablePersonDetails();
-            BtnAddNext.Visible = false;
-            TPLoginInfo.Enabled = true;
-            _LoadData();
         }
-        public void LoadUserData()
+        private void _ResetDefualtValues()
         {
-            _Mode = enMode.AddNew;
-            LblAddEditUser.Text = "Add New User";
-            TPLoginInfo.Enabled = false;
-            _User = new clsUser();
-            return;
+            if (_Mode == enMode.AddNew)
+            {
+                LblAddEditUser.Text = "Add New User";
+                this.Text = "Add New User";
+                TPLoginInfo.Enabled = false;
+                _User = new clsUser();
+                return;
+            }
+            else
+            {
+                LblAddEditUser.Text = "Update User";
+                this.Text = "Update User";
+                TPLoginInfo.Enabled = true;
+                BtnAddSave.Enabled = true;
+                ctrDetailsPersonWithFilter1.DisablePersonDetails();
+                BtnAddNext.Visible = false;
+            }
         }
         private void _LoadData()
         {
-
-
             _User = clsUser.Find(_UserID);
-
-            if (_UserID == null)
+            if (_User == null)
             {
                 MessageBox.Show("This form will be closed because No Contact with ID = " + _UserID);
                 this.Close();
-
                 return;
             }
-            LblAddEditUser.Text = "Update User";
             LblValueUserID.Text = _User.ID.ToString();
             UserName = _User.UserName;
             Password= _User.Password;
@@ -98,7 +93,6 @@ namespace DVLD_PresentationLayer
             IsActive = _User.isActive;
             ctrDetailsPersonWithFilter1.PersonData = clsPerson.Find(_User.PersonID);
         }
-
         private void ValidateRequiredField(string value, TextBox textBox, CancelEventArgs e)
         {
             if (string.IsNullOrWhiteSpace(value))
@@ -127,7 +121,6 @@ namespace DVLD_PresentationLayer
             TPLoginInfo.Enabled = true;
             TCAddEditUser.SelectedTab = TPLoginInfo;
         }
-
         private void TBPasswordConfirm_Validating(object sender, CancelEventArgs e)
         {
             if (!clsValidatoin.ValidateRequiredField(Password, PasswordConfirm))
@@ -141,18 +134,15 @@ namespace DVLD_PresentationLayer
                 errorProvider1.SetError(PasswordConfirmTextBox, "");
             }
         }
-
         private void TBPassword_Validating(object sender, CancelEventArgs e)
         {
             ValidateRequiredField(Password, PasswordTextBox, e);
         }
-
         private void TBUserName_Validating(object sender, CancelEventArgs e)
         {
             ValidateRequiredField(UserName, UserNameTextBox, e);
 
         }
-
         private void BtnAddClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -165,7 +155,6 @@ namespace DVLD_PresentationLayer
                 MessageBox.Show("❌ Please correct the errors before saving.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
             _User.UserName = UserName.Trim();
             _User.Password = Password.Trim();
             _User.isActive= IsActive;
@@ -181,7 +170,11 @@ namespace DVLD_PresentationLayer
             }
             this.Close();
         }
-
-
+        private void FOAddEditUserInfo_Load(object sender, EventArgs e)
+        {
+            _ResetDefualtValues();
+            if (_Mode == enMode.Update)
+                _LoadData();
+        }
     }
 }

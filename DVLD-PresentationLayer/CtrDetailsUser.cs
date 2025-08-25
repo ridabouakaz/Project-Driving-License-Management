@@ -65,5 +65,10 @@ namespace DVLD_PresentationLayer
                     LblvalueIsActive.Text = "No";
             }
         }
+        public void LoadUserInfo(clsUser user, clsPerson person)
+        {
+            this.UserData = user;
+            this.Personinformation = person;
+        }
     }
 }
