@@ -106,7 +106,7 @@ namespace DVLD_PresentationLayer
             this.SMItemRetakeTest});
             this.SMItemDrivingLicensesServices.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SMItemDrivingLicensesServices.Name = "SMItemDrivingLicensesServices";
-            this.SMItemDrivingLicensesServices.Size = new System.Drawing.Size(392, 30);
+            this.SMItemDrivingLicensesServices.Size = new System.Drawing.Size(396, 30);
             this.SMItemDrivingLicensesServices.Text = "Driving Licenses Services";
             // 
             // SMItemNewDrivingLicenses
@@ -152,13 +152,13 @@ namespace DVLD_PresentationLayer
             // SMItemSeparator2
             // 
             this.SMItemSeparator2.Name = "SMItemSeparator2";
-            this.SMItemSeparator2.Size = new System.Drawing.Size(389, 6);
+            this.SMItemSeparator2.Size = new System.Drawing.Size(393, 6);
             // 
             // SMItemManageApplications
             // 
             this.SMItemManageApplications.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SMItemManageApplications.Name = "SMItemManageApplications";
-            this.SMItemManageApplications.Size = new System.Drawing.Size(392, 30);
+            this.SMItemManageApplications.Size = new System.Drawing.Size(396, 30);
             this.SMItemManageApplications.Text = "Manage Applications";
             // 
             // SMItemDetainLicenses
@@ -169,7 +169,7 @@ namespace DVLD_PresentationLayer
             this.SMItemReleaseDetainedLicenses});
             this.SMItemDetainLicenses.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SMItemDetainLicenses.Name = "SMItemDetainLicenses";
-            this.SMItemDetainLicenses.Size = new System.Drawing.Size(392, 30);
+            this.SMItemDetainLicenses.Size = new System.Drawing.Size(396, 30);
             this.SMItemDetainLicenses.Text = "Detain Licenses";
             // 
             // SMItemManageDetainedLicenses
@@ -196,15 +196,17 @@ namespace DVLD_PresentationLayer
             // SMItemManageApplicationTypes
             // 
             this.SMItemManageApplicationTypes.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SMItemManageApplicationTypes.Image = ((System.Drawing.Image)(resources.GetObject("SMItemManageApplicationTypes.Image")));
+            this.SMItemManageApplicationTypes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SMItemManageApplicationTypes.Name = "SMItemManageApplicationTypes";
-            this.SMItemManageApplicationTypes.Size = new System.Drawing.Size(392, 30);
+            this.SMItemManageApplicationTypes.Size = new System.Drawing.Size(396, 30);
             this.SMItemManageApplicationTypes.Text = "Manage Application Types";
             // 
             // SMItemManageTestTypes
             // 
             this.SMItemManageTestTypes.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SMItemManageTestTypes.Name = "SMItemManageTestTypes";
-            this.SMItemManageTestTypes.Size = new System.Drawing.Size(392, 30);
+            this.SMItemManageTestTypes.Size = new System.Drawing.Size(396, 30);
             this.SMItemManageTestTypes.Text = "Manage Test Types";
             // 
             // SMItempeople
