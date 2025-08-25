@@ -57,7 +57,9 @@ namespace DVLD_PresentationLayer
             this.SMItemchangePassword = new System.Windows.Forms.ToolStripMenuItem();
             this.SMItemSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.SMItemSingOut = new System.Windows.Forms.ToolStripMenuItem();
+            this.PBProject = new System.Windows.Forms.PictureBox();
             this.MSMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PBProject)).BeginInit();
             this.SuspendLayout();
             // 
             // MSMain
@@ -276,11 +278,21 @@ namespace DVLD_PresentationLayer
             this.SMItemSingOut.Text = "Sign Out";
             this.SMItemSingOut.Click += new System.EventHandler(this.SMItemSingOut_Click);
             // 
+            // PBProject
+            // 
+            this.PBProject.Location = new System.Drawing.Point(299, 302);
+            this.PBProject.Name = "PBProject";
+            this.PBProject.Size = new System.Drawing.Size(1095, 278);
+            this.PBProject.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PBProject.TabIndex = 1;
+            this.PBProject.TabStop = false;
+            // 
             // FOmain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1700, 700);
+            this.Controls.Add(this.PBProject);
             this.Controls.Add(this.MSMain);
             this.Name = "FOmain";
             this.ShowIcon = false;
@@ -289,6 +301,7 @@ namespace DVLD_PresentationLayer
             this.Load += new System.EventHandler(this.FOmain_Load);
             this.MSMain.ResumeLayout(false);
             this.MSMain.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PBProject)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -320,6 +333,7 @@ namespace DVLD_PresentationLayer
         private ToolStripMenuItem SMItemDetainedLicense;
         private ToolStripMenuItem SMItemReleaseDetainedLicenses;
         private ToolStripSeparator SMItemSeparator3;
+        private PictureBox PBProject;
     }
 }
 
