@@ -89,15 +89,17 @@ namespace DVLD_PresentationLayer
             this.SMItemCRUDUsers.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.SMItemEditApplicationType});
             this.SMItemCRUDUsers.Name = "SMItemCRUDUsers";
-            this.SMItemCRUDUsers.Size = new System.Drawing.Size(237, 30);
+            this.SMItemCRUDUsers.Size = new System.Drawing.Size(253, 70);
             // 
             // SMItemEditApplicationType
             // 
             this.SMItemEditApplicationType.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.SMItemEditApplicationType.Image = ((System.Drawing.Image)(resources.GetObject("SMItemEditApplicationType.Image")));
             this.SMItemEditApplicationType.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SMItemEditApplicationType.Name = "SMItemEditApplicationType";
-            this.SMItemEditApplicationType.Size = new System.Drawing.Size(236, 26);
+            this.SMItemEditApplicationType.Size = new System.Drawing.Size(252, 38);
             this.SMItemEditApplicationType.Text = "Edit Application Type";
+            this.SMItemEditApplicationType.Click += new System.EventHandler(this.SMItemEditApplicationType_Click);
             // 
             // LblManageApplicationTypes
             // 
@@ -146,6 +148,7 @@ namespace DVLD_PresentationLayer
             this.BtnAddClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAddClose.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.BtnAddClose.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BtnAddClose.Image = ((System.Drawing.Image)(resources.GetObject("BtnAddClose.Image")));
             this.BtnAddClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnAddClose.Location = new System.Drawing.Point(879, 775);
             this.BtnAddClose.Name = "BtnAddClose";
@@ -156,6 +159,7 @@ namespace DVLD_PresentationLayer
             this.BtnAddClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnAddClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnAddClose.UseVisualStyleBackColor = false;
+            this.BtnAddClose.Click += new System.EventHandler(this.BtnAddClose_Click);
             // 
             // LblTotalRecoreds
             // 
@@ -184,6 +188,7 @@ namespace DVLD_PresentationLayer
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manage Application Types";
+            this.Load += new System.EventHandler(this.FOManageApplicationTypes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dGViewShowInformation)).EndInit();
             this.SMItemCRUDUsers.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PBManageApplicationTypes)).EndInit();
