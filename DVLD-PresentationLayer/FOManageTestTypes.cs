@@ -34,11 +34,14 @@ namespace DVLD_PresentationLayer
                 dGViewShowInformation.Columns[0].Width = 30;
 
                 dGViewShowInformation.Columns[1].HeaderText = "Title";
-                dGViewShowInformation.Columns[1].Width = 120;
+                dGViewShowInformation.Columns[1].Width = 60;
+
+                dGViewShowInformation.Columns[2].HeaderText = "Title";
+                dGViewShowInformation.Columns[2].Width = 120;
 
 
-                dGViewShowInformation.Columns[2].HeaderText = "Fees";
-                dGViewShowInformation.Columns[2].Width = 110;
+                dGViewShowInformation.Columns[3].HeaderText = "Fees";
+                dGViewShowInformation.Columns[3].Width = 110;
             }
         }
         private void BtnAddClose_Click(object sender, EventArgs e)
@@ -55,7 +58,9 @@ namespace DVLD_PresentationLayer
 
         private void SMItemEditTestType_Click(object sender, EventArgs e)
         {
-
+            FOEditTestType frm = new FOEditTestType((int)dGViewShowInformation.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+            FOManageTestTypes_Load(null, null);
         }
     }
 }

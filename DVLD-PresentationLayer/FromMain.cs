@@ -58,5 +58,11 @@ namespace DVLD_PresentationLayer
             FOManageApplicationTypes frm = new FOManageApplicationTypes();
             frm.ShowDialog();
         }
+
+        private void SMItemManageTestTypes_Click(object sender, EventArgs e)
+        {
+            FOManageTestTypes frm = new FOManageTestTypes();
+            frm.ShowDialog();
+        }
     }
 }

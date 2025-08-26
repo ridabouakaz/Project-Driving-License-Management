@@ -38,7 +38,6 @@ namespace DVLD_BusinessLayer
                 );
 
         }
-
         public static clsManageTestTypes Find(int ID)
         {
             string TestTypeTitle = "";

@@ -89,14 +89,15 @@ namespace DVLD_PresentationLayer
             this.SMItemCRUDUsers.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.SMItemEditTestType});
             this.SMItemCRUDUsers.Name = "SMItemCRUDUsers";
-            this.SMItemCRUDUsers.Size = new System.Drawing.Size(237, 58);
+            this.SMItemCRUDUsers.Size = new System.Drawing.Size(227, 70);
             // 
             // SMItemEditTestType
             // 
             this.SMItemEditTestType.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.SMItemEditTestType.Image = ((System.Drawing.Image)(resources.GetObject("SMItemEditTestType.Image")));
             this.SMItemEditTestType.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SMItemEditTestType.Name = "SMItemEditTestType";
-            this.SMItemEditTestType.Size = new System.Drawing.Size(236, 26);
+            this.SMItemEditTestType.Size = new System.Drawing.Size(226, 38);
             this.SMItemEditTestType.Text = "Edit Test Type";
             this.SMItemEditTestType.Click += new System.EventHandler(this.SMItemEditTestType_Click);
             // 
@@ -117,6 +118,7 @@ namespace DVLD_PresentationLayer
             // 
             this.PBManageTestTypes.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.PBManageTestTypes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.PBManageTestTypes.Image = ((System.Drawing.Image)(resources.GetObject("PBManageTestTypes.Image")));
             this.PBManageTestTypes.Location = new System.Drawing.Point(469, 30);
             this.PBManageTestTypes.Name = "PBManageTestTypes";
             this.PBManageTestTypes.Size = new System.Drawing.Size(137, 125);

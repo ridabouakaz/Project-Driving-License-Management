@@ -124,7 +124,7 @@
   <data name="SMItemManageApplicationTypes.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        rwAAAK8BK7AVuQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKuSURBVEhLpZTd
+        rQAAAK0BVE7WMAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKuSURBVEhLpZTd
         T1JxGMdZ/QVdtHIiNYdTShogeoAgwMA3dL4xE7MudFkI9nLTsjVtemnNSre6yJvacmvrZesil9XWUsSs
         btraKpdvKCAIqLNLv+135pH8HXntu31uzvM83+9zfvwOAsGWAOwJRNbfBSLrSJHNQGR9mPOJqcDGRgY9
         7A+twhsI8VgOr/FCyIK05w4Fg38y6QBiNuvx8fAFw3QAAOylPXdot4BUiBtQoCvN6OsfUnPNswte/J71
@@ -137,6 +137,23 @@
         Cgnq82Uw5koh1MtxqKqIrRNvgViiUNGDyZJ5WAxrlQxHpHkwS6RQ5RyFkDmGrGIFWyfe7D8qScrNVzTH
         Q6bS/5SrjCDImBM/6DoNu30qYvRlLkZfhi0+0vW0JBKJ9nEU6kyfCnVmsGhNE//W6LmkdFAoNtBnHgvS
         S88n1H5RtpY2igXppec5/QVELAfiBrb3QwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="SMItemManageTestTypes.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        rwAAAK8BK7AVuQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAJ3SURBVEhLrZVv
+        SBNxHMa/W7fdVt22m/frtBnkljXS6I9BBtWQAkMJlpDVqyByMdqLCUEZQrGCzJLAwrRiL4LIJkVvBSEs
+        fVFIJUQWpRb9eeGqN1LDyj1xqHDeDcdtPvCB4+77PB/YmxGpskI0X/Iw0/eSIlNSjeQyfSUiv/o2p8ii
+        afzfYxvS/fPpaLSkiegOEYWycFSZ0e4uI6IKBbdA37TjCp96eHSetGSlNcz9lZz0cnZvy8y2w/WOAnsn
+        qKomaRNs09pxoygbyhZV7kqRxL4QFXmS9HAAYn0QdqcdB/a58mKp047V9XtAV+OglcWpGUGsHUcO8Rh6
+        RPmTMON4kAOdOKUSXLuLg4ddwAfKn+ElaNhvBTVdVAnu9aGyqkB/nAsvOFTv5EGtXSpB7zBKyt364xxI
+        D1mwYb0N1NmtEvS9RpGf6Y5zIf3MirX+5aCbPfMFrKwYUyP6glGmnvDwlbn1AjmwCR/79QWjjPdYsS6w
+        Ri8oqKvBYEJfMMR7wtPrVnjrAnqBvSGM++0ZSkZ4a0L3OQvEhmN6AZ1uQcsZCyaeE7ZtJFSUG0PpTAyY
+        0RbhQE0tGQQdCZRvdaLrAuVOsxnbN1tBNxIZBAqtt0CNZ/Pj8u2ZrTmBieP+ODyrJkt2V3/e0Xz+lfK8
+        GDg9xVNmjpsmSZKS8Xgci00sFgNjLEUOh6NXkTDGMiJJ0g/G2GQmZr/pOrP8YowNav/ddBEEYSQSiSAa
+        jc5DeScIwhvtvZF4eZ5vk2U5VVtbi0zIsvyb5/kryq22nDWiKI6GQqF0OBzGQgSDQeW3Tmr7WeN2ux94
+        vd6x0tLS0QUY8/l8PwsLC/u0/bn8B90hCYYun+UMAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="SMItemApplications.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

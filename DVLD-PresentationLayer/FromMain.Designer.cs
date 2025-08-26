@@ -206,9 +206,12 @@ namespace DVLD_PresentationLayer
             // SMItemManageTestTypes
             // 
             this.SMItemManageTestTypes.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SMItemManageTestTypes.Image = ((System.Drawing.Image)(resources.GetObject("SMItemManageTestTypes.Image")));
+            this.SMItemManageTestTypes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SMItemManageTestTypes.Name = "SMItemManageTestTypes";
             this.SMItemManageTestTypes.Size = new System.Drawing.Size(396, 30);
             this.SMItemManageTestTypes.Text = "Manage Test Types";
+            this.SMItemManageTestTypes.Click += new System.EventHandler(this.SMItemManageTestTypes_Click);
             // 
             // SMItempeople
             // 

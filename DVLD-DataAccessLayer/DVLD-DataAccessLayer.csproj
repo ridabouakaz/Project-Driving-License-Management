@@ -162,6 +162,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsTestDataAccess.cs" />
     <Compile Include="clsApplicationDataAccess.cs" />
     <Compile Include="clsCountryData.cs" />
     <Compile Include="clsDataAccessSettings.cs" />
