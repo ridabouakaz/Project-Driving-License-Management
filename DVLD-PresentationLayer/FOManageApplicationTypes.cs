@@ -13,22 +13,18 @@ namespace DVLD_PresentationLayer
 {
     public partial class FOManageApplicationTypes : Form
     {
-        private static DataTable _dtApplicationTypes = clsManageApplicationTypes.GetAllApplicationTypes();
+        private static DataTable _dtApplicationTypes;
 
         public FOManageApplicationTypes()
         {
             InitializeComponent();
         }
 
-        private void _RefreshPeopleList()
-        {
-            _dtApplicationTypes = clsManageApplicationTypes.GetAllApplicationTypes();
-            dGViewShowInformation.DataSource = _dtApplicationTypes;
-            LblTotalRecoreds.Text = _dtApplicationTypes.Rows.Count.ToString();
-        }
+    
 
         private void FOManageApplicationTypes_Load(object sender, EventArgs e)
         {
+            _dtApplicationTypes= clsManageApplicationTypes.GetAllApplicationTypes();
             dGViewShowInformation.DataSource = _dtApplicationTypes;
             LblTotalRecoreds.Text = dGViewShowInformation.Rows.Count.ToString();
             if (dGViewShowInformation.Rows.Count > 0)
@@ -54,7 +50,7 @@ namespace DVLD_PresentationLayer
         {
             FOEditApplicationType frm = new FOEditApplicationType((int)dGViewShowInformation.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
-            _RefreshPeopleList();
+            FOManageApplicationTypes_Load(null,null);
         }
     }
 }

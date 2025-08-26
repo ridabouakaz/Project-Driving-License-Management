@@ -1,4 +1,5 @@
 ﻿using DVLD_BusinessLayer;
+using DVLDShared;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -65,6 +66,8 @@ namespace DVLD_PresentationLayer
                 errorProvider1.SetError(textBox, "");
             }
         }
+
+
         private void BtnAddSave_Click(object sender, EventArgs e)
         {
             if (!this.ValidateChildren())
@@ -99,7 +102,31 @@ namespace DVLD_PresentationLayer
 
         private void TBFees_Validating(object sender, CancelEventArgs e)
         {
-            ValidateRequiredField(Fees, FeesTextBox, e);
+
+            if (string.IsNullOrEmpty(Fees.Trim()))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(FeesTextBox, "Fees cannot be empty!");
+                return;
+            }
+            else
+            {
+                errorProvider1.SetError(FeesTextBox, null);
+
+            }
+            ;
+
+
+            if (!clsValidatoin.IsNumber(Fees))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(FeesTextBox, "Invalid Number.");
+            }
+            else
+            {
+                errorProvider1.SetError(FeesTextBox, null);
+            }
+            ;
         }
 
         private void FOEditApplicationType_Load(object sender, EventArgs e)
