@@ -53,5 +53,10 @@ namespace DVLD_PresentationLayer
             FOChangePasswordUser frm = new FOChangePasswordUser(_currentUser.ID);
             frm.ShowDialog();
         }
+        private void SMItemManageApplicationTypes_Click(object sender, EventArgs e)
+        {
+            FOManageApplicationTypes frm = new FOManageApplicationTypes();
+            frm.ShowDialog();
+        }
     }
 }

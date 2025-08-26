@@ -219,6 +219,8 @@
             this.Name = "FOEditApplicationType";
             this.ShowIcon = false;
             this.Text = "Update Application Type";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.FOEditApplicationType_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PBFees)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBTitle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

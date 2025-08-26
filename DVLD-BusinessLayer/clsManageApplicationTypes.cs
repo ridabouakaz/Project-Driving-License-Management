@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static DVLDShared.DVLDShared;
 
 namespace DVLD_BusinessLayer
 {
@@ -14,6 +15,14 @@ namespace DVLD_BusinessLayer
         public string ApplicationTypeTitle { set; get; }
         public decimal ApplicationFees { set; get; }
 
+        private clsManageApplicationTypes(int ID,
+        string ApplicationTypeTitle,
+        decimal ApplicationFees)
+        {
+            this.ID = ID;
+            this.ApplicationTypeTitle = ApplicationTypeTitle;
+            this.ApplicationFees = ApplicationFees;
+        }
         private bool _UpdateApplication()
         {
             //call DataAccess Layer 
@@ -25,9 +34,32 @@ namespace DVLD_BusinessLayer
                 );
 
         }
+
+        public static clsManageApplicationTypes Find(int ID)
+        {
+            string ApplicationTypeTitle = "";
+            decimal ApplicationFees =1;
+
+            bool isFound = clsApplicationDataAccess.GetApplicationInfoByID(
+                ID,
+                ref ApplicationTypeTitle,
+                ref ApplicationFees
+            );
+
+            if (isFound)
+            {
+                return new clsManageApplicationTypes(
+                    ID,
+                     ApplicationTypeTitle,
+                 ApplicationFees
+                );
+            }
+            else
+                return null;
+        }
         public bool Save()
         { 
-                    return _UpdateApplication();
+          return _UpdateApplication();
         }
         public static DataTable GetAllApplicationTypes()
         {

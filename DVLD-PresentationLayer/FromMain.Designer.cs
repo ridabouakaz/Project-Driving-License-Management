@@ -201,6 +201,7 @@ namespace DVLD_PresentationLayer
             this.SMItemManageApplicationTypes.Name = "SMItemManageApplicationTypes";
             this.SMItemManageApplicationTypes.Size = new System.Drawing.Size(396, 30);
             this.SMItemManageApplicationTypes.Text = "Manage Application Types";
+            this.SMItemManageApplicationTypes.Click += new System.EventHandler(this.SMItemManageApplicationTypes_Click);
             // 
             // SMItemManageTestTypes
             // 

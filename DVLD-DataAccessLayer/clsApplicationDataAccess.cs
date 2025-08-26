@@ -12,6 +12,51 @@ namespace DVLD_DataAccessLayer
 {
     public class clsApplicationDataAccess
     {
+        public static bool GetApplicationInfoByID(
+int ID,
+          ref string ApplicationTypeTitle,
+          ref decimal ApplicationFees
+)
+        {
+            bool isFound = false;
+
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                string query = "select * from ApplicationTypes where ApplicationTypeID=@ApplicationTypeID";
+
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@ApplicationTypeID", ID);
+
+                try
+                {
+                    connection.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        isFound = true;
+
+                        ApplicationFees = (decimal)reader["ApplicationFees"];
+                        ApplicationTypeTitle = reader["ApplicationTypeTitle"].ToString();
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Handle error (log or throw)
+                    isFound = false;
+                }
+            }
+
+            return isFound;
+        }
+
+
+
+
+
+
+
         public static bool UpdateApplication(
     int ID, string ApplicationTypeTitle, decimal ApplicationFees)
         {
@@ -22,7 +67,7 @@ namespace DVLD_DataAccessLayer
                 string query = @"UPDATE ApplicationTypes  
                          SET
                              ApplicationTypeTitle = @ApplicationTypeTitle,
-                             ApplicationFees = @TApplicationFees
+                             ApplicationFees = @ApplicationFees
                          WHERE ApplicationTypeID = @ApplicationTypeID";
 
                 using (SqlCommand command = new SqlCommand(query, connection))

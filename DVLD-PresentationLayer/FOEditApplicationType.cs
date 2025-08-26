@@ -9,6 +9,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace DVLD_PresentationLayer
 {
@@ -30,8 +31,22 @@ namespace DVLD_PresentationLayer
         public TextBox FeesTextBox => TBFees;
         public FOEditApplicationType(int ID)
         {
-            _ID=ID;
+            _ID = ID;
             InitializeComponent();
+        }
+
+        private void _LoadData()
+        {
+            _ApplicationTypes = clsManageApplicationTypes.Find(_ID);
+            if (_ApplicationTypes == null)
+            {
+                MessageBox.Show("This form will be closed because No Contact with ID = " + _ID);
+                this.Close();
+                return;
+            }
+            LblValueID.Text = _ApplicationTypes.ID.ToString();
+            Title = _ApplicationTypes.ApplicationTypeTitle;
+            Fees = _ApplicationTypes.ApplicationFees.ToString("F4");
         }
         private void BtnAddClose_Click(object sender, EventArgs e)
         {
@@ -85,6 +100,11 @@ namespace DVLD_PresentationLayer
         private void TBFees_Validating(object sender, CancelEventArgs e)
         {
             ValidateRequiredField(Fees, FeesTextBox, e);
+        }
+
+        private void FOEditApplicationType_Load(object sender, EventArgs e)
+        {
+            _LoadData();
         }
     }
 }
