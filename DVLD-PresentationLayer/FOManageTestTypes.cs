@@ -58,7 +58,7 @@ namespace DVLD_PresentationLayer
 
         private void SMItemEditTestType_Click(object sender, EventArgs e)
         {
-            FOEditTestType frm = new FOEditTestType((int)dGViewShowInformation.CurrentRow.Cells[0].Value);
+            FOEditTestType frm = new FOEditTestType((clsManageTestTypes.enTestType)dGViewShowInformation.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
             FOManageTestTypes_Load(null, null);
         }

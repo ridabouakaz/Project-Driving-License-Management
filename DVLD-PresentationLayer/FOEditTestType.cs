@@ -16,7 +16,7 @@ namespace DVLD_PresentationLayer
 {
     public partial class FOEditTestType : Form
     {
-        int _ID;
+        clsManageTestTypes.enTestType _ID;
         clsManageTestTypes _TestTypes;
         public string Title
         {
@@ -36,7 +36,7 @@ namespace DVLD_PresentationLayer
             set => TBFees.Text = value;
         }
         public TextBox FeesTextBox => TBFees;
-        public FOEditTestType(int ID)
+        public FOEditTestType(clsManageTestTypes.enTestType ID)
         {
             _ID = ID;
             InitializeComponent();

@@ -11,13 +11,14 @@ namespace DVLD_BusinessLayer
 {
     public class clsManageTestTypes
     {
-        public int ID { set; get; }
+        public enum enTestType { VisionTest = 1, WrittenTest = 2, StreetTest = 3 };
+        public clsManageTestTypes.enTestType ID { set; get; }
         public string TestTypeTitle { set; get; }
         public string TestTypeDescription { set; get; }
 
         public decimal TestTypeFees { set; get; }
 
-        private clsManageTestTypes(int ID,
+        private clsManageTestTypes(clsManageTestTypes.enTestType ID,
         string TestTypeTitle, string TestTypeDescription,
         decimal TestFees)
         {
@@ -30,7 +31,7 @@ namespace DVLD_BusinessLayer
         {
             //call DataAccess Layer 
             return clsTestDataAccess.UpdateTest(
-                    this.ID,
+                    (int)this.ID,
                     this.TestTypeTitle,
                     this.TestTypeDescription,
                     this.TestTypeFees
@@ -38,14 +39,14 @@ namespace DVLD_BusinessLayer
                 );
 
         }
-        public static clsManageTestTypes Find(int ID)
+        public static clsManageTestTypes Find(clsManageTestTypes.enTestType TestTypeID)
         {
             string TestTypeTitle = "";
             string TestTypeDescription = "";
             decimal TestTypeFees = 1;
 
             bool isFound = clsTestDataAccess.GetTestInfoByID(
-                ID,
+                (int)TestTypeID,
                 ref TestTypeTitle,
                 ref TestTypeDescription,
 
@@ -55,7 +56,7 @@ namespace DVLD_BusinessLayer
             if (isFound)
             {
                 return new clsManageTestTypes(
-                    ID,
+                    TestTypeID,
                      TestTypeTitle, TestTypeDescription,
                  TestTypeFees
                 );
