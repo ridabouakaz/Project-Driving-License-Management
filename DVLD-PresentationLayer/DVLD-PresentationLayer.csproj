@@ -69,94 +69,100 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CtrDetailsPerson%28Edit-Add%29.cs">
+    <Compile Include="Applications\FOAddNewLocalDrivingApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\FOAddNewLocalDrivingApplication.Designer.cs">
+      <DependentUpon>FOAddNewLocalDrivingApplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People\Control\CtrDetailsPerson%28Edit-Add%29.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CtrDetailsPerson%28Edit-Add%29.Designer.cs">
+    <Compile Include="People\Control\CtrDetailsPerson%28Edit-Add%29.Designer.cs">
       <DependentUpon>CtrDetailsPerson%28Edit-Add%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="CtrDetailsPerson.cs">
+    <Compile Include="People\Control\CtrDetailsPerson.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CtrDetailsPerson.Designer.cs">
+    <Compile Include="People\Control\CtrDetailsPerson.Designer.cs">
       <DependentUpon>CtrDetailsPerson.cs</DependentUpon>
     </Compile>
-    <Compile Include="CtrDetailsPersonWithFilter.cs">
+    <Compile Include="People\Control\CtrDetailsPersonWithFilter.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CtrDetailsPersonWithFilter.Designer.cs">
+    <Compile Include="People\Control\CtrDetailsPersonWithFilter.Designer.cs">
       <DependentUpon>CtrDetailsPersonWithFilter.cs</DependentUpon>
     </Compile>
-    <Compile Include="CtrDetailsUser.cs">
+    <Compile Include="Users\Control\CtrDetailsUser.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CtrDetailsUser.Designer.cs">
+    <Compile Include="Users\Control\CtrDetailsUser.Designer.cs">
       <DependentUpon>CtrDetailsUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="FOAddEditPersonInfo.cs">
+    <Compile Include="People\FOAddEditPersonInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FOAddEditPersonInfo.Designer.cs">
+    <Compile Include="People\FOAddEditPersonInfo.Designer.cs">
       <DependentUpon>FOAddEditPersonInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="FOAddEditUserInfo.cs">
+    <Compile Include="Users\FOAddEditUserInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FOAddEditUserInfo.Designer.cs">
+    <Compile Include="Users\FOAddEditUserInfo.Designer.cs">
       <DependentUpon>FOAddEditUserInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="FOChangePasswordUser.cs">
+    <Compile Include="Users\FOChangePasswordUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FOChangePasswordUser.Designer.cs">
+    <Compile Include="Users\FOChangePasswordUser.Designer.cs">
       <DependentUpon>FOChangePasswordUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="FOEditTestType.cs">
+    <Compile Include="TestTypes\FOEditTestType.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FOEditTestType.Designer.cs">
+    <Compile Include="TestTypes\FOEditTestType.Designer.cs">
       <DependentUpon>FOEditTestType.cs</DependentUpon>
     </Compile>
-    <Compile Include="FOEditApplicationType.cs">
+    <Compile Include="ApplicationTypes\FOEditApplicationType.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FOEditApplicationType.Designer.cs">
+    <Compile Include="ApplicationTypes\FOEditApplicationType.Designer.cs">
       <DependentUpon>FOEditApplicationType.cs</DependentUpon>
     </Compile>
-    <Compile Include="FOLoginScreen.cs">
+    <Compile Include="Main\FOLoginScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FOLoginScreen.Designer.cs">
+    <Compile Include="Main\FOLoginScreen.Designer.cs">
       <DependentUpon>FOLoginScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="FOManageTestTypes.cs">
+    <Compile Include="TestTypes\FOManageTestTypes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FOManageTestTypes.Designer.cs">
+    <Compile Include="TestTypes\FOManageTestTypes.Designer.cs">
       <DependentUpon>FOManageTestTypes.cs</DependentUpon>
     </Compile>
-    <Compile Include="FOManageApplicationTypes.cs">
+    <Compile Include="ApplicationTypes\FOManageApplicationTypes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FOManageApplicationTypes.Designer.cs">
+    <Compile Include="ApplicationTypes\FOManageApplicationTypes.Designer.cs">
       <DependentUpon>FOManageApplicationTypes.cs</DependentUpon>
     </Compile>
-    <Compile Include="FOManagePeople.cs">
+    <Compile Include="People\FOManagePeople.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FOManagePeople.Designer.cs">
+    <Compile Include="People\FOManagePeople.Designer.cs">
       <DependentUpon>FOManagePeople.cs</DependentUpon>
     </Compile>
-    <Compile Include="FOManageUsers.cs">
+    <Compile Include="Users\FOManageUsers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FOManageUsers.Designer.cs">
+    <Compile Include="Users\FOManageUsers.Designer.cs">
       <DependentUpon>FOManageUsers.cs</DependentUpon>
     </Compile>
-    <Compile Include="FOPersonInfo.cs">
+    <Compile Include="People\FOPersonInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FOPersonInfo.Designer.cs">
+    <Compile Include="People\FOPersonInfo.Designer.cs">
       <DependentUpon>FOPersonInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="ForTest.cs">
@@ -165,73 +171,76 @@
     <Compile Include="ForTest.Designer.cs">
       <DependentUpon>ForTest.cs</DependentUpon>
     </Compile>
-    <Compile Include="FOUserInfo.cs">
+    <Compile Include="Users\FOUserInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FOUserInfo.Designer.cs">
+    <Compile Include="Users\FOUserInfo.Designer.cs">
       <DependentUpon>FOUserInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="FromMain.cs">
+    <Compile Include="Main\FromMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FromMain.Designer.cs">
+    <Compile Include="Main\FromMain.Designer.cs">
       <DependentUpon>FromMain.cs</DependentUpon>
     </Compile>
     <Compile Include="MyRenderer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="CtrDetailsPerson%28Edit-Add%29.resx">
+    <EmbeddedResource Include="Applications\FOAddNewLocalDrivingApplication.resx">
+      <DependentUpon>FOAddNewLocalDrivingApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\Control\CtrDetailsPerson%28Edit-Add%29.resx">
       <DependentUpon>CtrDetailsPerson%28Edit-Add%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CtrDetailsPerson.resx">
+    <EmbeddedResource Include="People\Control\CtrDetailsPerson.resx">
       <DependentUpon>CtrDetailsPerson.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CtrDetailsPersonWithFilter.resx">
+    <EmbeddedResource Include="People\Control\CtrDetailsPersonWithFilter.resx">
       <DependentUpon>CtrDetailsPersonWithFilter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CtrDetailsUser.resx">
+    <EmbeddedResource Include="Users\Control\CtrDetailsUser.resx">
       <DependentUpon>CtrDetailsUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FOAddEditPersonInfo.resx">
+    <EmbeddedResource Include="People\FOAddEditPersonInfo.resx">
       <DependentUpon>FOAddEditPersonInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FOAddEditUserInfo.resx">
+    <EmbeddedResource Include="Users\FOAddEditUserInfo.resx">
       <DependentUpon>FOAddEditUserInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FOChangePasswordUser.resx">
+    <EmbeddedResource Include="Users\FOChangePasswordUser.resx">
       <DependentUpon>FOChangePasswordUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FOEditTestType.resx">
+    <EmbeddedResource Include="TestTypes\FOEditTestType.resx">
       <DependentUpon>FOEditTestType.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FOEditApplicationType.resx">
+    <EmbeddedResource Include="ApplicationTypes\FOEditApplicationType.resx">
       <DependentUpon>FOEditApplicationType.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FOLoginScreen.resx">
+    <EmbeddedResource Include="Main\FOLoginScreen.resx">
       <DependentUpon>FOLoginScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FOManageTestTypes.resx">
+    <EmbeddedResource Include="TestTypes\FOManageTestTypes.resx">
       <DependentUpon>FOManageTestTypes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FOManageApplicationTypes.resx">
+    <EmbeddedResource Include="ApplicationTypes\FOManageApplicationTypes.resx">
       <DependentUpon>FOManageApplicationTypes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FOManagePeople.resx">
+    <EmbeddedResource Include="People\FOManagePeople.resx">
       <DependentUpon>FOManagePeople.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FOManageUsers.resx">
+    <EmbeddedResource Include="Users\FOManageUsers.resx">
       <DependentUpon>FOManageUsers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FOPersonInfo.resx">
+    <EmbeddedResource Include="People\FOPersonInfo.resx">
       <DependentUpon>FOPersonInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ForTest.resx">
       <DependentUpon>ForTest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FOUserInfo.resx">
+    <EmbeddedResource Include="Users\FOUserInfo.resx">
       <DependentUpon>FOUserInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FromMain.resx">
+    <EmbeddedResource Include="Main\FromMain.resx">
       <DependentUpon>FromMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -268,5 +277,6 @@
       <Name>DVLDShared</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

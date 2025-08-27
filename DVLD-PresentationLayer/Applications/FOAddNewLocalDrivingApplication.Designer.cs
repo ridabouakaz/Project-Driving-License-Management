@@ -1,6 +1,6 @@
 ﻿namespace DVLD_PresentationLayer
 {
-    partial class FOAddEditUserInfo
+    partial class FONewLocalDrivingApplication
     {
         /// <summary>
         /// Required designer variable.
@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FOAddEditUserInfo));
-            this.LblAddEditUser = new System.Windows.Forms.Label();
-            this.TCAddEditUser = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FONewLocalDrivingApplication));
+            this.LblAddEditApplication = new System.Windows.Forms.Label();
+            this.TCAddEditApplication = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
             this.TPPersonalInfo = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.ctrDetailsPersonWithFilter1 = new DVLD_PresentationLayer.CtrDetailsPersonWithFilter();
             this.BtnAddNext = new System.Windows.Forms.Button();
@@ -39,61 +39,61 @@
             this.CBIsActive = new System.Windows.Forms.CheckBox();
             this.TBPasswordConfirm = new System.Windows.Forms.TextBox();
             this.TBPassword = new System.Windows.Forms.TextBox();
-            this.TBUserName = new System.Windows.Forms.TextBox();
-            this.LblValueUserID = new System.Windows.Forms.Label();
-            this.PBUserID = new System.Windows.Forms.PictureBox();
-            this.PBUserName = new System.Windows.Forms.PictureBox();
+            this.TBApplicationName = new System.Windows.Forms.TextBox();
+            this.LblValueApplicationID = new System.Windows.Forms.Label();
+            this.PBApplicationID = new System.Windows.Forms.PictureBox();
+            this.PBApplicationName = new System.Windows.Forms.PictureBox();
             this.PBPassword = new System.Windows.Forms.PictureBox();
             this.PBPasswordConfirm = new System.Windows.Forms.PictureBox();
             this.LblPasswordConfirm = new System.Windows.Forms.Label();
-            this.LblUserID = new System.Windows.Forms.Label();
-            this.LblUserName = new System.Windows.Forms.Label();
+            this.LblApplicationID = new System.Windows.Forms.Label();
+            this.LblApplicationName = new System.Windows.Forms.Label();
             this.LblPassword = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.BtnAddClose = new System.Windows.Forms.Button();
             this.BtnAddSave = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.TCAddEditUser)).BeginInit();
-            this.TCAddEditUser.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TCAddEditApplication)).BeginInit();
+            this.TCAddEditApplication.SuspendLayout();
             this.TPPersonalInfo.SuspendLayout();
             this.TPLoginInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PBUserID)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBUserName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBApplicationID)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBApplicationName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBPasswordConfirm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
-            // LblAddEditUser
+            // LblAddEditApplication
             // 
-            this.LblAddEditUser.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.LblAddEditUser.AutoSize = true;
-            this.LblAddEditUser.BackColor = System.Drawing.Color.Transparent;
-            this.LblAddEditUser.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold);
-            this.LblAddEditUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
-            this.LblAddEditUser.Location = new System.Drawing.Point(403, 9);
-            this.LblAddEditUser.Name = "LblAddEditUser";
-            this.LblAddEditUser.Size = new System.Drawing.Size(271, 50);
-            this.LblAddEditUser.TabIndex = 3;
-            this.LblAddEditUser.Text = "Add New User";
+            this.LblAddEditApplication.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.LblAddEditApplication.AutoSize = true;
+            this.LblAddEditApplication.BackColor = System.Drawing.Color.Transparent;
+            this.LblAddEditApplication.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold);
+            this.LblAddEditApplication.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
+            this.LblAddEditApplication.Location = new System.Drawing.Point(341, 9);
+            this.LblAddEditApplication.Name = "LblAddEditApplication";
+            this.LblAddEditApplication.Size = new System.Drawing.Size(395, 50);
+            this.LblAddEditApplication.TabIndex = 3;
+            this.LblAddEditApplication.Text = "Add New Application";
             // 
-            // TCAddEditUser
+            // TCAddEditApplication
             // 
-            this.TCAddEditUser.ActiveTabFont = new System.Drawing.Font("Segoe UI", 12F);
-            this.TCAddEditUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(224)))), ((int)(((byte)(250)))));
-            this.TCAddEditUser.BeforeTouchSize = new System.Drawing.Size(1028, 685);
-            this.TCAddEditUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TCAddEditUser.Controls.Add(this.TPPersonalInfo);
-            this.TCAddEditUser.Controls.Add(this.TPLoginInfo);
-            this.TCAddEditUser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.TCAddEditUser.Location = new System.Drawing.Point(12, 85);
-            this.TCAddEditUser.Name = "TCAddEditUser";
-            this.TCAddEditUser.Size = new System.Drawing.Size(1028, 685);
-            this.TCAddEditUser.TabIndex = 4;
-            this.TCAddEditUser.TabPanelBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(235)))), ((int)(((byte)(245)))));
-            this.TCAddEditUser.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererIE7);
-            this.TCAddEditUser.ThemeName = "TabRendererIE7";
-            this.TCAddEditUser.ThemeStyle.PrimitiveButtonStyle.DisabledNextPageImage = null;
+            this.TCAddEditApplication.ActiveTabFont = new System.Drawing.Font("Segoe UI", 12F);
+            this.TCAddEditApplication.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(224)))), ((int)(((byte)(250)))));
+            this.TCAddEditApplication.BeforeTouchSize = new System.Drawing.Size(1028, 685);
+            this.TCAddEditApplication.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TCAddEditApplication.Controls.Add(this.TPPersonalInfo);
+            this.TCAddEditApplication.Controls.Add(this.TPLoginInfo);
+            this.TCAddEditApplication.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.TCAddEditApplication.Location = new System.Drawing.Point(12, 85);
+            this.TCAddEditApplication.Name = "TCAddEditApplication";
+            this.TCAddEditApplication.Size = new System.Drawing.Size(1028, 685);
+            this.TCAddEditApplication.TabIndex = 4;
+            this.TCAddEditApplication.TabPanelBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(235)))), ((int)(((byte)(245)))));
+            this.TCAddEditApplication.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererIE7);
+            this.TCAddEditApplication.ThemeName = "TabRendererIE7";
+            this.TCAddEditApplication.ThemeStyle.PrimitiveButtonStyle.DisabledNextPageImage = null;
             // 
             // TPPersonalInfo
             // 
@@ -150,15 +150,15 @@
             this.TPLoginInfo.Controls.Add(this.CBIsActive);
             this.TPLoginInfo.Controls.Add(this.TBPasswordConfirm);
             this.TPLoginInfo.Controls.Add(this.TBPassword);
-            this.TPLoginInfo.Controls.Add(this.TBUserName);
-            this.TPLoginInfo.Controls.Add(this.LblValueUserID);
-            this.TPLoginInfo.Controls.Add(this.PBUserID);
-            this.TPLoginInfo.Controls.Add(this.PBUserName);
+            this.TPLoginInfo.Controls.Add(this.TBApplicationName);
+            this.TPLoginInfo.Controls.Add(this.LblValueApplicationID);
+            this.TPLoginInfo.Controls.Add(this.PBApplicationID);
+            this.TPLoginInfo.Controls.Add(this.PBApplicationName);
             this.TPLoginInfo.Controls.Add(this.PBPassword);
             this.TPLoginInfo.Controls.Add(this.PBPasswordConfirm);
             this.TPLoginInfo.Controls.Add(this.LblPasswordConfirm);
-            this.TPLoginInfo.Controls.Add(this.LblUserID);
-            this.TPLoginInfo.Controls.Add(this.LblUserName);
+            this.TPLoginInfo.Controls.Add(this.LblApplicationID);
+            this.TPLoginInfo.Controls.Add(this.LblApplicationName);
             this.TPLoginInfo.Controls.Add(this.LblPassword);
             this.TPLoginInfo.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TPLoginInfo.Image = null;
@@ -209,53 +209,50 @@
             this.TBPassword.UseSystemPasswordChar = true;
             this.TBPassword.Validating += new System.ComponentModel.CancelEventHandler(this.TBPassword_Validating);
             // 
-            // TBUserName
+            // TBApplicationName
             // 
-            this.TBUserName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(243)))), ((int)(((byte)(247)))));
-            this.TBUserName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TBUserName.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.TBUserName.ForeColor = System.Drawing.Color.Black;
-            this.TBUserName.Location = new System.Drawing.Point(291, 150);
-            this.TBUserName.Name = "TBUserName";
-            this.TBUserName.Size = new System.Drawing.Size(170, 30);
-            this.TBUserName.TabIndex = 53;
-            this.TBUserName.Validating += new System.ComponentModel.CancelEventHandler(this.TBUserName_Validating);
+            this.TBApplicationName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(243)))), ((int)(((byte)(247)))));
+            this.TBApplicationName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TBApplicationName.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.TBApplicationName.ForeColor = System.Drawing.Color.Black;
+            this.TBApplicationName.Location = new System.Drawing.Point(291, 150);
+            this.TBApplicationName.Name = "TBApplicationName";
+            this.TBApplicationName.Size = new System.Drawing.Size(170, 30);
+            this.TBApplicationName.TabIndex = 53;
             // 
-            // LblValueUserID
+            // LblValueApplicationID
             // 
-            this.LblValueUserID.AutoSize = true;
-            this.LblValueUserID.BackColor = System.Drawing.Color.Transparent;
-            this.LblValueUserID.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.LblValueUserID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblValueUserID.Location = new System.Drawing.Point(295, 98);
-            this.LblValueUserID.Name = "LblValueUserID";
-            this.LblValueUserID.Size = new System.Drawing.Size(39, 25);
-            this.LblValueUserID.TabIndex = 52;
-            this.LblValueUserID.Text = "???";
+            this.LblValueApplicationID.AutoSize = true;
+            this.LblValueApplicationID.BackColor = System.Drawing.Color.Transparent;
+            this.LblValueApplicationID.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.LblValueApplicationID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblValueApplicationID.Location = new System.Drawing.Point(295, 98);
+            this.LblValueApplicationID.Name = "LblValueApplicationID";
+            this.LblValueApplicationID.Size = new System.Drawing.Size(39, 25);
+            this.LblValueApplicationID.TabIndex = 52;
+            this.LblValueApplicationID.Text = "???";
             // 
-            // PBUserID
+            // PBApplicationID
             // 
-            this.PBUserID.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.PBUserID.ErrorImage = null;
-            this.PBUserID.Image = ((System.Drawing.Image)(resources.GetObject("PBUserID.Image")));
-            this.PBUserID.InitialImage = null;
-            this.PBUserID.Location = new System.Drawing.Point(223, 91);
-            this.PBUserID.Name = "PBUserID";
-            this.PBUserID.Size = new System.Drawing.Size(40, 32);
-            this.PBUserID.TabIndex = 51;
-            this.PBUserID.TabStop = false;
+            this.PBApplicationID.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.PBApplicationID.ErrorImage = null;
+            this.PBApplicationID.InitialImage = null;
+            this.PBApplicationID.Location = new System.Drawing.Point(223, 91);
+            this.PBApplicationID.Name = "PBApplicationID";
+            this.PBApplicationID.Size = new System.Drawing.Size(40, 32);
+            this.PBApplicationID.TabIndex = 51;
+            this.PBApplicationID.TabStop = false;
             // 
-            // PBUserName
+            // PBApplicationName
             // 
-            this.PBUserName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.PBUserName.ErrorImage = null;
-            this.PBUserName.Image = ((System.Drawing.Image)(resources.GetObject("PBUserName.Image")));
-            this.PBUserName.InitialImage = null;
-            this.PBUserName.Location = new System.Drawing.Point(223, 152);
-            this.PBUserName.Name = "PBUserName";
-            this.PBUserName.Size = new System.Drawing.Size(40, 32);
-            this.PBUserName.TabIndex = 50;
-            this.PBUserName.TabStop = false;
+            this.PBApplicationName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.PBApplicationName.ErrorImage = null;
+            this.PBApplicationName.InitialImage = null;
+            this.PBApplicationName.Location = new System.Drawing.Point(223, 152);
+            this.PBApplicationName.Name = "PBApplicationName";
+            this.PBApplicationName.Size = new System.Drawing.Size(40, 32);
+            this.PBApplicationName.TabIndex = 50;
+            this.PBApplicationName.TabStop = false;
             // 
             // PBPassword
             // 
@@ -293,29 +290,29 @@
             this.LblPasswordConfirm.TabIndex = 40;
             this.LblPasswordConfirm.Text = "Confirm Password:";
             // 
-            // LblUserID
+            // LblApplicationID
             // 
-            this.LblUserID.AutoSize = true;
-            this.LblUserID.BackColor = System.Drawing.Color.Transparent;
-            this.LblUserID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.LblUserID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblUserID.Location = new System.Drawing.Point(117, 95);
-            this.LblUserID.Name = "LblUserID";
-            this.LblUserID.Size = new System.Drawing.Size(80, 28);
-            this.LblUserID.TabIndex = 39;
-            this.LblUserID.Text = "UserID:";
+            this.LblApplicationID.AutoSize = true;
+            this.LblApplicationID.BackColor = System.Drawing.Color.Transparent;
+            this.LblApplicationID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.LblApplicationID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblApplicationID.Location = new System.Drawing.Point(117, 95);
+            this.LblApplicationID.Name = "LblApplicationID";
+            this.LblApplicationID.Size = new System.Drawing.Size(147, 28);
+            this.LblApplicationID.TabIndex = 39;
+            this.LblApplicationID.Text = "ApplicationID:";
             // 
-            // LblUserName
+            // LblApplicationName
             // 
-            this.LblUserName.AutoSize = true;
-            this.LblUserName.BackColor = System.Drawing.Color.Transparent;
-            this.LblUserName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.LblUserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblUserName.Location = new System.Drawing.Point(82, 152);
-            this.LblUserName.Name = "LblUserName";
-            this.LblUserName.Size = new System.Drawing.Size(115, 28);
-            this.LblUserName.TabIndex = 38;
-            this.LblUserName.Text = "UserName:";
+            this.LblApplicationName.AutoSize = true;
+            this.LblApplicationName.BackColor = System.Drawing.Color.Transparent;
+            this.LblApplicationName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.LblApplicationName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblApplicationName.Location = new System.Drawing.Point(82, 152);
+            this.LblApplicationName.Name = "LblApplicationName";
+            this.LblApplicationName.Size = new System.Drawing.Size(182, 28);
+            this.LblApplicationName.TabIndex = 38;
+            this.LblApplicationName.Text = "ApplicationName:";
             // 
             // LblPassword
             // 
@@ -387,7 +384,7 @@
             this.BtnAddSave.UseVisualStyleBackColor = false;
             this.BtnAddSave.Click += new System.EventHandler(this.BtnAddSave_Click);
             // 
-            // FOAddEditUserInfo
+            // FONewLocalDrivingApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -395,22 +392,21 @@
             this.ClientSize = new System.Drawing.Size(1054, 910);
             this.Controls.Add(this.BtnAddSave);
             this.Controls.Add(this.BtnAddClose);
-            this.Controls.Add(this.TCAddEditUser);
-            this.Controls.Add(this.LblAddEditUser);
+            this.Controls.Add(this.TCAddEditApplication);
+            this.Controls.Add(this.LblAddEditApplication);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FOAddEditUserInfo";
+            this.Name = "FONewLocalDrivingApplication";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FOAddEditUserInfo";
-            this.Load += new System.EventHandler(this.FOAddEditUserInfo_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.TCAddEditUser)).EndInit();
-            this.TCAddEditUser.ResumeLayout(false);
+            this.Text = "New Local Driving Application";
+            ((System.ComponentModel.ISupportInitialize)(this.TCAddEditApplication)).EndInit();
+            this.TCAddEditApplication.ResumeLayout(false);
             this.TPPersonalInfo.ResumeLayout(false);
             this.TPLoginInfo.ResumeLayout(false);
             this.TPLoginInfo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PBUserID)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBUserName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBApplicationID)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBApplicationName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBPasswordConfirm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
@@ -421,24 +417,24 @@
 
         #endregion
 
-        private System.Windows.Forms.Label LblAddEditUser;
-        private Syncfusion.Windows.Forms.Tools.TabControlAdv TCAddEditUser;
+        private System.Windows.Forms.Label LblAddEditApplication;
+        private Syncfusion.Windows.Forms.Tools.TabControlAdv TCAddEditApplication;
         private Syncfusion.Windows.Forms.Tools.TabPageAdv TPPersonalInfo;
         private Syncfusion.Windows.Forms.Tools.TabPageAdv TPLoginInfo;
         private System.Windows.Forms.Button BtnAddNext;
         private CtrDetailsPersonWithFilter ctrDetailsPersonWithFilter1;
         private System.Windows.Forms.Label LblPasswordConfirm;
-        private System.Windows.Forms.Label LblUserID;
-        private System.Windows.Forms.Label LblUserName;
+        private System.Windows.Forms.Label LblApplicationID;
+        private System.Windows.Forms.Label LblApplicationName;
         private System.Windows.Forms.Label LblPassword;
-        private System.Windows.Forms.PictureBox PBUserID;
-        private System.Windows.Forms.PictureBox PBUserName;
+        private System.Windows.Forms.PictureBox PBApplicationID;
+        private System.Windows.Forms.PictureBox PBApplicationName;
         private System.Windows.Forms.PictureBox PBPassword;
         private System.Windows.Forms.PictureBox PBPasswordConfirm;
-        private System.Windows.Forms.Label LblValueUserID;
+        private System.Windows.Forms.Label LblValueApplicationID;
         private System.Windows.Forms.TextBox TBPasswordConfirm;
         private System.Windows.Forms.TextBox TBPassword;
-        private System.Windows.Forms.TextBox TBUserName;
+        private System.Windows.Forms.TextBox TBApplicationName;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.CheckBox CBIsActive;
         private System.Windows.Forms.CheckBox checkBox1;
