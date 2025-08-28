@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -12,123 +11,53 @@ namespace DVLD_DataAccessLayer
 {
     public class clsApplicationDataAccess
     {
-        public static bool GetApplicationInfoByID(
-int ID,
-          ref string ApplicationTypeTitle,
-          ref decimal ApplicationFees
-)
+
+        public static int AddNewApplication(
+    int ApplicantPersonID, DateTime ApplicationDate, int ApplicationTypeID, int ApplicationStatus,
+    DateTime LastStatusDate, decimal PaidFees, int CreatedByUserID)
         {
-            bool isFound = false;
+            int ApplicationID = -1;
 
             using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
             {
-                string query = "select * from ApplicationTypes where ApplicationTypeID=@ApplicationTypeID";
-
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@ApplicationTypeID", ID);
-
-                try
-                {
-                    connection.Open();
-                    SqlDataReader reader = command.ExecuteReader();
-
-                    if (reader.Read())
-                    {
-                        isFound = true;
-
-                        ApplicationFees = (decimal)reader["ApplicationFees"];
-                        ApplicationTypeTitle = reader["ApplicationTypeTitle"].ToString();
-
-                    }
-                }
-                catch (Exception ex)
-                {
-                    // Handle error (log or throw)
-                    isFound = false;
-                }
-            }
-
-            return isFound;
-        }
-
-
-
-
-
-
-
-        public static bool UpdateApplication(
-    int ID, string ApplicationTypeTitle, decimal ApplicationFees)
-        {
-            int rowsAffected = 0;
-
-            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
-            {
-                string query = @"UPDATE ApplicationTypes  
-                         SET
-                             ApplicationTypeTitle = @ApplicationTypeTitle,
-                             ApplicationFees = @ApplicationFees
-                         WHERE ApplicationTypeID = @ApplicationTypeID";
+                string query = @"INSERT INTO Applications 
+                        (ApplicantPersonID, ApplicationDate, ApplicationTypeID, ApplicationStatus, LastStatusDate, 
+                         PaidFees, CreatedByUserID)
+                        VALUES 
+                        (@ApplicantPersonID, @ApplicationDate, @ApplicationTypeID, @ApplicationStatus, @LastStatusDate, 
+                         @PaidFees, @CreatedByUserID);
+                        SELECT SCOPE_IDENTITY();";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    command.Parameters.AddWithValue("@ApplicationTypeID", ID);
-                    command.Parameters.AddWithValue("@ApplicationTypeTitle", ApplicationTypeTitle);
-                    command.Parameters.AddWithValue("@ApplicationFees", ApplicationFees);
-   
+                    command.Parameters.AddWithValue("@ApplicantPersonID", ApplicantPersonID);
+                    command.Parameters.AddWithValue("@ApplicationDate", ApplicationDate);
+                    command.Parameters.AddWithValue("@ApplicationTypeID", ApplicationTypeID);
+                    command.Parameters.AddWithValue("@ApplicationStatus", ApplicationStatus);
+                    command.Parameters.AddWithValue("@LastStatusDate", LastStatusDate);
+                    command.Parameters.AddWithValue("@PaidFees", PaidFees);
+                    command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
+
                     try
                     {
                         connection.Open();
-                        rowsAffected = command.ExecuteNonQuery();
+                        object result = command.ExecuteScalar();
+
+                        if (result != null && int.TryParse(result.ToString(), out int insertedID))
+                        {
+                            ApplicationID = insertedID;
+                        }
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Error updating ApplicationType: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return false;
+                        MessageBox.Show("Error adding new Application: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
 
-            return (rowsAffected > 0);
+            return ApplicationID;
         }
-        public static DataTable GetAllApplicationTypes()
-        {
-
-            DataTable dt = new DataTable();
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-
-            string query = "select ApplicationTypeID,ApplicationTypeTitle,ApplicationFees from ApplicationTypes";
-
-            SqlCommand command = new SqlCommand(query, connection);
-
-            try
-            {
-                connection.Open();
-
-                SqlDataReader reader = command.ExecuteReader();
-
-                if (reader.HasRows)
-
-                {
-                    dt.Load(reader);
-                }
-
-                reader.Close();
 
 
-            }
-
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error retrieving ApplicationTypes: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                connection.Close();
-            }
-
-            return dt;
-
-        }
     }
 }

@@ -26,7 +26,7 @@ namespace DVLD_BusinessLayer
         private bool _UpdateApplication()
         {
             //call DataAccess Layer 
-            return clsApplicationDataAccess.UpdateApplication(
+            return clsApplicationTypeDataAccess.UpdateApplication(
                     this.ID,
                     this.ApplicationTypeTitle,
                     this.ApplicationFees
@@ -40,7 +40,7 @@ namespace DVLD_BusinessLayer
             string ApplicationTypeTitle = "";
             decimal ApplicationFees =1;
 
-            bool isFound = clsApplicationDataAccess.GetApplicationInfoByID(
+            bool isFound = clsApplicationTypeDataAccess.GetApplicationInfoByID(
                 ID,
                 ref ApplicationTypeTitle,
                 ref ApplicationFees
@@ -63,7 +63,7 @@ namespace DVLD_BusinessLayer
         }
         public static DataTable GetAllApplicationTypes()
         {
-            return clsApplicationDataAccess.GetAllApplicationTypes();
+            return clsApplicationTypeDataAccess.GetAllApplicationTypes();
 
         }
     }

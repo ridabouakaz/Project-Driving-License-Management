@@ -249,7 +249,7 @@ namespace DVLD_BusinessLayer
         {
             return clsPersonDataAccess.GetFilePathById(ID);
         }
-        public static bool isPeopleExist(int ID)
+        public static bool IsPersonExist(int ID)
         {
             return clsPersonDataAccess.IsPersonExist(ID);
         }
