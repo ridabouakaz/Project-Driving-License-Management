@@ -36,6 +36,12 @@
             this.ctrDetailsPersonWithFilter1 = new DVLD_PresentationLayer.CtrDetailsPersonWithFilter();
             this.BtnAddNext = new System.Windows.Forms.Button();
             this.TPApplicationInfo = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            this.CBLicenseClassBy = new System.Windows.Forms.ComboBox();
+            this.LblValueCreatedby = new System.Windows.Forms.Label();
+            this.LblValueApplicationFees = new System.Windows.Forms.Label();
+            this.LblValueApplicationDate = new System.Windows.Forms.Label();
+            this.PBCreatedby = new System.Windows.Forms.PictureBox();
+            this.LblCreatedby = new System.Windows.Forms.Label();
             this.LblValueApplicationID = new System.Windows.Forms.Label();
             this.PBDLApplicationID = new System.Windows.Forms.PictureBox();
             this.PBApplicationDate = new System.Windows.Forms.PictureBox();
@@ -49,22 +55,16 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.BtnAddClose = new System.Windows.Forms.Button();
             this.BtnAddSave = new System.Windows.Forms.Button();
-            this.LblCreatedby = new System.Windows.Forms.Label();
-            this.PBCreatedby = new System.Windows.Forms.PictureBox();
-            this.LblValueApplicationDate = new System.Windows.Forms.Label();
-            this.LblValueApplicationFees = new System.Windows.Forms.Label();
-            this.LblValueCreatedby = new System.Windows.Forms.Label();
-            this.CBLicenseClassBy = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.TCAddEditApplication)).BeginInit();
             this.TCAddEditApplication.SuspendLayout();
             this.TPPersonalInfo.SuspendLayout();
             this.TPApplicationInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PBCreatedby)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBDLApplicationID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBApplicationDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBLicenseClass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBApplicationFees)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBCreatedby)).BeginInit();
             this.SuspendLayout();
             // 
             // LblAddEditApplication
@@ -74,11 +74,11 @@
             this.LblAddEditApplication.BackColor = System.Drawing.Color.Transparent;
             this.LblAddEditApplication.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold);
             this.LblAddEditApplication.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
-            this.LblAddEditApplication.Location = new System.Drawing.Point(341, 9);
+            this.LblAddEditApplication.Location = new System.Drawing.Point(254, 19);
             this.LblAddEditApplication.Name = "LblAddEditApplication";
-            this.LblAddEditApplication.Size = new System.Drawing.Size(395, 50);
+            this.LblAddEditApplication.Size = new System.Drawing.Size(553, 50);
             this.LblAddEditApplication.TabIndex = 3;
-            this.LblAddEditApplication.Text = "Add New Application";
+            this.LblAddEditApplication.Text = "New Local Driving Application";
             // 
             // TCAddEditApplication
             // 
@@ -176,6 +176,86 @@
             this.TPApplicationInfo.TabIndex = 1;
             this.TPApplicationInfo.Text = "Application Info";
             this.TPApplicationInfo.ThemesEnabled = false;
+            // 
+            // CBLicenseClassBy
+            // 
+            this.CBLicenseClassBy.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.CBLicenseClassBy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBLicenseClassBy.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.CBLicenseClassBy.ForeColor = System.Drawing.Color.Black;
+            this.CBLicenseClassBy.FormattingEnabled = true;
+            this.CBLicenseClassBy.Items.AddRange(new object[] {
+            "Class 1 - Small Motorcycle",
+            "Class 2 - Heavy Motorcycle License",
+            "Class 3 - Ordinary driving license",
+            "Class 4 - Commercial",
+            "Class 5 - Agricultural",
+            "Class 6 - Small and medium bus",
+            "Class 7 - Truck and heavy vehicle"});
+            this.CBLicenseClassBy.Location = new System.Drawing.Point(301, 205);
+            this.CBLicenseClassBy.Name = "CBLicenseClassBy";
+            this.CBLicenseClassBy.Size = new System.Drawing.Size(268, 31);
+            this.CBLicenseClassBy.TabIndex = 63;
+            // 
+            // LblValueCreatedby
+            // 
+            this.LblValueCreatedby.AutoSize = true;
+            this.LblValueCreatedby.BackColor = System.Drawing.Color.Transparent;
+            this.LblValueCreatedby.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.LblValueCreatedby.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblValueCreatedby.Location = new System.Drawing.Point(296, 312);
+            this.LblValueCreatedby.Name = "LblValueCreatedby";
+            this.LblValueCreatedby.Size = new System.Drawing.Size(39, 25);
+            this.LblValueCreatedby.TabIndex = 62;
+            this.LblValueCreatedby.Text = "???";
+            // 
+            // LblValueApplicationFees
+            // 
+            this.LblValueApplicationFees.AutoSize = true;
+            this.LblValueApplicationFees.BackColor = System.Drawing.Color.Transparent;
+            this.LblValueApplicationFees.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.LblValueApplicationFees.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblValueApplicationFees.Location = new System.Drawing.Point(296, 262);
+            this.LblValueApplicationFees.Name = "LblValueApplicationFees";
+            this.LblValueApplicationFees.Size = new System.Drawing.Size(39, 25);
+            this.LblValueApplicationFees.TabIndex = 61;
+            this.LblValueApplicationFees.Text = "???";
+            // 
+            // LblValueApplicationDate
+            // 
+            this.LblValueApplicationDate.AutoSize = true;
+            this.LblValueApplicationDate.BackColor = System.Drawing.Color.Transparent;
+            this.LblValueApplicationDate.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.LblValueApplicationDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblValueApplicationDate.Location = new System.Drawing.Point(296, 150);
+            this.LblValueApplicationDate.Name = "LblValueApplicationDate";
+            this.LblValueApplicationDate.Size = new System.Drawing.Size(39, 25);
+            this.LblValueApplicationDate.TabIndex = 60;
+            this.LblValueApplicationDate.Text = "???";
+            // 
+            // PBCreatedby
+            // 
+            this.PBCreatedby.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.PBCreatedby.ErrorImage = null;
+            this.PBCreatedby.Image = ((System.Drawing.Image)(resources.GetObject("PBCreatedby.Image")));
+            this.PBCreatedby.InitialImage = null;
+            this.PBCreatedby.Location = new System.Drawing.Point(223, 315);
+            this.PBCreatedby.Name = "PBCreatedby";
+            this.PBCreatedby.Size = new System.Drawing.Size(40, 32);
+            this.PBCreatedby.TabIndex = 59;
+            this.PBCreatedby.TabStop = false;
+            // 
+            // LblCreatedby
+            // 
+            this.LblCreatedby.AutoSize = true;
+            this.LblCreatedby.BackColor = System.Drawing.Color.Transparent;
+            this.LblCreatedby.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.LblCreatedby.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblCreatedby.Location = new System.Drawing.Point(78, 309);
+            this.LblCreatedby.Name = "LblCreatedby";
+            this.LblCreatedby.Size = new System.Drawing.Size(119, 28);
+            this.LblCreatedby.TabIndex = 58;
+            this.LblCreatedby.Text = "Created by:";
             // 
             // LblValueApplicationID
             // 
@@ -343,87 +423,6 @@
             this.BtnAddSave.UseVisualStyleBackColor = false;
             this.BtnAddSave.Click += new System.EventHandler(this.BtnAddSave_Click);
             // 
-            // LblCreatedby
-            // 
-            this.LblCreatedby.AutoSize = true;
-            this.LblCreatedby.BackColor = System.Drawing.Color.Transparent;
-            this.LblCreatedby.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.LblCreatedby.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblCreatedby.Location = new System.Drawing.Point(78, 309);
-            this.LblCreatedby.Name = "LblCreatedby";
-            this.LblCreatedby.Size = new System.Drawing.Size(119, 28);
-            this.LblCreatedby.TabIndex = 58;
-            this.LblCreatedby.Text = "Created by:";
-            // 
-            // PBCreatedby
-            // 
-            this.PBCreatedby.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.PBCreatedby.ErrorImage = null;
-            this.PBCreatedby.Image = ((System.Drawing.Image)(resources.GetObject("PBCreatedby.Image")));
-            this.PBCreatedby.InitialImage = null;
-            this.PBCreatedby.Location = new System.Drawing.Point(223, 315);
-            this.PBCreatedby.Name = "PBCreatedby";
-            this.PBCreatedby.Size = new System.Drawing.Size(40, 32);
-            this.PBCreatedby.TabIndex = 59;
-            this.PBCreatedby.TabStop = false;
-            // 
-            // LblValueApplicationDate
-            // 
-            this.LblValueApplicationDate.AutoSize = true;
-            this.LblValueApplicationDate.BackColor = System.Drawing.Color.Transparent;
-            this.LblValueApplicationDate.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.LblValueApplicationDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblValueApplicationDate.Location = new System.Drawing.Point(296, 150);
-            this.LblValueApplicationDate.Name = "LblValueApplicationDate";
-            this.LblValueApplicationDate.Size = new System.Drawing.Size(39, 25);
-            this.LblValueApplicationDate.TabIndex = 60;
-            this.LblValueApplicationDate.Text = "???";
-            // 
-            // LblValueApplicationFees
-            // 
-            this.LblValueApplicationFees.AutoSize = true;
-            this.LblValueApplicationFees.BackColor = System.Drawing.Color.Transparent;
-            this.LblValueApplicationFees.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.LblValueApplicationFees.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblValueApplicationFees.Location = new System.Drawing.Point(296, 262);
-            this.LblValueApplicationFees.Name = "LblValueApplicationFees";
-            this.LblValueApplicationFees.Size = new System.Drawing.Size(39, 25);
-            this.LblValueApplicationFees.TabIndex = 61;
-            this.LblValueApplicationFees.Text = "???";
-            // 
-            // LblValueCreatedby
-            // 
-            this.LblValueCreatedby.AutoSize = true;
-            this.LblValueCreatedby.BackColor = System.Drawing.Color.Transparent;
-            this.LblValueCreatedby.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.LblValueCreatedby.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblValueCreatedby.Location = new System.Drawing.Point(296, 312);
-            this.LblValueCreatedby.Name = "LblValueCreatedby";
-            this.LblValueCreatedby.Size = new System.Drawing.Size(39, 25);
-            this.LblValueCreatedby.TabIndex = 62;
-            this.LblValueCreatedby.Text = "???";
-            // 
-            // CBLicenseClassBy
-            // 
-            this.CBLicenseClassBy.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.CBLicenseClassBy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CBLicenseClassBy.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.CBLicenseClassBy.ForeColor = System.Drawing.Color.Black;
-            this.CBLicenseClassBy.FormattingEnabled = true;
-            this.CBLicenseClassBy.Items.AddRange(new object[] {
-            "Class 1 - Small Motorcycle",
-            "Class 2 - Heavy Motorcycle License",
-            "Class 3 - Ordinary driving license",
-            "Class 4 - Commercial",
-            "Class 5 - Agricultural",
-            "Class 6 - Small and medium bus",
-            "Class 7 - Truck and heavy vehicle"
-        });
-            this.CBLicenseClassBy.Location = new System.Drawing.Point(301, 205);
-            this.CBLicenseClassBy.Name = "CBLicenseClassBy";
-            this.CBLicenseClassBy.Size = new System.Drawing.Size(268, 31);
-            this.CBLicenseClassBy.TabIndex = 63;
-            // 
             // FONewLocalDrivingApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -445,12 +444,12 @@
             this.TPPersonalInfo.ResumeLayout(false);
             this.TPApplicationInfo.ResumeLayout(false);
             this.TPApplicationInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PBCreatedby)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBDLApplicationID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBApplicationDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBLicenseClass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBApplicationFees)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBCreatedby)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

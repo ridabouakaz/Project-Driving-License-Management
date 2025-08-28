@@ -16,35 +16,29 @@ namespace DVLD_PresentationLayer
 {
     public partial class FONewLocalDrivingApplication : Form
     {
-        public enum enMode { AddNew = 0, Update = 1 };
+        public enum enMode { AddNew = 0 };
         private enMode _Mode;
         int _UserID;
         clsUser _User;
-        public string UserName
+        public string ApplicationID
         {
-            get => TBUserName.Text.Trim();
-            set => TBUserName.Text = value;
+            get => LblValueApplicationID.Text.Trim();
+            set => LblValueApplicationID.Text = value;
         }
-        public TextBox UserNameTextBox => TBUserName;
-        public string Password
+        public string ApplicationDate
         {
-            get => TBPassword.Text.Trim();
-            set => TBPassword.Text = value;
+            get => LblValueApplicationDate.Text.Trim();
+            set => LblValueApplicationDate.Text = value;
         }
-        public TextBox PasswordTextBox => TBPassword;
-        public string PasswordConfirm
+        public string ApplicationFees
         {
-            get => TBPasswordConfirm.Text.Trim();
-            set => TBPasswordConfirm.Text = value;
+            get => LblValueApplicationFees.Text.Trim();
+            set => LblValueApplicationFees.Text = value;
         }
-        public TextBox PasswordConfirmTextBox => TBPasswordConfirm;
-        public ActiveStatus IsActive
+        public string Createdby
         {
-            get => CBIsActive.Checked ? ActiveStatus.Yes : ActiveStatus.No;
-            set
-            {
-                              CBIsActive.Checked = (value == ActiveStatus.Yes);
-            }
+            get => LblValueCreatedby.Text.Trim();
+            set => LblValueCreatedby.Text = value;
         }
         public FONewLocalDrivingApplication()
         {
@@ -55,27 +49,18 @@ namespace DVLD_PresentationLayer
         {
             InitializeComponent();
             _UserID = UserID;
-            _Mode = enMode.Update;
         }
         private void _ResetDefualtValues()
         {
             if (_Mode == enMode.AddNew)
             {
-                LblAddEditUser.Text = "Add New User";
+                LblAddEditApplication.Text = "Add New User";
                 this.Text = "Add New User";
                 TPApplicationInfo.Enabled = false;
                 _User = new clsUser();
                 return;
             }
-            else
-            {
-                LblAddEditUser.Text = "Update User";
-                this.Text = "Update User";
-                TPApplicationInfo.Enabled = true;
-                BtnAddSave.Enabled = true;
-                ctrDetailsPersonWithFilter1.DisablePersonDetails();
-                BtnAddNext.Visible = false;
-            }
+          
         }
         private void _LoadData()
         {
@@ -93,19 +78,7 @@ namespace DVLD_PresentationLayer
             IsActive = _User.isActive;
             ctrDetailsPersonWithFilter1.PersonData = clsPerson.Find(_User.PersonID);
         }
-        private void ValidateRequiredField(string value, TextBox textBox, CancelEventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(value))
-            {
-                e.Cancel = true;
-                errorProvider1.SetError(textBox, "Please enter a value");
-            }
-            else
-            {
-                e.Cancel = false;
-                errorProvider1.SetError(textBox, "");
-            }
-        }
+   
         private void BtnAddNext_Click(object sender, EventArgs e)
         {
             if (ctrDetailsPersonWithFilter1.PersonData == null)
@@ -113,36 +86,15 @@ namespace DVLD_PresentationLayer
                 MessageBox.Show("Please enter the person data before proceeding.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (clsUser.isUsersExistByPersonID(ctrDetailsPersonWithFilter1.PersonID))
-            {
-                MessageBox.Show("Selected Person Alredy has a User , choose another one.", "Selected another Person", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                return;
-            }
+            //if (clsUser.isUsersExistByPersonID(ctrDetailsPersonWithFilter1.PersonID))
+            //{
+            //    MessageBox.Show("Selected Person Alredy has a User , choose another one.", "Selected another Person", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            //    return;
+            //}
             TPApplicationInfo.Enabled = true;
-            TCAddEditUser.SelectedTab = TPApplicationInfo;
+            TCAddEditApplication.SelectedTab = TPApplicationInfo;
         }
-        private void TBPasswordConfirm_Validating(object sender, CancelEventArgs e)
-        {
-            if (!clsValidatoin.ValidateRequiredField(Password, PasswordConfirm))
-            {
-                e.Cancel = true;
-                errorProvider1.SetError(PasswordConfirmTextBox, "Password Confrimation does not Match password");
-            }
-            else
-            {
-                e.Cancel = false;
-                errorProvider1.SetError(PasswordConfirmTextBox, "");
-            }
-        }
-        private void TBPassword_Validating(object sender, CancelEventArgs e)
-        {
-            ValidateRequiredField(Password, PasswordTextBox, e);
-        }
-        private void TBUserName_Validating(object sender, CancelEventArgs e)
-        {
-            ValidateRequiredField(UserName, UserNameTextBox, e);
-
-        }
+    
         private void BtnAddClose_Click(object sender, EventArgs e)
         {
             this.Close();
