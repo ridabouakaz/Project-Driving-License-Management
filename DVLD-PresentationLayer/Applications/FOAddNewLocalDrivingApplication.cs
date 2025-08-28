@@ -63,7 +63,7 @@ namespace DVLD_PresentationLayer
             {
                 LblAddEditUser.Text = "Add New User";
                 this.Text = "Add New User";
-                TPLoginInfo.Enabled = false;
+                TPApplicationInfo.Enabled = false;
                 _User = new clsUser();
                 return;
             }
@@ -71,7 +71,7 @@ namespace DVLD_PresentationLayer
             {
                 LblAddEditUser.Text = "Update User";
                 this.Text = "Update User";
-                TPLoginInfo.Enabled = true;
+                TPApplicationInfo.Enabled = true;
                 BtnAddSave.Enabled = true;
                 ctrDetailsPersonWithFilter1.DisablePersonDetails();
                 BtnAddNext.Visible = false;
@@ -118,8 +118,8 @@ namespace DVLD_PresentationLayer
                 MessageBox.Show("Selected Person Alredy has a User , choose another one.", "Selected another Person", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;
             }
-            TPLoginInfo.Enabled = true;
-            TCAddEditUser.SelectedTab = TPLoginInfo;
+            TPApplicationInfo.Enabled = true;
+            TCAddEditUser.SelectedTab = TPApplicationInfo;
         }
         private void TBPasswordConfirm_Validating(object sender, CancelEventArgs e)
         {
