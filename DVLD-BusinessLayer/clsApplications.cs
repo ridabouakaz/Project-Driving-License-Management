@@ -30,7 +30,6 @@ namespace DVLD_BusinessLayer
             PaidFees = 0.0m;
             CreatedByUserID = 0;
         }
-
         private clsApplications(
        int id,
        int applicantPersonID,
