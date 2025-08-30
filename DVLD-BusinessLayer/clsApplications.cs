@@ -30,6 +30,7 @@ namespace DVLD_BusinessLayer
             PaidFees = 0.0m;
             CreatedByUserID = 0;
         }
+
         private clsApplications(
        int id,
        int applicantPersonID,
@@ -60,8 +61,18 @@ namespace DVLD_BusinessLayer
         this.LastStatusDate,
         this.PaidFees,
         this.CreatedByUserID
-    );
+             );
             return (this.ID != -1);
+        }
+        private bool _UpdatePerson()
+        {
+            //call DataAccess Layer 
+            return clsApplicationDataAccess.UpdateApplication(
+                    this.ID,
+                    (int)this.ApplicationStatus,
+                    this.LastStatusDate
+                );
+
         }
     }
 }

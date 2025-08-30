@@ -3,10 +3,30 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static DVLD_BusinessLayer.clsApplications;
 
 namespace DVLD_BusinessLayer
 {
-    internal class clsNewLocalDrivingApplication
+    public class clsNewLocalDrivingApplication
     {
+        public int ID { set; get; }
+        public int ApplicationID { set; get; }
+        public int LicenseClassID { set; get; }
+        public clsApplications applications { set; get; }
+        public clsNewLocalDrivingApplication()
+        {
+            ID = -1;
+            ApplicationID = 0;
+            LicenseClassID = 0;
+        }
+        private clsNewLocalDrivingApplication(
+       int ID,
+       int ApplicationID,
+              int LicenseClassID)
+        {
+            this.ID = ID;
+            this.ApplicationID = ApplicationID;
+            this.LicenseClassID = LicenseClassID;
+        }
     }
 }

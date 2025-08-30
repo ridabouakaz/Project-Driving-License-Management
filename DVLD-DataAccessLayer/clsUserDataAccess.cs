@@ -14,12 +14,12 @@ namespace DVLD_DataAccessLayer
     public class clsUserDataAccess
     {
         public static bool GetUserInfoByID(
- int  ID,
+        int  ID,
                 ref int PersonID,
                 ref string UserName,
                 ref string Password,
                 ref ActiveStatus isActive
-)
+                                                )
         {
             bool isFound = false;
 
@@ -61,7 +61,7 @@ namespace DVLD_DataAccessLayer
                ref int PersonID,
                ref int ID,
                ref ActiveStatus isActive
-)
+                    )
         {
             bool isFound = false;
 

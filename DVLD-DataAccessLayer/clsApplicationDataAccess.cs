@@ -57,7 +57,41 @@ namespace DVLD_DataAccessLayer
 
             return ApplicationID;
         }
+        public static bool UpdateApplication(
+    int ID, int ApplicationStatus,
+                 DateTime LastStatusDate
+                 )
+        {
+            int rowsAffected = 0;
 
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                string query = @"UPDATE Applications  
+                         SET ApplicationStatus = @ApplicationStatus,
+                             LastStatusDate = @LastStatusDate
+                            WHERE ApplicationID = @ApplicationID";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@ApplicationID", ID);
+                    command.Parameters.AddWithValue("@ApplicationStatus", ApplicationStatus);
+                    command.Parameters.AddWithValue("@LastStatusDate", LastStatusDate);
+
+                    try
+                    {
+                        connection.Open();
+                        rowsAffected = command.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error updating Application: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
+                    }
+                }
+            }
+
+            return (rowsAffected > 0);
+        }
         public static bool IsApplicationExistwithperson(int ID, int PersonID)
         {
             bool isFound = false;
