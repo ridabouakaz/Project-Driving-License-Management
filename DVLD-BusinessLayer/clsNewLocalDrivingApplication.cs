@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DVLD_DataAccessLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,6 +28,15 @@ namespace DVLD_BusinessLayer
             this.ID = ID;
             this.ApplicationID = ApplicationID;
             this.LicenseClassID = LicenseClassID;
+        }
+        private bool _AddNewLocalDrivingApplication()
+        {
+            //call DataAccess Layer 
+            this.ID = clsLocalDrivingApplicationDataAccess.AddNewLocalDrivingApplication(
+        this.ApplicationID,
+         this.LicenseClassID
+             );
+            return (this.ID != -1);
         }
     }
 }
