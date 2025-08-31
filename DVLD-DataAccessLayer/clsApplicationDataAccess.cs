@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static DVLDShared.DVLDShared;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace DVLD_DataAccessLayer
 {
@@ -86,6 +87,33 @@ namespace DVLD_DataAccessLayer
                     {
                         MessageBox.Show("Error updating Application: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return false;
+                    }
+                }
+            }
+            return (rowsAffected > 0);
+        }
+        public static bool CancelledApplication(int ApplicationID)
+        {
+            int rowsAffected = 0;
+
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                string query = @"UPDATE Applications  
+                         SET ApplicationStatus = 3
+                            WHERE ApplicationID = @ApplicationID";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@ApplicationID", ApplicationID);
+
+                    try
+                    {
+                        connection.Open();
+                        rowsAffected = command.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error deleting User: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
