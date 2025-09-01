@@ -21,6 +21,8 @@ namespace DVLD_PresentationLayer
         private enMode _Mode;
         int _UserID;
         clsApplications _Application;
+        clsNewLocalDrivingApplication _NewLocalDrivingApplication;
+
         public string ApplicationID
         {
             get => LblValueApplicationID.Text.Trim();
@@ -74,10 +76,9 @@ namespace DVLD_PresentationLayer
         }
         private void _LoadData()
         {
-            LblValueUserID.Text = _User.ID.ToString();
             ApplicationDate = _Application.ApplicationDate.ToString();
-            ApplicationFees = _Application.Password;
-            Createdby = _User.Password;
+            ApplicationFees =clsManageApplicationTypes.GetFeesById(_Application.ApplicationTypeID).ToString();
+            Createdby = _Application.CreatedByUserID.ToString();
         }
    
         private void BtnAddNext_Click(object sender, EventArgs e)
@@ -92,6 +93,7 @@ namespace DVLD_PresentationLayer
                 MessageBox.Show("Selected Person is User , choose another one.", "Selected another Person", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;
             }
+         
             _AddingDataAppliction();
             if (!_Application.Save())
             {
@@ -114,14 +116,23 @@ namespace DVLD_PresentationLayer
                 MessageBox.Show("❌ Please correct the errors before saving.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            _User.UserName = UserName.Trim();
-            _User.Password = Password.Trim();
-            _User.isActive= IsActive;
-            _User.PersonID = ctrDetailsPersonWithFilter1.PersonID;
-            if (_User.Save())
+            _NewLocalDrivingApplication.ApplicationID = _Application.ID;
+            _NewLocalDrivingApplication.LicenseClassID = CBLicenseClassBy.SelectedIndex + 1;
+            if (clsNewLocalDrivingApplication.DoesApplicationExistForPerson(
+            _Application.ApplicantPersonID,
+            _NewLocalDrivingApplication.LicenseClassID))
+            {
+                MessageBox.Show(
+                    "This person already has an application for the selected license class. Please choose another.",
+                    "Duplicate Application",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+
+                return;
+            }
+            if (_NewLocalDrivingApplication.Save())
             {
                 MessageBox.Show("✅ Data Saved Successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                _Mode = enMode.Update;
             }
             else
             {
@@ -132,6 +143,7 @@ namespace DVLD_PresentationLayer
         private void FOAddEditUserInfo_Load(object sender, EventArgs e)
         {
             _ResetDefualtValues();
+            _AddingDataAppliction();
             _LoadData();
         }
     }

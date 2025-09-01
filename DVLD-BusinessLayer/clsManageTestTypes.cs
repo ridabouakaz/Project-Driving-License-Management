@@ -15,7 +15,6 @@ namespace DVLD_BusinessLayer
         public clsManageTestTypes.enTestType ID { set; get; }
         public string TestTypeTitle { set; get; }
         public string TestTypeDescription { set; get; }
-
         public decimal TestTypeFees { set; get; }
 
         private clsManageTestTypes(clsManageTestTypes.enTestType ID,

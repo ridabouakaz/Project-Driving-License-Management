@@ -53,7 +53,7 @@ namespace DVLD_DataAccessLayer
 
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
-            string query = "select Found=1 from Applications inner join LocalDrivingLicenseApplications on Applications.ApplicationID = LocalDrivingLicenseApplications.ApplicationID where LicenseClassID=@LicenseClassID\r\nand  Applications.ApplicantPersonID =@ApplicantPersonID";
+            string query = "select Found=1 from Applications inner join LocalDrivingLicenseApplications \r\non Applications.ApplicationID = LocalDrivingLicenseApplications.ApplicationID \r\nwhere LicenseClassID=@LicenseClassID and  Applications.ApplicantPersonID =@ApplicantPersonID and Applications.ApplicationStatus!=2";
 
             SqlCommand command = new SqlCommand(query, connection);
 
@@ -71,7 +71,7 @@ namespace DVLD_DataAccessLayer
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error checking if person exists: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error checking if Applications exists: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 isFound = false;
             }
             finally

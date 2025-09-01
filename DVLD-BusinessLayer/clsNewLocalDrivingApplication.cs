@@ -10,6 +10,7 @@ namespace DVLD_BusinessLayer
 {
     public class clsNewLocalDrivingApplication
     {
+ 
         public int ID { set; get; }
         public int ApplicationID { set; get; }
         public int LicenseClassID { set; get; }
@@ -40,7 +41,11 @@ namespace DVLD_BusinessLayer
         }
         public static bool DoesApplicationExistForPerson(int ApplicantPersonID, int LicenseClassID)
         {
-            return clsLocalDrivingApplicationDataAccess.DoesApplicationExistForPerson( ApplicantPersonID,  LicenseClassID);
+            return clsLocalDrivingApplicationDataAccess.DoesApplicationExistForPerson(ApplicantPersonID, LicenseClassID);
+        }
+        public bool Save()
+        {
+            return _AddNewLocalDrivingApplication();
         }
     }
 }
