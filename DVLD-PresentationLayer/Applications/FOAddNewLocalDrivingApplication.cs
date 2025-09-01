@@ -74,19 +74,10 @@ namespace DVLD_PresentationLayer
         }
         private void _LoadData()
         {
-            _User = clsUser.Find(_UserID);
-            if (_User == null)
-            {
-                MessageBox.Show("This form will be closed because No Contact with ID = " + _UserID);
-                this.Close();
-                return;
-            }
             LblValueUserID.Text = _User.ID.ToString();
-            UserName = _User.UserName;
-            Password= _User.Password;
-            PasswordConfirm = _User.Password;
-            IsActive = _User.isActive;
-            ctrDetailsPersonWithFilter1.PersonData = clsPerson.Find(_User.PersonID);
+            ApplicationDate = _Application.ApplicationDate.ToString();
+            ApplicationFees = _Application.Password;
+            Createdby = _User.Password;
         }
    
         private void BtnAddNext_Click(object sender, EventArgs e)
@@ -141,8 +132,7 @@ namespace DVLD_PresentationLayer
         private void FOAddEditUserInfo_Load(object sender, EventArgs e)
         {
             _ResetDefualtValues();
-            if (_Mode == enMode.Update)
-                _LoadData();
+            _LoadData();
         }
     }
 }

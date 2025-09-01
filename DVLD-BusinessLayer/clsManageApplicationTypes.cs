@@ -66,5 +66,9 @@ namespace DVLD_BusinessLayer
             return clsApplicationTypeDataAccess.GetAllApplicationTypes();
 
         }
+        public static decimal GetFeesById(int id)
+        {
+            return clsApplicationTypeDataAccess.GetFeesById(id);
+        }
     }
 }
