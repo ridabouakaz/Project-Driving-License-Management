@@ -46,7 +46,41 @@ namespace DVLD_DataAccessLayer
 
             return NewLocalDrivingApplicationID;
         }
+        
+        public static bool DoesApplicationExistForPerson(int ApplicantPersonID, int LicenseClassID)
+        {
+            bool isFound = false;
 
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+
+            string query = "select Found=1 from Applications inner join LocalDrivingLicenseApplications on Applications.ApplicationID = LocalDrivingLicenseApplications.ApplicationID where LicenseClassID=@LicenseClassID\r\nand  Applications.ApplicantPersonID =@ApplicantPersonID";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@ApplicantPersonID", ApplicantPersonID);
+            command.Parameters.AddWithValue("@LicenseClassID", LicenseClassID);
+
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                isFound = reader.HasRows;
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error checking if person exists: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                isFound = false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return isFound;
+        }
 
 
     }

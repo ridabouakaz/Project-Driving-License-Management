@@ -64,7 +64,7 @@ namespace DVLD_BusinessLayer
              );
             return (this.ID != -1);
         }
-        private bool _UpdatePerson()
+        private bool _UpdateApplication()
         {
             //call DataAccess Layer 
             return clsApplicationDataAccess.UpdateApplication(

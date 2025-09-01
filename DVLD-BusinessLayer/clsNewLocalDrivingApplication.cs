@@ -38,5 +38,9 @@ namespace DVLD_BusinessLayer
              );
             return (this.ID != -1);
         }
+        public static bool DoesApplicationExistForPerson(int ApplicantPersonID, int LicenseClassID)
+        {
+            return clsLocalDrivingApplicationDataAccess.DoesApplicationExistForPerson( ApplicantPersonID,  LicenseClassID);
+        }
     }
 }
