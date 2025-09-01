@@ -52,11 +52,6 @@ int ID,
         }
 
 
-
-
-
-
-
         public static bool UpdateApplication(
     int ID, string ApplicationTypeTitle, decimal ApplicationFees)
         {
@@ -129,6 +124,31 @@ int ID,
 
             return dt;
 
+        }
+        public static decimal GetFeesById(int id)
+        {
+            decimal fee = 0m;
+            using (SqlConnection conn = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                string query = @"
+            SELECT ApplicationTypes.ApplicationFees
+            FROM Applications
+            INNER JOIN ApplicationTypes ON Applications.ApplicationTypeID = ApplicationTypes.ApplicationTypeID
+            WHERE ApplicationTypes.ApplicationTypeID = @ApplicationTypeID";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@ApplicationTypeID", id);
+                    conn.Open();
+
+                    object result = cmd.ExecuteScalar();
+                    if (result != null && result != DBNull.Value)
+                    {
+                        fee = Convert.ToDecimal(result);
+                    }
+                }
+            }
+            return fee;
         }
     }
 }

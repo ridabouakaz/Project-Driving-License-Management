@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static DVLDShared.DVLDShared;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace DVLD_PresentationLayer
 {
@@ -19,7 +20,7 @@ namespace DVLD_PresentationLayer
         public enum enMode { AddNew = 0 };
         private enMode _Mode;
         int _UserID;
-        clsUser _User;
+        clsApplications _Application;
         public string ApplicationID
         {
             get => LblValueApplicationID.Text.Trim();
@@ -40,27 +41,36 @@ namespace DVLD_PresentationLayer
             get => LblValueCreatedby.Text.Trim();
             set => LblValueCreatedby.Text = value;
         }
-        public FONewLocalDrivingApplication()
-        {
-            InitializeComponent();
-            _Mode = enMode.AddNew;
-        }
+     
         public FONewLocalDrivingApplication(int UserID)
         {
             InitializeComponent();
+            _Mode = enMode.AddNew;
             _UserID = UserID;
         }
         private void _ResetDefualtValues()
         {
             if (_Mode == enMode.AddNew)
             {
-                LblAddEditApplication.Text = "Add New User";
-                this.Text = "Add New User";
+                LblAddEditApplication.Text = "New Local Driving Application";
+                this.Text = "New Local Driving Application";
                 TPApplicationInfo.Enabled = false;
-                _User = new clsUser();
+                _Application = new clsApplications();
                 return;
             }
-          
+
+        }
+        private void _AddingDataAppliction()
+        {
+            _Application.LastStatusDate = DateTime.Now;
+            _Application.ApplicationDate = DateTime.Now;
+            _Application.ApplicationStatus = clsApplications.enApplicationStatus.New;
+            _Application.ApplicationTypeID = 1; // Local Driving
+            _Application.CreatedByUserID = _UserID;
+            if (ctrDetailsPersonWithFilter1.PersonData != null)
+                _Application.ApplicantPersonID = ctrDetailsPersonWithFilter1.PersonID;
+            else
+                _Application.ApplicantPersonID = -1;  
         }
         private void _LoadData()
         {
@@ -86,11 +96,17 @@ namespace DVLD_PresentationLayer
                 MessageBox.Show("Please enter the person data before proceeding.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            //if (clsUser.isUsersExistByPersonID(ctrDetailsPersonWithFilter1.PersonID))
-            //{
-            //    MessageBox.Show("Selected Person Alredy has a User , choose another one.", "Selected another Person", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-            //    return;
-            //}
+            if (clsUser.isUsersExistByPersonID(ctrDetailsPersonWithFilter1.PersonID))
+            {
+                MessageBox.Show("Selected Person is User , choose another one.", "Selected another Person", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
+            _AddingDataAppliction();
+            if (!_Application.Save())
+            {
+                MessageBox.Show("❌ Error: Data was not saved successfully.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
             TPApplicationInfo.Enabled = true;
             TCAddEditApplication.SelectedTab = TPApplicationInfo;
         }

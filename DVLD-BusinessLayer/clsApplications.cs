@@ -10,7 +10,8 @@ namespace DVLD_BusinessLayer
     public class clsApplications
     {
         public enum enApplicationStatus { New = 1, Cancelled = 2, Completed = 3 };
-
+        public enum enMode { AddNew = 0, Update = 1 };
+        public enMode Mode = enMode.AddNew;
         public int ID { set; get; }
         public int ApplicantPersonID { set; get; }
         public DateTime ApplicationDate { set; get; }
@@ -23,10 +24,10 @@ namespace DVLD_BusinessLayer
         {
             ID = -1;
             ApplicantPersonID = 0;
-            ApplicationDate = DateTime.MinValue;
+            ApplicationDate = DateTime.Today;
             ApplicationTypeID = 0;
             ApplicationStatus = enApplicationStatus.New;
-            LastStatusDate = DateTime.MinValue;
+            LastStatusDate = DateTime.Today;
             PaidFees = 0.0m;
             CreatedByUserID = 0;
         }
@@ -73,6 +74,29 @@ namespace DVLD_BusinessLayer
                     this.LastStatusDate
                 );
 
+        }
+        public bool Save()
+        {
+            switch (Mode)
+            {
+                case enMode.AddNew:
+                    if (_AddNewApplication())
+                    {
+
+                        Mode = enMode.Update;
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+                case enMode.Update:
+
+                    return _UpdateApplication();
+
+            }
+            return false;
         }
     }
 }
