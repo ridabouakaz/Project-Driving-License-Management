@@ -20,11 +20,9 @@ namespace DVLD_PresentationLayer
     {
         public enum enMode { AddNew = 0 };
         private enMode _Mode;
-        int _UserID;
         clsUser _User;
         clsApplications _Application;
         clsNewLocalDrivingApplication _NewLocalDrivingApplication;
-
         public string ApplicationID
         {
             get => LblValueApplicationID.Text.Trim();
@@ -45,44 +43,38 @@ namespace DVLD_PresentationLayer
             get => LblValueCreatedby.Text.Trim();
             set => LblValueCreatedby.Text = value;
         }
-
-        public FONewLocalDrivingApplication(int UserID)
+        public FONewLocalDrivingApplication(clsUser User)
         {
             InitializeComponent();
             _Mode = enMode.AddNew;
-            _UserID = UserID;
-            _User = clsUser.Find(_UserID);
+            _User = User;
         }
-        private void _ResetDefualtValues()
+        private void _ResetDefaults()
         {
             if (_Mode == enMode.AddNew)
             {
                 LblHeaderTitle.Text = "New Local Driving Application";
                 this.Text = "New Local Driving Application";
                 TPApplicationInfo.Enabled = false;
-                CBLicenseClassBy.SelectedIndex = 1;
+                CBLicenseClassBy.SelectedIndex = 0;
                 _Application = new clsApplications();
                 _NewLocalDrivingApplication = new clsNewLocalDrivingApplication();
-                return;
             }
 
         }
-        private void _AddApplicationData()
+        private void _PrepareNewApplication()
         {
             _Application.LastStatusDate = DateTime.Now;
             _Application.ApplicationDate = DateTime.Now;
             _Application.PaidFees = clsManageApplicationTypes.GetFeesById(_Application.ApplicationTypeID);
             _Application.ApplicationStatus = clsApplications.enApplicationStatus.New;
             _Application.ApplicationTypeID = 1; // Local Driving
-            _Application.CreatedByUserID = _UserID;
-            if (ctrDetailsPersonWithFilter1.PersonData != null)
-                _Application.ApplicantPersonID = ctrDetailsPersonWithFilter1.PersonID;
-            else
-                _Application.ApplicantPersonID = -1;
+            _Application.CreatedByUserID = _User.ID;
+            _Application.ApplicantPersonID = ctrDetailsPersonWithFilter1.PersonData?.ID ?? -1;
         }
-        private void _LoadData()
+        private void _LoadApplicationInfo()
         {
-            ApplicationDate = _Application.ApplicationDate.ToString();
+            ApplicationDate = _Application.ApplicationDate.ToShortDateString();
             ApplicationFees = clsManageApplicationTypes.GetFeesById(_Application.ApplicationTypeID).ToString();
             Createdby = _User.UserName;
         }
@@ -98,8 +90,7 @@ namespace DVLD_PresentationLayer
                 MessageBox.Show("Selected Person is User , choose another one.", "Selected another Person", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;
             }
-
-            _AddApplicationData();
+            _PrepareNewApplication();
             if (!_Application.Save())
             {
                 MessageBox.Show("❌ Error: Data was not saved successfully.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -147,9 +138,14 @@ namespace DVLD_PresentationLayer
         }
         private void FONewLocalDrivingApplication_Load(object sender, EventArgs e)
         {
-            _ResetDefualtValues();
-            _AddApplicationData();
-            _LoadData();
+            _InitializeForm();
+        }
+        private void _InitializeForm()
+        {
+  
+            _ResetDefaults();
+            _PrepareNewApplication();
+            _LoadApplicationInfo();
         }
     }
 }

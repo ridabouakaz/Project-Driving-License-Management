@@ -58,6 +58,7 @@ namespace DVLD_PresentationLayer
             this.SMItemSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.SMItemSingOut = new System.Windows.Forms.ToolStripMenuItem();
             this.PBProject = new System.Windows.Forms.PictureBox();
+            this.SMItemNewDrivingLocalLicenses = new System.Windows.Forms.ToolStripMenuItem();
             this.MSMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBProject)).BeginInit();
             this.SuspendLayout();
@@ -111,6 +112,8 @@ namespace DVLD_PresentationLayer
             // 
             // SMItemNewDrivingLicenses
             // 
+            this.SMItemNewDrivingLicenses.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.SMItemNewDrivingLocalLicenses});
             this.SMItemNewDrivingLicenses.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SMItemNewDrivingLicenses.Name = "SMItemNewDrivingLicenses";
             this.SMItemNewDrivingLicenses.Size = new System.Drawing.Size(540, 26);
@@ -293,6 +296,15 @@ namespace DVLD_PresentationLayer
             this.PBProject.TabIndex = 1;
             this.PBProject.TabStop = false;
             // 
+            // SMItemNewDrivingLocalLicenses
+            // 
+            this.SMItemNewDrivingLocalLicenses.Image = ((System.Drawing.Image)(resources.GetObject("SMItemNewDrivingLocalLicenses.Image")));
+            this.SMItemNewDrivingLocalLicenses.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.SMItemNewDrivingLocalLicenses.Name = "SMItemNewDrivingLocalLicenses";
+            this.SMItemNewDrivingLocalLicenses.Size = new System.Drawing.Size(243, 30);
+            this.SMItemNewDrivingLocalLicenses.Text = "Local Licenses";
+            this.SMItemNewDrivingLocalLicenses.Click += new System.EventHandler(this.SMItemNewDrivingLocalLicenses_Click);
+            // 
             // FOmain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -340,6 +352,7 @@ namespace DVLD_PresentationLayer
         private ToolStripMenuItem SMItemReleaseDetainedLicenses;
         private ToolStripSeparator SMItemSeparator3;
         private PictureBox PBProject;
+        private ToolStripMenuItem SMItemNewDrivingLocalLicenses;
     }
 }
 

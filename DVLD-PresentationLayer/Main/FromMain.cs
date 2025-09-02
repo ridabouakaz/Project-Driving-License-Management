@@ -64,5 +64,10 @@ namespace DVLD_PresentationLayer
             FOManageTestTypes frm = new FOManageTestTypes();
             frm.ShowDialog();
         }
+        private void SMItemNewDrivingLocalLicenses_Click(object sender, EventArgs e)
+        {
+            FONewLocalDrivingApplication frm = new FONewLocalDrivingApplication(_currentUser);
+            frm.ShowDialog();
+        }
     }
 }
