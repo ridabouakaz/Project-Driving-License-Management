@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static DVLDShared.DVLDShared;
+using static System.Net.Mime.MediaTypeNames;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace DVLD_PresentationLayer
@@ -20,6 +21,7 @@ namespace DVLD_PresentationLayer
         public enum enMode { AddNew = 0 };
         private enMode _Mode;
         int _UserID;
+        clsUser _User;
         clsApplications _Application;
         clsNewLocalDrivingApplication _NewLocalDrivingApplication;
 
@@ -43,44 +45,47 @@ namespace DVLD_PresentationLayer
             get => LblValueCreatedby.Text.Trim();
             set => LblValueCreatedby.Text = value;
         }
-     
+
         public FONewLocalDrivingApplication(int UserID)
         {
             InitializeComponent();
             _Mode = enMode.AddNew;
             _UserID = UserID;
+            _User = clsUser.Find(_UserID);
         }
         private void _ResetDefualtValues()
         {
             if (_Mode == enMode.AddNew)
             {
-                LblAddEditApplication.Text = "New Local Driving Application";
+                LblHeaderTitle.Text = "New Local Driving Application";
                 this.Text = "New Local Driving Application";
                 TPApplicationInfo.Enabled = false;
+                CBLicenseClassBy.SelectedIndex = 1;
                 _Application = new clsApplications();
+                _NewLocalDrivingApplication = new clsNewLocalDrivingApplication();
                 return;
             }
 
         }
-        private void _AddingDataAppliction()
+        private void _AddApplicationData()
         {
             _Application.LastStatusDate = DateTime.Now;
             _Application.ApplicationDate = DateTime.Now;
+            _Application.PaidFees = clsManageApplicationTypes.GetFeesById(_Application.ApplicationTypeID);
             _Application.ApplicationStatus = clsApplications.enApplicationStatus.New;
             _Application.ApplicationTypeID = 1; // Local Driving
             _Application.CreatedByUserID = _UserID;
             if (ctrDetailsPersonWithFilter1.PersonData != null)
                 _Application.ApplicantPersonID = ctrDetailsPersonWithFilter1.PersonID;
             else
-                _Application.ApplicantPersonID = -1;  
+                _Application.ApplicantPersonID = -1;
         }
         private void _LoadData()
         {
             ApplicationDate = _Application.ApplicationDate.ToString();
-            ApplicationFees =clsManageApplicationTypes.GetFeesById(_Application.ApplicationTypeID).ToString();
-            Createdby = _Application.CreatedByUserID.ToString();
+            ApplicationFees = clsManageApplicationTypes.GetFeesById(_Application.ApplicationTypeID).ToString();
+            Createdby = _User.UserName;
         }
-   
         private void BtnAddNext_Click(object sender, EventArgs e)
         {
             if (ctrDetailsPersonWithFilter1.PersonData == null)
@@ -93,8 +98,8 @@ namespace DVLD_PresentationLayer
                 MessageBox.Show("Selected Person is User , choose another one.", "Selected another Person", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;
             }
-         
-            _AddingDataAppliction();
+
+            _AddApplicationData();
             if (!_Application.Save())
             {
                 MessageBox.Show("❌ Error: Data was not saved successfully.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -103,7 +108,7 @@ namespace DVLD_PresentationLayer
             TPApplicationInfo.Enabled = true;
             TCAddEditApplication.SelectedTab = TPApplicationInfo;
         }
-    
+
         private void BtnAddClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -140,11 +145,12 @@ namespace DVLD_PresentationLayer
             }
             this.Close();
         }
-        private void FOAddEditUserInfo_Load(object sender, EventArgs e)
+        private void FONewLocalDrivingApplication_Load(object sender, EventArgs e)
         {
             _ResetDefualtValues();
-            _AddingDataAppliction();
+            _AddApplicationData();
             _LoadData();
         }
     }
 }
+  

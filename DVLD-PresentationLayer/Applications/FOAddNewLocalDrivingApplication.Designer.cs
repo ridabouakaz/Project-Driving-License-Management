@@ -30,10 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FONewLocalDrivingApplication));
-            this.LblAddEditApplication = new System.Windows.Forms.Label();
+            this.LblHeaderTitle = new System.Windows.Forms.Label();
             this.TCAddEditApplication = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
             this.TPPersonalInfo = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.ctrDetailsPersonWithFilter1 = new DVLD_PresentationLayer.CtrDetailsPersonWithFilter();
             this.BtnAddNext = new System.Windows.Forms.Button();
             this.TPApplicationInfo = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.CBLicenseClassBy = new System.Windows.Forms.ComboBox();
@@ -55,6 +54,7 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.BtnAddClose = new System.Windows.Forms.Button();
             this.BtnAddSave = new System.Windows.Forms.Button();
+            this.ctrDetailsPersonWithFilter1 = new DVLD_PresentationLayer.CtrDetailsPersonWithFilter();
             ((System.ComponentModel.ISupportInitialize)(this.TCAddEditApplication)).BeginInit();
             this.TCAddEditApplication.SuspendLayout();
             this.TPPersonalInfo.SuspendLayout();
@@ -67,18 +67,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
-            // LblAddEditApplication
+            // LblHeaderTitle
             // 
-            this.LblAddEditApplication.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.LblAddEditApplication.AutoSize = true;
-            this.LblAddEditApplication.BackColor = System.Drawing.Color.Transparent;
-            this.LblAddEditApplication.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold);
-            this.LblAddEditApplication.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
-            this.LblAddEditApplication.Location = new System.Drawing.Point(254, 19);
-            this.LblAddEditApplication.Name = "LblAddEditApplication";
-            this.LblAddEditApplication.Size = new System.Drawing.Size(553, 50);
-            this.LblAddEditApplication.TabIndex = 3;
-            this.LblAddEditApplication.Text = "New Local Driving Application";
+            this.LblHeaderTitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.LblHeaderTitle.AutoSize = true;
+            this.LblHeaderTitle.BackColor = System.Drawing.Color.Transparent;
+            this.LblHeaderTitle.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold);
+            this.LblHeaderTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
+            this.LblHeaderTitle.Location = new System.Drawing.Point(254, 19);
+            this.LblHeaderTitle.Name = "LblHeaderTitle";
+            this.LblHeaderTitle.Size = new System.Drawing.Size(553, 50);
+            this.LblHeaderTitle.TabIndex = 3;
+            this.LblHeaderTitle.Text = "New Local Driving Application";
             // 
             // TCAddEditApplication
             // 
@@ -115,15 +115,6 @@
             this.TPPersonalInfo.TabIndex = 1;
             this.TPPersonalInfo.Text = "Personal Info";
             this.TPPersonalInfo.ThemesEnabled = false;
-            // 
-            // ctrDetailsPersonWithFilter1
-            // 
-            this.ctrDetailsPersonWithFilter1.BackColor = System.Drawing.Color.White;
-            this.ctrDetailsPersonWithFilter1.Location = new System.Drawing.Point(21, 20);
-            this.ctrDetailsPersonWithFilter1.Name = "ctrDetailsPersonWithFilter1";
-            this.ctrDetailsPersonWithFilter1.PersonData = null;
-            this.ctrDetailsPersonWithFilter1.Size = new System.Drawing.Size(979, 478);
-            this.ctrDetailsPersonWithFilter1.TabIndex = 6;
             // 
             // BtnAddNext
             // 
@@ -201,11 +192,11 @@
             // 
             this.LblValueCreatedby.AutoSize = true;
             this.LblValueCreatedby.BackColor = System.Drawing.Color.Transparent;
-            this.LblValueCreatedby.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.LblValueCreatedby.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblValueCreatedby.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.LblValueCreatedby.Location = new System.Drawing.Point(296, 312);
             this.LblValueCreatedby.Name = "LblValueCreatedby";
-            this.LblValueCreatedby.Size = new System.Drawing.Size(39, 25);
+            this.LblValueCreatedby.Size = new System.Drawing.Size(36, 25);
             this.LblValueCreatedby.TabIndex = 62;
             this.LblValueCreatedby.Text = "???";
             // 
@@ -213,11 +204,11 @@
             // 
             this.LblValueApplicationFees.AutoSize = true;
             this.LblValueApplicationFees.BackColor = System.Drawing.Color.Transparent;
-            this.LblValueApplicationFees.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.LblValueApplicationFees.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblValueApplicationFees.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.LblValueApplicationFees.Location = new System.Drawing.Point(296, 262);
             this.LblValueApplicationFees.Name = "LblValueApplicationFees";
-            this.LblValueApplicationFees.Size = new System.Drawing.Size(39, 25);
+            this.LblValueApplicationFees.Size = new System.Drawing.Size(36, 25);
             this.LblValueApplicationFees.TabIndex = 61;
             this.LblValueApplicationFees.Text = "???";
             // 
@@ -225,11 +216,11 @@
             // 
             this.LblValueApplicationDate.AutoSize = true;
             this.LblValueApplicationDate.BackColor = System.Drawing.Color.Transparent;
-            this.LblValueApplicationDate.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.LblValueApplicationDate.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblValueApplicationDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.LblValueApplicationDate.Location = new System.Drawing.Point(296, 150);
             this.LblValueApplicationDate.Name = "LblValueApplicationDate";
-            this.LblValueApplicationDate.Size = new System.Drawing.Size(39, 25);
+            this.LblValueApplicationDate.Size = new System.Drawing.Size(36, 25);
             this.LblValueApplicationDate.TabIndex = 60;
             this.LblValueApplicationDate.Text = "???";
             // 
@@ -261,11 +252,11 @@
             // 
             this.LblValueApplicationID.AutoSize = true;
             this.LblValueApplicationID.BackColor = System.Drawing.Color.Transparent;
-            this.LblValueApplicationID.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.LblValueApplicationID.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblValueApplicationID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.LblValueApplicationID.Location = new System.Drawing.Point(296, 94);
             this.LblValueApplicationID.Name = "LblValueApplicationID";
-            this.LblValueApplicationID.Size = new System.Drawing.Size(39, 25);
+            this.LblValueApplicationID.Size = new System.Drawing.Size(36, 25);
             this.LblValueApplicationID.TabIndex = 52;
             this.LblValueApplicationID.Text = "???";
             // 
@@ -423,6 +414,15 @@
             this.BtnAddSave.UseVisualStyleBackColor = false;
             this.BtnAddSave.Click += new System.EventHandler(this.BtnAddSave_Click);
             // 
+            // ctrDetailsPersonWithFilter1
+            // 
+            this.ctrDetailsPersonWithFilter1.BackColor = System.Drawing.Color.White;
+            this.ctrDetailsPersonWithFilter1.Location = new System.Drawing.Point(21, 20);
+            this.ctrDetailsPersonWithFilter1.Name = "ctrDetailsPersonWithFilter1";
+            this.ctrDetailsPersonWithFilter1.PersonData = null;
+            this.ctrDetailsPersonWithFilter1.Size = new System.Drawing.Size(979, 478);
+            this.ctrDetailsPersonWithFilter1.TabIndex = 6;
+            // 
             // FONewLocalDrivingApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -432,13 +432,14 @@
             this.Controls.Add(this.BtnAddSave);
             this.Controls.Add(this.BtnAddClose);
             this.Controls.Add(this.TCAddEditApplication);
-            this.Controls.Add(this.LblAddEditApplication);
+            this.Controls.Add(this.LblHeaderTitle);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FONewLocalDrivingApplication";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New Local Driving Application";
+            this.Load += new System.EventHandler(this.FONewLocalDrivingApplication_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TCAddEditApplication)).EndInit();
             this.TCAddEditApplication.ResumeLayout(false);
             this.TPPersonalInfo.ResumeLayout(false);
@@ -457,7 +458,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label LblAddEditApplication;
+        private System.Windows.Forms.Label LblHeaderTitle;
         private Syncfusion.Windows.Forms.Tools.TabControlAdv TCAddEditApplication;
         private Syncfusion.Windows.Forms.Tools.TabPageAdv TPPersonalInfo;
         private Syncfusion.Windows.Forms.Tools.TabPageAdv TPApplicationInfo;
