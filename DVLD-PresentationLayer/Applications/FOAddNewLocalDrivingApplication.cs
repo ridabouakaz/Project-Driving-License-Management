@@ -23,11 +23,12 @@ namespace DVLD_PresentationLayer
         clsUser _User;
         clsApplications _Application;
         clsNewLocalDrivingApplication _NewLocalDrivingApplication;
-        public string ApplicationID
+        public string LocalDrivingApplicationID
         {
             get => LblValueApplicationID.Text.Trim();
             set => LblValueApplicationID.Text = value;
         }
+     
         public string ApplicationDate
         {
             get => LblValueApplicationDate.Text.Trim();
@@ -134,7 +135,7 @@ namespace DVLD_PresentationLayer
             {
                 MessageBox.Show("❌ Error: Data was not saved successfully.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            this.Close();
+            LocalDrivingApplicationID= _NewLocalDrivingApplication.ID.ToString();
         }
         private void FONewLocalDrivingApplication_Load(object sender, EventArgs e)
         {
