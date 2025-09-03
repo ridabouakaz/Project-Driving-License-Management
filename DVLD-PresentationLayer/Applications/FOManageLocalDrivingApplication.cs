@@ -1,14 +1,15 @@
-﻿using System;
+﻿using DVLD_BusinessLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO;
 using System.Windows.Forms;
-using DVLD_BusinessLayer;
+using static DVLD_BusinessLayer.LocalDrivingApplicationFilter.LocalDrivingApplicationFilterService;
 using static DVLD_BusinessLayer.PersonFilterService;
 namespace DVLD_PresentationLayer
 {
@@ -72,7 +73,23 @@ namespace DVLD_PresentationLayer
         private void CBFilterBy_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            MTBsearch.Visible = CBFilterBy.SelectedItem.ToString() != "None";
+            string selected = CBFilterBy.SelectedItem.ToString();
+
+            if (selected == "Status")
+            {
+                MTBsearch.Visible = false;
+                CBActiveStatusBy.Visible = true;
+            }
+            else if (selected == "None")
+            {
+                MTBsearch.Visible = false;
+                CBActiveStatusBy.Visible = false;
+            }
+            else
+            {
+                MTBsearch.Visible = true;
+                CBActiveStatusBy.Visible = false;
+            }
             ApplyFilter();
         }
 
@@ -80,54 +97,28 @@ namespace DVLD_PresentationLayer
         {
             if (_LocalDrivingApplicationsTable == null) return;
 
-            IPersonFilter filter = null;
+            ILocalDrivingApplicationFilter filter = null;
 
             switch (CBFilterBy.SelectedItem.ToString())
             {
-                case "Person ID":
+                case "L.D.LAppID":
                     this.MTBsearch.Mask = "000000";
                     this.MTBsearch.PromptChar = ' ';
                     if (int.TryParse(MTBsearch.Text, out int id))
-                        filter = new PersonIdFilter(id);
+                        filter = new LDLAppIDFilter(id);
                     break;
                 case "National No":
                     this.MTBsearch.Mask = "";
-                    filter = new NationalNoFilter(MTBsearch.Text);
+                    filter = new NationalNoLDLFilter(MTBsearch.Text);
                     break;
-                case "First Name":
+                case "Full Name":
                     this.MTBsearch.Mask = "";
-                    filter = new FirstNameFilter(MTBsearch.Text);
+                    filter = new FullNameFilter(MTBsearch.Text);
                     break;
-                case "Second Name":
-                    this.MTBsearch.Mask = "";
-                    filter = new SecondNameFilter(MTBsearch.Text);
-                    break;
-                case "Third Name":
-                    this.MTBsearch.Mask = "";
-                    filter = new ThirdNameFilter(MTBsearch.Text);
-                    break;
-                case "Last Name":
-                    this.MTBsearch.Mask = "";
-                    filter = new LastNameFilter(MTBsearch.Text);
-                    break;
-                case "Nationality":
-                    this.MTBsearch.Mask = "";
-                    filter = new CountryFilter(MTBsearch.Text);
-                    break;
-                case "Gender":
-                    this.MTBsearch.Mask = "";
-                    filter = new GenderFilter(MTBsearch.Text);
-                    break;
-                case "Phone":
-                    this.MTBsearch.Mask = "0000000000";
-                    this.MTBsearch.PromptChar = ' ';
-                    this.MTBsearch.SkipLiterals = true;
 
-                    filter = new PhoneFilter(MTBsearch.Text);
-                    break;
-                case "Email":
+                case "Status":
                     this.MTBsearch.Mask = "";
-                    filter = new EmailFilter(MTBsearch.Text);
+                    filter = new ActiveStatusFilter(CBActiveStatusBy.SelectedItem.ToString());
                     break;
             }
 
@@ -146,7 +137,14 @@ namespace DVLD_PresentationLayer
         private void FOManageLocalDrivingApplication_Load(object sender, EventArgs e)
         {
             CBFilterBy.SelectedIndex = 0;
+            CBActiveStatusBy.SelectedIndex = 0;
             _RefreshLocalDrivingApplicationsList();
+        }
+
+        private void CBActiveStatusBy_TextChanged(object sender, EventArgs e)
+        {
+            ApplyFilter();
+
         }
     }
 }

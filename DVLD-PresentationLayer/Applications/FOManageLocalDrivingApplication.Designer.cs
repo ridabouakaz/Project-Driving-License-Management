@@ -35,8 +35,8 @@ namespace DVLD_PresentationLayer
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FOManageLocalDrivingApplication));
             this.dGViewShowInformation = new System.Windows.Forms.DataGridView();
             this.SMItemCRUDLocalDrivingApplications = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -57,6 +57,7 @@ namespace DVLD_PresentationLayer
             this.CBFilterBy = new System.Windows.Forms.ComboBox();
             this.LblTotalRecoreds = new System.Windows.Forms.Label();
             this.MTBsearch = new System.Windows.Forms.MaskedTextBox();
+            this.CBActiveStatusBy = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dGViewShowInformation)).BeginInit();
             this.SMItemCRUDLocalDrivingApplications.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBManageLocalDrivingApplications)).BeginInit();
@@ -72,24 +73,24 @@ namespace DVLD_PresentationLayer
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dGViewShowInformation.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGViewShowInformation.BackgroundColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 12F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dGViewShowInformation.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 12F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dGViewShowInformation.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dGViewShowInformation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGViewShowInformation.ContextMenuStrip = this.SMItemCRUDLocalDrivingApplications;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dGViewShowInformation.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dGViewShowInformation.DefaultCellStyle = dataGridViewCellStyle4;
             this.dGViewShowInformation.Location = new System.Drawing.Point(47, 279);
             this.dGViewShowInformation.Name = "dGViewShowInformation";
             this.dGViewShowInformation.ReadOnly = true;
@@ -197,6 +198,7 @@ namespace DVLD_PresentationLayer
             this.BtnAddLocalDrivingApplication.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
             this.BtnAddLocalDrivingApplication.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAddLocalDrivingApplication.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BtnAddLocalDrivingApplication.Image = ((System.Drawing.Image)(resources.GetObject("BtnAddLocalDrivingApplication.Image")));
             this.BtnAddLocalDrivingApplication.Location = new System.Drawing.Point(1396, 228);
             this.BtnAddLocalDrivingApplication.Name = "BtnAddLocalDrivingApplication";
             this.BtnAddLocalDrivingApplication.Size = new System.Drawing.Size(90, 45);
@@ -270,16 +272,10 @@ namespace DVLD_PresentationLayer
             this.CBFilterBy.FormattingEnabled = true;
             this.CBFilterBy.Items.AddRange(new object[] {
             "None",
-            "LocalDrivingApplication ID",
+            "L.D.LAppID",
             "National No",
-            "First Name",
-            "Second Name",
-            "Third Name",
-            "Last Name",
-            "Nationality",
-            "Gender",
-            "Phone",
-            "Email"});
+            "Full Name",
+            "Status"});
             this.CBFilterBy.Location = new System.Drawing.Point(154, 245);
             this.CBFilterBy.Name = "CBFilterBy";
             this.CBFilterBy.Size = new System.Drawing.Size(208, 31);
@@ -306,15 +302,33 @@ namespace DVLD_PresentationLayer
             this.MTBsearch.ForeColor = System.Drawing.Color.Black;
             this.MTBsearch.Location = new System.Drawing.Point(371, 245);
             this.MTBsearch.Name = "MTBsearch";
-            this.MTBsearch.Size = new System.Drawing.Size(184, 30);
+            this.MTBsearch.Size = new System.Drawing.Size(249, 30);
             this.MTBsearch.TabIndex = 1;
             this.MTBsearch.TextChanged += new System.EventHandler(this.MTBsearch_TextChanged);
+            // 
+            // CBActiveStatusBy
+            // 
+            this.CBActiveStatusBy.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.CBActiveStatusBy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBActiveStatusBy.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.CBActiveStatusBy.ForeColor = System.Drawing.Color.Black;
+            this.CBActiveStatusBy.FormattingEnabled = true;
+            this.CBActiveStatusBy.Items.AddRange(new object[] {
+            "New",
+            "Cancelled",
+            "Completed"});
+            this.CBActiveStatusBy.Location = new System.Drawing.Point(371, 245);
+            this.CBActiveStatusBy.Name = "CBActiveStatusBy";
+            this.CBActiveStatusBy.Size = new System.Drawing.Size(201, 31);
+            this.CBActiveStatusBy.TabIndex = 10;
+            this.CBActiveStatusBy.TextChanged += new System.EventHandler(this.CBActiveStatusBy_TextChanged);
             // 
             // FOManageLocalDrivingApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1533, 932);
+            this.Controls.Add(this.CBActiveStatusBy);
             this.Controls.Add(this.MTBsearch);
             this.Controls.Add(this.LblTotalRecoreds);
             this.Controls.Add(this.CBFilterBy);
@@ -359,5 +373,6 @@ namespace DVLD_PresentationLayer
         private ComboBox CBFilterBy;
         private Label LblTotalRecoreds;
         private MaskedTextBox MTBsearch;
+        private ComboBox CBActiveStatusBy;
     }
 }

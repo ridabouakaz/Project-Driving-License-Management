@@ -53,6 +53,7 @@
     <Compile Include="clsPersonFilter.cs" />
     <Compile Include="clsUser.cs" />
     <Compile Include="clsUserFilter.cs" />
+    <Compile Include="LocalDrivingApplicationFilter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
