@@ -329,6 +329,7 @@ namespace DVLD_PresentationLayer
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manage Local Driving Applications";
+            this.Load += new System.EventHandler(this.FOManageLocalDrivingApplication_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dGViewShowInformation)).EndInit();
             this.SMItemCRUDLocalDrivingApplications.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PBManageLocalDrivingApplications)).EndInit();

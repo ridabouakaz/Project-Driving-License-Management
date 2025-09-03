@@ -14,7 +14,7 @@ namespace DVLD_PresentationLayer
 {
     public partial class FOManageLocalDrivingApplication : Form
     {
-        private static DataTable _LocalDrivingApplicationsTable = clsPerson.GetAllLocalDrivingApplications();
+        private static DataTable _LocalDrivingApplicationsTable = clsNewLocalDrivingApplication.GetAllLocalDrivingApplications();
         public FOManageLocalDrivingApplication()
         {
             InitializeComponent();
@@ -24,18 +24,12 @@ namespace DVLD_PresentationLayer
         }
         private void _RefreshLocalDrivingApplicationsList()
         {
-            _LocalDrivingApplicationsTable = clsPerson.GetAllLocalDrivingApplications();
+            _LocalDrivingApplicationsTable = clsNewLocalDrivingApplication.GetAllLocalDrivingApplications();
             dGViewShowInformation.DataSource = _LocalDrivingApplicationsTable;
             LblTotalRecoreds.Text = _LocalDrivingApplicationsTable.Rows.Count.ToString();
         }
 
-        private void FOManageLocalDrivingApplications_Load(object sender, EventArgs e)
-        {
-            CBFilterBy.SelectedIndex = 0;
-            _RefreshLocalDrivingApplicationsList();
 
-
-        }
 
         private void BtnAddPerson_Click(object sender, EventArgs e)
         {
@@ -72,21 +66,7 @@ namespace DVLD_PresentationLayer
 
         private void SMItemDeletePerson_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are you sure you want to delete person [" + dGViewShowInformation.CurrentRow.Cells[0].Value + "]", "Confirm Delete", MessageBoxButtons.OKCancel) == DialogResult.OK)
-
-            {
-
-                //Perform Delele and refresh
-                File.Delete(clsPerson.ReturnPathDeleteLocalDrivingApplications((int)dGViewShowInformation.CurrentRow.Cells[0].Value));
-                if (clsPerson.DeleteLocalDrivingApplications((int)dGViewShowInformation.CurrentRow.Cells[0].Value))
-                {
-                    MessageBox.Show("person Deleted Successfully.");
-                    _RefreshLocalDrivingApplicationsList();
-                }
-                else
-                    MessageBox.Show("person is not deleted.");
-
-            }
+     
         }
 
         private void CBFilterBy_SelectedIndexChanged(object sender, EventArgs e)
@@ -163,6 +143,10 @@ namespace DVLD_PresentationLayer
             ApplyFilter();
         }
 
-      
+        private void FOManageLocalDrivingApplication_Load(object sender, EventArgs e)
+        {
+            CBFilterBy.SelectedIndex = 0;
+            _RefreshLocalDrivingApplicationsList();
+        }
     }
 }
