@@ -69,5 +69,11 @@ namespace DVLD_PresentationLayer
             FONewLocalDrivingApplication frm = new FONewLocalDrivingApplication(_currentUser);
             frm.ShowDialog();
         }
+
+        private void SMItemlocalDrivingLicenseApplications_Click(object sender, EventArgs e)
+        {
+            FOManageLocalDrivingApplication frm = new FOManageLocalDrivingApplication(_currentUser);
+            frm.ShowDialog();
+        }
     }
 }

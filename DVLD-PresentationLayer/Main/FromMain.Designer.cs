@@ -44,6 +44,8 @@ namespace DVLD_PresentationLayer
             this.SMItemRetakeTest = new System.Windows.Forms.ToolStripMenuItem();
             this.SMItemSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.SMItemManageApplications = new System.Windows.Forms.ToolStripMenuItem();
+            this.SMItemlocalDrivingLicenseApplications = new System.Windows.Forms.ToolStripMenuItem();
+            this.SMItemInternationalLicenseApplications = new System.Windows.Forms.ToolStripMenuItem();
             this.SMItemDetainLicenses = new System.Windows.Forms.ToolStripMenuItem();
             this.SMItemManageDetainedLicenses = new System.Windows.Forms.ToolStripMenuItem();
             this.SMItemDetainedLicense = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,8 +61,6 @@ namespace DVLD_PresentationLayer
             this.SMItemSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.SMItemSingOut = new System.Windows.Forms.ToolStripMenuItem();
             this.PBProject = new System.Windows.Forms.PictureBox();
-            this.SMItemlocalDrivingLicenseApplications = new System.Windows.Forms.ToolStripMenuItem();
-            this.SMItemInternationalLicenseApplications = new System.Windows.Forms.ToolStripMenuItem();
             this.MSMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBProject)).BeginInit();
             this.SuspendLayout();
@@ -179,6 +179,21 @@ namespace DVLD_PresentationLayer
             this.SMItemManageApplications.Name = "SMItemManageApplications";
             this.SMItemManageApplications.Size = new System.Drawing.Size(404, 38);
             this.SMItemManageApplications.Text = "Manage Applications";
+            // 
+            // SMItemlocalDrivingLicenseApplications
+            // 
+            this.SMItemlocalDrivingLicenseApplications.Image = ((System.Drawing.Image)(resources.GetObject("SMItemlocalDrivingLicenseApplications.Image")));
+            this.SMItemlocalDrivingLicenseApplications.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.SMItemlocalDrivingLicenseApplications.Name = "SMItemlocalDrivingLicenseApplications";
+            this.SMItemlocalDrivingLicenseApplications.Size = new System.Drawing.Size(495, 38);
+            this.SMItemlocalDrivingLicenseApplications.Text = "Local Driving License Applications";
+            this.SMItemlocalDrivingLicenseApplications.Click += new System.EventHandler(this.SMItemlocalDrivingLicenseApplications_Click);
+            // 
+            // SMItemInternationalLicenseApplications
+            // 
+            this.SMItemInternationalLicenseApplications.Name = "SMItemInternationalLicenseApplications";
+            this.SMItemInternationalLicenseApplications.Size = new System.Drawing.Size(495, 38);
+            this.SMItemInternationalLicenseApplications.Text = "International License Applications";
             // 
             // SMItemDetainLicenses
             // 
@@ -311,20 +326,6 @@ namespace DVLD_PresentationLayer
             this.PBProject.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PBProject.TabIndex = 1;
             this.PBProject.TabStop = false;
-            // 
-            // SMItemlocalDrivingLicenseApplications
-            // 
-            this.SMItemlocalDrivingLicenseApplications.Image = ((System.Drawing.Image)(resources.GetObject("SMItemlocalDrivingLicenseApplications.Image")));
-            this.SMItemlocalDrivingLicenseApplications.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.SMItemlocalDrivingLicenseApplications.Name = "SMItemlocalDrivingLicenseApplications";
-            this.SMItemlocalDrivingLicenseApplications.Size = new System.Drawing.Size(495, 38);
-            this.SMItemlocalDrivingLicenseApplications.Text = "Local Driving License Applications";
-            // 
-            // SMItemInternationalLicenseApplications
-            // 
-            this.SMItemInternationalLicenseApplications.Name = "SMItemInternationalLicenseApplications";
-            this.SMItemInternationalLicenseApplications.Size = new System.Drawing.Size(495, 38);
-            this.SMItemInternationalLicenseApplications.Text = "International License Applications";
             // 
             // FOmain
             // 

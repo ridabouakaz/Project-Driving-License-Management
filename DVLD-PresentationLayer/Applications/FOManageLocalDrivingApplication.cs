@@ -16,12 +16,20 @@ namespace DVLD_PresentationLayer
     public partial class FOManageLocalDrivingApplication : Form
     {
         private static DataTable _LocalDrivingApplicationsTable = clsNewLocalDrivingApplication.GetAllLocalDrivingApplications();
-        public FOManageLocalDrivingApplication()
+        clsUser _CurrentUser;
+        
+        public FOManageLocalDrivingApplication(clsUser CurrentUser)
         {
             InitializeComponent();
-          
+            _CurrentUser = CurrentUser;
             this.Size = new Size(1400, 650);
 
+        }
+        private void BtnAddLocalDrivingApplication_Click(object sender, EventArgs e)
+        {
+            FONewLocalDrivingApplication frm = new FONewLocalDrivingApplication(_CurrentUser);
+            frm.ShowDialog();
+            _RefreshLocalDrivingApplicationsList();
         }
         private void _RefreshLocalDrivingApplicationsList()
         {
@@ -29,46 +37,11 @@ namespace DVLD_PresentationLayer
             dGViewShowInformation.DataSource = _LocalDrivingApplicationsTable;
             LblTotalRecoreds.Text = _LocalDrivingApplicationsTable.Rows.Count.ToString();
         }
-
-
-
-        private void BtnAddPerson_Click(object sender, EventArgs e)
-        {
-            FOAddEditPersonInfo frm = new FOAddEditPersonInfo();
-            frm.ShowDialog();
-            _RefreshLocalDrivingApplicationsList();
-            
-        }
-
         private void BtnAddClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-        private void SMItemViewDetails_Click(object sender, EventArgs e)
-        {
-            FOPersonInfo frm = new FOPersonInfo((int)dGViewShowInformation.CurrentRow.Cells[0].Value);
-            frm.ShowDialog();
-            _RefreshLocalDrivingApplicationsList();
-        }
-        private void SMItemEditPerson_Click(object sender, EventArgs e)
-        {
-            FOAddEditPersonInfo frm = new FOAddEditPersonInfo((int)dGViewShowInformation.CurrentRow.Cells[0].Value);
-            frm.ShowDialog();
-            _RefreshLocalDrivingApplicationsList();
-        }
 
-        private void SMItemAddPerson_Click(object sender, EventArgs e)
-        {
-            FOAddEditPersonInfo frm = new FOAddEditPersonInfo();
-            frm.ShowDialog();
-            _RefreshLocalDrivingApplicationsList();
-
-        }
-
-        private void SMItemDeletePerson_Click(object sender, EventArgs e)
-        {
-     
-        }
 
         private void CBFilterBy_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -133,7 +106,6 @@ namespace DVLD_PresentationLayer
         {
             ApplyFilter();
         }
-
         private void FOManageLocalDrivingApplication_Load(object sender, EventArgs e)
         {
             CBFilterBy.SelectedIndex = 0;
@@ -146,5 +118,7 @@ namespace DVLD_PresentationLayer
             ApplyFilter();
 
         }
+
+ 
     }
 }
