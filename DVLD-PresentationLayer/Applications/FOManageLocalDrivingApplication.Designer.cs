@@ -207,6 +207,7 @@ namespace DVLD_PresentationLayer
             // 
             this.PBManageLocalDrivingApplications.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.PBManageLocalDrivingApplications.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.PBManageLocalDrivingApplications.Image = ((System.Drawing.Image)(resources.GetObject("PBManageLocalDrivingApplications.Image")));
             this.PBManageLocalDrivingApplications.Location = new System.Drawing.Point(710, 31);
             this.PBManageLocalDrivingApplications.Name = "PBManageLocalDrivingApplications";
             this.PBManageLocalDrivingApplications.Size = new System.Drawing.Size(137, 125);

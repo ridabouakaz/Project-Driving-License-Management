@@ -75,6 +75,12 @@
     <Compile Include="Applications\FOAddNewLocalDrivingApplication.Designer.cs">
       <DependentUpon>FOAddNewLocalDrivingApplication.cs</DependentUpon>
     </Compile>
+    <Compile Include="Applications\FOManageLocalDrivingApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\FOManageLocalDrivingApplication.Designer.cs">
+      <DependentUpon>FOManageLocalDrivingApplication.cs</DependentUpon>
+    </Compile>
     <Compile Include="People\Control\CtrDetailsPerson%28Edit-Add%29.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -188,6 +194,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Applications\FOAddNewLocalDrivingApplication.resx">
       <DependentUpon>FOAddNewLocalDrivingApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\FOManageLocalDrivingApplication.resx">
+      <DependentUpon>FOManageLocalDrivingApplication.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="People\Control\CtrDetailsPerson%28Edit-Add%29.resx">
       <DependentUpon>CtrDetailsPerson%28Edit-Add%29.cs</DependentUpon>

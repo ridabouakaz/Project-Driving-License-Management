@@ -59,6 +59,8 @@ namespace DVLD_PresentationLayer
             this.SMItemSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.SMItemSingOut = new System.Windows.Forms.ToolStripMenuItem();
             this.PBProject = new System.Windows.Forms.PictureBox();
+            this.SMItemlocalDrivingLicenseApplications = new System.Windows.Forms.ToolStripMenuItem();
+            this.SMItemInternationalLicenseApplications = new System.Windows.Forms.ToolStripMenuItem();
             this.MSMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBProject)).BeginInit();
             this.SuspendLayout();
@@ -170,6 +172,9 @@ namespace DVLD_PresentationLayer
             // 
             // SMItemManageApplications
             // 
+            this.SMItemManageApplications.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.SMItemlocalDrivingLicenseApplications,
+            this.SMItemInternationalLicenseApplications});
             this.SMItemManageApplications.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SMItemManageApplications.Name = "SMItemManageApplications";
             this.SMItemManageApplications.Size = new System.Drawing.Size(404, 38);
@@ -307,6 +312,20 @@ namespace DVLD_PresentationLayer
             this.PBProject.TabIndex = 1;
             this.PBProject.TabStop = false;
             // 
+            // SMItemlocalDrivingLicenseApplications
+            // 
+            this.SMItemlocalDrivingLicenseApplications.Image = ((System.Drawing.Image)(resources.GetObject("SMItemlocalDrivingLicenseApplications.Image")));
+            this.SMItemlocalDrivingLicenseApplications.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.SMItemlocalDrivingLicenseApplications.Name = "SMItemlocalDrivingLicenseApplications";
+            this.SMItemlocalDrivingLicenseApplications.Size = new System.Drawing.Size(495, 38);
+            this.SMItemlocalDrivingLicenseApplications.Text = "Local Driving License Applications";
+            // 
+            // SMItemInternationalLicenseApplications
+            // 
+            this.SMItemInternationalLicenseApplications.Name = "SMItemInternationalLicenseApplications";
+            this.SMItemInternationalLicenseApplications.Size = new System.Drawing.Size(495, 38);
+            this.SMItemInternationalLicenseApplications.Text = "International License Applications";
+            // 
             // FOmain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -355,6 +374,8 @@ namespace DVLD_PresentationLayer
         private ToolStripSeparator SMItemSeparator3;
         private PictureBox PBProject;
         private ToolStripMenuItem SMItemNewDrivingLocalLicenses;
+        private ToolStripMenuItem SMItemlocalDrivingLicenseApplications;
+        private ToolStripMenuItem SMItemInternationalLicenseApplications;
     }
 }
 
