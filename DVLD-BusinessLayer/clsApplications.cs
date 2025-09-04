@@ -1,6 +1,7 @@
 ﻿using DVLD_DataAccessLayer;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -97,6 +98,10 @@ namespace DVLD_BusinessLayer
 
             }
             return false;
+        }
+        public string GetPersonById(int id)
+        {
+            return clsApplicationDataAccess.GetPersonById(id);
         }
     }
 }

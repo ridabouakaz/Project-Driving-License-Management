@@ -131,7 +131,7 @@ int ID,
             using (SqlConnection conn = new SqlConnection(clsDataAccessSettings.ConnectionString))
             {
                 string query = @"
-            SELECT ApplicationTypes.ApplicationFees
+            SELECT TOP 1 ApplicationTypes.ApplicationFees
             FROM Applications
             INNER JOIN ApplicationTypes ON Applications.ApplicationTypeID = ApplicationTypes.ApplicationTypeID
             WHERE ApplicationTypes.ApplicationTypeID = @ApplicationTypeID";
