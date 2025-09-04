@@ -99,7 +99,7 @@ namespace DVLD_BusinessLayer
             }
             return false;
         }
-        public string GetPersonById(int id)
+        public static string GetPersonById(int id)
         {
             return clsApplicationDataAccess.GetPersonById(id);
         }

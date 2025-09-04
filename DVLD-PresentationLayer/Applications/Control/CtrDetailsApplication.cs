@@ -52,8 +52,8 @@ namespace DVLD_PresentationLayer
             Type = clsManageApplicationTypes.GetTitleById(_Application.ApplicationTypeID);
             Applicant = clsApplications.GetPersonById(_Application.ID);
             Date = _Application.ApplicationDate.ToString("dd/MM/yyyy");
-            StatusDate = _Application.DateOfBirth.ToString("dd/MM/yyyy");
-           // CreatedBy = (clsCountry.Find(_Application.CountryID).CountryName);
+            StatusDate = _Application.LastStatusDate.ToString("dd/MM/yyyy");
+            CreatedBy = (clsCountry.Find(_Application.CountryID).CountryName);
         }
         public enApplicationStatus TypeStatus
         {
