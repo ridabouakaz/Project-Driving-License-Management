@@ -49,9 +49,9 @@ namespace DVLD_PresentationLayer
             ApplicationID = _Application.ID.ToString();
             TypeStatus = _Application.ApplicationStatus;
             Fees = _Application.PaidFees.ToString();
-            Type = _Application.Email;
+            Type = clsManageApplicationTypes.GetTitleById(_Application.ApplicationTypeID);
             Applicant = _Application.Phone;
-            Date = _Application.Address;
+           Date = _Application.Address;
             StatusDate = _Application.DateOfBirth.ToString("dd/MM/yyyy");
             CreatedBy = (clsCountry.Find(_Application.CountryID).CountryName);
         }

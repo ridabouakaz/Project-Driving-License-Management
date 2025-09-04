@@ -150,5 +150,30 @@ int ID,
             }
             return fee;
         }
+        public static string GetTitleById(int id)
+        {
+            string Title = "";
+            using (SqlConnection conn = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                string query = @"
+            SELECT  ApplicationTypes.ApplicationTypeTitle
+            FROM Applications
+            INNER JOIN ApplicationTypes ON Applications.ApplicationTypeID = ApplicationTypes.ApplicationTypeID
+            WHERE ApplicationTypes.ApplicationTypeID = @ApplicationTypeID";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@ApplicationTypeID", id);
+                    conn.Open();
+
+                    object result = cmd.ExecuteScalar();
+                    if (result != null && result != DBNull.Value)
+                    {
+                        Title = result.ToString();
+                    }
+                }
+            }
+            return Title;
+        }
     }
 }

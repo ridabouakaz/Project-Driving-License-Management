@@ -70,5 +70,9 @@ namespace DVLD_BusinessLayer
         {
             return clsApplicationTypeDataAccess.GetFeesById(id);
         }
+        public static string GetTitleById(int id)
+        {
+            return clsApplicationTypeDataAccess.GetTitleById(id);
+        }
     }
 }
