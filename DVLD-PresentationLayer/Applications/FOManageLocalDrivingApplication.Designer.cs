@@ -272,7 +272,7 @@ namespace DVLD_PresentationLayer
             this.CBFilterBy.FormattingEnabled = true;
             this.CBFilterBy.Items.AddRange(new object[] {
             "None",
-            "L.D.LAppID",
+            "D.L.AppID",
             "National No",
             "Full Name",
             "Status"});

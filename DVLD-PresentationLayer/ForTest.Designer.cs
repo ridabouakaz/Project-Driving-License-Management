@@ -35,7 +35,7 @@
             // 
             this.ctrDetailsApplication1.ApplicationData = null;
             this.ctrDetailsApplication1.BackColor = System.Drawing.Color.White;
-            this.ctrDetailsApplication1.Location = new System.Drawing.Point(2, 60);
+            this.ctrDetailsApplication1.Location = new System.Drawing.Point(19, 63);
             this.ctrDetailsApplication1.Name = "ctrDetailsApplication1";
             this.ctrDetailsApplication1.Size = new System.Drawing.Size(1165, 383);
             this.ctrDetailsApplication1.TabIndex = 0;

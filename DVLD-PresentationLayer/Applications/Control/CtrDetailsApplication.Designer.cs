@@ -115,14 +115,15 @@ namespace DVLD_PresentationLayer
             this.GBUserControlDetailesApplication.Size = new System.Drawing.Size(1130, 361);
             this.GBUserControlDetailesApplication.TabIndex = 48;
             this.GBUserControlDetailesApplication.TabStop = false;
-            this.GBUserControlDetailesApplication.Text = "Application Information";
+            this.GBUserControlDetailesApplication.Text = "Application Basic Info";
             // 
             // PBApplicationID
             // 
             this.PBApplicationID.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.PBApplicationID.ErrorImage = null;
+            this.PBApplicationID.Image = ((System.Drawing.Image)(resources.GetObject("PBApplicationID.Image")));
             this.PBApplicationID.InitialImage = null;
-            this.PBApplicationID.Location = new System.Drawing.Point(186, 47);
+            this.PBApplicationID.Location = new System.Drawing.Point(162, 47);
             this.PBApplicationID.Name = "PBApplicationID";
             this.PBApplicationID.Size = new System.Drawing.Size(40, 32);
             this.PBApplicationID.TabIndex = 47;
@@ -132,11 +133,11 @@ namespace DVLD_PresentationLayer
             // 
             this.LblValueApplicationID.AutoSize = true;
             this.LblValueApplicationID.BackColor = System.Drawing.Color.Transparent;
-            this.LblValueApplicationID.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.LblValueApplicationID.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.LblValueApplicationID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblValueApplicationID.Location = new System.Drawing.Point(261, 51);
+            this.LblValueApplicationID.Location = new System.Drawing.Point(244, 51);
             this.LblValueApplicationID.Name = "LblValueApplicationID";
-            this.LblValueApplicationID.Size = new System.Drawing.Size(96, 25);
+            this.LblValueApplicationID.Size = new System.Drawing.Size(90, 25);
             this.LblValueApplicationID.TabIndex = 46;
             this.LblValueApplicationID.Text = "[????????]";
             // 
@@ -144,11 +145,11 @@ namespace DVLD_PresentationLayer
             // 
             this.LblvalueCreatedBy.AutoSize = true;
             this.LblvalueCreatedBy.BackColor = System.Drawing.Color.Transparent;
-            this.LblvalueCreatedBy.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.LblvalueCreatedBy.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.LblvalueCreatedBy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblvalueCreatedBy.Location = new System.Drawing.Point(1002, 176);
+            this.LblvalueCreatedBy.Location = new System.Drawing.Point(984, 180);
             this.LblvalueCreatedBy.Name = "LblvalueCreatedBy";
-            this.LblvalueCreatedBy.Size = new System.Drawing.Size(96, 25);
+            this.LblvalueCreatedBy.Size = new System.Drawing.Size(90, 25);
             this.LblvalueCreatedBy.TabIndex = 45;
             this.LblvalueCreatedBy.Text = "[????????]";
             // 
@@ -156,11 +157,11 @@ namespace DVLD_PresentationLayer
             // 
             this.LblvalueStatusDate.AutoSize = true;
             this.LblvalueStatusDate.BackColor = System.Drawing.Color.Transparent;
-            this.LblvalueStatusDate.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.LblvalueStatusDate.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.LblvalueStatusDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblvalueStatusDate.Location = new System.Drawing.Point(1002, 115);
+            this.LblvalueStatusDate.Location = new System.Drawing.Point(984, 114);
             this.LblvalueStatusDate.Name = "LblvalueStatusDate";
-            this.LblvalueStatusDate.Size = new System.Drawing.Size(96, 25);
+            this.LblvalueStatusDate.Size = new System.Drawing.Size(90, 25);
             this.LblvalueStatusDate.TabIndex = 44;
             this.LblvalueStatusDate.Text = "[????????]";
             // 
@@ -168,11 +169,11 @@ namespace DVLD_PresentationLayer
             // 
             this.LblvalueDate.AutoSize = true;
             this.LblvalueDate.BackColor = System.Drawing.Color.Transparent;
-            this.LblvalueDate.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.LblvalueDate.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.LblvalueDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblvalueDate.Location = new System.Drawing.Point(1002, 54);
+            this.LblvalueDate.Location = new System.Drawing.Point(984, 55);
             this.LblvalueDate.Name = "LblvalueDate";
-            this.LblvalueDate.Size = new System.Drawing.Size(96, 25);
+            this.LblvalueDate.Size = new System.Drawing.Size(90, 25);
             this.LblvalueDate.TabIndex = 43;
             this.LblvalueDate.Text = "[????????]";
             // 
@@ -180,11 +181,11 @@ namespace DVLD_PresentationLayer
             // 
             this.LblvalueApplicant.AutoSize = true;
             this.LblvalueApplicant.BackColor = System.Drawing.Color.Transparent;
-            this.LblvalueApplicant.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.LblvalueApplicant.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.LblvalueApplicant.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblvalueApplicant.Location = new System.Drawing.Point(261, 295);
+            this.LblvalueApplicant.Location = new System.Drawing.Point(244, 291);
             this.LblvalueApplicant.Name = "LblvalueApplicant";
-            this.LblvalueApplicant.Size = new System.Drawing.Size(96, 25);
+            this.LblvalueApplicant.Size = new System.Drawing.Size(90, 25);
             this.LblvalueApplicant.TabIndex = 41;
             this.LblvalueApplicant.Text = "[????????]";
             // 
@@ -192,11 +193,11 @@ namespace DVLD_PresentationLayer
             // 
             this.LblValueFees.AutoSize = true;
             this.LblValueFees.BackColor = System.Drawing.Color.Transparent;
-            this.LblValueFees.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.LblValueFees.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.LblValueFees.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblValueFees.Location = new System.Drawing.Point(261, 173);
+            this.LblValueFees.Location = new System.Drawing.Point(244, 171);
             this.LblValueFees.Name = "LblValueFees";
-            this.LblValueFees.Size = new System.Drawing.Size(96, 25);
+            this.LblValueFees.Size = new System.Drawing.Size(90, 25);
             this.LblValueFees.TabIndex = 40;
             this.LblValueFees.Text = "[????????]";
             // 
@@ -204,11 +205,11 @@ namespace DVLD_PresentationLayer
             // 
             this.LblValueStatus.AutoSize = true;
             this.LblValueStatus.BackColor = System.Drawing.Color.Transparent;
-            this.LblValueStatus.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.LblValueStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.LblValueStatus.Location = new System.Drawing.Point(261, 112);
+            this.LblValueStatus.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.LblValueStatus.ForeColor = System.Drawing.Color.Black;
+            this.LblValueStatus.Location = new System.Drawing.Point(244, 111);
             this.LblValueStatus.Name = "LblValueStatus";
-            this.LblValueStatus.Size = new System.Drawing.Size(96, 25);
+            this.LblValueStatus.Size = new System.Drawing.Size(90, 25);
             this.LblValueStatus.TabIndex = 39;
             this.LblValueStatus.Text = "[????????]";
             // 
@@ -216,18 +217,18 @@ namespace DVLD_PresentationLayer
             // 
             this.LblValueType.AutoSize = true;
             this.LblValueType.BackColor = System.Drawing.Color.Transparent;
-            this.LblValueType.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.LblValueType.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.LblValueType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblValueType.Location = new System.Drawing.Point(261, 234);
+            this.LblValueType.Location = new System.Drawing.Point(244, 231);
             this.LblValueType.Name = "LblValueType";
-            this.LblValueType.Size = new System.Drawing.Size(96, 25);
+            this.LblValueType.Size = new System.Drawing.Size(90, 25);
             this.LblValueType.TabIndex = 38;
             this.LblValueType.Text = "[????????]";
             // 
             // PBGender
             // 
             this.PBGender.Image = ((System.Drawing.Image)(resources.GetObject("PBGender.Image")));
-            this.PBGender.Location = new System.Drawing.Point(186, 231);
+            this.PBGender.Location = new System.Drawing.Point(162, 231);
             this.PBGender.Name = "PBGender";
             this.PBGender.Size = new System.Drawing.Size(40, 32);
             this.PBGender.TabIndex = 37;
@@ -249,7 +250,7 @@ namespace DVLD_PresentationLayer
             // 
             this.LLViewPersonInfo.AutoSize = true;
             this.LLViewPersonInfo.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.LLViewPersonInfo.Location = new System.Drawing.Point(907, 291);
+            this.LLViewPersonInfo.Location = new System.Drawing.Point(921, 291);
             this.LLViewPersonInfo.Name = "LLViewPersonInfo";
             this.LLViewPersonInfo.Size = new System.Drawing.Size(153, 25);
             this.LLViewPersonInfo.TabIndex = 33;
@@ -260,7 +261,7 @@ namespace DVLD_PresentationLayer
             // PBCountry
             // 
             this.PBCountry.Image = ((System.Drawing.Image)(resources.GetObject("PBCountry.Image")));
-            this.PBCountry.Location = new System.Drawing.Point(931, 176);
+            this.PBCountry.Location = new System.Drawing.Point(912, 177);
             this.PBCountry.Name = "PBCountry";
             this.PBCountry.Size = new System.Drawing.Size(40, 32);
             this.PBCountry.TabIndex = 27;
@@ -269,7 +270,7 @@ namespace DVLD_PresentationLayer
             // PBPhone
             // 
             this.PBPhone.Image = ((System.Drawing.Image)(resources.GetObject("PBPhone.Image")));
-            this.PBPhone.Location = new System.Drawing.Point(931, 115);
+            this.PBPhone.Location = new System.Drawing.Point(912, 115);
             this.PBPhone.Name = "PBPhone";
             this.PBPhone.Size = new System.Drawing.Size(40, 32);
             this.PBPhone.TabIndex = 26;
@@ -278,7 +279,7 @@ namespace DVLD_PresentationLayer
             // PBDateOfBrith
             // 
             this.PBDateOfBrith.Image = ((System.Drawing.Image)(resources.GetObject("PBDateOfBrith.Image")));
-            this.PBDateOfBrith.Location = new System.Drawing.Point(931, 51);
+            this.PBDateOfBrith.Location = new System.Drawing.Point(912, 54);
             this.PBDateOfBrith.Name = "PBDateOfBrith";
             this.PBDateOfBrith.Size = new System.Drawing.Size(40, 32);
             this.PBDateOfBrith.TabIndex = 25;
@@ -290,7 +291,7 @@ namespace DVLD_PresentationLayer
             this.LblCreatedBy.BackColor = System.Drawing.Color.Transparent;
             this.LblCreatedBy.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.LblCreatedBy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblCreatedBy.Location = new System.Drawing.Point(793, 177);
+            this.LblCreatedBy.Location = new System.Drawing.Point(769, 177);
             this.LblCreatedBy.Name = "LblCreatedBy";
             this.LblCreatedBy.Size = new System.Drawing.Size(120, 28);
             this.LblCreatedBy.TabIndex = 24;
@@ -302,7 +303,7 @@ namespace DVLD_PresentationLayer
             this.LblStatusDate.BackColor = System.Drawing.Color.Transparent;
             this.LblStatusDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.LblStatusDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblStatusDate.Location = new System.Drawing.Point(786, 116);
+            this.LblStatusDate.Location = new System.Drawing.Point(762, 115);
             this.LblStatusDate.Name = "LblStatusDate";
             this.LblStatusDate.Size = new System.Drawing.Size(127, 28);
             this.LblStatusDate.TabIndex = 23;
@@ -314,7 +315,7 @@ namespace DVLD_PresentationLayer
             this.LblDate.BackColor = System.Drawing.Color.Transparent;
             this.LblDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.LblDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblDate.Location = new System.Drawing.Point(851, 55);
+            this.LblDate.Location = new System.Drawing.Point(827, 58);
             this.LblDate.Name = "LblDate";
             this.LblDate.Size = new System.Drawing.Size(62, 28);
             this.LblDate.TabIndex = 22;
@@ -323,7 +324,7 @@ namespace DVLD_PresentationLayer
             // PBEmail
             // 
             this.PBEmail.Image = ((System.Drawing.Image)(resources.GetObject("PBEmail.Image")));
-            this.PBEmail.Location = new System.Drawing.Point(186, 291);
+            this.PBEmail.Location = new System.Drawing.Point(162, 287);
             this.PBEmail.Name = "PBEmail";
             this.PBEmail.Size = new System.Drawing.Size(40, 32);
             this.PBEmail.TabIndex = 11;
@@ -332,7 +333,7 @@ namespace DVLD_PresentationLayer
             // PBNationalNo
             // 
             this.PBNationalNo.Image = ((System.Drawing.Image)(resources.GetObject("PBNationalNo.Image")));
-            this.PBNationalNo.Location = new System.Drawing.Point(186, 169);
+            this.PBNationalNo.Location = new System.Drawing.Point(162, 169);
             this.PBNationalNo.Name = "PBNationalNo";
             this.PBNationalNo.Size = new System.Drawing.Size(40, 32);
             this.PBNationalNo.TabIndex = 10;
@@ -344,7 +345,7 @@ namespace DVLD_PresentationLayer
             this.PBName.ErrorImage = null;
             this.PBName.Image = ((System.Drawing.Image)(resources.GetObject("PBName.Image")));
             this.PBName.InitialImage = null;
-            this.PBName.Location = new System.Drawing.Point(186, 108);
+            this.PBName.Location = new System.Drawing.Point(162, 111);
             this.PBName.Name = "PBName";
             this.PBName.Size = new System.Drawing.Size(40, 32);
             this.PBName.TabIndex = 9;
