@@ -68,7 +68,7 @@ namespace DVLD_PresentationLayer
             _Application.LastStatusDate = DateTime.Now;
             _Application.ApplicationDate = DateTime.Now;
             _Application.PaidFees = clsManageApplicationTypes.GetFeesById(_Application.ApplicationTypeID);
-            _Application.ApplicationStatus = clsApplications.enApplicationStatus.New;
+            _Application.ApplicationStatus = enApplicationStatus.New;
             _Application.ApplicationTypeID = 1; // Local Driving
             _Application.CreatedByUserID = _User.ID;
             _Application.ApplicantPersonID = ctrDetailsPersonWithFilter1.PersonData?.ID ?? -1;
