@@ -119,29 +119,6 @@ namespace DVLD_DataAccessLayer
 
             return (rowsAffected > 0);
         }
-        public static string GetPersonById(int id)
-        {
-            string FullName = "";
-            using (SqlConnection conn = new SqlConnection(clsDataAccessSettings.ConnectionString))
-            {
-                string query = @"
-                select People.FirstName + ' ' + People.SecondName + ' ' + ISNULL(People.ThirdName, '') + ' ' + dbo.People.LastName AS FullName from People inner join Applications on
-                People.PersonID=Applications.ApplicantPersonID
-                where Applications.ApplicationID=@ApplicationID";
-
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@ApplicationID", id);
-                    conn.Open();
-
-                    object result = cmd.ExecuteScalar();
-                    if (result != null && result != DBNull.Value)
-                    {
-                        FullName = result.ToString();
-                    }
-                }
-            }
-            return FullName;
-        }
+       
     }
 }

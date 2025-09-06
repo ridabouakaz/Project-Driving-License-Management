@@ -15,12 +15,20 @@ namespace DVLD_BusinessLayer
         public enMode Mode = enMode.AddNew;
         public int ID { set; get; }
         public int ApplicantPersonID { set; get; }
+        public string ApplicantFullName
+        {
+            get
+            {
+                return clsPerson.Find(ApplicantPersonID).FullName;
+            }
+        }
         public DateTime ApplicationDate { set; get; }
         public int ApplicationTypeID { set; get; }
         public clsApplications.enApplicationStatus ApplicationStatus { set; get; }
         public DateTime LastStatusDate { set; get; }
         public decimal PaidFees { set; get; }
         public int CreatedByUserID { set; get; }
+        public clsUser CreatedByUserInfo;
         public clsApplications()
         {
             ID = -1;
@@ -51,6 +59,7 @@ namespace DVLD_BusinessLayer
             this.LastStatusDate = lastStatusDate;
             this.PaidFees = paidFees;
             this.CreatedByUserID = createdByUserID;
+            this.CreatedByUserInfo = clsUser.Find(CreatedByUserID);
         }
         private bool _AddNewApplication()
         {
@@ -99,9 +108,6 @@ namespace DVLD_BusinessLayer
             }
             return false;
         }
-        public static string GetPersonById(int id)
-        {
-            return clsApplicationDataAccess.GetPersonById(id);
-        }
+      
     }
 }

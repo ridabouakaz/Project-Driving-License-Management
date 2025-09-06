@@ -50,10 +50,10 @@ namespace DVLD_PresentationLayer
             TypeStatus = _Application.ApplicationStatus;
             Fees = _Application.PaidFees.ToString();
             Type = clsManageApplicationTypes.GetTitleById(_Application.ApplicationTypeID);
-            Applicant = clsApplications.GetPersonById(_Application.ID);
+            Applicant = _Application.ApplicantFullName;
             Date = _Application.ApplicationDate.ToString("dd/MM/yyyy");
             StatusDate = _Application.LastStatusDate.ToString("dd/MM/yyyy");
-            CreatedBy = (clsCountry.Find(_Application.CountryID).CountryName);
+            CreatedBy = _Application.CreatedByUserInfo.UserName;
         }
         public enApplicationStatus TypeStatus
         {
@@ -101,10 +101,7 @@ namespace DVLD_PresentationLayer
         {
             set => LblvalueCreatedBy.Text = value;
         }
-      
-  
-  
-          private void LLEditApplicationInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+         private void LLEditApplicationInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
     
         }
