@@ -72,7 +72,7 @@ namespace DVLD_PresentationLayer
 
             switch (CBFilterBy.SelectedItem.ToString())
             {
-                case "L.D.LAppID":
+                case "D.L.AppID":
                     this.MTBsearch.Mask = "000000";
                     this.MTBsearch.PromptChar = ' ';
                     if (int.TryParse(MTBsearch.Text, out int id))
