@@ -28,23 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ctrDetailsPersonWithFilter1 = new DVLD_PresentationLayer.CtrDetailsPersonWithFilter();
+            this.ctrDetailsApplication1 = new DVLD_PresentationLayer.CtrDetailsApplication();
             this.SuspendLayout();
             // 
-            // ctrDetailsPersonWithFilter1
+            // ctrDetailsApplication1
             // 
-            this.ctrDetailsPersonWithFilter1.BackColor = System.Drawing.Color.White;
-            this.ctrDetailsPersonWithFilter1.Location = new System.Drawing.Point(16, 11);
-            this.ctrDetailsPersonWithFilter1.Name = "ctrDetailsPersonWithFilter1";
-            this.ctrDetailsPersonWithFilter1.Size = new System.Drawing.Size(1142, 522);
-            this.ctrDetailsPersonWithFilter1.TabIndex = 0;
+            this.ctrDetailsApplication1.ApplicationData = null;
+            this.ctrDetailsApplication1.BackColor = System.Drawing.Color.White;
+            this.ctrDetailsApplication1.Location = new System.Drawing.Point(19, 65);
+            this.ctrDetailsApplication1.Name = "ctrDetailsApplication1";
+            this.ctrDetailsApplication1.Size = new System.Drawing.Size(1165, 383);
+            this.ctrDetailsApplication1.TabIndex = 0;
             // 
             // ForTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1175, 561);
-            this.Controls.Add(this.ctrDetailsPersonWithFilter1);
+            this.ClientSize = new System.Drawing.Size(1196, 561);
+            this.Controls.Add(this.ctrDetailsApplication1);
             this.Name = "ForTest";
             this.Text = "ForTest";
             this.ResumeLayout(false);
@@ -53,6 +54,6 @@
 
         #endregion
 
-        private CtrDetailsPersonWithFilter ctrDetailsPersonWithFilter1;
+        private CtrDetailsApplication ctrDetailsApplication1;
     }
 }

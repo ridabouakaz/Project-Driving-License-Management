@@ -103,7 +103,8 @@ namespace DVLD_PresentationLayer
         }
          private void LLEditApplicationInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-    
+            FOPersonInfo frm = new FOPersonInfo(_Application.ApplicantPersonID);
+            frm.ShowDialog();
         }
     }
 }

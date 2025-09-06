@@ -16,6 +16,8 @@ namespace DVLDShared
         public enum ActiveStatus : byte
         { Yes = 0,
             No = 1 };
+        public enum enApplicationStatus { New = 1, Cancelled = 2, Completed = 3 };
+
 
 
     }

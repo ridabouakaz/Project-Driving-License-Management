@@ -41,8 +41,6 @@ namespace DVLD_PresentationLayer
         {
             this.Close();
         }
-
-
         private void CBFilterBy_SelectedIndexChanged(object sender, EventArgs e)
         {
 

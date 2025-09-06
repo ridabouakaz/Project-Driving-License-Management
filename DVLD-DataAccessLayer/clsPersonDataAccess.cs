@@ -192,6 +192,7 @@ namespace DVLD_DataAccessLayer
                     {
                         MessageBox.Show("Error adding new person: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
+                
                 }
             }
 

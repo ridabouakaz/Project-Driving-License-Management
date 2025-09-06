@@ -110,7 +110,7 @@ namespace DVLD_PresentationLayer
             this.GBUserControlDetailesApplication.Controls.Add(this.LblFees);
             this.GBUserControlDetailesApplication.Controls.Add(this.LblStatus);
             this.GBUserControlDetailesApplication.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.GBUserControlDetailesApplication.Location = new System.Drawing.Point(14, 11);
+            this.GBUserControlDetailesApplication.Location = new System.Drawing.Point(18, 3);
             this.GBUserControlDetailesApplication.Name = "GBUserControlDetailesApplication";
             this.GBUserControlDetailesApplication.Size = new System.Drawing.Size(1130, 361);
             this.GBUserControlDetailesApplication.TabIndex = 48;
@@ -405,7 +405,7 @@ namespace DVLD_PresentationLayer
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.GBUserControlDetailesApplication);
             this.Name = "CtrDetailsApplication";
-            this.Size = new System.Drawing.Size(1165, 383);
+            this.Size = new System.Drawing.Size(1169, 383);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.GBUserControlDetailesApplication.ResumeLayout(false);
             this.GBUserControlDetailesApplication.PerformLayout();

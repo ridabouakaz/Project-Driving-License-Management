@@ -91,6 +91,53 @@ namespace DVLD_DataAccessLayer
             }
             return (rowsAffected > 0);
         }
+        public static bool GetApplicationInfoByID(
+   int ID,
+   ref int ApplicantPersonID,
+   ref DateTime ApplicationDate,
+   ref int ApplicationTypeID,
+   ref enApplicationStatus ApplicationStatus,
+   ref DateTime LastStatusDate,
+   ref decimal PaidFees,
+   ref int CreatedByUserID
+)
+        {
+            bool isFound = false;
+
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                string query = "SELECT * FROM Applications WHERE ApplicationID = @ApplicationID";
+
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@ApplicationID", ID);
+
+                try
+                {
+                    connection.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        isFound = true;
+                        ApplicantPersonID = Convert.ToInt32(reader["ApplicantPersonID"]);
+                        ApplicationDate = Convert.ToDateTime(reader["ApplicationDate"]);
+                        ApplicationTypeID = Convert.ToInt32(reader["ApplicationTypeID"]);
+                        ApplicationStatus = (enApplicationStatus)Convert.ToInt32(reader["ApplicationStatus"]);
+                        LastStatusDate = Convert.ToDateTime(reader["LastStatusDate"]);
+                        PaidFees = Convert.ToDecimal(reader["PaidFees"]);
+                        CreatedByUserID = Convert.ToInt32(reader["CreatedByUserID"]);
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    isFound = false;
+                }
+            }
+
+            return isFound;
+        }
+
         public static bool CancelledApplication(int ApplicationID)
         {
             int rowsAffected = 0;

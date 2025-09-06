@@ -5,12 +5,12 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static DVLDShared.DVLDShared;
 
 namespace DVLD_BusinessLayer
 {
     public class clsApplications
     {
-        public enum enApplicationStatus { New = 1, Cancelled = 2, Completed = 3 };
         public enum enMode { AddNew = 0, Update = 1 };
         public enMode Mode = enMode.AddNew;
         public int ID { set; get; }
@@ -24,7 +24,7 @@ namespace DVLD_BusinessLayer
         }
         public DateTime ApplicationDate { set; get; }
         public int ApplicationTypeID { set; get; }
-        public clsApplications.enApplicationStatus ApplicationStatus { set; get; }
+        public enApplicationStatus ApplicationStatus { set; get; }
         public DateTime LastStatusDate { set; get; }
         public decimal PaidFees { set; get; }
         public int CreatedByUserID { set; get; }
@@ -84,6 +84,43 @@ namespace DVLD_BusinessLayer
                     this.LastStatusDate
                 );
 
+        }
+        public static clsApplications Find(int ID)
+        {
+            int ApplicantPersonID = 1;
+            DateTime ApplicationDate = DateTime.Now;
+            int ApplicationTypeID = 1;
+            enApplicationStatus ApplicationStatus = 0;
+            DateTime LastStatusDate = DateTime.Now;
+            decimal PaidFees = 1;
+            int CreatedByUserID = 1;
+
+            bool isFound = clsApplicationDataAccess.GetApplicationInfoByID(
+                ID,
+                ref ApplicantPersonID,
+                ref ApplicationDate,
+                ref ApplicationTypeID,
+                ref ApplicationStatus,
+                  ref LastStatusDate,
+                ref PaidFees,
+                ref CreatedByUserID
+            );
+
+            if (isFound)
+            {
+                return new clsApplications(
+                    ID,
+                    ApplicantPersonID,
+                 ApplicationDate,
+                 ApplicationTypeID,
+                 ApplicationStatus,
+                   LastStatusDate,
+                 PaidFees,
+                 CreatedByUserID
+                );
+            }
+            else
+                return null;
         }
         public bool Save()
         {
