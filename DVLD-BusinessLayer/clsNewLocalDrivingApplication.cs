@@ -13,13 +13,13 @@ namespace DVLD_BusinessLayer
     public class clsNewLocalDrivingApplication:clsApplications
     {
  
-        public int ID { set; get; }
+        public int LocalDrivingLicenseApplicationID { set; get; }
         public int ApplicationID { set; get; }
         public int LicenseClassID { set; get; }
         public clsApplications applications { set; get; }
         public clsNewLocalDrivingApplication()
         {
-            ID = -1;
+            LocalDrivingLicenseApplicationID = -1;
             ApplicationID = 0;
             LicenseClassID = 0;
         }
@@ -30,7 +30,7 @@ namespace DVLD_BusinessLayer
      Decimal PaidFees, int CreatedByUserID, int LicenseClassID)
 
         {
-            this.ID = LocalDrivingLicenseApplicationID; ;
+            this.LocalDrivingLicenseApplicationID = LocalDrivingLicenseApplicationID; ;
             this.ApplicationID = ApplicationID;
             this.ApplicantPersonID = ApplicantPersonID;
             this.ApplicationDate = ApplicationDate;
@@ -45,11 +45,11 @@ namespace DVLD_BusinessLayer
         private bool _AddNewLocalDrivingApplication()
         {
             //call DataAccess Layer 
-            this.ID = clsLocalDrivingApplicationDataAccess.AddNewLocalDrivingApplication(
+            this.LocalDrivingLicenseApplicationID = clsLocalDrivingApplicationDataAccess.AddNewLocalDrivingApplication(
         this.ApplicationID,
          this.LicenseClassID
              );
-            return (this.ID != -1);
+            return (this.LocalDrivingLicenseApplicationID != -1);
         }
         public static bool DoesApplicationExistForPerson(int ApplicantPersonID, int LicenseClassID)
         {
@@ -71,7 +71,7 @@ namespace DVLD_BusinessLayer
 
                 //we return new object of that person with the right data
                 return new clsNewLocalDrivingApplication(
-                    LocalDrivingLicenseApplicationID, Application.ID,
+                    LocalDrivingLicenseApplicationID, Application.ApplicationID,
                     Application.ApplicantPersonID,
                                      Application.ApplicationDate, Application.ApplicationTypeID,
                                     (enApplicationStatus)Application.ApplicationStatus, Application.LastStatusDate,
@@ -82,7 +82,6 @@ namespace DVLD_BusinessLayer
 
 
         }
-
         public static clsNewLocalDrivingApplication FindByApplicationID(int ApplicationID)
         {
             // 
@@ -99,7 +98,7 @@ namespace DVLD_BusinessLayer
 
                 //we return new object of that person with the right data
                 return new clsNewLocalDrivingApplication(
-                    LocalDrivingLicenseApplicationID, Application.ID,
+                    LocalDrivingLicenseApplicationID, Application.ApplicationID,
                     Application.ApplicantPersonID,
                                      Application.ApplicationDate, Application.ApplicationTypeID,
                                     (enApplicationStatus)Application.ApplicationStatus, Application.LastStatusDate,
@@ -109,6 +108,10 @@ namespace DVLD_BusinessLayer
                 return null;
 
 
+        }
+        public byte GetPassedTestCount()
+        {
+            return clsTestDataAccess.GetPassedTestCount(this.LocalDrivingLicenseApplicationID);
         }
         public bool Save()
         {

@@ -13,7 +13,7 @@ namespace DVLD_BusinessLayer
     {
         public enum enMode { AddNew = 0, Update = 1 };
         public enMode Mode = enMode.AddNew;
-        public int ID { set; get; }
+        public int ApplicationID { set; get; }
         public int ApplicantPersonID { set; get; }
         public string ApplicantFullName
         {
@@ -31,7 +31,7 @@ namespace DVLD_BusinessLayer
         public clsUser CreatedByUserInfo;
         public clsApplications()
         {
-            ID = -1;
+            ApplicationID = -1;
             ApplicantPersonID = 0;
             ApplicationDate = DateTime.Today;
             ApplicationTypeID = 0;
@@ -51,7 +51,7 @@ namespace DVLD_BusinessLayer
        decimal paidFees,
        int createdByUserID)
         {
-            this.ID = id;
+            this.ApplicationID = id;
             this.ApplicantPersonID = applicantPersonID;
             this.ApplicationDate = applicationDate;
             this.ApplicationTypeID = applicationTypeID;
@@ -65,7 +65,7 @@ namespace DVLD_BusinessLayer
         private bool _AddNewApplication()
         {
             //call DataAccess Layer 
-            this.ID = clsApplicationDataAccess.AddNewApplication(
+            this.ApplicationID = clsApplicationDataAccess.AddNewApplication(
         this.ApplicantPersonID,
          this.ApplicationDate,
         this.ApplicationTypeID,
@@ -74,13 +74,13 @@ namespace DVLD_BusinessLayer
         this.PaidFees,
         this.CreatedByUserID
              );
-            return (this.ID != -1);
+            return (this.ApplicationID != -1);
         }
         private bool _UpdateApplication()
         {
             //call DataAccess Layer 
             return clsApplicationDataAccess.UpdateApplication(
-                    this.ID,
+                    this.ApplicationID,
                     (int)this.ApplicationStatus,
                     this.LastStatusDate
                 );
