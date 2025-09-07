@@ -6,10 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using static DVLD_BusinessLayer.clsApplications;
+using static DVLDShared.DVLDShared;
 
 namespace DVLD_BusinessLayer
 {
-    public class clsNewLocalDrivingApplication
+    public class clsNewLocalDrivingApplication:clsApplications
     {
  
         public int ID { set; get; }
@@ -22,14 +23,24 @@ namespace DVLD_BusinessLayer
             ApplicationID = 0;
             LicenseClassID = 0;
         }
-        private clsNewLocalDrivingApplication(
-       int ID,
-       int ApplicationID,
-              int LicenseClassID)
+
+        private clsNewLocalDrivingApplication(int LocalDrivingLicenseApplicationID, int ApplicationID, int ApplicantPersonID,
+    DateTime ApplicationDate, int ApplicationTypeID,
+     enApplicationStatus ApplicationStatus, DateTime LastStatusDate,
+     Decimal PaidFees, int CreatedByUserID, int LicenseClassID)
+
         {
-            this.ID = ID;
+            this.ID = LocalDrivingLicenseApplicationID; ;
             this.ApplicationID = ApplicationID;
+            this.ApplicantPersonID = ApplicantPersonID;
+            this.ApplicationDate = ApplicationDate;
+            this.ApplicationTypeID = (int)ApplicationTypeID;
+            this.ApplicationStatus = ApplicationStatus;
+            this.LastStatusDate = LastStatusDate;
+            this.PaidFees = PaidFees;
+            this.CreatedByUserID = CreatedByUserID;
             this.LicenseClassID = LicenseClassID;
+            Mode = enMode.Update;
         }
         private bool _AddNewLocalDrivingApplication()
         {
@@ -43,6 +54,61 @@ namespace DVLD_BusinessLayer
         public static bool DoesApplicationExistForPerson(int ApplicantPersonID, int LicenseClassID)
         {
             return clsLocalDrivingApplicationDataAccess.DoesApplicationExistForPerson(ApplicantPersonID, LicenseClassID);
+        }
+        public static clsNewLocalDrivingApplication FindByLocalDrivingAppLicenseID(int LocalDrivingLicenseApplicationID)
+        {
+            // 
+            int ApplicationID = -1, LicenseClassID = -1;
+
+            bool IsFound = clsLocalDrivingApplicationDataAccess.GetLocalDrivingLicenseApplicationInfoByID
+                (LocalDrivingLicenseApplicationID, ref ApplicationID, ref LicenseClassID);
+
+
+            if (IsFound)
+            {
+                //now we find the base application
+                clsApplication Application = clsApplication.FindBaseApplication(ApplicationID);
+
+                //we return new object of that person with the right data
+                return new clsLocalDrivingLicenseApplication(
+                    LocalDrivingLicenseApplicationID, Application.ApplicationID,
+                    Application.ApplicantPersonID,
+                                     Application.ApplicationDate, Application.ApplicationTypeID,
+                                    (enApplicationStatus)Application.ApplicationStatus, Application.LastStatusDate,
+                                     Application.PaidFees, Application.CreatedByUserID, LicenseClassID);
+            }
+            else
+                return null;
+
+
+        }
+
+        public static clsLocalDrivingLicenseApplication FindByApplicationID(int ApplicationID)
+        {
+            // 
+            int LocalDrivingLicenseApplicationID = -1, LicenseClassID = -1;
+
+            bool IsFound = clsLocalDrivingLicenseApplicationData.GetLocalDrivingLicenseApplicationInfoByApplicationID
+                (ApplicationID, ref LocalDrivingLicenseApplicationID, ref LicenseClassID);
+
+
+            if (IsFound)
+            {
+                //now we find the base application
+                clsApplications Application = clsApplications.FindBaseApplication(ApplicationID);
+
+                //we return new object of that person with the right data
+                return new clsLocalDrivingLicenseApplication(
+                    LocalDrivingLicenseApplicationID, Application.ApplicationID,
+                    Application.ApplicantPersonID,
+                                     Application.ApplicationDate, Application.ApplicationTypeID,
+                                    (enApplicationStatus)Application.ApplicationStatus, Application.LastStatusDate,
+                                     Application.PaidFees, Application.CreatedByUserID, LicenseClassID);
+            }
+            else
+                return null;
+
+
         }
         public bool Save()
         {
