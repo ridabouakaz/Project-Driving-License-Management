@@ -16,6 +16,19 @@ namespace DVLD_PresentationLayer
     {
 
         private clsPerson _Person;
+        public string DLAppID
+        {
+            set => LblValueDLAppID.Text = value;
+        }
+        public string PassedTests
+        {
+            set => LblValuePassedTests.Text = value;
+        }
+        public string AppliedForLicense
+        {
+            set => LblValueAppliedForLicense.Text = value;
+        }
+
         private void ApplyFind()
         {
 
