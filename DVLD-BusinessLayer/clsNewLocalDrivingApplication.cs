@@ -67,11 +67,11 @@ namespace DVLD_BusinessLayer
             if (IsFound)
             {
                 //now we find the base application
-                clsApplication Application = clsApplication.FindBaseApplication(ApplicationID);
+                clsApplications Application = clsApplications.Find(ApplicationID);
 
                 //we return new object of that person with the right data
-                return new clsLocalDrivingLicenseApplication(
-                    LocalDrivingLicenseApplicationID, Application.ApplicationID,
+                return new clsNewLocalDrivingApplication(
+                    LocalDrivingLicenseApplicationID, Application.ID,
                     Application.ApplicantPersonID,
                                      Application.ApplicationDate, Application.ApplicationTypeID,
                                     (enApplicationStatus)Application.ApplicationStatus, Application.LastStatusDate,
@@ -83,23 +83,23 @@ namespace DVLD_BusinessLayer
 
         }
 
-        public static clsLocalDrivingLicenseApplication FindByApplicationID(int ApplicationID)
+        public static clsNewLocalDrivingApplication FindByApplicationID(int ApplicationID)
         {
             // 
             int LocalDrivingLicenseApplicationID = -1, LicenseClassID = -1;
 
-            bool IsFound = clsLocalDrivingLicenseApplicationData.GetLocalDrivingLicenseApplicationInfoByApplicationID
+            bool IsFound = clsLocalDrivingApplicationDataAccess.GetLocalDrivingLicenseApplicationInfoByApplicationID
                 (ApplicationID, ref LocalDrivingLicenseApplicationID, ref LicenseClassID);
 
 
             if (IsFound)
             {
                 //now we find the base application
-                clsApplications Application = clsApplications.FindBaseApplication(ApplicationID);
+                clsApplications Application = clsApplications.Find(ApplicationID);
 
                 //we return new object of that person with the right data
-                return new clsLocalDrivingLicenseApplication(
-                    LocalDrivingLicenseApplicationID, Application.ApplicationID,
+                return new clsNewLocalDrivingApplication(
+                    LocalDrivingLicenseApplicationID, Application.ID,
                     Application.ApplicantPersonID,
                                      Application.ApplicationDate, Application.ApplicationTypeID,
                                     (enApplicationStatus)Application.ApplicationStatus, Application.LastStatusDate,

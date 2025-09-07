@@ -61,6 +61,7 @@ namespace DVLD_BusinessLayer
             this.CreatedByUserID = createdByUserID;
             this.CreatedByUserInfo = clsUser.Find(CreatedByUserID);
         }
+
         private bool _AddNewApplication()
         {
             //call DataAccess Layer 
@@ -101,7 +102,7 @@ namespace DVLD_BusinessLayer
                 ref ApplicationDate,
                 ref ApplicationTypeID,
                 ref ApplicationStatus,
-                  ref LastStatusDate,
+                ref LastStatusDate,
                 ref PaidFees,
                 ref CreatedByUserID
             );
