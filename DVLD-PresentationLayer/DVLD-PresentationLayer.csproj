@@ -111,6 +111,12 @@
     <Compile Include="People\Control\CtrDetailsPersonWithFilter.Designer.cs">
       <DependentUpon>CtrDetailsPersonWithFilter.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tests\FOListTestAppointments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tests\FOListTestAppointments.Designer.cs">
+      <DependentUpon>FOListTestAppointments.cs</DependentUpon>
+    </Compile>
     <Compile Include="Users\Control\CtrDetailsUser.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -304,8 +310,6 @@
       <Name>DVLDShared</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Tests\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
