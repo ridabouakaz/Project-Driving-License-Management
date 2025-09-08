@@ -27,10 +27,10 @@ namespace DVLD_BusinessLayer
         private clsNewLocalDrivingApplication(int LocalDrivingLicenseApplicationID, int ApplicationID, int ApplicantPersonID,
     DateTime ApplicationDate, int ApplicationTypeID,
      enApplicationStatus ApplicationStatus, DateTime LastStatusDate,
-     Decimal PaidFees, int CreatedByUserID, int LicenseClassID)
+     Decimal PaidFees, clsUser CreatedByUserInfo, int CreatedByUserID, int LicenseClassID)
 
         {
-            this.LocalDrivingLicenseApplicationID = LocalDrivingLicenseApplicationID; ;
+            this.LocalDrivingLicenseApplicationID = LocalDrivingLicenseApplicationID;
             this.ApplicationID = ApplicationID;
             this.ApplicantPersonID = ApplicantPersonID;
             this.ApplicationDate = ApplicationDate;
@@ -39,6 +39,7 @@ namespace DVLD_BusinessLayer
             this.LastStatusDate = LastStatusDate;
             this.PaidFees = PaidFees;
             this.CreatedByUserID = CreatedByUserID;
+            this.CreatedByUserInfo = CreatedByUserInfo;
             this.LicenseClassID = LicenseClassID;
             Mode = enMode.Update;
         }
@@ -75,7 +76,7 @@ namespace DVLD_BusinessLayer
                     Application.ApplicantPersonID,
                                      Application.ApplicationDate, Application.ApplicationTypeID,
                                     (enApplicationStatus)Application.ApplicationStatus, Application.LastStatusDate,
-                                     Application.PaidFees, Application.CreatedByUserID, LicenseClassID);
+                                     Application.PaidFees, Application.CreatedByUserInfo, Application.CreatedByUserID, LicenseClassID);
             }
             else
                 return null;
@@ -102,7 +103,7 @@ namespace DVLD_BusinessLayer
                     Application.ApplicantPersonID,
                                      Application.ApplicationDate, Application.ApplicationTypeID,
                                     (enApplicationStatus)Application.ApplicationStatus, Application.LastStatusDate,
-                                     Application.PaidFees, Application.CreatedByUserID, LicenseClassID);
+                                     Application.PaidFees, Application.CreatedByUserInfo, Application.CreatedByUserID, LicenseClassID);
             }
             else
                 return null;

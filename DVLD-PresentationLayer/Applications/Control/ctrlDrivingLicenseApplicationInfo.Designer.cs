@@ -1,6 +1,6 @@
 ﻿namespace DVLD_PresentationLayer
 {
-    partial class CtrDetailsApplicationWithLocalDrivingInfo
+    partial class ctrlDrivingLicenseApplicationInfo
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CtrDetailsApplicationWithLocalDrivingInfo));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ctrlDrivingLicenseApplicationInfo));
             this.ctrDetailsApplication1 = new DVLD_PresentationLayer.CtrDetailsApplication();
             this.GBUserControlDetailesApplicationLocalDriving = new System.Windows.Forms.GroupBox();
+            this.LLShowLicenseInfo = new System.Windows.Forms.LinkLabel();
             this.PBShowLicenseInfo = new System.Windows.Forms.PictureBox();
             this.PBPassedTests = new System.Windows.Forms.PictureBox();
             this.PBAppliedForLicense = new System.Windows.Forms.PictureBox();
@@ -41,7 +42,6 @@
             this.LblDLAppID = new System.Windows.Forms.Label();
             this.LblAppliedForLicense = new System.Windows.Forms.Label();
             this.LblPassedTests = new System.Windows.Forms.Label();
-            this.LLShowLicenseInfo = new System.Windows.Forms.LinkLabel();
             this.GBUserControlDetailesApplicationLocalDriving.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBShowLicenseInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBPassedTests)).BeginInit();
@@ -80,6 +80,17 @@
             this.GBUserControlDetailesApplicationLocalDriving.TabStop = false;
             this.GBUserControlDetailesApplicationLocalDriving.Text = "Driving License Application Info";
             // 
+            // LLShowLicenseInfo
+            // 
+            this.LLShowLicenseInfo.AutoSize = true;
+            this.LLShowLicenseInfo.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.LLShowLicenseInfo.Location = new System.Drawing.Point(244, 111);
+            this.LLShowLicenseInfo.Name = "LLShowLicenseInfo";
+            this.LLShowLicenseInfo.Size = new System.Drawing.Size(163, 25);
+            this.LLShowLicenseInfo.TabIndex = 34;
+            this.LLShowLicenseInfo.TabStop = true;
+            this.LLShowLicenseInfo.Text = "Show License Info";
+            // 
             // PBShowLicenseInfo
             // 
             this.PBShowLicenseInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -98,7 +109,7 @@
             this.PBPassedTests.ErrorImage = null;
             this.PBPassedTests.Image = ((System.Drawing.Image)(resources.GetObject("PBPassedTests.Image")));
             this.PBPassedTests.InitialImage = null;
-            this.PBPassedTests.Location = new System.Drawing.Point(685, 101);
+            this.PBPassedTests.Location = new System.Drawing.Point(685, 104);
             this.PBPassedTests.Name = "PBPassedTests";
             this.PBPassedTests.Size = new System.Drawing.Size(40, 32);
             this.PBPassedTests.TabIndex = 52;
@@ -200,17 +211,6 @@
             this.LblPassedTests.TabIndex = 37;
             this.LblPassedTests.Text = "Passed Tests:";
             // 
-            // LLShowLicenseInfo
-            // 
-            this.LLShowLicenseInfo.AutoSize = true;
-            this.LLShowLicenseInfo.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.LLShowLicenseInfo.Location = new System.Drawing.Point(244, 111);
-            this.LLShowLicenseInfo.Name = "LLShowLicenseInfo";
-            this.LLShowLicenseInfo.Size = new System.Drawing.Size(163, 25);
-            this.LLShowLicenseInfo.TabIndex = 34;
-            this.LLShowLicenseInfo.TabStop = true;
-            this.LLShowLicenseInfo.Text = "Show License Info";
-            // 
             // CtrDetailsApplicationWithLocalDrivingInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -220,7 +220,6 @@
             this.Controls.Add(this.ctrDetailsApplication1);
             this.Name = "CtrDetailsApplicationWithLocalDrivingInfo";
             this.Size = new System.Drawing.Size(1205, 556);
-            this.Load += new System.EventHandler(this.CtrDetailsPersonWithFilter_Load);
             this.GBUserControlDetailesApplicationLocalDriving.ResumeLayout(false);
             this.GBUserControlDetailesApplicationLocalDriving.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBShowLicenseInfo)).EndInit();

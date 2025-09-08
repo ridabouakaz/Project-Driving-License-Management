@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace DVLD_PresentationLayer
 {
@@ -24,16 +25,8 @@ namespace DVLD_PresentationLayer
         }
         private void _LoadData()
         {
-            _Application = clsApplications.Find(6);
-
-            if (_Application == null)
-            {
-                MessageBox.Show("This form will be closed because No Contact with ID = " + _PersonID);
-                this.Close();
-
-                return;
-            }
-            ctrDetailsApplication1.ApplicationData = _Application;
+            
+            ctrlDrivingLicenseApplicationInfo1.LoadApplicationBYApplicationID(4);
         }
     }
 

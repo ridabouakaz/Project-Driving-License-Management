@@ -113,7 +113,7 @@ namespace DVLD_PresentationLayer
                 MessageBox.Show("❌ Please correct the errors before saving.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            _NewLocalDrivingApplication.ApplicationID = _Application.ID;
+            _NewLocalDrivingApplication.ApplicationID = _Application.ApplicationID;
             _NewLocalDrivingApplication.LicenseClassID = CBLicenseClassBy.SelectedIndex + 1;
             if (clsNewLocalDrivingApplication.DoesApplicationExistForPerson(
             _Application.ApplicantPersonID,
@@ -135,7 +135,7 @@ namespace DVLD_PresentationLayer
             {
                 MessageBox.Show("❌ Error: Data was not saved successfully.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            LocalDrivingApplicationID= _NewLocalDrivingApplication.ID.ToString();
+            LocalDrivingApplicationID= _NewLocalDrivingApplication.ApplicationID.ToString();
         }
         private void FONewLocalDrivingApplication_Load(object sender, EventArgs e)
         {

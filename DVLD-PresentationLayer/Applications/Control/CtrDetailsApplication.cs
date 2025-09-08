@@ -17,13 +17,13 @@ namespace DVLD_PresentationLayer
 {
     public partial class CtrDetailsApplication : UserControl
     {
-        private clsApplications _Application;
+        private clsNewLocalDrivingApplication _Application;
 
         public CtrDetailsApplication()
         {
             InitializeComponent();
         }
-        public clsApplications ApplicationData
+        public clsNewLocalDrivingApplication ApplicationData
         {
             get => _Application;
             set
@@ -46,7 +46,7 @@ namespace DVLD_PresentationLayer
                 CreatedBy = "[????????]";
                 return;
             }
-            ApplicationID = _Application.ID.ToString();
+            ApplicationID = _Application.ApplicationID.ToString();
             TypeStatus = _Application.ApplicationStatus;
             Fees = _Application.PaidFees.ToString();
             Type = clsManageApplicationTypes.GetTitleById(_Application.ApplicationTypeID);
@@ -88,7 +88,7 @@ namespace DVLD_PresentationLayer
         {
             set => LblvalueApplicant.Text = value;
         }
-  
+
         public string Date
         {
             set => LblvalueDate.Text = value;

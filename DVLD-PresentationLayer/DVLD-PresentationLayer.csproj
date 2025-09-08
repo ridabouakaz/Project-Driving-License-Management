@@ -75,11 +75,11 @@
     <Compile Include="Applications\Control\CtrDetailsApplication.Designer.cs">
       <DependentUpon>CtrDetailsApplication.cs</DependentUpon>
     </Compile>
-    <Compile Include="Applications\Control\CtrDetailsApplicationWithLocalDrivingInfo.cs">
+    <Compile Include="Applications\Control\ctrlDrivingLicenseApplicationInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Applications\Control\CtrDetailsApplicationWithLocalDrivingInfo.Designer.cs">
-      <DependentUpon>CtrDetailsApplicationWithLocalDrivingInfo.cs</DependentUpon>
+    <Compile Include="Applications\Control\ctrlDrivingLicenseApplicationInfo.Designer.cs">
+      <DependentUpon>ctrlDrivingLicenseApplicationInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Applications\FOAddNewLocalDrivingApplication.cs">
       <SubType>Form</SubType>
@@ -207,8 +207,8 @@
     <EmbeddedResource Include="Applications\Control\CtrDetailsApplication.resx">
       <DependentUpon>CtrDetailsApplication.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Applications\Control\CtrDetailsApplicationWithLocalDrivingInfo.resx">
-      <DependentUpon>CtrDetailsApplicationWithLocalDrivingInfo.cs</DependentUpon>
+    <EmbeddedResource Include="Applications\Control\ctrlDrivingLicenseApplicationInfo.resx">
+      <DependentUpon>ctrlDrivingLicenseApplicationInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Applications\FOAddNewLocalDrivingApplication.resx">
       <DependentUpon>FOAddNewLocalDrivingApplication.cs</DependentUpon>

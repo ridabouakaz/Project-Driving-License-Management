@@ -28,24 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ctrDetailsApplication1 = new DVLD_PresentationLayer.CtrDetailsApplication();
+            this.ctrlDrivingLicenseApplicationInfo1 = new DVLD_PresentationLayer.ctrlDrivingLicenseApplicationInfo();
             this.SuspendLayout();
             // 
-            // ctrDetailsApplication1
+            // ctrlDrivingLicenseApplicationInfo1
             // 
-            this.ctrDetailsApplication1.ApplicationData = null;
-            this.ctrDetailsApplication1.BackColor = System.Drawing.Color.White;
-            this.ctrDetailsApplication1.Location = new System.Drawing.Point(19, 63);
-            this.ctrDetailsApplication1.Name = "ctrDetailsApplication1";
-            this.ctrDetailsApplication1.Size = new System.Drawing.Size(1165, 383);
-            this.ctrDetailsApplication1.TabIndex = 0;
+            this.ctrlDrivingLicenseApplicationInfo1.BackColor = System.Drawing.Color.White;
+            this.ctrlDrivingLicenseApplicationInfo1.Location = new System.Drawing.Point(12, 12);
+            this.ctrlDrivingLicenseApplicationInfo1.Name = "ctrlDrivingLicenseApplicationInfo1";
+            this.ctrlDrivingLicenseApplicationInfo1.Size = new System.Drawing.Size(1172, 537);
+            this.ctrlDrivingLicenseApplicationInfo1.TabIndex = 0;
             // 
             // ForTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1196, 561);
-            this.Controls.Add(this.ctrDetailsApplication1);
+            this.Controls.Add(this.ctrlDrivingLicenseApplicationInfo1);
             this.Name = "ForTest";
             this.Text = "ForTest";
             this.ResumeLayout(false);
@@ -54,6 +53,6 @@
 
         #endregion
 
-        private CtrDetailsApplication ctrDetailsApplication1;
+        private ctrlDrivingLicenseApplicationInfo ctrlDrivingLicenseApplicationInfo1;
     }
 }
