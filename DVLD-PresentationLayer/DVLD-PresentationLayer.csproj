@@ -81,16 +81,16 @@
     <Compile Include="Applications\Control\ctrlDrivingLicenseApplicationInfo.Designer.cs">
       <DependentUpon>ctrlDrivingLicenseApplicationInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Applications\FOAddNewLocalDrivingApplication.cs">
+    <Compile Include="Applications\Local Driving License\FOAddNewLocalDrivingApplication.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Applications\FOAddNewLocalDrivingApplication.Designer.cs">
+    <Compile Include="Applications\Local Driving License\FOAddNewLocalDrivingApplication.Designer.cs">
       <DependentUpon>FOAddNewLocalDrivingApplication.cs</DependentUpon>
     </Compile>
-    <Compile Include="Applications\FOManageLocalDrivingApplication.cs">
+    <Compile Include="Applications\Local Driving License\FOManageLocalDrivingApplication.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Applications\FOManageLocalDrivingApplication.Designer.cs">
+    <Compile Include="Applications\Local Driving License\FOManageLocalDrivingApplication.Designer.cs">
       <DependentUpon>FOManageLocalDrivingApplication.cs</DependentUpon>
     </Compile>
     <Compile Include="People\Control\CtrDetailsPerson%28Edit-Add%29.cs">
@@ -210,10 +210,10 @@
     <EmbeddedResource Include="Applications\Control\ctrlDrivingLicenseApplicationInfo.resx">
       <DependentUpon>ctrlDrivingLicenseApplicationInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Applications\FOAddNewLocalDrivingApplication.resx">
+    <EmbeddedResource Include="Applications\Local Driving License\FOAddNewLocalDrivingApplication.resx">
       <DependentUpon>FOAddNewLocalDrivingApplication.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Applications\FOManageLocalDrivingApplication.resx">
+    <EmbeddedResource Include="Applications\Local Driving License\FOManageLocalDrivingApplication.resx">
       <DependentUpon>FOManageLocalDrivingApplication.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="People\Control\CtrDetailsPerson%28Edit-Add%29.resx">
@@ -304,6 +304,8 @@
       <Name>DVLDShared</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Tests\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
