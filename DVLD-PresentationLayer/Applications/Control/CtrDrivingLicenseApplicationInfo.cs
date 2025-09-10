@@ -12,14 +12,14 @@ using DVLD_BusinessLayer;
 
 namespace DVLD_PresentationLayer
 {
-    public partial class ctrlDrivingLicenseApplicationInfo : UserControl
+    public partial class CtrDrivingLicenseApplicationInfo : UserControl
     {
 
 
         private clsNewLocalDrivingApplication _LocalDrivingApplication;
         private int _ApplicationID;
         private int _LocalDrivingLicenseApplicationID;
-        public ctrlDrivingLicenseApplicationInfo()
+        public CtrDrivingLicenseApplicationInfo()
         {
             InitializeComponent();
         }

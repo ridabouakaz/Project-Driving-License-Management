@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ctrlDrivingLicenseApplicationInfo1 = new DVLD_PresentationLayer.ctrlDrivingLicenseApplicationInfo();
+            this.ctrlDrivingLicenseApplicationInfo1 = new DVLD_PresentationLayer.CtrDrivingLicenseApplicationInfo();
             this.SuspendLayout();
             // 
             // ctrlDrivingLicenseApplicationInfo1
@@ -53,6 +53,6 @@
 
         #endregion
 
-        private ctrlDrivingLicenseApplicationInfo ctrlDrivingLicenseApplicationInfo1;
+        private CtrDrivingLicenseApplicationInfo ctrlDrivingLicenseApplicationInfo1;
     }
 }

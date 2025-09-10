@@ -32,70 +32,26 @@ namespace DVLD_PresentationLayer.Tests
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FOManageUsers));
-            this.dGViewShowInformation = new System.Windows.Forms.DataGridView();
             this.SMItemCRUDUsers = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.SMItemViewDetails = new System.Windows.Forms.ToolStripMenuItem();
             this.SMItemSeparatorCRUDUsers1 = new System.Windows.Forms.ToolStripSeparator();
             this.SMItemAddUser = new System.Windows.Forms.ToolStripMenuItem();
             this.SMItemEditUser = new System.Windows.Forms.ToolStripMenuItem();
             this.SMItemDeleteUser = new System.Windows.Forms.ToolStripMenuItem();
+            this.SMItemChangePasswordUser = new System.Windows.Forms.ToolStripMenuItem();
+            this.SMItemSeparatorCRUDUsers2 = new System.Windows.Forms.ToolStripSeparator();
             this.SMItemSendEmail = new System.Windows.Forms.ToolStripMenuItem();
             this.SMItemCallUser = new System.Windows.Forms.ToolStripMenuItem();
             this.LblManageUsers = new System.Windows.Forms.Label();
-            this.BtnAddUser = new System.Windows.Forms.Button();
             this.PBManageUsers = new System.Windows.Forms.PictureBox();
-            this.LblFilterBy = new System.Windows.Forms.Label();
             this.LblRecoreds = new System.Windows.Forms.Label();
             this.BtnAddClose = new System.Windows.Forms.Button();
-            this.CBFilterBy = new System.Windows.Forms.ComboBox();
             this.LblTotalRecoreds = new System.Windows.Forms.Label();
-            this.MTBsearch = new System.Windows.Forms.MaskedTextBox();
-            this.CBActiveStatusBy = new System.Windows.Forms.ComboBox();
-            this.SMItemChangePasswordUser = new System.Windows.Forms.ToolStripMenuItem();
-            this.SMItemSeparatorCRUDUsers2 = new System.Windows.Forms.ToolStripSeparator();
-            ((System.ComponentModel.ISupportInitialize)(this.dGViewShowInformation)).BeginInit();
+            this.LblAppointments = new System.Windows.Forms.Label();
+            this.ctrlDrivingLicenseApplicationInfo1 = new DVLD_PresentationLayer.ctrlDrivingLicenseApplicationInfo();
             this.SMItemCRUDUsers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBManageUsers)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dGViewShowInformation
-            // 
-            this.dGViewShowInformation.AllowUserToAddRows = false;
-            this.dGViewShowInformation.AllowUserToDeleteRows = false;
-            this.dGViewShowInformation.AllowUserToOrderColumns = true;
-            this.dGViewShowInformation.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dGViewShowInformation.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dGViewShowInformation.BackgroundColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 12F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dGViewShowInformation.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dGViewShowInformation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGViewShowInformation.ContextMenuStrip = this.SMItemCRUDUsers;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dGViewShowInformation.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dGViewShowInformation.Location = new System.Drawing.Point(47, 279);
-            this.dGViewShowInformation.Name = "dGViewShowInformation";
-            this.dGViewShowInformation.ReadOnly = true;
-            this.dGViewShowInformation.RowHeadersWidth = 51;
-            this.dGViewShowInformation.RowTemplate.Height = 24;
-            this.dGViewShowInformation.Size = new System.Drawing.Size(1439, 481);
-            this.dGViewShowInformation.TabIndex = 3;
             // 
             // SMItemCRUDUsers
             // 
@@ -111,65 +67,71 @@ namespace DVLD_PresentationLayer.Tests
             this.SMItemSendEmail,
             this.SMItemCallUser});
             this.SMItemCRUDUsers.Name = "SMItemCRUDUsers";
-            this.SMItemCRUDUsers.Size = new System.Drawing.Size(227, 310);
+            this.SMItemCRUDUsers.Size = new System.Drawing.Size(194, 198);
             // 
             // SMItemViewDetails
             // 
             this.SMItemViewDetails.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.SMItemViewDetails.Image = ((System.Drawing.Image)(resources.GetObject("SMItemViewDetails.Image")));
             this.SMItemViewDetails.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SMItemViewDetails.Name = "SMItemViewDetails";
-            this.SMItemViewDetails.Size = new System.Drawing.Size(226, 38);
+            this.SMItemViewDetails.Size = new System.Drawing.Size(193, 26);
             this.SMItemViewDetails.Text = "View Details";
             // 
             // SMItemSeparatorCRUDUsers1
             // 
             this.SMItemSeparatorCRUDUsers1.Name = "SMItemSeparatorCRUDUsers1";
-            this.SMItemSeparatorCRUDUsers1.Size = new System.Drawing.Size(223, 6);
+            this.SMItemSeparatorCRUDUsers1.Size = new System.Drawing.Size(190, 6);
             // 
             // SMItemAddUser
             // 
             this.SMItemAddUser.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.SMItemAddUser.Image = ((System.Drawing.Image)(resources.GetObject("SMItemAddUser.Image")));
             this.SMItemAddUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SMItemAddUser.Name = "SMItemAddUser";
-            this.SMItemAddUser.Size = new System.Drawing.Size(226, 38);
+            this.SMItemAddUser.Size = new System.Drawing.Size(193, 26);
             this.SMItemAddUser.Text = "Add User";
             // 
             // SMItemEditUser
             // 
             this.SMItemEditUser.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.SMItemEditUser.Image = ((System.Drawing.Image)(resources.GetObject("SMItemEditUser.Image")));
             this.SMItemEditUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SMItemEditUser.Name = "SMItemEditUser";
-            this.SMItemEditUser.Size = new System.Drawing.Size(226, 38);
+            this.SMItemEditUser.Size = new System.Drawing.Size(193, 26);
             this.SMItemEditUser.Text = "Edit User";
             // 
             // SMItemDeleteUser
             // 
             this.SMItemDeleteUser.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.SMItemDeleteUser.Image = ((System.Drawing.Image)(resources.GetObject("SMItemDeleteUser.Image")));
             this.SMItemDeleteUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SMItemDeleteUser.Name = "SMItemDeleteUser";
-            this.SMItemDeleteUser.Size = new System.Drawing.Size(226, 38);
+            this.SMItemDeleteUser.Size = new System.Drawing.Size(193, 26);
             this.SMItemDeleteUser.Text = "Delete User";
+            // 
+            // SMItemChangePasswordUser
+            // 
+            this.SMItemChangePasswordUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.SMItemChangePasswordUser.Name = "SMItemChangePasswordUser";
+            this.SMItemChangePasswordUser.Size = new System.Drawing.Size(193, 26);
+            this.SMItemChangePasswordUser.Text = "Change Password";
+            // 
+            // SMItemSeparatorCRUDUsers2
+            // 
+            this.SMItemSeparatorCRUDUsers2.Name = "SMItemSeparatorCRUDUsers2";
+            this.SMItemSeparatorCRUDUsers2.Size = new System.Drawing.Size(190, 6);
             // 
             // SMItemSendEmail
             // 
             this.SMItemSendEmail.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.SMItemSendEmail.Image = ((System.Drawing.Image)(resources.GetObject("SMItemSendEmail.Image")));
             this.SMItemSendEmail.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SMItemSendEmail.Name = "SMItemSendEmail";
-            this.SMItemSendEmail.Size = new System.Drawing.Size(226, 38);
+            this.SMItemSendEmail.Size = new System.Drawing.Size(193, 26);
             this.SMItemSendEmail.Text = "Send Email";
             // 
             // SMItemCallUser
             // 
             this.SMItemCallUser.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.SMItemCallUser.Image = ((System.Drawing.Image)(resources.GetObject("SMItemCallUser.Image")));
             this.SMItemCallUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SMItemCallUser.Name = "SMItemCallUser";
-            this.SMItemCallUser.Size = new System.Drawing.Size(226, 38);
+            this.SMItemCallUser.Size = new System.Drawing.Size(193, 26);
             this.SMItemCallUser.Text = "Call User";
             // 
             // LblManageUsers
@@ -179,51 +141,22 @@ namespace DVLD_PresentationLayer.Tests
             this.LblManageUsers.BackColor = System.Drawing.Color.Transparent;
             this.LblManageUsers.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold);
             this.LblManageUsers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
-            this.LblManageUsers.Location = new System.Drawing.Point(635, 159);
+            this.LblManageUsers.Location = new System.Drawing.Point(462, 159);
             this.LblManageUsers.Name = "LblManageUsers";
             this.LblManageUsers.Size = new System.Drawing.Size(290, 54);
             this.LblManageUsers.TabIndex = 1;
             this.LblManageUsers.Text = "Manage Users";
             // 
-            // BtnAddUser
-            // 
-            this.BtnAddUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnAddUser.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.BtnAddUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BtnAddUser.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.BtnAddUser.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.BtnAddUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
-            this.BtnAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAddUser.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BtnAddUser.Image = ((System.Drawing.Image)(resources.GetObject("BtnAddUser.Image")));
-            this.BtnAddUser.Location = new System.Drawing.Point(1396, 228);
-            this.BtnAddUser.Name = "BtnAddUser";
-            this.BtnAddUser.Size = new System.Drawing.Size(90, 45);
-            this.BtnAddUser.TabIndex = 2;
-            this.BtnAddUser.UseVisualStyleBackColor = false;
-            // 
             // PBManageUsers
             // 
             this.PBManageUsers.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.PBManageUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.PBManageUsers.Image = ((System.Drawing.Image)(resources.GetObject("PBManageUsers.Image")));
-            this.PBManageUsers.Location = new System.Drawing.Point(710, 31);
+            this.PBManageUsers.Location = new System.Drawing.Point(537, 31);
             this.PBManageUsers.Name = "PBManageUsers";
             this.PBManageUsers.Size = new System.Drawing.Size(137, 125);
             this.PBManageUsers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PBManageUsers.TabIndex = 2;
             this.PBManageUsers.TabStop = false;
-            // 
-            // LblFilterBy
-            // 
-            this.LblFilterBy.AutoSize = true;
-            this.LblFilterBy.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
-            this.LblFilterBy.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.LblFilterBy.Location = new System.Drawing.Point(44, 242);
-            this.LblFilterBy.Name = "LblFilterBy";
-            this.LblFilterBy.Size = new System.Drawing.Size(104, 30);
-            this.LblFilterBy.TabIndex = 4;
-            this.LblFilterBy.Text = "Filter By:";
             // 
             // LblRecoreds
             // 
@@ -231,7 +164,7 @@ namespace DVLD_PresentationLayer.Tests
             this.LblRecoreds.AutoSize = true;
             this.LblRecoreds.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.LblRecoreds.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.LblRecoreds.Location = new System.Drawing.Point(44, 775);
+            this.LblRecoreds.Location = new System.Drawing.Point(23, 985);
             this.LblRecoreds.Name = "LblRecoreds";
             this.LblRecoreds.Size = new System.Drawing.Size(121, 28);
             this.LblRecoreds.TabIndex = 5;
@@ -247,9 +180,8 @@ namespace DVLD_PresentationLayer.Tests
             this.BtnAddClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAddClose.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.BtnAddClose.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BtnAddClose.Image = ((System.Drawing.Image)(resources.GetObject("BtnAddClose.Image")));
             this.BtnAddClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAddClose.Location = new System.Drawing.Point(1331, 775);
+            this.BtnAddClose.Location = new System.Drawing.Point(1005, 985);
             this.BtnAddClose.Name = "BtnAddClose";
             this.BtnAddClose.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.BtnAddClose.Size = new System.Drawing.Size(155, 50);
@@ -259,100 +191,55 @@ namespace DVLD_PresentationLayer.Tests
             this.BtnAddClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnAddClose.UseVisualStyleBackColor = false;
             // 
-            // CBFilterBy
-            // 
-            this.CBFilterBy.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.CBFilterBy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CBFilterBy.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.CBFilterBy.ForeColor = System.Drawing.Color.Black;
-            this.CBFilterBy.FormattingEnabled = true;
-            this.CBFilterBy.Items.AddRange(new object[] {
-            "None",
-            "User ID",
-            "User Name",
-            "Person ID",
-            "Full Name",
-            "Is ActiveStatus"});
-            this.CBFilterBy.Location = new System.Drawing.Point(154, 245);
-            this.CBFilterBy.Name = "CBFilterBy";
-            this.CBFilterBy.Size = new System.Drawing.Size(208, 31);
-            this.CBFilterBy.TabIndex = 0;
-            // 
             // LblTotalRecoreds
             // 
             this.LblTotalRecoreds.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.LblTotalRecoreds.AutoSize = true;
             this.LblTotalRecoreds.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.LblTotalRecoreds.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.LblTotalRecoreds.Location = new System.Drawing.Point(161, 775);
+            this.LblTotalRecoreds.Location = new System.Drawing.Point(150, 985);
             this.LblTotalRecoreds.Name = "LblTotalRecoreds";
             this.LblTotalRecoreds.Size = new System.Drawing.Size(30, 28);
             this.LblTotalRecoreds.TabIndex = 8;
             this.LblTotalRecoreds.Text = "??";
             // 
-            // MTBsearch
+            // LblAppointments
             // 
-            this.MTBsearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(243)))), ((int)(((byte)(247)))));
-            this.MTBsearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.MTBsearch.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.MTBsearch.ForeColor = System.Drawing.Color.Black;
-            this.MTBsearch.Location = new System.Drawing.Point(371, 245);
-            this.MTBsearch.Name = "MTBsearch";
-            this.MTBsearch.Size = new System.Drawing.Size(258, 30);
-            this.MTBsearch.TabIndex = 1;
+            this.LblAppointments.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.LblAppointments.AutoSize = true;
+            this.LblAppointments.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.LblAppointments.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.LblAppointments.Location = new System.Drawing.Point(23, 644);
+            this.LblAppointments.Name = "LblAppointments";
+            this.LblAppointments.Size = new System.Drawing.Size(151, 28);
+            this.LblAppointments.TabIndex = 9;
+            this.LblAppointments.Text = "Appointments:";
             // 
-            // CBActiveStatusBy
+            // ctrlDrivingLicenseApplicationInfo1
             // 
-            this.CBActiveStatusBy.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.CBActiveStatusBy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CBActiveStatusBy.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.CBActiveStatusBy.ForeColor = System.Drawing.Color.Black;
-            this.CBActiveStatusBy.FormattingEnabled = true;
-            this.CBActiveStatusBy.Items.AddRange(new object[] {
-            "All",
-            "Yes",
-            "No"});
-            this.CBActiveStatusBy.Location = new System.Drawing.Point(371, 245);
-            this.CBActiveStatusBy.Name = "CBActiveStatusBy";
-            this.CBActiveStatusBy.Size = new System.Drawing.Size(201, 31);
-            this.CBActiveStatusBy.TabIndex = 9;
-            // 
-            // SMItemChangePasswordUser
-            // 
-            this.SMItemChangePasswordUser.Image = ((System.Drawing.Image)(resources.GetObject("SMItemChangePasswordUser.Image")));
-            this.SMItemChangePasswordUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.SMItemChangePasswordUser.Name = "SMItemChangePasswordUser";
-            this.SMItemChangePasswordUser.Size = new System.Drawing.Size(226, 38);
-            this.SMItemChangePasswordUser.Text = "Change Password";
-            // 
-            // SMItemSeparatorCRUDUsers2
-            // 
-            this.SMItemSeparatorCRUDUsers2.Name = "SMItemSeparatorCRUDUsers2";
-            this.SMItemSeparatorCRUDUsers2.Size = new System.Drawing.Size(223, 6);
+            this.ctrlDrivingLicenseApplicationInfo1.BackColor = System.Drawing.Color.White;
+            this.ctrlDrivingLicenseApplicationInfo1.Location = new System.Drawing.Point(12, 228);
+            this.ctrlDrivingLicenseApplicationInfo1.Name = "ctrlDrivingLicenseApplicationInfo1";
+            this.ctrlDrivingLicenseApplicationInfo1.Size = new System.Drawing.Size(1168, 398);
+            this.ctrlDrivingLicenseApplicationInfo1.TabIndex = 10;
             // 
             // FOListTestAppointments
             // 
-
-            this.components = new System.ComponentModel.Container();
-            this.Text = "List Test Appointments";
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1533, 932);
-            this.Controls.Add(this.CBActiveStatusBy);
-            this.Controls.Add(this.MTBsearch);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1186, 1055);
+            this.Controls.Add(this.ctrlDrivingLicenseApplicationInfo1);
+            this.Controls.Add(this.LblAppointments);
             this.Controls.Add(this.LblTotalRecoreds);
-            this.Controls.Add(this.CBFilterBy);
             this.Controls.Add(this.BtnAddClose);
             this.Controls.Add(this.LblRecoreds);
-            this.Controls.Add(this.LblFilterBy);
-            this.Controls.Add(this.BtnAddUser);
             this.Controls.Add(this.PBManageUsers);
             this.Controls.Add(this.LblManageUsers);
-            this.Controls.Add(this.dGViewShowInformation);
             this.Name = "FOListTestAppointments";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            ((System.ComponentModel.ISupportInitialize)(this.dGViewShowInformation)).EndInit();
+            this.Text = "List Test Appointments";
             this.SMItemCRUDUsers.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PBManageUsers)).EndInit();
             this.ResumeLayout(false);
@@ -361,11 +248,8 @@ namespace DVLD_PresentationLayer.Tests
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dGViewShowInformation;
         private System.Windows.Forms.Label LblManageUsers;
-        private Button BtnAddUser;
         private PictureBox PBManageUsers;
-        private Label LblFilterBy;
         private Label LblRecoreds;
         private Button BtnAddClose;
         private ContextMenuStrip SMItemCRUDUsers;
@@ -376,12 +260,11 @@ namespace DVLD_PresentationLayer.Tests
         private ToolStripMenuItem SMItemDeleteUser;
         private ToolStripMenuItem SMItemSendEmail;
         private ToolStripMenuItem SMItemCallUser;
-        private ComboBox CBFilterBy;
         private Label LblTotalRecoreds;
-        private MaskedTextBox MTBsearch;
-        private ComboBox CBActiveStatusBy;
         private ToolStripMenuItem SMItemChangePasswordUser;
         private ToolStripSeparator SMItemSeparatorCRUDUsers2;
-
+        private Label LblAppointments;
+        private CtrDrivingLicenseApplicationInfo ctrDrivingLicenseApplicationInfo1;
+        private DVLD_PresentationLayer.ctrlDrivingLicenseApplicationInfo ctrlDrivingLicenseApplicationInfo1;
     }
 }

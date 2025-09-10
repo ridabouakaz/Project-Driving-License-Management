@@ -121,7 +121,7 @@
   <data name="PBShowLicenseInfo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAONSURBVEhLrZNp
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAONSURBVEhLrZNp
         TBRnHMbfhixR2NlDpLCLu+vi7Oyue3EsLGVPgWG5hD0Q62051FjjVa094hdbTCMejaZJmyZabwjx1kTj
         B9NWrcZPTY0aVKwBNW1tgydNQ/s0M+pkmYWFFv/J78Obzfv8Zv/zDCGEjC9kzF+7TVMvjZVik+WCI5tu
         JLHjYkxf7a5owIOWD8dMT9M61NudfxFCsgWBx2z5rrf5A/Qv2yDQ/c5aRGkrIrQlIe/leQfd49jKhv7h
@@ -143,7 +143,7 @@
   <data name="PBPassedTests.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        rwAAAK8BK7AVuQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAOwSURBVEhLvZVr
+        qAAAAKgBefSzxgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAOwSURBVEhLvZVr
         TFNnHMbfZURbWrpaLQVqT0859hQopEgZbhSKwBQcGi9MHQ7xsk1cTDd20SzzUiNu040PQ6NEsjE1Bo1R
         XEyME+IuGVN0kGxsFPGyRVFAlxi3hSluybO8b3JO4G1R/OCe5Pft9Pnl/P9930PI/5AoQ2xC0OyQu4Wk
         tBuSO72PR5Dky1ZBDD0Qm/278TpdMV9OjHHWfbPXbRvc2nEby3YcRlp2PnpuDuHirfuPxJmuXmT5/L9r
@@ -165,7 +165,7 @@
   <data name="PBAppliedForLicense.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        rwAAAK8BK7AVuQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAS7SURBVEhLpVV7
+        qAAAAKgBefSzxgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAS7SURBVEhLpVV7
         TFNnFP/2ByMt3ZwjUikVaG1tKS23XMrAF1LpeJXhkKdYKDqV13go6shIJm5ZJjpf6ESj6LLx0CXb1C1M
         jbpNF8J8MAeoPKfieAjODK0REfgt313sxkWcZic5+U7O+f3O757z3ZtLyP8zkdhR8OvLDi/aPCe9ckfj
         PKVb4iQ6xAdNZC/wE0+wwHS5+o8PdYaHZSYzri3LhdbZ5QYf9Ni83dzct8qmKxvVWqaDNQR2+rD+nSov
@@ -192,7 +192,7 @@
   <data name="PBDLAppID.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKeSURBVEhLrVU7
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKeSURBVEhLrVU7
         a1RBFL6+8a2FRQSJsbWSiDYiAR/Jzpm7hux8k5C4ksyZvaCJjZ2KulUQQgofhShCFAtRFEXRqIkQOwsr
         bQQrmyjY5Q/IubrkZu5Gs0s+ODD3nG/ON497zkTRP0Alt4cMj6Vj668X+9xOMRmnPsNjwgnnNQSCf1co
         nF2nwF1k3QWCv0i20glgLYGnQn7D0OARZZ2tVqsrCfxeDMAqDd+rrB8O+Q2D+k9vJ/AzGRcMTyjDd1I/

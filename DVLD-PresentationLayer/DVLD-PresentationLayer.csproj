@@ -75,11 +75,11 @@
     <Compile Include="Applications\Control\CtrDetailsApplication.Designer.cs">
       <DependentUpon>CtrDetailsApplication.cs</DependentUpon>
     </Compile>
-    <Compile Include="Applications\Control\ctrlDrivingLicenseApplicationInfo.cs">
+    <Compile Include="Applications\Control\CtrDrivingLicenseApplicationInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Applications\Control\ctrlDrivingLicenseApplicationInfo.Designer.cs">
-      <DependentUpon>ctrlDrivingLicenseApplicationInfo.cs</DependentUpon>
+    <Compile Include="Applications\Control\CtrDrivingLicenseApplicationInfo.Designer.cs">
+      <DependentUpon>CtrDrivingLicenseApplicationInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Applications\Local Driving License\FOAddNewLocalDrivingApplication.cs">
       <SubType>Form</SubType>
@@ -213,8 +213,8 @@
     <EmbeddedResource Include="Applications\Control\CtrDetailsApplication.resx">
       <DependentUpon>CtrDetailsApplication.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Applications\Control\ctrlDrivingLicenseApplicationInfo.resx">
-      <DependentUpon>ctrlDrivingLicenseApplicationInfo.cs</DependentUpon>
+    <EmbeddedResource Include="Applications\Control\CtrDrivingLicenseApplicationInfo.resx">
+      <DependentUpon>CtrDrivingLicenseApplicationInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Applications\Local Driving License\FOAddNewLocalDrivingApplication.resx">
       <DependentUpon>FOAddNewLocalDrivingApplication.cs</DependentUpon>
@@ -230,6 +230,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="People\Control\CtrDetailsPersonWithFilter.resx">
       <DependentUpon>CtrDetailsPersonWithFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tests\FOListTestAppointments.resx">
+      <DependentUpon>FOListTestAppointments.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users\Control\CtrDetailsUser.resx">
       <DependentUpon>CtrDetailsUser.cs</DependentUpon>

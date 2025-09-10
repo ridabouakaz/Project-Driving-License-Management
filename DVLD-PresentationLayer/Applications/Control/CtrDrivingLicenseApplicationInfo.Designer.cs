@@ -1,6 +1,6 @@
 ﻿namespace DVLD_PresentationLayer
 {
-    partial class ctrlDrivingLicenseApplicationInfo
+    partial class CtrDrivingLicenseApplicationInfo
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ctrlDrivingLicenseApplicationInfo));
-            this.ctrDetailsApplication1 = new DVLD_PresentationLayer.CtrDetailsApplication();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CtrDrivingLicenseApplicationInfo));
             this.GBUserControlDetailesApplicationLocalDriving = new System.Windows.Forms.GroupBox();
             this.LLShowLicenseInfo = new System.Windows.Forms.LinkLabel();
             this.PBShowLicenseInfo = new System.Windows.Forms.PictureBox();
@@ -42,21 +41,13 @@
             this.LblDLAppID = new System.Windows.Forms.Label();
             this.LblAppliedForLicense = new System.Windows.Forms.Label();
             this.LblPassedTests = new System.Windows.Forms.Label();
+            this.ctrDetailsApplication1 = new DVLD_PresentationLayer.CtrDetailsApplication();
             this.GBUserControlDetailesApplicationLocalDriving.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBShowLicenseInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBPassedTests)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBAppliedForLicense)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBDLAppID)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ctrDetailsApplication1
-            // 
-            this.ctrDetailsApplication1.ApplicationData = null;
-            this.ctrDetailsApplication1.BackColor = System.Drawing.Color.White;
-            this.ctrDetailsApplication1.Location = new System.Drawing.Point(19, 157);
-            this.ctrDetailsApplication1.Name = "ctrDetailsApplication1";
-            this.ctrDetailsApplication1.Size = new System.Drawing.Size(1169, 383);
-            this.ctrDetailsApplication1.TabIndex = 0;
             // 
             // GBUserControlDetailesApplicationLocalDriving
             // 
@@ -73,9 +64,9 @@
             this.GBUserControlDetailesApplicationLocalDriving.Controls.Add(this.LblAppliedForLicense);
             this.GBUserControlDetailesApplicationLocalDriving.Controls.Add(this.LblPassedTests);
             this.GBUserControlDetailesApplicationLocalDriving.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.GBUserControlDetailesApplicationLocalDriving.Location = new System.Drawing.Point(35, 3);
+            this.GBUserControlDetailesApplicationLocalDriving.Location = new System.Drawing.Point(18, 0);
             this.GBUserControlDetailesApplicationLocalDriving.Name = "GBUserControlDetailesApplicationLocalDriving";
-            this.GBUserControlDetailesApplicationLocalDriving.Size = new System.Drawing.Size(1133, 148);
+            this.GBUserControlDetailesApplicationLocalDriving.Size = new System.Drawing.Size(1130, 137);
             this.GBUserControlDetailesApplicationLocalDriving.TabIndex = 2;
             this.GBUserControlDetailesApplicationLocalDriving.TabStop = false;
             this.GBUserControlDetailesApplicationLocalDriving.Text = "Driving License Application Info";
@@ -84,7 +75,7 @@
             // 
             this.LLShowLicenseInfo.AutoSize = true;
             this.LLShowLicenseInfo.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.LLShowLicenseInfo.Location = new System.Drawing.Point(244, 111);
+            this.LLShowLicenseInfo.Location = new System.Drawing.Point(244, 87);
             this.LLShowLicenseInfo.Name = "LLShowLicenseInfo";
             this.LLShowLicenseInfo.Size = new System.Drawing.Size(163, 25);
             this.LLShowLicenseInfo.TabIndex = 34;
@@ -97,7 +88,7 @@
             this.PBShowLicenseInfo.ErrorImage = null;
             this.PBShowLicenseInfo.Image = ((System.Drawing.Image)(resources.GetObject("PBShowLicenseInfo.Image")));
             this.PBShowLicenseInfo.InitialImage = null;
-            this.PBShowLicenseInfo.Location = new System.Drawing.Point(137, 104);
+            this.PBShowLicenseInfo.Location = new System.Drawing.Point(137, 88);
             this.PBShowLicenseInfo.Name = "PBShowLicenseInfo";
             this.PBShowLicenseInfo.Size = new System.Drawing.Size(40, 32);
             this.PBShowLicenseInfo.TabIndex = 53;
@@ -109,7 +100,7 @@
             this.PBPassedTests.ErrorImage = null;
             this.PBPassedTests.Image = ((System.Drawing.Image)(resources.GetObject("PBPassedTests.Image")));
             this.PBPassedTests.InitialImage = null;
-            this.PBPassedTests.Location = new System.Drawing.Point(685, 104);
+            this.PBPassedTests.Location = new System.Drawing.Point(685, 84);
             this.PBPassedTests.Name = "PBPassedTests";
             this.PBPassedTests.Size = new System.Drawing.Size(40, 32);
             this.PBPassedTests.TabIndex = 52;
@@ -121,7 +112,7 @@
             this.PBAppliedForLicense.ErrorImage = null;
             this.PBAppliedForLicense.Image = ((System.Drawing.Image)(resources.GetObject("PBAppliedForLicense.Image")));
             this.PBAppliedForLicense.InitialImage = null;
-            this.PBAppliedForLicense.Location = new System.Drawing.Point(685, 50);
+            this.PBAppliedForLicense.Location = new System.Drawing.Point(685, 46);
             this.PBAppliedForLicense.Name = "PBAppliedForLicense";
             this.PBAppliedForLicense.Size = new System.Drawing.Size(40, 32);
             this.PBAppliedForLicense.TabIndex = 51;
@@ -133,7 +124,7 @@
             this.PBDLAppID.ErrorImage = null;
             this.PBDLAppID.Image = ((System.Drawing.Image)(resources.GetObject("PBDLAppID.Image")));
             this.PBDLAppID.InitialImage = null;
-            this.PBDLAppID.Location = new System.Drawing.Point(137, 50);
+            this.PBDLAppID.Location = new System.Drawing.Point(137, 46);
             this.PBDLAppID.Name = "PBDLAppID";
             this.PBDLAppID.Size = new System.Drawing.Size(40, 32);
             this.PBDLAppID.TabIndex = 50;
@@ -157,7 +148,7 @@
             this.LblValuePassedTests.BackColor = System.Drawing.Color.Transparent;
             this.LblValuePassedTests.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.LblValuePassedTests.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblValuePassedTests.Location = new System.Drawing.Point(748, 104);
+            this.LblValuePassedTests.Location = new System.Drawing.Point(748, 84);
             this.LblValuePassedTests.Name = "LblValuePassedTests";
             this.LblValuePassedTests.Size = new System.Drawing.Size(90, 25);
             this.LblValuePassedTests.TabIndex = 48;
@@ -205,21 +196,30 @@
             this.LblPassedTests.BackColor = System.Drawing.Color.Transparent;
             this.LblPassedTests.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.LblPassedTests.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblPassedTests.Location = new System.Drawing.Point(528, 101);
+            this.LblPassedTests.Location = new System.Drawing.Point(528, 84);
             this.LblPassedTests.Name = "LblPassedTests";
             this.LblPassedTests.Size = new System.Drawing.Size(134, 28);
             this.LblPassedTests.TabIndex = 37;
             this.LblPassedTests.Text = "Passed Tests:";
             // 
-            // CtrDetailsApplicationWithLocalDrivingInfo
+            // ctrDetailsApplication1
+            // 
+            this.ctrDetailsApplication1.ApplicationData = null;
+            this.ctrDetailsApplication1.BackColor = System.Drawing.Color.White;
+            this.ctrDetailsApplication1.Location = new System.Drawing.Point(0, 143);
+            this.ctrDetailsApplication1.Name = "ctrDetailsApplication1";
+            this.ctrDetailsApplication1.Size = new System.Drawing.Size(1160, 250);
+            this.ctrDetailsApplication1.TabIndex = 3;
+            // 
+            // ctrlDrivingLicenseApplicationInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.GBUserControlDetailesApplicationLocalDriving);
             this.Controls.Add(this.ctrDetailsApplication1);
-            this.Name = "CtrDetailsApplicationWithLocalDrivingInfo";
-            this.Size = new System.Drawing.Size(1205, 556);
+            this.Controls.Add(this.GBUserControlDetailesApplicationLocalDriving);
+            this.Name = "ctrlDrivingLicenseApplicationInfo";
+            this.Size = new System.Drawing.Size(1168, 398);
             this.GBUserControlDetailesApplicationLocalDriving.ResumeLayout(false);
             this.GBUserControlDetailesApplicationLocalDriving.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBShowLicenseInfo)).EndInit();
@@ -231,8 +231,6 @@
         }
 
         #endregion
-
-        private CtrDetailsApplication ctrDetailsApplication1;
         private System.Windows.Forms.GroupBox GBUserControlDetailesApplicationLocalDriving;
         private System.Windows.Forms.Label LblDLAppID;
         private System.Windows.Forms.Label LblAppliedForLicense;
@@ -245,5 +243,6 @@
         private System.Windows.Forms.PictureBox PBAppliedForLicense;
         private System.Windows.Forms.PictureBox PBDLAppID;
         private System.Windows.Forms.LinkLabel LLShowLicenseInfo;
+        private CtrDetailsApplication ctrDetailsApplication1;
     }
 }
