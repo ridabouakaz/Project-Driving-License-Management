@@ -48,7 +48,7 @@ namespace DVLD_PresentationLayer.Tests
             this.BtnAddClose = new System.Windows.Forms.Button();
             this.LblTotalRecoreds = new System.Windows.Forms.Label();
             this.LblAppointments = new System.Windows.Forms.Label();
-            this.ctrlDrivingLicenseApplicationInfo1 = new DVLD_PresentationLayer.ctrlDrivingLicenseApplicationInfo();
+            this.ctrDrivingLicenseApplicationInfo2 = new DVLD_PresentationLayer.CtrDrivingLicenseApplicationInfo();
             this.SMItemCRUDUsers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBManageUsers)).BeginInit();
             this.SuspendLayout();
@@ -141,7 +141,7 @@ namespace DVLD_PresentationLayer.Tests
             this.LblManageUsers.BackColor = System.Drawing.Color.Transparent;
             this.LblManageUsers.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold);
             this.LblManageUsers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
-            this.LblManageUsers.Location = new System.Drawing.Point(462, 159);
+            this.LblManageUsers.Location = new System.Drawing.Point(459, 159);
             this.LblManageUsers.Name = "LblManageUsers";
             this.LblManageUsers.Size = new System.Drawing.Size(290, 54);
             this.LblManageUsers.TabIndex = 1;
@@ -151,7 +151,7 @@ namespace DVLD_PresentationLayer.Tests
             // 
             this.PBManageUsers.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.PBManageUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.PBManageUsers.Location = new System.Drawing.Point(537, 31);
+            this.PBManageUsers.Location = new System.Drawing.Point(534, 31);
             this.PBManageUsers.Name = "PBManageUsers";
             this.PBManageUsers.Size = new System.Drawing.Size(137, 125);
             this.PBManageUsers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -164,7 +164,7 @@ namespace DVLD_PresentationLayer.Tests
             this.LblRecoreds.AutoSize = true;
             this.LblRecoreds.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.LblRecoreds.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.LblRecoreds.Location = new System.Drawing.Point(23, 985);
+            this.LblRecoreds.Location = new System.Drawing.Point(23, 974);
             this.LblRecoreds.Name = "LblRecoreds";
             this.LblRecoreds.Size = new System.Drawing.Size(121, 28);
             this.LblRecoreds.TabIndex = 5;
@@ -181,7 +181,7 @@ namespace DVLD_PresentationLayer.Tests
             this.BtnAddClose.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.BtnAddClose.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BtnAddClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAddClose.Location = new System.Drawing.Point(1005, 985);
+            this.BtnAddClose.Location = new System.Drawing.Point(997, 974);
             this.BtnAddClose.Name = "BtnAddClose";
             this.BtnAddClose.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.BtnAddClose.Size = new System.Drawing.Size(155, 50);
@@ -197,7 +197,7 @@ namespace DVLD_PresentationLayer.Tests
             this.LblTotalRecoreds.AutoSize = true;
             this.LblTotalRecoreds.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.LblTotalRecoreds.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.LblTotalRecoreds.Location = new System.Drawing.Point(150, 985);
+            this.LblTotalRecoreds.Location = new System.Drawing.Point(150, 974);
             this.LblTotalRecoreds.Name = "LblTotalRecoreds";
             this.LblTotalRecoreds.Size = new System.Drawing.Size(30, 28);
             this.LblTotalRecoreds.TabIndex = 8;
@@ -209,27 +209,27 @@ namespace DVLD_PresentationLayer.Tests
             this.LblAppointments.AutoSize = true;
             this.LblAppointments.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.LblAppointments.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.LblAppointments.Location = new System.Drawing.Point(23, 644);
+            this.LblAppointments.Location = new System.Drawing.Point(23, 626);
             this.LblAppointments.Name = "LblAppointments";
             this.LblAppointments.Size = new System.Drawing.Size(151, 28);
             this.LblAppointments.TabIndex = 9;
             this.LblAppointments.Text = "Appointments:";
             // 
-            // ctrlDrivingLicenseApplicationInfo1
+            // ctrDrivingLicenseApplicationInfo2
             // 
-            this.ctrlDrivingLicenseApplicationInfo1.BackColor = System.Drawing.Color.White;
-            this.ctrlDrivingLicenseApplicationInfo1.Location = new System.Drawing.Point(12, 228);
-            this.ctrlDrivingLicenseApplicationInfo1.Name = "ctrlDrivingLicenseApplicationInfo1";
-            this.ctrlDrivingLicenseApplicationInfo1.Size = new System.Drawing.Size(1168, 398);
-            this.ctrlDrivingLicenseApplicationInfo1.TabIndex = 10;
+            this.ctrDrivingLicenseApplicationInfo2.BackColor = System.Drawing.Color.White;
+            this.ctrDrivingLicenseApplicationInfo2.Location = new System.Drawing.Point(6, 225);
+            this.ctrDrivingLicenseApplicationInfo2.Name = "ctrDrivingLicenseApplicationInfo2";
+            this.ctrDrivingLicenseApplicationInfo2.Size = new System.Drawing.Size(1168, 398);
+            this.ctrDrivingLicenseApplicationInfo2.TabIndex = 10;
             // 
             // FOListTestAppointments
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1186, 1055);
-            this.Controls.Add(this.ctrlDrivingLicenseApplicationInfo1);
+            this.ClientSize = new System.Drawing.Size(1180, 1055);
+            this.Controls.Add(this.ctrDrivingLicenseApplicationInfo2);
             this.Controls.Add(this.LblAppointments);
             this.Controls.Add(this.LblTotalRecoreds);
             this.Controls.Add(this.BtnAddClose);
@@ -265,6 +265,6 @@ namespace DVLD_PresentationLayer.Tests
         private ToolStripSeparator SMItemSeparatorCRUDUsers2;
         private Label LblAppointments;
         private CtrDrivingLicenseApplicationInfo ctrDrivingLicenseApplicationInfo1;
-        private DVLD_PresentationLayer.ctrlDrivingLicenseApplicationInfo ctrlDrivingLicenseApplicationInfo1;
+        private CtrDrivingLicenseApplicationInfo ctrDrivingLicenseApplicationInfo2;
     }
 }
