@@ -42,15 +42,15 @@ namespace DVLD_PresentationLayer.Tests
             this.SMItemSeparatorCRUDUsers2 = new System.Windows.Forms.ToolStripSeparator();
             this.SMItemSendEmail = new System.Windows.Forms.ToolStripMenuItem();
             this.SMItemCallUser = new System.Windows.Forms.ToolStripMenuItem();
-            this.LblManageUsers = new System.Windows.Forms.Label();
-            this.PBManageUsers = new System.Windows.Forms.PictureBox();
+            this.LblManageTestAppointments = new System.Windows.Forms.Label();
             this.LblRecoreds = new System.Windows.Forms.Label();
             this.BtnAddClose = new System.Windows.Forms.Button();
             this.LblTotalRecoreds = new System.Windows.Forms.Label();
             this.LblAppointments = new System.Windows.Forms.Label();
             this.ctrDrivingLicenseApplicationInfo2 = new DVLD_PresentationLayer.CtrDrivingLicenseApplicationInfo();
+            this.PBManageTestAppointments = new System.Windows.Forms.PictureBox();
             this.SMItemCRUDUsers.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PBManageUsers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBManageTestAppointments)).BeginInit();
             this.SuspendLayout();
             // 
             // SMItemCRUDUsers
@@ -134,29 +134,18 @@ namespace DVLD_PresentationLayer.Tests
             this.SMItemCallUser.Size = new System.Drawing.Size(193, 26);
             this.SMItemCallUser.Text = "Call User";
             // 
-            // LblManageUsers
+            // LblManageTestAppointments
             // 
-            this.LblManageUsers.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.LblManageUsers.AutoSize = true;
-            this.LblManageUsers.BackColor = System.Drawing.Color.Transparent;
-            this.LblManageUsers.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold);
-            this.LblManageUsers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
-            this.LblManageUsers.Location = new System.Drawing.Point(459, 159);
-            this.LblManageUsers.Name = "LblManageUsers";
-            this.LblManageUsers.Size = new System.Drawing.Size(290, 54);
-            this.LblManageUsers.TabIndex = 1;
-            this.LblManageUsers.Text = "Manage Users";
-            // 
-            // PBManageUsers
-            // 
-            this.PBManageUsers.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.PBManageUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.PBManageUsers.Location = new System.Drawing.Point(534, 31);
-            this.PBManageUsers.Name = "PBManageUsers";
-            this.PBManageUsers.Size = new System.Drawing.Size(137, 125);
-            this.PBManageUsers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PBManageUsers.TabIndex = 2;
-            this.PBManageUsers.TabStop = false;
+            this.LblManageTestAppointments.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.LblManageTestAppointments.AutoSize = true;
+            this.LblManageTestAppointments.BackColor = System.Drawing.Color.Transparent;
+            this.LblManageTestAppointments.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold);
+            this.LblManageTestAppointments.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
+            this.LblManageTestAppointments.Location = new System.Drawing.Point(459, 159);
+            this.LblManageTestAppointments.Name = "LblManageTestAppointments";
+            this.LblManageTestAppointments.Size = new System.Drawing.Size(290, 54);
+            this.LblManageTestAppointments.TabIndex = 1;
+            this.LblManageTestAppointments.Text = "Manage Users";
             // 
             // LblRecoreds
             // 
@@ -223,6 +212,18 @@ namespace DVLD_PresentationLayer.Tests
             this.ctrDrivingLicenseApplicationInfo2.Size = new System.Drawing.Size(1168, 398);
             this.ctrDrivingLicenseApplicationInfo2.TabIndex = 10;
             // 
+            // PBManageTestAppointments
+            // 
+            this.PBManageTestAppointments.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.PBManageTestAppointments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.PBManageTestAppointments.Image = global::DVLD_PresentationLayer.Properties.Resources.StreetTest;
+            this.PBManageTestAppointments.Location = new System.Drawing.Point(534, 31);
+            this.PBManageTestAppointments.Name = "PBManageTestAppointments";
+            this.PBManageTestAppointments.Size = new System.Drawing.Size(137, 125);
+            this.PBManageTestAppointments.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PBManageTestAppointments.TabIndex = 2;
+            this.PBManageTestAppointments.TabStop = false;
+            // 
             // FOListTestAppointments
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -234,22 +235,22 @@ namespace DVLD_PresentationLayer.Tests
             this.Controls.Add(this.LblTotalRecoreds);
             this.Controls.Add(this.BtnAddClose);
             this.Controls.Add(this.LblRecoreds);
-            this.Controls.Add(this.PBManageUsers);
-            this.Controls.Add(this.LblManageUsers);
+            this.Controls.Add(this.PBManageTestAppointments);
+            this.Controls.Add(this.LblManageTestAppointments);
             this.Name = "FOListTestAppointments";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "List Test Appointments";
             this.SMItemCRUDUsers.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PBManageUsers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBManageTestAppointments)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label LblManageUsers;
-        private PictureBox PBManageUsers;
+        private System.Windows.Forms.Label LblManageTestAppointments;
+        private PictureBox PBManageTestAppointments;
         private Label LblRecoreds;
         private Button BtnAddClose;
         private ContextMenuStrip SMItemCRUDUsers;
