@@ -32,6 +32,9 @@ namespace DVLD_PresentationLayer.Tests
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FOListTestAppointments));
             this.SMItemCRUDUsers = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.SMItemViewDetails = new System.Windows.Forms.ToolStripMenuItem();
             this.SMItemSeparatorCRUDUsers1 = new System.Windows.Forms.ToolStripSeparator();
@@ -47,10 +50,13 @@ namespace DVLD_PresentationLayer.Tests
             this.BtnAddClose = new System.Windows.Forms.Button();
             this.LblTotalRecoreds = new System.Windows.Forms.Label();
             this.LblAppointments = new System.Windows.Forms.Label();
-            this.ctrDrivingLicenseApplicationInfo2 = new DVLD_PresentationLayer.CtrDrivingLicenseApplicationInfo();
             this.PBManageTestAppointments = new System.Windows.Forms.PictureBox();
+            this.dGViewShowInformation = new System.Windows.Forms.DataGridView();
+            this.BtnAddAppointments = new System.Windows.Forms.Button();
+            this.ctrDrivingLicenseApplicationInfo2 = new DVLD_PresentationLayer.CtrDrivingLicenseApplicationInfo();
             this.SMItemCRUDUsers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBManageTestAppointments)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGViewShowInformation)).BeginInit();
             this.SuspendLayout();
             // 
             // SMItemCRUDUsers
@@ -141,11 +147,11 @@ namespace DVLD_PresentationLayer.Tests
             this.LblManageTestAppointments.BackColor = System.Drawing.Color.Transparent;
             this.LblManageTestAppointments.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold);
             this.LblManageTestAppointments.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
-            this.LblManageTestAppointments.Location = new System.Drawing.Point(459, 159);
+            this.LblManageTestAppointments.Location = new System.Drawing.Point(345, 140);
             this.LblManageTestAppointments.Name = "LblManageTestAppointments";
-            this.LblManageTestAppointments.Size = new System.Drawing.Size(290, 54);
+            this.LblManageTestAppointments.Size = new System.Drawing.Size(505, 54);
             this.LblManageTestAppointments.TabIndex = 1;
-            this.LblManageTestAppointments.Text = "Manage Users";
+            this.LblManageTestAppointments.Text = "Vision Test Appointments";
             // 
             // LblRecoreds
             // 
@@ -153,7 +159,7 @@ namespace DVLD_PresentationLayer.Tests
             this.LblRecoreds.AutoSize = true;
             this.LblRecoreds.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.LblRecoreds.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.LblRecoreds.Location = new System.Drawing.Point(23, 974);
+            this.LblRecoreds.Location = new System.Drawing.Point(23, 777);
             this.LblRecoreds.Name = "LblRecoreds";
             this.LblRecoreds.Size = new System.Drawing.Size(121, 28);
             this.LblRecoreds.TabIndex = 5;
@@ -170,7 +176,7 @@ namespace DVLD_PresentationLayer.Tests
             this.BtnAddClose.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.BtnAddClose.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BtnAddClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAddClose.Location = new System.Drawing.Point(997, 974);
+            this.BtnAddClose.Location = new System.Drawing.Point(997, 780);
             this.BtnAddClose.Name = "BtnAddClose";
             this.BtnAddClose.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.BtnAddClose.Size = new System.Drawing.Size(155, 50);
@@ -179,6 +185,7 @@ namespace DVLD_PresentationLayer.Tests
             this.BtnAddClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnAddClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnAddClose.UseVisualStyleBackColor = false;
+            this.BtnAddClose.Click += new System.EventHandler(this.BtnAddClose_Click);
             // 
             // LblTotalRecoreds
             // 
@@ -186,7 +193,7 @@ namespace DVLD_PresentationLayer.Tests
             this.LblTotalRecoreds.AutoSize = true;
             this.LblTotalRecoreds.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.LblTotalRecoreds.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.LblTotalRecoreds.Location = new System.Drawing.Point(150, 974);
+            this.LblTotalRecoreds.Location = new System.Drawing.Point(144, 777);
             this.LblTotalRecoreds.Name = "LblTotalRecoreds";
             this.LblTotalRecoreds.Size = new System.Drawing.Size(30, 28);
             this.LblTotalRecoreds.TabIndex = 8;
@@ -198,38 +205,93 @@ namespace DVLD_PresentationLayer.Tests
             this.LblAppointments.AutoSize = true;
             this.LblAppointments.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.LblAppointments.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.LblAppointments.Location = new System.Drawing.Point(23, 626);
+            this.LblAppointments.Location = new System.Drawing.Point(23, 586);
             this.LblAppointments.Name = "LblAppointments";
             this.LblAppointments.Size = new System.Drawing.Size(151, 28);
             this.LblAppointments.TabIndex = 9;
             this.LblAppointments.Text = "Appointments:";
-            // 
-            // ctrDrivingLicenseApplicationInfo2
-            // 
-            this.ctrDrivingLicenseApplicationInfo2.BackColor = System.Drawing.Color.White;
-            this.ctrDrivingLicenseApplicationInfo2.Location = new System.Drawing.Point(6, 225);
-            this.ctrDrivingLicenseApplicationInfo2.Name = "ctrDrivingLicenseApplicationInfo2";
-            this.ctrDrivingLicenseApplicationInfo2.Size = new System.Drawing.Size(1168, 398);
-            this.ctrDrivingLicenseApplicationInfo2.TabIndex = 10;
             // 
             // PBManageTestAppointments
             // 
             this.PBManageTestAppointments.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.PBManageTestAppointments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.PBManageTestAppointments.Image = global::DVLD_PresentationLayer.Properties.Resources.StreetTest;
-            this.PBManageTestAppointments.Location = new System.Drawing.Point(534, 31);
+            this.PBManageTestAppointments.Location = new System.Drawing.Point(549, 12);
             this.PBManageTestAppointments.Name = "PBManageTestAppointments";
             this.PBManageTestAppointments.Size = new System.Drawing.Size(137, 125);
             this.PBManageTestAppointments.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PBManageTestAppointments.TabIndex = 2;
             this.PBManageTestAppointments.TabStop = false;
             // 
+            // dGViewShowInformation
+            // 
+            this.dGViewShowInformation.AllowUserToAddRows = false;
+            this.dGViewShowInformation.AllowUserToDeleteRows = false;
+            this.dGViewShowInformation.AllowUserToOrderColumns = true;
+            this.dGViewShowInformation.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dGViewShowInformation.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dGViewShowInformation.BackgroundColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dGViewShowInformation.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dGViewShowInformation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGViewShowInformation.ContextMenuStrip = this.SMItemCRUDUsers;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dGViewShowInformation.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dGViewShowInformation.Location = new System.Drawing.Point(28, 628);
+            this.dGViewShowInformation.Name = "dGViewShowInformation";
+            this.dGViewShowInformation.ReadOnly = true;
+            this.dGViewShowInformation.RowHeadersWidth = 51;
+            this.dGViewShowInformation.RowTemplate.Height = 24;
+            this.dGViewShowInformation.Size = new System.Drawing.Size(1124, 146);
+            this.dGViewShowInformation.TabIndex = 11;
+            // 
+            // BtnAddAppointments
+            // 
+            this.BtnAddAppointments.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnAddAppointments.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnAddAppointments.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnAddAppointments.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BtnAddAppointments.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.BtnAddAppointments.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.BtnAddAppointments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAddAppointments.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BtnAddAppointments.Image = ((System.Drawing.Image)(resources.GetObject("BtnAddAppointments.Image")));
+            this.BtnAddAppointments.Location = new System.Drawing.Point(1103, 582);
+            this.BtnAddAppointments.Name = "BtnAddAppointments";
+            this.BtnAddAppointments.Size = new System.Drawing.Size(49, 40);
+            this.BtnAddAppointments.TabIndex = 12;
+            this.BtnAddAppointments.UseVisualStyleBackColor = false;
+            // 
+            // ctrDrivingLicenseApplicationInfo2
+            // 
+            this.ctrDrivingLicenseApplicationInfo2.BackColor = System.Drawing.Color.White;
+            this.ctrDrivingLicenseApplicationInfo2.Location = new System.Drawing.Point(0, 197);
+            this.ctrDrivingLicenseApplicationInfo2.Name = "ctrDrivingLicenseApplicationInfo2";
+            this.ctrDrivingLicenseApplicationInfo2.Size = new System.Drawing.Size(1168, 398);
+            this.ctrDrivingLicenseApplicationInfo2.TabIndex = 10;
+            // 
             // FOListTestAppointments
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1180, 1055);
+            this.ClientSize = new System.Drawing.Size(1180, 865);
+            this.Controls.Add(this.BtnAddAppointments);
+            this.Controls.Add(this.dGViewShowInformation);
             this.Controls.Add(this.ctrDrivingLicenseApplicationInfo2);
             this.Controls.Add(this.LblAppointments);
             this.Controls.Add(this.LblTotalRecoreds);
@@ -243,6 +305,7 @@ namespace DVLD_PresentationLayer.Tests
             this.Text = "List Test Appointments";
             this.SMItemCRUDUsers.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PBManageTestAppointments)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGViewShowInformation)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -267,5 +330,7 @@ namespace DVLD_PresentationLayer.Tests
         private Label LblAppointments;
         private CtrDrivingLicenseApplicationInfo ctrDrivingLicenseApplicationInfo1;
         private CtrDrivingLicenseApplicationInfo ctrDrivingLicenseApplicationInfo2;
+        private DataGridView dGViewShowInformation;
+        private Button BtnAddAppointments;
     }
 }

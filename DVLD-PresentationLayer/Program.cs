@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DVLD_BusinessLayer;
+using DVLD_PresentationLayer.Tests;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +18,7 @@ namespace DVLD_PresentationLayer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ForTest());
+            Application.Run(new FOListTestAppointments(1,clsManageTestTypes.enTestType.StreetTest));
         }
     }
 }

@@ -21,6 +21,7 @@ namespace DVLD_PresentationLayer.Tests
             InitializeComponent();
             _LocalDrivingLicenseApplicationID = LocalDrivingLicenseApplicationID;
             _TestType = TestType;
+            _LoadTestTypeImageAndTitle();
 
         }
         private void _LoadTestTypeImageAndTitle()
@@ -53,5 +54,9 @@ namespace DVLD_PresentationLayer.Tests
             }
         }
 
+        private void BtnAddClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
