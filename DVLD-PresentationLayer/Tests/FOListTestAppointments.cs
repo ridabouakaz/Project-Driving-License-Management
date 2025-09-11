@@ -28,7 +28,6 @@ namespace DVLD_PresentationLayer.Tests
         {
             switch (_TestType)
             {
-
                 case clsManageTestTypes.enTestType.VisionTest:
                     {
                         LblManageTestAppointments.Text = "Vision Test Appointments";
@@ -36,7 +35,6 @@ namespace DVLD_PresentationLayer.Tests
                         PBManageTestAppointments.Image = DVLD_PresentationLayer.Properties.Resources.eyetest;
                         break;
                     }
-
                 case clsManageTestTypes.enTestType.WrittenTest:
                     {
                         LblManageTestAppointments.Text = "Written Test Appointments";

@@ -18,7 +18,7 @@ namespace DVLD_PresentationLayer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FOListTestAppointments(1,clsManageTestTypes.enTestType.StreetTest));
+            Application.Run(new FOScheduleTest());
         }
     }
 }
