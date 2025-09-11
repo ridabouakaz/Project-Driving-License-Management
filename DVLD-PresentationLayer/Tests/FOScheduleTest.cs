@@ -21,8 +21,9 @@ namespace DVLD_PresentationLayer.Tests
         public FOScheduleTest()
         {
             InitializeComponent();
+            _defaultAppointmentDate();
         }
 
-       
+
     }
 }

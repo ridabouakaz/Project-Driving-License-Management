@@ -50,6 +50,16 @@
             this.LblTrial = new System.Windows.Forms.Label();
             this.LblName = new System.Windows.Forms.Label();
             this.LblDClass = new System.Windows.Forms.Label();
+            this.GBUserControlDetailesPersonWithFilter = new System.Windows.Forms.GroupBox();
+            this.LblRAppFees = new System.Windows.Forms.Label();
+            this.LblRTestAppID = new System.Windows.Forms.Label();
+            this.LblTotalFees = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.GBUserControlDetailesApplication.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBDLAppID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBManageTestAppointments)).BeginInit();
@@ -58,11 +68,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.PBFees)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBTrial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBName)).BeginInit();
+            this.GBUserControlDetailesPersonWithFilter.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // GBUserControlDetailesApplication
             // 
             this.GBUserControlDetailesApplication.BackColor = System.Drawing.Color.White;
+            this.GBUserControlDetailesApplication.Controls.Add(this.GBUserControlDetailesPersonWithFilter);
             this.GBUserControlDetailesApplication.Controls.Add(this.DTPDate);
             this.GBUserControlDetailesApplication.Controls.Add(this.PBDLAppID);
             this.GBUserControlDetailesApplication.Controls.Add(this.LblFees);
@@ -86,7 +101,7 @@
             this.GBUserControlDetailesApplication.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.GBUserControlDetailesApplication.Location = new System.Drawing.Point(12, 22);
             this.GBUserControlDetailesApplication.Name = "GBUserControlDetailesApplication";
-            this.GBUserControlDetailesApplication.Size = new System.Drawing.Size(455, 694);
+            this.GBUserControlDetailesApplication.Size = new System.Drawing.Size(558, 694);
             this.GBUserControlDetailesApplication.TabIndex = 49;
             this.GBUserControlDetailesApplication.TabStop = false;
             this.GBUserControlDetailesApplication.Text = "Written Test";
@@ -134,7 +149,7 @@
             this.LblScheduleTest.BackColor = System.Drawing.Color.Transparent;
             this.LblScheduleTest.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold);
             this.LblScheduleTest.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
-            this.LblScheduleTest.Location = new System.Drawing.Point(82, 173);
+            this.LblScheduleTest.Location = new System.Drawing.Point(134, 173);
             this.LblScheduleTest.Name = "LblScheduleTest";
             this.LblScheduleTest.Size = new System.Drawing.Size(278, 54);
             this.LblScheduleTest.TabIndex = 49;
@@ -145,7 +160,7 @@
             this.PBManageTestAppointments.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.PBManageTestAppointments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.PBManageTestAppointments.Image = global::DVLD_PresentationLayer.Properties.Resources.StreetTest;
-            this.PBManageTestAppointments.Location = new System.Drawing.Point(162, 33);
+            this.PBManageTestAppointments.Location = new System.Drawing.Point(214, 33);
             this.PBManageTestAppointments.Name = "PBManageTestAppointments";
             this.PBManageTestAppointments.Size = new System.Drawing.Size(137, 125);
             this.PBManageTestAppointments.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -323,12 +338,131 @@
             this.LblDClass.TabIndex = 0;
             this.LblDClass.Text = "D.Class:";
             // 
+            // GBUserControlDetailesPersonWithFilter
+            // 
+            this.GBUserControlDetailesPersonWithFilter.BackColor = System.Drawing.SystemColors.Window;
+            this.GBUserControlDetailesPersonWithFilter.Controls.Add(this.label6);
+            this.GBUserControlDetailesPersonWithFilter.Controls.Add(this.pictureBox3);
+            this.GBUserControlDetailesPersonWithFilter.Controls.Add(this.pictureBox1);
+            this.GBUserControlDetailesPersonWithFilter.Controls.Add(this.pictureBox2);
+            this.GBUserControlDetailesPersonWithFilter.Controls.Add(this.label4);
+            this.GBUserControlDetailesPersonWithFilter.Controls.Add(this.label5);
+            this.GBUserControlDetailesPersonWithFilter.Controls.Add(this.LblTotalFees);
+            this.GBUserControlDetailesPersonWithFilter.Controls.Add(this.LblRTestAppID);
+            this.GBUserControlDetailesPersonWithFilter.Controls.Add(this.LblRAppFees);
+            this.GBUserControlDetailesPersonWithFilter.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.GBUserControlDetailesPersonWithFilter.Location = new System.Drawing.Point(6, 492);
+            this.GBUserControlDetailesPersonWithFilter.Name = "GBUserControlDetailesPersonWithFilter";
+            this.GBUserControlDetailesPersonWithFilter.Size = new System.Drawing.Size(546, 108);
+            this.GBUserControlDetailesPersonWithFilter.TabIndex = 53;
+            this.GBUserControlDetailesPersonWithFilter.TabStop = false;
+            this.GBUserControlDetailesPersonWithFilter.Text = "Retake Test Info";
+            // 
+            // LblRAppFees
+            // 
+            this.LblRAppFees.AutoSize = true;
+            this.LblRAppFees.BackColor = System.Drawing.Color.Transparent;
+            this.LblRAppFees.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.LblRAppFees.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblRAppFees.Location = new System.Drawing.Point(29, 34);
+            this.LblRAppFees.Name = "LblRAppFees";
+            this.LblRAppFees.Size = new System.Drawing.Size(119, 28);
+            this.LblRAppFees.TabIndex = 54;
+            this.LblRAppFees.Text = "R.App.Fees:";
+            // 
+            // LblRTestAppID
+            // 
+            this.LblRTestAppID.AutoSize = true;
+            this.LblRTestAppID.BackColor = System.Drawing.Color.Transparent;
+            this.LblRTestAppID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.LblRTestAppID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblRTestAppID.Location = new System.Drawing.Point(6, 67);
+            this.LblRTestAppID.Name = "LblRTestAppID";
+            this.LblRTestAppID.Size = new System.Drawing.Size(142, 28);
+            this.LblRTestAppID.TabIndex = 55;
+            this.LblRTestAppID.Text = "R.Test.App.ID:";
+            // 
+            // LblTotalFees
+            // 
+            this.LblTotalFees.AutoSize = true;
+            this.LblTotalFees.BackColor = System.Drawing.Color.Transparent;
+            this.LblTotalFees.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.LblTotalFees.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblTotalFees.Location = new System.Drawing.Point(290, 34);
+            this.LblTotalFees.Name = "LblTotalFees";
+            this.LblTotalFees.Size = new System.Drawing.Size(111, 28);
+            this.LblTotalFees.TabIndex = 56;
+            this.LblTotalFees.Text = "Total Fees:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.label4.Location = new System.Drawing.Point(223, 70);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(48, 25);
+            this.label4.TabIndex = 54;
+            this.label4.Text = "N/A";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.label5.Location = new System.Drawing.Point(223, 30);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(23, 25);
+            this.label5.TabIndex = 55;
+            this.label5.Text = "0";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(167, 67);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 32);
+            this.pictureBox1.TabIndex = 54;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(167, 26);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(40, 32);
+            this.pictureBox2.TabIndex = 55;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(425, 33);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(40, 32);
+            this.pictureBox3.TabIndex = 57;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.label6.Location = new System.Drawing.Point(495, 33);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(23, 25);
+            this.label6.TabIndex = 58;
+            this.label6.Text = "0";
+            // 
             // FOScheduleTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(479, 838);
+            this.ClientSize = new System.Drawing.Size(582, 838);
             this.Controls.Add(this.GBUserControlDetailesApplication);
             this.Name = "FOScheduleTest";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -342,6 +476,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.PBFees)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBTrial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBName)).EndInit();
+            this.GBUserControlDetailesPersonWithFilter.ResumeLayout(false);
+            this.GBUserControlDetailesPersonWithFilter.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -369,5 +508,15 @@
         private System.Windows.Forms.Label LblFees;
         private System.Windows.Forms.PictureBox PBDLAppID;
         private System.Windows.Forms.DateTimePicker DTPDate;
+        private System.Windows.Forms.GroupBox GBUserControlDetailesPersonWithFilter;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label LblTotalFees;
+        private System.Windows.Forms.Label LblRTestAppID;
+        private System.Windows.Forms.Label LblRAppFees;
+        private System.Windows.Forms.Label label6;
     }
 }
