@@ -36,7 +36,6 @@ namespace DVLD_PresentationLayer
         {
             if (_Person == null)
             {
-                // تعيين القيم الافتراضية
                 ImagePath = null;
                 FirstName = "[????????]";
                 SecondName = "[????????]";

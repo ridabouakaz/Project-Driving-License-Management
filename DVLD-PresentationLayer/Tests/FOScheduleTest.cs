@@ -12,6 +12,12 @@ namespace DVLD_PresentationLayer.Tests
 {
     public partial class FOScheduleTest : Form
     {
+        private void _defaultAppointmentDate()
+        {
+            DTPDate.MinDate = DateTime.Today; 
+            DTPDate.Value = DateTime.Today;   
+            DTPDate.MaxDate = DateTime.Today.AddMonths(6);
+        }
         public FOScheduleTest()
         {
             InitializeComponent();
