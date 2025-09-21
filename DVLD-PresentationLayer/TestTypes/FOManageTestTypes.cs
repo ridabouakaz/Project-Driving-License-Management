@@ -36,7 +36,7 @@ namespace DVLD_PresentationLayer
                 dGViewShowInformation.Columns[1].HeaderText = "Title";
                 dGViewShowInformation.Columns[1].Width = 60;
 
-                dGViewShowInformation.Columns[2].HeaderText = "Title";
+                dGViewShowInformation.Columns[2].HeaderText = "description";
                 dGViewShowInformation.Columns[2].Width = 120;
 
 
