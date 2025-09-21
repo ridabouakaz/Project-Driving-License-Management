@@ -51,7 +51,6 @@ namespace DVLD_PresentationLayer.Tests
                     }
             }
         }
-
         private void BtnAddClose_Click(object sender, EventArgs e)
         {
             this.Close();

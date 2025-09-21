@@ -14,6 +14,8 @@ namespace DVLD_PresentationLayer.Tests
     public partial class FOScheduleTest : Form
     {
         private clsManageTestTypes.enTestType _TestType = clsManageTestTypes.enTestType.VisionTest;
+        private clsNewLocalDrivingApplication _LocalDrivingApplication;
+        private int _LocalDrivingLicenseApplicationID;
         public string LocalDrivingApplicationID
         {
             get => LblValueDLAppID.Text.Trim();
@@ -42,16 +44,24 @@ namespace DVLD_PresentationLayer.Tests
         }
         private void _defaultAppointmentDate()
         {
-            DTPDate.MinDate = DateTime.Today; 
-            DTPDate.Value = DateTime.Today;   
+            DTPDate.MinDate = DateTime.Today;
+            DTPDate.Value = DateTime.Today;
             DTPDate.MaxDate = DateTime.Today.AddMonths(6);
         }
-        public FOScheduleTest(clsManageTestTypes.enTestType TestType)
+       void  _LoadLocalDrivingApplicationInfo()
+        {
+            _LocalDrivingApplication = clsNewLocalDrivingApplication.FindByLocalDrivingAppLicenseID(_LocalDrivingLicenseApplicationID);
+
+        }
+        public FOScheduleTest(clsManageTestTypes.enTestType TestType, int LocalDrivingLicenseApplicationID)
         {
             InitializeComponent();
             _defaultAppointmentDate();
             _TestType = TestType;
             _LoadTestTypeImageAndTitle();
+            _LocalDrivingLicenseApplicationID = LocalDrivingLicenseApplicationID;
+            _LoadLocalDrivingApplicationInfo();
+
         }
         private void _LoadTestTypeImageAndTitle()
         {

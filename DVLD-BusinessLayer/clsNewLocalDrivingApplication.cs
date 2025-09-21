@@ -81,7 +81,6 @@ namespace DVLD_BusinessLayer
             else
                 return null;
 
-
         }
         public static clsNewLocalDrivingApplication FindByApplicationID(int ApplicationID)
         {
@@ -107,7 +106,6 @@ namespace DVLD_BusinessLayer
             }
             else
                 return null;
-
 
         }
         public byte GetPassedTestCount()
