@@ -14,7 +14,32 @@ namespace DVLD_PresentationLayer.Tests
     public partial class FOScheduleTest : Form
     {
         private clsManageTestTypes.enTestType _TestType = clsManageTestTypes.enTestType.VisionTest;
+        public string LocalDrivingApplicationID
+        {
+            get => LblValueDLAppID.Text.Trim();
+            set => LblValueDLAppID.Text = value;
+        }
 
+        public string DClass
+        {
+            get => LblValueDClass.Text.Trim();
+            set => LblValueDClass.Text = value;
+        }
+        public string NamePerson
+        {
+            get => LblValueName.Text.Trim();
+            set => LblValueName.Text = value;
+        }
+        public string DateOFAppointment
+        {
+            get => DTPDate.Value.ToString("yyyy-MM-dd");
+            set => DTPDate.Value = DateTime.Parse(value);
+        }
+        public string FeesTest
+        {
+            get => LblvalueFees.Text.Trim();
+            set => LblvalueFees.Text = value;
+        }
         private void _defaultAppointmentDate()
         {
             DTPDate.MinDate = DateTime.Today; 
@@ -56,5 +81,7 @@ namespace DVLD_PresentationLayer.Tests
         {
             this.Close();
         }
+
+        
     }
 }
