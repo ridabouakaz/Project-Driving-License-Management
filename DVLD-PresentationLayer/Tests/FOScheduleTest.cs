@@ -51,7 +51,9 @@ namespace DVLD_PresentationLayer.Tests
        void  _LoadLocalDrivingApplicationInfo()
         {
             _LocalDrivingApplication = clsNewLocalDrivingApplication.FindByLocalDrivingAppLicenseID(_LocalDrivingLicenseApplicationID);
-
+            LocalDrivingApplicationID = _LocalDrivingApplication.ApplicationID.ToString();
+            DClass = clsNewLocalDrivingApplication.GetClassNameById(_LocalDrivingApplication.ApplicationTypeID);
+            NamePerson= _LocalDrivingApplication.ApplicantFullName;
         }
         public FOScheduleTest(clsManageTestTypes.enTestType TestType, int LocalDrivingLicenseApplicationID)
         {

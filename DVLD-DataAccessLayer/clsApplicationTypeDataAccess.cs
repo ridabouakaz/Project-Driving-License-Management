@@ -156,7 +156,7 @@ int ID,
             using (SqlConnection conn = new SqlConnection(clsDataAccessSettings.ConnectionString))
             {
                 string query = @"
-            SELECT  ApplicationTypes.ApplicationTypeTitle
+            SELECT TOP 1 ApplicationTypes.ApplicationTypeTitle
             FROM Applications
             INNER JOIN ApplicationTypes ON Applications.ApplicationTypeID = ApplicationTypes.ApplicationTypeID
             WHERE ApplicationTypes.ApplicationTypeID = @ApplicationTypeID";

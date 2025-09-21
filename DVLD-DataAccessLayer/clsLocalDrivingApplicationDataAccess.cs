@@ -225,5 +225,28 @@ namespace DVLD_DataAccessLayer
             return dt;
 
         }
+        public static string GetClassNameById(int id)
+        {
+            string Title = "";
+            using (SqlConnection conn = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                string query = @"
+              select ClassName  from LocalDrivingLicenseApplications_View where LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", id);
+                    conn.Open();
+
+                    object result = cmd.ExecuteScalar();
+                    if (result != null && result != DBNull.Value)
+                    {
+                        Title = result.ToString();
+                    }
+                }
+            }
+            return Title;
+        }
     }
+}
 }

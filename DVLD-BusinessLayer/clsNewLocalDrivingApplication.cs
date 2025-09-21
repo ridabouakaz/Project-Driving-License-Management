@@ -121,6 +121,9 @@ namespace DVLD_BusinessLayer
             return clsLocalDrivingApplicationDataAccess.GetAllLocalDrivingApplications();
 
         }
-
+        public static string GetClassNameById(int id)
+        {
+            return clsLocalDrivingApplicationDataAccess.GetClassNameById(id);
+        }
     }
 }
