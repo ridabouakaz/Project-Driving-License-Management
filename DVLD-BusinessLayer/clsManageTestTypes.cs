@@ -64,13 +64,17 @@ namespace DVLD_BusinessLayer
                 return null;
         }
         public bool Save()
-        { 
-          return _UpdateTest();
+        {
+            return _UpdateTest();
         }
         public static DataTable GetAllTestTypes()
         {
             return clsTestDataAccess.GetAllTestTypes();
+        }
 
+        public static decimal GetFeesById(int id)
+        {
+            return clsTestDataAccess.GetFeesById(id);
         }
     }
 }

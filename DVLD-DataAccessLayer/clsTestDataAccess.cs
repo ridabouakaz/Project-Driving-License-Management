@@ -168,6 +168,27 @@ int ID,
             return PassedTestCount;
 
         }
+        public static decimal GetFeesById(int id)
+        {
+            decimal fee = 0m;
+            using (SqlConnection conn = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                string query = @"
+             select TestTypeFees from TestTypes where TestTypeID = @TestTypeID";
 
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@TestTypeID", id);
+                    conn.Open();
+
+                    object result = cmd.ExecuteScalar();
+                    if (result != null && result != DBNull.Value)
+                    {
+                        fee = Convert.ToDecimal(result);
+                    }
+                }
+            }
+            return fee;
+        }
     }
 }

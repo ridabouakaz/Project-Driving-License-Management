@@ -1,4 +1,5 @@
 ﻿using DVLD_BusinessLayer;
+using Syncfusion.Windows.Forms.Tools;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static DVLD_BusinessLayer.clsManageTestTypes;
 
 namespace DVLD_PresentationLayer.Tests
 {
@@ -53,7 +55,8 @@ namespace DVLD_PresentationLayer.Tests
             _LocalDrivingApplication = clsNewLocalDrivingApplication.FindByLocalDrivingAppLicenseID(_LocalDrivingLicenseApplicationID);
             LocalDrivingApplicationID = _LocalDrivingApplication.ApplicationID.ToString();
             DClass = clsNewLocalDrivingApplication.GetClassNameById(_LocalDrivingApplication.ApplicationTypeID);
-            NamePerson= _LocalDrivingApplication.ApplicantFullName;
+            NamePerson = _LocalDrivingApplication.ApplicantFullName;
+            FeesTest=clsManageTestTypes.GetFeesById((int)_TestType).ToString();
         }
         public FOScheduleTest(clsManageTestTypes.enTestType TestType, int LocalDrivingLicenseApplicationID)
         {
