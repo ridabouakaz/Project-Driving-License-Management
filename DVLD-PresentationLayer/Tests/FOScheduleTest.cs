@@ -23,7 +23,6 @@ namespace DVLD_PresentationLayer.Tests
             get => LblValueDLAppID.Text.Trim();
             set => LblValueDLAppID.Text = value;
         }
-
         public string DClass
         {
             get => LblValueDClass.Text.Trim();
