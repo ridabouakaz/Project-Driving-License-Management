@@ -47,12 +47,21 @@ namespace DVLD_BusinessLayer
         }
         private bool _AddNewAppointment()
         {
-            //call DataAccess Layer 
             this.TestAppointmentID = clsTestAppointmentDataAccess.AddNewAppointment(
         this.TestTypeID, this.LocalDrivingLicenseApplicationID, this.AppointmentDate, this.PaidFees,
          this.CreatedByUserID, this.IsLocked, this.RetakeTestApplicationID
              );
-            return (this.LocalDrivingLicenseApplicationID != -1);
+            return (this.TestAppointmentID != -1);
+        }
+        private bool _EditTimeAppointment()
+        {
+            //call DataAccess Layer 
+            return clsTestAppointmentDataAccess.EditTimeAppointment(
+                    this.TestAppointmentID,
+                    this.AppointmentDate,
+                    this.CreatedByUserID
+                );
+
         }
     }
 }

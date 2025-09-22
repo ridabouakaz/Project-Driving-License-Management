@@ -12,7 +12,7 @@ namespace DVLD_DataAccessLayer
     {
         public static int AddNewAppointment(
    int TestTypeID, int LocalDrivingLicenseApplicationID, DateTime AppointmentDate,
-   decimal PaidFees, int CreatedByUserID, byte IsLocked,int RetakeTestApplicationID)
+   decimal PaidFees, int CreatedByUserID, byte IsLocked, int RetakeTestApplicationID)
         {
             int TestAppointmentID = -1;
 
@@ -52,6 +52,41 @@ namespace DVLD_DataAccessLayer
                 }
             }
             return TestAppointmentID;
+        }
+
+        public static bool EditTimeAppointment(
+   int TestAppointmentID, DateTime AppointmentDate,
+                int CreatedByUserID
+                )
+        {
+            int rowsAffected = 0;
+
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                string query = @"	UPDATE TestAppointments  
+                         SET AppointmentDate = @AppointmentDate,
+                             CreatedByUserID = @CreatedByUserID
+                            WHERE TestAppointmentID = @TestAppointmentID";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@TestAppointmentID", TestAppointmentID);
+                    command.Parameters.AddWithValue("@AppointmentDate", AppointmentDate);
+                    command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
+
+                    try
+                    {
+                        connection.Open();
+                        rowsAffected = command.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error updating Application: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
+                    }
+                }
+            }
+            return (rowsAffected > 0);
         }
     }
 }
