@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DVLD_DataAccessLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,8 +32,8 @@ namespace DVLD_BusinessLayer
             RetakeTestApplicationID = 0;
         }
 
-        private clsTestAppointment(int TestAppointmentID, int TestTypeID, int LocalDrivingLicenseApplicationID, DateTime  AppointmentDate
-            , decimal PaidFees, int CreatedByUserID, byte  IsLocked, int  RetakeTestApplicationID)
+        private clsTestAppointment(int TestAppointmentID, int TestTypeID, int LocalDrivingLicenseApplicationID, DateTime AppointmentDate
+            , decimal PaidFees, int CreatedByUserID, byte IsLocked, int RetakeTestApplicationID)
         {
             this.TestAppointmentID = TestAppointmentID;
             this.TestTypeID = TestTypeID;
@@ -43,6 +44,15 @@ namespace DVLD_BusinessLayer
             this.CreatedByUserID = CreatedByUserID;
             this.IsLocked = IsLocked;
             this.RetakeTestApplicationID = RetakeTestApplicationID;
+        }
+        private bool _AddNewAppointment()
+        {
+            //call DataAccess Layer 
+            this.TestAppointmentID = clsTestAppointmentDataAccess.AddNewAppointment(
+        this.TestTypeID, this.LocalDrivingLicenseApplicationID, this.AppointmentDate, this.PaidFees,
+         this.CreatedByUserID, this.IsLocked, this.RetakeTestApplicationID
+             );
+            return (this.LocalDrivingLicenseApplicationID != -1);
         }
     }
 }

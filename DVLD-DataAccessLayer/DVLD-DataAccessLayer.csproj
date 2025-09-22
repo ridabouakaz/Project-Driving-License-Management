@@ -164,6 +164,7 @@
   <ItemGroup>
     <Compile Include="clsApplicationDataAccess.cs" />
     <Compile Include="clsLocalDrivingApplicationDataAccess.cs" />
+    <Compile Include="clsTestAppointmentDataAccess.cs" />
     <Compile Include="clsTestDataAccess.cs" />
     <Compile Include="clsApplicationTypeDataAccess.cs" />
     <Compile Include="clsCountryData.cs" />

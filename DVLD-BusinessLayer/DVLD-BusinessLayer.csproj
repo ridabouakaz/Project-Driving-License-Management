@@ -51,6 +51,7 @@
     <Compile Include="clsNewLocalDrivingApplication.cs" />
     <Compile Include="clsPerson.cs" />
     <Compile Include="clsPersonFilter.cs" />
+    <Compile Include="clsTestAppointment.cs" />
     <Compile Include="clsUser.cs" />
     <Compile Include="clsUserFilter.cs" />
     <Compile Include="LocalDrivingApplicationFilter.cs" />

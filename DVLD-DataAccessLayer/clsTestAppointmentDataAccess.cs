@@ -1,12 +1,57 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DVLD_DataAccessLayer
 {
     public class clsTestAppointmentDataAccess
     {
+        public static int AddNewAppointment(
+   int TestTypeID, int LocalDrivingLicenseApplicationID, DateTime AppointmentDate,
+   decimal PaidFees, int CreatedByUserID, byte IsLocked,int RetakeTestApplicationID)
+        {
+            int TestAppointmentID = -1;
+
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                string query = @"INSERT INTO TestAppointments 
+                        (TestTypeID, LocalDrivingLicenseApplicationID, AppointmentDate, PaidFees, CreatedByUserID, 
+                         IsLocked, RetakeTestApplicationID)
+                        VALUES 
+                        (@TestTypeID, @LocalDrivingLicenseApplicationID, @AppointmentDate, @PaidFees, @CreatedByUserID, 
+                         @IsLocked, @RetakeTestApplicationID);
+                        SELECT SCOPE_IDENTITY();";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@TestTypeID", TestTypeID);
+                    command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LocalDrivingLicenseApplicationID);
+                    command.Parameters.AddWithValue("@AppointmentDate", AppointmentDate);
+                    command.Parameters.AddWithValue("@PaidFees", PaidFees);
+                    command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
+                    command.Parameters.AddWithValue("@IsLocked", IsLocked);
+                    command.Parameters.AddWithValue("@RetakeTestApplicationID", RetakeTestApplicationID);
+                    try
+                    {
+                        connection.Open();
+                        object result = command.ExecuteScalar();
+
+                        if (result != null && int.TryParse(result.ToString(), out int insertedID))
+                        {
+                            TestAppointmentID = insertedID;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error adding new Application: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            return TestAppointmentID;
+        }
     }
 }
