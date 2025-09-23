@@ -19,7 +19,7 @@ namespace DVLD_BusinessLayer
         public decimal PaidFees { set; get; }
         public int CreatedByUserID { set; get; }
         public byte IsLocked { set; get; }
-        public int RetakeTestApplicationID { set; get; }
+        public int? RetakeTestApplicationID { set; get; }
 
         public clsTestAppointment()
         {
@@ -33,7 +33,6 @@ namespace DVLD_BusinessLayer
             IsLocked = 0;
             RetakeTestApplicationID = 0;
         }
-
         private clsTestAppointment(int TestAppointmentID, int TestTypeID, int LocalDrivingLicenseApplicationID, DateTime AppointmentDate
             , decimal PaidFees, int CreatedByUserID, byte IsLocked, int RetakeTestApplicationID)
         {

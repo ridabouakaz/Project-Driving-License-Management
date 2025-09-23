@@ -12,7 +12,7 @@ namespace DVLD_DataAccessLayer
     {
         public static int AddNewAppointment(
    int TestTypeID, int LocalDrivingLicenseApplicationID, DateTime AppointmentDate,
-   decimal PaidFees, int CreatedByUserID, byte IsLocked, int RetakeTestApplicationID)
+   decimal PaidFees, int CreatedByUserID, byte IsLocked, int? RetakeTestApplicationID)
         {
             int TestAppointmentID = -1;
 

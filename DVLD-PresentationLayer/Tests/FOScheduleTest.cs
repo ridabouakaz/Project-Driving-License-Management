@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.ExceptionServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -107,8 +108,8 @@ namespace DVLD_PresentationLayer.Tests
             _Appointment.AppointmentDate = DateOFAppointment;
             _Appointment.PaidFees = clsManageTestTypes.GetFeesById((int)_TestType);
             _Appointment.CreatedByUserID = _LocalDrivingApplication.CreatedByUserID;
-            _Appointment.IsLocked = Password.Trim();
-            _Appointment.RetakeTestApplicationID =null;
+            _Appointment.IsLocked = 0;
+            _Appointment.RetakeTestApplicationID = null;
             if (_Appointment.Save())
             {
                 MessageBox.Show("✅ Data Saved Successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
