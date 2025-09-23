@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static DVLD_BusinessLayer.clsManageTestTypes;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace DVLD_PresentationLayer.Tests
 {
@@ -18,6 +19,9 @@ namespace DVLD_PresentationLayer.Tests
         private clsManageTestTypes.enTestType _TestType = clsManageTestTypes.enTestType.VisionTest;
         private clsNewLocalDrivingApplication _LocalDrivingApplication;
         private int _LocalDrivingLicenseApplicationID;
+        private clsTestAppointment _Appointment;
+        public enum enMode { AddNew = 0, Update = 1 };
+        private enMode _Mode; 
         public string LocalDrivingApplicationID
         {
             get => LblValueDLAppID.Text.Trim();
@@ -33,10 +37,10 @@ namespace DVLD_PresentationLayer.Tests
             get => LblValueName.Text.Trim();
             set => LblValueName.Text = value;
         }
-        public string DateOFAppointment
+        public DateTime DateOFAppointment
         {
-            get => DTPDate.Value.ToString("yyyy-MM-dd");
-            set => DTPDate.Value = DateTime.Parse(value);
+            get => DTPDate.Value;
+            set => DTPDate.Value = value;
         }
         public string FeesTest
         {
@@ -95,7 +99,26 @@ namespace DVLD_PresentationLayer.Tests
         {
             this.Close();
         }
+        private void BtnSave_Click(object sender, EventArgs e)
+        {
 
-        
+            _Appointment.TestTypeID = (int)_TestType;
+            _Appointment.LocalDrivingLicenseApplicationID = _LocalDrivingLicenseApplicationID;
+            _Appointment.AppointmentDate = DateOFAppointment;
+            _Appointment.PaidFees = clsManageTestTypes.GetFeesById((int)_TestType);
+            _Appointment.CreatedByUserID = _LocalDrivingApplication.CreatedByUserID;
+            _Appointment.IsLocked = Password.Trim();
+            _Appointment.RetakeTestApplicationID =null;
+            if (_Appointment.Save())
+            {
+                MessageBox.Show("✅ Data Saved Successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                _Mode = enMode.Update;
+            }
+            else
+            {
+                MessageBox.Show("❌ Error: Data was not saved successfully.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            this.Close();
+        }
     }
 }

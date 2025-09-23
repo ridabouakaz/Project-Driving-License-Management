@@ -249,6 +249,7 @@
             this.BtnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnSave.UseVisualStyleBackColor = false;
+            this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // DTPDate
             // 

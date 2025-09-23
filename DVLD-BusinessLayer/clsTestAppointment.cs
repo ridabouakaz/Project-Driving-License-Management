@@ -10,7 +10,9 @@ namespace DVLD_BusinessLayer
 {
     public class clsTestAppointment
     {
-        public int TestAppointmentID { set; get; }  
+        public enum enMode { AddNew = 0, Update = 1 };
+        public enMode Mode = enMode.AddNew;
+        public int TestAppointmentID { set; get; }
         public int TestTypeID { set; get; }
         public int LocalDrivingLicenseApplicationID { set; get; }
         public DateTime AppointmentDate { set; get; }
@@ -60,8 +62,31 @@ namespace DVLD_BusinessLayer
                     this.TestAppointmentID,
                     this.AppointmentDate,
                     this.CreatedByUserID
-                );
+             );
 
+        }
+        public bool Save()
+        {
+            switch (Mode)
+            {
+                case enMode.AddNew:
+                    if (_AddNewAppointment())
+                    {
+
+                        Mode = enMode.Update;
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+                case enMode.Update:
+
+                    return _EditTimeAppointment();
+
+            }
+            return false;
         }
     }
 }
