@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static DVLD_BusinessLayer.clsManageTestTypes;
+using static DVLDShared.DVLDShared;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace DVLD_PresentationLayer.Tests
@@ -108,7 +109,7 @@ namespace DVLD_PresentationLayer.Tests
             _Appointment.AppointmentDate = DateOFAppointment;
             _Appointment.PaidFees = clsManageTestTypes.GetFeesById((int)_TestType);
             _Appointment.CreatedByUserID = _LocalDrivingApplication.CreatedByUserID;
-            _Appointment.IsLocked = 0;
+            _Appointment.IsLocked = IsLocked.No;
             _Appointment.RetakeTestApplicationID = null;
             if (_Appointment.Save())
             {

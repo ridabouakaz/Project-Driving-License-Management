@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static DVLDShared.DVLDShared;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace DVLD_BusinessLayer
@@ -18,7 +19,7 @@ namespace DVLD_BusinessLayer
         public DateTime AppointmentDate { set; get; }
         public decimal PaidFees { set; get; }
         public int CreatedByUserID { set; get; }
-        public byte IsLocked { set; get; }
+        public IsLocked IsLocked { set; get; }
         public int? RetakeTestApplicationID { set; get; }
 
         public clsTestAppointment()
@@ -34,7 +35,7 @@ namespace DVLD_BusinessLayer
             RetakeTestApplicationID = 0;
         }
         private clsTestAppointment(int TestAppointmentID, int TestTypeID, int LocalDrivingLicenseApplicationID, DateTime AppointmentDate
-            , decimal PaidFees, int CreatedByUserID, byte IsLocked, int RetakeTestApplicationID)
+            , decimal PaidFees, int CreatedByUserID, IsLocked IsLocked, int RetakeTestApplicationID)
         {
             this.TestAppointmentID = TestAppointmentID;
             this.TestTypeID = TestTypeID;

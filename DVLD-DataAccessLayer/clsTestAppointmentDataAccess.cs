@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static DVLDShared.DVLDShared;
 
 namespace DVLD_DataAccessLayer
 {
@@ -12,7 +14,7 @@ namespace DVLD_DataAccessLayer
     {
         public static int AddNewAppointment(
    int TestTypeID, int LocalDrivingLicenseApplicationID, DateTime AppointmentDate,
-   decimal PaidFees, int CreatedByUserID, byte IsLocked, int? RetakeTestApplicationID)
+   decimal PaidFees, int CreatedByUserID, IsLocked IsLocked, int? RetakeTestApplicationID)
         {
             int TestAppointmentID = -1;
 
@@ -87,6 +89,45 @@ namespace DVLD_DataAccessLayer
                 }
             }
             return (rowsAffected > 0);
+        }
+        public static DataTable GetAllAppointments()
+        {
+
+            DataTable dt = new DataTable();
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+
+            string query = "\tselect * from TestAppointments\r\n";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            try
+            {
+                connection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+
+                {
+                    dt.Load(reader);
+                }
+
+                reader.Close();
+
+
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error retrieving Users: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return dt;
+
         }
     }
 }

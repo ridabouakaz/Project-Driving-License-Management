@@ -43,7 +43,7 @@ namespace DVLD_PresentationLayer
             get => CBIsActive.Checked ? ActiveStatus.Yes : ActiveStatus.No;
             set
             {
-                              CBIsActive.Checked = (value == ActiveStatus.Yes);
+               CBIsActive.Checked = (value == ActiveStatus.Yes);
             }
         }
         public FOAddEditUserInfo()
