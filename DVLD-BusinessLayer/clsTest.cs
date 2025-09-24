@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DVLD_DataAccessLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,10 +15,9 @@ namespace DVLD_BusinessLayer
         public string Notes { set; get; }
         public int CreatedByUserID { set; get; }
 
-
-
-
-
-
+        public static bool  HasPersonAlreadyFailedTest(int TestTypeID, int LocalDrivingLicenseApplicationID)
+        {
+            return clsTestDataAccess.HasPersonAlreadyFailedTest(TestTypeID, LocalDrivingLicenseApplicationID);
+        }
     }
 }

@@ -22,6 +22,7 @@ namespace DVLD_PresentationLayer.Tests
         private clsNewLocalDrivingApplication _LocalDrivingApplication;
         private int _LocalDrivingLicenseApplicationID;
         private clsTestAppointment _Appointment;
+        private bool _HasPersonAlreadyFailedTest;
         public enum enMode { AddNew = 0, Update = 1 };
         private enMode _Mode; 
         public string LocalDrivingApplicationID
@@ -61,7 +62,8 @@ namespace DVLD_PresentationLayer.Tests
             LocalDrivingApplicationID = _LocalDrivingApplication.ApplicationID.ToString();
             DClass = clsNewLocalDrivingApplication.GetClassNameById(_LocalDrivingApplication.ApplicationTypeID);
             NamePerson = _LocalDrivingApplication.ApplicantFullName;
-            FeesTest=clsManageTestTypes.GetFeesById((int)_TestType).ToString();
+            FeesTest = clsManageTestTypes.GetFeesById((int)_TestType).ToString();
+            _HasPersonAlreadyFailedTest= clsTest.HasPersonAlreadyFailedTest((int)_TestType, _LocalDrivingLicenseApplicationID);
         }
         public FOScheduleTest(clsManageTestTypes.enTestType TestType, int LocalDrivingLicenseApplicationID)
         {
