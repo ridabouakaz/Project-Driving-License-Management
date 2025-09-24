@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static DVLD_BusinessLayer.clsManageTestTypes;
 using static DVLDShared.DVLDShared;
+using static System.Net.Mime.MediaTypeNames;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace DVLD_PresentationLayer.Tests
@@ -22,6 +23,7 @@ namespace DVLD_PresentationLayer.Tests
         private clsNewLocalDrivingApplication _LocalDrivingApplication;
         private int _LocalDrivingLicenseApplicationID;
         private clsTestAppointment _Appointment;
+        private clsApplications _RetakeTest;
         private bool _HasPersonAlreadyFailedTest;
         public enum enMode { AddNew = 0, Update = 1 };
         private enMode _Mode; 
@@ -63,7 +65,15 @@ namespace DVLD_PresentationLayer.Tests
             DClass = clsNewLocalDrivingApplication.GetClassNameById(_LocalDrivingApplication.ApplicationTypeID);
             NamePerson = _LocalDrivingApplication.ApplicantFullName;
             FeesTest = clsManageTestTypes.GetFeesById((int)_TestType).ToString();
-            _HasPersonAlreadyFailedTest= clsTest.HasPersonAlreadyFailedTest((int)_TestType, _LocalDrivingLicenseApplicationID);
+            _HasPersonAlreadyFailedTest = clsTest.HasPersonAlreadyFailedTest((int)_TestType, _LocalDrivingLicenseApplicationID);
+            if (_HasPersonAlreadyFailedTest)
+            {
+                LblScheduleTest.Text = "Schedule Retake Test";
+                _RetakeTest = _LocalDrivingApplication;
+                _RetakeTest.ApplicationTypeID = 7;
+                _RetakeTest.PaidFees = clsManageApplicationTypes.GetFeesById(_RetakeTest.ApplicationTypeID);
+                _RetakeTest.Save();
+            }
         }
         public FOScheduleTest(clsManageTestTypes.enTestType TestType, int LocalDrivingLicenseApplicationID)
         {
@@ -112,7 +122,10 @@ namespace DVLD_PresentationLayer.Tests
             _Appointment.PaidFees = clsManageTestTypes.GetFeesById((int)_TestType);
             _Appointment.CreatedByUserID = _LocalDrivingApplication.CreatedByUserID;
             _Appointment.IsLocked = IsLocked.No;
-            _Appointment.RetakeTestApplicationID = null;
+            if (_HasPersonAlreadyFailedTest)
+                _Appointment.RetakeTestApplicationID = _LocalDrivingLicenseApplicationID;
+            else
+                _Appointment.RetakeTestApplicationID = null;
             if (_Appointment.Save())
             {
                 MessageBox.Show("✅ Data Saved Successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
