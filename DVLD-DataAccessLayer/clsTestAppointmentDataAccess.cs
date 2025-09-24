@@ -113,8 +113,6 @@ namespace DVLD_DataAccessLayer
                 }
 
                 reader.Close();
-
-
             }
 
             catch (Exception ex)

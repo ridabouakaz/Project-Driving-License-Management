@@ -71,7 +71,7 @@ int ID,
                     command.Parameters.AddWithValue("@TestTypeTitle", TestTypeTitle);
                     command.Parameters.AddWithValue("@TestTypeDescription", TestTypeDescription);
                     command.Parameters.AddWithValue("@TestTypeFees", TestTypeFees);
-   
+
                     try
                     {
                         connection.Open();
@@ -189,6 +189,40 @@ int ID,
                 }
             }
             return fee;
+        }
+        public static bool HasPersonAlreadyFailedTest(int TestTypeID, int LocalDrivingLicenseApplicationID)
+        {
+            bool isFound = false;
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+
+            string query = "select Found=1 from TestAppointments inner join Tests on TestAppointments.TestAppointmentID = Tests.TestAppointmentID where TestTypeID=@TestTypeID and TestResult=0 and LocalDrivingLicenseApplicationID=@LocalDrivingLicenseApplicationID";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LocalDrivingLicenseApplicationID);
+            command.Parameters.AddWithValue("@TestTypeID", TestTypeID);
+
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                isFound = reader.HasRows;
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error checking if Applications exists: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                isFound = false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return isFound;
         }
     }
 }
