@@ -123,7 +123,7 @@ namespace DVLD_PresentationLayer.Tests
             _Appointment.CreatedByUserID = _LocalDrivingApplication.CreatedByUserID;
             _Appointment.IsLocked = IsLocked.No;
             if (_HasPersonAlreadyFailedTest)
-                _Appointment.RetakeTestApplicationID = _LocalDrivingLicenseApplicationID;
+                _Appointment.RetakeTestApplicationID = _RetakeTest.ApplicationID;
             else
                 _Appointment.RetakeTestApplicationID = null;
             if (_Appointment.Save())

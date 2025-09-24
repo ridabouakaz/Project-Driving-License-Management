@@ -14,7 +14,6 @@ namespace DVLD_BusinessLayer
         public int TestResult { set; get; }
         public string Notes { set; get; }
         public int CreatedByUserID { set; get; }
-
         public static bool  HasPersonAlreadyFailedTest(int TestTypeID, int LocalDrivingLicenseApplicationID)
         {
             return clsTestDataAccess.HasPersonAlreadyFailedTest(TestTypeID, LocalDrivingLicenseApplicationID);
