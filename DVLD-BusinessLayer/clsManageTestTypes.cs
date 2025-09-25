@@ -29,7 +29,7 @@ namespace DVLD_BusinessLayer
         private bool _UpdateTest()
         {
             //call DataAccess Layer 
-            return clsTestDataAccess.UpdateTest(
+            return clsTestTypesDataAccess.UpdateTest(
                     (int)this.ID,
                     this.TestTypeTitle,
                     this.TestTypeDescription,
@@ -44,7 +44,7 @@ namespace DVLD_BusinessLayer
             string TestTypeDescription = "";
             decimal TestTypeFees = 1;
 
-            bool isFound = clsTestDataAccess.GetTestInfoByID(
+            bool isFound = clsTestTypesDataAccess.GetTestInfoByID(
                 (int)TestTypeID,
                 ref TestTypeTitle,
                 ref TestTypeDescription,
@@ -69,12 +69,12 @@ namespace DVLD_BusinessLayer
         }
         public static DataTable GetAllTestTypes()
         {
-            return clsTestDataAccess.GetAllTestTypes();
+            return clsTestTypesDataAccess.GetAllTestTypes();
         }
 
         public static decimal GetFeesById(int id)
         {
-            return clsTestDataAccess.GetFeesById(id);
+            return clsTestTypesDataAccess.GetFeesById(id);
         }
     }
 }

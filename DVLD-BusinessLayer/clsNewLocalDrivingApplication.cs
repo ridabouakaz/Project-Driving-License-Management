@@ -110,7 +110,7 @@ namespace DVLD_BusinessLayer
         }
         public byte GetPassedTestCount()
         {
-            return clsTestDataAccess.GetPassedTestCount(this.LocalDrivingLicenseApplicationID);
+            return clsTestTypesDataAccess.GetPassedTestCount(this.LocalDrivingLicenseApplicationID);
         }
         public bool Save()
         {

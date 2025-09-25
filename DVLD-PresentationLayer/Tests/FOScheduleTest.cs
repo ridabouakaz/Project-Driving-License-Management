@@ -66,6 +66,7 @@ namespace DVLD_PresentationLayer.Tests
             NamePerson = _LocalDrivingApplication.ApplicantFullName;
             FeesTest = clsManageTestTypes.GetFeesById((int)_TestType).ToString();
             _HasPersonAlreadyFailedTest = clsTest.HasPersonAlreadyFailedTest((int)_TestType, _LocalDrivingLicenseApplicationID);
+            GBRetakeTestInfo.Visible = _HasPersonAlreadyFailedTest;
             if (_HasPersonAlreadyFailedTest)
             {
                 LblScheduleTest.Text = "Schedule Retake Test";
