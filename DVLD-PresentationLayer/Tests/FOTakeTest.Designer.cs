@@ -33,7 +33,6 @@
             this.PBTestID = new System.Windows.Forms.PictureBox();
             this.LblValueTestID = new System.Windows.Forms.Label();
             this.LblTestID = new System.Windows.Forms.Label();
-            this.DTPDate = new System.Windows.Forms.DateTimePicker();
             this.PBDLAppID = new System.Windows.Forms.PictureBox();
             this.LblFees = new System.Windows.Forms.Label();
             this.LblScheduleTest = new System.Windows.Forms.Label();
@@ -63,6 +62,7 @@
             this.plResult = new System.Windows.Forms.Panel();
             this.RBFail = new System.Windows.Forms.RadioButton();
             this.RBPass = new System.Windows.Forms.RadioButton();
+            this.LblValueDate = new System.Windows.Forms.Label();
             this.GBUserControlDetailesApplication.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBTestID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBDLAppID)).BeginInit();
@@ -80,10 +80,10 @@
             // GBUserControlDetailesApplication
             // 
             this.GBUserControlDetailesApplication.BackColor = System.Drawing.Color.White;
+            this.GBUserControlDetailesApplication.Controls.Add(this.LblValueDate);
             this.GBUserControlDetailesApplication.Controls.Add(this.PBTestID);
             this.GBUserControlDetailesApplication.Controls.Add(this.LblValueTestID);
             this.GBUserControlDetailesApplication.Controls.Add(this.LblTestID);
-            this.GBUserControlDetailesApplication.Controls.Add(this.DTPDate);
             this.GBUserControlDetailesApplication.Controls.Add(this.PBDLAppID);
             this.GBUserControlDetailesApplication.Controls.Add(this.LblFees);
             this.GBUserControlDetailesApplication.Controls.Add(this.LblScheduleTest);
@@ -143,18 +143,6 @@
             this.LblTestID.Size = new System.Drawing.Size(82, 28);
             this.LblTestID.TabIndex = 53;
             this.LblTestID.Text = "Test ID:";
-            // 
-            // DTPDate
-            // 
-            this.DTPDate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.DTPDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DTPDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.DTPDate.Location = new System.Drawing.Point(249, 422);
-            this.DTPDate.MaxDate = new System.DateTime(2100, 1, 1, 0, 0, 0, 0);
-            this.DTPDate.Name = "DTPDate";
-            this.DTPDate.Size = new System.Drawing.Size(146, 27);
-            this.DTPDate.TabIndex = 52;
-            this.DTPDate.Value = new System.DateTime(2025, 7, 29, 0, 0, 0, 0);
             // 
             // PBDLAppID
             // 
@@ -508,6 +496,18 @@
             this.RBPass.Text = "Pass";
             this.RBPass.UseVisualStyleBackColor = true;
             // 
+            // LblValueDate
+            // 
+            this.LblValueDate.AutoSize = true;
+            this.LblValueDate.BackColor = System.Drawing.Color.Transparent;
+            this.LblValueDate.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.LblValueDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblValueDate.Location = new System.Drawing.Point(244, 424);
+            this.LblValueDate.Name = "LblValueDate";
+            this.LblValueDate.Size = new System.Drawing.Size(90, 25);
+            this.LblValueDate.TabIndex = 57;
+            this.LblValueDate.Text = "[????????]";
+            // 
             // FOTakeTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -567,7 +567,6 @@
         private System.Windows.Forms.Label LblScheduleTest;
         private System.Windows.Forms.Label LblFees;
         private System.Windows.Forms.PictureBox PBDLAppID;
-        private System.Windows.Forms.DateTimePicker DTPDate;
         private System.Windows.Forms.Button BtnSave;
         private System.Windows.Forms.Button BtnClose;
         private System.Windows.Forms.Label LblValueTestID;
@@ -581,5 +580,6 @@
         private System.Windows.Forms.Panel plResult;
         private System.Windows.Forms.RadioButton RBFail;
         private System.Windows.Forms.RadioButton RBPass;
+        private System.Windows.Forms.Label LblValueDate;
     }
 }

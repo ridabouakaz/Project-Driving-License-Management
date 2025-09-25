@@ -34,10 +34,10 @@ namespace DVLD_PresentationLayer.Tests
             get => LblValueName.Text.Trim();
             set => LblValueName.Text = value;
         }
-        public DateTime DateOFAppointment
+        public string DateOFAppointment
         {
-            get => DTPDate.Value;
-            set => DTPDate.Value = value;
+            get => LblValueDate.Text.Trim();
+            set => LblValueDate.Text = value;
         }
         public string FeesTest
         {

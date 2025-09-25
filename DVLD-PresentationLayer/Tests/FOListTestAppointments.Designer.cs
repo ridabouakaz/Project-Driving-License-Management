@@ -275,6 +275,7 @@ namespace DVLD_PresentationLayer.Tests
             this.BtnAddAppointments.Size = new System.Drawing.Size(49, 40);
             this.BtnAddAppointments.TabIndex = 12;
             this.BtnAddAppointments.UseVisualStyleBackColor = false;
+            this.BtnAddAppointments.Click += new System.EventHandler(this.BtnAddAppointments_Click);
             // 
             // ctrDrivingLicenseApplicationInfo2
             // 
@@ -303,6 +304,7 @@ namespace DVLD_PresentationLayer.Tests
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "List Test Appointments";
+            this.Load += new System.EventHandler(this.FOListTestAppointments_Load);
             this.SMItemCRUDUsers.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PBManageTestAppointments)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGViewShowInformation)).EndInit();
