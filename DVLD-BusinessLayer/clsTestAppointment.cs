@@ -56,6 +56,14 @@ namespace DVLD_BusinessLayer
              );
             return (this.TestAppointmentID != -1);
         }
+        public bool LockedAppointment()
+        {
+            return clsTestAppointmentDataAccess.LockedAppointment(
+                    this.TestAppointmentID,
+                    this.IsLocked,
+                    this.CreatedByUserID
+             );
+        }
         private bool _EditTimeAppointment()
         {
             //call DataAccess Layer 

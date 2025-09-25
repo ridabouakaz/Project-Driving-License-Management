@@ -30,7 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FOTakeTest));
             this.GBUserControlDetailesApplication = new System.Windows.Forms.GroupBox();
-            this.BtnSave = new System.Windows.Forms.Button();
+            this.PBTestID = new System.Windows.Forms.PictureBox();
+            this.LblValueTestID = new System.Windows.Forms.Label();
+            this.LblTestID = new System.Windows.Forms.Label();
             this.DTPDate = new System.Windows.Forms.DateTimePicker();
             this.PBDLAppID = new System.Windows.Forms.PictureBox();
             this.LblFees = new System.Windows.Forms.Label();
@@ -51,10 +53,9 @@
             this.LblTrial = new System.Windows.Forms.Label();
             this.LblName = new System.Windows.Forms.Label();
             this.LblDClass = new System.Windows.Forms.Label();
+            this.BtnSave = new System.Windows.Forms.Button();
             this.BtnClose = new System.Windows.Forms.Button();
-            this.LblTestID = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.LblValueTestID = new System.Windows.Forms.Label();
             this.TBNotes = new System.Windows.Forms.TextBox();
             this.LblNotes = new System.Windows.Forms.Label();
             this.LblResult = new System.Windows.Forms.Label();
@@ -62,8 +63,8 @@
             this.plResult = new System.Windows.Forms.Panel();
             this.RBFail = new System.Windows.Forms.RadioButton();
             this.RBPass = new System.Windows.Forms.RadioButton();
-            this.PBTestID = new System.Windows.Forms.PictureBox();
             this.GBUserControlDetailesApplication.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PBTestID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBDLAppID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBManageTestAppointments)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBDClass)).BeginInit();
@@ -74,7 +75,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.plResult.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PBTestID)).BeginInit();
             this.SuspendLayout();
             // 
             // GBUserControlDetailesApplication
@@ -111,27 +111,38 @@
             this.GBUserControlDetailesApplication.TabStop = false;
             this.GBUserControlDetailesApplication.Text = "Written Test";
             // 
-            // BtnSave
+            // PBTestID
             // 
-            this.BtnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnSave.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.BtnSave.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.BtnSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.BtnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
-            this.BtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSave.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.BtnSave.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BtnSave.Image = ((System.Drawing.Image)(resources.GetObject("BtnSave.Image")));
-            this.BtnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnSave.Location = new System.Drawing.Point(415, 776);
-            this.BtnSave.Name = "BtnSave";
-            this.BtnSave.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.BtnSave.Size = new System.Drawing.Size(155, 50);
-            this.BtnSave.TabIndex = 50;
-            this.BtnSave.Text = "Save";
-            this.BtnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnSave.UseVisualStyleBackColor = false;
+            this.PBTestID.Image = ((System.Drawing.Image)(resources.GetObject("PBTestID.Image")));
+            this.PBTestID.Location = new System.Drawing.Point(162, 493);
+            this.PBTestID.Name = "PBTestID";
+            this.PBTestID.Size = new System.Drawing.Size(40, 32);
+            this.PBTestID.TabIndex = 56;
+            this.PBTestID.TabStop = false;
+            // 
+            // LblValueTestID
+            // 
+            this.LblValueTestID.AutoSize = true;
+            this.LblValueTestID.BackColor = System.Drawing.Color.Transparent;
+            this.LblValueTestID.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.LblValueTestID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblValueTestID.Location = new System.Drawing.Point(244, 493);
+            this.LblValueTestID.Name = "LblValueTestID";
+            this.LblValueTestID.Size = new System.Drawing.Size(90, 25);
+            this.LblValueTestID.TabIndex = 55;
+            this.LblValueTestID.Text = "[????????]";
+            // 
+            // LblTestID
+            // 
+            this.LblTestID.AutoSize = true;
+            this.LblTestID.BackColor = System.Drawing.Color.Transparent;
+            this.LblTestID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.LblTestID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblTestID.Location = new System.Drawing.Point(57, 490);
+            this.LblTestID.Name = "LblTestID";
+            this.LblTestID.Size = new System.Drawing.Size(82, 28);
+            this.LblTestID.TabIndex = 53;
+            this.LblTestID.Text = "Test ID:";
             // 
             // DTPDate
             // 
@@ -364,6 +375,29 @@
             this.LblDClass.TabIndex = 0;
             this.LblDClass.Text = "D.Class:";
             // 
+            // BtnSave
+            // 
+            this.BtnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnSave.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnSave.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BtnSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.BtnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.BtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSave.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.BtnSave.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BtnSave.Image = ((System.Drawing.Image)(resources.GetObject("BtnSave.Image")));
+            this.BtnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnSave.Location = new System.Drawing.Point(415, 776);
+            this.BtnSave.Name = "BtnSave";
+            this.BtnSave.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.BtnSave.Size = new System.Drawing.Size(155, 50);
+            this.BtnSave.TabIndex = 50;
+            this.BtnSave.Text = "Save";
+            this.BtnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnSave.UseVisualStyleBackColor = false;
+            this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
+            // 
             // BtnClose
             // 
             this.BtnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -387,18 +421,6 @@
             this.BtnClose.UseVisualStyleBackColor = false;
             this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
-            // LblTestID
-            // 
-            this.LblTestID.AutoSize = true;
-            this.LblTestID.BackColor = System.Drawing.Color.Transparent;
-            this.LblTestID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.LblTestID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblTestID.Location = new System.Drawing.Point(57, 490);
-            this.LblTestID.Name = "LblTestID";
-            this.LblTestID.Size = new System.Drawing.Size(82, 28);
-            this.LblTestID.TabIndex = 53;
-            this.LblTestID.Text = "Test ID:";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -407,18 +429,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(40, 32);
             this.pictureBox1.TabIndex = 54;
             this.pictureBox1.TabStop = false;
-            // 
-            // LblValueTestID
-            // 
-            this.LblValueTestID.AutoSize = true;
-            this.LblValueTestID.BackColor = System.Drawing.Color.Transparent;
-            this.LblValueTestID.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.LblValueTestID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblValueTestID.Location = new System.Drawing.Point(244, 493);
-            this.LblValueTestID.Name = "LblValueTestID";
-            this.LblValueTestID.Size = new System.Drawing.Size(90, 25);
-            this.LblValueTestID.TabIndex = 55;
-            this.LblValueTestID.Text = "[????????]";
             // 
             // TBNotes
             // 
@@ -498,15 +508,6 @@
             this.RBPass.Text = "Pass";
             this.RBPass.UseVisualStyleBackColor = true;
             // 
-            // PBTestID
-            // 
-            this.PBTestID.Image = ((System.Drawing.Image)(resources.GetObject("PBTestID.Image")));
-            this.PBTestID.Location = new System.Drawing.Point(162, 493);
-            this.PBTestID.Name = "PBTestID";
-            this.PBTestID.Size = new System.Drawing.Size(40, 32);
-            this.PBTestID.TabIndex = 56;
-            this.PBTestID.TabStop = false;
-            // 
             // FOTakeTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -527,6 +528,7 @@
             this.Text = "Schedule Test";
             this.GBUserControlDetailesApplication.ResumeLayout(false);
             this.GBUserControlDetailesApplication.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PBTestID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBDLAppID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBManageTestAppointments)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBDClass)).EndInit();
@@ -538,7 +540,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.plResult.ResumeLayout(false);
             this.plResult.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PBTestID)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

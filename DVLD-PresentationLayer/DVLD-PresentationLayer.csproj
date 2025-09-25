@@ -123,6 +123,12 @@
     <Compile Include="Tests\FOScheduleTest.Designer.cs">
       <DependentUpon>FOScheduleTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tests\FOTakeTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tests\FOTakeTest.Designer.cs">
+      <DependentUpon>FOTakeTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Users\Control\CtrDetailsUser.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -242,6 +248,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tests\FOScheduleTest.resx">
       <DependentUpon>FOScheduleTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tests\FOTakeTest.resx">
+      <DependentUpon>FOTakeTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users\Control\CtrDetailsUser.resx">
       <DependentUpon>CtrDetailsUser.cs</DependentUpon>

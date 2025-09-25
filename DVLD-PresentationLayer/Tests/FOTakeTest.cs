@@ -16,10 +16,9 @@ namespace DVLD_PresentationLayer.Tests
     {
         private clsManageTestTypes.enTestType _TestType = clsManageTestTypes.enTestType.VisionTest;
         private clsNewLocalDrivingApplication _LocalDrivingApplication;
-        private int _LocalDrivingLicenseApplicationID;
         private clsTestAppointment _Appointment;
-        private clsApplications _RetakeTest;
-        private bool _HasPersonAlreadyFailedTest;
+        private int _LocalDrivingLicenseApplicationID;
+        private clsTest _Test;
         public string LocalDrivingApplicationID
         {
             get => LblValueDLAppID.Text.Trim();
@@ -50,6 +49,11 @@ namespace DVLD_PresentationLayer.Tests
             get => LblValueTestID.Text.Trim();
             set => LblValueTestID.Text = value;
         }
+        public string Notes
+        {
+            get => TBNotes.Text.Trim();
+            set => TBNotes.Text = value;
+        }
         public Result ResultTest    
         {
             get => RBPass.Checked ? Result.Pass : Result.Fail;
@@ -61,10 +65,11 @@ namespace DVLD_PresentationLayer.Tests
                     RBFail.Checked = true;
             }
         }
-        public FOTakeTest(clsManageTestTypes.enTestType TestType)
+        public FOTakeTest(clsManageTestTypes.enTestType TestType, clsTestAppointment Appointment)
         {
             InitializeComponent();
             _TestType = TestType;
+            _Appointment = Appointment;
             _LoadTestTypeImageAndTitle();
         }
         private void _LoadTestTypeImageAndTitle()
@@ -94,6 +99,25 @@ namespace DVLD_PresentationLayer.Tests
         private void BtnClose_Click(object sender, EventArgs e)
         {
             this.Close();   
+        }
+
+        private void BtnSave_Click(object sender, EventArgs e)
+        {
+
+            _Test.TestResult = ResultTest;
+            _Test.Notes = Notes;
+            _Test.CreatedByUserID = _Appointment.CreatedByUserID;
+            _Test.TestAppointmentID= _Appointment.TestAppointmentID;
+            _Appointment.IsLocked = IsLocked.Yes;
+            if (_Test.Save() && _Appointment.LockedAppointment())
+            {
+                MessageBox.Show("✅ Data Saved Successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("❌ Error: Data was not saved successfully.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            this.Close();
         }
     }
 }

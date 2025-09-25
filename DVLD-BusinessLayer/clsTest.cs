@@ -12,7 +12,7 @@ namespace DVLD_BusinessLayer
     {
         public int TestID { set; get; }
         public int TestAppointmentID { set; get; }
-        public byte TestResult { set; get; }
+        public Result TestResult { set; get; }
         public string Notes { set; get; }
         public int CreatedByUserID { set; get; }
 

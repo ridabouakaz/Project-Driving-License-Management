@@ -55,7 +55,40 @@ namespace DVLD_DataAccessLayer
             }
             return TestAppointmentID;
         }
+        public static bool LockedAppointment(
+int TestAppointmentID, IsLocked IsLocked,
+         int CreatedByUserID
+         )
+        {
+            int rowsAffected = 0;
 
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                string query = @"UPDATE TestAppointments  
+                         SET IsLocked = @IsLocked,
+                             CreatedByUserID = @CreatedByUserID
+                            WHERE TestAppointmentID = @TestAppointmentID";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@TestAppointmentID", TestAppointmentID);
+                    command.Parameters.AddWithValue("@AppointmentDate", IsLocked);
+                    command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
+
+                    try
+                    {
+                        connection.Open();
+                        rowsAffected = command.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error updating Application: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
+                    }
+                }
+            }
+            return (rowsAffected > 0);
+        }
         public static bool EditTimeAppointment(
    int TestAppointmentID, DateTime AppointmentDate,
                 int CreatedByUserID
