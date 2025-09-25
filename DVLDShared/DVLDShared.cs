@@ -13,6 +13,11 @@ namespace DVLDShared
             Male = 0,
             Female = 1
         }
+        public enum Result : byte
+        {
+            Fail = 0,
+            Pass = 1
+        }
         public enum ActiveStatus : byte
         { Yes = 0,
             No = 1 };

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static DVLDShared.DVLDShared;
 
 namespace DVLD_PresentationLayer.Tests
 {
@@ -48,6 +49,17 @@ namespace DVLD_PresentationLayer.Tests
         {
             get => LblValueTestID.Text.Trim();
             set => LblValueTestID.Text = value;
+        }
+        public Result ResultTest    
+        {
+            get => RBPass.Checked ? Result.Pass : Result.Fail;
+            set
+            {
+                if (value == Result.Pass)
+                    RBPass.Checked = true;
+                else
+                    RBFail.Checked = true;
+            }
         }
         public FOTakeTest(clsManageTestTypes.enTestType TestType)
         {

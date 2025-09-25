@@ -5,11 +5,54 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static DVLDShared.DVLDShared;
 
 namespace DVLD_DataAccessLayer
 {
     public class clsTestDataAccess
     {
+        public static int TakeTest(
+int TestAppointmentID, byte TestResult, string Notes,
+int CreatedByUserID)
+        {
+            int TestID = -1;
+
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                string query = @"	INSERT INTO Tests 
+                        (TestAppointmentID, TestResult, Notes, CreatedByUserID)
+                        VALUES 
+                        (@TestAppointmentID, @TestResult, @Notes, @CreatedByUserID);
+                        SELECT SCOPE_IDENTITY();";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@TestAppointmentID", TestAppointmentID);
+                    command.Parameters.AddWithValue("@TestResult", TestResult);
+                    command.Parameters.AddWithValue("@Notes", Notes);
+                    command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
+                    try
+                    {
+                        connection.Open();
+                        object result = command.ExecuteScalar();
+
+                        if (result != null && int.TryParse(result.ToString(), out int insertedID))
+                        {
+                            TestAppointmentID = insertedID;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error adding new Application: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            return TestAppointmentID;
+        }
+
+
+
+
 
         public static bool HasPersonAlreadyFailedTest(int TestTypeID, int LocalDrivingLicenseApplicationID)
         {
