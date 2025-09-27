@@ -40,14 +40,22 @@ namespace DVLD_PresentationLayer
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FOManageLocalDrivingApplication));
             this.dGViewShowInformation = new System.Windows.Forms.DataGridView();
             this.SMItemCRUDLocalDrivingApplications = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.SMItemViewDetails = new System.Windows.Forms.ToolStripMenuItem();
+            this.SMItemShowApplicationDetails = new System.Windows.Forms.ToolStripMenuItem();
             this.SMItemSeparatorCRUDLocalDrivingApplications1 = new System.Windows.Forms.ToolStripSeparator();
-            this.SMItemAddLocalDrivingApplication = new System.Windows.Forms.ToolStripMenuItem();
+            this.SMItemEditApplication = new System.Windows.Forms.ToolStripMenuItem();
             this.SMItemEditLocalDrivingApplication = new System.Windows.Forms.ToolStripMenuItem();
-            this.SMItemDeleteLocalDrivingApplication = new System.Windows.Forms.ToolStripMenuItem();
             this.SMItemSeparatorCRUDLocalDrivingApplications2 = new System.Windows.Forms.ToolStripSeparator();
-            this.SMItemSendEmail = new System.Windows.Forms.ToolStripMenuItem();
-            this.SMItemCallLocalDrivingApplication = new System.Windows.Forms.ToolStripMenuItem();
+            this.SMItemCancelApplication = new System.Windows.Forms.ToolStripMenuItem();
+            this.SMItemSeparatorCRUDLocalDrivingApplications3 = new System.Windows.Forms.ToolStripSeparator();
+            this.SMItemScheduleTest = new System.Windows.Forms.ToolStripMenuItem();
+            this.SMItemScheduleVisionTest = new System.Windows.Forms.ToolStripMenuItem();
+            this.SMItemScheduleWrittenTest = new System.Windows.Forms.ToolStripMenuItem();
+            this.SMItemSeparatorCRUDLocalDrivingApplications4 = new System.Windows.Forms.ToolStripSeparator();
+            this.SMItemIssueDrivingLicenseFirstTime = new System.Windows.Forms.ToolStripMenuItem();
+            this.SMItemSeparatorCRUDLocalDrivingApplications5 = new System.Windows.Forms.ToolStripSeparator();
+            this.SMItemShowLicense = new System.Windows.Forms.ToolStripMenuItem();
+            this.SMItemSeparatorCRUDLocalDrivingApplications6 = new System.Windows.Forms.ToolStripSeparator();
+            this.SMItemShowPersonLicenseHistory = new System.Windows.Forms.ToolStripMenuItem();
             this.LblManageLocalDrivingApplications = new System.Windows.Forms.Label();
             this.BtnAddLocalDrivingApplication = new System.Windows.Forms.Button();
             this.PBManageLocalDrivingApplications = new System.Windows.Forms.PictureBox();
@@ -58,6 +66,7 @@ namespace DVLD_PresentationLayer
             this.LblTotalRecoreds = new System.Windows.Forms.Label();
             this.MTBsearch = new System.Windows.Forms.MaskedTextBox();
             this.CBActiveStatusBy = new System.Windows.Forms.ComboBox();
+            this.SMItemScheduleStreetTest = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dGViewShowInformation)).BeginInit();
             this.SMItemCRUDLocalDrivingApplications.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBManageLocalDrivingApplications)).BeginInit();
@@ -103,76 +112,141 @@ namespace DVLD_PresentationLayer
             // 
             this.SMItemCRUDLocalDrivingApplications.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.SMItemCRUDLocalDrivingApplications.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.SMItemViewDetails,
+            this.SMItemShowApplicationDetails,
             this.SMItemSeparatorCRUDLocalDrivingApplications1,
-            this.SMItemAddLocalDrivingApplication,
+            this.SMItemEditApplication,
             this.SMItemEditLocalDrivingApplication,
-            this.SMItemDeleteLocalDrivingApplication,
             this.SMItemSeparatorCRUDLocalDrivingApplications2,
-            this.SMItemSendEmail,
-            this.SMItemCallLocalDrivingApplication});
+            this.SMItemCancelApplication,
+            this.SMItemSeparatorCRUDLocalDrivingApplications3,
+            this.SMItemScheduleTest,
+            this.SMItemSeparatorCRUDLocalDrivingApplications4,
+            this.SMItemIssueDrivingLicenseFirstTime,
+            this.SMItemSeparatorCRUDLocalDrivingApplications5,
+            this.SMItemShowLicense,
+            this.SMItemSeparatorCRUDLocalDrivingApplications6,
+            this.SMItemShowPersonLicenseHistory});
             this.SMItemCRUDLocalDrivingApplications.Name = "SMItemCRUDLocalDrivingApplications";
-            this.SMItemCRUDLocalDrivingApplications.Size = new System.Drawing.Size(322, 244);
+            this.SMItemCRUDLocalDrivingApplications.Size = new System.Drawing.Size(347, 372);
             // 
-            // SMItemViewDetails
+            // SMItemShowApplicationDetails
             // 
-            this.SMItemViewDetails.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.SMItemViewDetails.Image = ((System.Drawing.Image)(resources.GetObject("SMItemViewDetails.Image")));
-            this.SMItemViewDetails.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.SMItemViewDetails.Name = "SMItemViewDetails";
-            this.SMItemViewDetails.Size = new System.Drawing.Size(321, 38);
-            this.SMItemViewDetails.Text = "View Details";
+            this.SMItemShowApplicationDetails.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.SMItemShowApplicationDetails.Image = ((System.Drawing.Image)(resources.GetObject("SMItemShowApplicationDetails.Image")));
+            this.SMItemShowApplicationDetails.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.SMItemShowApplicationDetails.Name = "SMItemShowApplicationDetails";
+            this.SMItemShowApplicationDetails.Size = new System.Drawing.Size(346, 38);
+            this.SMItemShowApplicationDetails.Text = "Show Application Details";
             // 
             // SMItemSeparatorCRUDLocalDrivingApplications1
             // 
             this.SMItemSeparatorCRUDLocalDrivingApplications1.Name = "SMItemSeparatorCRUDLocalDrivingApplications1";
-            this.SMItemSeparatorCRUDLocalDrivingApplications1.Size = new System.Drawing.Size(318, 6);
+            this.SMItemSeparatorCRUDLocalDrivingApplications1.Size = new System.Drawing.Size(343, 6);
             // 
-            // SMItemAddLocalDrivingApplication
+            // SMItemEditApplication
             // 
-            this.SMItemAddLocalDrivingApplication.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.SMItemAddLocalDrivingApplication.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.SMItemAddLocalDrivingApplication.Name = "SMItemAddLocalDrivingApplication";
-            this.SMItemAddLocalDrivingApplication.Size = new System.Drawing.Size(321, 38);
-            this.SMItemAddLocalDrivingApplication.Text = "Add LocalDrivingApplication";
+            this.SMItemEditApplication.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.SMItemEditApplication.Image = ((System.Drawing.Image)(resources.GetObject("SMItemEditApplication.Image")));
+            this.SMItemEditApplication.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.SMItemEditApplication.Name = "SMItemEditApplication";
+            this.SMItemEditApplication.Size = new System.Drawing.Size(346, 38);
+            this.SMItemEditApplication.Text = "Edit Application";
             // 
             // SMItemEditLocalDrivingApplication
             // 
             this.SMItemEditLocalDrivingApplication.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.SMItemEditLocalDrivingApplication.Image = ((System.Drawing.Image)(resources.GetObject("SMItemEditLocalDrivingApplication.Image")));
             this.SMItemEditLocalDrivingApplication.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SMItemEditLocalDrivingApplication.Name = "SMItemEditLocalDrivingApplication";
-            this.SMItemEditLocalDrivingApplication.Size = new System.Drawing.Size(321, 38);
-            this.SMItemEditLocalDrivingApplication.Text = "Edit LocalDrivingApplication";
-            // 
-            // SMItemDeleteLocalDrivingApplication
-            // 
-            this.SMItemDeleteLocalDrivingApplication.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.SMItemDeleteLocalDrivingApplication.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.SMItemDeleteLocalDrivingApplication.Name = "SMItemDeleteLocalDrivingApplication";
-            this.SMItemDeleteLocalDrivingApplication.Size = new System.Drawing.Size(321, 38);
-            this.SMItemDeleteLocalDrivingApplication.Text = "Delete LocalDrivingApplication";
+            this.SMItemEditLocalDrivingApplication.Size = new System.Drawing.Size(346, 38);
+            this.SMItemEditLocalDrivingApplication.Text = "Delete Application";
             // 
             // SMItemSeparatorCRUDLocalDrivingApplications2
             // 
             this.SMItemSeparatorCRUDLocalDrivingApplications2.Name = "SMItemSeparatorCRUDLocalDrivingApplications2";
-            this.SMItemSeparatorCRUDLocalDrivingApplications2.Size = new System.Drawing.Size(318, 6);
+            this.SMItemSeparatorCRUDLocalDrivingApplications2.Size = new System.Drawing.Size(343, 6);
             // 
-            // SMItemSendEmail
+            // SMItemCancelApplication
             // 
-            this.SMItemSendEmail.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.SMItemSendEmail.Image = ((System.Drawing.Image)(resources.GetObject("SMItemSendEmail.Image")));
-            this.SMItemSendEmail.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.SMItemSendEmail.Name = "SMItemSendEmail";
-            this.SMItemSendEmail.Size = new System.Drawing.Size(321, 38);
-            this.SMItemSendEmail.Text = "Send Email";
+            this.SMItemCancelApplication.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.SMItemCancelApplication.Image = ((System.Drawing.Image)(resources.GetObject("SMItemCancelApplication.Image")));
+            this.SMItemCancelApplication.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.SMItemCancelApplication.Name = "SMItemCancelApplication";
+            this.SMItemCancelApplication.Size = new System.Drawing.Size(346, 38);
+            this.SMItemCancelApplication.Text = "Cancel Application";
             // 
-            // SMItemCallLocalDrivingApplication
+            // SMItemSeparatorCRUDLocalDrivingApplications3
             // 
-            this.SMItemCallLocalDrivingApplication.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.SMItemCallLocalDrivingApplication.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.SMItemCallLocalDrivingApplication.Name = "SMItemCallLocalDrivingApplication";
-            this.SMItemCallLocalDrivingApplication.Size = new System.Drawing.Size(321, 38);
-            this.SMItemCallLocalDrivingApplication.Text = "Call LocalDrivingApplication";
+            this.SMItemSeparatorCRUDLocalDrivingApplications3.Name = "SMItemSeparatorCRUDLocalDrivingApplications3";
+            this.SMItemSeparatorCRUDLocalDrivingApplications3.Size = new System.Drawing.Size(343, 6);
+            // 
+            // SMItemScheduleTest
+            // 
+            this.SMItemScheduleTest.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.SMItemScheduleVisionTest,
+            this.SMItemScheduleWrittenTest,
+            this.SMItemScheduleStreetTest});
+            this.SMItemScheduleTest.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.SMItemScheduleTest.Image = ((System.Drawing.Image)(resources.GetObject("SMItemScheduleTest.Image")));
+            this.SMItemScheduleTest.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.SMItemScheduleTest.Name = "SMItemScheduleTest";
+            this.SMItemScheduleTest.Size = new System.Drawing.Size(346, 38);
+            this.SMItemScheduleTest.Text = "Schedule Test";
+            // 
+            // SMItemScheduleVisionTest
+            // 
+            this.SMItemScheduleVisionTest.Name = "SMItemScheduleVisionTest";
+            this.SMItemScheduleVisionTest.Size = new System.Drawing.Size(258, 26);
+            this.SMItemScheduleVisionTest.Text = "Schedule Vision Test";
+            // 
+            // SMItemScheduleWrittenTest
+            // 
+            this.SMItemScheduleWrittenTest.Name = "SMItemScheduleWrittenTest";
+            this.SMItemScheduleWrittenTest.Size = new System.Drawing.Size(258, 26);
+            this.SMItemScheduleWrittenTest.Text = "Schedule Written Test";
+            // 
+            // SMItemSeparatorCRUDLocalDrivingApplications4
+            // 
+            this.SMItemSeparatorCRUDLocalDrivingApplications4.Name = "SMItemSeparatorCRUDLocalDrivingApplications4";
+            this.SMItemSeparatorCRUDLocalDrivingApplications4.Size = new System.Drawing.Size(343, 6);
+            // 
+            // SMItemIssueDrivingLicenseFirstTime
+            // 
+            this.SMItemIssueDrivingLicenseFirstTime.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.SMItemIssueDrivingLicenseFirstTime.Image = ((System.Drawing.Image)(resources.GetObject("SMItemIssueDrivingLicenseFirstTime.Image")));
+            this.SMItemIssueDrivingLicenseFirstTime.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.SMItemIssueDrivingLicenseFirstTime.Name = "SMItemIssueDrivingLicenseFirstTime";
+            this.SMItemIssueDrivingLicenseFirstTime.Size = new System.Drawing.Size(346, 38);
+            this.SMItemIssueDrivingLicenseFirstTime.Text = "Issue Driving License (First Time)";
+            // 
+            // SMItemSeparatorCRUDLocalDrivingApplications5
+            // 
+            this.SMItemSeparatorCRUDLocalDrivingApplications5.Name = "SMItemSeparatorCRUDLocalDrivingApplications5";
+            this.SMItemSeparatorCRUDLocalDrivingApplications5.Size = new System.Drawing.Size(343, 6);
+            // 
+            // SMItemShowLicense
+            // 
+            this.SMItemShowLicense.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.SMItemShowLicense.Image = ((System.Drawing.Image)(resources.GetObject("SMItemShowLicense.Image")));
+            this.SMItemShowLicense.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.SMItemShowLicense.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.SMItemShowLicense.Name = "SMItemShowLicense";
+            this.SMItemShowLicense.Size = new System.Drawing.Size(346, 38);
+            this.SMItemShowLicense.Text = "Show License";
+            // 
+            // SMItemSeparatorCRUDLocalDrivingApplications6
+            // 
+            this.SMItemSeparatorCRUDLocalDrivingApplications6.Name = "SMItemSeparatorCRUDLocalDrivingApplications6";
+            this.SMItemSeparatorCRUDLocalDrivingApplications6.Size = new System.Drawing.Size(343, 6);
+            // 
+            // SMItemShowPersonLicenseHistory
+            // 
+            this.SMItemShowPersonLicenseHistory.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.SMItemShowPersonLicenseHistory.Image = ((System.Drawing.Image)(resources.GetObject("SMItemShowPersonLicenseHistory.Image")));
+            this.SMItemShowPersonLicenseHistory.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.SMItemShowPersonLicenseHistory.Name = "SMItemShowPersonLicenseHistory";
+            this.SMItemShowPersonLicenseHistory.Size = new System.Drawing.Size(346, 38);
+            this.SMItemShowPersonLicenseHistory.Text = "Show Person License History";
             // 
             // LblManageLocalDrivingApplications
             // 
@@ -323,6 +397,12 @@ namespace DVLD_PresentationLayer
             this.CBActiveStatusBy.TabIndex = 10;
             this.CBActiveStatusBy.TextChanged += new System.EventHandler(this.CBActiveStatusBy_TextChanged);
             // 
+            // SMItemScheduleStreetTest
+            // 
+            this.SMItemScheduleStreetTest.Name = "SMItemScheduleStreetTest";
+            this.SMItemScheduleStreetTest.Size = new System.Drawing.Size(258, 26);
+            this.SMItemScheduleStreetTest.Text = "Schedule Street Test";
+            // 
             // FOManageLocalDrivingApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -362,17 +442,26 @@ namespace DVLD_PresentationLayer
         private Label LblRecoreds;
         private Button BtnAddClose;
         private ContextMenuStrip SMItemCRUDLocalDrivingApplications;
-        private ToolStripMenuItem SMItemViewDetails;
+        private ToolStripMenuItem SMItemShowApplicationDetails;
         private ToolStripSeparator SMItemSeparatorCRUDLocalDrivingApplications1;
-        private ToolStripMenuItem SMItemAddLocalDrivingApplication;
+        private ToolStripMenuItem SMItemEditApplication;
         private ToolStripMenuItem SMItemEditLocalDrivingApplication;
-        private ToolStripMenuItem SMItemDeleteLocalDrivingApplication;
-        private ToolStripSeparator SMItemSeparatorCRUDLocalDrivingApplications2;
-        private ToolStripMenuItem SMItemSendEmail;
-        private ToolStripMenuItem SMItemCallLocalDrivingApplication;
+        private ToolStripMenuItem SMItemCancelApplication;
+        private ToolStripSeparator SMItemSeparatorCRUDLocalDrivingApplications3;
+        private ToolStripMenuItem SMItemScheduleTest;
+        private ToolStripMenuItem SMItemIssueDrivingLicenseFirstTime;
         private ComboBox CBFilterBy;
         private Label LblTotalRecoreds;
         private MaskedTextBox MTBsearch;
         private ComboBox CBActiveStatusBy;
+        private ToolStripSeparator SMItemSeparatorCRUDLocalDrivingApplications2;
+        private ToolStripSeparator SMItemSeparatorCRUDLocalDrivingApplications5;
+        private ToolStripSeparator SMItemSeparatorCRUDLocalDrivingApplications4;
+        private ToolStripMenuItem SMItemShowLicense;
+        private ToolStripSeparator SMItemSeparatorCRUDLocalDrivingApplications6;
+        private ToolStripMenuItem SMItemShowPersonLicenseHistory;
+        private ToolStripMenuItem SMItemScheduleVisionTest;
+        private ToolStripMenuItem SMItemScheduleWrittenTest;
+        private ToolStripMenuItem SMItemScheduleStreetTest;
     }
 }
