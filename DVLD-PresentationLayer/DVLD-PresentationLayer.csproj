@@ -87,6 +87,12 @@
     <Compile Include="Applications\Local Driving License\FOAddNewLocalDrivingApplication.Designer.cs">
       <DependentUpon>FOAddNewLocalDrivingApplication.cs</DependentUpon>
     </Compile>
+    <Compile Include="Applications\Local Driving License\FOLocalDrivingLicenseApplicationInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\Local Driving License\FOLocalDrivingLicenseApplicationInfo.Designer.cs">
+      <DependentUpon>FOLocalDrivingLicenseApplicationInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Applications\Local Driving License\FOManageLocalDrivingApplication.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Applications\Local Driving License\FOAddNewLocalDrivingApplication.resx">
       <DependentUpon>FOAddNewLocalDrivingApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\Local Driving License\FOLocalDrivingLicenseApplicationInfo.resx">
+      <DependentUpon>FOLocalDrivingLicenseApplicationInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Applications\Local Driving License\FOManageLocalDrivingApplication.resx">
       <DependentUpon>FOManageLocalDrivingApplication.cs</DependentUpon>

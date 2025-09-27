@@ -50,6 +50,7 @@ namespace DVLD_PresentationLayer
             this.SMItemScheduleTest = new System.Windows.Forms.ToolStripMenuItem();
             this.SMItemScheduleVisionTest = new System.Windows.Forms.ToolStripMenuItem();
             this.SMItemScheduleWrittenTest = new System.Windows.Forms.ToolStripMenuItem();
+            this.SMItemScheduleStreetTest = new System.Windows.Forms.ToolStripMenuItem();
             this.SMItemSeparatorCRUDLocalDrivingApplications4 = new System.Windows.Forms.ToolStripSeparator();
             this.SMItemIssueDrivingLicenseFirstTime = new System.Windows.Forms.ToolStripMenuItem();
             this.SMItemSeparatorCRUDLocalDrivingApplications5 = new System.Windows.Forms.ToolStripSeparator();
@@ -66,7 +67,6 @@ namespace DVLD_PresentationLayer
             this.LblTotalRecoreds = new System.Windows.Forms.Label();
             this.MTBsearch = new System.Windows.Forms.MaskedTextBox();
             this.CBActiveStatusBy = new System.Windows.Forms.ComboBox();
-            this.SMItemScheduleStreetTest = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dGViewShowInformation)).BeginInit();
             this.SMItemCRUDLocalDrivingApplications.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBManageLocalDrivingApplications)).BeginInit();
@@ -137,6 +137,7 @@ namespace DVLD_PresentationLayer
             this.SMItemShowApplicationDetails.Name = "SMItemShowApplicationDetails";
             this.SMItemShowApplicationDetails.Size = new System.Drawing.Size(346, 38);
             this.SMItemShowApplicationDetails.Text = "Show Application Details";
+            this.SMItemShowApplicationDetails.Click += new System.EventHandler(this.SMItemShowApplicationDetails_Click);
             // 
             // SMItemSeparatorCRUDLocalDrivingApplications1
             // 
@@ -204,6 +205,12 @@ namespace DVLD_PresentationLayer
             this.SMItemScheduleWrittenTest.Name = "SMItemScheduleWrittenTest";
             this.SMItemScheduleWrittenTest.Size = new System.Drawing.Size(258, 26);
             this.SMItemScheduleWrittenTest.Text = "Schedule Written Test";
+            // 
+            // SMItemScheduleStreetTest
+            // 
+            this.SMItemScheduleStreetTest.Name = "SMItemScheduleStreetTest";
+            this.SMItemScheduleStreetTest.Size = new System.Drawing.Size(258, 26);
+            this.SMItemScheduleStreetTest.Text = "Schedule Street Test";
             // 
             // SMItemSeparatorCRUDLocalDrivingApplications4
             // 
@@ -396,12 +403,6 @@ namespace DVLD_PresentationLayer
             this.CBActiveStatusBy.Size = new System.Drawing.Size(201, 31);
             this.CBActiveStatusBy.TabIndex = 10;
             this.CBActiveStatusBy.TextChanged += new System.EventHandler(this.CBActiveStatusBy_TextChanged);
-            // 
-            // SMItemScheduleStreetTest
-            // 
-            this.SMItemScheduleStreetTest.Name = "SMItemScheduleStreetTest";
-            this.SMItemScheduleStreetTest.Size = new System.Drawing.Size(258, 26);
-            this.SMItemScheduleStreetTest.Text = "Schedule Street Test";
             // 
             // FOManageLocalDrivingApplication
             // 

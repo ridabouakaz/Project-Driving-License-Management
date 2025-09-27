@@ -1,4 +1,5 @@
 ﻿using DVLD_BusinessLayer;
+using DVLD_PresentationLayer.Applications.Local_Driving_License;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,7 +18,7 @@ namespace DVLD_PresentationLayer
     {
         private static DataTable _LocalDrivingApplicationsTable = clsNewLocalDrivingApplication.GetAllLocalDrivingApplications();
         clsUser _CurrentUser;
-        
+
         public FOManageLocalDrivingApplication(clsUser CurrentUser)
         {
             InitializeComponent();
@@ -116,7 +117,11 @@ namespace DVLD_PresentationLayer
             ApplyFilter();
 
         }
-
- 
+        private void SMItemShowApplicationDetails_Click(object sender, EventArgs e)
+        {
+            FOLocalDrivingLicenseApplicationInfo frm = new FOLocalDrivingLicenseApplicationInfo((int)dGViewShowInformation.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+        }
     }
 }
+
