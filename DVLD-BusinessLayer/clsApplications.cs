@@ -86,6 +86,20 @@ namespace DVLD_BusinessLayer
                 );
 
         }
+        public static bool CancelledApplication(int ApplicationID)
+        {
+            //call DataAccess Layer 
+            return clsApplicationDataAccess.CancelledApplication(
+                    ApplicationID);
+
+        }
+        public static bool DeleteApplication(int ApplicationID)
+        {
+            //call DataAccess Layer 
+            return clsApplicationDataAccess.DeleteApplication(
+                    ApplicationID);
+
+        }
         public static clsApplications Find(int ID)
         {
             int ApplicantPersonID = 1;

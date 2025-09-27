@@ -166,6 +166,33 @@ namespace DVLD_DataAccessLayer
 
             return (rowsAffected > 0);
         }
-       
+        public static bool DeleteApplication(int ApplicationID)
+        {
+            int rowsAffected = 0;
+
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                string query = @"DELETE FROM Applications 
+                         WHERE ApplicationID = @ApplicationID";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@ApplicationID", ApplicationID);
+
+                    try
+                    {
+                        connection.Open();
+                        rowsAffected = command.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error deleting Application: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+
+            return (rowsAffected > 0);
+        }
+
     }
 }

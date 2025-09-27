@@ -122,6 +122,40 @@ namespace DVLD_PresentationLayer
             FOLocalDrivingLicenseApplicationInfo frm = new FOLocalDrivingLicenseApplicationInfo((int)dGViewShowInformation.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
         }
+
+        private void SMItemCancelApplication_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to Cancel Application [" + dGViewShowInformation.CurrentRow.Cells[0].Value + "]", "Confirm Delete", MessageBoxButtons.OKCancel) == DialogResult.OK)
+
+            {
+
+                if (clsApplications.CancelledApplication((int)dGViewShowInformation.CurrentRow.Cells[0].Value))
+                {
+                    MessageBox.Show("Application Cancelled Successfully.");
+                    _RefreshPeopleList();
+                }
+                else
+                    MessageBox.Show("Application is not Cancelled.");
+
+            }
+        }
+
+        private void SMItemDeleteApplication_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to Delete Application [" + dGViewShowInformation.CurrentRow.Cells[0].Value + "]", "Confirm Delete", MessageBoxButtons.OKCancel) == DialogResult.OK)
+
+            {
+
+                if (clsApplications.DeleteApplication((int)dGViewShowInformation.CurrentRow.Cells[0].Value))
+                {
+                    MessageBox.Show("Application Deleted Successfully.");
+                    _RefreshPeopleList();
+                }
+                else
+                    MessageBox.Show("Application is not Deleted.");
+
+            }
+        }
     }
 }
 

@@ -43,7 +43,7 @@ namespace DVLD_PresentationLayer
             this.SMItemShowApplicationDetails = new System.Windows.Forms.ToolStripMenuItem();
             this.SMItemSeparatorCRUDLocalDrivingApplications1 = new System.Windows.Forms.ToolStripSeparator();
             this.SMItemEditApplication = new System.Windows.Forms.ToolStripMenuItem();
-            this.SMItemEditLocalDrivingApplication = new System.Windows.Forms.ToolStripMenuItem();
+            this.SMItemDeleteApplication = new System.Windows.Forms.ToolStripMenuItem();
             this.SMItemSeparatorCRUDLocalDrivingApplications2 = new System.Windows.Forms.ToolStripSeparator();
             this.SMItemCancelApplication = new System.Windows.Forms.ToolStripMenuItem();
             this.SMItemSeparatorCRUDLocalDrivingApplications3 = new System.Windows.Forms.ToolStripSeparator();
@@ -115,7 +115,7 @@ namespace DVLD_PresentationLayer
             this.SMItemShowApplicationDetails,
             this.SMItemSeparatorCRUDLocalDrivingApplications1,
             this.SMItemEditApplication,
-            this.SMItemEditLocalDrivingApplication,
+            this.SMItemDeleteApplication,
             this.SMItemSeparatorCRUDLocalDrivingApplications2,
             this.SMItemCancelApplication,
             this.SMItemSeparatorCRUDLocalDrivingApplications3,
@@ -153,14 +153,15 @@ namespace DVLD_PresentationLayer
             this.SMItemEditApplication.Size = new System.Drawing.Size(346, 38);
             this.SMItemEditApplication.Text = "Edit Application";
             // 
-            // SMItemEditLocalDrivingApplication
+            // SMItemDeleteApplication
             // 
-            this.SMItemEditLocalDrivingApplication.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.SMItemEditLocalDrivingApplication.Image = ((System.Drawing.Image)(resources.GetObject("SMItemEditLocalDrivingApplication.Image")));
-            this.SMItemEditLocalDrivingApplication.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.SMItemEditLocalDrivingApplication.Name = "SMItemEditLocalDrivingApplication";
-            this.SMItemEditLocalDrivingApplication.Size = new System.Drawing.Size(346, 38);
-            this.SMItemEditLocalDrivingApplication.Text = "Delete Application";
+            this.SMItemDeleteApplication.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.SMItemDeleteApplication.Image = ((System.Drawing.Image)(resources.GetObject("SMItemDeleteApplication.Image")));
+            this.SMItemDeleteApplication.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.SMItemDeleteApplication.Name = "SMItemDeleteApplication";
+            this.SMItemDeleteApplication.Size = new System.Drawing.Size(346, 38);
+            this.SMItemDeleteApplication.Text = "Delete Application";
+            this.SMItemDeleteApplication.Click += new System.EventHandler(this.SMItemDeleteApplication_Click);
             // 
             // SMItemSeparatorCRUDLocalDrivingApplications2
             // 
@@ -175,6 +176,7 @@ namespace DVLD_PresentationLayer
             this.SMItemCancelApplication.Name = "SMItemCancelApplication";
             this.SMItemCancelApplication.Size = new System.Drawing.Size(346, 38);
             this.SMItemCancelApplication.Text = "Cancel Application";
+            this.SMItemCancelApplication.Click += new System.EventHandler(this.SMItemCancelApplication_Click);
             // 
             // SMItemSeparatorCRUDLocalDrivingApplications3
             // 
@@ -446,7 +448,7 @@ namespace DVLD_PresentationLayer
         private ToolStripMenuItem SMItemShowApplicationDetails;
         private ToolStripSeparator SMItemSeparatorCRUDLocalDrivingApplications1;
         private ToolStripMenuItem SMItemEditApplication;
-        private ToolStripMenuItem SMItemEditLocalDrivingApplication;
+        private ToolStripMenuItem SMItemDeleteApplication;
         private ToolStripMenuItem SMItemCancelApplication;
         private ToolStripSeparator SMItemSeparatorCRUDLocalDrivingApplications3;
         private ToolStripMenuItem SMItemScheduleTest;
