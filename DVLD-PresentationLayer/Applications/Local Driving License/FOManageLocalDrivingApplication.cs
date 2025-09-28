@@ -1,5 +1,6 @@
 ﻿using DVLD_BusinessLayer;
 using DVLD_PresentationLayer.Applications.Local_Driving_License;
+using DVLD_PresentationLayer.Tests;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -132,7 +133,7 @@ namespace DVLD_PresentationLayer
                 if (clsApplications.CancelledApplication((int)dGViewShowInformation.CurrentRow.Cells[0].Value))
                 {
                     MessageBox.Show("Application Cancelled Successfully.");
-                    _RefreshPeopleList();
+                    _RefreshLocalDrivingApplicationsList();
                 }
                 else
                     MessageBox.Show("Application is not Cancelled.");
@@ -149,11 +150,57 @@ namespace DVLD_PresentationLayer
                 if (clsApplications.DeleteApplication((int)dGViewShowInformation.CurrentRow.Cells[0].Value))
                 {
                     MessageBox.Show("Application Deleted Successfully.");
-                    _RefreshPeopleList();
+                    _RefreshLocalDrivingApplicationsList();
                 }
                 else
                     MessageBox.Show("Application is not Deleted.");
+            }
+        }
 
+        private void SMItemScheduleVisionTest_Click(object sender, EventArgs e)
+        {
+            FOScheduleTest frm = new FOScheduleTest(clsManageTestTypes.enTestType.VisionTest, (int)dGViewShowInformation.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+        }
+
+        private void SMItemScheduleWrittenTest_Click(object sender, EventArgs e)
+        {
+            FOScheduleTest frm = new FOScheduleTest(clsManageTestTypes.enTestType.WrittenTest, (int)dGViewShowInformation.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+        }
+
+        private void SMItemScheduleStreetTest_Click(object sender, EventArgs e)
+        {
+            FOScheduleTest frm = new FOScheduleTest(clsManageTestTypes.enTestType.StreetTest, (int)dGViewShowInformation.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+        }
+
+        private void SMItemCRUDLocalDrivingApplications_Opening(object sender, CancelEventArgs e)
+        {
+            if (clsNewLocalDrivingApplication.GetPassedTestCount((int)dGViewShowInformation.CurrentRow.Cells[0].Value) == 0)
+            {
+                SMItemScheduleVisionTest.Visible = true;
+                SMItemScheduleStreetTest.Visible = false;
+                SMItemScheduleWrittenTest.Visible = false;
+
+            }
+            if (clsNewLocalDrivingApplication.GetPassedTestCount((int)dGViewShowInformation.CurrentRow.Cells[0].Value) == 1)
+            {
+                SMItemScheduleVisionTest.Visible = false;
+                SMItemScheduleWrittenTest.Visible = true;
+                SMItemScheduleStreetTest.Visible = false;
+            }
+            else if (clsNewLocalDrivingApplication.GetPassedTestCount((int)dGViewShowInformation.CurrentRow.Cells[0].Value) == 2)
+            {
+                SMItemScheduleVisionTest.Visible = false;
+                SMItemScheduleWrittenTest.Visible = false;
+                SMItemScheduleStreetTest.Visible = true;
+            }
+            else if (clsNewLocalDrivingApplication.GetPassedTestCount((int)dGViewShowInformation.CurrentRow.Cells[0].Value) == 3)
+            {
+                SMItemScheduleVisionTest.Visible = false;
+                SMItemScheduleWrittenTest.Visible = false;
+                SMItemScheduleStreetTest.Visible = false;
             }
         }
     }

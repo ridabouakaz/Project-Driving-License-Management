@@ -128,6 +128,7 @@ namespace DVLD_PresentationLayer
             this.SMItemShowPersonLicenseHistory});
             this.SMItemCRUDLocalDrivingApplications.Name = "SMItemCRUDLocalDrivingApplications";
             this.SMItemCRUDLocalDrivingApplications.Size = new System.Drawing.Size(347, 372);
+            this.SMItemCRUDLocalDrivingApplications.Opening += new System.ComponentModel.CancelEventHandler(this.SMItemCRUDLocalDrivingApplications_Opening);
             // 
             // SMItemShowApplicationDetails
             // 
@@ -198,21 +199,30 @@ namespace DVLD_PresentationLayer
             // 
             // SMItemScheduleVisionTest
             // 
+            this.SMItemScheduleVisionTest.Image = ((System.Drawing.Image)(resources.GetObject("SMItemScheduleVisionTest.Image")));
+            this.SMItemScheduleVisionTest.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SMItemScheduleVisionTest.Name = "SMItemScheduleVisionTest";
-            this.SMItemScheduleVisionTest.Size = new System.Drawing.Size(258, 26);
+            this.SMItemScheduleVisionTest.Size = new System.Drawing.Size(270, 38);
             this.SMItemScheduleVisionTest.Text = "Schedule Vision Test";
+            this.SMItemScheduleVisionTest.Click += new System.EventHandler(this.SMItemScheduleVisionTest_Click);
             // 
             // SMItemScheduleWrittenTest
             // 
+            this.SMItemScheduleWrittenTest.Image = ((System.Drawing.Image)(resources.GetObject("SMItemScheduleWrittenTest.Image")));
+            this.SMItemScheduleWrittenTest.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SMItemScheduleWrittenTest.Name = "SMItemScheduleWrittenTest";
-            this.SMItemScheduleWrittenTest.Size = new System.Drawing.Size(258, 26);
+            this.SMItemScheduleWrittenTest.Size = new System.Drawing.Size(270, 38);
             this.SMItemScheduleWrittenTest.Text = "Schedule Written Test";
+            this.SMItemScheduleWrittenTest.Click += new System.EventHandler(this.SMItemScheduleWrittenTest_Click);
             // 
             // SMItemScheduleStreetTest
             // 
+            this.SMItemScheduleStreetTest.Image = ((System.Drawing.Image)(resources.GetObject("SMItemScheduleStreetTest.Image")));
+            this.SMItemScheduleStreetTest.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SMItemScheduleStreetTest.Name = "SMItemScheduleStreetTest";
-            this.SMItemScheduleStreetTest.Size = new System.Drawing.Size(258, 26);
+            this.SMItemScheduleStreetTest.Size = new System.Drawing.Size(270, 38);
             this.SMItemScheduleStreetTest.Text = "Schedule Street Test";
+            this.SMItemScheduleStreetTest.Click += new System.EventHandler(this.SMItemScheduleStreetTest_Click);
             // 
             // SMItemSeparatorCRUDLocalDrivingApplications4
             // 
