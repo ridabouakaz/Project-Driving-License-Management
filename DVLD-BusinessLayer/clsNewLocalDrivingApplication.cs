@@ -125,9 +125,23 @@ namespace DVLD_BusinessLayer
             return clsLocalDrivingApplicationDataAccess.GetAllLocalDrivingApplications();
 
         }
-        public static string GetClassNameById(int id)
+        public static string GetClassNameById(int LocalDrivingLicenseApplicationID)
         {
-            return clsLocalDrivingApplicationDataAccess.GetClassNameById(id);
+            return clsLocalDrivingApplicationDataAccess.GetClassNameById(LocalDrivingLicenseApplicationID);
+        }
+        public static bool CancelledLocalDrivingLicenseApplications(int LocalDrivingLicenseApplicationID)
+        {
+            //call DataAccess Layer 
+            return clsLocalDrivingApplicationDataAccess.CancelledLocalDrivingLicenseApplications(
+                    LocalDrivingLicenseApplicationID);
+
+        }
+        public static bool DeleteLocalDrivingLicenseApplications(int LocalDrivingLicenseApplicationID)
+        {
+            //call DataAccess Layer 
+            return clsLocalDrivingApplicationDataAccess.DeleteLocalDrivingLicenseApplications(
+                    LocalDrivingLicenseApplicationID);
+
         }
     }
 }

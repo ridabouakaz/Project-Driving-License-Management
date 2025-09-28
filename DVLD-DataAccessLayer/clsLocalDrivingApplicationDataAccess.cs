@@ -47,7 +47,7 @@ namespace DVLD_DataAccessLayer
 
             return NewLocalDrivingApplicationID;
         }
-        
+
         public static bool DoesApplicationExistForPerson(int ApplicantPersonID, int LicenseClassID)
         {
             bool isFound = false;
@@ -225,7 +225,7 @@ namespace DVLD_DataAccessLayer
             return dt;
 
         }
-        public static string GetClassNameById(int id)
+        public static string GetClassNameById(int LocalDrivingLicenseApplicationID)
         {
             string Title = "";
             using (SqlConnection conn = new SqlConnection(clsDataAccessSettings.ConnectionString))
@@ -235,7 +235,7 @@ namespace DVLD_DataAccessLayer
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", id);
+                    cmd.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LocalDrivingLicenseApplicationID);
                     conn.Open();
 
                     object result = cmd.ExecuteScalar();
@@ -247,5 +247,66 @@ namespace DVLD_DataAccessLayer
             }
             return Title;
         }
+        public static bool CancelledLocalDrivingLicenseApplications(int LocalDrivingLicenseApplicationID)
+        {
+            int rowsAffected = 0;
+
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                string query = @"UPDATE Applications
+SET ApplicationStatus = 2
+FROM Applications
+INNER JOIN LocalDrivingLicenseApplications 
+    ON Applications.ApplicationID = LocalDrivingLicenseApplications.ApplicationID
+WHERE LocalDrivingLicenseApplications.LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LocalDrivingLicenseApplicationID);
+
+                    try
+                    {
+                        connection.Open();
+                        rowsAffected = command.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error deleting User: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+
+            return (rowsAffected > 0);
+        }
+        public static bool DeleteLocalDrivingLicenseApplications(int LocalDrivingLicenseApplicationID)
+        {
+            int rowsAffected = 0;
+
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                string query = @"
+        		DELETE FROM LocalDrivingLicenseApplications
+WHERE LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LocalDrivingLicenseApplicationID);
+
+                    try
+                    {
+                        connection.Open();
+                        rowsAffected = command.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error deleting Application: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+
+            return (rowsAffected > 0);
+        }
+
+
     }
 }

@@ -130,7 +130,7 @@ namespace DVLD_PresentationLayer
 
             {
 
-                if (clsApplications.CancelledApplication((int)dGViewShowInformation.CurrentRow.Cells[0].Value))
+                if (clsNewLocalDrivingApplication.CancelledLocalDrivingLicenseApplications((int)dGViewShowInformation.CurrentRow.Cells[0].Value))
                 {
                     MessageBox.Show("Application Cancelled Successfully.");
                     _RefreshLocalDrivingApplicationsList();
@@ -147,7 +147,7 @@ namespace DVLD_PresentationLayer
 
             {
 
-                if (clsApplications.DeleteApplication((int)dGViewShowInformation.CurrentRow.Cells[0].Value))
+                if (clsNewLocalDrivingApplication.DeleteLocalDrivingLicenseApplications((int)dGViewShowInformation.CurrentRow.Cells[0].Value))
                 {
                     MessageBox.Show("Application Deleted Successfully.");
                     _RefreshLocalDrivingApplicationsList();
@@ -184,7 +184,7 @@ namespace DVLD_PresentationLayer
                 SMItemScheduleWrittenTest.Visible = false;
 
             }
-            if (clsNewLocalDrivingApplication.GetPassedTestCount((int)dGViewShowInformation.CurrentRow.Cells[0].Value) == 1)
+            else if(clsNewLocalDrivingApplication.GetPassedTestCount((int)dGViewShowInformation.CurrentRow.Cells[0].Value) == 1)
             {
                 SMItemScheduleVisionTest.Visible = false;
                 SMItemScheduleWrittenTest.Visible = true;

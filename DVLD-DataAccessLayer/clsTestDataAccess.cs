@@ -12,7 +12,7 @@ namespace DVLD_DataAccessLayer
     public class clsTestDataAccess
     {
         public static int TakeTest(
-int TestAppointmentID, byte TestResult, string Notes,
+int TestAppointmentID, Result TestResult, string Notes,
 int CreatedByUserID)
         {
             int TestID = -1;

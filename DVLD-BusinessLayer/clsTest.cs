@@ -24,7 +24,7 @@ namespace DVLD_BusinessLayer
             Notes = "";
             CreatedByUserID = 0;
         }
-        private clsTest(int TestID, int TestAppointmentID, byte TestResult, string Notes
+        private clsTest(int TestID, int TestAppointmentID, Result TestResult, string Notes
             , int CreatedByUserID)
         {
             this.TestID = TestID;

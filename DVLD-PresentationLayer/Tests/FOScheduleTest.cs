@@ -62,7 +62,7 @@ namespace DVLD_PresentationLayer.Tests
         {
             _LocalDrivingApplication = clsNewLocalDrivingApplication.FindByLocalDrivingAppLicenseID(_LocalDrivingLicenseApplicationID);
             LocalDrivingApplicationID = _LocalDrivingApplication.ApplicationID.ToString();
-            DClass = clsNewLocalDrivingApplication.GetClassNameById(_LocalDrivingApplication.ApplicationTypeID);
+            DClass = clsNewLocalDrivingApplication.GetClassNameById(_LocalDrivingApplication.LocalDrivingLicenseApplicationID);
             NamePerson = _LocalDrivingApplication.ApplicantFullName;
             FeesTest = clsManageTestTypes.GetFeesById((int)_TestType).ToString();
             _HasPersonAlreadyFailedTest = clsTest.HasPersonAlreadyFailedTest((int)_TestType, _LocalDrivingLicenseApplicationID);
