@@ -1,4 +1,5 @@
 ﻿using DVLD_BusinessLayer;
+using Syncfusion.PdfViewer.Base;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,13 +16,19 @@ namespace DVLD_PresentationLayer.Tests
     {
         private DataTable _dtLicenseTestAppointments;
         private int _LocalDrivingLicenseApplicationID;
+        private clsNewLocalDrivingApplication _LocalDrivingLicense;
         private clsManageTestTypes.enTestType _TestType = clsManageTestTypes.enTestType.VisionTest;
-        public FOListTestAppointments(int LocalDrivingLicenseApplicationID, clsManageTestTypes.enTestType TestType)
+        void _LoadLocalDrivingApplicationInfo()
+        {
+            ctrDrivingLicenseApplicationInfo1.LoadApplication(_LocalDrivingLicenseApplicationID);
+        }
+        public FOListTestAppointments( clsManageTestTypes.enTestType TestType, int LocalDrivingLicenseApplicationID)
         {
             InitializeComponent();
             _LocalDrivingLicenseApplicationID = LocalDrivingLicenseApplicationID;
             _TestType = TestType;
             _LoadTestTypeImageAndTitle();
+            _LoadLocalDrivingApplicationInfo();
 
         }
         private void _LoadTestTypeImageAndTitle()
@@ -60,21 +67,23 @@ namespace DVLD_PresentationLayer.Tests
             _dtLicenseTestAppointments = clsTestAppointment.GetAllAppointments();
             dGViewShowInformation.DataSource = _dtLicenseTestAppointments;
             LblTotalRecoreds.Text = dGViewShowInformation.Rows.Count.ToString();
+            if (dGViewShowInformation.Rows.Count > 0)
+            {
+                dGViewShowInformation.Columns[0].HeaderText = "Appointment ID";
+                dGViewShowInformation.Columns[0].Width = 110;
 
-            dGViewShowInformation.Columns[0].HeaderText = "Appointment ID";
-            dGViewShowInformation.Columns[0].Width = 110;
+                dGViewShowInformation.Columns[1].HeaderText = "Appointment Date";
+                dGViewShowInformation.Columns[1].Width = 350;
 
-            dGViewShowInformation.Columns[1].HeaderText = "Appointment Date";
-            dGViewShowInformation.Columns[1].Width = 350;
+                dGViewShowInformation.Columns[2].HeaderText = "Paid Fees";
+                dGViewShowInformation.Columns[2].Width = 150;
 
-            dGViewShowInformation.Columns[2].HeaderText = "Paid Fees";
-            dGViewShowInformation.Columns[2].Width = 150;
+                dGViewShowInformation.Columns[3].HeaderText = "Is Locked";
+                dGViewShowInformation.Columns[3].Width = 120;
 
-            dGViewShowInformation.Columns[3].HeaderText = "Is Locked";
-            dGViewShowInformation.Columns[3].Width = 120;
-
-            dGViewShowInformation.Columns[4].HeaderText = "Is Active";
-            dGViewShowInformation.Columns[4].Width = 120;
+                dGViewShowInformation.Columns[4].HeaderText = "Is Active";
+                dGViewShowInformation.Columns[4].Width = 120;
+            }
         }
         private void BtnAddAppointments_Click(object sender, EventArgs e)
         {
