@@ -22,7 +22,8 @@ namespace DVLD_PresentationLayer.Tests
         private clsManageTestTypes.enTestType _TestType = clsManageTestTypes.enTestType.VisionTest;
         private clsNewLocalDrivingApplication _LocalDrivingApplication;
         private int _LocalDrivingLicenseApplicationID;
-        private clsTestAppointment _Appointment;
+        //private clsTestAppointment _Appointment;
+        private clsTestAppointment _Appointment = new clsTestAppointment();
         private clsApplications _RetakeTest;
         private bool _HasPersonAlreadyFailedTest;
         public enum enMode { AddNew = 0, Update = 1 };
