@@ -121,6 +121,25 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="BtnAddClose.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
+        AAAC5UlEQVRYR7VXS2sUQRDei/j26kUFHxcRvfgHPAnbNbvRpKsTCYG1q7NoNIqK0YOgQkC9iI8Yg/pn
+        xBeIQvwJPhJ8QERjQswhSo2zm5ma3tnZMfngu2xV1/dtP2prS6WcODwwsFEZa8C4ewrta0D6COjmAWkR
+        kL6Gn2l6BJr6qlW7Wa4vjAq6nWFhpB+A9Ccn5wJDj6tIe2S93DhUq60L0N4ApAWPQF4ugqabXEvWz0T4
+        rdG99RQsyslyb3231PGi0jO4D5C+eYr8Lz8rrO2XegnwmQHStGfxilAhfagec1ulboiD9fqa6HanFq4w
+        X5bLw2ulfkkZuuVJXhUqba8mxCtY3wFIv2VixBnQ7kKg7RggLXnikkuBtncBLfGWe+LM2cRRKO0eepJC
+        BppGmnnGnWljYilAOtvIZxOenKiuHQuTEHE9O5IJy3RPGgXbmEiIMwDpvievwVnEoU0l0K7bE0zS0KV4
+        YY+JlHiA9nyqjiC39sztT7C1iULiUc0J3qZnqUALKnSX40Kg7XBhcb4HSK94wRcZyKI0EQe/FpmfRdbm
+        HfglA+2oNF2R4srQOZmXgwtsoNNfu9SZM0DTUIvXkcU5NjDlCbSmuIxxBMYOdmjiPTeLF56Al7zNcUE+
+        c4X2YvwzZdypvCbCSwhI4zLgI9/uuFD8whU1oZDu8Cs4KgOSWeLLxZImAqTT7UwE6HSp3N+/JasVN3t2
+        BJ94g9IEaLotc2L8XqnUN/xLzOjZgbEn8og3GDcBhqyMN2noQSOvxPNaxnOcBnQn896VqPgEGwd0n1Kx
+        kG6eR4CmgdAt0vV04qpxNCHO4DFJIb3zJK8oeezzjmSMrr7j2ztuTB2Qe39q6yWqPe7AKpmYgl63V+p5
+        Ee3EpKdIUb6BHrtL6mSCzykw7lrG68hDXjvKI7+snxvsnP8RA9JPj0ArcmMbL3e7bbJeYfAAqbTr4gYC
+        SM+jN86zxAz/7QKkpxyrGDrCg65c3wp/Aa1/yaUDrTk6AAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="BtnAddAppointments.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO

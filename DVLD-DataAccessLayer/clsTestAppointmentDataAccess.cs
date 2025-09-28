@@ -36,8 +36,9 @@ namespace DVLD_DataAccessLayer
                     command.Parameters.AddWithValue("@PaidFees", PaidFees);
                     command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
                     command.Parameters.AddWithValue("@IsLocked", IsLocked);
-                    command.Parameters.AddWithValue("@RetakeTestApplicationID", RetakeTestApplicationID);
-                    try
+                    command.Parameters.AddWithValue("@RetakeTestApplicationID",
+                        RetakeTestApplicationID.HasValue ? (object)RetakeTestApplicationID.Value : DBNull.Value);
+                        try
                     {
                         connection.Open();
                         object result = command.ExecuteScalar();
@@ -129,7 +130,7 @@ int TestAppointmentID, IsLocked IsLocked,
             DataTable dt = new DataTable();
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
-            string query = "\tselect * from TestAppointments\r\n";
+            string query = "select TestAppointmentID, AppointmentDate, PaidFees, IsLocked from TestAppointments\r\n";
 
             SqlCommand command = new SqlCommand(query, connection);
 

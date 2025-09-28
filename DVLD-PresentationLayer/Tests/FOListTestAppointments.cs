@@ -18,6 +18,12 @@ namespace DVLD_PresentationLayer.Tests
         private int _LocalDrivingLicenseApplicationID;
         private clsNewLocalDrivingApplication _LocalDrivingLicense;
         private clsManageTestTypes.enTestType _TestType = clsManageTestTypes.enTestType.VisionTest;
+        private void _RefreshTestAppointmentsList()
+        {
+            _dtLicenseTestAppointments = clsTestAppointment.GetAllAppointments();
+            dGViewShowInformation.DataSource = _dtLicenseTestAppointments;
+            LblTotalRecoreds.Text = dGViewShowInformation.Rows.Count.ToString();
+        }
         void _LoadLocalDrivingApplicationInfo()
         {
             ctrDrivingLicenseApplicationInfo1.LoadApplication(_LocalDrivingLicenseApplicationID);
@@ -64,31 +70,27 @@ namespace DVLD_PresentationLayer.Tests
         }
         private void FOListTestAppointments_Load(object sender, EventArgs e)
         {
-            _dtLicenseTestAppointments = clsTestAppointment.GetAllAppointments();
-            dGViewShowInformation.DataSource = _dtLicenseTestAppointments;
-            LblTotalRecoreds.Text = dGViewShowInformation.Rows.Count.ToString();
+            _RefreshTestAppointmentsList();
             if (dGViewShowInformation.Rows.Count > 0)
             {
                 dGViewShowInformation.Columns[0].HeaderText = "Appointment ID";
-                dGViewShowInformation.Columns[0].Width = 110;
+                dGViewShowInformation.Columns[0].Width = 90;
 
                 dGViewShowInformation.Columns[1].HeaderText = "Appointment Date";
-                dGViewShowInformation.Columns[1].Width = 350;
+                dGViewShowInformation.Columns[1].Width = 140;
 
                 dGViewShowInformation.Columns[2].HeaderText = "Paid Fees";
-                dGViewShowInformation.Columns[2].Width = 150;
+                dGViewShowInformation.Columns[2].Width = 120;
 
                 dGViewShowInformation.Columns[3].HeaderText = "Is Locked";
-                dGViewShowInformation.Columns[3].Width = 120;
-
-                dGViewShowInformation.Columns[4].HeaderText = "Is Active";
-                dGViewShowInformation.Columns[4].Width = 120;
+                dGViewShowInformation.Columns[3].Width = 100;
             }
         }
         private void BtnAddAppointments_Click(object sender, EventArgs e)
         {
             FOScheduleTest frm = new FOScheduleTest(_TestType, _LocalDrivingLicenseApplicationID);
             frm.ShowDialog();
+            FOListTestAppointments_Load(null, null);
         }
     }
 }
