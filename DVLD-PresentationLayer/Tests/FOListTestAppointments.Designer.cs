@@ -59,14 +59,14 @@ namespace DVLD_PresentationLayer.Tests
             this.SMItemEdit,
             this.SMItemTakeTest});
             this.SMItemCRUDUsers.Name = "SMItemCRUDUsers";
-            this.SMItemCRUDUsers.Size = new System.Drawing.Size(154, 56);
+            this.SMItemCRUDUsers.Size = new System.Drawing.Size(211, 84);
             // 
             // SMItemEdit
             // 
             this.SMItemEdit.Font = new System.Drawing.Font("Tahoma", 10F);
             this.SMItemEdit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SMItemEdit.Name = "SMItemEdit";
-            this.SMItemEdit.Size = new System.Drawing.Size(153, 26);
+            this.SMItemEdit.Size = new System.Drawing.Size(210, 26);
             this.SMItemEdit.Text = "Edit";
             // 
             // SMItemTakeTest
@@ -74,8 +74,9 @@ namespace DVLD_PresentationLayer.Tests
             this.SMItemTakeTest.Font = new System.Drawing.Font("Tahoma", 10F);
             this.SMItemTakeTest.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SMItemTakeTest.Name = "SMItemTakeTest";
-            this.SMItemTakeTest.Size = new System.Drawing.Size(153, 26);
+            this.SMItemTakeTest.Size = new System.Drawing.Size(210, 26);
             this.SMItemTakeTest.Text = "Take Test";
+            this.SMItemTakeTest.Click += new System.EventHandler(this.SMItemTakeTest_Click);
             // 
             // LblManageTestAppointments
             // 

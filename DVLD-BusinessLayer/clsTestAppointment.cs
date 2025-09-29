@@ -29,24 +29,59 @@ namespace DVLD_BusinessLayer
             TestTypeID = 0;
             LocalDrivingLicenseApplicationID = 0;
             AppointmentDate = DateTime.Today;
-            TestAppointmentID = 0;
             PaidFees = 0;
             CreatedByUserID = 0;
             IsLocked = 0;
             RetakeTestApplicationID = 0;
         }
         private clsTestAppointment(int TestAppointmentID, int TestTypeID, int LocalDrivingLicenseApplicationID, DateTime AppointmentDate
-            , decimal PaidFees, int CreatedByUserID, IsLocked IsLocked, int RetakeTestApplicationID)
+            , decimal PaidFees, int CreatedByUserID, IsLocked IsLocked, int? RetakeTestApplicationID)
         {
             this.TestAppointmentID = TestAppointmentID;
             this.TestTypeID = TestTypeID;
             this.LocalDrivingLicenseApplicationID = LocalDrivingLicenseApplicationID;
             this.AppointmentDate = AppointmentDate;
-            this.TestAppointmentID = TestAppointmentID;
             this.PaidFees = PaidFees;
             this.CreatedByUserID = CreatedByUserID;
             this.IsLocked = IsLocked;
-            this.RetakeTestApplicationID = RetakeTestApplicationID;
+            this.RetakeTestApplicationID = RetakeTestApplicationID ?? 0;
+        }
+        public static clsTestAppointment Find(int TestAppointmentID)
+        {
+            int TestTypeID =0;
+            int LocalDrivingLicenseApplicationID = 1;
+            DateTime AppointmentDate = DateTime.Now;
+            decimal PaidFees = 1;
+            int CreatedByUserID = 1;
+            IsLocked IsLocked = IsLocked.No;
+            int? RetakeTestApplicationID = 0;
+
+            bool isFound = clsTestAppointmentDataAccess.GetTestAppointmentInfoByID(
+                TestAppointmentID,
+                ref TestTypeID,
+                ref LocalDrivingLicenseApplicationID,
+                ref AppointmentDate,
+                ref PaidFees,
+                ref CreatedByUserID,
+                ref IsLocked,
+                ref RetakeTestApplicationID
+            );
+
+            if (isFound)
+            {
+                return new clsTestAppointment(
+                  TestAppointmentID,
+                 TestTypeID,
+                 LocalDrivingLicenseApplicationID,
+                AppointmentDate,
+                PaidFees,
+                 CreatedByUserID,
+                    IsLocked,
+                 RetakeTestApplicationID
+                );
+            }
+            else
+                return null;
         }
         private bool _AddNewAppointment()
         {

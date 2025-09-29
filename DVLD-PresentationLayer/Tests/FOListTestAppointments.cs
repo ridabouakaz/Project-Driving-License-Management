@@ -92,5 +92,10 @@ namespace DVLD_PresentationLayer.Tests
             frm.ShowDialog();
             FOListTestAppointments_Load(null, null);
         }
+        private void SMItemTakeTest_Click(object sender, EventArgs e)
+        {
+            FOTakeTest frm = new FOTakeTest(_TestType, (int)dGViewShowInformation.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+        }
     }
 }

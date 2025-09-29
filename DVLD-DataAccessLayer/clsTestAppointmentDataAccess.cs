@@ -12,6 +12,60 @@ namespace DVLD_DataAccessLayer
 {
     public class clsTestAppointmentDataAccess
     {
+        public static bool GetTestAppointmentInfoByID(
+    int TestAppointmentID,
+    ref int TestTypeID,
+    ref int LocalDrivingLicenseApplicationID,
+    ref DateTime AppointmentDate,
+    ref decimal PaidFees,
+    ref int CreatedByUserID,
+    ref IsLocked IsLocked,
+    ref int? RetakeTestApplicationID // Make nullable
+)
+        {
+            bool isFound = false;
+
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                string query = "SELECT * FROM TestAppointments WHERE TestAppointmentID = @TestAppointmentID";
+
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@TestAppointmentID", TestAppointmentID);
+
+                try
+                {
+                    connection.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        isFound = true;
+
+                        TestTypeID = Convert.ToInt32(reader["TestTypeID"]);
+                        LocalDrivingLicenseApplicationID = Convert.ToInt32(reader["LocalDrivingLicenseApplicationID"]);
+                        AppointmentDate = Convert.ToDateTime(reader["AppointmentDate"]);
+                        PaidFees = Convert.ToDecimal(reader["PaidFees"]);
+                        CreatedByUserID = Convert.ToInt32(reader["CreatedByUserID"]);
+
+                        RetakeTestApplicationID = reader["RetakeTestApplicationID"] != DBNull.Value
+                            ? Convert.ToInt32(reader["RetakeTestApplicationID"])
+                            : (int?)null;
+
+                        IsLocked = reader["IsLocked"] != DBNull.Value
+                            ? (IsLocked)Convert.ToInt32(reader["IsLocked"])
+                            : IsLocked.No;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Log or rethrow as needed
+                    isFound = false;
+                }
+            }
+
+            return isFound;
+        }
+
         public static int AddNewAppointment(
    int TestTypeID, int LocalDrivingLicenseApplicationID, DateTime AppointmentDate,
    decimal PaidFees, int CreatedByUserID, IsLocked IsLocked, int? RetakeTestApplicationID)
