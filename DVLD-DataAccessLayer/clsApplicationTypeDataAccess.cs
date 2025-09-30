@@ -125,20 +125,18 @@ int ID,
             return dt;
 
         }
-        public static decimal GetFeesById(int id)
+        public static decimal GetFeesById(int ApplicationTypeID)
         {
             decimal fee = 0m;
             using (SqlConnection conn = new SqlConnection(clsDataAccessSettings.ConnectionString))
             {
                 string query = @"
-            SELECT TOP 1 ApplicationTypes.ApplicationFees
-            FROM Applications
-            INNER JOIN ApplicationTypes ON Applications.ApplicationTypeID = ApplicationTypes.ApplicationTypeID
-            WHERE ApplicationTypes.ApplicationTypeID = @ApplicationTypeID";
+           SELECT ApplicationTypes.ApplicationFees from  ApplicationTypes WHERE ApplicationTypes.ApplicationTypeID = @ApplicationTypeID
+";
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@ApplicationTypeID", id);
+                    cmd.Parameters.AddWithValue("@ApplicationTypeID", ApplicationTypeID);
                     conn.Open();
 
                     object result = cmd.ExecuteScalar();

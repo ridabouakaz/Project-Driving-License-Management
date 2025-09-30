@@ -60,6 +60,7 @@ namespace DVLD_PresentationLayer.Tests
             this.SMItemTakeTest});
             this.SMItemCRUDUsers.Name = "SMItemCRUDUsers";
             this.SMItemCRUDUsers.Size = new System.Drawing.Size(211, 84);
+            this.SMItemCRUDUsers.Opening += new System.ComponentModel.CancelEventHandler(this.SMItemCRUDUsers_Opening);
             // 
             // SMItemEdit
             // 
@@ -68,6 +69,7 @@ namespace DVLD_PresentationLayer.Tests
             this.SMItemEdit.Name = "SMItemEdit";
             this.SMItemEdit.Size = new System.Drawing.Size(210, 26);
             this.SMItemEdit.Text = "Edit";
+            this.SMItemEdit.Click += new System.EventHandler(this.SMItemEdit_Click);
             // 
             // SMItemTakeTest
             // 

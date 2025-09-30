@@ -135,7 +135,7 @@
             this.LblValueTotalFees.BackColor = System.Drawing.Color.Transparent;
             this.LblValueTotalFees.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.LblValueTotalFees.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblValueTotalFees.Location = new System.Drawing.Point(495, 33);
+            this.LblValueTotalFees.Location = new System.Drawing.Point(541, 37);
             this.LblValueTotalFees.Name = "LblValueTotalFees";
             this.LblValueTotalFees.Size = new System.Drawing.Size(23, 25);
             this.LblValueTotalFees.TabIndex = 58;
@@ -144,7 +144,7 @@
             // PBTotalFees
             // 
             this.PBTotalFees.Image = ((System.Drawing.Image)(resources.GetObject("PBTotalFees.Image")));
-            this.PBTotalFees.Location = new System.Drawing.Point(425, 33);
+            this.PBTotalFees.Location = new System.Drawing.Point(473, 34);
             this.PBTotalFees.Name = "PBTotalFees";
             this.PBTotalFees.Size = new System.Drawing.Size(40, 32);
             this.PBTotalFees.TabIndex = 57;
@@ -186,7 +186,7 @@
             this.LblRAppValueFees.BackColor = System.Drawing.Color.Transparent;
             this.LblRAppValueFees.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.LblRAppValueFees.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblRAppValueFees.Location = new System.Drawing.Point(223, 30);
+            this.LblRAppValueFees.Location = new System.Drawing.Point(223, 37);
             this.LblRAppValueFees.Name = "LblRAppValueFees";
             this.LblRAppValueFees.Size = new System.Drawing.Size(23, 25);
             this.LblRAppValueFees.TabIndex = 55;
@@ -198,7 +198,7 @@
             this.LblTotalFees.BackColor = System.Drawing.Color.Transparent;
             this.LblTotalFees.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.LblTotalFees.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblTotalFees.Location = new System.Drawing.Point(290, 34);
+            this.LblTotalFees.Location = new System.Drawing.Point(342, 34);
             this.LblTotalFees.Name = "LblTotalFees";
             this.LblTotalFees.Size = new System.Drawing.Size(111, 28);
             this.LblTotalFees.TabIndex = 56;
@@ -294,7 +294,7 @@
             this.LblScheduleTest.BackColor = System.Drawing.Color.Transparent;
             this.LblScheduleTest.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold);
             this.LblScheduleTest.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
-            this.LblScheduleTest.Location = new System.Drawing.Point(164, 172);
+            this.LblScheduleTest.Location = new System.Drawing.Point(181, 173);
             this.LblScheduleTest.Name = "LblScheduleTest";
             this.LblScheduleTest.Size = new System.Drawing.Size(278, 54);
             this.LblScheduleTest.TabIndex = 49;
@@ -304,7 +304,7 @@
             // 
             this.PBManageTestAppointments.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.PBManageTestAppointments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.PBManageTestAppointments.Location = new System.Drawing.Point(234, 33);
+            this.PBManageTestAppointments.Location = new System.Drawing.Point(249, 33);
             this.PBManageTestAppointments.Name = "PBManageTestAppointments";
             this.PBManageTestAppointments.Size = new System.Drawing.Size(137, 125);
             this.PBManageTestAppointments.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

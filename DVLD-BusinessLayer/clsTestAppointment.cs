@@ -137,7 +137,7 @@ namespace DVLD_BusinessLayer
             return clsTestAppointmentDataAccess.GetAllAppointments(TestTypeID);
 
         }
-        public bool IsLockedAppointment(int TestAppointmentID)
+        public static bool IsLockedAppointment(int TestAppointmentID)
         {
             return clsTestAppointmentDataAccess.IsLockedAppointment(
                     TestAppointmentID

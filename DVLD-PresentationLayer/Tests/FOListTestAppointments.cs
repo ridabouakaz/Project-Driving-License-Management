@@ -97,5 +97,17 @@ namespace DVLD_PresentationLayer.Tests
             FOTakeTest frm = new FOTakeTest(_TestType, (int)dGViewShowInformation.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
         }
+
+        private void SMItemCRUDUsers_Opening(object sender, CancelEventArgs e)
+        {
+            SMItemEdit.Enabled = !clsTestAppointment.IsLockedAppointment((int)dGViewShowInformation.CurrentRow.Cells[0].Value);
+            SMItemTakeTest.Enabled = !clsTestAppointment.IsLockedAppointment((int)dGViewShowInformation.CurrentRow.Cells[0].Value);
+        }
+        private void SMItemEdit_Click(object sender, EventArgs e)
+        {
+            FOScheduleTest frm = new FOScheduleTest(_TestType, _LocalDrivingLicenseApplicationID);
+            frm.ShowDialog();
+            FOListTestAppointments_Load(null, null);
+        }
     }
 }
