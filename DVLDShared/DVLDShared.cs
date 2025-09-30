@@ -23,8 +23,8 @@ namespace DVLDShared
             No = 1 };
         public enum IsLocked : byte
         {
-            Yes = 0,
-            No = 1
+            Yes = 1,
+            No = 0
         };
         public enum enApplicationStatus { New = 1, Cancelled = 2, Completed = 3 };
 

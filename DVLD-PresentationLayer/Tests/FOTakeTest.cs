@@ -18,7 +18,9 @@ namespace DVLD_PresentationLayer.Tests
         private clsNewLocalDrivingApplication _LocalDrivingApplication;
         private clsTestAppointment _Appointment;
         private int _LocalDrivingLicenseApplicationID;
-        private clsTest _Test;
+        private int _TestAppointmentID;
+        private clsTest _Test = new clsTest();
+
         public string LocalDrivingApplicationID
         {
             get => LblValueDLAppID.Text.Trim();
@@ -54,7 +56,7 @@ namespace DVLD_PresentationLayer.Tests
             get => TBNotes.Text.Trim();
             set => TBNotes.Text = value;
         }
-        public Result ResultTest    
+        public Result ResultTest
         {
             get => RBPass.Checked ? Result.Pass : Result.Fail;
             set
@@ -65,12 +67,28 @@ namespace DVLD_PresentationLayer.Tests
                     RBFail.Checked = true;
             }
         }
-        public FOTakeTest(clsManageTestTypes.enTestType TestType, clsTestAppointment Appointment)
+        void _LoadLocalDrivingApplicationInfo()
+        {
+            
+            _LocalDrivingApplication = clsNewLocalDrivingApplication.FindByLocalDrivingAppLicenseID(_Appointment.LocalDrivingLicenseApplicationID);
+            LocalDrivingApplicationID = _LocalDrivingApplication.ApplicationID.ToString();
+            DClass = clsNewLocalDrivingApplication.GetClassNameById(_LocalDrivingApplication.LocalDrivingLicenseApplicationID);
+            NamePerson = _LocalDrivingApplication.ApplicantFullName;
+            FeesTest = clsManageTestTypes.GetFeesById((int)_TestType).ToString();
+            DateOFAppointment= _Appointment.AppointmentDate.ToString("yyyy-MM-dd");
+        }
+        public FOTakeTest(clsManageTestTypes.enTestType TestType, int TestAppointmentID)
         {
             InitializeComponent();
             _TestType = TestType;
-            _Appointment = Appointment;
+            _TestAppointmentID = TestAppointmentID;
             _LoadTestTypeImageAndTitle();
+            _LoadTestTAppointment();
+            _LoadLocalDrivingApplicationInfo();
+        }
+        private void _LoadTestTAppointment()
+        {
+            _Appointment= clsTestAppointment.Find(_TestAppointmentID);
         }
         private void _LoadTestTypeImageAndTitle()
         {
