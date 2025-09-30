@@ -53,6 +53,21 @@ namespace DVLD_PresentationLayer.Tests
             get => LblvalueFees.Text.Trim();
             set => LblvalueFees.Text = value;
         }
+        public string AppFees
+        {
+            get => LblRAppValueFees.Text.Trim();
+            set => LblRAppValueFees.Text = value;
+        }
+        public string TestAppID
+        {
+            get => LblRTestValueAppID.Text.Trim();
+            set => LblRTestValueAppID.Text = value;
+        }
+        public string TotalFees
+        {
+            get => LblValueTotalFees.Text.Trim();
+            set => LblValueTotalFees.Text = value;
+        }
         private void _defaultAppointmentDate()
         {
             DTPDate.MinDate = DateTime.Today;
