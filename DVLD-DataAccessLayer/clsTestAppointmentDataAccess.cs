@@ -128,6 +128,7 @@ int TestAppointmentID, IsLocked IsLocked,
                 {
                     command.Parameters.AddWithValue("@TestAppointmentID", TestAppointmentID);
                     command.Parameters.AddWithValue("@AppointmentDate", IsLocked);
+                    command.Parameters.Add("@IsLocked", SqlDbType.Bit).Value = (IsLocked == IsLocked.Yes);
                     command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
 
                     try
@@ -178,43 +179,36 @@ int TestAppointmentID, IsLocked IsLocked,
             }
             return (rowsAffected > 0);
         }
-        public static DataTable GetAllAppointments()
+        public static DataTable GetAllAppointments(int testTypeId)
         {
+            const string query = @"
+        SELECT TestAppointmentID, AppointmentDate, PaidFees, IsLocked 
+        FROM TestAppointments 
+        WHERE TestTypeID = @TestTypeID";
 
-            DataTable dt = new DataTable();
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            var dataTable = new DataTable();
 
-            string query = "select TestAppointmentID, AppointmentDate, PaidFees, IsLocked from TestAppointments\r\n";
-
-            SqlCommand command = new SqlCommand(query, connection);
-
-            try
+            using (var connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            using (var command = new SqlCommand(query, connection))
             {
-                connection.Open();
+                command.Parameters.Add("@TestTypeID", SqlDbType.Int).Value = testTypeId;
 
-                SqlDataReader reader = command.ExecuteReader();
-
-                if (reader.HasRows)
-
+                try
                 {
-                    dt.Load(reader);
+                    connection.Open();
+                    using (var reader = command.ExecuteReader())
+                    {
+                        dataTable.Load(reader);
+                    }
                 }
-
-                reader.Close();
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error retrieving appointments: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
 
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error retrieving Users: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                connection.Close();
-            }
-
-            return dt;
-
+            return dataTable;
         }
-       
+
     }
 }

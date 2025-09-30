@@ -20,7 +20,7 @@ namespace DVLD_PresentationLayer.Tests
         private clsManageTestTypes.enTestType _TestType = clsManageTestTypes.enTestType.VisionTest;
         private void _RefreshTestAppointmentsList()
         {
-            _dtLicenseTestAppointments = clsTestAppointment.GetAllAppointments();
+            _dtLicenseTestAppointments = clsTestAppointment.GetAllAppointments((int)_TestType);
             dGViewShowInformation.DataSource = _dtLicenseTestAppointments;
             LblTotalRecoreds.Text = dGViewShowInformation.Rows.Count.ToString();
         }

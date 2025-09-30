@@ -132,9 +132,9 @@ namespace DVLD_BusinessLayer
             }
             return false;
         }
-        public static DataTable GetAllAppointments()
+        public static DataTable GetAllAppointments(int TestTypeID)
         {
-            return clsTestAppointmentDataAccess.GetAllAppointments();
+            return clsTestAppointmentDataAccess.GetAllAppointments(TestTypeID);
 
         }
     }
