@@ -140,7 +140,6 @@ namespace DVLD_PresentationLayer
 
             }
         }
-
         private void SMItemDeleteApplication_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Are you sure you want to Delete Application [" + dGViewShowInformation.CurrentRow.Cells[0].Value + "]", "Confirm Delete", MessageBoxButtons.OKCancel) == DialogResult.OK)

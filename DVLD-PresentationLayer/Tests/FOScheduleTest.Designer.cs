@@ -104,7 +104,7 @@
             this.GBUserControlDetailesApplication.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.GBUserControlDetailesApplication.Location = new System.Drawing.Point(12, 22);
             this.GBUserControlDetailesApplication.Name = "GBUserControlDetailesApplication";
-            this.GBUserControlDetailesApplication.Size = new System.Drawing.Size(558, 694);
+            this.GBUserControlDetailesApplication.Size = new System.Drawing.Size(623, 694);
             this.GBUserControlDetailesApplication.TabIndex = 49;
             this.GBUserControlDetailesApplication.TabStop = false;
             this.GBUserControlDetailesApplication.Text = "Written Test";
@@ -124,7 +124,7 @@
             this.GBRetakeTestInfo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.GBRetakeTestInfo.Location = new System.Drawing.Point(6, 492);
             this.GBRetakeTestInfo.Name = "GBRetakeTestInfo";
-            this.GBRetakeTestInfo.Size = new System.Drawing.Size(546, 108);
+            this.GBRetakeTestInfo.Size = new System.Drawing.Size(611, 108);
             this.GBRetakeTestInfo.TabIndex = 53;
             this.GBRetakeTestInfo.TabStop = false;
             this.GBRetakeTestInfo.Text = "Retake Test Info";
@@ -240,7 +240,7 @@
             this.BtnSave.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BtnSave.Image = ((System.Drawing.Image)(resources.GetObject("BtnSave.Image")));
             this.BtnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnSave.Location = new System.Drawing.Point(369, 623);
+            this.BtnSave.Location = new System.Drawing.Point(462, 624);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.BtnSave.Size = new System.Drawing.Size(155, 50);
@@ -294,7 +294,7 @@
             this.LblScheduleTest.BackColor = System.Drawing.Color.Transparent;
             this.LblScheduleTest.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold);
             this.LblScheduleTest.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
-            this.LblScheduleTest.Location = new System.Drawing.Point(134, 173);
+            this.LblScheduleTest.Location = new System.Drawing.Point(164, 172);
             this.LblScheduleTest.Name = "LblScheduleTest";
             this.LblScheduleTest.Size = new System.Drawing.Size(278, 54);
             this.LblScheduleTest.TabIndex = 49;
@@ -304,7 +304,7 @@
             // 
             this.PBManageTestAppointments.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.PBManageTestAppointments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.PBManageTestAppointments.Location = new System.Drawing.Point(197, 33);
+            this.PBManageTestAppointments.Location = new System.Drawing.Point(234, 33);
             this.PBManageTestAppointments.Name = "PBManageTestAppointments";
             this.PBManageTestAppointments.Size = new System.Drawing.Size(137, 125);
             this.PBManageTestAppointments.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -494,7 +494,7 @@
             this.BtnClose.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BtnClose.Image = ((System.Drawing.Image)(resources.GetObject("BtnClose.Image")));
             this.BtnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnClose.Location = new System.Drawing.Point(219, 742);
+            this.BtnClose.Location = new System.Drawing.Point(252, 742);
             this.BtnClose.Name = "BtnClose";
             this.BtnClose.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.BtnClose.Size = new System.Drawing.Size(155, 50);
@@ -510,7 +510,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(582, 838);
+            this.ClientSize = new System.Drawing.Size(647, 838);
             this.Controls.Add(this.BtnClose);
             this.Controls.Add(this.GBUserControlDetailesApplication);
             this.Name = "FOScheduleTest";

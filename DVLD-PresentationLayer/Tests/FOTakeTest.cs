@@ -75,7 +75,8 @@ namespace DVLD_PresentationLayer.Tests
             DClass = clsNewLocalDrivingApplication.GetClassNameById(_LocalDrivingApplication.LocalDrivingLicenseApplicationID);
             NamePerson = _LocalDrivingApplication.ApplicantFullName;
             FeesTest = clsManageTestTypes.GetFeesById((int)_TestType).ToString();
-            DateOFAppointment= _Appointment.AppointmentDate.ToString("yyyy-MM-dd");
+            DateOFAppointment = _Appointment.AppointmentDate.ToString("yyyy-MM-dd");
+            TestID = _Test.TestID.ToString();
         }
         public FOTakeTest(clsManageTestTypes.enTestType TestType, int TestAppointmentID)
         {
@@ -130,6 +131,7 @@ namespace DVLD_PresentationLayer.Tests
             if (_Test.Save() && _Appointment.LockedAppointment())
             {
                 MessageBox.Show("✅ Data Saved Successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                TestID = _Test.TestID.ToString();
             }
             else
             {

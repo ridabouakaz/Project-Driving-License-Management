@@ -145,6 +145,40 @@ int TestAppointmentID, IsLocked IsLocked,
             }
             return (rowsAffected > 0);
         }
+        public static bool IsLockedAppointment(
+int TestAppointmentID
+   )
+        {
+            bool isFound = false;
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+
+            string query = "select Found=1 from TestAppointments where IsLocked=1 and \r\nTestAppointmentID=@TestAppointmentID ;";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@TestAppointmentID", TestAppointmentID);
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                isFound = reader.HasRows;
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error checking if Applications exists: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                isFound = false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return isFound;
+        }
         public static bool EditTimeAppointment(
    int TestAppointmentID, DateTime AppointmentDate,
                 int CreatedByUserID
