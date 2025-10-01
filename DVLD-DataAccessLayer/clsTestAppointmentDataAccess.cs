@@ -179,6 +179,76 @@ int TestAppointmentID
 
             return isFound;
         }
+        public static bool HasExistingAppointment(
+int LocalDrivingLicenseApplicationID, int TestTypeID
+)
+        {
+            bool isFound = false;
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+
+            string query = "select Found=1 from TestAppointments where IsLocked=0 and TestTypeID=@TestTypeID and \r\nLocalDrivingLicenseApplicationID=@LocalDrivingLicenseApplicationID ;";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LocalDrivingLicenseApplicationID);
+            command.Parameters.AddWithValue("@TestTypeID", TestTypeID);
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                isFound = reader.HasRows;
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error checking if Applications exists: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                isFound = false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return isFound;
+        }
+
+        public static bool HasPassedTestAppointment(
+int LocalDrivingLicenseApplicationID, int TestTypeID)
+        {
+            bool isFound = false;
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+
+            string query = "select Found=1 from TestAppointments \r\nINNER JOIN Tests ON\r\nTestAppointments.TestAppointmentID = Tests.TestAppointmentID where  \r\nTestTypeID=@TestTypeID and LocalDrivingLicenseApplicationID=@LocalDrivingLicenseApplicationID and TestResult=1";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LocalDrivingLicenseApplicationID);
+            command.Parameters.AddWithValue("@TestTypeID", TestTypeID);
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                isFound = reader.HasRows;
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error checking if Applications exists: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                isFound = false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return isFound;
+        }
         public static bool EditTimeAppointment(
    int TestAppointmentID, DateTime AppointmentDate,
                 int CreatedByUserID
@@ -213,12 +283,12 @@ int TestAppointmentID
             }
             return (rowsAffected > 0);
         }
-        public static DataTable GetAllAppointments(int testTypeId)
+        public static DataTable GetAllAppointments(int LocalDrivingLicenseApplicationID,int testTypeId)
         {
             const string query = @"
         SELECT TestAppointmentID, AppointmentDate, PaidFees, IsLocked 
-        FROM TestAppointments 
-        WHERE TestTypeID = @TestTypeID";
+FROM TestAppointments 
+WHERE TestTypeID = @TestTypeID and LocalDrivingLicenseApplicationID=@LocalDrivingLicenseApplicationID";
 
             var dataTable = new DataTable();
 
@@ -226,6 +296,7 @@ int TestAppointmentID
             using (var command = new SqlCommand(query, connection))
             {
                 command.Parameters.Add("@TestTypeID", SqlDbType.Int).Value = testTypeId;
+                command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LocalDrivingLicenseApplicationID);
 
                 try
                 {

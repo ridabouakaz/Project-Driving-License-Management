@@ -132,10 +132,21 @@ namespace DVLD_BusinessLayer
             }
             return false;
         }
-        public static DataTable GetAllAppointments(int TestTypeID)
+        public static DataTable GetAllAppointments(int LocalDrivingLicenseApplicationID,int TestTypeID)
         {
-            return clsTestAppointmentDataAccess.GetAllAppointments(TestTypeID);
+            return clsTestAppointmentDataAccess.GetAllAppointments(LocalDrivingLicenseApplicationID,TestTypeID);
 
+        }
+
+        public static bool HasExistingAppointment(int LocalDrivingLicenseApplicationID, int TestTypeID)
+        {
+            return clsTestAppointmentDataAccess.HasExistingAppointment(
+                    LocalDrivingLicenseApplicationID, TestTypeID);
+        }
+        public static bool HasPassedTestAppointment(int LocalDrivingLicenseApplicationID, int TestTypeID)
+        {
+            return clsTestAppointmentDataAccess.HasPassedTestAppointment(
+                    LocalDrivingLicenseApplicationID, TestTypeID);
         }
         public static bool IsLockedAppointment(int TestAppointmentID)
         {

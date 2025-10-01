@@ -88,7 +88,9 @@ namespace DVLD_PresentationLayer.Tests
                 LblScheduleTest.Text = "Schedule Retake Test";
                 LblScheduleTest.Location= new Point((this.Width / 2) - (LblScheduleTest.Width / 2), LblScheduleTest.Location.Y);
                 _RetakeTest = _LocalDrivingApplication;
+                _Mode = enMode.AddNew;
                 _RetakeTest.ApplicationTypeID = 7;
+                _RetakeTest.Mode = clsNewLocalDrivingApplication.enMode.AddNew;
                 _RetakeTest.PaidFees = clsManageApplicationTypes.GetFeesById(_RetakeTest.ApplicationTypeID);
                 TotalFees = (clsManageTestTypes.GetFeesById((int)_TestType) + _RetakeTest.PaidFees).ToString();
                 AppFees = clsManageApplicationTypes.GetFeesById(_RetakeTest.ApplicationTypeID).ToString();
@@ -155,7 +157,6 @@ namespace DVLD_PresentationLayer.Tests
             {
                 MessageBox.Show("❌ Error: Data was not saved successfully.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            this.Close();
         }
     }
 }

@@ -20,7 +20,7 @@ namespace DVLD_PresentationLayer.Tests
         private clsManageTestTypes.enTestType _TestType = clsManageTestTypes.enTestType.VisionTest;
         private void _RefreshTestAppointmentsList()
         {
-            _dtLicenseTestAppointments = clsTestAppointment.GetAllAppointments((int)_TestType);
+            _dtLicenseTestAppointments = clsTestAppointment.GetAllAppointments(_LocalDrivingLicenseApplicationID,(int)_TestType);
             dGViewShowInformation.DataSource = _dtLicenseTestAppointments;
             LblTotalRecoreds.Text = dGViewShowInformation.Rows.Count.ToString();
         }
@@ -88,6 +88,16 @@ namespace DVLD_PresentationLayer.Tests
         }
         private void BtnAddAppointments_Click(object sender, EventArgs e)
         {
+            if (clsTestAppointment.HasExistingAppointment(_LocalDrivingLicenseApplicationID, (int)_TestType))
+            {
+                MessageBox.Show("⚠️ An appointment already exists for this test type. Please choose a different date or test.", "Duplicate Appointment", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (clsTestAppointment.HasPassedTestAppointment(_LocalDrivingLicenseApplicationID, (int)_TestType))
+            {
+                MessageBox.Show("✅ This test has already been passed. No need to schedule another appointment.", "Test Already Passed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             FOScheduleTest frm = new FOScheduleTest(_TestType, _LocalDrivingLicenseApplicationID);
             frm.ShowDialog();
             FOListTestAppointments_Load(null, null);
