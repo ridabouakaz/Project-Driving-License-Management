@@ -28,7 +28,7 @@ namespace DVLD_PresentationLayer.Tests
         {
             ctrDrivingLicenseApplicationInfo1.LoadApplication(_LocalDrivingLicenseApplicationID);
         }
-        public FOListTestAppointments( clsManageTestTypes.enTestType TestType, int LocalDrivingLicenseApplicationID)
+        public FOListTestAppointments(clsManageTestTypes.enTestType TestType, int LocalDrivingLicenseApplicationID)
         {
             InitializeComponent();
             _LocalDrivingLicenseApplicationID = LocalDrivingLicenseApplicationID;
@@ -37,6 +37,7 @@ namespace DVLD_PresentationLayer.Tests
             _LoadLocalDrivingApplicationInfo();
 
         }
+ 
         private void _LoadTestTypeImageAndTitle()
         {
             switch (_TestType)
@@ -115,7 +116,7 @@ namespace DVLD_PresentationLayer.Tests
         }
         private void SMItemEdit_Click(object sender, EventArgs e)
         {
-            FOScheduleTest frm = new FOScheduleTest(_TestType, _LocalDrivingLicenseApplicationID);
+            FOScheduleTest frm = new FOScheduleTest(_TestType, _LocalDrivingLicenseApplicationID, (int)dGViewShowInformation.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
             FOListTestAppointments_Load(null, null);
         }

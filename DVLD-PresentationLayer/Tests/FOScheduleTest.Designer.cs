@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FOScheduleTest));
             this.GBUserControlDetailesApplication = new System.Windows.Forms.GroupBox();
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.GBRetakeTestInfo = new System.Windows.Forms.GroupBox();
             this.LblValueTotalFees = new System.Windows.Forms.Label();
             this.PBTotalFees = new System.Windows.Forms.PictureBox();

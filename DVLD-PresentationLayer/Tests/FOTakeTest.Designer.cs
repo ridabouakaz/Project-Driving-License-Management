@@ -32,6 +32,7 @@
             this.GBUserControlDetailesApplication = new System.Windows.Forms.GroupBox();
             this.PBTestID = new System.Windows.Forms.PictureBox();
             this.LblValueTestID = new System.Windows.Forms.Label();
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.LblTestID = new System.Windows.Forms.Label();
             this.PBDLAppID = new System.Windows.Forms.PictureBox();
             this.LblFees = new System.Windows.Forms.Label();

@@ -22,7 +22,7 @@ namespace DVLD_PresentationLayer.Tests
         private clsManageTestTypes.enTestType _TestType = clsManageTestTypes.enTestType.VisionTest;
         private clsNewLocalDrivingApplication _LocalDrivingApplication;
         private int _LocalDrivingLicenseApplicationID;
-        //private clsTestAppointment _Appointment;
+        private int _TestAppointmentID;
         private clsTestAppointment _Appointment = new clsTestAppointment();
         private clsApplications _RetakeTest;
         private bool _HasPersonAlreadyFailedTest;
@@ -74,7 +74,7 @@ namespace DVLD_PresentationLayer.Tests
             DTPDate.Value = DateTime.Today;
             DTPDate.MaxDate = DateTime.Today.AddMonths(6);
         }
-       void  _LoadLocalDrivingApplicationInfo()
+        void _LoadLocalDrivingApplicationInfo()
         {
             _LocalDrivingApplication = clsNewLocalDrivingApplication.FindByLocalDrivingAppLicenseID(_LocalDrivingLicenseApplicationID);
             LocalDrivingApplicationID = _LocalDrivingApplication.ApplicationID.ToString();
@@ -86,7 +86,7 @@ namespace DVLD_PresentationLayer.Tests
             if (_HasPersonAlreadyFailedTest)
             {
                 LblScheduleTest.Text = "Schedule Retake Test";
-                LblScheduleTest.Location= new Point((this.Width / 2) - (LblScheduleTest.Width / 2), LblScheduleTest.Location.Y);
+                LblScheduleTest.Location = new Point((this.Width / 2) - (LblScheduleTest.Width / 2), LblScheduleTest.Location.Y);
                 _RetakeTest = _LocalDrivingApplication;
                 _Mode = enMode.AddNew;
                 _RetakeTest.ApplicationTypeID = 7;
@@ -95,6 +95,26 @@ namespace DVLD_PresentationLayer.Tests
                 TotalFees = (clsManageTestTypes.GetFeesById((int)_TestType) + _RetakeTest.PaidFees).ToString();
                 AppFees = clsManageApplicationTypes.GetFeesById(_RetakeTest.ApplicationTypeID).ToString();
                 _RetakeTest.Save();
+            }
+        }
+        void _LoadLocalDrivingApplicationInfo(int TestAppointmentID)
+        {
+            _LocalDrivingApplication = clsNewLocalDrivingApplication.FindByLocalDrivingAppLicenseID(_LocalDrivingLicenseApplicationID);
+            LocalDrivingApplicationID = _LocalDrivingApplication.ApplicationID.ToString();
+            DClass = clsNewLocalDrivingApplication.GetClassNameById(_LocalDrivingApplication.LocalDrivingLicenseApplicationID);
+            NamePerson = _LocalDrivingApplication.ApplicantFullName;
+            FeesTest = clsManageTestTypes.GetFeesById((int)_TestType).ToString();
+            _HasPersonAlreadyFailedTest = clsTest.HasPersonAlreadyFailedTest((int)_TestType, _LocalDrivingLicenseApplicationID);
+            GBRetakeTestInfo.Enabled = _HasPersonAlreadyFailedTest;
+            if (_HasPersonAlreadyFailedTest)
+            {
+                LblScheduleTest.Text = "Schedule Retake Test";
+                LblScheduleTest.Location = new Point((this.Width / 2) - (LblScheduleTest.Width / 2), LblScheduleTest.Location.Y);
+                _RetakeTest = _LocalDrivingApplication;
+                _RetakeTest.ApplicationTypeID = 7;
+                _RetakeTest.PaidFees = clsManageApplicationTypes.GetFeesById(_RetakeTest.ApplicationTypeID);
+                TotalFees = (clsManageTestTypes.GetFeesById((int)_TestType) + _RetakeTest.PaidFees).ToString();
+                AppFees = clsManageApplicationTypes.GetFeesById(_RetakeTest.ApplicationTypeID).ToString();
             }
         }
         public FOScheduleTest(clsManageTestTypes.enTestType TestType, int LocalDrivingLicenseApplicationID)
@@ -107,6 +127,17 @@ namespace DVLD_PresentationLayer.Tests
             _LoadLocalDrivingApplicationInfo();
 
         }
+        public FOScheduleTest(clsManageTestTypes.enTestType TestType, int LocalDrivingLicenseApplicationID,int TestAppointmentID)
+        {
+            InitializeComponent();
+            _TestAppointmentID = TestAppointmentID;
+            _Mode = enMode.Update;
+            _TestType = TestType;
+            _LocalDrivingLicenseApplicationID = LocalDrivingLicenseApplicationID;
+            _LoadTestTypeImageAndTitle();
+            _LoadLocalDrivingApplicationInfo(_TestAppointmentID);
+        }
+
         private void _LoadTestTypeImageAndTitle()
         {
             switch (_TestType)
@@ -135,19 +166,28 @@ namespace DVLD_PresentationLayer.Tests
         {
             this.Close();
         }
+
         private void BtnSave_Click(object sender, EventArgs e)
         {
-
-            _Appointment.TestTypeID = (int)_TestType;
-            _Appointment.LocalDrivingLicenseApplicationID = _LocalDrivingLicenseApplicationID;
-            _Appointment.AppointmentDate = DateOFAppointment;
-            _Appointment.PaidFees = clsManageTestTypes.GetFeesById((int)_TestType);
-            _Appointment.CreatedByUserID = _LocalDrivingApplication.CreatedByUserID;
-            _Appointment.IsLocked = IsLocked.No;
-            if (_HasPersonAlreadyFailedTest)
-                _Appointment.RetakeTestApplicationID = _RetakeTest.ApplicationID;
+            if (_Mode==enMode.Update)
+            {
+                _Appointment = clsTestAppointment.Find(_TestAppointmentID);
+                _Appointment.AppointmentDate = DateOFAppointment;
+                _Appointment.Mode = clsTestAppointment.enMode.Update; 
+            }
             else
-                _Appointment.RetakeTestApplicationID = null;
+            {
+                _Appointment.TestTypeID = (int)_TestType;
+                _Appointment.LocalDrivingLicenseApplicationID = _LocalDrivingLicenseApplicationID;
+                _Appointment.AppointmentDate = DateOFAppointment;
+                _Appointment.PaidFees = clsManageTestTypes.GetFeesById((int)_TestType);
+                _Appointment.CreatedByUserID = _LocalDrivingApplication.CreatedByUserID;
+                _Appointment.IsLocked = IsLocked.No;
+                if (_HasPersonAlreadyFailedTest)
+                    _Appointment.RetakeTestApplicationID = _RetakeTest.ApplicationID;
+                else
+                    _Appointment.RetakeTestApplicationID = null;
+            }
             if (_Appointment.Save())
             {
                 MessageBox.Show("✅ Data Saved Successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
