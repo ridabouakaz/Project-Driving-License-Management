@@ -178,33 +178,10 @@ namespace DVLD_PresentationLayer
         }
 
         private void SMItemCRUDLocalDrivingApplications_Opening(object sender, CancelEventArgs e)
-        
         {
-            if (clsNewLocalDrivingApplication.GetPassedTestCount((int)dGViewShowInformation.CurrentRow.Cells[0].Value) == 0)
-            {
-                SMItemScheduleVisionTest.Enabled = true;
-                SMItemScheduleStreetTest.Enabled = false;
-                SMItemScheduleWrittenTest.Enabled = false;
-
-            }
-            else if(clsNewLocalDrivingApplication.GetPassedTestCount((int)dGViewShowInformation.CurrentRow.Cells[0].Value) == 1)
-            {
-                SMItemScheduleVisionTest.Enabled = false;
-                SMItemScheduleWrittenTest.Enabled = true;
-                SMItemScheduleStreetTest.Enabled = false;
-            }
-            else if (clsNewLocalDrivingApplication.GetPassedTestCount((int)dGViewShowInformation.CurrentRow.Cells[0].Value) == 2)
-            {
-                SMItemScheduleVisionTest.Enabled = false;
-                SMItemScheduleWrittenTest.Enabled = false;
-                SMItemScheduleStreetTest.Enabled = true;
-            }
-            else if (clsNewLocalDrivingApplication.GetPassedTestCount((int)dGViewShowInformation.CurrentRow.Cells[0].Value) == 3)
-            {
-                SMItemScheduleVisionTest.Enabled = false;
-                SMItemScheduleWrittenTest.Enabled = false;
-                SMItemScheduleStreetTest.Enabled = false;
-            }
+            SMItemScheduleVisionTest.Enabled = clsNewLocalDrivingApplication.GetPassedTestCount((int)dGViewShowInformation.CurrentRow.Cells[0].Value) == 0;
+            SMItemScheduleWrittenTest.Enabled = clsNewLocalDrivingApplication.GetPassedTestCount((int)dGViewShowInformation.CurrentRow.Cells[0].Value) == 1;
+            SMItemScheduleStreetTest.Enabled = clsNewLocalDrivingApplication.GetPassedTestCount((int)dGViewShowInformation.CurrentRow.Cells[0].Value) == 2;
         }
     }
 }
