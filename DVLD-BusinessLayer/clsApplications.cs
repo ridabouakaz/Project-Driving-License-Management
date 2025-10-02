@@ -147,6 +147,13 @@ namespace DVLD_BusinessLayer
             }
             return false;
         }
-      
+        public static  bool MarkApplicationAsCompleted(int LocalDrivingLicenseApplicationID)
+        {
+            //call DataAccess Layer 
+            return clsApplicationDataAccess.MarkApplicationAsCompleted(
+               LocalDrivingLicenseApplicationID
+                );
+
+        }
     }
 }

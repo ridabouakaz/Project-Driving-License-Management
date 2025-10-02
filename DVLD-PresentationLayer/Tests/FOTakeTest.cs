@@ -132,6 +132,10 @@ namespace DVLD_PresentationLayer.Tests
             {
                 MessageBox.Show("✅ Data Saved Successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 TestID = _Test.TestID.ToString();
+                if (_LocalDrivingApplication.GetPassedTestCount() == 3)
+                {
+                    clsApplications.MarkApplicationAsCompleted(_LocalDrivingApplication.LocalDrivingLicenseApplicationID);
+                }
             }
             else
             {

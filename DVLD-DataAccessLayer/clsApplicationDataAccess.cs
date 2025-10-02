@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -137,8 +138,39 @@ namespace DVLD_DataAccessLayer
 
             return isFound;
         }
+        public static bool MarkApplicationAsCompleted(
+int LocalDrivingLicenseApplicationID
+         )
+        {
+            int rowsAffected = 0;
 
- 
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                string query = @"UPDATE Applications
+SET Applications.ApplicationStatus = 3
+FROM Applications
+INNER JOIN LocalDrivingLicenseApplications
+    ON Applications.ApplicationID = LocalDrivingLicenseApplications.ApplicationID
+WHERE LocalDrivingLicenseApplications.LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID;";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LocalDrivingLicenseApplicationID);
+                    try
+                    {
+                        connection.Open();
+                        rowsAffected = command.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error updating Application: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
+                    }
+                }
+            }
+            return (rowsAffected > 0);
+        }
+
 
     }
 }

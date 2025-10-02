@@ -175,6 +175,7 @@ namespace DVLD_PresentationLayer
         }
 
         private void SMItemCRUDLocalDrivingApplications_Opening(object sender, CancelEventArgs e)
+        
         {
             if (clsNewLocalDrivingApplication.GetPassedTestCount((int)dGViewShowInformation.CurrentRow.Cells[0].Value) == 0)
             {
