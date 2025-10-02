@@ -160,18 +160,21 @@ namespace DVLD_PresentationLayer
         {
             FOListTestAppointments frm = new FOListTestAppointments(clsManageTestTypes.enTestType.VisionTest, (int)dGViewShowInformation.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
+            _RefreshLocalDrivingApplicationsList();
         }
 
         private void SMItemScheduleWrittenTest_Click(object sender, EventArgs e)
         {
             FOListTestAppointments frm = new FOListTestAppointments(clsManageTestTypes.enTestType.WrittenTest, (int)dGViewShowInformation.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
+            _RefreshLocalDrivingApplicationsList();
         }
 
         private void SMItemScheduleStreetTest_Click(object sender, EventArgs e)
         {
             FOListTestAppointments frm = new FOListTestAppointments(clsManageTestTypes.enTestType.StreetTest, (int)dGViewShowInformation.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
+            _RefreshLocalDrivingApplicationsList();
         }
 
         private void SMItemCRUDLocalDrivingApplications_Opening(object sender, CancelEventArgs e)

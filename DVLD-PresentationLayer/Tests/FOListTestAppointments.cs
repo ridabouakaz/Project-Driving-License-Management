@@ -108,6 +108,7 @@ namespace DVLD_PresentationLayer.Tests
         {
             FOTakeTest frm = new FOTakeTest(_TestType, (int)dGViewShowInformation.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
+            FOListTestAppointments_Load(null, null);
         }
 
         private void SMItemCRUDUsers_Opening(object sender, CancelEventArgs e)
