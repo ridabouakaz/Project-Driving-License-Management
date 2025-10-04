@@ -27,6 +27,10 @@ namespace DVLDShared
             No = 0
         };
         public enum enApplicationStatus { New = 1, Cancelled = 2, Completed = 3 };
+        public enum IssueReason : byte
+        {
+            FirstTime= 1, Renew=2, ReplacementforDamaged = 3 ,ReplacementforLost= 4
+        };
 
     }
 }

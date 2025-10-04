@@ -18,7 +18,7 @@ namespace DVLD_BusinessLayer
         public string Notes { set; get; }
         public decimal PaidFees { set; get; }
         public ActiveStatus IsActive { set; get; }
-        public int IssueReason { set; get; }
+        public IssueReason IssueReason { set; get; }
         public int CreatedByUserID { set; get; }
 
 

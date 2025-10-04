@@ -158,6 +158,7 @@ namespace DVLD_PresentationLayer.Tests
             this.BtnIssue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnIssue.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnIssue.UseVisualStyleBackColor = false;
+            this.BtnIssue.Click += new System.EventHandler(this.BtnIssue_Click);
             // 
             // FOIssueDriverLicenseFirstTime
             // 
@@ -175,7 +176,6 @@ namespace DVLD_PresentationLayer.Tests
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Issue Driver License First Time";
-            this.Load += new System.EventHandler(this.FOListTestAppointments_Load);
             this.SMItemCRUDUsers.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PBNotes)).EndInit();
             this.ResumeLayout(false);

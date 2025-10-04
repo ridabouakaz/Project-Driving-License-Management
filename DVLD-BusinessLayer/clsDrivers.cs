@@ -44,5 +44,9 @@ namespace DVLD_BusinessLayer
              );
             return (this.DriverID != -1);
         }
+        public bool Save()
+        {
+            return _AddDriver();
+        }
     }
 }

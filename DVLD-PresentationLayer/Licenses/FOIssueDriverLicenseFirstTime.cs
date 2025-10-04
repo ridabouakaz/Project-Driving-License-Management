@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static DVLDShared.DVLDShared;
 
 namespace DVLD_PresentationLayer.Tests
 {
@@ -17,15 +18,17 @@ namespace DVLD_PresentationLayer.Tests
         private DataTable _dtLicenseTestAppointments;
         private int _LocalDrivingLicenseApplicationID;
         private clsNewLocalDrivingApplication _LocalDrivingLicense;
-        private clsManageTestTypes.enTestType _TestType = clsManageTestTypes.enTestType.VisionTest;
-        private void _RefreshTestAppointmentsList()
+        private clsDrivers _Driver = new clsDrivers();
+        private clsLicenses _License = new clsLicenses();
+        public string Notes
         {
-          
-            _dtLicenseTestAppointments = clsTestAppointment.GetAllAppointments(_LocalDrivingLicenseApplicationID,(int)_TestType);
+            get => TBNotes.Text.Trim();
+            set => TBNotes.Text = value;
         }
         void _LoadLocalDrivingApplicationInfo()
         {
             ctrDrivingLicenseApplicationInfo1.LoadApplication(_LocalDrivingLicenseApplicationID);
+            _LocalDrivingLicense=clsNewLocalDrivingApplication.FindByLocalDrivingAppLicenseID(_LocalDrivingLicenseApplicationID);
         }
         public FOIssueDriverLicenseFirstTime( int LocalDrivingLicenseApplicationID)
         {
@@ -39,28 +42,29 @@ namespace DVLD_PresentationLayer.Tests
         {
             this.Close();
         }
-        private void FOListTestAppointments_Load(object sender, EventArgs e)
-        {
-            _RefreshTestAppointmentsList();
-          
-        }
-        private void BtnAddAppointments_Click(object sender, EventArgs e)
-        {
-            if (clsTestAppointment.HasExistingAppointment(_LocalDrivingLicenseApplicationID, (int)_TestType))
-            {
-                MessageBox.Show("⚠️ An appointment already exists for this test type. Please choose a different date or test.", "Duplicate Appointment", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            if (clsTestAppointment.HasPassedTestAppointment(_LocalDrivingLicenseApplicationID, (int)_TestType))
-            {
-                MessageBox.Show("✅ This test has already been passed. No need to schedule another appointment.", "Test Already Passed", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-            FOScheduleTest frm = new FOScheduleTest(_TestType, _LocalDrivingLicenseApplicationID);
-            frm.ShowDialog();
-            FOListTestAppointments_Load(null, null);
-        }
 
 
+        private void BtnIssue_Click(object sender, EventArgs e)
+        {
+            _Driver.PersonID= _LocalDrivingLicense.ApplicantPersonID;
+            _Driver.CreatedByUserID= _LocalDrivingLicense.CreatedByUserID;
+            _Driver.CreatedDate= DateTime.Today;
+
+            if (!_Driver.Save())
+            {
+                MessageBox.Show("❌ Error: Data was not saved successfully.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            _License.ApplicationID= _LocalDrivingLicense.ApplicationID;
+            _License.DriverID= _Driver.DriverID;
+            _License.LicenseClass= _LocalDrivingLicense.LicenseClassID;
+            _License.IssueDate= DateTime.Today;
+            _License.ExpiryDate= DateTime.Today.AddYears(5);
+            _License.Notes = Notes;
+            _License.PaidFees = _LocalDrivingLicense.PaidFees;
+            _License.IsActive = ActiveStatus.Yes;
+            _License.IssueReason = IssueReason.FirstTime; // First Time Issue
+            _License.CreatedByUserID= _LocalDrivingLicense.CreatedByUserID;
+        }
     }
 }
