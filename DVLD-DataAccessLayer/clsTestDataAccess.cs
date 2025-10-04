@@ -49,11 +49,6 @@ int CreatedByUserID)
             }
             return TestAppointmentID;
         }
-
-
-
-
-
         public static bool HasPersonAlreadyFailedTest(int TestTypeID, int LocalDrivingLicenseApplicationID)
         {
             bool isFound = false;

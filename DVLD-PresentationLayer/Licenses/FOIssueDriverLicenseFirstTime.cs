@@ -59,11 +59,11 @@ namespace DVLD_PresentationLayer.Tests
             _License.DriverID= _Driver.DriverID;
             _License.LicenseClass= _LocalDrivingLicense.LicenseClassID;
             _License.IssueDate= DateTime.Today;
-            _License.ExpiryDate= DateTime.Today.AddYears(5);
+            _License.ExpirationDate= DateTime.Today.AddYears(clsLicenses.GetDefaultValidityLengthById(_LocalDrivingLicense.LicenseClassID));
             _License.Notes = Notes;
             _License.PaidFees = _LocalDrivingLicense.PaidFees;
             _License.IsActive = ActiveStatus.Yes;
-            _License.IssueReason = IssueReason.FirstTime; // First Time Issue
+            _License.IssueReason = IssueReason.FirstTime;
             _License.CreatedByUserID= _LocalDrivingLicense.CreatedByUserID;
         }
     }
