@@ -99,6 +99,12 @@
     <Compile Include="Applications\Local Driving License\FOManageLocalDrivingApplication.Designer.cs">
       <DependentUpon>FOManageLocalDrivingApplication.cs</DependentUpon>
     </Compile>
+    <Compile Include="Licenses\FOIssueDriverLicenseFirstTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Licenses\FOIssueDriverLicenseFirstTime.Designer.cs">
+      <DependentUpon>FOIssueDriverLicenseFirstTime.cs</DependentUpon>
+    </Compile>
     <Compile Include="People\Control\CtrDetailsPerson%28Edit-Add%29.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -243,6 +249,9 @@
     <EmbeddedResource Include="Applications\Local Driving License\FOManageLocalDrivingApplication.resx">
       <DependentUpon>FOManageLocalDrivingApplication.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Licenses\FOIssueDriverLicenseFirstTime.resx">
+      <DependentUpon>FOIssueDriverLicenseFirstTime.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="People\Control\CtrDetailsPerson%28Edit-Add%29.resx">
       <DependentUpon>CtrDetailsPerson%28Edit-Add%29.cs</DependentUpon>
     </EmbeddedResource>
@@ -349,5 +358,6 @@
   <ItemGroup>
     <None Include="Resources\StreetTest.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

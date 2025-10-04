@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FOTakeTest));
             this.GBUserControlDetailesApplication = new System.Windows.Forms.GroupBox();
+            this.LblValueDate = new System.Windows.Forms.Label();
             this.PBTestID = new System.Windows.Forms.PictureBox();
             this.LblValueTestID = new System.Windows.Forms.Label();
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.LblTestID = new System.Windows.Forms.Label();
             this.PBDLAppID = new System.Windows.Forms.PictureBox();
             this.LblFees = new System.Windows.Forms.Label();
@@ -55,15 +55,14 @@
             this.LblDClass = new System.Windows.Forms.Label();
             this.BtnSave = new System.Windows.Forms.Button();
             this.BtnClose = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.PBNotes = new System.Windows.Forms.PictureBox();
             this.TBNotes = new System.Windows.Forms.TextBox();
             this.LblNotes = new System.Windows.Forms.Label();
             this.LblResult = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.PBResult = new System.Windows.Forms.PictureBox();
             this.plResult = new System.Windows.Forms.Panel();
             this.RBFail = new System.Windows.Forms.RadioButton();
             this.RBPass = new System.Windows.Forms.RadioButton();
-            this.LblValueDate = new System.Windows.Forms.Label();
             this.GBUserControlDetailesApplication.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBTestID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBDLAppID)).BeginInit();
@@ -73,8 +72,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.PBFees)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBTrial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBNotes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBResult)).BeginInit();
             this.plResult.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -111,6 +110,18 @@
             this.GBUserControlDetailesApplication.TabIndex = 49;
             this.GBUserControlDetailesApplication.TabStop = false;
             this.GBUserControlDetailesApplication.Text = "Written Test";
+            // 
+            // LblValueDate
+            // 
+            this.LblValueDate.AutoSize = true;
+            this.LblValueDate.BackColor = System.Drawing.Color.Transparent;
+            this.LblValueDate.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.LblValueDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblValueDate.Location = new System.Drawing.Point(244, 424);
+            this.LblValueDate.Name = "LblValueDate";
+            this.LblValueDate.Size = new System.Drawing.Size(90, 25);
+            this.LblValueDate.TabIndex = 57;
+            this.LblValueDate.Text = "[????????]";
             // 
             // PBTestID
             // 
@@ -410,14 +421,14 @@
             this.BtnClose.UseVisualStyleBackColor = false;
             this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
-            // pictureBox1
+            // PBNotes
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(94, 651);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 32);
-            this.pictureBox1.TabIndex = 54;
-            this.pictureBox1.TabStop = false;
+            this.PBNotes.Image = ((System.Drawing.Image)(resources.GetObject("PBNotes.Image")));
+            this.PBNotes.Location = new System.Drawing.Point(94, 651);
+            this.PBNotes.Name = "PBNotes";
+            this.PBNotes.Size = new System.Drawing.Size(40, 32);
+            this.PBNotes.TabIndex = 54;
+            this.PBNotes.TabStop = false;
             // 
             // TBNotes
             // 
@@ -455,14 +466,14 @@
             this.LblResult.TabIndex = 57;
             this.LblResult.Text = "Result:";
             // 
-            // pictureBox2
+            // PBResult
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(94, 610);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(40, 32);
-            this.pictureBox2.TabIndex = 58;
-            this.pictureBox2.TabStop = false;
+            this.PBResult.Image = ((System.Drawing.Image)(resources.GetObject("PBResult.Image")));
+            this.PBResult.Location = new System.Drawing.Point(94, 610);
+            this.PBResult.Name = "PBResult";
+            this.PBResult.Size = new System.Drawing.Size(40, 32);
+            this.PBResult.TabIndex = 58;
+            this.PBResult.TabStop = false;
             // 
             // plResult
             // 
@@ -497,18 +508,6 @@
             this.RBPass.Text = "Pass";
             this.RBPass.UseVisualStyleBackColor = true;
             // 
-            // LblValueDate
-            // 
-            this.LblValueDate.AutoSize = true;
-            this.LblValueDate.BackColor = System.Drawing.Color.Transparent;
-            this.LblValueDate.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.LblValueDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblValueDate.Location = new System.Drawing.Point(244, 424);
-            this.LblValueDate.Name = "LblValueDate";
-            this.LblValueDate.Size = new System.Drawing.Size(90, 25);
-            this.LblValueDate.TabIndex = 57;
-            this.LblValueDate.Text = "[????????]";
-            // 
             // FOTakeTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -516,10 +515,10 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(582, 838);
             this.Controls.Add(this.plResult);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.PBResult);
             this.Controls.Add(this.LblResult);
             this.Controls.Add(this.LblNotes);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.PBNotes);
             this.Controls.Add(this.TBNotes);
             this.Controls.Add(this.BtnSave);
             this.Controls.Add(this.BtnClose);
@@ -537,8 +536,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.PBFees)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBTrial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBNotes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBResult)).EndInit();
             this.plResult.ResumeLayout(false);
             this.plResult.PerformLayout();
             this.ResumeLayout(false);
@@ -571,12 +570,12 @@
         private System.Windows.Forms.Button BtnSave;
         private System.Windows.Forms.Button BtnClose;
         private System.Windows.Forms.Label LblValueTestID;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox PBNotes;
         private System.Windows.Forms.Label LblTestID;
         private System.Windows.Forms.TextBox TBNotes;
         private System.Windows.Forms.Label LblNotes;
         private System.Windows.Forms.Label LblResult;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox PBResult;
         private System.Windows.Forms.PictureBox PBTestID;
         private System.Windows.Forms.Panel plResult;
         private System.Windows.Forms.RadioButton RBFail;

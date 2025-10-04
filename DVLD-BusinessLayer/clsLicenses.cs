@@ -7,6 +7,7 @@ using static DVLDShared.DVLDShared;
 
 namespace DVLD_BusinessLayer
 {
+    
     public class clsLicenses
     {
         public int ApplicationID { set; get; }

@@ -48,16 +48,5 @@ namespace DVLD_DataAccessLayer
             return DriverID;
         }
 
-
-        AddNewDriver()
-        {
-
-
-
-
-
-
-        }
-
     }
 }
