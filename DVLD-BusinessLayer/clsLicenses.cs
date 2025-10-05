@@ -67,7 +67,7 @@ namespace DVLD_BusinessLayer
         }
         private bool _AddNewLicense()
         {
-            //call DataAccess Layer 
+
             this.LicenseID = clsLicensesDataAccess.AddNewLicense(
         this.ApplicationID,
         this.DriverID,
@@ -81,6 +81,31 @@ namespace DVLD_BusinessLayer
         this.CreatedByUserID
              );
             return (this.LicenseID != -1);
+        }
+
+
+        public bool Save()
+        {
+            switch (Mode)
+            {
+                case enMode.AddNew:
+                    if (_AddNewLicense())
+                    {
+
+                        Mode = enMode.Update;
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+                case enMode.Update:
+
+                    return false;
+
+            }
+            return false;
         }
         public static int GetDefaultValidityLengthById(int LicenseClassID)
         {

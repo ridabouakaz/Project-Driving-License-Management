@@ -20,6 +20,8 @@ namespace DVLD_PresentationLayer.Tests
         private clsNewLocalDrivingApplication _LocalDrivingLicense;
         private clsDrivers _Driver = new clsDrivers();
         private clsLicenses _License = new clsLicenses();
+        public enum enMode { AddNew = 0, Update = 1 };
+        private enMode _Mode;
         public string Notes
         {
             get => TBNotes.Text.Trim();
@@ -34,10 +36,9 @@ namespace DVLD_PresentationLayer.Tests
         {
             InitializeComponent();
             _LocalDrivingLicenseApplicationID = LocalDrivingLicenseApplicationID;
+            _Mode = enMode.AddNew;
             _LoadLocalDrivingApplicationInfo();
         }
- 
-       
         private void BtnAddClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -64,7 +65,16 @@ namespace DVLD_PresentationLayer.Tests
             _License.PaidFees = _LocalDrivingLicense.PaidFees;
             _License.IsActive = ActiveStatus.Yes;
             _License.IssueReason = IssueReason.FirstTime;
-            _License.CreatedByUserID= _LocalDrivingLicense.CreatedByUserID;
+            _License.CreatedByUserID = _LocalDrivingLicense.CreatedByUserID;
+            if (_License.Save())
+            {
+                MessageBox.Show("✅ Data Saved Successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                _Mode = enMode.Update;
+            }
+            else
+            {
+                MessageBox.Show("❌ Error: Data was not saved successfully.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

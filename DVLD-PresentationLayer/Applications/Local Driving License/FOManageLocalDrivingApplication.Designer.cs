@@ -237,6 +237,7 @@ namespace DVLD_PresentationLayer
             this.SMItemIssueDrivingLicenseFirstTime.Name = "SMItemIssueDrivingLicenseFirstTime";
             this.SMItemIssueDrivingLicenseFirstTime.Size = new System.Drawing.Size(346, 38);
             this.SMItemIssueDrivingLicenseFirstTime.Text = "Issue Driving License (First Time)";
+            this.SMItemIssueDrivingLicenseFirstTime.Click += new System.EventHandler(this.SMItemIssueDrivingLicenseFirstTime_Click);
             // 
             // SMItemSeparatorCRUDLocalDrivingApplications5
             // 

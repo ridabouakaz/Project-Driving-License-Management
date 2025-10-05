@@ -182,6 +182,13 @@ namespace DVLD_PresentationLayer
             SMItemScheduleVisionTest.Enabled = clsNewLocalDrivingApplication.GetPassedTestCount((int)dGViewShowInformation.CurrentRow.Cells[0].Value) == 0;
             SMItemScheduleWrittenTest.Enabled = clsNewLocalDrivingApplication.GetPassedTestCount((int)dGViewShowInformation.CurrentRow.Cells[0].Value) == 1;
             SMItemScheduleStreetTest.Enabled = clsNewLocalDrivingApplication.GetPassedTestCount((int)dGViewShowInformation.CurrentRow.Cells[0].Value) == 2;
+            SMItemIssueDrivingLicenseFirstTime.Enabled = clsNewLocalDrivingApplication.GetPassedTestCount((int)dGViewShowInformation.CurrentRow.Cells[0].Value) == 3;
+        }
+        private void SMItemIssueDrivingLicenseFirstTime_Click(object sender, EventArgs e)
+        {
+            FOIssueDriverLicenseFirstTime frm = new FOIssueDriverLicenseFirstTime((int)dGViewShowInformation.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+            _RefreshLocalDrivingApplicationsList();
         }
     }
 }
