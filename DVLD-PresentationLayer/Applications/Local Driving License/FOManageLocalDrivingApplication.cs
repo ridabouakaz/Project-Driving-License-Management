@@ -179,6 +179,7 @@ namespace DVLD_PresentationLayer
         private void SMItemCRUDLocalDrivingApplications_Opening(object sender, CancelEventArgs e)
         {
             bool HasIssuedLicense = clsLicenses.HasIssuedLicense((int)dGViewShowInformation.CurrentRow.Cells[0].Value);
+            bool hasApplicationBeenCanceled = clsApplications.IsLocalDrivingLicenseApplicationCanceled((int)dGViewShowInformation.CurrentRow.Cells[0].Value);
             SMItemScheduleVisionTest.Enabled = (clsNewLocalDrivingApplication.GetPassedTestCount((int)dGViewShowInformation.CurrentRow.Cells[0].Value) == 0) && !HasIssuedLicense;
             SMItemScheduleWrittenTest.Enabled = (clsNewLocalDrivingApplication.GetPassedTestCount((int)dGViewShowInformation.CurrentRow.Cells[0].Value) == 1) && !HasIssuedLicense;
             SMItemScheduleStreetTest.Enabled = (clsNewLocalDrivingApplication.GetPassedTestCount((int)dGViewShowInformation.CurrentRow.Cells[0].Value) == 2) && !HasIssuedLicense;
@@ -186,7 +187,8 @@ namespace DVLD_PresentationLayer
             SMItemCancelApplication.Enabled = !HasIssuedLicense;
             SMItemDeleteApplication.Enabled = !HasIssuedLicense;
             SMItemEditApplication.Enabled = !HasIssuedLicense;
-            SMItemScheduleTest.Enabled= !HasIssuedLicense;
+            SMItemScheduleTest.Enabled = !HasIssuedLicense;
+            SMItemCRUDLocalDrivingApplications.Enabled = !hasApplicationBeenCanceled;
         }
 
 

@@ -170,6 +170,38 @@ WHERE LocalDrivingLicenseApplications.LocalDrivingLicenseApplicationID = @LocalD
             }
             return (rowsAffected > 0);
         }
+        public static bool IsLocalDrivingLicenseApplicationCanceled(int LocalDrivingLicenseApplicationID)
+        {
+            bool isFound = false;
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+
+            string query = "select Found=1 from Applications inner join LocalDrivingLicenseApplications on\r\nApplications.ApplicationID=LocalDrivingLicenseApplications.ApplicationID where\r\nLocalDrivingLicenseApplications.LocalDrivingLicenseApplicationID=@LocalDrivingLicenseApplicationID and Applications.ApplicationStatus=2";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LocalDrivingLicenseApplicationID);
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                isFound = reader.HasRows;
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error checking if Applications exists: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                isFound = false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return isFound;
+        }
 
 
     }

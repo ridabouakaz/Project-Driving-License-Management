@@ -61,6 +61,7 @@ namespace DVLD_PresentationLayer
             DLAppID = _LocalDrivingApplication.LocalDrivingLicenseApplicationID.ToString();
             AppliedForLicense = clsManageApplicationTypes.GetTitleById(_LocalDrivingApplication.ApplicationTypeID);
             PassedTests = _LocalDrivingApplication.GetPassedTestCount().ToString() + "/3";
+            LLShowLicenseInfo.Enabled= clsLicenses.HasIssuedLicense(_LocalDrivingApplication.LocalDrivingLicenseApplicationID);
         }
     }
 }

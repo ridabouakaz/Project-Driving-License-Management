@@ -193,7 +193,7 @@ namespace DVLD_DataAccessLayer
             DataTable dt = new DataTable();
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
-            string query = "select * from LocalDrivingLicenseApplications_View\r\n";
+            string query = "select LocalDrivingLicenseApplications_View.LocalDrivingLicenseApplicationID as \"L.D.LAppID\",\r\nLocalDrivingLicenseApplications_View.ClassName,LocalDrivingLicenseApplications_View.NationalNo,\r\nLocalDrivingLicenseApplications_View.FullName,LocalDrivingLicenseApplications_View.ApplicationDate,\r\nLocalDrivingLicenseApplications_View.PassedTestCount,LocalDrivingLicenseApplications_View.Status\r\nfrom LocalDrivingLicenseApplications_View";
 
             SqlCommand command = new SqlCommand(query, connection);
 
