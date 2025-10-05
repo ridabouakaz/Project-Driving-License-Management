@@ -1,6 +1,7 @@
 ﻿using DVLD_DataAccessLayer;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,7 @@ namespace DVLD_BusinessLayer
     {
         public enum enMode { AddNew = 0, Update = 1 };
         public enMode Mode = enMode.AddNew;
+        public int LicenseID { set; get; }
         public int ApplicationID { set; get; }
         public int DriverID { set; get; }
         public int LicenseClass { set; get; }
@@ -26,6 +28,7 @@ namespace DVLD_BusinessLayer
         public int CreatedByUserID { set; get; }
         public clsLicenses()
         {
+            LicenseID = -1;
             ApplicationID = -1;
             DriverID = 0;
             LicenseClass = 0;
@@ -38,7 +41,7 @@ namespace DVLD_BusinessLayer
             CreatedByUserID = 0;
         }
 
-        private clsLicenses(
+        private clsLicenses(int LicenseID,
      int applicationID,
      int driverID,
      int licenseClass,
@@ -50,6 +53,7 @@ namespace DVLD_BusinessLayer
      IssueReason issueReason,
      int createdByUserID)
         {
+            this.LicenseID = LicenseID;
             this.ApplicationID = applicationID;
             this.DriverID = driverID;
             this.LicenseClass = licenseClass;
@@ -60,6 +64,23 @@ namespace DVLD_BusinessLayer
             this.IsActive = isActive;
             this.IssueReason = issueReason;
             this.CreatedByUserID = createdByUserID;
+        }
+        private bool _AddNewLicense()
+        {
+            //call DataAccess Layer 
+            this.LicenseID = clsLicensesDataAccess.AddNewLicense(
+        this.ApplicationID,
+        this.DriverID,
+        this.LicenseClass,
+        this.IssueDate,
+        this.ExpirationDate,
+        this.Notes,
+        this.PaidFees,
+        this.IsActive,
+        this.IssueReason,
+        this.CreatedByUserID
+             );
+            return (this.LicenseID != -1);
         }
         public static int GetDefaultValidityLengthById(int LicenseClassID)
         {
