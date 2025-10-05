@@ -19,7 +19,6 @@ namespace DVLD_PresentationLayer
     {
         private static DataTable _LocalDrivingApplicationsTable = clsNewLocalDrivingApplication.GetAllLocalDrivingApplications();
         clsUser _CurrentUser;
-
         public FOManageLocalDrivingApplication(clsUser CurrentUser)
         {
             InitializeComponent();
@@ -179,11 +178,18 @@ namespace DVLD_PresentationLayer
 
         private void SMItemCRUDLocalDrivingApplications_Opening(object sender, CancelEventArgs e)
         {
-            SMItemScheduleVisionTest.Enabled = clsNewLocalDrivingApplication.GetPassedTestCount((int)dGViewShowInformation.CurrentRow.Cells[0].Value) == 0;
-            SMItemScheduleWrittenTest.Enabled = clsNewLocalDrivingApplication.GetPassedTestCount((int)dGViewShowInformation.CurrentRow.Cells[0].Value) == 1;
-            SMItemScheduleStreetTest.Enabled = clsNewLocalDrivingApplication.GetPassedTestCount((int)dGViewShowInformation.CurrentRow.Cells[0].Value) == 2;
-            SMItemIssueDrivingLicenseFirstTime.Enabled = clsNewLocalDrivingApplication.GetPassedTestCount((int)dGViewShowInformation.CurrentRow.Cells[0].Value) == 3;
+            bool HasIssuedLicense = clsLicenses.HasIssuedLicense((int)dGViewShowInformation.CurrentRow.Cells[0].Value);
+            SMItemScheduleVisionTest.Enabled = (clsNewLocalDrivingApplication.GetPassedTestCount((int)dGViewShowInformation.CurrentRow.Cells[0].Value) == 0) && !HasIssuedLicense;
+            SMItemScheduleWrittenTest.Enabled = (clsNewLocalDrivingApplication.GetPassedTestCount((int)dGViewShowInformation.CurrentRow.Cells[0].Value) == 1) && !HasIssuedLicense;
+            SMItemScheduleStreetTest.Enabled = (clsNewLocalDrivingApplication.GetPassedTestCount((int)dGViewShowInformation.CurrentRow.Cells[0].Value) == 2) && !HasIssuedLicense;
+            SMItemIssueDrivingLicenseFirstTime.Enabled = (clsNewLocalDrivingApplication.GetPassedTestCount((int)dGViewShowInformation.CurrentRow.Cells[0].Value) == 3) && !HasIssuedLicense;
+            SMItemCancelApplication.Enabled = !HasIssuedLicense;
+            SMItemDeleteApplication.Enabled = !HasIssuedLicense;
+            SMItemEditApplication.Enabled = !HasIssuedLicense;
+            SMItemScheduleTest.Enabled= !HasIssuedLicense;
         }
+
+
         private void SMItemIssueDrivingLicenseFirstTime_Click(object sender, EventArgs e)
         {
             FOIssueDriverLicenseFirstTime frm = new FOIssueDriverLicenseFirstTime((int)dGViewShowInformation.CurrentRow.Cells[0].Value);

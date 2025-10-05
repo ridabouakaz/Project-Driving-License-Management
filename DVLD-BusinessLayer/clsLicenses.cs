@@ -111,5 +111,10 @@ namespace DVLD_BusinessLayer
         {
             return clsLicensesDataAccess.GetDefaultValidityLengthById(LicenseClassID);
         }
+        public static bool HasIssuedLicense(int LocalDrivingLicenseApplicationID)
+        {
+            return clsLicensesDataAccess.HasIssuedLicense(
+                    LocalDrivingLicenseApplicationID);
+        }
     }
 }
