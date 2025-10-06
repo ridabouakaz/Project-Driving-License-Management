@@ -16,13 +16,13 @@ namespace DVLD_PresentationLayer
 {
     public partial class CtrDetailsLicenses : UserControl
     {
-        private clsLicense _License;
+        private clsLicenses _License;
 
         public CtrDetailsLicenses()
         {
             InitializeComponent();
         }
-        public clsPerson PersonData
+        public clsLicenses PersonData
         {
             get => _License;
             set
@@ -44,7 +44,7 @@ namespace DVLD_PresentationLayer
                 DateOfBrith = "[????????]";
                 valueCountry = "[????????]";
                 ImagePerson = null;
-                LblTypeGender.Text = "[????????]";
+                LblValueNationalNo.Text = "[????????]";
                 return;
             }
             ValuePersonID = _License.ID.ToString();
@@ -74,22 +74,22 @@ namespace DVLD_PresentationLayer
             set
             {
                 if (value == Gender.Male)
-                    LblTypeGender.Text = "Male";
+                    LblValueNationalNo.Text = "Male";
                 else
-                    LblTypeGender.Text = "Female";
+                    LblValueNationalNo.Text = "Female";
             }
         }
         public string NumberNationalNo
         {
-            set => LblNumberNationalNo.Text = value;
+            set => LblNumberLicenseID.Text = value;
         }
         public string valueEmail
         {
-            set => LblvalueEmail.Text = value;
+            set => LblvalueGender.Text = value;
         }
         public string valueAddress
         {
-            set => LblvalueAddress.Text = value;
+            set => LblvalueIssueDate.Text = value;
         }
         public string DateOfBrith
         {
@@ -105,7 +105,7 @@ namespace DVLD_PresentationLayer
         }
         public string ValuePersonID
         {
-            set => LblValuePersonID.Text = value;
+            set => LblValueClass.Text = value;
         }
         public string ImagePath
         {
@@ -134,5 +134,7 @@ namespace DVLD_PresentationLayer
                 // ...
             }
         }
+
+      
     }
 }
