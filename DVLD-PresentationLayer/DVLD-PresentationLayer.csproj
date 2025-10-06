@@ -99,6 +99,12 @@
     <Compile Include="Applications\Local Driving License\FOManageLocalDrivingApplication.Designer.cs">
       <DependentUpon>FOManageLocalDrivingApplication.cs</DependentUpon>
     </Compile>
+    <Compile Include="Licenses\Control\CtrDetailsLicenses.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Licenses\Control\CtrDetailsLicenses.Designer.cs">
+      <DependentUpon>CtrDetailsLicenses.cs</DependentUpon>
+    </Compile>
     <Compile Include="Licenses\FOIssueDriverLicenseFirstTime.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -248,6 +254,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Applications\Local Driving License\FOManageLocalDrivingApplication.resx">
       <DependentUpon>FOManageLocalDrivingApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Licenses\Control\CtrDetailsLicenses.resx">
+      <DependentUpon>CtrDetailsLicenses.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Licenses\FOIssueDriverLicenseFirstTime.resx">
       <DependentUpon>FOIssueDriverLicenseFirstTime.cs</DependentUpon>
