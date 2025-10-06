@@ -36,19 +36,21 @@ namespace DVLD_PresentationLayer
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.OFDialogPictureImage = new System.Windows.Forms.OpenFileDialog();
             this.GBUserControlDetailesPerson = new System.Windows.Forms.GroupBox();
+            this.LblvalueIsDetained = new System.Windows.Forms.Label();
+            this.LblvalueExpirationDate = new System.Windows.Forms.Label();
+            this.PBNotes = new System.Windows.Forms.PictureBox();
+            this.PBIssueReason = new System.Windows.Forms.PictureBox();
             this.LblvalueNotes = new System.Windows.Forms.Label();
             this.LblvalueIssueReason = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.LblIsActive = new System.Windows.Forms.Label();
             this.LblIsDetained = new System.Windows.Forms.Label();
             this.LblClass = new System.Windows.Forms.Label();
             this.LblNationalNo = new System.Windows.Forms.Label();
             this.PBClass = new System.Windows.Forms.PictureBox();
             this.LblValueClass = new System.Windows.Forms.Label();
-            this.LblvalueCountry = new System.Windows.Forms.Label();
-            this.LblvaluePhone = new System.Windows.Forms.Label();
-            this.LblvalueDateOfBrith = new System.Windows.Forms.Label();
+            this.LblvalueDriverID = new System.Windows.Forms.Label();
+            this.LblvalueDateOfBirth = new System.Windows.Forms.Label();
+            this.LblvalueIsActive = new System.Windows.Forms.Label();
             this.LblvalueIssueDate = new System.Windows.Forms.Label();
             this.LblvalueGender = new System.Windows.Forms.Label();
             this.LblNumberLicenseID = new System.Windows.Forms.Label();
@@ -56,15 +58,11 @@ namespace DVLD_PresentationLayer
             this.LblValueNationalNo = new System.Windows.Forms.Label();
             this.PBNationalNo = new System.Windows.Forms.PictureBox();
             this.LblLicenseID = new System.Windows.Forms.Label();
-            this.LLEditPersonInfo = new System.Windows.Forms.LinkLabel();
             this.PBImagePerson = new System.Windows.Forms.PictureBox();
-            this.PBCountry = new System.Windows.Forms.PictureBox();
-            this.PBPhone = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.PBDateOfBrith = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.PBDriverID = new System.Windows.Forms.PictureBox();
+            this.PBDateOfBirth = new System.Windows.Forms.PictureBox();
+            this.PBIsActive = new System.Windows.Forms.PictureBox();
             this.LblExpirationDate = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.LblDriverID = new System.Windows.Forms.Label();
             this.LblDateOfBirth = new System.Windows.Forms.Label();
             this.PBIssueDate = new System.Windows.Forms.PictureBox();
@@ -76,24 +74,24 @@ namespace DVLD_PresentationLayer
             this.LblGender = new System.Windows.Forms.Label();
             this.LblIssueDate = new System.Windows.Forms.Label();
             this.LblName = new System.Windows.Forms.Label();
-            this.PBIssueReason = new System.Windows.Forms.PictureBox();
-            this.PBNotes = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.PBIsDetained = new System.Windows.Forms.PictureBox();
+            this.PBExpirationDate = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.GBUserControlDetailesPerson.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PBNotes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBIssueReason)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBClass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBNationalNo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBImagePerson)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBCountry)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBPhone)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBDateOfBrith)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBDriverID)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBDateOfBirth)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBIsActive)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBIssueDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBGender)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBLicenseID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBIssueReason)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBNotes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBIsDetained)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBExpirationDate)).BeginInit();
             this.SuspendLayout();
             // 
             // errorProvider1
@@ -107,23 +105,23 @@ namespace DVLD_PresentationLayer
             // GBUserControlDetailesPerson
             // 
             this.GBUserControlDetailesPerson.BackColor = System.Drawing.Color.White;
-            this.GBUserControlDetailesPerson.Controls.Add(this.label7);
-            this.GBUserControlDetailesPerson.Controls.Add(this.label6);
+            this.GBUserControlDetailesPerson.Controls.Add(this.PBExpirationDate);
+            this.GBUserControlDetailesPerson.Controls.Add(this.PBIsDetained);
+            this.GBUserControlDetailesPerson.Controls.Add(this.LblvalueIsDetained);
+            this.GBUserControlDetailesPerson.Controls.Add(this.LblvalueExpirationDate);
             this.GBUserControlDetailesPerson.Controls.Add(this.PBNotes);
             this.GBUserControlDetailesPerson.Controls.Add(this.PBIssueReason);
             this.GBUserControlDetailesPerson.Controls.Add(this.LblvalueNotes);
             this.GBUserControlDetailesPerson.Controls.Add(this.LblvalueIssueReason);
-            this.GBUserControlDetailesPerson.Controls.Add(this.label5);
-            this.GBUserControlDetailesPerson.Controls.Add(this.label4);
             this.GBUserControlDetailesPerson.Controls.Add(this.LblIsActive);
             this.GBUserControlDetailesPerson.Controls.Add(this.LblIsDetained);
             this.GBUserControlDetailesPerson.Controls.Add(this.LblClass);
             this.GBUserControlDetailesPerson.Controls.Add(this.LblNationalNo);
             this.GBUserControlDetailesPerson.Controls.Add(this.PBClass);
             this.GBUserControlDetailesPerson.Controls.Add(this.LblValueClass);
-            this.GBUserControlDetailesPerson.Controls.Add(this.LblvalueCountry);
-            this.GBUserControlDetailesPerson.Controls.Add(this.LblvaluePhone);
-            this.GBUserControlDetailesPerson.Controls.Add(this.LblvalueDateOfBrith);
+            this.GBUserControlDetailesPerson.Controls.Add(this.LblvalueDriverID);
+            this.GBUserControlDetailesPerson.Controls.Add(this.LblvalueDateOfBirth);
+            this.GBUserControlDetailesPerson.Controls.Add(this.LblvalueIsActive);
             this.GBUserControlDetailesPerson.Controls.Add(this.LblvalueIssueDate);
             this.GBUserControlDetailesPerson.Controls.Add(this.LblvalueGender);
             this.GBUserControlDetailesPerson.Controls.Add(this.LblNumberLicenseID);
@@ -131,15 +129,11 @@ namespace DVLD_PresentationLayer
             this.GBUserControlDetailesPerson.Controls.Add(this.LblValueNationalNo);
             this.GBUserControlDetailesPerson.Controls.Add(this.PBNationalNo);
             this.GBUserControlDetailesPerson.Controls.Add(this.LblLicenseID);
-            this.GBUserControlDetailesPerson.Controls.Add(this.LLEditPersonInfo);
             this.GBUserControlDetailesPerson.Controls.Add(this.PBImagePerson);
-            this.GBUserControlDetailesPerson.Controls.Add(this.PBCountry);
-            this.GBUserControlDetailesPerson.Controls.Add(this.PBPhone);
-            this.GBUserControlDetailesPerson.Controls.Add(this.label3);
-            this.GBUserControlDetailesPerson.Controls.Add(this.PBDateOfBrith);
-            this.GBUserControlDetailesPerson.Controls.Add(this.label2);
+            this.GBUserControlDetailesPerson.Controls.Add(this.PBDriverID);
+            this.GBUserControlDetailesPerson.Controls.Add(this.PBDateOfBirth);
+            this.GBUserControlDetailesPerson.Controls.Add(this.PBIsActive);
             this.GBUserControlDetailesPerson.Controls.Add(this.LblExpirationDate);
-            this.GBUserControlDetailesPerson.Controls.Add(this.label1);
             this.GBUserControlDetailesPerson.Controls.Add(this.LblDriverID);
             this.GBUserControlDetailesPerson.Controls.Add(this.LblDateOfBirth);
             this.GBUserControlDetailesPerson.Controls.Add(this.PBIssueDate);
@@ -157,7 +151,49 @@ namespace DVLD_PresentationLayer
             this.GBUserControlDetailesPerson.Size = new System.Drawing.Size(1130, 424);
             this.GBUserControlDetailesPerson.TabIndex = 48;
             this.GBUserControlDetailesPerson.TabStop = false;
-            this.GBUserControlDetailesPerson.Text = "Person Information";
+            this.GBUserControlDetailesPerson.Text = "Diver License Information";
+            // 
+            // LblvalueIsDetained
+            // 
+            this.LblvalueIsDetained.AutoSize = true;
+            this.LblvalueIsDetained.BackColor = System.Drawing.Color.Transparent;
+            this.LblvalueIsDetained.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.LblvalueIsDetained.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblvalueIsDetained.Location = new System.Drawing.Point(753, 306);
+            this.LblvalueIsDetained.Name = "LblvalueIsDetained";
+            this.LblvalueIsDetained.Size = new System.Drawing.Size(96, 25);
+            this.LblvalueIsDetained.TabIndex = 58;
+            this.LblvalueIsDetained.Text = "[????????]";
+            // 
+            // LblvalueExpirationDate
+            // 
+            this.LblvalueExpirationDate.AutoSize = true;
+            this.LblvalueExpirationDate.BackColor = System.Drawing.Color.Transparent;
+            this.LblvalueExpirationDate.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.LblvalueExpirationDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblvalueExpirationDate.Location = new System.Drawing.Point(753, 261);
+            this.LblvalueExpirationDate.Name = "LblvalueExpirationDate";
+            this.LblvalueExpirationDate.Size = new System.Drawing.Size(96, 25);
+            this.LblvalueExpirationDate.TabIndex = 57;
+            this.LblvalueExpirationDate.Text = "[????????]";
+            // 
+            // PBNotes
+            // 
+            this.PBNotes.Image = ((System.Drawing.Image)(resources.GetObject("PBNotes.Image")));
+            this.PBNotes.Location = new System.Drawing.Point(202, 369);
+            this.PBNotes.Name = "PBNotes";
+            this.PBNotes.Size = new System.Drawing.Size(40, 32);
+            this.PBNotes.TabIndex = 56;
+            this.PBNotes.TabStop = false;
+            // 
+            // PBIssueReason
+            // 
+            this.PBIssueReason.Image = ((System.Drawing.Image)(resources.GetObject("PBIssueReason.Image")));
+            this.PBIssueReason.Location = new System.Drawing.Point(202, 323);
+            this.PBIssueReason.Name = "PBIssueReason";
+            this.PBIssueReason.Size = new System.Drawing.Size(40, 32);
+            this.PBIssueReason.TabIndex = 55;
+            this.PBIssueReason.TabStop = false;
             // 
             // LblvalueNotes
             // 
@@ -183,30 +219,6 @@ namespace DVLD_PresentationLayer
             this.LblvalueIssueReason.TabIndex = 53;
             this.LblvalueIssueReason.Text = "[????????]";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.label5.Location = new System.Drawing.Point(550, 139);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(107, 28);
-            this.label5.TabIndex = 52;
-            this.label5.Text = "Is Active?:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.label4.Location = new System.Drawing.Point(524, 306);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(133, 28);
-            this.label4.TabIndex = 51;
-            this.label4.Text = "Is Detained?:";
-            // 
             // LblIsActive
             // 
             this.LblIsActive.AutoSize = true;
@@ -225,7 +237,7 @@ namespace DVLD_PresentationLayer
             this.LblIsDetained.BackColor = System.Drawing.Color.Transparent;
             this.LblIsDetained.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.LblIsDetained.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblIsDetained.Location = new System.Drawing.Point(528, 306);
+            this.LblIsDetained.Location = new System.Drawing.Point(524, 303);
             this.LblIsDetained.Name = "LblIsDetained";
             this.LblIsDetained.Size = new System.Drawing.Size(133, 28);
             this.LblIsDetained.TabIndex = 51;
@@ -279,41 +291,41 @@ namespace DVLD_PresentationLayer
             this.LblValueClass.TabIndex = 46;
             this.LblValueClass.Text = "[????????]";
             // 
-            // LblvalueCountry
+            // LblvalueDriverID
             // 
-            this.LblvalueCountry.AutoSize = true;
-            this.LblvalueCountry.BackColor = System.Drawing.Color.Transparent;
-            this.LblvalueCountry.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.LblvalueCountry.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblvalueCountry.Location = new System.Drawing.Point(753, 226);
-            this.LblvalueCountry.Name = "LblvalueCountry";
-            this.LblvalueCountry.Size = new System.Drawing.Size(96, 25);
-            this.LblvalueCountry.TabIndex = 45;
-            this.LblvalueCountry.Text = "[????????]";
+            this.LblvalueDriverID.AutoSize = true;
+            this.LblvalueDriverID.BackColor = System.Drawing.Color.Transparent;
+            this.LblvalueDriverID.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.LblvalueDriverID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblvalueDriverID.Location = new System.Drawing.Point(753, 221);
+            this.LblvalueDriverID.Name = "LblvalueDriverID";
+            this.LblvalueDriverID.Size = new System.Drawing.Size(96, 25);
+            this.LblvalueDriverID.TabIndex = 45;
+            this.LblvalueDriverID.Text = "[????????]";
             // 
-            // LblvaluePhone
+            // LblvalueDateOfBirth
             // 
-            this.LblvaluePhone.AutoSize = true;
-            this.LblvaluePhone.BackColor = System.Drawing.Color.Transparent;
-            this.LblvaluePhone.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.LblvaluePhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblvaluePhone.Location = new System.Drawing.Point(753, 184);
-            this.LblvaluePhone.Name = "LblvaluePhone";
-            this.LblvaluePhone.Size = new System.Drawing.Size(96, 25);
-            this.LblvaluePhone.TabIndex = 44;
-            this.LblvaluePhone.Text = "[????????]";
+            this.LblvalueDateOfBirth.AutoSize = true;
+            this.LblvalueDateOfBirth.BackColor = System.Drawing.Color.Transparent;
+            this.LblvalueDateOfBirth.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.LblvalueDateOfBirth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblvalueDateOfBirth.Location = new System.Drawing.Point(753, 178);
+            this.LblvalueDateOfBirth.Name = "LblvalueDateOfBirth";
+            this.LblvalueDateOfBirth.Size = new System.Drawing.Size(96, 25);
+            this.LblvalueDateOfBirth.TabIndex = 44;
+            this.LblvalueDateOfBirth.Text = "[????????]";
             // 
-            // LblvalueDateOfBrith
+            // LblvalueIsActive
             // 
-            this.LblvalueDateOfBrith.AutoSize = true;
-            this.LblvalueDateOfBrith.BackColor = System.Drawing.Color.Transparent;
-            this.LblvalueDateOfBrith.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.LblvalueDateOfBrith.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblvalueDateOfBrith.Location = new System.Drawing.Point(753, 138);
-            this.LblvalueDateOfBrith.Name = "LblvalueDateOfBrith";
-            this.LblvalueDateOfBrith.Size = new System.Drawing.Size(96, 25);
-            this.LblvalueDateOfBrith.TabIndex = 43;
-            this.LblvalueDateOfBrith.Text = "[????????]";
+            this.LblvalueIsActive.AutoSize = true;
+            this.LblvalueIsActive.BackColor = System.Drawing.Color.Transparent;
+            this.LblvalueIsActive.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.LblvalueIsActive.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblvalueIsActive.Location = new System.Drawing.Point(753, 135);
+            this.LblvalueIsActive.Name = "LblvalueIsActive";
+            this.LblvalueIsActive.Size = new System.Drawing.Size(96, 25);
+            this.LblvalueIsActive.TabIndex = 43;
+            this.LblvalueIsActive.Text = "[????????]";
             // 
             // LblvalueIssueDate
             // 
@@ -396,18 +408,6 @@ namespace DVLD_PresentationLayer
             this.LblLicenseID.TabIndex = 36;
             this.LblLicenseID.Text = "License ID:";
             // 
-            // LLEditPersonInfo
-            // 
-            this.LLEditPersonInfo.AutoSize = true;
-            this.LLEditPersonInfo.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.LLEditPersonInfo.Location = new System.Drawing.Point(932, 72);
-            this.LLEditPersonInfo.Name = "LLEditPersonInfo";
-            this.LLEditPersonInfo.Size = new System.Drawing.Size(144, 25);
-            this.LLEditPersonInfo.TabIndex = 33;
-            this.LLEditPersonInfo.TabStop = true;
-            this.LLEditPersonInfo.Text = "Edit Person Info";
-            this.LLEditPersonInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LLEditPersonInfo_LinkClicked);
-            // 
             // PBImagePerson
             // 
             this.PBImagePerson.Location = new System.Drawing.Point(937, 100);
@@ -417,56 +417,32 @@ namespace DVLD_PresentationLayer
             this.PBImagePerson.TabIndex = 31;
             this.PBImagePerson.TabStop = false;
             // 
-            // PBCountry
+            // PBDriverID
             // 
-            this.PBCountry.Image = ((System.Drawing.Image)(resources.GetObject("PBCountry.Image")));
-            this.PBCountry.Location = new System.Drawing.Point(688, 225);
-            this.PBCountry.Name = "PBCountry";
-            this.PBCountry.Size = new System.Drawing.Size(40, 32);
-            this.PBCountry.TabIndex = 27;
-            this.PBCountry.TabStop = false;
+            this.PBDriverID.Image = ((System.Drawing.Image)(resources.GetObject("PBDriverID.Image")));
+            this.PBDriverID.Location = new System.Drawing.Point(688, 219);
+            this.PBDriverID.Name = "PBDriverID";
+            this.PBDriverID.Size = new System.Drawing.Size(40, 32);
+            this.PBDriverID.TabIndex = 27;
+            this.PBDriverID.TabStop = false;
             // 
-            // PBPhone
+            // PBDateOfBirth
             // 
-            this.PBPhone.Image = ((System.Drawing.Image)(resources.GetObject("PBPhone.Image")));
-            this.PBPhone.Location = new System.Drawing.Point(688, 181);
-            this.PBPhone.Name = "PBPhone";
-            this.PBPhone.Size = new System.Drawing.Size(40, 32);
-            this.PBPhone.TabIndex = 26;
-            this.PBPhone.TabStop = false;
+            this.PBDateOfBirth.Image = ((System.Drawing.Image)(resources.GetObject("PBDateOfBirth.Image")));
+            this.PBDateOfBirth.Location = new System.Drawing.Point(688, 175);
+            this.PBDateOfBirth.Name = "PBDateOfBirth";
+            this.PBDateOfBirth.Size = new System.Drawing.Size(40, 32);
+            this.PBDateOfBirth.TabIndex = 26;
+            this.PBDateOfBirth.TabStop = false;
             // 
-            // label3
+            // PBIsActive
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.label3.Location = new System.Drawing.Point(492, 264);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(165, 28);
-            this.label3.TabIndex = 24;
-            this.label3.Text = "Expiration Date:";
-            // 
-            // PBDateOfBrith
-            // 
-            this.PBDateOfBrith.Image = ((System.Drawing.Image)(resources.GetObject("PBDateOfBrith.Image")));
-            this.PBDateOfBrith.Location = new System.Drawing.Point(688, 139);
-            this.PBDateOfBrith.Name = "PBDateOfBrith";
-            this.PBDateOfBrith.Size = new System.Drawing.Size(40, 32);
-            this.PBDateOfBrith.TabIndex = 25;
-            this.PBDateOfBrith.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.label2.Location = new System.Drawing.Point(554, 223);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 28);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "Driver ID:";
+            this.PBIsActive.Image = ((System.Drawing.Image)(resources.GetObject("PBIsActive.Image")));
+            this.PBIsActive.Location = new System.Drawing.Point(688, 131);
+            this.PBIsActive.Name = "PBIsActive";
+            this.PBIsActive.Size = new System.Drawing.Size(40, 32);
+            this.PBIsActive.TabIndex = 25;
+            this.PBIsActive.TabStop = false;
             // 
             // LblExpirationDate
             // 
@@ -474,23 +450,11 @@ namespace DVLD_PresentationLayer
             this.LblExpirationDate.BackColor = System.Drawing.Color.Transparent;
             this.LblExpirationDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.LblExpirationDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblExpirationDate.Location = new System.Drawing.Point(496, 267);
+            this.LblExpirationDate.Location = new System.Drawing.Point(492, 261);
             this.LblExpirationDate.Name = "LblExpirationDate";
             this.LblExpirationDate.Size = new System.Drawing.Size(165, 28);
             this.LblExpirationDate.TabIndex = 24;
             this.LblExpirationDate.Text = "Expiration Date:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.label1.Location = new System.Drawing.Point(512, 181);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 28);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "Date Of Birth:";
             // 
             // LblDriverID
             // 
@@ -498,7 +462,7 @@ namespace DVLD_PresentationLayer
             this.LblDriverID.BackColor = System.Drawing.Color.Transparent;
             this.LblDriverID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.LblDriverID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblDriverID.Location = new System.Drawing.Point(554, 225);
+            this.LblDriverID.Location = new System.Drawing.Point(554, 219);
             this.LblDriverID.Name = "LblDriverID";
             this.LblDriverID.Size = new System.Drawing.Size(103, 28);
             this.LblDriverID.TabIndex = 23;
@@ -510,7 +474,7 @@ namespace DVLD_PresentationLayer
             this.LblDateOfBirth.BackColor = System.Drawing.Color.Transparent;
             this.LblDateOfBirth.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.LblDateOfBirth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblDateOfBirth.Location = new System.Drawing.Point(512, 178);
+            this.LblDateOfBirth.Location = new System.Drawing.Point(512, 177);
             this.LblDateOfBirth.Name = "LblDateOfBirth";
             this.LblDateOfBirth.Size = new System.Drawing.Size(145, 28);
             this.LblDateOfBirth.TabIndex = 22;
@@ -615,47 +579,23 @@ namespace DVLD_PresentationLayer
             this.LblName.TabIndex = 0;
             this.LblName.Text = "Name:";
             // 
-            // PBIssueReason
+            // PBIsDetained
             // 
-            this.PBIssueReason.Image = ((System.Drawing.Image)(resources.GetObject("PBIssueReason.Image")));
-            this.PBIssueReason.Location = new System.Drawing.Point(202, 323);
-            this.PBIssueReason.Name = "PBIssueReason";
-            this.PBIssueReason.Size = new System.Drawing.Size(40, 32);
-            this.PBIssueReason.TabIndex = 55;
-            this.PBIssueReason.TabStop = false;
+            this.PBIsDetained.Image = ((System.Drawing.Image)(resources.GetObject("PBIsDetained.Image")));
+            this.PBIsDetained.Location = new System.Drawing.Point(688, 307);
+            this.PBIsDetained.Name = "PBIsDetained";
+            this.PBIsDetained.Size = new System.Drawing.Size(40, 32);
+            this.PBIsDetained.TabIndex = 59;
+            this.PBIsDetained.TabStop = false;
             // 
-            // PBNotes
+            // PBExpirationDate
             // 
-            this.PBNotes.Image = ((System.Drawing.Image)(resources.GetObject("PBNotes.Image")));
-            this.PBNotes.Location = new System.Drawing.Point(202, 369);
-            this.PBNotes.Name = "PBNotes";
-            this.PBNotes.Size = new System.Drawing.Size(40, 32);
-            this.PBNotes.TabIndex = 56;
-            this.PBNotes.TabStop = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.label6.Location = new System.Drawing.Point(753, 270);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(96, 25);
-            this.label6.TabIndex = 57;
-            this.label6.Text = "[????????]";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.label7.Location = new System.Drawing.Point(753, 309);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(96, 25);
-            this.label7.TabIndex = 58;
-            this.label7.Text = "[????????]";
+            this.PBExpirationDate.Image = ((System.Drawing.Image)(resources.GetObject("PBExpirationDate.Image")));
+            this.PBExpirationDate.Location = new System.Drawing.Point(688, 263);
+            this.PBExpirationDate.Name = "PBExpirationDate";
+            this.PBExpirationDate.Size = new System.Drawing.Size(40, 32);
+            this.PBExpirationDate.TabIndex = 60;
+            this.PBExpirationDate.TabStop = false;
             // 
             // CtrDetailsLicenses
             // 
@@ -668,18 +608,20 @@ namespace DVLD_PresentationLayer
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.GBUserControlDetailesPerson.ResumeLayout(false);
             this.GBUserControlDetailesPerson.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PBNotes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBIssueReason)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBClass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBNationalNo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBImagePerson)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBCountry)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBPhone)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBDateOfBrith)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBDriverID)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBDateOfBirth)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBIsActive)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBIssueDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBGender)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBLicenseID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBIssueReason)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBNotes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBIsDetained)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBExpirationDate)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -690,9 +632,9 @@ namespace DVLD_PresentationLayer
         private GroupBox GBUserControlDetailesPerson;
         private PictureBox PBClass;
         private Label LblValueClass;
-        private Label LblvalueCountry;
-        private Label LblvaluePhone;
-        private Label LblvalueDateOfBrith;
+        private Label LblvalueDriverID;
+        private Label LblvalueDateOfBirth;
+        private Label LblvalueIsActive;
         private Label LblvalueIssueDate;
         private Label LblvalueGender;
         private Label LblNumberLicenseID;
@@ -700,11 +642,10 @@ namespace DVLD_PresentationLayer
         private Label LblValueNationalNo;
         private PictureBox PBNationalNo;
         private Label LblLicenseID;
-        private LinkLabel LLEditPersonInfo;
         private PictureBox PBImagePerson;
-        private PictureBox PBCountry;
-        private PictureBox PBPhone;
-        private PictureBox PBDateOfBrith;
+        private PictureBox PBDriverID;
+        private PictureBox PBDateOfBirth;
+        private PictureBox PBIsActive;
         private Label LblExpirationDate;
         private Label LblDriverID;
         private Label LblDateOfBirth;
@@ -723,14 +664,11 @@ namespace DVLD_PresentationLayer
         private Label LblIsDetained;
         private Label LblvalueNotes;
         private Label LblvalueIssueReason;
-        private Label label5;
-        private Label label4;
-        private Label label3;
-        private Label label2;
-        private Label label1;
-        private Label label7;
-        private Label label6;
+        private Label LblvalueIsDetained;
+        private Label LblvalueExpirationDate;
         private PictureBox PBNotes;
         private PictureBox PBIssueReason;
+        private PictureBox PBExpirationDate;
+        private PictureBox PBIsDetained;
     }
 }

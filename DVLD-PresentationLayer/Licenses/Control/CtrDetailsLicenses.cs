@@ -22,6 +22,8 @@ namespace DVLD_PresentationLayer
         {
             InitializeComponent();
         }
+
+
         public clsLicenses PersonData
         {
             get => _License;
@@ -35,78 +37,43 @@ namespace DVLD_PresentationLayer
         {
             if (_License == null)
             {
-                ValuePersonID = "[????????]";
+                LicenseID = "[????????]";
+                DriverID = "[????????]";
                 FullName = "[????????]";
-                NumberNationalNo = "[????????]";
-                valueEmail = "[????????]";
-                valuePhone = "[????????]";
-                valueAddress = "[????????]";
-                DateOfBrith = "[????????]";
-                valueCountry = "[????????]";
+                NationalNo = "[????????]";
+                DateOfBirth = "[????????]";
+                Gender = "[????????]";
+                Class = "[????????]";
+                IssueDate = "[????????]";
+                ExpirationDate = "[????????]";
+                IsActive = "[????????]";
+                IsDetained = "[????????]";
+                IssueReason = "[????????]";
+                Notes = "[????????]";
                 ImagePerson = null;
-                LblValueNationalNo.Text = "[????????]";
                 return;
             }
-            ValuePersonID = _License.ID.ToString();
-            FullName = _License.FirstName + " " + _License.SecondName + " " + _License.ThirdName + " " + _License.LastName;
-            NumberNationalNo = _License.NationalNo;
-            valueEmail = _License.Email;
-            valuePhone = _License.Phone;
-            valueAddress = _License.Address;
-            DateOfBrith = _License.DateOfBirth.ToString("dd/MM/yyyy");
-            valueCountry = (clsCountry.Find(_License.CountryID).CountryName);
+
+            LicenseID = _License.LicenseID.ToString();
+            DriverID = _License.ID.ToString();
+            FullName = $"{_License.FirstName} {_License.SecondName} {_License.ThirdName} {_License.LastName}";
+            NationalNo = _License.NationalNo;
+            DateOfBirth = _License.DateOfBirth.ToString("dd/MM/yyyy");
+            Gender = _License.PersonGender;
+            Class = clsLicenseClass.Find(_License.LicenseClassID).ClassName;  // مثال: لازم يكون عندك كلاس للـ Class
+            IssueDate = _License.IssueDate.ToString("dd/MM/yyyy");
+            ExpirationDate = _License.ExpirationDate.ToString("dd/MM/yyyy");
+            IsActive = _License.IsActive ? "Yes" : "No";
+            IsDetained = _License.IsDetained ? "Yes" : "No";
+            IssueReason = _License.IssueReason;
+            Notes = _License.Notes;
+
             if (!string.IsNullOrEmpty(_License.ImagePath) && File.Exists(_License.ImagePath))
-            {
-                    PBImagePerson.ImageLocation = _License.ImagePath;
-            }
+                ImagePath = _License.ImagePath;
             else
-            {
                 ImagePerson = null;
-            }
-            TypeGender = _License.PersonGender;
         }
-        public string FullName
-        {
-            set => LblFullName.Text = value;
-        }
-        public Gender TypeGender
-        {
-            set
-            {
-                if (value == Gender.Male)
-                    LblValueNationalNo.Text = "Male";
-                else
-                    LblValueNationalNo.Text = "Female";
-            }
-        }
-        public string NumberNationalNo
-        {
-            set => LblNumberLicenseID.Text = value;
-        }
-        public string valueEmail
-        {
-            set => LblvalueGender.Text = value;
-        }
-        public string valueAddress
-        {
-            set => LblvalueIssueDate.Text = value;
-        }
-        public string DateOfBrith
-        {
-            set => LblvalueDateOfBrith.Text = value;
-        }
-        public string valuePhone
-        {
-            set => LblvaluePhone.Text = value;
-        }
-        public string valueCountry
-        {
-            set => LblvalueCountry.Text = value;
-        }
-        public string ValuePersonID
-        {
-            set => LblValueClass.Text = value;
-        }
+
         public string ImagePath
         {
             get => PBImagePerson.ImageLocation;
@@ -117,8 +84,85 @@ namespace DVLD_PresentationLayer
             set => PBImagePerson.Image = value;
         }
 
-  
-          private void LLEditPersonInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        public string LicenseID
+        {
+            get => LblNumberLicenseID.Text;
+            set => LblNumberLicenseID.Text = value;
+        }
+
+        public string DriverID
+        {
+            get => LblvalueDriverID.Text;
+            set => LblvalueDriverID.Text = value;
+        }
+
+        public string FullName
+        {
+            get => LblFullName.Text;
+            set => LblFullName.Text = value;
+        }
+
+        public string NationalNo
+        {
+            get => LblValueNationalNo.Text;
+            set => LblValueNationalNo.Text = value;
+        }
+
+        public string DateOfBirth
+        {
+            get => LblvalueDateOfBirth.Text;
+            set => LblvalueDateOfBirth.Text = value;
+        }
+
+        public string Gender
+        {
+            get => LblvalueGender.Text;
+            set => LblvalueGender.Text = value;
+        }
+
+        public string Class
+        {
+            get => LblValueClass.Text;
+            set => LblValueClass.Text = value;
+        }
+
+        public string IssueDate
+        {
+            get => LblvalueIssueDate.Text;
+            set => LblvalueIssueDate.Text = value;
+        }
+
+        public string ExpirationDate
+        {
+            get => LblvalueExpirationDate.Text;
+            set => LblvalueExpirationDate.Text = value;
+        }
+
+        public string IsActive
+        {
+            get => LblvalueIsActive.Text;
+            set => LblvalueIsActive.Text = value;
+        }
+
+        public string IsDetained
+        {
+            get => LblvalueIsDetained.Text;
+            set => LblvalueIsDetained.Text = value;
+        }
+
+        public string IssueReason
+        {
+            get => LblvalueIssueReason.Text;
+            set => LblvalueIssueReason.Text = value;
+        }
+
+        public string Notes
+        {
+            get => LblvalueNotes.Text;
+            set => LblvalueNotes.Text = value;
+        }
+
+        private void LLEditPersonInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             OFDialogPictureImage.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
             OFDialogPictureImage.FilterIndex = 1;
