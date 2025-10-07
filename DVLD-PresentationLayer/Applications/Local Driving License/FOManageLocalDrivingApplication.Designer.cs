@@ -253,6 +253,7 @@ namespace DVLD_PresentationLayer
             this.SMItemShowLicense.Name = "SMItemShowLicense";
             this.SMItemShowLicense.Size = new System.Drawing.Size(346, 38);
             this.SMItemShowLicense.Text = "Show License";
+            this.SMItemShowLicense.Click += new System.EventHandler(this.SMItemShowLicense_Click);
             // 
             // SMItemSeparatorCRUDLocalDrivingApplications6
             // 

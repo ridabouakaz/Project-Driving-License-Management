@@ -1,5 +1,6 @@
 ﻿using DVLD_BusinessLayer;
 using DVLD_PresentationLayer.Applications.Local_Driving_License;
+using DVLD_PresentationLayer.Licenses;
 using DVLD_PresentationLayer.Tests;
 using System;
 using System.Collections.Generic;
@@ -197,6 +198,12 @@ namespace DVLD_PresentationLayer
             FOIssueDriverLicenseFirstTime frm = new FOIssueDriverLicenseFirstTime((int)dGViewShowInformation.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
             _RefreshLocalDrivingApplicationsList();
+        }
+
+        private void SMItemShowLicense_Click(object sender, EventArgs e)
+        {
+             FOLicenseInfo frm = new FOLicenseInfo((int)dGViewShowInformation.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
         }
     }
 }

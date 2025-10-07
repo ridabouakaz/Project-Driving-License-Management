@@ -110,9 +110,6 @@ namespace DVLD_DataAccessLayer
 
                     ApplicationID = (int)reader["ApplicationID"];
                     LicenseClassID = (int)reader["LicenseClassID"];
-
-
-
                 }
                 else
                 {

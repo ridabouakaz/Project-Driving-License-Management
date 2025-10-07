@@ -147,5 +147,58 @@ namespace DVLD_DataAccessLayer
             }
             return Title;
         }
+        public static bool GetLicensesInfoByID(
+        int LocalDrivingLicenseApplicationID,
+        ref int licenseID,
+        ref int applicationID,
+        ref int driverID,
+        ref int licenseClass,
+        ref DateTime issueDate,
+        ref DateTime expirationDate,
+        ref string notes,
+        ref decimal paidFees,
+        ref ActiveStatus isActive,
+        ref IssueReason issueReason,
+        ref int createdByUserID)
+        {
+            bool isFound = false;
+
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                string query = "SELECT Licenses.*\r\nFROM     LocalDrivingLicenseApplications INNER JOIN\r\n  Applications ON LocalDrivingLicenseApplications.ApplicationID = Applications.ApplicationID INNER JOIN\r\n                  Licenses ON Applications.ApplicationID = Licenses.ApplicationID where LocalDrivingLicenseApplications.LocalDrivingLicenseApplicationID=@LocalDrivingLicenseApplicationID";
+
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LocalDrivingLicenseApplicationID);
+
+                try
+                {
+                    connection.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        isFound = true;
+                    licenseID = Convert.ToInt32(reader["LicenseID"]);
+                    applicationID = Convert.ToInt32(reader["ApplicationID"]);
+                    driverID = Convert.ToInt32(reader["DriverID"]);
+                    licenseClass = Convert.ToInt32(reader["LicenseClass"]);
+                    issueDate = Convert.ToDateTime(reader["IssueDate"]);
+                    expirationDate = Convert.ToDateTime(reader["ExpirationDate"]);
+                    notes = reader["Notes"].ToString();
+                    paidFees = Convert.ToDecimal(reader["PaidFees"]);
+                    isActive = (ActiveStatus)Convert.ToInt32(reader["IsActive"]);
+                    issueReason = (IssueReason)Convert.ToInt32(reader["IssueReason"]);
+                    createdByUserID = Convert.ToInt32(reader["CreatedByUserID"]);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Handle error (log or throw)
+                    isFound = false;
+                }
+            }
+
+            return isFound;
+        }
     }
 }

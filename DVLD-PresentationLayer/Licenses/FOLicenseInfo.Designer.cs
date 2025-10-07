@@ -47,12 +47,12 @@
             this.ctrDetailsLicenses1.ImagePath = null;
             this.ctrDetailsLicenses1.IsDetained = "[????????]";
             this.ctrDetailsLicenses1.IssueDate = "[????????]";
+            this.ctrDetailsLicenses1.LicenseData = null;
             this.ctrDetailsLicenses1.LicenseID = "[????????]";
             this.ctrDetailsLicenses1.Location = new System.Drawing.Point(1, 193);
             this.ctrDetailsLicenses1.Name = "ctrDetailsLicenses1";
             this.ctrDetailsLicenses1.NationalNo = "[????????]";
             this.ctrDetailsLicenses1.Notes = "[????????]";
-            this.ctrDetailsLicenses1.PersonData = null;
             this.ctrDetailsLicenses1.Size = new System.Drawing.Size(1159, 450);
             this.ctrDetailsLicenses1.TabIndex = 0;
             // 
@@ -73,9 +73,10 @@
             // 
             this.PBDriverLicenseInfo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.PBDriverLicenseInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.PBDriverLicenseInfo.Location = new System.Drawing.Point(500, 12);
+            this.PBDriverLicenseInfo.Image = ((System.Drawing.Image)(resources.GetObject("PBDriverLicenseInfo.Image")));
+            this.PBDriverLicenseInfo.Location = new System.Drawing.Point(490, 12);
             this.PBDriverLicenseInfo.Name = "PBDriverLicenseInfo";
-            this.PBDriverLicenseInfo.Size = new System.Drawing.Size(137, 125);
+            this.PBDriverLicenseInfo.Size = new System.Drawing.Size(154, 136);
             this.PBDriverLicenseInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PBDriverLicenseInfo.TabIndex = 49;
             this.PBDriverLicenseInfo.TabStop = false;
@@ -114,6 +115,7 @@
             this.Controls.Add(this.LblDriverLicenseInfo);
             this.Controls.Add(this.ctrDetailsLicenses1);
             this.Name = "FOLicenseInfo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "License Info";
             ((System.ComponentModel.ISupportInitialize)(this.PBDriverLicenseInfo)).EndInit();
             this.ResumeLayout(false);

@@ -194,7 +194,7 @@
   <data name="SMItemCancelApplication.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        6gAAAOoB+Ss1JgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAMXSURBVFhHzZdZ
+        6QAAAOkBVJIUSwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAMXSURBVFhHzZdZ
         yE1RFMd/5nmeQoZkzjyE8IAHZXhTIvODIQ8yxQslLzI8kAxFSIYQQsSDDCUhRcocMg+ZHkgU/b/Wvu27
         nHOHvu/W96tVZ5+791n/vfdaa+8LlYgWwDRgbglsJtDWO4xpDLwADgE7S2CHgXdAe+84MAE4G7Ubmolm
         QB17bgnUiPoVwy5bjUQmAcei9hEzcRXYbM9PgJVRv+vA5xTbEPUT+sYi9y6DF9DBTHQDWtlzb9uugFam
@@ -214,7 +214,7 @@
   <data name="SMItemScheduleVisionTest.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAE
-        fQAABH0BNA6DzwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAe3SURBVFhHzZd7
+        fAAABHwB5klhKwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAe3SURBVFhHzZd7
         UFP5FcfDtjNONZgU17JFNIA8pEYeISAEkkAWJQkQmhgggfAKDwMrLg8JyEsxPFR0F6na2TVIW9xlhWJ4
         LK0LKCOWKrOtu6xWBUGUkXVHFHnJApGczv3VZJMLrp32n/3MfOfe+zu/nO+5597fLwmB8FOAQqU4ewTQ
         q62srN7Gx1bCgUJxTpbwrmXGC/swpYgDviIQCG9hMTKZ7E4ikX5JIpHC9bKwsNiKz2GCvzig++yDT4Ap
@@ -254,7 +254,7 @@
   <data name="SMItemScheduleWrittenTest.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        6gAAAOoB+Ss1JgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAQuSURBVFhHvZdt
+        6QAAAOkBVJIUSwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAQuSURBVFhHvZdt
         TFtVGMcXEz/42W9+9qvJogluJlNjjKAmhIgfTERjgjB0CpMZwoYaNjJJhwwmGlKnDATn2zamYdOtirA3
         yErHcGuR0hbo2+25ty+0UOjtIf7NOdCuPbftSjE8yS+9fc59nv//3HvPyb07duQIAA+4XfFbk5MUZjOF
         TPJGkmXa4XLhIbFn3sHEiS8+IHnX/i3AAIeQNb3YN69g4jKJ97ImkpeiUAMyoasAHkz0Db535F25+qAk
@@ -279,7 +279,7 @@
   <data name="SMItemScheduleStreetTest.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        6gAAAOoB+Ss1JgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAANlSURBVFhH7ZRd
+        6QAAAOkBVJIUSwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAANlSURBVFhH7ZRd
         SFNhGMcLCrrtpou6spvOOaRrvjNEV1vi0jnP0mpJQbTSSqyIsm+rFRpmn0RQ2QdFVJZWpM3MKZYapgXa
         x8qcupjTPigp6ctS/MdZbm3vmXnUdRH0h9/NOc95nt/Os/eMGvU/Q4zD0Tvf6ezJHxm9cXRfyXE4ek+1
         tfVghByg+0qOt8Bz22eYKx2SaGr+GniBkntOrDlskURF7evAC4yAkQtYatqh23wJcZt+MW9HPl40f8GZ
@@ -319,7 +319,7 @@
   <data name="SMItemIssueDrivingLicenseFirstTime.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        5QAAAOUBj+WbPAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAANySURBVFhHvZd7
+        5AAAAOQBXaJ52AAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAANySURBVFhHvZd7
         6I93FMdfZm5bLrlftnIbZhHTShKavyy3QkqZSyh/TJp7ptkoSv4YmZQQbUK5LJHLzGibjVCuSwzLbZIW
         8Z/0qvP8evr0fH+Z7/e7d316nufznM9zzuec9znn88D/i/eBWcAEoFH6stqYAtwDvgEOAL8A9VKhaqEB
         8BjokZs7AozNPVcVbYF/gTdyc6uBz3PPVccFYGDcdwb+Bj5KZCqOJsBbQAvgITAMuAI8BWanwpXCl8BB
@@ -340,7 +340,7 @@
   <data name="SMItemShowLicense.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        5QAAAOUBj+WbPAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAATzSURBVFhHvZcL
+        5AAAAOQBXaJ52AAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAATzSURBVFhHvZcL
         TFNXGMdPUNpSaEtL21vebRXkPdrOgMi7yhQGKAgKKm9kDgGjYQzUPYBtInHZlm2Zj4RtOsiM4KJz6ozL
         VITg0DF1umRjD4aCcYqI4BLF/3Kv9E76EMpkX/JL29PT7/udc+792hLyKFSEkGJCSMU0UkQIkY/VGxcq
         N4l0+LWwhaidRqpC9XAVO90mhIiMBV6oCX8O99ZVm6WvsAp9hZWT5vqaTSY5DORpw0YJIYuMBdbXRyw2
@@ -368,7 +368,7 @@
   <data name="SMItemShowPersonLicenseHistory.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        5QAAAOUBj+WbPAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAALRSURBVFhHzZfZ
+        5AAAAOQBXaJ52AAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAALRSURBVFhHzZfZ
         q01xFMc/GTPPCkVISMaEhCfTm+mWUteUKA9KSR4oQ5QhkZCHawgpZUhJmep2u7jCNcs8pYgX+Qf01dq3
         1Trn3LuP31W+tTp7r/1bZ3/3mn7rB+VhDFAHfAQuAt3jgn+JFsAzYLzdrwZOhDVJaA90C/IFeOvkqFvf
         Gnjgnn0CLgT7zm59k3gO3AfuOfkaFzWCYcDPYP8L6BkXlsIboGXQvQ/3jUEErgRdLdA36ErivyTwHTib
