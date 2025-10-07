@@ -21,11 +21,25 @@ namespace DVLD_BusinessLayer
         public int LicenseClass { set; get; }
         public DateTime IssueDate { set; get; }
         public DateTime ExpirationDate { set; get; }
+        //public string ApplicantFullName
+        //{
+        //    get
+        //    {
+        //        return clsPerson.Find(clsApplications.Find(ApplicationID).ApplicantPersonID).FullName;
+        //    }
+        //}
         public string Notes { set; get; }
         public decimal PaidFees { set; get; }
         public ActiveStatus IsActive { set; get; }
         public IssueReason IssueReason { set; get; }
         public int CreatedByUserID { set; get; }
+        public clsPerson Person
+        {
+            get
+            {
+                return clsPerson.Find(clsApplications.Find(ApplicationID).ApplicantPersonID);
+            }
+        }
         public clsLicenses()
         {
             LicenseID = -1;

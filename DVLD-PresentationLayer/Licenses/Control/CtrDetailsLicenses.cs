@@ -55,19 +55,19 @@ namespace DVLD_PresentationLayer
             }
 
             LicenseID = _License.LicenseID.ToString();
-            DriverID = _License.ID.ToString();
-            FullName = $"{_License.FirstName} {_License.SecondName} {_License.ThirdName} {_License.LastName}";
-            NationalNo = _License.NationalNo;
-            DateOfBirth = _License.DateOfBirth.ToString("dd/MM/yyyy");
-            Gender = _License.PersonGender;
-            Class = clsLicenseClass.Find(_License.LicenseClassID).ClassName;  // مثال: لازم يكون عندك كلاس للـ Class
+            DriverID = _License.DriverID.ToString();
+            FullName = _License.Person.FullName;
+            NationalNo = _License.Person.NationalNo;
+            DateOfBirth = _License.Person.DateOfBirth.ToString("dd/MM/yyyy");
+            Gender = _License.Person.PersonGender;
+            Class = clsLicenseClass.Find(_License.LicenseClassID).ClassName;
+            clsNewLocalDrivingApplication.GetClassNameById(_LocalDrivingApplication.LocalDrivingLicenseApplicationID);
             IssueDate = _License.IssueDate.ToString("dd/MM/yyyy");
             ExpirationDate = _License.ExpirationDate.ToString("dd/MM/yyyy");
-            IsActive = _License.IsActive ? "Yes" : "No";
-            IsDetained = _License.IsDetained ? "Yes" : "No";
+            IsActive = _License.IsActive;
+            IsDetained = "No";
             IssueReason = _License.IssueReason;
             Notes = _License.Notes;
-
             if (!string.IsNullOrEmpty(_License.ImagePath) && File.Exists(_License.ImagePath))
                 ImagePath = _License.ImagePath;
             else
@@ -113,11 +113,15 @@ namespace DVLD_PresentationLayer
             get => LblvalueDateOfBirth.Text;
             set => LblvalueDateOfBirth.Text = value;
         }
-
-        public string Gender
+        public Gender Gender
         {
-            get => LblvalueGender.Text;
-            set => LblvalueGender.Text = value;
+            set
+            {
+                if (value == Gender.Male)
+                    LblvalueGender.Text = "Male";
+                else
+                    LblvalueGender.Text = "Female";
+            }
         }
 
         public string Class
@@ -137,11 +141,16 @@ namespace DVLD_PresentationLayer
             get => LblvalueExpirationDate.Text;
             set => LblvalueExpirationDate.Text = value;
         }
-
-        public string IsActive
+      
+        public ActiveStatus IsActive
         {
-            get => LblvalueIsActive.Text;
-            set => LblvalueIsActive.Text = value;
+            set
+            {
+                if (value == ActiveStatus.Yes)
+                    LblvalueIsActive.Text = "Yes";
+                else
+                    LblvalueIsActive.Text = "No";
+            }
         }
 
         public string IsDetained
@@ -150,12 +159,22 @@ namespace DVLD_PresentationLayer
             set => LblvalueIsDetained.Text = value;
         }
 
-        public string IssueReason
+        public IssueReason IssueReason
         {
-            get => LblvalueIssueReason.Text;
-            set => LblvalueIssueReason.Text = value;
-        }
+            set
+            {
 
+                if (value == IssueReason.FirstTime)
+                    LblvalueIssueReason.Text = "FirstTime";
+                else if (value == IssueReason.Renew)
+                    LblvalueIssueReason.Text = "Renew";
+                else if (value == IssueReason.ReplacementforDamaged)
+                    LblvalueIssueReason.Text = "ReplacementforDamaged";
+                else
+                    LblvalueIssueReason.Text = "ReplacementforLost";
+            }
+        }
+   
         public string Notes
         {
             get => LblvalueNotes.Text;
