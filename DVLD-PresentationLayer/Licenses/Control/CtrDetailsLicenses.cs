@@ -17,14 +17,13 @@ namespace DVLD_PresentationLayer
     public partial class CtrDetailsLicenses : UserControl
     {
         private clsLicenses _License;
-
         public CtrDetailsLicenses()
         {
             InitializeComponent();
         }
 
 
-        public clsLicenses PersonData
+        public clsLicenses LicenseData
         {
             get => _License;
             set
