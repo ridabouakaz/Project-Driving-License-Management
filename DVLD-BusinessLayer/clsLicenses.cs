@@ -130,5 +130,9 @@ namespace DVLD_BusinessLayer
             return clsLicensesDataAccess.HasIssuedLicense(
                     LocalDrivingLicenseApplicationID);
         }
+        public static string GetClassNameById(int LicenseClass)
+        {
+            return clsLicensesDataAccess.GetClassNameById(LicenseClass);
+        }
     }
 }

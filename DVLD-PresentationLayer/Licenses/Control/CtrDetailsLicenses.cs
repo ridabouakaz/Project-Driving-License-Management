@@ -42,13 +42,13 @@ namespace DVLD_PresentationLayer
                 FullName = "[????????]";
                 NationalNo = "[????????]";
                 DateOfBirth = "[????????]";
-                Gender = "[????????]";
+                LblvalueGender.Text = "[????????]";
                 Class = "[????????]";
                 IssueDate = "[????????]";
                 ExpirationDate = "[????????]";
-                IsActive = "[????????]";
+                LblvalueIsActive.Text = "[????????]";
                 IsDetained = "[????????]";
-                IssueReason = "[????????]";
+                LblvalueIssueReason.Text = "[????????]";
                 Notes = "[????????]";
                 ImagePerson = null;
                 return;
@@ -60,18 +60,21 @@ namespace DVLD_PresentationLayer
             NationalNo = _License.Person.NationalNo;
             DateOfBirth = _License.Person.DateOfBirth.ToString("dd/MM/yyyy");
             Gender = _License.Person.PersonGender;
-            Class = clsLicenseClass.Find(_License.LicenseClassID).ClassName;
-            clsNewLocalDrivingApplication.GetClassNameById(_LocalDrivingApplication.LocalDrivingLicenseApplicationID);
+            Class = clsLicenses.GetClassNameById(_License.LicenseClass);
             IssueDate = _License.IssueDate.ToString("dd/MM/yyyy");
             ExpirationDate = _License.ExpirationDate.ToString("dd/MM/yyyy");
             IsActive = _License.IsActive;
             IsDetained = "No";
             IssueReason = _License.IssueReason;
             Notes = _License.Notes;
-            if (!string.IsNullOrEmpty(_License.ImagePath) && File.Exists(_License.ImagePath))
-                ImagePath = _License.ImagePath;
+            if (!string.IsNullOrEmpty(_License.Person.ImagePath) && File.Exists(_License.Person.ImagePath))
+            {
+                PBImagePerson.ImageLocation = _License.Person.ImagePath;
+            }
             else
+            {
                 ImagePerson = null;
+            }
         }
 
         public string ImagePath
