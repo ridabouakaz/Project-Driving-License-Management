@@ -46,8 +46,8 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1180, 424);
             this.Controls.Add(this.ctrDrivingLicenseApplicationInfo1);
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Name = "FOLocalDrivingLicenseApplicationInfo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Local Driving License Application Info";
             this.ResumeLayout(false);
 

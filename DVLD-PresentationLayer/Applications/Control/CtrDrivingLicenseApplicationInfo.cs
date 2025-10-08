@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DVLD_BusinessLayer;
+using DVLD_PresentationLayer.Licenses;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,7 +10,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static DVLD_BusinessLayer.clsApplications;
-using DVLD_BusinessLayer;
 
 namespace DVLD_PresentationLayer
 {
@@ -62,6 +63,11 @@ namespace DVLD_PresentationLayer
             AppliedForLicense = clsManageApplicationTypes.GetTitleById(_LocalDrivingApplication.ApplicationTypeID);
             PassedTests = _LocalDrivingApplication.GetPassedTestCount().ToString() + "/3";
             LLShowLicenseInfo.Enabled= clsLicenses.HasIssuedLicense(_LocalDrivingApplication.LocalDrivingLicenseApplicationID);
+        }
+        private void LLShowLicenseInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FOLicenseInfo frm = new FOLicenseInfo(_LocalDrivingApplication.LocalDrivingLicenseApplicationID);
+            frm.ShowDialog();
         }
     }
 }
