@@ -197,6 +197,7 @@ namespace DVLD_PresentationLayer.Tests
             {
                 MessageBox.Show("❌ Error: Data was not saved successfully.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            this.Close();
         }
     }
 }
