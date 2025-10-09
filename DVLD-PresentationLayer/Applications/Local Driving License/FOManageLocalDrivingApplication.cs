@@ -13,7 +13,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static DVLD_BusinessLayer.LocalDrivingApplicationFilter.LocalDrivingApplicationFilterService;
-using static DVLD_BusinessLayer.PersonFilterService;
 namespace DVLD_PresentationLayer
 {
     public partial class FOManageLocalDrivingApplication : Form

@@ -75,5 +75,11 @@ namespace DVLD_PresentationLayer
             FOManageLocalDrivingApplication frm = new FOManageLocalDrivingApplication(_currentUser);
             frm.ShowDialog();
         }
+
+        private void SMItemdrivers_Click(object sender, EventArgs e)
+        {
+            FOManageDrivers frm = new FOManageDrivers();
+            frm.ShowDialog();
+        }
     }
 }

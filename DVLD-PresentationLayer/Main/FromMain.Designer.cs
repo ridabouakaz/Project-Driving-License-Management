@@ -261,6 +261,7 @@ namespace DVLD_PresentationLayer
             this.SMItemdrivers.Name = "SMItemdrivers";
             this.SMItemdrivers.Size = new System.Drawing.Size(189, 68);
             this.SMItemdrivers.Text = "Drivers";
+            this.SMItemdrivers.Click += new System.EventHandler(this.SMItemdrivers_Click);
             // 
             // SMItemusers
             // 

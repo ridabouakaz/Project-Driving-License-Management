@@ -8,8 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static DVLD_BusinessLayer.clsDriverFilter.DriverFilterService;
-using static DVLD_BusinessLayer.PersonFilterService;
+using static DVLD_BusinessLayer.clsDriverFilter;
 
 namespace DVLD_PresentationLayer
 {
@@ -27,13 +26,12 @@ namespace DVLD_PresentationLayer
             dGViewShowInformation.DataSource = _DriversTable;
             LblTotalRecoreds.Text = _DriversTable.Rows.Count.ToString();
         }
-        private void SMItemViewDetails_Click(object sender, EventArgs e)
-        {
-            FODriverInfo frm = new FODriverInfo((int)dGViewShowInformation.CurrentRow.Cells[0].Value);
-            frm.ShowDialog();
-            _RefreshPeopleList();
-        }
-        clsDriverFilter
+        //private void SMItemViewDetails_Click(object sender, EventArgs e)
+        //{
+        //    FODriverInfo frm = new FODriverInfo((int)dGViewShowInformation.CurrentRow.Cells[0].Value);
+        //    frm.ShowDialog();
+        //    _RefreshPeopleList();
+        //}
         private void ApplyFilter()
         {
             if (_DriversTable == null) return;
@@ -49,19 +47,15 @@ namespace DVLD_PresentationLayer
                     if (int.TryParse(MTBsearch.Text, out int id))
                         filter = new DriverIdFilter(id);
                     break;
-                case "Driver Name":
-                    this.MTBsearch.Mask = "";
-                    filter = new DriverNameFilter(MTBsearch.Text);
-                    break;
                 case "Person ID":
                     this.MTBsearch.Mask = "0000000000";
-                    this.MTBsearch.PromptChar = ' ';
-                    this.MTBsearch.SkipLiterals = true;
                     if (int.TryParse(MTBsearch.Text, out int Personid))
-                        filter = new IdPersonFilter(Personid);
+                        filter = new PersonIdFilter(Personid);
+                    break;
+                case "National No":
+                    filter = new NationalNoFilter(MTBsearch.Text);
                     break;
                 case "Full Name":
-                    this.MTBsearch.Mask = "";
                     filter = new FullNameFilter(MTBsearch.Text);
                     break;
              
@@ -77,7 +71,6 @@ namespace DVLD_PresentationLayer
         private void FOManageDrivers_Load(object sender, EventArgs e)
         {
             CBFilterBy.SelectedIndex = 0;
-            CBActiveStatusBy.SelectedIndex = 0;
             _RefreshPeopleList();
         }
 
@@ -91,6 +84,10 @@ namespace DVLD_PresentationLayer
             this.Close();
         }
 
-        
+        private void CBFilterBy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MTBsearch.Visible = CBFilterBy.SelectedItem.ToString() != "None";
+            ApplyFilter();
+        }
     }
 }

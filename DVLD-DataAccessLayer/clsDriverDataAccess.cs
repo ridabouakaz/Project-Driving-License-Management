@@ -54,7 +54,7 @@ namespace DVLD_DataAccessLayer
             DataTable dt = new DataTable();
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
-            string query = "select Drivers.DriverID, Drivers.PersonID ,People.NationalNo,\r\nPeople.FirstName + ' ' +People.SecondName + ' ' + ISNULL(People.ThirdName, ' ') + ' ' + People.LastName AS FullName,\r\nDrivers.CreatedDate,Licenses.IsActive\r\nfrom Drivers inner join People on Drivers.PersonID=People.PersonID INNER join Licenses on Licenses.DriverID=Drivers.DriverID";
+            string query = "select Drivers.DriverID, Drivers.PersonID ,People.NationalNo,\r\nPeople.FirstName + ' ' +People.SecondName + ' ' + ISNULL(People.ThirdName, ' ') + ' ' + People.LastName AS FullName,\r\nDrivers.CreatedDate ,case WHEN Licenses.IsActive = 0 THEN 'Yes'        WHEN Licenses.IsActive = 1 THEN 'No'ELSE 'Unknown'    END AS IsActive\r\nfrom Drivers inner join People on Drivers.PersonID=People.PersonID INNER join Licenses on Licenses.DriverID=Drivers.DriverID";
 
             SqlCommand command = new SqlCommand(query, connection);
 

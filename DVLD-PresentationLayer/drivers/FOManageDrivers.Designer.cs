@@ -31,8 +31,8 @@ namespace DVLD_PresentationLayer
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FOManageDrivers));
             this.dGViewShowInformation = new System.Windows.Forms.DataGridView();
             this.SMItemCRUDDrivers = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -41,7 +41,6 @@ namespace DVLD_PresentationLayer
             this.SMItemSendEmail = new System.Windows.Forms.ToolStripMenuItem();
             this.SMItemCallDriver = new System.Windows.Forms.ToolStripMenuItem();
             this.LblManageDrivers = new System.Windows.Forms.Label();
-            this.BtnAddDriver = new System.Windows.Forms.Button();
             this.PBManageDrivers = new System.Windows.Forms.PictureBox();
             this.LblFilterBy = new System.Windows.Forms.Label();
             this.LblRecoreds = new System.Windows.Forms.Label();
@@ -64,24 +63,24 @@ namespace DVLD_PresentationLayer
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dGViewShowInformation.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGViewShowInformation.BackgroundColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 12F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dGViewShowInformation.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 12F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dGViewShowInformation.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dGViewShowInformation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGViewShowInformation.ContextMenuStrip = this.SMItemCRUDDrivers;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dGViewShowInformation.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dGViewShowInformation.DefaultCellStyle = dataGridViewCellStyle4;
             this.dGViewShowInformation.Location = new System.Drawing.Point(47, 279);
             this.dGViewShowInformation.Name = "dGViewShowInformation";
             this.dGViewShowInformation.ReadOnly = true;
@@ -109,7 +108,6 @@ namespace DVLD_PresentationLayer
             this.SMItemViewDetails.Name = "SMItemViewDetails";
             this.SMItemViewDetails.Size = new System.Drawing.Size(188, 38);
             this.SMItemViewDetails.Text = "View Details";
-            this.SMItemViewDetails.Click += new System.EventHandler(this.SMItemViewDetails_Click);
             // 
             // SMItemSeparatorCRUDDrivers1
             // 
@@ -140,32 +138,17 @@ namespace DVLD_PresentationLayer
             this.LblManageDrivers.BackColor = System.Drawing.Color.Transparent;
             this.LblManageDrivers.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold);
             this.LblManageDrivers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
-            this.LblManageDrivers.Location = new System.Drawing.Point(635, 159);
+            this.LblManageDrivers.Location = new System.Drawing.Point(613, 159);
             this.LblManageDrivers.Name = "LblManageDrivers";
             this.LblManageDrivers.Size = new System.Drawing.Size(322, 54);
             this.LblManageDrivers.TabIndex = 1;
             this.LblManageDrivers.Text = "Manage Drivers";
             // 
-            // BtnAddDriver
-            // 
-            this.BtnAddDriver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnAddDriver.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.BtnAddDriver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BtnAddDriver.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.BtnAddDriver.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.BtnAddDriver.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
-            this.BtnAddDriver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAddDriver.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BtnAddDriver.Location = new System.Drawing.Point(1396, 228);
-            this.BtnAddDriver.Name = "BtnAddDriver";
-            this.BtnAddDriver.Size = new System.Drawing.Size(90, 45);
-            this.BtnAddDriver.TabIndex = 2;
-            this.BtnAddDriver.UseVisualStyleBackColor = false;
-            // 
             // PBManageDrivers
             // 
             this.PBManageDrivers.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.PBManageDrivers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.PBManageDrivers.Image = ((System.Drawing.Image)(resources.GetObject("PBManageDrivers.Image")));
             this.PBManageDrivers.Location = new System.Drawing.Point(710, 31);
             this.PBManageDrivers.Name = "PBManageDrivers";
             this.PBManageDrivers.Size = new System.Drawing.Size(137, 125);
@@ -229,13 +212,14 @@ namespace DVLD_PresentationLayer
             this.CBFilterBy.Items.AddRange(new object[] {
             "None",
             "Driver ID",
-            "Driver Name",
             "Person ID",
+            "National No",
             "Full Name"});
             this.CBFilterBy.Location = new System.Drawing.Point(154, 245);
             this.CBFilterBy.Name = "CBFilterBy";
             this.CBFilterBy.Size = new System.Drawing.Size(208, 31);
             this.CBFilterBy.TabIndex = 0;
+            this.CBFilterBy.SelectedIndexChanged += new System.EventHandler(this.CBFilterBy_SelectedIndexChanged);
             // 
             // LblTotalRecoreds
             // 
@@ -272,7 +256,6 @@ namespace DVLD_PresentationLayer
             this.Controls.Add(this.BtnAddClose);
             this.Controls.Add(this.LblRecoreds);
             this.Controls.Add(this.LblFilterBy);
-            this.Controls.Add(this.BtnAddDriver);
             this.Controls.Add(this.PBManageDrivers);
             this.Controls.Add(this.LblManageDrivers);
             this.Controls.Add(this.dGViewShowInformation);
@@ -292,7 +275,6 @@ namespace DVLD_PresentationLayer
         #endregion
         private System.Windows.Forms.DataGridView dGViewShowInformation;
         private System.Windows.Forms.Label LblManageDrivers;
-        private Button BtnAddDriver;
         private PictureBox PBManageDrivers;
         private Label LblFilterBy;
         private Label LblRecoreds;
