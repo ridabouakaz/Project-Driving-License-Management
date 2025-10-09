@@ -33,31 +33,25 @@ namespace DVLD_PresentationLayer
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FOManageUsers));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FOManageDrivers));
             this.dGViewShowInformation = new System.Windows.Forms.DataGridView();
-            this.SMItemCRUDUsers = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.SMItemCRUDDrivers = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.SMItemViewDetails = new System.Windows.Forms.ToolStripMenuItem();
-            this.SMItemSeparatorCRUDUsers1 = new System.Windows.Forms.ToolStripSeparator();
-            this.SMItemAddUser = new System.Windows.Forms.ToolStripMenuItem();
-            this.SMItemEditUser = new System.Windows.Forms.ToolStripMenuItem();
-            this.SMItemDeleteUser = new System.Windows.Forms.ToolStripMenuItem();
+            this.SMItemSeparatorCRUDDrivers1 = new System.Windows.Forms.ToolStripSeparator();
             this.SMItemSendEmail = new System.Windows.Forms.ToolStripMenuItem();
-            this.SMItemCallUser = new System.Windows.Forms.ToolStripMenuItem();
-            this.LblManageUsers = new System.Windows.Forms.Label();
-            this.BtnAddUser = new System.Windows.Forms.Button();
-            this.PBManageUsers = new System.Windows.Forms.PictureBox();
+            this.SMItemCallDriver = new System.Windows.Forms.ToolStripMenuItem();
+            this.LblManageDrivers = new System.Windows.Forms.Label();
+            this.BtnAddDriver = new System.Windows.Forms.Button();
+            this.PBManageDrivers = new System.Windows.Forms.PictureBox();
             this.LblFilterBy = new System.Windows.Forms.Label();
             this.LblRecoreds = new System.Windows.Forms.Label();
             this.BtnAddClose = new System.Windows.Forms.Button();
             this.CBFilterBy = new System.Windows.Forms.ComboBox();
             this.LblTotalRecoreds = new System.Windows.Forms.Label();
             this.MTBsearch = new System.Windows.Forms.MaskedTextBox();
-            this.CBActiveStatusBy = new System.Windows.Forms.ComboBox();
-            this.SMItemChangePasswordUser = new System.Windows.Forms.ToolStripMenuItem();
-            this.SMItemSeparatorCRUDUsers2 = new System.Windows.Forms.ToolStripSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.dGViewShowInformation)).BeginInit();
-            this.SMItemCRUDUsers.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PBManageUsers)).BeginInit();
+            this.SMItemCRUDDrivers.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PBManageDrivers)).BeginInit();
             this.SuspendLayout();
             // 
             // dGViewShowInformation
@@ -65,8 +59,8 @@ namespace DVLD_PresentationLayer
             this.dGViewShowInformation.AllowUserToAddRows = false;
             this.dGViewShowInformation.AllowUserToDeleteRows = false;
             this.dGViewShowInformation.AllowUserToOrderColumns = true;
-            this.dGViewShowInformation.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.dGViewShowInformation.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dGViewShowInformation.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGViewShowInformation.BackgroundColor = System.Drawing.SystemColors.Window;
@@ -79,7 +73,7 @@ namespace DVLD_PresentationLayer
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dGViewShowInformation.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dGViewShowInformation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGViewShowInformation.ContextMenuStrip = this.SMItemCRUDUsers;
+            this.dGViewShowInformation.ContextMenuStrip = this.SMItemCRUDDrivers;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
@@ -96,21 +90,16 @@ namespace DVLD_PresentationLayer
             this.dGViewShowInformation.Size = new System.Drawing.Size(1439, 481);
             this.dGViewShowInformation.TabIndex = 3;
             // 
-            // SMItemCRUDUsers
+            // SMItemCRUDDrivers
             // 
-            this.SMItemCRUDUsers.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.SMItemCRUDUsers.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.SMItemCRUDDrivers.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.SMItemCRUDDrivers.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.SMItemViewDetails,
-            this.SMItemSeparatorCRUDUsers1,
-            this.SMItemAddUser,
-            this.SMItemEditUser,
-            this.SMItemDeleteUser,
-            this.SMItemChangePasswordUser,
-            this.SMItemSeparatorCRUDUsers2,
+            this.SMItemSeparatorCRUDDrivers1,
             this.SMItemSendEmail,
-            this.SMItemCallUser});
-            this.SMItemCRUDUsers.Name = "SMItemCRUDUsers";
-            this.SMItemCRUDUsers.Size = new System.Drawing.Size(227, 310);
+            this.SMItemCallDriver});
+            this.SMItemCRUDDrivers.Name = "SMItemCRUDDrivers";
+            this.SMItemCRUDDrivers.Size = new System.Drawing.Size(189, 124);
             // 
             // SMItemViewDetails
             // 
@@ -118,44 +107,14 @@ namespace DVLD_PresentationLayer
             this.SMItemViewDetails.Image = ((System.Drawing.Image)(resources.GetObject("SMItemViewDetails.Image")));
             this.SMItemViewDetails.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SMItemViewDetails.Name = "SMItemViewDetails";
-            this.SMItemViewDetails.Size = new System.Drawing.Size(226, 38);
+            this.SMItemViewDetails.Size = new System.Drawing.Size(188, 38);
             this.SMItemViewDetails.Text = "View Details";
             this.SMItemViewDetails.Click += new System.EventHandler(this.SMItemViewDetails_Click);
             // 
-            // SMItemSeparatorCRUDUsers1
+            // SMItemSeparatorCRUDDrivers1
             // 
-            this.SMItemSeparatorCRUDUsers1.Name = "SMItemSeparatorCRUDUsers1";
-            this.SMItemSeparatorCRUDUsers1.Size = new System.Drawing.Size(223, 6);
-            // 
-            // SMItemAddUser
-            // 
-            this.SMItemAddUser.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.SMItemAddUser.Image = ((System.Drawing.Image)(resources.GetObject("SMItemAddUser.Image")));
-            this.SMItemAddUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.SMItemAddUser.Name = "SMItemAddUser";
-            this.SMItemAddUser.Size = new System.Drawing.Size(226, 38);
-            this.SMItemAddUser.Text = "Add User";
-            this.SMItemAddUser.Click += new System.EventHandler(this.SMItemAddUser_Click);
-            // 
-            // SMItemEditUser
-            // 
-            this.SMItemEditUser.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.SMItemEditUser.Image = ((System.Drawing.Image)(resources.GetObject("SMItemEditUser.Image")));
-            this.SMItemEditUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.SMItemEditUser.Name = "SMItemEditUser";
-            this.SMItemEditUser.Size = new System.Drawing.Size(226, 38);
-            this.SMItemEditUser.Text = "Edit User";
-            this.SMItemEditUser.Click += new System.EventHandler(this.SMItemEditUser_Click);
-            // 
-            // SMItemDeleteUser
-            // 
-            this.SMItemDeleteUser.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.SMItemDeleteUser.Image = ((System.Drawing.Image)(resources.GetObject("SMItemDeleteUser.Image")));
-            this.SMItemDeleteUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.SMItemDeleteUser.Name = "SMItemDeleteUser";
-            this.SMItemDeleteUser.Size = new System.Drawing.Size(226, 38);
-            this.SMItemDeleteUser.Text = "Delete User";
-            this.SMItemDeleteUser.Click += new System.EventHandler(this.SMItemDeleteUser_Click);
+            this.SMItemSeparatorCRUDDrivers1.Name = "SMItemSeparatorCRUDDrivers1";
+            this.SMItemSeparatorCRUDDrivers1.Size = new System.Drawing.Size(185, 6);
             // 
             // SMItemSendEmail
             // 
@@ -163,60 +122,56 @@ namespace DVLD_PresentationLayer
             this.SMItemSendEmail.Image = ((System.Drawing.Image)(resources.GetObject("SMItemSendEmail.Image")));
             this.SMItemSendEmail.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SMItemSendEmail.Name = "SMItemSendEmail";
-            this.SMItemSendEmail.Size = new System.Drawing.Size(226, 38);
+            this.SMItemSendEmail.Size = new System.Drawing.Size(188, 38);
             this.SMItemSendEmail.Text = "Send Email";
             // 
-            // SMItemCallUser
+            // SMItemCallDriver
             // 
-            this.SMItemCallUser.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.SMItemCallUser.Image = ((System.Drawing.Image)(resources.GetObject("SMItemCallUser.Image")));
-            this.SMItemCallUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.SMItemCallUser.Name = "SMItemCallUser";
-            this.SMItemCallUser.Size = new System.Drawing.Size(226, 38);
-            this.SMItemCallUser.Text = "Call User";
+            this.SMItemCallDriver.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.SMItemCallDriver.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.SMItemCallDriver.Name = "SMItemCallDriver";
+            this.SMItemCallDriver.Size = new System.Drawing.Size(188, 38);
+            this.SMItemCallDriver.Text = "Call Driver";
             // 
-            // LblManageUsers
+            // LblManageDrivers
             // 
-            this.LblManageUsers.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.LblManageUsers.AutoSize = true;
-            this.LblManageUsers.BackColor = System.Drawing.Color.Transparent;
-            this.LblManageUsers.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold);
-            this.LblManageUsers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
-            this.LblManageUsers.Location = new System.Drawing.Point(635, 159);
-            this.LblManageUsers.Name = "LblManageUsers";
-            this.LblManageUsers.Size = new System.Drawing.Size(290, 54);
-            this.LblManageUsers.TabIndex = 1;
-            this.LblManageUsers.Text = "Manage Users";
+            this.LblManageDrivers.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.LblManageDrivers.AutoSize = true;
+            this.LblManageDrivers.BackColor = System.Drawing.Color.Transparent;
+            this.LblManageDrivers.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold);
+            this.LblManageDrivers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
+            this.LblManageDrivers.Location = new System.Drawing.Point(635, 159);
+            this.LblManageDrivers.Name = "LblManageDrivers";
+            this.LblManageDrivers.Size = new System.Drawing.Size(322, 54);
+            this.LblManageDrivers.TabIndex = 1;
+            this.LblManageDrivers.Text = "Manage Drivers";
             // 
-            // BtnAddUser
+            // BtnAddDriver
             // 
-            this.BtnAddUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnAddUser.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.BtnAddUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BtnAddUser.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.BtnAddUser.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.BtnAddUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
-            this.BtnAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAddUser.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BtnAddUser.Image = ((System.Drawing.Image)(resources.GetObject("BtnAddUser.Image")));
-            this.BtnAddUser.Location = new System.Drawing.Point(1396, 228);
-            this.BtnAddUser.Name = "BtnAddUser";
-            this.BtnAddUser.Size = new System.Drawing.Size(90, 45);
-            this.BtnAddUser.TabIndex = 2;
-            this.BtnAddUser.UseVisualStyleBackColor = false;
-            this.BtnAddUser.Click += new System.EventHandler(this.BtnAddUser_Click);
+            this.BtnAddDriver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnAddDriver.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnAddDriver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnAddDriver.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BtnAddDriver.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.BtnAddDriver.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.BtnAddDriver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAddDriver.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BtnAddDriver.Location = new System.Drawing.Point(1396, 228);
+            this.BtnAddDriver.Name = "BtnAddDriver";
+            this.BtnAddDriver.Size = new System.Drawing.Size(90, 45);
+            this.BtnAddDriver.TabIndex = 2;
+            this.BtnAddDriver.UseVisualStyleBackColor = false;
             // 
-            // PBManageUsers
+            // PBManageDrivers
             // 
-            this.PBManageUsers.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.PBManageUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.PBManageUsers.Image = ((System.Drawing.Image)(resources.GetObject("PBManageUsers.Image")));
-            this.PBManageUsers.Location = new System.Drawing.Point(710, 31);
-            this.PBManageUsers.Name = "PBManageUsers";
-            this.PBManageUsers.Size = new System.Drawing.Size(137, 125);
-            this.PBManageUsers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PBManageUsers.TabIndex = 2;
-            this.PBManageUsers.TabStop = false;
+            this.PBManageDrivers.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.PBManageDrivers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.PBManageDrivers.Location = new System.Drawing.Point(710, 31);
+            this.PBManageDrivers.Name = "PBManageDrivers";
+            this.PBManageDrivers.Size = new System.Drawing.Size(137, 125);
+            this.PBManageDrivers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PBManageDrivers.TabIndex = 2;
+            this.PBManageDrivers.TabStop = false;
             // 
             // LblFilterBy
             // 
@@ -273,16 +228,14 @@ namespace DVLD_PresentationLayer
             this.CBFilterBy.FormattingEnabled = true;
             this.CBFilterBy.Items.AddRange(new object[] {
             "None",
-            "User ID",
-            "User Name",
+            "Driver ID",
+            "Driver Name",
             "Person ID",
-            "Full Name",
-            "Is ActiveStatus"});
+            "Full Name"});
             this.CBFilterBy.Location = new System.Drawing.Point(154, 245);
             this.CBFilterBy.Name = "CBFilterBy";
             this.CBFilterBy.Size = new System.Drawing.Size(208, 31);
             this.CBFilterBy.TabIndex = 0;
-            this.CBFilterBy.SelectedIndexChanged += new System.EventHandler(this.CBFilterBy_SelectedIndexChanged);
             // 
             // LblTotalRecoreds
             // 
@@ -308,61 +261,29 @@ namespace DVLD_PresentationLayer
             this.MTBsearch.TabIndex = 1;
             this.MTBsearch.TextChanged += new System.EventHandler(this.MTBsearch_TextChanged);
             // 
-            // CBActiveStatusBy
-            // 
-            this.CBActiveStatusBy.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.CBActiveStatusBy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CBActiveStatusBy.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.CBActiveStatusBy.ForeColor = System.Drawing.Color.Black;
-            this.CBActiveStatusBy.FormattingEnabled = true;
-            this.CBActiveStatusBy.Items.AddRange(new object[] {
-            "All",
-            "Yes",
-            "No"});
-            this.CBActiveStatusBy.Location = new System.Drawing.Point(371, 245);
-            this.CBActiveStatusBy.Name = "CBActiveStatusBy";
-            this.CBActiveStatusBy.Size = new System.Drawing.Size(201, 31);
-            this.CBActiveStatusBy.TabIndex = 9;
-            this.CBActiveStatusBy.TextChanged += new System.EventHandler(this.CBActiveStatusBy_TextChanged);
-            // 
-            // SMItemChangePasswordUser
-            // 
-            this.SMItemChangePasswordUser.Image = ((System.Drawing.Image)(resources.GetObject("SMItemChangePasswordUser.Image")));
-            this.SMItemChangePasswordUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.SMItemChangePasswordUser.Name = "SMItemChangePasswordUser";
-            this.SMItemChangePasswordUser.Size = new System.Drawing.Size(226, 38);
-            this.SMItemChangePasswordUser.Text = "Change Password";
-            this.SMItemChangePasswordUser.Click += new System.EventHandler(this.SMItemChangePasswordUser_Click);
-            // 
-            // SMItemSeparatorCRUDUsers2
-            // 
-            this.SMItemSeparatorCRUDUsers2.Name = "SMItemSeparatorCRUDUsers2";
-            this.SMItemSeparatorCRUDUsers2.Size = new System.Drawing.Size(223, 6);
-            // 
-            // FOManageUsers
+            // FOManageDrivers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1533, 932);
-            this.Controls.Add(this.CBActiveStatusBy);
             this.Controls.Add(this.MTBsearch);
             this.Controls.Add(this.LblTotalRecoreds);
             this.Controls.Add(this.CBFilterBy);
             this.Controls.Add(this.BtnAddClose);
             this.Controls.Add(this.LblRecoreds);
             this.Controls.Add(this.LblFilterBy);
-            this.Controls.Add(this.BtnAddUser);
-            this.Controls.Add(this.PBManageUsers);
-            this.Controls.Add(this.LblManageUsers);
+            this.Controls.Add(this.BtnAddDriver);
+            this.Controls.Add(this.PBManageDrivers);
+            this.Controls.Add(this.LblManageDrivers);
             this.Controls.Add(this.dGViewShowInformation);
-            this.Name = "FOManageUsers";
+            this.Name = "FOManageDrivers";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Manage Users";
-            this.Load += new System.EventHandler(this.FOManageUsers_Load);
+            this.Text = "Manage Drivers";
+            this.Load += new System.EventHandler(this.FOManageDrivers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dGViewShowInformation)).EndInit();
-            this.SMItemCRUDUsers.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PBManageUsers)).EndInit();
+            this.SMItemCRUDDrivers.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PBManageDrivers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -370,25 +291,19 @@ namespace DVLD_PresentationLayer
 
         #endregion
         private System.Windows.Forms.DataGridView dGViewShowInformation;
-        private System.Windows.Forms.Label LblManageUsers;
-        private Button BtnAddUser;
-        private PictureBox PBManageUsers;
+        private System.Windows.Forms.Label LblManageDrivers;
+        private Button BtnAddDriver;
+        private PictureBox PBManageDrivers;
         private Label LblFilterBy;
         private Label LblRecoreds;
         private Button BtnAddClose;
-        private ContextMenuStrip SMItemCRUDUsers;
+        private ContextMenuStrip SMItemCRUDDrivers;
         private ToolStripMenuItem SMItemViewDetails;
-        private ToolStripSeparator SMItemSeparatorCRUDUsers1;
-        private ToolStripMenuItem SMItemAddUser;
-        private ToolStripMenuItem SMItemEditUser;
-        private ToolStripMenuItem SMItemDeleteUser;
+        private ToolStripSeparator SMItemSeparatorCRUDDrivers1;
         private ToolStripMenuItem SMItemSendEmail;
-        private ToolStripMenuItem SMItemCallUser;
+        private ToolStripMenuItem SMItemCallDriver;
         private ComboBox CBFilterBy;
         private Label LblTotalRecoreds;
         private MaskedTextBox MTBsearch;
-        private ComboBox CBActiveStatusBy;
-        private ToolStripMenuItem SMItemChangePasswordUser;
-        private ToolStripSeparator SMItemSeparatorCRUDUsers2;
     }
 }

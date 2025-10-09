@@ -15,7 +15,7 @@ namespace DVLD_PresentationLayer
 {
     public partial class FOManageDrivers : Form
     {
-        private static DataTable _DriversTable = clsDriver.GetAllDrivers();
+        private static DataTable _DriversTable = clsDrivers.GetAllDrivers();
 
         public FOManageDrivers()
         {
@@ -23,7 +23,7 @@ namespace DVLD_PresentationLayer
         }
         private void _RefreshPeopleList()
         {
-            _DriversTable = clsDriver.GetAllDrivers();
+            _DriversTable = clsDrivers.GetAllDrivers();
             dGViewShowInformation.DataSource = _DriversTable;
             LblTotalRecoreds.Text = _DriversTable.Rows.Count.ToString();
         }
@@ -33,51 +33,7 @@ namespace DVLD_PresentationLayer
             frm.ShowDialog();
             _RefreshPeopleList();
         }
-
-        private void SMItemAddDriver_Click(object sender, EventArgs e)
-        {
-            FOAddEditDriverInfo frm = new FOAddEditDriverInfo();
-            frm.ShowDialog();
-            _RefreshPeopleList();
-        }
-
-        private void SMItemEditDriver_Click(object sender, EventArgs e)
-        {
-            FOAddEditDriverInfo frm = new FOAddEditDriverInfo((int)dGViewShowInformation.CurrentRow.Cells[0].Value);
-            frm.ShowDialog();
-            _RefreshPeopleList();
-        }
-
-        private void SMItemDeleteDriver_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Are you sure you want to delete Driver [" + dGViewShowInformation.CurrentRow.Cells[0].Value + "]", "Confirm Delete", MessageBoxButtons.OKCancel) == DialogResult.OK)
-
-            {
-
-                //Perform Delele and refresh
-                if (clsDriver.DeleteDrivers((int)dGViewShowInformation.CurrentRow.Cells[0].Value))
-                {
-                    MessageBox.Show("Driver Deleted Successfully.");
-                    _RefreshPeopleList();
-                }
-                else
-                    MessageBox.Show("Driver is not deleted.");
-
-            }
-        }
-        private void BtnAddDriver_Click(object sender, EventArgs e)
-        {
-            FOAddEditDriverInfo frm = new FOAddEditDriverInfo();
-            frm.ShowDialog();
-            _RefreshPeopleList();
-        }
-        private void SMItemChangePasswordDriver_Click(object sender, EventArgs e)
-        {
-            FOChangePasswordDriver frm = new FOChangePasswordDriver((int)dGViewShowInformation.CurrentRow.Cells[0].Value);
-            frm.ShowDialog();
-        }
-
-
+        clsDriverFilter
         private void ApplyFilter()
         {
             if (_DriversTable == null) return;
@@ -108,10 +64,6 @@ namespace DVLD_PresentationLayer
                     this.MTBsearch.Mask = "";
                     filter = new FullNameFilter(MTBsearch.Text);
                     break;
-                case "Is ActiveStatus":
-                    this.MTBsearch.Mask = "";
-                    filter = new ActiveStatusFilter(CBActiveStatusBy.SelectedItem.ToString());
-                    break;
              
             }
 
@@ -121,28 +73,6 @@ namespace DVLD_PresentationLayer
 
             dGViewShowInformation.DataSource = view;
             LblTotalRecoreds.Text = view.Count.ToString();
-        }
-
-        private void CBFilterBy_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string selected = CBFilterBy.SelectedItem.ToString();
-
-            if (selected == "Is ActiveStatus")
-            {
-                MTBsearch.Visible = false;
-                CBActiveStatusBy.Visible = true;
-            }
-            else if (selected == "None")
-            {
-                MTBsearch.Visible = false;
-                CBActiveStatusBy.Visible = false;
-            }
-            else
-            {
-                MTBsearch.Visible = true;
-                CBActiveStatusBy.Visible = false;
-            }
-            ApplyFilter();
         }
         private void FOManageDrivers_Load(object sender, EventArgs e)
         {
@@ -154,12 +84,6 @@ namespace DVLD_PresentationLayer
         private void MTBsearch_TextChanged(object sender, EventArgs e)
         {
             ApplyFilter();
-        }
-
-        private void CBActiveStatusBy_TextChanged(object sender, EventArgs e)
-        {
-            ApplyFilter();
-
         }
 
         private void BtnAddClose_Click(object sender, EventArgs e)
