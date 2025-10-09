@@ -47,16 +47,22 @@ namespace DVLD_PresentationLayer.Tests
 
         private void BtnIssue_Click(object sender, EventArgs e)
         {
-            _Driver.PersonID= _LocalDrivingLicense.ApplicantPersonID;
-            _Driver.CreatedByUserID= _LocalDrivingLicense.CreatedByUserID;
-            _Driver.CreatedDate= DateTime.Today;
-
-            if (!_Driver.Save())
+            if (!clsDrivers.IsDriverExistsForPerson(_LocalDrivingLicense.ApplicantPersonID))
             {
-                MessageBox.Show("❌ Error: Data was not saved successfully.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                _Driver.PersonID = _LocalDrivingLicense.ApplicantPersonID;
+                _Driver.CreatedByUserID = _LocalDrivingLicense.CreatedByUserID;
+                _Driver.CreatedDate = DateTime.Today;
+                if (!_Driver.Save())
+                {
+                    MessageBox.Show("❌ Error: Data was not saved successfully.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
             }
-            _License.ApplicationID= _LocalDrivingLicense.ApplicationID;
+            else
+            {
+                _Driver= clsDrivers.FindByPersonID(_LocalDrivingLicense.ApplicantPersonID);
+            }
+             _License.ApplicationID = _LocalDrivingLicense.ApplicationID;
             _License.DriverID= _Driver.DriverID;
             _License.LicenseClass= _LocalDrivingLicense.LicenseClassID;
             _License.IssueDate= DateTime.Today;

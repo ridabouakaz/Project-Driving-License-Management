@@ -49,9 +49,41 @@ namespace DVLD_BusinessLayer
         {
             return _AddDriver();
         }
+
+        public static clsDrivers FindByPersonID(int PersonID)
+        {
+            int DriverID = 1;
+            int CreatedByUserID = 0;
+            DateTime CreatedDate = DateTime.Now;
+
+            bool isFound = clsDriverDataAccess.GetDriverInfoByPersonID(
+                PersonID,
+                ref DriverID,
+                ref CreatedByUserID,
+                ref CreatedDate
+            );
+
+            if (isFound)
+            {
+                return new clsDrivers(
+                   DriverID ,
+                     PersonID,
+                 CreatedByUserID,
+                 CreatedDate
+                );
+            }
+            else
+                return null;
+        }
+
         public static DataTable GetAllDrivers()
         {
             return clsDriverDataAccess.GetAllDrivers();
+
+        }
+        public static bool IsDriverExistsForPerson(int PersonID)
+        {
+            return clsDriverDataAccess.IsDriverExistsForPerson(PersonID);
 
         }
     }

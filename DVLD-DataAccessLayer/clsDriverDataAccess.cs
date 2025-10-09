@@ -48,13 +48,50 @@ namespace DVLD_DataAccessLayer
             }
             return DriverID;
         }
+        public static bool GetDriverInfoByPersonID(
+        int PersonID,
+                ref int DriverID,
+                ref int CreatedByUserID,
+                ref DateTime CreatedDate)
+        {
+            bool isFound = false;
+
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                string query = "select * from drivers where PersonID =@PersonID\r\n";
+
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@PersonID", PersonID);
+
+                try
+                {
+                    connection.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        isFound = true;
+                        DriverID = Convert.ToInt32(reader["DriverID"]);
+                        CreatedByUserID = Convert.ToInt32(reader["CreatedByUserID"]);
+                        CreatedDate = Convert.ToDateTime(reader["CreatedDate"]);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Handle error (log or throw)
+                    isFound = false;
+                }
+            }
+
+            return isFound;
+        }
         public static DataTable GetAllDrivers()
         {
 
             DataTable dt = new DataTable();
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
-            string query = "select Drivers.DriverID, Drivers.PersonID ,People.NationalNo,\r\nPeople.FirstName + ' ' +People.SecondName + ' ' + ISNULL(People.ThirdName, ' ') + ' ' + People.LastName AS FullName,\r\nDrivers.CreatedDate ,case WHEN Licenses.IsActive = 0 THEN 'Yes'        WHEN Licenses.IsActive = 1 THEN 'No'ELSE 'Unknown'    END AS IsActive\r\nfrom Drivers inner join People on Drivers.PersonID=People.PersonID INNER join Licenses on Licenses.DriverID=Drivers.DriverID";
+            string query = "select distinct Drivers.DriverID, Drivers.PersonID ,People.NationalNo,\r\nPeople.FirstName + ' ' +People.SecondName + ' ' + ISNULL(People.ThirdName, ' ') + ' ' + People.LastName AS FullName,\r\nDrivers.CreatedDate ,case WHEN Licenses.IsActive = 0 THEN 'Yes'        WHEN Licenses.IsActive = 1 THEN 'No'ELSE 'Unknown'    END AS IsActive\r\nfrom Drivers inner join People on Drivers.PersonID=People.PersonID INNER join Licenses on Licenses.DriverID=Drivers.DriverID";
 
             SqlCommand command = new SqlCommand(query, connection);
 
@@ -86,6 +123,38 @@ namespace DVLD_DataAccessLayer
 
             return dt;
 
+        }
+        public static bool IsDriverExistsForPerson(int PersonID)
+        {
+            bool isFound = false;
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+
+            string query = "select Found=1 from drivers where PersonID =@PersonID\r\n";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@PersonID", PersonID);
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                isFound = reader.HasRows;
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error checking if drivers exists: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                isFound = false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return isFound;
         }
     }
 }
