@@ -183,10 +183,10 @@
     <Compile Include="Users\FOChangePasswordUser.Designer.cs">
       <DependentUpon>FOChangePasswordUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="TestTypes\FOEditTestType.cs">
+    <Compile Include="Tests\TestTypes\FOEditTestType.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TestTypes\FOEditTestType.Designer.cs">
+    <Compile Include="Tests\TestTypes\FOEditTestType.Designer.cs">
       <DependentUpon>FOEditTestType.cs</DependentUpon>
     </Compile>
     <Compile Include="ApplicationTypes\FOEditApplicationType.cs">
@@ -201,10 +201,10 @@
     <Compile Include="Main\FOLoginScreen.Designer.cs">
       <DependentUpon>FOLoginScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="TestTypes\FOManageTestTypes.cs">
+    <Compile Include="Tests\TestTypes\FOManageTestTypes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TestTypes\FOManageTestTypes.Designer.cs">
+    <Compile Include="Tests\TestTypes\FOManageTestTypes.Designer.cs">
       <DependentUpon>FOManageTestTypes.cs</DependentUpon>
     </Compile>
     <Compile Include="ApplicationTypes\FOManageApplicationTypes.cs">
@@ -309,7 +309,7 @@
     <EmbeddedResource Include="Users\FOChangePasswordUser.resx">
       <DependentUpon>FOChangePasswordUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TestTypes\FOEditTestType.resx">
+    <EmbeddedResource Include="Tests\TestTypes\FOEditTestType.resx">
       <DependentUpon>FOEditTestType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ApplicationTypes\FOEditApplicationType.resx">
@@ -318,7 +318,7 @@
     <EmbeddedResource Include="Main\FOLoginScreen.resx">
       <DependentUpon>FOLoginScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TestTypes\FOManageTestTypes.resx">
+    <EmbeddedResource Include="Tests\TestTypes\FOManageTestTypes.resx">
       <DependentUpon>FOManageTestTypes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ApplicationTypes\FOManageApplicationTypes.resx">
