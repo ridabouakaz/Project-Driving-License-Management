@@ -18,8 +18,6 @@ namespace DVLD_PresentationLayer.Tests
         private DataTable _dtLicenseTestAppointments;
         private int _LocalDrivingLicenseApplicationID;
         private clsNewLocalDrivingApplication _LocalDrivingLicense;
-        private clsDrivers _Driver = new clsDrivers();
-        private clsLicenses _License = new clsLicenses();
         public enum enMode { AddNew = 0, Update = 1 };
         private enMode _Mode;
         public string Notes
@@ -47,39 +45,19 @@ namespace DVLD_PresentationLayer.Tests
 
         private void BtnIssue_Click(object sender, EventArgs e)
         {
-            if (!clsDrivers.IsDriverExistsForPerson(_LocalDrivingLicense.ApplicantPersonID))
+            int LicenseID = _LocalDrivingLicense.IssueLicenseForTheFirtTime(Notes, _LocalDrivingLicense.CreatedByUserID);
+
+            if (LicenseID != -1)
             {
-                _Driver.PersonID = _LocalDrivingLicense.ApplicantPersonID;
-                _Driver.CreatedByUserID = _LocalDrivingLicense.CreatedByUserID;
-                _Driver.CreatedDate = DateTime.Today;
-                if (!_Driver.Save())
-                {
-                    MessageBox.Show("❌ Error: Data was not saved successfully.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
+                MessageBox.Show("License Issued Successfully with License ID = " + LicenseID.ToString(),
+                    "Succeeded", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                this.Close();
             }
             else
             {
-                _Driver= clsDrivers.FindByPersonID(_LocalDrivingLicense.ApplicantPersonID);
-            }
-             _License.ApplicationID = _LocalDrivingLicense.ApplicationID;
-            _License.DriverID= _Driver.DriverID;
-            _License.LicenseClass= _LocalDrivingLicense.LicenseClassID;
-            _License.IssueDate= DateTime.Today;
-            _License.ExpirationDate= DateTime.Today.AddYears(clsLicenses.GetDefaultValidityLengthById(_LocalDrivingLicense.LicenseClassID));
-            _License.Notes = Notes;
-            _License.PaidFees = _LocalDrivingLicense.PaidFees;
-            _License.IsActive = ActiveStatus.Yes;
-            _License.IssueReason = IssueReason.FirstTime;
-            _License.CreatedByUserID = _LocalDrivingLicense.CreatedByUserID;
-            if (_License.Save())
-            {
-                MessageBox.Show("✅ Data Saved Successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                _Mode = enMode.Update;
-            }
-            else
-            {
-                MessageBox.Show("❌ Error: Data was not saved successfully.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("License Was not Issued ! ",
+                 "Faild", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

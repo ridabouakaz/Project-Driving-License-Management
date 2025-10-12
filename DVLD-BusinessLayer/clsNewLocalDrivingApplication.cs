@@ -10,10 +10,10 @@ using static DVLDShared.DVLDShared;
 
 namespace DVLD_BusinessLayer
 {
-    public class clsNewLocalDrivingApplication:clsApplications
+    public class clsNewLocalDrivingApplication : clsApplications
     {
- 
         public int LocalDrivingLicenseApplicationID { set; get; }
+
         public int ApplicationID { set; get; }
         public int LicenseClassID { set; get; }
         public clsApplications applications { set; get; }
@@ -112,7 +112,7 @@ namespace DVLD_BusinessLayer
         {
             return clsTestTypesDataAccess.GetPassedTestCount(this.LocalDrivingLicenseApplicationID);
         }
-        public static  byte GetPassedTestCount(int LocalDrivingLicenseApplicationID)
+        public static byte GetPassedTestCount(int LocalDrivingLicenseApplicationID)
         {
             return clsTestTypesDataAccess.GetPassedTestCount(LocalDrivingLicenseApplicationID);
         }
@@ -142,6 +142,57 @@ namespace DVLD_BusinessLayer
             return clsLocalDrivingApplicationDataAccess.DeleteLocalDrivingLicenseApplications(
                     LocalDrivingLicenseApplicationID);
 
+        }
+
+        public int IssueLicenseForTheFirtTime(string Notes, int CreatedByUserID)
+        {
+            int DriverID = -1;
+
+            clsDrivers Driver = clsDrivers.FindByPersonID(this.ApplicantPersonID);
+
+            if (Driver == null)
+            {
+                //we check if the driver already there for this person.
+                Driver = new clsDrivers();
+
+                Driver.PersonID = this.ApplicantPersonID;
+                Driver.CreatedByUserID = CreatedByUserID;
+                if (Driver.Save())
+                {
+                    DriverID = Driver.DriverID;
+                }
+                else
+                {
+                    return -1;
+                }
+            }
+            else
+            {
+                DriverID = Driver.DriverID;
+            }
+            //now we diver is there, so we add new licesnse
+
+            clsLicenses License = new clsLicenses();
+            License.ApplicationID = this.ApplicationID;
+            License.DriverID = DriverID;
+            License.LicenseClass = this.LicenseClassID;
+            License.IssueDate = DateTime.Now;
+            License.ExpirationDate = DateTime.Now.AddYears(clsLicenses.GetDefaultValidityLengthById(this.LicenseClassID));
+            License.Notes = Notes;
+            License.PaidFees = this.PaidFees;
+            License.IsActive = ActiveStatus.Yes;
+            License.IssueReason = IssueReason.FirstTime;
+            License.CreatedByUserID = CreatedByUserID;
+
+            if (License.Save())
+            {
+                //now we should set the application status to complete.
+
+                return License.LicenseID;
+            }
+
+            else
+                return -1;
         }
     }
 }
