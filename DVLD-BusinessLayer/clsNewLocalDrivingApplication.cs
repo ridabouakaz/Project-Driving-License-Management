@@ -194,5 +194,10 @@ namespace DVLD_BusinessLayer
             else
                 return -1;
         }
+        public static byte TotalTrialsPerTest(int LocalDrivingLicenseApplicationID, int TestTypeID)
+
+        {
+            return clsLocalDrivingApplicationDataAccess.TotalTrialsPerTest(LocalDrivingLicenseApplicationID,TestTypeID);
+        }
     }
 }

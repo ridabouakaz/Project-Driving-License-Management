@@ -27,11 +27,16 @@ namespace DVLD_PresentationLayer.Tests
         private clsApplications _RetakeTest;
         private bool _HasPersonAlreadyFailedTest;
         public enum enMode { AddNew = 0, Update = 1 };
-        private enMode _Mode; 
+        private enMode _Mode;
         public string LocalDrivingApplicationID
         {
             get => LblValueDLAppID.Text.Trim();
             set => LblValueDLAppID.Text = value;
+        }
+        public string Trial
+        {
+            get => LblValueTrial.Text.Trim();
+            set => LblValueTrial.Text = value;
         }
         public string DClass
         {
@@ -81,6 +86,7 @@ namespace DVLD_PresentationLayer.Tests
             DClass = clsNewLocalDrivingApplication.GetClassNameById(_LocalDrivingApplication.LocalDrivingLicenseApplicationID);
             NamePerson = _LocalDrivingApplication.ApplicantFullName;
             FeesTest = clsManageTestTypes.GetFeesById((int)_TestType).ToString();
+            Trial=(clsNewLocalDrivingApplication.TotalTrialsPerTest(_LocalDrivingApplication.LocalDrivingLicenseApplicationID,(int)_TestType)).ToString();
             _HasPersonAlreadyFailedTest = clsTest.HasPersonAlreadyFailedTest((int)_TestType, _LocalDrivingLicenseApplicationID);
             GBRetakeTestInfo.Enabled = _HasPersonAlreadyFailedTest;
             if (_HasPersonAlreadyFailedTest)
