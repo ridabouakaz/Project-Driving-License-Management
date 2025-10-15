@@ -17,6 +17,7 @@ namespace DVLD_PresentationLayer
     public partial class CtrDetailsLicenses : UserControl
     {
         private clsLicenses _License;
+        private int _LicenseID;
 
         public CtrDetailsLicenses()
         {
@@ -25,13 +26,15 @@ namespace DVLD_PresentationLayer
         public void LoadInfo(int LicenseID)
         {
             _LicenseID = LicenseID;
-            _License = clsLicenses.FindByLocalDrivingLicenseApplicationID(_LicenseID);
-            _LocalDrivingApplication = clsNewLocalDrivingApplication.FindByLocalDrivingAppLicenseID(_LocalDrivingLicenseApplicationID);
-
-            if (_LocalDrivingApplication != null)
-                _LoadData();
-            else
-                MessageBox.Show($"❌ Application with ID {_ApplicationID} not found.");
+            _License = clsLicenses.FindByLicenseID(_LicenseID);
+            if (_License == null)
+            {
+                MessageBox.Show("Could not find License ID = " + _LicenseID.ToString(),
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                _LicenseID = -1;
+                return;
+            }
+            LicenseData= _License;
         }
         public clsLicenses LicenseData
         {
@@ -85,7 +88,7 @@ namespace DVLD_PresentationLayer
                 ImagePerson = null;
             }
         }
-        public int LicenseID
+        public int LicenseIDValue
         {
             get { return _LicenseID; }
         }
