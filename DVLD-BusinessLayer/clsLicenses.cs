@@ -119,6 +119,52 @@ namespace DVLD_BusinessLayer
             }
             return false;
         }
+        public static clsLicenses FindByLicenseID(int LicenseID)
+        {
+            int applicationID = -1;
+            int driverID = -1;
+            int licenseClass = -1;
+            DateTime issueDate = DateTime.MinValue;
+            DateTime expirationDate = DateTime.MinValue;
+            string notes = "";
+            decimal paidFees = 0;
+            ActiveStatus isActive = ActiveStatus.Yes;
+            IssueReason issueReason = IssueReason.FirstTime;
+            int createdByUserID = -1;
+            bool isFound = clsLicensesDataAccess.GetLicenseInfoByLicenseID  (
+           LicenseID,
+          ref applicationID,
+          ref driverID,
+          ref licenseClass,
+          ref issueDate,
+          ref expirationDate,
+          ref notes,
+          ref paidFees,
+          ref isActive,
+          ref issueReason,
+          ref createdByUserID
+      );
+
+            if (isFound)
+            {
+                return new clsLicenses(
+                    LicenseID,
+                    applicationID,
+                    driverID,
+                    licenseClass,
+                    issueDate,
+                    expirationDate,
+                    notes,
+                    paidFees,
+                    isActive,
+                    issueReason,
+                    createdByUserID
+                );
+            }
+            else
+                return null;
+
+        }
         public static clsLicenses FindByLocalDrivingLicenseApplicationID(int LocalDrivingLicenseApplicationID)
         {
             int licenseID = 0;
@@ -132,9 +178,6 @@ namespace DVLD_BusinessLayer
             ActiveStatus isActive = ActiveStatus.Yes;
             IssueReason issueReason = IssueReason.FirstTime;
             int createdByUserID = -1;
-            string imagePath = "";
-            Gender gender = Gender.Male;
-
             bool isFound = clsLicensesDataAccess.GetLicensesInfoByID(
                 LocalDrivingLicenseApplicationID,
                 ref licenseID,

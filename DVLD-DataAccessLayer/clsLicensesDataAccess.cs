@@ -147,6 +147,72 @@ namespace DVLD_DataAccessLayer
             }
             return Title;
         }
+        public static bool GetLicenseInfoByLicenseID( int LicenseID,
+        ref int applicationID,
+        ref int driverID,
+        ref int licenseClass,
+        ref DateTime issueDate,
+        ref DateTime expirationDate,
+        ref string notes,
+        ref decimal paidFees,
+        ref ActiveStatus isActive,
+        ref IssueReason issueReason,
+        ref int createdByUserID)
+        {
+            bool isFound = false;
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+
+            string query = "SELECT * FROM Licenses WHERE LicenseID = @LicenseID";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@LicenseID", LicenseID);
+
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+
+                    // The record was found
+                    isFound = true;
+                    applicationID = Convert.ToInt32(reader["ApplicationID"]);
+                    driverID = Convert.ToInt32(reader["DriverID"]);
+                    licenseClass = Convert.ToInt32(reader["LicenseClass"]);
+                    issueDate = Convert.ToDateTime(reader["IssueDate"]);
+                    expirationDate = Convert.ToDateTime(reader["ExpirationDate"]);
+                    notes = reader["Notes"].ToString();
+                    paidFees = Convert.ToDecimal(reader["PaidFees"]);
+                    isActive = (ActiveStatus)Convert.ToInt32(reader["IsActive"]);
+                    issueReason = (IssueReason)Convert.ToInt32(reader["IssueReason"]);
+                    createdByUserID = Convert.ToInt32(reader["CreatedByUserID"]);
+
+                }
+                else
+                {
+                    // The record was not found
+                    isFound = false;
+                }
+
+                reader.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                //Console.WriteLine("Error: " + ex.Message);
+                isFound = false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return isFound;
+        }
         public static bool GetLicensesInfoByID(
         int LocalDrivingLicenseApplicationID,
         ref int licenseID,
