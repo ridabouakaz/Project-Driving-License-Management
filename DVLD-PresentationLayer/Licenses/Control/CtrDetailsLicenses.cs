@@ -34,8 +34,10 @@ namespace DVLD_PresentationLayer
                 _LicenseID = -1;
                 return;
             }
-            LicenseData= _License;
+            LicenseData = _License;
         }
+        public clsLicenses SelectedLicenseInfo
+        { get { return _License; } }
         public clsLicenses LicenseData
         {
             get => _License;
@@ -88,6 +90,7 @@ namespace DVLD_PresentationLayer
                 ImagePerson = null;
             }
         }
+        
         public int LicenseIDValue
         {
             get { return _LicenseID; }
@@ -159,7 +162,7 @@ namespace DVLD_PresentationLayer
             get => LblvalueExpirationDate.Text;
             set => LblvalueExpirationDate.Text = value;
         }
-      
+
         public ActiveStatus IsActive
         {
             set
