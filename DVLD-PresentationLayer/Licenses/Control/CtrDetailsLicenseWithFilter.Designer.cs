@@ -32,9 +32,9 @@
             this.LblLicenseID = new System.Windows.Forms.Label();
             this.MTBsearch = new System.Windows.Forms.MaskedTextBox();
             this.BtnSearchPerson = new System.Windows.Forms.Button();
-            this.GBUserControlDetailesPersonWithFilter = new System.Windows.Forms.GroupBox();
+            this.GBUserControlDetailesLicenseWithFilter = new System.Windows.Forms.GroupBox();
             this.ctrDetailsLicenses1 = new DVLD_PresentationLayer.CtrDetailsLicenses();
-            this.GBUserControlDetailesPersonWithFilter.SuspendLayout();
+            this.GBUserControlDetailesLicenseWithFilter.SuspendLayout();
             this.SuspendLayout();
             // 
             // LblLicenseID
@@ -56,12 +56,11 @@
             this.MTBsearch.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.MTBsearch.ForeColor = System.Drawing.Color.Black;
             this.MTBsearch.Location = new System.Drawing.Point(152, 40);
+            this.MTBsearch.Mask = "000000";
             this.MTBsearch.Name = "MTBsearch";
+            this.MTBsearch.PromptChar = ' ';
             this.MTBsearch.Size = new System.Drawing.Size(366, 30);
             this.MTBsearch.TabIndex = 2;
-            this.MTBsearch.Mask = "000000";
-            this.MTBsearch.PromptChar = ' ';
-            this.MTBsearch.Visible = true;
             // 
             // BtnSearchPerson
             // 
@@ -78,20 +77,21 @@
             this.BtnSearchPerson.Size = new System.Drawing.Size(101, 32);
             this.BtnSearchPerson.TabIndex = 3;
             this.BtnSearchPerson.UseVisualStyleBackColor = false;
+            this.BtnSearchPerson.Click += new System.EventHandler(this.BtnSearchPerson_Click);
             // 
-            // GBUserControlDetailesPersonWithFilter
+            // GBUserControlDetailesLicenseWithFilter
             // 
-            this.GBUserControlDetailesPersonWithFilter.BackColor = System.Drawing.SystemColors.Window;
-            this.GBUserControlDetailesPersonWithFilter.Controls.Add(this.BtnSearchPerson);
-            this.GBUserControlDetailesPersonWithFilter.Controls.Add(this.MTBsearch);
-            this.GBUserControlDetailesPersonWithFilter.Controls.Add(this.LblLicenseID);
-            this.GBUserControlDetailesPersonWithFilter.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.GBUserControlDetailesPersonWithFilter.Location = new System.Drawing.Point(17, 3);
-            this.GBUserControlDetailesPersonWithFilter.Name = "GBUserControlDetailesPersonWithFilter";
-            this.GBUserControlDetailesPersonWithFilter.Size = new System.Drawing.Size(802, 89);
-            this.GBUserControlDetailesPersonWithFilter.TabIndex = 2;
-            this.GBUserControlDetailesPersonWithFilter.TabStop = false;
-            this.GBUserControlDetailesPersonWithFilter.Text = "Filter";
+            this.GBUserControlDetailesLicenseWithFilter.BackColor = System.Drawing.SystemColors.Window;
+            this.GBUserControlDetailesLicenseWithFilter.Controls.Add(this.BtnSearchPerson);
+            this.GBUserControlDetailesLicenseWithFilter.Controls.Add(this.MTBsearch);
+            this.GBUserControlDetailesLicenseWithFilter.Controls.Add(this.LblLicenseID);
+            this.GBUserControlDetailesLicenseWithFilter.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.GBUserControlDetailesLicenseWithFilter.Location = new System.Drawing.Point(17, 3);
+            this.GBUserControlDetailesLicenseWithFilter.Name = "GBUserControlDetailesLicenseWithFilter";
+            this.GBUserControlDetailesLicenseWithFilter.Size = new System.Drawing.Size(802, 89);
+            this.GBUserControlDetailesLicenseWithFilter.TabIndex = 2;
+            this.GBUserControlDetailesLicenseWithFilter.TabStop = false;
+            this.GBUserControlDetailesLicenseWithFilter.Text = "Filter";
             // 
             // ctrDetailsLicenses1
             // 
@@ -119,11 +119,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.ctrDetailsLicenses1);
-            this.Controls.Add(this.GBUserControlDetailesPersonWithFilter);
+            this.Controls.Add(this.GBUserControlDetailesLicenseWithFilter);
             this.Name = "CtrDetailsLicenseWithFilter";
             this.Size = new System.Drawing.Size(1175, 582);
-            this.GBUserControlDetailesPersonWithFilter.ResumeLayout(false);
-            this.GBUserControlDetailesPersonWithFilter.PerformLayout();
+            this.GBUserControlDetailesLicenseWithFilter.ResumeLayout(false);
+            this.GBUserControlDetailesLicenseWithFilter.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -133,7 +133,7 @@
         private System.Windows.Forms.Label LblLicenseID;
         private System.Windows.Forms.MaskedTextBox MTBsearch;
         private System.Windows.Forms.Button BtnSearchPerson;
-        private System.Windows.Forms.GroupBox GBUserControlDetailesPersonWithFilter;
+        private System.Windows.Forms.GroupBox GBUserControlDetailesLicenseWithFilter;
         private CtrDetailsLicenses ctrDetailsLicenses1;
     }
 }
