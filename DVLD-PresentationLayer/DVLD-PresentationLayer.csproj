@@ -81,6 +81,12 @@
     <Compile Include="Applications\Control\CtrDrivingLicenseApplicationInfo.Designer.cs">
       <DependentUpon>CtrDrivingLicenseApplicationInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Applications\International License\Control\CtrDetailsInternationalLicenseApplication.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Applications\International License\Control\CtrDetailsInternationalLicenseApplication.Designer.cs">
+      <DependentUpon>CtrDetailsInternationalLicenseApplication.cs</DependentUpon>
+    </Compile>
     <Compile Include="Applications\International License\FONewInternationalLicenseApplication.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -269,6 +275,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Applications\Control\CtrDrivingLicenseApplicationInfo.resx">
       <DependentUpon>CtrDrivingLicenseApplicationInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\International License\Control\CtrDetailsInternationalLicenseApplication.resx">
+      <DependentUpon>CtrDetailsInternationalLicenseApplication.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Applications\International License\FONewInternationalLicenseApplication.resx">
       <DependentUpon>FONewInternationalLicenseApplication.cs</DependentUpon>
