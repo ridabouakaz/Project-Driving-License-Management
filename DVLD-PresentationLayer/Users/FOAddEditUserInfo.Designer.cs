@@ -33,6 +33,7 @@
             this.LblAddEditUser = new System.Windows.Forms.Label();
             this.TCAddEditUser = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
             this.TPPersonalInfo = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            this.ctrDetailsPersonWithFilter1 = new DVLD_PresentationLayer.CtrDetailsPersonWithFilter();
             this.BtnAddNext = new System.Windows.Forms.Button();
             this.TPLoginInfo = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.CBIsActive = new System.Windows.Forms.CheckBox();
@@ -52,7 +53,6 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.BtnAddClose = new System.Windows.Forms.Button();
             this.BtnAddSave = new System.Windows.Forms.Button();
-            this.ctrDetailsPersonWithFilter1 = new DVLD_PresentationLayer.CtrDetailsPersonWithFilter();
             ((System.ComponentModel.ISupportInitialize)(this.TCAddEditUser)).BeginInit();
             this.TCAddEditUser.SuspendLayout();
             this.TPPersonalInfo.SuspendLayout();
@@ -112,6 +112,15 @@
             this.TPPersonalInfo.TabIndex = 1;
             this.TPPersonalInfo.Text = "Personal Info";
             this.TPPersonalInfo.ThemesEnabled = false;
+            // 
+            // ctrDetailsPersonWithFilter1
+            // 
+            this.ctrDetailsPersonWithFilter1.BackColor = System.Drawing.Color.White;
+            this.ctrDetailsPersonWithFilter1.Location = new System.Drawing.Point(21, 20);
+            this.ctrDetailsPersonWithFilter1.Name = "ctrDetailsPersonWithFilter1";
+            this.ctrDetailsPersonWithFilter1.PersonData = null;
+            this.ctrDetailsPersonWithFilter1.Size = new System.Drawing.Size(979, 478);
+            this.ctrDetailsPersonWithFilter1.TabIndex = 6;
             // 
             // BtnAddNext
             // 
@@ -378,15 +387,6 @@
             this.BtnAddSave.UseVisualStyleBackColor = false;
             this.BtnAddSave.Click += new System.EventHandler(this.BtnAddSave_Click);
             // 
-            // ctrDetailsPersonWithFilter1
-            // 
-            this.ctrDetailsPersonWithFilter1.BackColor = System.Drawing.Color.White;
-            this.ctrDetailsPersonWithFilter1.Location = new System.Drawing.Point(21, 20);
-            this.ctrDetailsPersonWithFilter1.Name = "ctrDetailsPersonWithFilter1";
-            this.ctrDetailsPersonWithFilter1.PersonData = null;
-            this.ctrDetailsPersonWithFilter1.Size = new System.Drawing.Size(979, 478);
-            this.ctrDetailsPersonWithFilter1.TabIndex = 6;
-            // 
             // FOAddEditUserInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -403,6 +403,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FOAddEditUserInfo";
+            this.Load += new System.EventHandler(this.FOAddEditUserInfo_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.TCAddEditUser)).EndInit();
             this.TCAddEditUser.ResumeLayout(false);
             this.TPPersonalInfo.ResumeLayout(false);

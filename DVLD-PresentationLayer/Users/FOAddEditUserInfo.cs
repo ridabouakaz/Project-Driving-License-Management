@@ -170,7 +170,8 @@ namespace DVLD_PresentationLayer
             }
             this.Close();
         }
-        private void FOAddEditUserInfo_Load(object sender, EventArgs e)
+
+        private void FOAddEditUserInfo_Load_1(object sender, EventArgs e)
         {
             _ResetDefualtValues();
             if (_Mode == enMode.Update)

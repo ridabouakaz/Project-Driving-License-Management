@@ -143,7 +143,6 @@ namespace DVLD_PresentationLayer
         }
         private void _InitializeForm()
         {
-  
             _ResetDefaults();
             _PrepareNewApplication();
             _LoadApplicationInfo();
