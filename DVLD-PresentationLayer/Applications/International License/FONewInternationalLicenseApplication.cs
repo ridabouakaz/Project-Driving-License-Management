@@ -21,9 +21,9 @@ namespace DVLD_PresentationLayer.Applications.International_License
         {
             int SelectedLicenseID = obj;
 
-            lblLocalLicenseID.Text = SelectedLicenseID.ToString();
+            ctrDetailsInternationalLicenseApplication1.LocalLicenseID = SelectedLicenseID.ToString();
 
-            llShowLicenseHistory.Enabled = (SelectedLicenseID != -1);
+            //llShowLicenseHistory.Enabled = (SelectedLicenseID != -1);
 
             if (SelectedLicenseID == -1)
 
@@ -33,7 +33,7 @@ namespace DVLD_PresentationLayer.Applications.International_License
             //check the license class, person could not issue international license without having
             //normal license of class 3.
 
-            if (ctrlDriverLicenseInfoWithFilter1.SelectedLicenseInfo.LicenseClass != 3)
+            if (ctrDetailsLicenseWithFilter1.SelectedLicenseInfo.LicenseClass != 3)
             {
                 MessageBox.Show("Selected License should be Class 3, select another one.", "Not allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -50,7 +50,6 @@ namespace DVLD_PresentationLayer.Applications.International_License
                 btnIssueLicense.Enabled = false;
                 return;
             }
-
             btnIssueLicense.Enabled = true;
 
         }

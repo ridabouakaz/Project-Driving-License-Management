@@ -48,6 +48,7 @@
     <Compile Include="clsCountry.cs" />
     <Compile Include="clsDriverFilter.cs" />
     <Compile Include="clsDrivers.cs" />
+    <Compile Include="clsInternationalLicense.cs" />
     <Compile Include="clsLicenses.cs" />
     <Compile Include="clsManageTestTypes.cs" />
     <Compile Include="clsManageApplicationTypes.cs" />
@@ -58,7 +59,7 @@
     <Compile Include="clsTestAppointment.cs" />
     <Compile Include="clsUser.cs" />
     <Compile Include="clsUserFilter.cs" />
-    <Compile Include="LocalDrivingApplicationFilter.cs" />
+    <Compile Include="clsLocalDrivingApplicationFilter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

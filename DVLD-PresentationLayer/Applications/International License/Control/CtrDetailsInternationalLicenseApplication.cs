@@ -45,7 +45,6 @@ namespace DVLD_PresentationLayer
         {
             set => LblvalueCreatedBy.Text = value;
         }
-
         public string LLicenseID
         {
             set => LblvalueLLicenseID.Text = value;

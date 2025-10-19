@@ -8,7 +8,7 @@ using static DVLD_BusinessLayer.PersonFilterService;
 
 namespace DVLD_BusinessLayer
 {
-    public class LocalDrivingApplicationFilter
+    public class clsLocalDrivingApplicationFilter
     {
         public class LocalDrivingApplicationFilterService
         {

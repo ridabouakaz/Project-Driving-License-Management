@@ -24,7 +24,8 @@ namespace DVLD_PresentationLayer.Licenses.Control
                 handler(LicenseID); // Raise the event with the parameter
             }
         }
-
+        public clsLicenses SelectedLicenseInfo
+        { get { return ctrDetailsLicenses1.SelectedLicenseInfo; } }
         private int _LicenseID = -1;
 
         public int LicenseID
