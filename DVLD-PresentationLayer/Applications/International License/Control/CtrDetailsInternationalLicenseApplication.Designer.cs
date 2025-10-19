@@ -38,13 +38,13 @@ namespace DVLD_PresentationLayer
             this.GBUserControlDetailesApplication = new System.Windows.Forms.GroupBox();
             this.PBApplicationID = new System.Windows.Forms.PictureBox();
             this.LblValueILApplicationID = new System.Windows.Forms.Label();
+            this.LblvalueExpirationDate = new System.Windows.Forms.Label();
+            this.LblvalueLocalLicenseID = new System.Windows.Forms.Label();
+            this.LblvalueLLicenseID = new System.Windows.Forms.Label();
             this.LblvalueCreatedBy = new System.Windows.Forms.Label();
-            this.LblvalueStatusDate = new System.Windows.Forms.Label();
-            this.LblvalueDate = new System.Windows.Forms.Label();
-            this.LblvalueApplicant = new System.Windows.Forms.Label();
+            this.LblValueIssueDate = new System.Windows.Forms.Label();
+            this.LblValueApplicationDate = new System.Windows.Forms.Label();
             this.LblValueFees = new System.Windows.Forms.Label();
-            this.LblValueStatus = new System.Windows.Forms.Label();
-            this.LblValueType = new System.Windows.Forms.Label();
             this.PBGender = new System.Windows.Forms.PictureBox();
             this.LblILApplicationID = new System.Windows.Forms.Label();
             this.PBCountry = new System.Windows.Forms.PictureBox();
@@ -85,13 +85,13 @@ namespace DVLD_PresentationLayer
             this.GBUserControlDetailesApplication.BackColor = System.Drawing.Color.White;
             this.GBUserControlDetailesApplication.Controls.Add(this.PBApplicationID);
             this.GBUserControlDetailesApplication.Controls.Add(this.LblValueILApplicationID);
+            this.GBUserControlDetailesApplication.Controls.Add(this.LblvalueExpirationDate);
+            this.GBUserControlDetailesApplication.Controls.Add(this.LblvalueLocalLicenseID);
+            this.GBUserControlDetailesApplication.Controls.Add(this.LblvalueLLicenseID);
             this.GBUserControlDetailesApplication.Controls.Add(this.LblvalueCreatedBy);
-            this.GBUserControlDetailesApplication.Controls.Add(this.LblvalueStatusDate);
-            this.GBUserControlDetailesApplication.Controls.Add(this.LblvalueDate);
-            this.GBUserControlDetailesApplication.Controls.Add(this.LblvalueApplicant);
+            this.GBUserControlDetailesApplication.Controls.Add(this.LblValueIssueDate);
+            this.GBUserControlDetailesApplication.Controls.Add(this.LblValueApplicationDate);
             this.GBUserControlDetailesApplication.Controls.Add(this.LblValueFees);
-            this.GBUserControlDetailesApplication.Controls.Add(this.LblValueStatus);
-            this.GBUserControlDetailesApplication.Controls.Add(this.LblValueType);
             this.GBUserControlDetailesApplication.Controls.Add(this.PBGender);
             this.GBUserControlDetailesApplication.Controls.Add(this.LblILApplicationID);
             this.GBUserControlDetailesApplication.Controls.Add(this.PBCountry);
@@ -139,53 +139,77 @@ namespace DVLD_PresentationLayer
             this.LblValueILApplicationID.TabIndex = 46;
             this.LblValueILApplicationID.Text = "[????????]";
             // 
+            // LblvalueExpirationDate
+            // 
+            this.LblvalueExpirationDate.AutoSize = true;
+            this.LblvalueExpirationDate.BackColor = System.Drawing.Color.Transparent;
+            this.LblvalueExpirationDate.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.LblvalueExpirationDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblvalueExpirationDate.Location = new System.Drawing.Point(984, 117);
+            this.LblvalueExpirationDate.Name = "LblvalueExpirationDate";
+            this.LblvalueExpirationDate.Size = new System.Drawing.Size(90, 25);
+            this.LblvalueExpirationDate.TabIndex = 45;
+            this.LblvalueExpirationDate.Text = "[????????]";
+            // 
+            // LblvalueLocalLicenseID
+            // 
+            this.LblvalueLocalLicenseID.AutoSize = true;
+            this.LblvalueLocalLicenseID.BackColor = System.Drawing.Color.Transparent;
+            this.LblvalueLocalLicenseID.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.LblvalueLocalLicenseID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblvalueLocalLicenseID.Location = new System.Drawing.Point(984, 79);
+            this.LblvalueLocalLicenseID.Name = "LblvalueLocalLicenseID";
+            this.LblvalueLocalLicenseID.Size = new System.Drawing.Size(90, 25);
+            this.LblvalueLocalLicenseID.TabIndex = 44;
+            this.LblvalueLocalLicenseID.Text = "[????????]";
+            // 
+            // LblvalueLLicenseID
+            // 
+            this.LblvalueLLicenseID.AutoSize = true;
+            this.LblvalueLLicenseID.BackColor = System.Drawing.Color.Transparent;
+            this.LblvalueLLicenseID.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.LblvalueLLicenseID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblvalueLLicenseID.Location = new System.Drawing.Point(984, 41);
+            this.LblvalueLLicenseID.Name = "LblvalueLLicenseID";
+            this.LblvalueLLicenseID.Size = new System.Drawing.Size(90, 25);
+            this.LblvalueLLicenseID.TabIndex = 43;
+            this.LblvalueLLicenseID.Text = "[????????]";
+            // 
             // LblvalueCreatedBy
             // 
             this.LblvalueCreatedBy.AutoSize = true;
             this.LblvalueCreatedBy.BackColor = System.Drawing.Color.Transparent;
             this.LblvalueCreatedBy.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.LblvalueCreatedBy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblvalueCreatedBy.Location = new System.Drawing.Point(984, 117);
+            this.LblvalueCreatedBy.Location = new System.Drawing.Point(984, 158);
             this.LblvalueCreatedBy.Name = "LblvalueCreatedBy";
             this.LblvalueCreatedBy.Size = new System.Drawing.Size(90, 25);
-            this.LblvalueCreatedBy.TabIndex = 45;
+            this.LblvalueCreatedBy.TabIndex = 41;
             this.LblvalueCreatedBy.Text = "[????????]";
             // 
-            // LblvalueStatusDate
+            // LblValueIssueDate
             // 
-            this.LblvalueStatusDate.AutoSize = true;
-            this.LblvalueStatusDate.BackColor = System.Drawing.Color.Transparent;
-            this.LblvalueStatusDate.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.LblvalueStatusDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblvalueStatusDate.Location = new System.Drawing.Point(984, 79);
-            this.LblvalueStatusDate.Name = "LblvalueStatusDate";
-            this.LblvalueStatusDate.Size = new System.Drawing.Size(90, 25);
-            this.LblvalueStatusDate.TabIndex = 44;
-            this.LblvalueStatusDate.Text = "[????????]";
+            this.LblValueIssueDate.AutoSize = true;
+            this.LblValueIssueDate.BackColor = System.Drawing.Color.Transparent;
+            this.LblValueIssueDate.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.LblValueIssueDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblValueIssueDate.Location = new System.Drawing.Point(282, 117);
+            this.LblValueIssueDate.Name = "LblValueIssueDate";
+            this.LblValueIssueDate.Size = new System.Drawing.Size(90, 25);
+            this.LblValueIssueDate.TabIndex = 40;
+            this.LblValueIssueDate.Text = "[????????]";
             // 
-            // LblvalueDate
+            // LblValueApplicationDate
             // 
-            this.LblvalueDate.AutoSize = true;
-            this.LblvalueDate.BackColor = System.Drawing.Color.Transparent;
-            this.LblvalueDate.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.LblvalueDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblvalueDate.Location = new System.Drawing.Point(984, 41);
-            this.LblvalueDate.Name = "LblvalueDate";
-            this.LblvalueDate.Size = new System.Drawing.Size(90, 25);
-            this.LblvalueDate.TabIndex = 43;
-            this.LblvalueDate.Text = "[????????]";
-            // 
-            // LblvalueApplicant
-            // 
-            this.LblvalueApplicant.AutoSize = true;
-            this.LblvalueApplicant.BackColor = System.Drawing.Color.Transparent;
-            this.LblvalueApplicant.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.LblvalueApplicant.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblvalueApplicant.Location = new System.Drawing.Point(984, 158);
-            this.LblvalueApplicant.Name = "LblvalueApplicant";
-            this.LblvalueApplicant.Size = new System.Drawing.Size(90, 25);
-            this.LblvalueApplicant.TabIndex = 41;
-            this.LblvalueApplicant.Text = "[????????]";
+            this.LblValueApplicationDate.AutoSize = true;
+            this.LblValueApplicationDate.BackColor = System.Drawing.Color.Transparent;
+            this.LblValueApplicationDate.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.LblValueApplicationDate.ForeColor = System.Drawing.Color.Black;
+            this.LblValueApplicationDate.Location = new System.Drawing.Point(282, 79);
+            this.LblValueApplicationDate.Name = "LblValueApplicationDate";
+            this.LblValueApplicationDate.Size = new System.Drawing.Size(90, 25);
+            this.LblValueApplicationDate.TabIndex = 39;
+            this.LblValueApplicationDate.Text = "[????????]";
             // 
             // LblValueFees
             // 
@@ -193,35 +217,11 @@ namespace DVLD_PresentationLayer
             this.LblValueFees.BackColor = System.Drawing.Color.Transparent;
             this.LblValueFees.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.LblValueFees.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblValueFees.Location = new System.Drawing.Point(282, 117);
+            this.LblValueFees.Location = new System.Drawing.Point(282, 155);
             this.LblValueFees.Name = "LblValueFees";
             this.LblValueFees.Size = new System.Drawing.Size(90, 25);
-            this.LblValueFees.TabIndex = 40;
+            this.LblValueFees.TabIndex = 38;
             this.LblValueFees.Text = "[????????]";
-            // 
-            // LblValueStatus
-            // 
-            this.LblValueStatus.AutoSize = true;
-            this.LblValueStatus.BackColor = System.Drawing.Color.Transparent;
-            this.LblValueStatus.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.LblValueStatus.ForeColor = System.Drawing.Color.Black;
-            this.LblValueStatus.Location = new System.Drawing.Point(282, 79);
-            this.LblValueStatus.Name = "LblValueStatus";
-            this.LblValueStatus.Size = new System.Drawing.Size(90, 25);
-            this.LblValueStatus.TabIndex = 39;
-            this.LblValueStatus.Text = "[????????]";
-            // 
-            // LblValueType
-            // 
-            this.LblValueType.AutoSize = true;
-            this.LblValueType.BackColor = System.Drawing.Color.Transparent;
-            this.LblValueType.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.LblValueType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblValueType.Location = new System.Drawing.Point(282, 155);
-            this.LblValueType.Name = "LblValueType";
-            this.LblValueType.Size = new System.Drawing.Size(90, 25);
-            this.LblValueType.TabIndex = 38;
-            this.LblValueType.Text = "[????????]";
             // 
             // PBGender
             // 
@@ -414,13 +414,13 @@ namespace DVLD_PresentationLayer
         private GroupBox GBUserControlDetailesApplication;
         private PictureBox PBApplicationID;
         private Label LblValueILApplicationID;
+        private Label LblvalueExpirationDate;
+        private Label LblvalueLocalLicenseID;
+        private Label LblvalueLLicenseID;
         private Label LblvalueCreatedBy;
-        private Label LblvalueStatusDate;
-        private Label LblvalueDate;
-        private Label LblvalueApplicant;
+        private Label LblValueIssueDate;
+        private Label LblValueApplicationDate;
         private Label LblValueFees;
-        private Label LblValueStatus;
-        private Label LblValueType;
         private PictureBox PBGender;
         private Label LblILApplicationID;
         private PictureBox PBCountry;

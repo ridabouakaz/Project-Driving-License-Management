@@ -30,6 +30,7 @@
         {
             this.LblHeaderTitle = new System.Windows.Forms.Label();
             this.ctrDetailsLicenseWithFilter1 = new DVLD_PresentationLayer.Licenses.Control.CtrDetailsLicenseWithFilter();
+            this.ctrDetailsInternationalLicenseApplication1 = new DVLD_PresentationLayer.CtrDetailsInternationalLicenseApplication();
             this.SuspendLayout();
             // 
             // LblHeaderTitle
@@ -51,15 +52,25 @@
             this.ctrDetailsLicenseWithFilter1.FilterEnabled = true;
             this.ctrDetailsLicenseWithFilter1.Location = new System.Drawing.Point(0, 129);
             this.ctrDetailsLicenseWithFilter1.Name = "ctrDetailsLicenseWithFilter1";
-            this.ctrDetailsLicenseWithFilter1.Size = new System.Drawing.Size(1166, 582);
+            this.ctrDetailsLicenseWithFilter1.Size = new System.Drawing.Size(1166, 528);
             this.ctrDetailsLicenseWithFilter1.TabIndex = 5;
+            this.ctrDetailsLicenseWithFilter1.OnLicenseSelected += new System.Action<int>(this.ctrDetailsLicenseWithFilter1_OnLicenseSelected);
+            // 
+            // ctrDetailsInternationalLicenseApplication1
+            // 
+            this.ctrDetailsInternationalLicenseApplication1.BackColor = System.Drawing.Color.White;
+            this.ctrDetailsInternationalLicenseApplication1.Location = new System.Drawing.Point(0, 674);
+            this.ctrDetailsInternationalLicenseApplication1.Name = "ctrDetailsInternationalLicenseApplication1";
+            this.ctrDetailsInternationalLicenseApplication1.Size = new System.Drawing.Size(1155, 229);
+            this.ctrDetailsInternationalLicenseApplication1.TabIndex = 6;
             // 
             // FONewInternationalLicenseApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1167, 910);
+            this.ClientSize = new System.Drawing.Size(1167, 936);
+            this.Controls.Add(this.ctrDetailsInternationalLicenseApplication1);
             this.Controls.Add(this.ctrDetailsLicenseWithFilter1);
             this.Controls.Add(this.LblHeaderTitle);
             this.Name = "FONewInternationalLicenseApplication";
@@ -73,5 +84,6 @@
 
         private System.Windows.Forms.Label LblHeaderTitle;
         private Licenses.Control.CtrDetailsLicenseWithFilter ctrDetailsLicenseWithFilter1;
+        private CtrDetailsInternationalLicenseApplication ctrDetailsInternationalLicenseApplication1;
     }
 }

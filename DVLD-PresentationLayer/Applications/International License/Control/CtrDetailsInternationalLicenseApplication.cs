@@ -23,88 +23,46 @@ namespace DVLD_PresentationLayer
         {
             InitializeComponent();
         }
-        public clsNewLocalDrivingApplication ApplicationData
-        {
-            get => _Application;
-            set
-            {
-                _Application = value;
-                FillUIFromApplication();
-            }
-        }
-        private void FillUIFromApplication()
-        {
-            if (_Application == null)
-            {
-                ApplicationID = "[????????]";
-                Status = "[????????]";
-                Fees = "[????????]";
-                Type = "[????????]";
-                Applicant = "[????????]";
-                Date = "[????????]";
-                StatusDate = "[????????]";
-                CreatedBy = "[????????]";
-                return;
-            }
-            ApplicationID = _Application.ApplicationID.ToString();
-            TypeStatus = _Application.ApplicationStatus;
-            Fees = _Application.PaidFees.ToString();
-            Type = clsManageApplicationTypes.GetTitleById(_Application.ApplicationTypeID);
-            Applicant = _Application.ApplicantFullName;
-            Date = _Application.ApplicationDate.ToString("dd/MM/yyyy");
-            StatusDate = _Application.LastStatusDate.ToString("dd/MM/yyyy");
-            CreatedBy = _Application.CreatedByUserInfo.UserName;
-        }
-        public enApplicationStatus TypeStatus
-        {
-            set
-            {
-                if (value == enApplicationStatus.New)
-                    LblValueStatus.Text = "New";
-                if (value == enApplicationStatus.Cancelled)
-                    LblValueStatus.Text = "Cancelled";
-                else
-                    LblValueStatus.Text = "Completed";
-            }
-        }
-        public string ApplicationID
+
+        public string ILApplicationID
         {
             set => LblValueILApplicationID.Text = value;
         }
-        public string Status
+        public string ApplicationDate
         {
-            set => LblValueStatus.Text = value;
+            set => LblValueApplicationDate.Text = value;
+        }
+        public string IssueDate
+        {
+            set => LblValueIssueDate.Text = value;
         }
         public string Fees
         {
             set => LblValueFees.Text = value;
         }
-        public string Type
-        {
-            set => LblValueType.Text = value;
-        }
      
-        public string Applicant
-        {
-            set => LblvalueApplicant.Text = value;
-        }
-
-        public string Date
-        {
-            set => LblvalueDate.Text = value;
-        }
-        public string StatusDate
-        {
-            set => LblvalueStatusDate.Text = value;
-        }
         public string CreatedBy
         {
             set => LblvalueCreatedBy.Text = value;
+        }
+
+        public string LLicenseID
+        {
+            set => LblvalueLLicenseID.Text = value;
+        }
+        public string LocalLicenseID
+        {
+            set => LblvalueLocalLicenseID.Text = value;
+        }
+        public string ExpirationDate
+        {
+            set => LblvalueExpirationDate.Text = value;
         }
          private void LLEditApplicationInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             FOPersonInfo frm = new FOPersonInfo(_Application.ApplicantPersonID);
             frm.ShowDialog();
         }
+
     }
 }
