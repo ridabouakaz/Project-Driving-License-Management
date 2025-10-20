@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DVLD_DataAccessLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,7 +19,7 @@ namespace DVLD_BusinessLayer
         public int IssuedUsingLocalLicenseID { set; get; }
         public DateTime IssueDate { set; get; }
         public DateTime ExpirationDate { set; get; }
-        public bool IsActive { set; get; }
+        public ActiveStatus IsActive { set; get; }
         public clsInternationalLicense()
 
         {
@@ -29,7 +30,7 @@ namespace DVLD_BusinessLayer
             this.IssueDate = DateTime.Now;
             this.ExpirationDate = DateTime.Now;
 
-            this.IsActive = true;
+            this.IsActive = ActiveStatus.Yes;
             Mode = enMode.AddNew;
 
         }
@@ -38,7 +39,7 @@ namespace DVLD_BusinessLayer
              enApplicationStatus ApplicationStatus, DateTime LastStatusDate,
              decimal PaidFees, int CreatedByUserID,
              int InternationalLicenseID, int DriverID, int IssuedUsingLocalLicenseID,
-            DateTime IssueDate, DateTime ExpirationDate, bool IsActive)
+            DateTime IssueDate, DateTime ExpirationDate, ActiveStatus IsActive)
 
         {
             //this is for the base clase
@@ -61,7 +62,15 @@ namespace DVLD_BusinessLayer
             this.DriverInfo = clsDrivers.FindByDriverID(this.DriverID);
             Mode = enMode.Update;
         }
+        private bool _AddNewInternationalLicense()
+        {            
+            this.InternationalLicenseID =
+                clsInternationalLicenseDataAccess.AddNewInternationalLicense(this.ApplicationID, this.DriverID, this.IssuedUsingLocalLicenseID,
+               this.IssueDate, this.ExpirationDate,
+               this.IsActive, this.CreatedByUserID);
 
+            return (this.InternationalLicenseID != -1);
+        }
 
     }
 }

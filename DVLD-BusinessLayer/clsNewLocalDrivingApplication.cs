@@ -34,7 +34,7 @@ namespace DVLD_BusinessLayer
             this.ApplicationID = ApplicationID;
             this.ApplicantPersonID = ApplicantPersonID;
             this.ApplicationDate = ApplicationDate;
-            this.ApplicationTypeID = (int)ApplicationTypeID;
+            this.ApplicationTypeID = ApplicationTypeID;
             this.ApplicationStatus = ApplicationStatus;
             this.LastStatusDate = LastStatusDate;
             this.PaidFees = PaidFees;
