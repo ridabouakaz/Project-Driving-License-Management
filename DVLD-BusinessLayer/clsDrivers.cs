@@ -66,7 +66,32 @@ namespace DVLD_BusinessLayer
             if (isFound)
             {
                 return new clsDrivers(
-                   DriverID ,
+                   DriverID,
+                     PersonID,
+                 CreatedByUserID,
+                 CreatedDate
+                );
+            }
+            else
+                return null;
+        }
+        public static clsDrivers FindByDriverID(int DriverID)
+        {
+            int PersonID = 1;
+            int CreatedByUserID = 0;
+            DateTime CreatedDate = DateTime.Now;
+
+            bool isFound = clsDriverDataAccess.GetDriverInfoByDriverID(
+                DriverID,
+                ref PersonID,
+                ref CreatedByUserID,
+                ref CreatedDate
+            );
+
+            if (isFound)
+            {
+                return new clsDrivers(
+                   DriverID,
                      PersonID,
                  CreatedByUserID,
                  CreatedDate

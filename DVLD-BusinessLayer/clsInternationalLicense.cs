@@ -33,7 +33,6 @@ namespace DVLD_BusinessLayer
             Mode = enMode.AddNew;
 
         }
-
         public clsInternationalLicense(int ApplicationID, int ApplicantPersonID,
             DateTime ApplicationDate,
              enApplicationStatus ApplicationStatus, DateTime LastStatusDate,
@@ -46,12 +45,11 @@ namespace DVLD_BusinessLayer
             base.ApplicationID = ApplicationID;
             base.ApplicantPersonID = ApplicantPersonID;
             base.ApplicationDate = ApplicationDate;
-            base.ApplicationTypeID = (int)clsApplication.enApplicationType.NewInternationalLicense;
+            base.ApplicationTypeID = 6;
             base.ApplicationStatus = ApplicationStatus;
             base.LastStatusDate = LastStatusDate;
             base.PaidFees = PaidFees;
             base.CreatedByUserID = CreatedByUserID;
-
             this.InternationalLicenseID = InternationalLicenseID;
             this.ApplicationID = ApplicationID;
             this.DriverID = DriverID;
@@ -60,8 +58,7 @@ namespace DVLD_BusinessLayer
             this.ExpirationDate = ExpirationDate;
             this.IsActive = IsActive;
             this.CreatedByUserID = CreatedByUserID;
-            this.DriverInfo = clsDriver.FindByDriverID(this.DriverID);
-
+            this.DriverInfo = clsDrivers.FindByDriverID(this.DriverID);
             Mode = enMode.Update;
         }
 
