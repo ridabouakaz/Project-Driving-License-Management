@@ -8,7 +8,7 @@ using static DVLDShared.DVLDShared;
 
 namespace DVLD_BusinessLayer
 {
-    public class clsInternationalLicense:clsApplications
+    public class clsInternationalLicense : clsApplications
     {
         public enum enMode { AddNew = 0, Update = 1 };
         public enMode Mode = enMode.AddNew;
@@ -63,7 +63,7 @@ namespace DVLD_BusinessLayer
             Mode = enMode.Update;
         }
         private bool _AddNewInternationalLicense()
-        {            
+        {
             this.InternationalLicenseID =
                 clsInternationalLicenseDataAccess.AddNewInternationalLicense(this.ApplicationID, this.DriverID, this.IssuedUsingLocalLicenseID,
                this.IssueDate, this.ExpirationDate,
@@ -71,6 +71,48 @@ namespace DVLD_BusinessLayer
 
             return (this.InternationalLicenseID != -1);
         }
+        private bool _UpdateInternationalLicense()
+        {
+            //call DataAccess Layer 
+
+            return clsInternationalLicenseDataAccess.UpdateInternationalLicense(
+                this.InternationalLicenseID, this.ApplicationID, this.DriverID, this.IssuedUsingLocalLicenseID,
+               this.IssueDate, this.ExpirationDate,
+               this.IsActive, this.CreatedByUserID);
+        }
+        public bool Save()
+        {
+
+            //Because of inheritance first we call the save method in the base class,
+            //it will take care of adding all information to the application table.
+            base.Mode = (clsApplications.enMode)Mode;
+            if (!base.Save())
+                return false;
+
+            switch (Mode)
+            {
+                case enMode.AddNew:
+                    if (_AddNewInternationalLicense())
+                    {
+
+                        Mode = enMode.Update;
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+                case enMode.Update:
+
+                    return _UpdateInternationalLicense();
+
+            }
+
+            return false;
+        }
+
+
 
     }
 }
