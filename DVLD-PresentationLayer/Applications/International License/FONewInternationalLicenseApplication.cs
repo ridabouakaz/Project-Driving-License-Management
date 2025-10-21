@@ -41,18 +41,27 @@ namespace DVLD_PresentationLayer.Applications.International_License
             }
 
             //check if person already have an active international license
-            int ActiveInternaionalLicenseID = clsInternationalLicense.GetActiveInternationalLicenseIDByDriverID(ctrlDriverLicenseInfoWithFilter1.SelectedLicenseInfo.DriverID);
+            int ActiveInternaionalLicenseID = clsInternationalLicense.GetActiveInternationalLicenseIDByDriverID(ctrDetailsLicenseWithFilter1.SelectedLicenseInfo.DriverID);
 
             if (ActiveInternaionalLicenseID != -1)
             {
                 MessageBox.Show("Person already have an active international license with ID = " + ActiveInternaionalLicenseID.ToString(), "Not allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                llShowLicenseInfo.Enabled = true;
+                LLShowLicensesinfo.Enabled = true;
                 _InternationalLicenseID = ActiveInternaionalLicenseID;
-                btnIssueLicense.Enabled = false;
+                BtnIssue.Enabled = false;
                 return;
             }
-            btnIssueLicense.Enabled = true;
+            BtnIssue.Enabled = true;
 
+        }
+        private void BtnIssue_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnAddClose_Click(object sender, EventArgs e)
+        {
+           this.Close();    
         }
     }
 }

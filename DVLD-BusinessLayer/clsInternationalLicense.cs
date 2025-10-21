@@ -80,6 +80,12 @@ namespace DVLD_BusinessLayer
                this.IssueDate, this.ExpirationDate,
                this.IsActive, this.CreatedByUserID);
         }
+        public static int GetActiveInternationalLicenseIDByDriverID(int DriverID)
+        {
+
+            return clsInternationalLicenseDataAccess.GetActiveInternationalLicenseIDByDriverID(DriverID);
+
+        }
         public bool Save()
         {
 
