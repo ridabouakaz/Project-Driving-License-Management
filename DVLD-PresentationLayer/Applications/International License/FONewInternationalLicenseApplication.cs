@@ -1,18 +1,22 @@
 ﻿using DVLD_BusinessLayer;
+using DVLD_PresentationLayer.Licenses.Control;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static DVLDShared.DVLDShared;
 
 namespace DVLD_PresentationLayer.Applications.International_License
 {
     public partial class FONewInternationalLicenseApplication : Form
     {
+        private int _InternationalLicenseID = -1;
         public FONewInternationalLicenseApplication()
         {
             InitializeComponent();
@@ -56,6 +60,37 @@ namespace DVLD_PresentationLayer.Applications.International_License
         }
         private void BtnIssue_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("Are you sure you want to issue the license?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
+                return;
+            }
+            clsInternationalLicense InternationalLicense = new clsInternationalLicense();
+            //those are the information for the base application, because it inhirts from application, they are part of the sub class.
+
+            InternationalLicense.ApplicantPersonID = ctrDetailsLicenseWithFilter1.SelectedLicenseInfo.DriverInfo.PersonID;
+            InternationalLicense.ApplicationDate = DateTime.Now;
+            InternationalLicense.ApplicationStatus = enApplicationStatus.Completed;
+            InternationalLicense.LastStatusDate = DateTime.Now;
+            InternationalLicense.PaidFees = clsManageApplicationTypes.Find(6).ApplicationFees;
+            InternationalLicense.CreatedByUserID = ctrDetailsLicenseWithFilter1.SelectedLicenseInfo.CreatedByUserID;
+            InternationalLicense.DriverID = ctrDetailsLicenseWithFilter1.SelectedLicenseInfo.DriverID;
+            InternationalLicense.IssuedUsingLocalLicenseID = ctrDetailsLicenseWithFilter1.SelectedLicenseInfo.LicenseID;
+            InternationalLicense.IssueDate = DateTime.Now;
+            InternationalLicense.ExpirationDate = DateTime.Now.AddYears(1);
+            if (!InternationalLicense.Save())
+            {
+                MessageBox.Show("Faild to Issue International License", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return;
+            }
+            ctrDetailsInternationalLicenseApplication1.ILApplicationID = InternationalLicense.ApplicationID.ToString();
+            ctrDetailsInternationalLicenseApplication1.LLicenseID= InternationalLicense.InternationalLicenseID.ToString();
+            _InternationalLicenseID = InternationalLicense.InternationalLicenseID;
+            MessageBox.Show("International License Issued Successfully with ID=" + InternationalLicense.InternationalLicenseID.ToString(), "License Issued", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            BtnIssue.Enabled = false;
+            ctrDetailsLicenseWithFilter1.FilterEnabled = false;
+            LLShowLicensesinfo.Enabled = true;
 
         }
 

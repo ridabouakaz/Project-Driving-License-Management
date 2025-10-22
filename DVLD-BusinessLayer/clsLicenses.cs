@@ -15,19 +15,14 @@ namespace DVLD_BusinessLayer
     {
         public enum enMode { AddNew = 0, Update = 1 };
         public enMode Mode = enMode.AddNew;
+        public clsDrivers DriverInfo;
+
         public int LicenseID { set; get; }
         public int ApplicationID { set; get; }
         public int DriverID { set; get; }
         public int LicenseClass { set; get; }
         public DateTime IssueDate { set; get; }
         public DateTime ExpirationDate { set; get; }
-        //public string ApplicantFullName
-        //{
-        //    get
-        //    {
-        //        return clsPerson.Find(clsApplications.Find(ApplicationID).ApplicantPersonID).FullName;
-        //    }
-        //}
         public string Notes { set; get; }
         public decimal PaidFees { set; get; }
         public ActiveStatus IsActive { set; get; }
@@ -78,6 +73,7 @@ namespace DVLD_BusinessLayer
             this.IsActive = isActive;
             this.IssueReason = issueReason;
             this.CreatedByUserID = createdByUserID;
+            this.DriverInfo = clsDrivers.FindByDriverID(this.DriverID);
         }
         private bool _AddNewLicense()
         {
