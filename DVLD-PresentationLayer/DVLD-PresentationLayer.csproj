@@ -141,6 +141,12 @@
     <Compile Include="Licenses\FOLicenseInfo.Designer.cs">
       <DependentUpon>FOLicenseInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Licenses\FOShowPersonLicenseHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Licenses\FOShowPersonLicenseHistory.Designer.cs">
+      <DependentUpon>FOShowPersonLicenseHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="People\Control\CtrDetailsPerson%28Edit-Add%29.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -305,6 +311,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Licenses\FOLicenseInfo.resx">
       <DependentUpon>FOLicenseInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Licenses\FOShowPersonLicenseHistory.resx">
+      <DependentUpon>FOShowPersonLicenseHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="People\Control\CtrDetailsPerson%28Edit-Add%29.resx">
       <DependentUpon>CtrDetailsPerson%28Edit-Add%29.cs</DependentUpon>

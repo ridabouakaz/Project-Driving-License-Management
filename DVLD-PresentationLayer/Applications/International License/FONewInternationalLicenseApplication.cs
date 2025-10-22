@@ -93,10 +93,14 @@ namespace DVLD_PresentationLayer.Applications.International_License
             LLShowLicensesinfo.Enabled = true;
 
         }
-
         private void BtnAddClose_Click(object sender, EventArgs e)
         {
            this.Close();    
+        }
+
+        private void LLShowLicensesinfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
         }
     }
 }

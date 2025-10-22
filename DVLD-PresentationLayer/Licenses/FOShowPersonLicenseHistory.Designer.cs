@@ -1,0 +1,511 @@
+﻿using System.Windows.Forms;
+
+namespace DVLD_PresentationLayer.Tests
+{
+    partial class FOShowPersonLicenseHistory
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FOShowPersonLicenseHistory));
+            this.SMItemCRUDUsers = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.SMItemEdit = new System.Windows.Forms.ToolStripMenuItem();
+            this.SMItemTakeTest = new System.Windows.Forms.ToolStripMenuItem();
+            this.LblLicenseHistroy = new System.Windows.Forms.Label();
+            this.BtnAddClose = new System.Windows.Forms.Button();
+            this.PBManageTestAppointments = new System.Windows.Forms.PictureBox();
+            this.ctrDetailsPerson1 = new DVLD_PresentationLayer.CtrDetailsPerson();
+            this.GBUserControlDriverLicenses = new System.Windows.Forms.GroupBox();
+            this.TCAddEditUser = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
+            this.TPPersonalInfo = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            this.BtnAddNext = new System.Windows.Forms.Button();
+            this.TPLoginInfo = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            this.CBIsActive = new System.Windows.Forms.CheckBox();
+            this.TBPasswordConfirm = new System.Windows.Forms.TextBox();
+            this.TBPassword = new System.Windows.Forms.TextBox();
+            this.TBUserName = new System.Windows.Forms.TextBox();
+            this.LblValueUserID = new System.Windows.Forms.Label();
+            this.PBUserID = new System.Windows.Forms.PictureBox();
+            this.PBUserName = new System.Windows.Forms.PictureBox();
+            this.PBPassword = new System.Windows.Forms.PictureBox();
+            this.PBPasswordConfirm = new System.Windows.Forms.PictureBox();
+            this.LblPasswordConfirm = new System.Windows.Forms.Label();
+            this.LblUserID = new System.Windows.Forms.Label();
+            this.LblUserName = new System.Windows.Forms.Label();
+            this.LblPassword = new System.Windows.Forms.Label();
+            this.tabControlAdv1 = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
+            this.TPLocal = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            this.TPInternational = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            this.SMItemCRUDUsers.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PBManageTestAppointments)).BeginInit();
+            this.GBUserControlDriverLicenses.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TCAddEditUser)).BeginInit();
+            this.TCAddEditUser.SuspendLayout();
+            this.TPPersonalInfo.SuspendLayout();
+            this.TPLoginInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PBUserID)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBUserName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBPassword)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBPasswordConfirm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabControlAdv1)).BeginInit();
+            this.tabControlAdv1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // SMItemCRUDUsers
+            // 
+            this.SMItemCRUDUsers.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.SMItemCRUDUsers.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.SMItemEdit,
+            this.SMItemTakeTest});
+            this.SMItemCRUDUsers.Name = "SMItemCRUDUsers";
+            this.SMItemCRUDUsers.Size = new System.Drawing.Size(170, 80);
+            this.SMItemCRUDUsers.Opening += new System.ComponentModel.CancelEventHandler(this.SMItemCRUDUsers_Opening);
+            // 
+            // SMItemEdit
+            // 
+            this.SMItemEdit.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.SMItemEdit.Image = ((System.Drawing.Image)(resources.GetObject("SMItemEdit.Image")));
+            this.SMItemEdit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.SMItemEdit.Name = "SMItemEdit";
+            this.SMItemEdit.Size = new System.Drawing.Size(169, 38);
+            this.SMItemEdit.Text = "Edit";
+            this.SMItemEdit.Click += new System.EventHandler(this.SMItemEdit_Click);
+            // 
+            // SMItemTakeTest
+            // 
+            this.SMItemTakeTest.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.SMItemTakeTest.Image = ((System.Drawing.Image)(resources.GetObject("SMItemTakeTest.Image")));
+            this.SMItemTakeTest.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.SMItemTakeTest.Name = "SMItemTakeTest";
+            this.SMItemTakeTest.Size = new System.Drawing.Size(169, 38);
+            this.SMItemTakeTest.Text = "Take Test";
+            this.SMItemTakeTest.Click += new System.EventHandler(this.SMItemTakeTest_Click);
+            // 
+            // LblLicenseHistroy
+            // 
+            this.LblLicenseHistroy.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.LblLicenseHistroy.AutoSize = true;
+            this.LblLicenseHistroy.BackColor = System.Drawing.Color.Transparent;
+            this.LblLicenseHistroy.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold);
+            this.LblLicenseHistroy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
+            this.LblLicenseHistroy.Location = new System.Drawing.Point(451, 140);
+            this.LblLicenseHistroy.Name = "LblLicenseHistroy";
+            this.LblLicenseHistroy.Size = new System.Drawing.Size(308, 54);
+            this.LblLicenseHistroy.TabIndex = 1;
+            this.LblLicenseHistroy.Text = "License Histroy";
+            // 
+            // BtnAddClose
+            // 
+            this.BtnAddClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnAddClose.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnAddClose.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BtnAddClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.BtnAddClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.BtnAddClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAddClose.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.BtnAddClose.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BtnAddClose.Image = ((System.Drawing.Image)(resources.GetObject("BtnAddClose.Image")));
+            this.BtnAddClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnAddClose.Location = new System.Drawing.Point(997, 921);
+            this.BtnAddClose.Name = "BtnAddClose";
+            this.BtnAddClose.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.BtnAddClose.Size = new System.Drawing.Size(155, 50);
+            this.BtnAddClose.TabIndex = 4;
+            this.BtnAddClose.Text = "Close";
+            this.BtnAddClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnAddClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnAddClose.UseVisualStyleBackColor = false;
+            this.BtnAddClose.Click += new System.EventHandler(this.BtnAddClose_Click);
+            // 
+            // PBManageTestAppointments
+            // 
+            this.PBManageTestAppointments.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.PBManageTestAppointments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.PBManageTestAppointments.Image = global::DVLD_PresentationLayer.Properties.Resources.StreetTest;
+            this.PBManageTestAppointments.Location = new System.Drawing.Point(549, 12);
+            this.PBManageTestAppointments.Name = "PBManageTestAppointments";
+            this.PBManageTestAppointments.Size = new System.Drawing.Size(137, 125);
+            this.PBManageTestAppointments.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PBManageTestAppointments.TabIndex = 2;
+            this.PBManageTestAppointments.TabStop = false;
+            // 
+            // ctrDetailsPerson1
+            // 
+            this.ctrDetailsPerson1.BackColor = System.Drawing.Color.White;
+            this.ctrDetailsPerson1.ImagePath = null;
+            this.ctrDetailsPerson1.Location = new System.Drawing.Point(12, 200);
+            this.ctrDetailsPerson1.Name = "ctrDetailsPerson1";
+            this.ctrDetailsPerson1.PersonData = null;
+            this.ctrDetailsPerson1.Size = new System.Drawing.Size(1149, 383);
+            this.ctrDetailsPerson1.TabIndex = 13;
+            // 
+            // GBUserControlDriverLicenses
+            // 
+            this.GBUserControlDriverLicenses.Controls.Add(this.tabControlAdv1);
+            this.GBUserControlDriverLicenses.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.GBUserControlDriverLicenses.Location = new System.Drawing.Point(27, 573);
+            this.GBUserControlDriverLicenses.Name = "GBUserControlDriverLicenses";
+            this.GBUserControlDriverLicenses.Size = new System.Drawing.Size(1125, 342);
+            this.GBUserControlDriverLicenses.TabIndex = 14;
+            this.GBUserControlDriverLicenses.TabStop = false;
+            this.GBUserControlDriverLicenses.Text = "Driver Licenses";
+            // 
+            // TCAddEditUser
+            // 
+            this.TCAddEditUser.ActiveTabFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.TCAddEditUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(224)))), ((int)(((byte)(250)))));
+            this.TCAddEditUser.BeforeTouchSize = new System.Drawing.Size(200, 100);
+            this.TCAddEditUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TCAddEditUser.Controls.Add(this.TPPersonalInfo);
+            this.TCAddEditUser.Location = new System.Drawing.Point(0, 0);
+            this.TCAddEditUser.Name = "TCAddEditUser";
+            this.TCAddEditUser.Size = new System.Drawing.Size(200, 100);
+            this.TCAddEditUser.TabIndex = 0;
+            this.TCAddEditUser.ThemeName = "TabRenderer3D";
+            this.TCAddEditUser.ThemeStyle.PrimitiveButtonStyle.DisabledNextPageImage = null;
+            // 
+            // TPPersonalInfo
+            // 
+            this.TPPersonalInfo.BackColor = System.Drawing.Color.White;
+            this.TPPersonalInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TPPersonalInfo.Controls.Add(this.BtnAddNext);
+            this.TPPersonalInfo.Font = new System.Drawing.Font("Segoe UI Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TPPersonalInfo.Image = null;
+            this.TPPersonalInfo.ImageSize = new System.Drawing.Size(20, 20);
+            this.TPPersonalInfo.Location = new System.Drawing.Point(0, 40);
+            this.TPPersonalInfo.Name = "TPPersonalInfo";
+            this.TPPersonalInfo.Padding = new System.Windows.Forms.Padding(3);
+            this.TPPersonalInfo.ShowCloseButton = true;
+            this.TPPersonalInfo.Size = new System.Drawing.Size(200, 60);
+            this.TPPersonalInfo.TabIndex = 1;
+            this.TPPersonalInfo.Text = "Personal Info";
+            this.TPPersonalInfo.ThemesEnabled = false;
+            // 
+            // BtnAddNext
+            // 
+            this.BtnAddNext.BackColor = System.Drawing.Color.White;
+            this.BtnAddNext.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.BtnAddNext.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.BtnAddNext.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnAddNext.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.BtnAddNext.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BtnAddNext.Image = ((System.Drawing.Image)(resources.GetObject("BtnAddNext.Image")));
+            this.BtnAddNext.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnAddNext.Location = new System.Drawing.Point(831, 504);
+            this.BtnAddNext.Name = "BtnAddNext";
+            this.BtnAddNext.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.BtnAddNext.Size = new System.Drawing.Size(155, 50);
+            this.BtnAddNext.TabIndex = 5;
+            this.BtnAddNext.Text = "Next";
+            this.BtnAddNext.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnAddNext.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnAddNext.UseVisualStyleBackColor = false;
+            // 
+            // TPLoginInfo
+            // 
+            this.TPLoginInfo.BackColor = System.Drawing.Color.White;
+            this.TPLoginInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TPLoginInfo.Controls.Add(this.CBIsActive);
+            this.TPLoginInfo.Controls.Add(this.TBPasswordConfirm);
+            this.TPLoginInfo.Controls.Add(this.TBPassword);
+            this.TPLoginInfo.Controls.Add(this.TBUserName);
+            this.TPLoginInfo.Controls.Add(this.LblValueUserID);
+            this.TPLoginInfo.Controls.Add(this.PBUserID);
+            this.TPLoginInfo.Controls.Add(this.PBUserName);
+            this.TPLoginInfo.Controls.Add(this.PBPassword);
+            this.TPLoginInfo.Controls.Add(this.PBPasswordConfirm);
+            this.TPLoginInfo.Controls.Add(this.LblPasswordConfirm);
+            this.TPLoginInfo.Controls.Add(this.LblUserID);
+            this.TPLoginInfo.Controls.Add(this.LblUserName);
+            this.TPLoginInfo.Controls.Add(this.LblPassword);
+            this.TPLoginInfo.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TPLoginInfo.Image = null;
+            this.TPLoginInfo.ImageSize = new System.Drawing.Size(20, 20);
+            this.TPLoginInfo.Location = new System.Drawing.Point(0, -1);
+            this.TPLoginInfo.Name = "TPLoginInfo";
+            this.TPLoginInfo.Padding = new System.Windows.Forms.Padding(3);
+            this.TPLoginInfo.ShowCloseButton = true;
+            this.TPLoginInfo.Size = new System.Drawing.Size(1028, 686);
+            this.TPLoginInfo.TabIndex = 1;
+            this.TPLoginInfo.Text = "Login Info";
+            this.TPLoginInfo.ThemesEnabled = false;
+            // 
+            // CBIsActive
+            // 
+            this.CBIsActive.AutoSize = true;
+            this.CBIsActive.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CBIsActive.Location = new System.Drawing.Point(291, 315);
+            this.CBIsActive.Name = "CBIsActive";
+            this.CBIsActive.Size = new System.Drawing.Size(91, 24);
+            this.CBIsActive.TabIndex = 57;
+            this.CBIsActive.Text = "Is Active";
+            this.CBIsActive.UseVisualStyleBackColor = true;
+            // 
+            // TBPasswordConfirm
+            // 
+            this.TBPasswordConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(243)))), ((int)(((byte)(247)))));
+            this.TBPasswordConfirm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TBPasswordConfirm.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.TBPasswordConfirm.ForeColor = System.Drawing.Color.Black;
+            this.TBPasswordConfirm.Location = new System.Drawing.Point(291, 264);
+            this.TBPasswordConfirm.Name = "TBPasswordConfirm";
+            this.TBPasswordConfirm.Size = new System.Drawing.Size(170, 30);
+            this.TBPasswordConfirm.TabIndex = 55;
+            this.TBPasswordConfirm.UseSystemPasswordChar = true;
+            // 
+            // TBPassword
+            // 
+            this.TBPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(243)))), ((int)(((byte)(247)))));
+            this.TBPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TBPassword.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.TBPassword.ForeColor = System.Drawing.Color.Black;
+            this.TBPassword.Location = new System.Drawing.Point(291, 207);
+            this.TBPassword.Name = "TBPassword";
+            this.TBPassword.Size = new System.Drawing.Size(170, 30);
+            this.TBPassword.TabIndex = 54;
+            this.TBPassword.UseSystemPasswordChar = true;
+            // 
+            // TBUserName
+            // 
+            this.TBUserName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(243)))), ((int)(((byte)(247)))));
+            this.TBUserName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TBUserName.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.TBUserName.ForeColor = System.Drawing.Color.Black;
+            this.TBUserName.Location = new System.Drawing.Point(291, 150);
+            this.TBUserName.Name = "TBUserName";
+            this.TBUserName.Size = new System.Drawing.Size(170, 30);
+            this.TBUserName.TabIndex = 53;
+            // 
+            // LblValueUserID
+            // 
+            this.LblValueUserID.AutoSize = true;
+            this.LblValueUserID.BackColor = System.Drawing.Color.Transparent;
+            this.LblValueUserID.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.LblValueUserID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblValueUserID.Location = new System.Drawing.Point(295, 98);
+            this.LblValueUserID.Name = "LblValueUserID";
+            this.LblValueUserID.Size = new System.Drawing.Size(39, 25);
+            this.LblValueUserID.TabIndex = 52;
+            this.LblValueUserID.Text = "???";
+            // 
+            // PBUserID
+            // 
+            this.PBUserID.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.PBUserID.ErrorImage = null;
+            this.PBUserID.Image = ((System.Drawing.Image)(resources.GetObject("PBUserID.Image")));
+            this.PBUserID.InitialImage = null;
+            this.PBUserID.Location = new System.Drawing.Point(223, 91);
+            this.PBUserID.Name = "PBUserID";
+            this.PBUserID.Size = new System.Drawing.Size(40, 32);
+            this.PBUserID.TabIndex = 51;
+            this.PBUserID.TabStop = false;
+            // 
+            // PBUserName
+            // 
+            this.PBUserName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.PBUserName.ErrorImage = null;
+            this.PBUserName.Image = ((System.Drawing.Image)(resources.GetObject("PBUserName.Image")));
+            this.PBUserName.InitialImage = null;
+            this.PBUserName.Location = new System.Drawing.Point(223, 152);
+            this.PBUserName.Name = "PBUserName";
+            this.PBUserName.Size = new System.Drawing.Size(40, 32);
+            this.PBUserName.TabIndex = 50;
+            this.PBUserName.TabStop = false;
+            // 
+            // PBPassword
+            // 
+            this.PBPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.PBPassword.ErrorImage = null;
+            this.PBPassword.Image = ((System.Drawing.Image)(resources.GetObject("PBPassword.Image")));
+            this.PBPassword.InitialImage = null;
+            this.PBPassword.Location = new System.Drawing.Point(223, 205);
+            this.PBPassword.Name = "PBPassword";
+            this.PBPassword.Size = new System.Drawing.Size(40, 32);
+            this.PBPassword.TabIndex = 49;
+            this.PBPassword.TabStop = false;
+            // 
+            // PBPasswordConfirm
+            // 
+            this.PBPasswordConfirm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.PBPasswordConfirm.ErrorImage = null;
+            this.PBPasswordConfirm.Image = ((System.Drawing.Image)(resources.GetObject("PBPasswordConfirm.Image")));
+            this.PBPasswordConfirm.InitialImage = null;
+            this.PBPasswordConfirm.Location = new System.Drawing.Point(223, 266);
+            this.PBPasswordConfirm.Name = "PBPasswordConfirm";
+            this.PBPasswordConfirm.Size = new System.Drawing.Size(40, 32);
+            this.PBPasswordConfirm.TabIndex = 48;
+            this.PBPasswordConfirm.TabStop = false;
+            // 
+            // LblPasswordConfirm
+            // 
+            this.LblPasswordConfirm.AutoSize = true;
+            this.LblPasswordConfirm.BackColor = System.Drawing.Color.Transparent;
+            this.LblPasswordConfirm.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.LblPasswordConfirm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblPasswordConfirm.Location = new System.Drawing.Point(9, 266);
+            this.LblPasswordConfirm.Name = "LblPasswordConfirm";
+            this.LblPasswordConfirm.Size = new System.Drawing.Size(188, 28);
+            this.LblPasswordConfirm.TabIndex = 40;
+            this.LblPasswordConfirm.Text = "Confirm Password:";
+            // 
+            // LblUserID
+            // 
+            this.LblUserID.AutoSize = true;
+            this.LblUserID.BackColor = System.Drawing.Color.Transparent;
+            this.LblUserID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.LblUserID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblUserID.Location = new System.Drawing.Point(117, 95);
+            this.LblUserID.Name = "LblUserID";
+            this.LblUserID.Size = new System.Drawing.Size(80, 28);
+            this.LblUserID.TabIndex = 39;
+            this.LblUserID.Text = "UserID:";
+            // 
+            // LblUserName
+            // 
+            this.LblUserName.AutoSize = true;
+            this.LblUserName.BackColor = System.Drawing.Color.Transparent;
+            this.LblUserName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.LblUserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblUserName.Location = new System.Drawing.Point(82, 152);
+            this.LblUserName.Name = "LblUserName";
+            this.LblUserName.Size = new System.Drawing.Size(115, 28);
+            this.LblUserName.TabIndex = 38;
+            this.LblUserName.Text = "UserName:";
+            // 
+            // LblPassword
+            // 
+            this.LblPassword.AutoSize = true;
+            this.LblPassword.BackColor = System.Drawing.Color.Transparent;
+            this.LblPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.LblPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblPassword.Location = new System.Drawing.Point(91, 209);
+            this.LblPassword.Name = "LblPassword";
+            this.LblPassword.Size = new System.Drawing.Size(106, 28);
+            this.LblPassword.TabIndex = 37;
+            this.LblPassword.Text = "Password:";
+            // 
+            // tabControlAdv1
+            // 
+            this.tabControlAdv1.BeforeTouchSize = new System.Drawing.Size(1113, 303);
+            this.tabControlAdv1.Controls.Add(this.TPLocal);
+            this.tabControlAdv1.Controls.Add(this.TPInternational);
+            this.tabControlAdv1.Location = new System.Drawing.Point(6, 33);
+            this.tabControlAdv1.Name = "tabControlAdv1";
+            this.tabControlAdv1.Size = new System.Drawing.Size(1113, 303);
+            this.tabControlAdv1.TabIndex = 0;
+            // 
+            // TPLocal
+            // 
+            this.TPLocal.Image = null;
+            this.TPLocal.ImageSize = new System.Drawing.Size(20, 20);
+            this.TPLocal.Location = new System.Drawing.Point(1, 41);
+            this.TPLocal.Name = "TPLocal";
+            this.TPLocal.ShowCloseButton = true;
+            this.TPLocal.Size = new System.Drawing.Size(1110, 261);
+            this.TPLocal.TabIndex = 1;
+            this.TPLocal.Text = "Local";
+            this.TPLocal.ThemesEnabled = false;
+            // 
+            // TPInternational
+            // 
+            this.TPInternational.Image = null;
+            this.TPInternational.ImageSize = new System.Drawing.Size(20, 20);
+            this.TPInternational.Location = new System.Drawing.Point(1, 41);
+            this.TPInternational.Name = "TPInternational";
+            this.TPInternational.ShowCloseButton = true;
+            this.TPInternational.Size = new System.Drawing.Size(1110, 261);
+            this.TPInternational.TabIndex = 2;
+            this.TPInternational.Text = "International";
+            this.TPInternational.ThemesEnabled = false;
+            // 
+            // FOShowPersonLicenseHistory
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1180, 983);
+            this.Controls.Add(this.GBUserControlDriverLicenses);
+            this.Controls.Add(this.ctrDetailsPerson1);
+            this.Controls.Add(this.BtnAddClose);
+            this.Controls.Add(this.PBManageTestAppointments);
+            this.Controls.Add(this.LblLicenseHistroy);
+            this.Name = "FOShowPersonLicenseHistory";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "List Test Appointments";
+            this.Load += new System.EventHandler(this.FOListTestAppointments_Load);
+            this.SMItemCRUDUsers.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PBManageTestAppointments)).EndInit();
+            this.GBUserControlDriverLicenses.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.TCAddEditUser)).EndInit();
+            this.TCAddEditUser.ResumeLayout(false);
+            this.TPPersonalInfo.ResumeLayout(false);
+            this.TPLoginInfo.ResumeLayout(false);
+            this.TPLoginInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PBUserID)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBUserName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBPassword)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBPasswordConfirm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabControlAdv1)).EndInit();
+            this.tabControlAdv1.ResumeLayout(false);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+        private System.Windows.Forms.Label LblLicenseHistroy;
+        private PictureBox PBManageTestAppointments;
+        private Button BtnAddClose;
+        private ContextMenuStrip SMItemCRUDUsers;
+        private ToolStripMenuItem SMItemEdit;
+        private ToolStripMenuItem SMItemTakeTest;
+        private CtrDetailsPerson ctrDetailsPerson1;
+        private GroupBox GBUserControlDriverLicenses;
+        private Syncfusion.Windows.Forms.Tools.TabControlAdv TCAddEditUser;
+        private Syncfusion.Windows.Forms.Tools.TabPageAdv TPPersonalInfo;
+        private Button BtnAddNext;
+        private Syncfusion.Windows.Forms.Tools.TabPageAdv TPLoginInfo;
+        private CheckBox CBIsActive;
+        private TextBox TBPasswordConfirm;
+        private TextBox TBPassword;
+        private TextBox TBUserName;
+        private Label LblValueUserID;
+        private PictureBox PBUserID;
+        private PictureBox PBUserName;
+        private PictureBox PBPassword;
+        private PictureBox PBPasswordConfirm;
+        private Label LblPasswordConfirm;
+        private Label LblUserID;
+        private Label LblUserName;
+        private Label LblPassword;
+        private Syncfusion.Windows.Forms.Tools.TabControlAdv tabControlAdv1;
+        private Syncfusion.Windows.Forms.Tools.TabPageAdv TPLocal;
+        private Syncfusion.Windows.Forms.Tools.TabPageAdv TPInternational;
+    }
+}
