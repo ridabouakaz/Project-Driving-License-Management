@@ -34,38 +34,10 @@ namespace DVLD_PresentationLayer.Tests
             InitializeComponent();
             _LocalDrivingLicenseApplicationID = LocalDrivingLicenseApplicationID;
             _TestType = TestType;
-            _LoadTestTypeImageAndTitle();
             _LoadLocalDrivingApplicationInfo();
 
         }
- 
-        private void _LoadTestTypeImageAndTitle()
-        {
-            switch (_TestType)
-            {
-                case clsManageTestTypes.enTestType.VisionTest:
-                    {
-                        LblLicenseHistroy.Text = "Vision Test Appointments";
-                        this.Text = LblLicenseHistroy.Text;
-                        PBLicenseHistroy.Image = DVLD_PresentationLayer.Properties.Resources.eyetest;
-                        break;
-                    }
-                case clsManageTestTypes.enTestType.WrittenTest:
-                    {
-                        LblLicenseHistroy.Text = "Written Test Appointments";
-                        this.Text = LblLicenseHistroy.Text;
-                        PBLicenseHistroy.Image = DVLD_PresentationLayer.Properties.Resources.test;
-                        break;
-                    }
-                case clsManageTestTypes.enTestType.StreetTest:
-                    {
-                        LblLicenseHistroy.Text = "Street Test Appointments";
-                        this.Text = LblLicenseHistroy.Text;
-                        PBLicenseHistroy.Image = DVLD_PresentationLayer.Properties.Resources.StreetTest;
-                        break;
-                    }
-            }
-        }
+
         private void BtnAddClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -88,39 +60,8 @@ namespace DVLD_PresentationLayer.Tests
             //    dGViewShowInformation.Columns[3].Width = 100;
             //}
         }
-        private void BtnAddAppointments_Click(object sender, EventArgs e)
-        {
-            if (clsTestAppointment.HasExistingAppointment(_LocalDrivingLicenseApplicationID, (int)_TestType))
-            {
-                MessageBox.Show("⚠️ An appointment already exists for this test type. Please choose a different date or test.", "Duplicate Appointment", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            if (clsTestAppointment.HasPassedTestAppointment(_LocalDrivingLicenseApplicationID, (int)_TestType))
-            {
-                MessageBox.Show("✅ This test has already been passed. No need to schedule another appointment.", "Test Already Passed", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-            FOScheduleTest frm = new FOScheduleTest(_TestType, _LocalDrivingLicenseApplicationID);
-            frm.ShowDialog();
-            FOListTestAppointments_Load(null, null);
-        }
-        private void SMItemTakeTest_Click(object sender, EventArgs e)
-        {
-        //    FOTakeTest frm = new FOTakeTest(_TestType, (int)dGViewShowInformation.CurrentRow.Cells[0].Value);
-        //    frm.ShowDialog();
-        //    FOListTestAppointments_Load(null, null);
-        }
 
-        private void SMItemCRUDUsers_Opening(object sender, CancelEventArgs e)
-        {
-        //    SMItemEdit.Enabled = !clsTestAppointment.IsLockedAppointment((int)dGViewShowInformation.CurrentRow.Cells[0].Value);
-        //    SMItemTakeTest.Enabled = !clsTestAppointment.IsLockedAppointment((int)dGViewShowInformation.CurrentRow.Cells[0].Value);
-        }
-        private void SMItemEdit_Click(object sender, EventArgs e)
-        {
-            //FOScheduleTest frm = new FOScheduleTest(_TestType, _LocalDrivingLicenseApplicationID, (int)dGViewShowInformation.CurrentRow.Cells[0].Value);
-            //frm.ShowDialog();
-            FOListTestAppointments_Load(null, null);
-        }
+
+    
     }
 }

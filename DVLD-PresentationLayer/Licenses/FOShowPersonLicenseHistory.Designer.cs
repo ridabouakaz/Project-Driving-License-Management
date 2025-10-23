@@ -83,7 +83,6 @@ namespace DVLD_PresentationLayer.Tests
             this.SMItemTakeTest});
             this.SMItemCRUDUsers.Name = "SMItemCRUDUsers";
             this.SMItemCRUDUsers.Size = new System.Drawing.Size(170, 80);
-            this.SMItemCRUDUsers.Opening += new System.ComponentModel.CancelEventHandler(this.SMItemCRUDUsers_Opening);
             // 
             // SMItemEdit
             // 
@@ -93,7 +92,6 @@ namespace DVLD_PresentationLayer.Tests
             this.SMItemEdit.Name = "SMItemEdit";
             this.SMItemEdit.Size = new System.Drawing.Size(169, 38);
             this.SMItemEdit.Text = "Edit";
-            this.SMItemEdit.Click += new System.EventHandler(this.SMItemEdit_Click);
             // 
             // SMItemTakeTest
             // 
@@ -103,7 +101,6 @@ namespace DVLD_PresentationLayer.Tests
             this.SMItemTakeTest.Name = "SMItemTakeTest";
             this.SMItemTakeTest.Size = new System.Drawing.Size(169, 38);
             this.SMItemTakeTest.Text = "Take Test";
-            this.SMItemTakeTest.Click += new System.EventHandler(this.SMItemTakeTest_Click);
             // 
             // LblLicenseHistroy
             // 

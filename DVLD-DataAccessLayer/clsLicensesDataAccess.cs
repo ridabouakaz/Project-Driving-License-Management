@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -244,17 +245,17 @@ namespace DVLD_DataAccessLayer
                     if (reader.Read())
                     {
                         isFound = true;
-                    licenseID = Convert.ToInt32(reader["LicenseID"]);
-                    applicationID = Convert.ToInt32(reader["ApplicationID"]);
-                    driverID = Convert.ToInt32(reader["DriverID"]);
-                    licenseClass = Convert.ToInt32(reader["LicenseClass"]);
-                    issueDate = Convert.ToDateTime(reader["IssueDate"]);
-                    expirationDate = Convert.ToDateTime(reader["ExpirationDate"]);
-                    notes = reader["Notes"].ToString();
-                    paidFees = Convert.ToDecimal(reader["PaidFees"]);
-                    isActive = (ActiveStatus)Convert.ToInt32(reader["IsActive"]);
-                    issueReason = (IssueReason)Convert.ToInt32(reader["IssueReason"]);
-                    createdByUserID = Convert.ToInt32(reader["CreatedByUserID"]);
+                        licenseID = Convert.ToInt32(reader["LicenseID"]);
+                        applicationID = Convert.ToInt32(reader["ApplicationID"]);
+                        driverID = Convert.ToInt32(reader["DriverID"]);
+                        licenseClass = Convert.ToInt32(reader["LicenseClass"]);
+                        issueDate = Convert.ToDateTime(reader["IssueDate"]);
+                        expirationDate = Convert.ToDateTime(reader["ExpirationDate"]);
+                        notes = reader["Notes"].ToString();
+                        paidFees = Convert.ToDecimal(reader["PaidFees"]);
+                        isActive = (ActiveStatus)Convert.ToInt32(reader["IsActive"]);
+                        issueReason = (IssueReason)Convert.ToInt32(reader["IssueReason"]);
+                        createdByUserID = Convert.ToInt32(reader["CreatedByUserID"]);
                     }
                 }
                 catch (Exception ex)
@@ -266,5 +267,54 @@ namespace DVLD_DataAccessLayer
 
             return isFound;
         }
+        public static DataTable GetDriverLicenses(int DriverID)
+        {
+
+            DataTable dt = new DataTable();
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+
+            string query = @"SELECT     
+                           Licenses.LicenseID,
+                           ApplicationID,
+		                   LicenseClasses.ClassName, Licenses.IssueDate, 
+		                   Licenses.ExpirationDate, Licenses.IsActive
+                           FROM Licenses INNER JOIN
+                                LicenseClasses ON Licenses.LicenseClass = LicenseClasses.LicenseClassID
+                            where DriverID=@DriverID
+                            Order By IsActive Desc, ExpirationDate Desc";
+
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@DriverID", DriverID);
+
+            try
+            {
+                connection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+
+                {
+                    dt.Load(reader);
+                }
+
+                reader.Close();
+
+
+            }
+
+            catch (Exception ex)
+            {
+                // Console.WriteLine("Error: " + ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return dt;
+
+        }
+
     }
 }
