@@ -21,15 +21,15 @@ namespace DVLD_PresentationLayer.Tests
         private void _RefreshTestAppointmentsList()
         {
           
-            _dtLicenseTestAppointments = clsTestAppointment.GetAllAppointments(_LocalDrivingLicenseApplicationID,(int)_TestType);
-            dGViewShowInformation.DataSource = _dtLicenseTestAppointments;
-            LblTotalRecoreds.Text = dGViewShowInformation.Rows.Count.ToString();
+            //_dtLicenseTestAppointments = clsTestAppointment.GetAllAppointments(_LocalDrivingLicenseApplicationID,(int)_TestType);
+            //dGViewShowInformation.DataSource = _dtLicenseTestAppointments;
+            //LblTotalRecoreds.Text = dGViewShowInformation.Rows.Count.ToString();
         }
         void _LoadLocalDrivingApplicationInfo()
         {
-            ctrDrivingLicenseApplicationInfo1.LoadApplication(_LocalDrivingLicenseApplicationID);
+            //ctrDrivingLicenseApplicationInfo1.LoadApplication(_LocalDrivingLicenseApplicationID);
         }
-        public FOListTestAppointments(clsManageTestTypes.enTestType TestType, int LocalDrivingLicenseApplicationID)
+        public FOShowPersonLicenseHistory(clsManageTestTypes.enTestType TestType, int LocalDrivingLicenseApplicationID)
         {
             InitializeComponent();
             _LocalDrivingLicenseApplicationID = LocalDrivingLicenseApplicationID;
@@ -47,21 +47,21 @@ namespace DVLD_PresentationLayer.Tests
                     {
                         LblLicenseHistroy.Text = "Vision Test Appointments";
                         this.Text = LblLicenseHistroy.Text;
-                        PBManageTestAppointments.Image = DVLD_PresentationLayer.Properties.Resources.eyetest;
+                        PBLicenseHistroy.Image = DVLD_PresentationLayer.Properties.Resources.eyetest;
                         break;
                     }
                 case clsManageTestTypes.enTestType.WrittenTest:
                     {
                         LblLicenseHistroy.Text = "Written Test Appointments";
                         this.Text = LblLicenseHistroy.Text;
-                        PBManageTestAppointments.Image = DVLD_PresentationLayer.Properties.Resources.test;
+                        PBLicenseHistroy.Image = DVLD_PresentationLayer.Properties.Resources.test;
                         break;
                     }
                 case clsManageTestTypes.enTestType.StreetTest:
                     {
                         LblLicenseHistroy.Text = "Street Test Appointments";
                         this.Text = LblLicenseHistroy.Text;
-                        PBManageTestAppointments.Image = DVLD_PresentationLayer.Properties.Resources.StreetTest;
+                        PBLicenseHistroy.Image = DVLD_PresentationLayer.Properties.Resources.StreetTest;
                         break;
                     }
             }
@@ -73,20 +73,20 @@ namespace DVLD_PresentationLayer.Tests
         private void FOListTestAppointments_Load(object sender, EventArgs e)
         {
             _RefreshTestAppointmentsList();
-            if (dGViewShowInformation.Rows.Count > 0)
-            {
-                dGViewShowInformation.Columns[0].HeaderText = "Appointment ID";
-                dGViewShowInformation.Columns[0].Width = 90;
+            //if (dGViewShowInformation.Rows.Count > 0)
+            //{
+            //    dGViewShowInformation.Columns[0].HeaderText = "Appointment ID";
+            //    dGViewShowInformation.Columns[0].Width = 90;
 
-                dGViewShowInformation.Columns[1].HeaderText = "Appointment Date";
-                dGViewShowInformation.Columns[1].Width = 140;
+            //    dGViewShowInformation.Columns[1].HeaderText = "Appointment Date";
+            //    dGViewShowInformation.Columns[1].Width = 140;
 
-                dGViewShowInformation.Columns[2].HeaderText = "Paid Fees";
-                dGViewShowInformation.Columns[2].Width = 120;
+            //    dGViewShowInformation.Columns[2].HeaderText = "Paid Fees";
+            //    dGViewShowInformation.Columns[2].Width = 120;
 
-                dGViewShowInformation.Columns[3].HeaderText = "Is Locked";
-                dGViewShowInformation.Columns[3].Width = 100;
-            }
+            //    dGViewShowInformation.Columns[3].HeaderText = "Is Locked";
+            //    dGViewShowInformation.Columns[3].Width = 100;
+            //}
         }
         private void BtnAddAppointments_Click(object sender, EventArgs e)
         {
@@ -106,20 +106,20 @@ namespace DVLD_PresentationLayer.Tests
         }
         private void SMItemTakeTest_Click(object sender, EventArgs e)
         {
-            FOTakeTest frm = new FOTakeTest(_TestType, (int)dGViewShowInformation.CurrentRow.Cells[0].Value);
-            frm.ShowDialog();
-            FOListTestAppointments_Load(null, null);
+        //    FOTakeTest frm = new FOTakeTest(_TestType, (int)dGViewShowInformation.CurrentRow.Cells[0].Value);
+        //    frm.ShowDialog();
+        //    FOListTestAppointments_Load(null, null);
         }
 
         private void SMItemCRUDUsers_Opening(object sender, CancelEventArgs e)
         {
-            SMItemEdit.Enabled = !clsTestAppointment.IsLockedAppointment((int)dGViewShowInformation.CurrentRow.Cells[0].Value);
-            SMItemTakeTest.Enabled = !clsTestAppointment.IsLockedAppointment((int)dGViewShowInformation.CurrentRow.Cells[0].Value);
+        //    SMItemEdit.Enabled = !clsTestAppointment.IsLockedAppointment((int)dGViewShowInformation.CurrentRow.Cells[0].Value);
+        //    SMItemTakeTest.Enabled = !clsTestAppointment.IsLockedAppointment((int)dGViewShowInformation.CurrentRow.Cells[0].Value);
         }
         private void SMItemEdit_Click(object sender, EventArgs e)
         {
-            FOScheduleTest frm = new FOScheduleTest(_TestType, _LocalDrivingLicenseApplicationID, (int)dGViewShowInformation.CurrentRow.Cells[0].Value);
-            frm.ShowDialog();
+            //FOScheduleTest frm = new FOScheduleTest(_TestType, _LocalDrivingLicenseApplicationID, (int)dGViewShowInformation.CurrentRow.Cells[0].Value);
+            //frm.ShowDialog();
             FOListTestAppointments_Load(null, null);
         }
     }
