@@ -39,11 +39,12 @@ namespace DVLD_PresentationLayer.Tests
             this.LblLicenseHistroy = new System.Windows.Forms.Label();
             this.BtnAddClose = new System.Windows.Forms.Button();
             this.PBLicenseHistroy = new System.Windows.Forms.PictureBox();
-            this.ctrDetailsPerson1 = new DVLD_PresentationLayer.CtrDetailsPerson();
             this.GBUserControlDriverLicenses = new System.Windows.Forms.GroupBox();
             this.TCDriverLicenses = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
             this.TPLocal = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            this.dGViewShowInformationLocalLicenses = new System.Windows.Forms.DataGridView();
             this.TPInternational = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            this.dGViewShowInformationInternationalLicenses = new System.Windows.Forms.DataGridView();
             this.BtnAddNext = new System.Windows.Forms.Button();
             this.CBIsActive = new System.Windows.Forms.CheckBox();
             this.TBPasswordConfirm = new System.Windows.Forms.TextBox();
@@ -58,21 +59,20 @@ namespace DVLD_PresentationLayer.Tests
             this.LblUserID = new System.Windows.Forms.Label();
             this.LblUserName = new System.Windows.Forms.Label();
             this.LblPassword = new System.Windows.Forms.Label();
-            this.dGViewShowInformationLocalLicenses = new System.Windows.Forms.DataGridView();
-            this.dGViewShowInformationInternationalLicenses = new System.Windows.Forms.DataGridView();
+            this.ctrDetailsPersonWithFilter1 = new DVLD_PresentationLayer.CtrDetailsPersonWithFilter();
             this.SMItemCRUDUsers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBLicenseHistroy)).BeginInit();
             this.GBUserControlDriverLicenses.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TCDriverLicenses)).BeginInit();
             this.TCDriverLicenses.SuspendLayout();
             this.TPLocal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dGViewShowInformationLocalLicenses)).BeginInit();
             this.TPInternational.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dGViewShowInformationInternationalLicenses)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBUserID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBUserName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBPasswordConfirm)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dGViewShowInformationLocalLicenses)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dGViewShowInformationInternationalLicenses)).BeginInit();
             this.SuspendLayout();
             // 
             // SMItemCRUDUsers
@@ -127,7 +127,7 @@ namespace DVLD_PresentationLayer.Tests
             this.BtnAddClose.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BtnAddClose.Image = ((System.Drawing.Image)(resources.GetObject("BtnAddClose.Image")));
             this.BtnAddClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAddClose.Location = new System.Drawing.Point(997, 921);
+            this.BtnAddClose.Location = new System.Drawing.Point(997, 993);
             this.BtnAddClose.Name = "BtnAddClose";
             this.BtnAddClose.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.BtnAddClose.Size = new System.Drawing.Size(155, 50);
@@ -150,40 +150,31 @@ namespace DVLD_PresentationLayer.Tests
             this.PBLicenseHistroy.TabIndex = 2;
             this.PBLicenseHistroy.TabStop = false;
             // 
-            // ctrDetailsPerson1
-            // 
-            this.ctrDetailsPerson1.BackColor = System.Drawing.Color.White;
-            this.ctrDetailsPerson1.ImagePath = null;
-            this.ctrDetailsPerson1.Location = new System.Drawing.Point(12, 200);
-            this.ctrDetailsPerson1.Name = "ctrDetailsPerson1";
-            this.ctrDetailsPerson1.PersonData = null;
-            this.ctrDetailsPerson1.Size = new System.Drawing.Size(1149, 383);
-            this.ctrDetailsPerson1.TabIndex = 13;
-            // 
             // GBUserControlDriverLicenses
             // 
             this.GBUserControlDriverLicenses.Controls.Add(this.TCDriverLicenses);
             this.GBUserControlDriverLicenses.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.GBUserControlDriverLicenses.Location = new System.Drawing.Point(27, 573);
+            this.GBUserControlDriverLicenses.Location = new System.Drawing.Point(43, 718);
             this.GBUserControlDriverLicenses.Name = "GBUserControlDriverLicenses";
-            this.GBUserControlDriverLicenses.Size = new System.Drawing.Size(1125, 342);
+            this.GBUserControlDriverLicenses.Size = new System.Drawing.Size(1125, 269);
             this.GBUserControlDriverLicenses.TabIndex = 14;
             this.GBUserControlDriverLicenses.TabStop = false;
             this.GBUserControlDriverLicenses.Text = "Driver Licenses";
             // 
             // TCDriverLicenses
             // 
-            this.TCDriverLicenses.BeforeTouchSize = new System.Drawing.Size(1113, 303);
+            this.TCDriverLicenses.BeforeTouchSize = new System.Drawing.Size(1113, 214);
             this.TCDriverLicenses.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TCDriverLicenses.Controls.Add(this.TPLocal);
             this.TCDriverLicenses.Controls.Add(this.TPInternational);
             this.TCDriverLicenses.Location = new System.Drawing.Point(6, 33);
             this.TCDriverLicenses.Name = "TCDriverLicenses";
-            this.TCDriverLicenses.Size = new System.Drawing.Size(1113, 303);
+            this.TCDriverLicenses.Size = new System.Drawing.Size(1113, 214);
             this.TCDriverLicenses.TabIndex = 0;
             this.TCDriverLicenses.TabPanelBackColor = System.Drawing.Color.White;
             this.TCDriverLicenses.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererIE7);
             this.TCDriverLicenses.ThemeName = "TabRendererIE7";
+            this.TCDriverLicenses.ThemeStyle.PrimitiveButtonStyle.DisabledNextPageImage = null;
             // 
             // TPLocal
             // 
@@ -193,10 +184,30 @@ namespace DVLD_PresentationLayer.Tests
             this.TPLocal.Location = new System.Drawing.Point(0, 48);
             this.TPLocal.Name = "TPLocal";
             this.TPLocal.ShowCloseButton = true;
-            this.TPLocal.Size = new System.Drawing.Size(1113, 256);
+            this.TPLocal.Size = new System.Drawing.Size(1113, 166);
             this.TPLocal.TabIndex = 1;
             this.TPLocal.Text = "Local";
             this.TPLocal.ThemesEnabled = false;
+            // 
+            // dGViewShowInformationLocalLicenses
+            // 
+            this.dGViewShowInformationLocalLicenses.AllowUserToAddRows = false;
+            this.dGViewShowInformationLocalLicenses.AllowUserToDeleteRows = false;
+            this.dGViewShowInformationLocalLicenses.AllowUserToOrderColumns = true;
+            this.dGViewShowInformationLocalLicenses.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dGViewShowInformationLocalLicenses.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dGViewShowInformationLocalLicenses.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dGViewShowInformationLocalLicenses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGViewShowInformationLocalLicenses.ContextMenuStrip = this.SMItemCRUDUsers;
+            this.dGViewShowInformationLocalLicenses.Location = new System.Drawing.Point(0, 3);
+            this.dGViewShowInformationLocalLicenses.Name = "dGViewShowInformationLocalLicenses";
+            this.dGViewShowInformationLocalLicenses.ReadOnly = true;
+            this.dGViewShowInformationLocalLicenses.RowHeadersWidth = 51;
+            this.dGViewShowInformationLocalLicenses.RowTemplate.Height = 24;
+            this.dGViewShowInformationLocalLicenses.Size = new System.Drawing.Size(1110, 160);
+            this.dGViewShowInformationLocalLicenses.TabIndex = 12;
             // 
             // TPInternational
             // 
@@ -206,10 +217,30 @@ namespace DVLD_PresentationLayer.Tests
             this.TPInternational.Location = new System.Drawing.Point(0, 48);
             this.TPInternational.Name = "TPInternational";
             this.TPInternational.ShowCloseButton = true;
-            this.TPInternational.Size = new System.Drawing.Size(1113, 256);
+            this.TPInternational.Size = new System.Drawing.Size(1113, 166);
             this.TPInternational.TabIndex = 2;
             this.TPInternational.Text = "International";
             this.TPInternational.ThemesEnabled = false;
+            // 
+            // dGViewShowInformationInternationalLicenses
+            // 
+            this.dGViewShowInformationInternationalLicenses.AllowUserToAddRows = false;
+            this.dGViewShowInformationInternationalLicenses.AllowUserToDeleteRows = false;
+            this.dGViewShowInformationInternationalLicenses.AllowUserToOrderColumns = true;
+            this.dGViewShowInformationInternationalLicenses.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dGViewShowInformationInternationalLicenses.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dGViewShowInformationInternationalLicenses.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dGViewShowInformationInternationalLicenses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGViewShowInformationInternationalLicenses.ContextMenuStrip = this.SMItemCRUDUsers;
+            this.dGViewShowInformationInternationalLicenses.Location = new System.Drawing.Point(1, 3);
+            this.dGViewShowInformationInternationalLicenses.Name = "dGViewShowInformationInternationalLicenses";
+            this.dGViewShowInformationInternationalLicenses.ReadOnly = true;
+            this.dGViewShowInformationInternationalLicenses.RowHeadersWidth = 51;
+            this.dGViewShowInformationInternationalLicenses.RowTemplate.Height = 24;
+            this.dGViewShowInformationInternationalLicenses.Size = new System.Drawing.Size(1110, 160);
+            this.dGViewShowInformationInternationalLicenses.TabIndex = 13;
             // 
             // BtnAddNext
             // 
@@ -385,54 +416,23 @@ namespace DVLD_PresentationLayer.Tests
             this.LblPassword.TabIndex = 37;
             this.LblPassword.Text = "Password:";
             // 
-            // dGViewShowInformationLocalLicenses
+            // ctrDetailsPersonWithFilter1
             // 
-            this.dGViewShowInformationLocalLicenses.AllowUserToAddRows = false;
-            this.dGViewShowInformationLocalLicenses.AllowUserToDeleteRows = false;
-            this.dGViewShowInformationLocalLicenses.AllowUserToOrderColumns = true;
-            this.dGViewShowInformationLocalLicenses.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dGViewShowInformationLocalLicenses.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dGViewShowInformationLocalLicenses.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dGViewShowInformationLocalLicenses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGViewShowInformationLocalLicenses.ContextMenuStrip = this.SMItemCRUDUsers;
-            this.dGViewShowInformationLocalLicenses.Location = new System.Drawing.Point(0, 3);
-            this.dGViewShowInformationLocalLicenses.Name = "dGViewShowInformationLocalLicenses";
-            this.dGViewShowInformationLocalLicenses.ReadOnly = true;
-            this.dGViewShowInformationLocalLicenses.RowHeadersWidth = 51;
-            this.dGViewShowInformationLocalLicenses.RowTemplate.Height = 24;
-            this.dGViewShowInformationLocalLicenses.Size = new System.Drawing.Size(1110, 250);
-            this.dGViewShowInformationLocalLicenses.TabIndex = 12;
-            // 
-            // dGViewShowInformationInternationalLicenses
-            // 
-            this.dGViewShowInformationInternationalLicenses.AllowUserToAddRows = false;
-            this.dGViewShowInformationInternationalLicenses.AllowUserToDeleteRows = false;
-            this.dGViewShowInformationInternationalLicenses.AllowUserToOrderColumns = true;
-            this.dGViewShowInformationInternationalLicenses.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dGViewShowInformationInternationalLicenses.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dGViewShowInformationInternationalLicenses.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dGViewShowInformationInternationalLicenses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGViewShowInformationInternationalLicenses.ContextMenuStrip = this.SMItemCRUDUsers;
-            this.dGViewShowInformationInternationalLicenses.Location = new System.Drawing.Point(1, 3);
-            this.dGViewShowInformationInternationalLicenses.Name = "dGViewShowInformationInternationalLicenses";
-            this.dGViewShowInformationInternationalLicenses.ReadOnly = true;
-            this.dGViewShowInformationInternationalLicenses.RowHeadersWidth = 51;
-            this.dGViewShowInformationInternationalLicenses.RowTemplate.Height = 24;
-            this.dGViewShowInformationInternationalLicenses.Size = new System.Drawing.Size(1110, 250);
-            this.dGViewShowInformationInternationalLicenses.TabIndex = 13;
+            this.ctrDetailsPersonWithFilter1.BackColor = System.Drawing.Color.White;
+            this.ctrDetailsPersonWithFilter1.Location = new System.Drawing.Point(12, 197);
+            this.ctrDetailsPersonWithFilter1.Name = "ctrDetailsPersonWithFilter1";
+            this.ctrDetailsPersonWithFilter1.PersonData = null;
+            this.ctrDetailsPersonWithFilter1.Size = new System.Drawing.Size(1156, 521);
+            this.ctrDetailsPersonWithFilter1.TabIndex = 15;
             // 
             // FOShowPersonLicenseHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1180, 983);
+            this.ClientSize = new System.Drawing.Size(1180, 1055);
+            this.Controls.Add(this.ctrDetailsPersonWithFilter1);
             this.Controls.Add(this.GBUserControlDriverLicenses);
-            this.Controls.Add(this.ctrDetailsPerson1);
             this.Controls.Add(this.BtnAddClose);
             this.Controls.Add(this.PBLicenseHistroy);
             this.Controls.Add(this.LblLicenseHistroy);
@@ -440,19 +440,20 @@ namespace DVLD_PresentationLayer.Tests
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "List Test Appointments";
+            this.Load += new System.EventHandler(this.FOShowPersonLicenseHistory_Load);
             this.SMItemCRUDUsers.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PBLicenseHistroy)).EndInit();
             this.GBUserControlDriverLicenses.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TCDriverLicenses)).EndInit();
             this.TCDriverLicenses.ResumeLayout(false);
             this.TPLocal.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dGViewShowInformationLocalLicenses)).EndInit();
             this.TPInternational.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dGViewShowInformationInternationalLicenses)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBUserID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBUserName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBPasswordConfirm)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dGViewShowInformationLocalLicenses)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dGViewShowInformationInternationalLicenses)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -465,7 +466,6 @@ namespace DVLD_PresentationLayer.Tests
         private ContextMenuStrip SMItemCRUDUsers;
         private ToolStripMenuItem SMItemEdit;
         private ToolStripMenuItem SMItemTakeTest;
-        private CtrDetailsPerson ctrDetailsPerson1;
         private GroupBox GBUserControlDriverLicenses;
 
         private Button BtnAddNext;
@@ -487,5 +487,6 @@ namespace DVLD_PresentationLayer.Tests
         private Syncfusion.Windows.Forms.Tools.TabPageAdv TPInternational;
         private DataGridView dGViewShowInformationLocalLicenses;
         private DataGridView dGViewShowInformationInternationalLicenses;
+        private CtrDetailsPersonWithFilter ctrDetailsPersonWithFilter1;
     }
 }

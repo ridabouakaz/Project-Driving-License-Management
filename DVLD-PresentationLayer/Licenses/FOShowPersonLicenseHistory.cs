@@ -14,10 +14,7 @@ namespace DVLD_PresentationLayer.Tests
 {
     public partial class FOShowPersonLicenseHistory : Form
     {
-        private DataTable _dtLicenseTestAppointments;
-        private int _LocalDrivingLicenseApplicationID;
-        private clsNewLocalDrivingApplication _LocalDrivingLicense;
-        private clsManageTestTypes.enTestType _TestType = clsManageTestTypes.enTestType.VisionTest;
+        private int _PersonID = -1;
         private void _RefreshTestAppointmentsList()
         {
           
@@ -29,12 +26,10 @@ namespace DVLD_PresentationLayer.Tests
         {
             //ctrDrivingLicenseApplicationInfo1.LoadApplication(_LocalDrivingLicenseApplicationID);
         }
-        public FOShowPersonLicenseHistory(clsManageTestTypes.enTestType TestType, int LocalDrivingLicenseApplicationID)
+        public FOShowPersonLicenseHistory(int PersonID)
         {
             InitializeComponent();
-            _LocalDrivingLicenseApplicationID = LocalDrivingLicenseApplicationID;
-            _TestType = TestType;
-            _LoadLocalDrivingApplicationInfo();
+            _PersonID = PersonID;
 
         }
 
@@ -61,7 +56,20 @@ namespace DVLD_PresentationLayer.Tests
             //}
         }
 
+        private void FOShowPersonLicenseHistory_Load(object sender, EventArgs e)
+        {
+            if (_PersonID != -1)
+            {
+                ctrDetailsPersonWithFilter1.PersonData= clsPerson.Find(_PersonID);
+                ctrDetailsPersonWithFilter1.DisablePersonDetails();
+                ctrDetailsPersonWithFilter1.LoadInfoByPersonID(_PersonID);
+            }
+            else
+            {
+                ctrlPersonCardWithFilter1.Enabled = true;
+                ctrlPersonCardWithFilter1.FilterFocus();
+            }
 
-    
+        }
     }
 }
