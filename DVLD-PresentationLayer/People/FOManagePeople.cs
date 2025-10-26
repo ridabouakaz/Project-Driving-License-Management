@@ -11,7 +11,8 @@ using System.Windows.Forms;
 using DVLD_BusinessLayer;
 using static DVLD_BusinessLayer.PersonFilterService;
 namespace DVLD_PresentationLayer
-{
+{           
+
     public partial class FOManagePeople : Form
     {
         private static DataTable _peopleTable = clsPerson.GetAllPeople();

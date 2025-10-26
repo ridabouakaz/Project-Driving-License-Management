@@ -190,6 +190,7 @@ namespace DVLD_PresentationLayer
             SMItemScheduleTest.Enabled = !HasIssuedLicense;
             SMItemCRUDLocalDrivingApplications.Enabled = !hasApplicationBeenCanceled;
             SMItemShowLicense.Enabled = HasIssuedLicense;
+            SMItemShowPersonLicenseHistory.Enabled = HasIssuedLicense;
         }
         private void SMItemIssueDrivingLicenseFirstTime_Click(object sender, EventArgs e)
         {

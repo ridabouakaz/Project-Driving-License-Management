@@ -31,13 +31,7 @@ namespace DVLD_PresentationLayer.Tests
 
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FOShowPersonLicenseHistory));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.SMItemCRUDUsers = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.SMItemEdit = new System.Windows.Forms.ToolStripMenuItem();
-            this.SMItemTakeTest = new System.Windows.Forms.ToolStripMenuItem();
             this.LblLicenseHistroy = new System.Windows.Forms.Label();
             this.BtnAddClose = new System.Windows.Forms.Button();
             this.PBLicenseHistroy = new System.Windows.Forms.PictureBox();
@@ -64,7 +58,6 @@ namespace DVLD_PresentationLayer.Tests
             this.LblUserName = new System.Windows.Forms.Label();
             this.LblPassword = new System.Windows.Forms.Label();
             this.ctrDetailsPersonWithFilter1 = new DVLD_PresentationLayer.CtrDetailsPersonWithFilter();
-            this.SMItemCRUDUsers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBLicenseHistroy)).BeginInit();
             this.GBUserControlDriverLicenses.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TCDriverLicenses)).BeginInit();
@@ -78,33 +71,6 @@ namespace DVLD_PresentationLayer.Tests
             ((System.ComponentModel.ISupportInitialize)(this.PBPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBPasswordConfirm)).BeginInit();
             this.SuspendLayout();
-            // 
-            // SMItemCRUDUsers
-            // 
-            this.SMItemCRUDUsers.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.SMItemCRUDUsers.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.SMItemEdit,
-            this.SMItemTakeTest});
-            this.SMItemCRUDUsers.Name = "SMItemCRUDUsers";
-            this.SMItemCRUDUsers.Size = new System.Drawing.Size(170, 80);
-            // 
-            // SMItemEdit
-            // 
-            this.SMItemEdit.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.SMItemEdit.Image = ((System.Drawing.Image)(resources.GetObject("SMItemEdit.Image")));
-            this.SMItemEdit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.SMItemEdit.Name = "SMItemEdit";
-            this.SMItemEdit.Size = new System.Drawing.Size(169, 38);
-            this.SMItemEdit.Text = "Edit";
-            // 
-            // SMItemTakeTest
-            // 
-            this.SMItemTakeTest.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.SMItemTakeTest.Image = ((System.Drawing.Image)(resources.GetObject("SMItemTakeTest.Image")));
-            this.SMItemTakeTest.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.SMItemTakeTest.Name = "SMItemTakeTest";
-            this.SMItemTakeTest.Size = new System.Drawing.Size(169, 38);
-            this.SMItemTakeTest.Text = "Take Test";
             // 
             // LblLicenseHistroy
             // 
@@ -230,7 +196,6 @@ namespace DVLD_PresentationLayer.Tests
             this.dGViewShowInformationLocalLicenses.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGViewShowInformationLocalLicenses.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dGViewShowInformationLocalLicenses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGViewShowInformationLocalLicenses.ContextMenuStrip = this.SMItemCRUDUsers;
             this.dGViewShowInformationLocalLicenses.Location = new System.Drawing.Point(0, 3);
             this.dGViewShowInformationLocalLicenses.Name = "dGViewShowInformationLocalLicenses";
             this.dGViewShowInformationLocalLicenses.ReadOnly = true;
@@ -262,31 +227,14 @@ namespace DVLD_PresentationLayer.Tests
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dGViewShowInformationInternationalLicenses.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGViewShowInformationInternationalLicenses.BackgroundColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 12F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dGViewShowInformationInternationalLicenses.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dGViewShowInformationInternationalLicenses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGViewShowInformationInternationalLicenses.ContextMenuStrip = this.SMItemCRUDUsers;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dGViewShowInformationInternationalLicenses.DefaultCellStyle = dataGridViewCellStyle2;
             this.dGViewShowInformationInternationalLicenses.Location = new System.Drawing.Point(1, 3);
             this.dGViewShowInformationInternationalLicenses.Name = "dGViewShowInformationInternationalLicenses";
             this.dGViewShowInformationInternationalLicenses.ReadOnly = true;
             this.dGViewShowInformationInternationalLicenses.RowHeadersWidth = 51;
             this.dGViewShowInformationInternationalLicenses.RowTemplate.Height = 24;
             this.dGViewShowInformationInternationalLicenses.Size = new System.Drawing.Size(1204, 160);
-            this.dGViewShowInformationInternationalLicenses.TabIndex = 13;
+            this.dGViewShowInformationInternationalLicenses.TabIndex = 3;
             // 
             // BtnAddNext
             // 
@@ -489,7 +437,6 @@ namespace DVLD_PresentationLayer.Tests
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "List Test Appointments";
             this.Load += new System.EventHandler(this.FOShowPersonLicenseHistory_Load);
-            this.SMItemCRUDUsers.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PBLicenseHistroy)).EndInit();
             this.GBUserControlDriverLicenses.ResumeLayout(false);
             this.GBUserControlDriverLicenses.PerformLayout();
@@ -512,9 +459,6 @@ namespace DVLD_PresentationLayer.Tests
         private System.Windows.Forms.Label LblLicenseHistroy;
         private PictureBox PBLicenseHistroy;
         private Button BtnAddClose;
-        private ContextMenuStrip SMItemCRUDUsers;
-        private ToolStripMenuItem SMItemEdit;
-        private ToolStripMenuItem SMItemTakeTest;
         private GroupBox GBUserControlDriverLicenses;
 
         private Button BtnAddNext;
