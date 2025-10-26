@@ -277,10 +277,14 @@ namespace DVLD_DataAccessLayer
                            Licenses.LicenseID,
                            ApplicationID,
 		                   LicenseClasses.ClassName, Licenses.IssueDate, 
-		                   Licenses.ExpirationDate, Licenses.IsActive
+		                   Licenses.ExpirationDate, CASE 
+                           WHEN Licenses.IsActive = 0 THEN 'Yes'
+                           WHEN Licenses.IsActive = 1 THEN 'No'
+                           ELSE 'Unknown'
+                           END AS IsActiveStatus
                            FROM Licenses INNER JOIN
                                 LicenseClasses ON Licenses.LicenseClass = LicenseClasses.LicenseClassID
-                            where DriverID=@DriverID
+                            where DriverID=7
                             Order By IsActive Desc, ExpirationDate Desc";
 
             SqlCommand command = new SqlCommand(query, connection);

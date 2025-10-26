@@ -268,6 +268,7 @@ namespace DVLD_PresentationLayer
             this.SMItemShowPersonLicenseHistory.Name = "SMItemShowPersonLicenseHistory";
             this.SMItemShowPersonLicenseHistory.Size = new System.Drawing.Size(346, 38);
             this.SMItemShowPersonLicenseHistory.Text = "Show Person License History";
+            this.SMItemShowPersonLicenseHistory.Click += new System.EventHandler(this.SMItemShowPersonLicenseHistory_Click);
             // 
             // LblManageLocalDrivingApplications
             // 

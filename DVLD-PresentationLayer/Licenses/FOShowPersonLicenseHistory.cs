@@ -81,14 +81,12 @@ namespace DVLD_PresentationLayer.Tests
             }
         }
 
-
         public FOShowPersonLicenseHistory(int PersonID)
         {
             InitializeComponent();
             _PersonID = PersonID;
 
         }
-
         private void BtnAddClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -112,7 +110,7 @@ namespace DVLD_PresentationLayer.Tests
             _Driver = clsDrivers.FindByPersonID(_PersonID);
             if (_Driver != null)
             {
-                _DriverID = clsDrivers.FindByPersonID(_PersonID).DriverID;
+                _DriverID = _Driver.DriverID;
             }
             _LoadLocalLicenseInfo();
             _LoadInternationalLicenseInfo();

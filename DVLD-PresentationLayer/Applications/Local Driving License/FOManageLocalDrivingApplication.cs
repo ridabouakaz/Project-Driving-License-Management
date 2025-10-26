@@ -191,8 +191,6 @@ namespace DVLD_PresentationLayer
             SMItemCRUDLocalDrivingApplications.Enabled = !hasApplicationBeenCanceled;
             SMItemShowLicense.Enabled = HasIssuedLicense;
         }
-
-
         private void SMItemIssueDrivingLicenseFirstTime_Click(object sender, EventArgs e)
         {
             FOIssueDriverLicenseFirstTime frm = new FOIssueDriverLicenseFirstTime((int)dGViewShowInformation.CurrentRow.Cells[0].Value);
@@ -203,6 +201,13 @@ namespace DVLD_PresentationLayer
         private void SMItemShowLicense_Click(object sender, EventArgs e)
         {
              FOLicenseInfo frm = new FOLicenseInfo((int)dGViewShowInformation.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+        }
+        private void SMItemShowPersonLicenseHistory_Click(object sender, EventArgs e)
+        {
+            int LocalDrivingLicenseApplicationID = (int)dGViewShowInformation.CurrentRow.Cells[0].Value;
+            clsNewLocalDrivingApplication localDrivingLicenseApplication = clsNewLocalDrivingApplication.FindByLocalDrivingAppLicenseID(LocalDrivingLicenseApplicationID);
+            FOShowPersonLicenseHistory frm = new FOShowPersonLicenseHistory(localDrivingLicenseApplication.ApplicantPersonID);
             frm.ShowDialog();
         }
     }

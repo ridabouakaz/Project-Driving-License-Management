@@ -33,6 +33,8 @@ namespace DVLD_PresentationLayer.Tests
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FOShowPersonLicenseHistory));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.SMItemCRUDUsers = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.SMItemEdit = new System.Windows.Forms.ToolStripMenuItem();
             this.SMItemTakeTest = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,6 +42,8 @@ namespace DVLD_PresentationLayer.Tests
             this.BtnAddClose = new System.Windows.Forms.Button();
             this.PBLicenseHistroy = new System.Windows.Forms.PictureBox();
             this.GBUserControlDriverLicenses = new System.Windows.Forms.GroupBox();
+            this.LblTotalRecoreds = new System.Windows.Forms.Label();
+            this.LblRecoreds = new System.Windows.Forms.Label();
             this.TCDriverLicenses = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
             this.TPLocal = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.dGViewShowInformationLocalLicenses = new System.Windows.Forms.DataGridView();
@@ -60,8 +64,6 @@ namespace DVLD_PresentationLayer.Tests
             this.LblUserName = new System.Windows.Forms.Label();
             this.LblPassword = new System.Windows.Forms.Label();
             this.ctrDetailsPersonWithFilter1 = new DVLD_PresentationLayer.CtrDetailsPersonWithFilter();
-            this.LblRecoreds = new System.Windows.Forms.Label();
-            this.LblTotalRecoreds = new System.Windows.Forms.Label();
             this.SMItemCRUDUsers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBLicenseHistroy)).BeginInit();
             this.GBUserControlDriverLicenses.SuspendLayout();
@@ -111,7 +113,7 @@ namespace DVLD_PresentationLayer.Tests
             this.LblLicenseHistroy.BackColor = System.Drawing.Color.Transparent;
             this.LblLicenseHistroy.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold);
             this.LblLicenseHistroy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
-            this.LblLicenseHistroy.Location = new System.Drawing.Point(451, 140);
+            this.LblLicenseHistroy.Location = new System.Drawing.Point(507, 21);
             this.LblLicenseHistroy.Name = "LblLicenseHistroy";
             this.LblLicenseHistroy.Size = new System.Drawing.Size(308, 54);
             this.LblLicenseHistroy.TabIndex = 1;
@@ -129,7 +131,7 @@ namespace DVLD_PresentationLayer.Tests
             this.BtnAddClose.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BtnAddClose.Image = ((System.Drawing.Image)(resources.GetObject("BtnAddClose.Image")));
             this.BtnAddClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAddClose.Location = new System.Drawing.Point(997, 993);
+            this.BtnAddClose.Location = new System.Drawing.Point(1089, 779);
             this.BtnAddClose.Name = "BtnAddClose";
             this.BtnAddClose.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.BtnAddClose.Size = new System.Drawing.Size(155, 50);
@@ -145,9 +147,9 @@ namespace DVLD_PresentationLayer.Tests
             this.PBLicenseHistroy.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.PBLicenseHistroy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.PBLicenseHistroy.Image = ((System.Drawing.Image)(resources.GetObject("PBLicenseHistroy.Image")));
-            this.PBLicenseHistroy.Location = new System.Drawing.Point(549, 12);
+            this.PBLicenseHistroy.Location = new System.Drawing.Point(12, 173);
             this.PBLicenseHistroy.Name = "PBLicenseHistroy";
-            this.PBLicenseHistroy.Size = new System.Drawing.Size(137, 125);
+            this.PBLicenseHistroy.Size = new System.Drawing.Size(251, 218);
             this.PBLicenseHistroy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PBLicenseHistroy.TabIndex = 2;
             this.PBLicenseHistroy.TabStop = false;
@@ -158,22 +160,46 @@ namespace DVLD_PresentationLayer.Tests
             this.GBUserControlDriverLicenses.Controls.Add(this.LblRecoreds);
             this.GBUserControlDriverLicenses.Controls.Add(this.TCDriverLicenses);
             this.GBUserControlDriverLicenses.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.GBUserControlDriverLicenses.Location = new System.Drawing.Point(43, 718);
+            this.GBUserControlDriverLicenses.Location = new System.Drawing.Point(25, 504);
             this.GBUserControlDriverLicenses.Name = "GBUserControlDriverLicenses";
-            this.GBUserControlDriverLicenses.Size = new System.Drawing.Size(1125, 269);
+            this.GBUserControlDriverLicenses.Size = new System.Drawing.Size(1219, 269);
             this.GBUserControlDriverLicenses.TabIndex = 14;
             this.GBUserControlDriverLicenses.TabStop = false;
             this.GBUserControlDriverLicenses.Text = "Driver Licenses";
             // 
+            // LblTotalRecoreds
+            // 
+            this.LblTotalRecoreds.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.LblTotalRecoreds.AutoSize = true;
+            this.LblTotalRecoreds.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.LblTotalRecoreds.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.LblTotalRecoreds.Location = new System.Drawing.Point(96, 247);
+            this.LblTotalRecoreds.Name = "LblTotalRecoreds";
+            this.LblTotalRecoreds.Size = new System.Drawing.Size(18, 20);
+            this.LblTotalRecoreds.TabIndex = 16;
+            this.LblTotalRecoreds.Text = "2";
+            // 
+            // LblRecoreds
+            // 
+            this.LblRecoreds.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.LblRecoreds.AutoSize = true;
+            this.LblRecoreds.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.LblRecoreds.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.LblRecoreds.Location = new System.Drawing.Point(9, 247);
+            this.LblRecoreds.Name = "LblRecoreds";
+            this.LblRecoreds.Size = new System.Drawing.Size(90, 20);
+            this.LblRecoreds.TabIndex = 16;
+            this.LblRecoreds.Text = "# Recoreds:";
+            // 
             // TCDriverLicenses
             // 
-            this.TCDriverLicenses.BeforeTouchSize = new System.Drawing.Size(1113, 214);
+            this.TCDriverLicenses.BeforeTouchSize = new System.Drawing.Size(1207, 214);
             this.TCDriverLicenses.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TCDriverLicenses.Controls.Add(this.TPLocal);
             this.TCDriverLicenses.Controls.Add(this.TPInternational);
             this.TCDriverLicenses.Location = new System.Drawing.Point(6, 33);
             this.TCDriverLicenses.Name = "TCDriverLicenses";
-            this.TCDriverLicenses.Size = new System.Drawing.Size(1113, 214);
+            this.TCDriverLicenses.Size = new System.Drawing.Size(1207, 214);
             this.TCDriverLicenses.TabIndex = 0;
             this.TCDriverLicenses.TabPanelBackColor = System.Drawing.Color.White;
             this.TCDriverLicenses.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererIE7);
@@ -188,7 +214,7 @@ namespace DVLD_PresentationLayer.Tests
             this.TPLocal.Location = new System.Drawing.Point(0, 48);
             this.TPLocal.Name = "TPLocal";
             this.TPLocal.ShowCloseButton = true;
-            this.TPLocal.Size = new System.Drawing.Size(1113, 166);
+            this.TPLocal.Size = new System.Drawing.Size(1207, 166);
             this.TPLocal.TabIndex = 1;
             this.TPLocal.Text = "Local";
             this.TPLocal.ThemesEnabled = false;
@@ -210,7 +236,7 @@ namespace DVLD_PresentationLayer.Tests
             this.dGViewShowInformationLocalLicenses.ReadOnly = true;
             this.dGViewShowInformationLocalLicenses.RowHeadersWidth = 51;
             this.dGViewShowInformationLocalLicenses.RowTemplate.Height = 24;
-            this.dGViewShowInformationLocalLicenses.Size = new System.Drawing.Size(1110, 160);
+            this.dGViewShowInformationLocalLicenses.Size = new System.Drawing.Size(1204, 160);
             this.dGViewShowInformationLocalLicenses.TabIndex = 12;
             // 
             // TPInternational
@@ -221,7 +247,7 @@ namespace DVLD_PresentationLayer.Tests
             this.TPInternational.Location = new System.Drawing.Point(0, 48);
             this.TPInternational.Name = "TPInternational";
             this.TPInternational.ShowCloseButton = true;
-            this.TPInternational.Size = new System.Drawing.Size(1113, 166);
+            this.TPInternational.Size = new System.Drawing.Size(1207, 166);
             this.TPInternational.TabIndex = 2;
             this.TPInternational.Text = "International";
             this.TPInternational.ThemesEnabled = false;
@@ -236,14 +262,30 @@ namespace DVLD_PresentationLayer.Tests
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dGViewShowInformationInternationalLicenses.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGViewShowInformationInternationalLicenses.BackgroundColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dGViewShowInformationInternationalLicenses.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dGViewShowInformationInternationalLicenses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGViewShowInformationInternationalLicenses.ContextMenuStrip = this.SMItemCRUDUsers;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dGViewShowInformationInternationalLicenses.DefaultCellStyle = dataGridViewCellStyle2;
             this.dGViewShowInformationInternationalLicenses.Location = new System.Drawing.Point(1, 3);
             this.dGViewShowInformationInternationalLicenses.Name = "dGViewShowInformationInternationalLicenses";
             this.dGViewShowInformationInternationalLicenses.ReadOnly = true;
             this.dGViewShowInformationInternationalLicenses.RowHeadersWidth = 51;
             this.dGViewShowInformationInternationalLicenses.RowTemplate.Height = 24;
-            this.dGViewShowInformationInternationalLicenses.Size = new System.Drawing.Size(1110, 160);
+            this.dGViewShowInformationInternationalLicenses.Size = new System.Drawing.Size(1204, 160);
             this.dGViewShowInformationInternationalLicenses.TabIndex = 13;
             // 
             // BtnAddNext
@@ -423,42 +465,20 @@ namespace DVLD_PresentationLayer.Tests
             // ctrDetailsPersonWithFilter1
             // 
             this.ctrDetailsPersonWithFilter1.BackColor = System.Drawing.Color.White;
-            this.ctrDetailsPersonWithFilter1.Location = new System.Drawing.Point(12, 197);
+            this.ctrDetailsPersonWithFilter1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.ctrDetailsPersonWithFilter1.Location = new System.Drawing.Point(272, 86);
+            this.ctrDetailsPersonWithFilter1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ctrDetailsPersonWithFilter1.Name = "ctrDetailsPersonWithFilter1";
             this.ctrDetailsPersonWithFilter1.PersonData = null;
-            this.ctrDetailsPersonWithFilter1.Size = new System.Drawing.Size(1156, 521);
+            this.ctrDetailsPersonWithFilter1.Size = new System.Drawing.Size(982, 426);
             this.ctrDetailsPersonWithFilter1.TabIndex = 15;
-            // 
-            // LblRecoreds
-            // 
-            this.LblRecoreds.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.LblRecoreds.AutoSize = true;
-            this.LblRecoreds.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.LblRecoreds.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.LblRecoreds.Location = new System.Drawing.Point(9, 247);
-            this.LblRecoreds.Name = "LblRecoreds";
-            this.LblRecoreds.Size = new System.Drawing.Size(90, 20);
-            this.LblRecoreds.TabIndex = 16;
-            this.LblRecoreds.Text = "# Recoreds:";
-            // 
-            // LblTotalRecoreds
-            // 
-            this.LblTotalRecoreds.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.LblTotalRecoreds.AutoSize = true;
-            this.LblTotalRecoreds.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.LblTotalRecoreds.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.LblTotalRecoreds.Location = new System.Drawing.Point(96, 247);
-            this.LblTotalRecoreds.Name = "LblTotalRecoreds";
-            this.LblTotalRecoreds.Size = new System.Drawing.Size(18, 20);
-            this.LblTotalRecoreds.TabIndex = 16;
-            this.LblTotalRecoreds.Text = "2";
             // 
             // FOShowPersonLicenseHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1180, 1055);
+            this.ClientSize = new System.Drawing.Size(1265, 853);
             this.Controls.Add(this.ctrDetailsPersonWithFilter1);
             this.Controls.Add(this.GBUserControlDriverLicenses);
             this.Controls.Add(this.BtnAddClose);
