@@ -194,6 +194,7 @@ namespace DVLD_PresentationLayer
             this.SMItemInternationalLicenseApplications.Name = "SMItemInternationalLicenseApplications";
             this.SMItemInternationalLicenseApplications.Size = new System.Drawing.Size(495, 38);
             this.SMItemInternationalLicenseApplications.Text = "International License Applications";
+            this.SMItemInternationalLicenseApplications.Click += new System.EventHandler(this.SMItemInternationalLicenseApplications_Click);
             // 
             // SMItemDetainLicenses
             // 

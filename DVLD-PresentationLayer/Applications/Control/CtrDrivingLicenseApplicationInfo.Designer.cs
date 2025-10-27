@@ -81,6 +81,7 @@
             this.LLShowLicenseInfo.TabIndex = 34;
             this.LLShowLicenseInfo.TabStop = true;
             this.LLShowLicenseInfo.Text = "Show License Info";
+            this.LLShowLicenseInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LLShowLicenseInfo_LinkClicked_1);
             // 
             // PBShowLicenseInfo
             // 
@@ -211,14 +212,14 @@
             this.ctrDetailsApplication1.Size = new System.Drawing.Size(1160, 250);
             this.ctrDetailsApplication1.TabIndex = 3;
             // 
-            // ctrlDrivingLicenseApplicationInfo
+            // CtrDrivingLicenseApplicationInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.ctrDetailsApplication1);
             this.Controls.Add(this.GBUserControlDetailesApplicationLocalDriving);
-            this.Name = "ctrlDrivingLicenseApplicationInfo";
+            this.Name = "CtrDrivingLicenseApplicationInfo";
             this.Size = new System.Drawing.Size(1168, 398);
             this.GBUserControlDetailesApplicationLocalDriving.ResumeLayout(false);
             this.GBUserControlDetailesApplicationLocalDriving.PerformLayout();

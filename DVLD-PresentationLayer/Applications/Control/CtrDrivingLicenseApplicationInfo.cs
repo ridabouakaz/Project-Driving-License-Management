@@ -64,7 +64,8 @@ namespace DVLD_PresentationLayer
             PassedTests = _LocalDrivingApplication.GetPassedTestCount().ToString() + "/3";
             LLShowLicenseInfo.Enabled= clsLicenses.HasIssuedLicense(_LocalDrivingApplication.LocalDrivingLicenseApplicationID);
         }
-        private void LLShowLicenseInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+
+        private void LLShowLicenseInfo_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
             FOLicenseInfo frm = new FOLicenseInfo(_LocalDrivingApplication.LocalDrivingLicenseApplicationID);
             frm.ShowDialog();

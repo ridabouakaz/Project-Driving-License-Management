@@ -42,7 +42,7 @@ namespace DVLD_PresentationLayer.Tests
             this.TPLocal = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.dGViewShowInformationLocalLicenses = new System.Windows.Forms.DataGridView();
             this.TPInternational = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.dGViewShowInformationInternationalLicenses = new System.Windows.Forms.DataGridView();
+            this.dGViewInformationInternationalLicenses = new System.Windows.Forms.DataGridView();
             this.BtnAddNext = new System.Windows.Forms.Button();
             this.CBIsActive = new System.Windows.Forms.CheckBox();
             this.TBPasswordConfirm = new System.Windows.Forms.TextBox();
@@ -65,7 +65,7 @@ namespace DVLD_PresentationLayer.Tests
             this.TPLocal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGViewShowInformationLocalLicenses)).BeginInit();
             this.TPInternational.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dGViewShowInformationInternationalLicenses)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGViewInformationInternationalLicenses)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBUserID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBUserName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBPassword)).BeginInit();
@@ -206,7 +206,7 @@ namespace DVLD_PresentationLayer.Tests
             // 
             // TPInternational
             // 
-            this.TPInternational.Controls.Add(this.dGViewShowInformationInternationalLicenses);
+            this.TPInternational.Controls.Add(this.dGViewInformationInternationalLicenses);
             this.TPInternational.Image = null;
             this.TPInternational.ImageSize = new System.Drawing.Size(20, 20);
             this.TPInternational.Location = new System.Drawing.Point(0, 48);
@@ -217,24 +217,24 @@ namespace DVLD_PresentationLayer.Tests
             this.TPInternational.Text = "International";
             this.TPInternational.ThemesEnabled = false;
             // 
-            // dGViewShowInformationInternationalLicenses
+            // dGViewInformationInternationalLicenses
             // 
-            this.dGViewShowInformationInternationalLicenses.AllowUserToAddRows = false;
-            this.dGViewShowInformationInternationalLicenses.AllowUserToDeleteRows = false;
-            this.dGViewShowInformationInternationalLicenses.AllowUserToOrderColumns = true;
-            this.dGViewShowInformationInternationalLicenses.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dGViewInformationInternationalLicenses.AllowUserToAddRows = false;
+            this.dGViewInformationInternationalLicenses.AllowUserToDeleteRows = false;
+            this.dGViewInformationInternationalLicenses.AllowUserToOrderColumns = true;
+            this.dGViewInformationInternationalLicenses.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dGViewShowInformationInternationalLicenses.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dGViewShowInformationInternationalLicenses.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dGViewShowInformationInternationalLicenses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGViewShowInformationInternationalLicenses.Location = new System.Drawing.Point(1, 3);
-            this.dGViewShowInformationInternationalLicenses.Name = "dGViewShowInformationInternationalLicenses";
-            this.dGViewShowInformationInternationalLicenses.ReadOnly = true;
-            this.dGViewShowInformationInternationalLicenses.RowHeadersWidth = 51;
-            this.dGViewShowInformationInternationalLicenses.RowTemplate.Height = 24;
-            this.dGViewShowInformationInternationalLicenses.Size = new System.Drawing.Size(1204, 160);
-            this.dGViewShowInformationInternationalLicenses.TabIndex = 3;
+            this.dGViewInformationInternationalLicenses.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dGViewInformationInternationalLicenses.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dGViewInformationInternationalLicenses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGViewInformationInternationalLicenses.Location = new System.Drawing.Point(1, 3);
+            this.dGViewInformationInternationalLicenses.Name = "dGViewInformationInternationalLicenses";
+            this.dGViewInformationInternationalLicenses.ReadOnly = true;
+            this.dGViewInformationInternationalLicenses.RowHeadersWidth = 51;
+            this.dGViewInformationInternationalLicenses.RowTemplate.Height = 24;
+            this.dGViewInformationInternationalLicenses.Size = new System.Drawing.Size(1204, 160);
+            this.dGViewInformationInternationalLicenses.TabIndex = 3;
             // 
             // BtnAddNext
             // 
@@ -445,7 +445,7 @@ namespace DVLD_PresentationLayer.Tests
             this.TPLocal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dGViewShowInformationLocalLicenses)).EndInit();
             this.TPInternational.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dGViewShowInformationInternationalLicenses)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGViewInformationInternationalLicenses)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBUserID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBUserName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBPassword)).EndInit();
@@ -479,7 +479,7 @@ namespace DVLD_PresentationLayer.Tests
         private Syncfusion.Windows.Forms.Tools.TabPageAdv TPLocal;
         private Syncfusion.Windows.Forms.Tools.TabPageAdv TPInternational;
         private DataGridView dGViewShowInformationLocalLicenses;
-        private DataGridView dGViewShowInformationInternationalLicenses;
+        private DataGridView dGViewInformationInternationalLicenses;
         private CtrDetailsPersonWithFilter ctrDetailsPersonWithFilter1;
         private Label LblRecoreds;
         private Label LblTotalRecoreds;

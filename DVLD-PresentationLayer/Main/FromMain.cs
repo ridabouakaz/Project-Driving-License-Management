@@ -1,4 +1,5 @@
 ﻿using DVLD_BusinessLayer;
+using DVLD_PresentationLayer.Applications.International_License;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -79,6 +80,12 @@ namespace DVLD_PresentationLayer
         private void SMItemdrivers_Click(object sender, EventArgs e)
         {
             FOManageDrivers frm = new FOManageDrivers();
+            frm.ShowDialog();
+        }
+
+        private void SMItemInternationalLicenseApplications_Click(object sender, EventArgs e)
+        {
+            FONewInternationalLicenseApplication frm = new FONewInternationalLicenseApplication();
             frm.ShowDialog();
         }
     }

@@ -17,8 +17,8 @@ namespace DVLD_PresentationLayer.Tests
         private int _PersonID = -1;
         private int _DriverID;
         private clsDrivers _Driver;
-        private DataTable _dtDriverLocalLicensesHistory;
         private DataTable _dtDriverInternationalLicensesHistory;
+        private DataTable _dtDriverLocalLicensesHistory;
         private void _LoadLocalLicenseInfo()
         {
 
@@ -26,7 +26,7 @@ namespace DVLD_PresentationLayer.Tests
 
 
             dGViewShowInformationLocalLicenses.DataSource = _dtDriverLocalLicensesHistory;
-            LblTotalRecoreds.Text = dGViewShowInformationLocalLicenses.Rows.Count.ToString();
+            LblTotalRecoreds.Text = (dGViewShowInformationLocalLicenses.Rows.Count+ dGViewInformationInternationalLicenses.Rows.Count).ToString();
 
             if (dGViewShowInformationLocalLicenses.Rows.Count > 0)
             {
@@ -53,31 +53,48 @@ namespace DVLD_PresentationLayer.Tests
 
         private void _LoadInternationalLicenseInfo()
         {
-
-            _dtDriverInternationalLicensesHistory = clsDrivers.GetInternationalLicenses(_DriverID);
-            dGViewShowInformationInternationalLicenses.DataSource = _dtDriverInternationalLicensesHistory;
-            LblTotalRecoreds.Text = dGViewShowInformationInternationalLicenses.Rows.Count.ToString();
-
-            if (dGViewShowInformationInternationalLicenses.Rows.Count > 0)
+            try
             {
-                dGViewShowInformationInternationalLicenses.Columns[0].HeaderText = "Int.License ID";
-                dGViewShowInformationInternationalLicenses.Columns[0].Width = 160;
+                _dtDriverInternationalLicensesHistory = clsDrivers.GetInternationalLicenses(_DriverID);
 
-                dGViewShowInformationInternationalLicenses.Columns[1].HeaderText = "Application ID";
-                dGViewShowInformationInternationalLicenses.Columns[1].Width = 130;
+                // تحقق إذا كان DataTable فارغ أو بدون أعمدة
+                if (_dtDriverInternationalLicensesHistory == null || _dtDriverInternationalLicensesHistory.Columns.Count == 0)
+                {
+                    MessageBox.Show("لا توجد رخص دولية أو حدث خطأ في تحميل البيانات");
+                    return;
+                }
 
-                dGViewShowInformationInternationalLicenses.Columns[2].HeaderText = "L.License ID";
-                dGViewShowInformationInternationalLicenses.Columns[2].Width = 130;
+                dGViewInformationInternationalLicenses.DataSource = _dtDriverInternationalLicensesHistory;
 
-                dGViewShowInformationInternationalLicenses.Columns[3].HeaderText = "Issue Date";
-                dGViewShowInformationInternationalLicenses.Columns[3].Width = 180;
+                // تحقق من وجود أعمدة في الـ DataGridView
+                if (dGViewInformationInternationalLicenses.Columns.Count >= 6)
+                {
+                    dGViewInformationInternationalLicenses.Columns[0].HeaderText = "Int.License ID";
+                    dGViewInformationInternationalLicenses.Columns[0].Width = 160;
 
-                dGViewShowInformationInternationalLicenses.Columns[4].HeaderText = "Expiration Date";
-                dGViewShowInformationInternationalLicenses.Columns[4].Width = 180;
+                    dGViewInformationInternationalLicenses.Columns[1].HeaderText = "Application ID";
+                    dGViewInformationInternationalLicenses.Columns[1].Width = 130;
 
-                dGViewShowInformationInternationalLicenses.Columns[5].HeaderText = "Is Active";
-                dGViewShowInformationInternationalLicenses.Columns[5].Width = 120;
+                    dGViewInformationInternationalLicenses.Columns[2].HeaderText = "L.License ID";
+                    dGViewInformationInternationalLicenses.Columns[2].Width = 130;
 
+                    dGViewInformationInternationalLicenses.Columns[3].HeaderText = "Issue Date";
+                    dGViewInformationInternationalLicenses.Columns[3].Width = 180;
+
+                    dGViewInformationInternationalLicenses.Columns[4].HeaderText = "Expiration Date";
+                    dGViewInformationInternationalLicenses.Columns[4].Width = 180;
+
+                    dGViewInformationInternationalLicenses.Columns[5].HeaderText = "Is Active";
+                    dGViewInformationInternationalLicenses.Columns[5].Width = 120;
+                }
+                else
+                {
+                    MessageBox.Show($"عدد الأعمدة المتاحة: {dGViewInformationInternationalLicenses.Columns.Count} - مطلوب 6 أعمدة");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"خطأ في تحميل الرخص الدولية: {ex.Message}");
             }
         }
 
@@ -112,7 +129,7 @@ namespace DVLD_PresentationLayer.Tests
             {
                 _DriverID = _Driver.DriverID;
             }
-            _LoadLocalLicenseInfo();
+            //_LoadLocalLicenseInfo();
             _LoadInternationalLicenseInfo();
         }
     }

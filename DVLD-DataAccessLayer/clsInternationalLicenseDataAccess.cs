@@ -151,16 +151,16 @@ namespace DVLD_DataAccessLayer
         }
         public static DataTable GetDriverInternationalLicenses(int DriverID)
         {
-
             DataTable dt = new DataTable();
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
             string query = @"
-            SELECT    InternationalLicenseID, ApplicationID,
-		                IssuedUsingLocalLicenseID , IssueDate, 
-                        ExpirationDate, IsActive
-		    from InternationalLicenses where DriverID=@DriverID
-                order by ExpirationDate desc";
+    SELECT InternationalLicenseID, ApplicationID,
+           IssuedUsingLocalLicenseID, IssueDate, 
+           ExpirationDate, IsActive
+    FROM InternationalLicenses 
+    WHERE DriverID = @DriverID
+    ORDER BY ExpirationDate DESC";
 
             SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("@DriverID", DriverID);
@@ -168,23 +168,18 @@ namespace DVLD_DataAccessLayer
             try
             {
                 connection.Open();
-
                 SqlDataReader reader = command.ExecuteReader();
 
-                if (reader.HasRows)
-
-                {
-                    dt.Load(reader);
-                }
+                // هذه السطر مهم - يحمل البيانات والأعمدة معاً
+                dt.Load(reader);
 
                 reader.Close();
-
-
             }
-
             catch (Exception ex)
             {
-                // Console.WriteLine("Error: " + ex.Message);
+                // سجل الخطأ للتصحيح
+                Console.WriteLine("Error in GetDriverInternationalLicenses: " + ex.Message);
+                // يمكنك إعادة DataTable فارغ أو رمي الاستثناء
             }
             finally
             {
@@ -192,7 +187,6 @@ namespace DVLD_DataAccessLayer
             }
 
             return dt;
-
         }
 
 

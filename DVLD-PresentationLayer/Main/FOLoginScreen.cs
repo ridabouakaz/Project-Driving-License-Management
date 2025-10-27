@@ -21,7 +21,7 @@ namespace DVLD_PresentationLayer
         private static clsUser _User = null;
         private string path = @"E:\DVLD\Shared\RememberMe.txt";
       
-        public FOLoginScreen()
+       public FOLoginScreen()
         {
             InitializeComponent();
         }
