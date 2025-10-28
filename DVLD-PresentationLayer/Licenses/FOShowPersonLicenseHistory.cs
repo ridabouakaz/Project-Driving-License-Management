@@ -26,7 +26,7 @@ namespace DVLD_PresentationLayer.Tests
 
 
             dGViewShowInformationLocalLicenses.DataSource = _dtDriverLocalLicensesHistory;
-            LblTotalRecoreds.Text = (dGViewShowInformationLocalLicenses.Rows.Count+ dGViewInformationInternationalLicenses.Rows.Count).ToString();
+            LblTotalRecoreds.Text = (dGViewShowInformationLocalLicenses.Rows.Count+ dGViewShowInformationInternationalLicenses.Rows.Count).ToString();
 
             if (dGViewShowInformationLocalLicenses.Rows.Count > 0)
             {
@@ -64,32 +64,31 @@ namespace DVLD_PresentationLayer.Tests
                     return;
                 }
 
-                dGViewInformationInternationalLicenses.DataSource = _dtDriverInternationalLicensesHistory;
+                dGViewShowInformationInternationalLicenses.DataSource = _dtDriverInternationalLicensesHistory;
 
-                // تحقق من وجود أعمدة في الـ DataGridView
-                if (dGViewInformationInternationalLicenses.Columns.Count >= 6)
+                if (dGViewShowInformationInternationalLicenses.Columns.Count >= 6)
                 {
-                    dGViewInformationInternationalLicenses.Columns[0].HeaderText = "Int.License ID";
-                    dGViewInformationInternationalLicenses.Columns[0].Width = 160;
+                    dGViewShowInformationInternationalLicenses.Columns[0].HeaderText = "Int.License ID";
+                    dGViewShowInformationInternationalLicenses.Columns[0].Width = 160;
 
-                    dGViewInformationInternationalLicenses.Columns[1].HeaderText = "Application ID";
-                    dGViewInformationInternationalLicenses.Columns[1].Width = 130;
+                    dGViewShowInformationInternationalLicenses.Columns[1].HeaderText = "Application ID";
+                    dGViewShowInformationInternationalLicenses.Columns[1].Width = 130;
 
-                    dGViewInformationInternationalLicenses.Columns[2].HeaderText = "L.License ID";
-                    dGViewInformationInternationalLicenses.Columns[2].Width = 130;
+                    dGViewShowInformationInternationalLicenses.Columns[2].HeaderText = "L.License ID";
+                    dGViewShowInformationInternationalLicenses.Columns[2].Width = 130;
 
-                    dGViewInformationInternationalLicenses.Columns[3].HeaderText = "Issue Date";
-                    dGViewInformationInternationalLicenses.Columns[3].Width = 180;
+                    dGViewShowInformationInternationalLicenses.Columns[3].HeaderText = "Issue Date";
+                    dGViewShowInformationInternationalLicenses.Columns[3].Width = 180;
 
-                    dGViewInformationInternationalLicenses.Columns[4].HeaderText = "Expiration Date";
-                    dGViewInformationInternationalLicenses.Columns[4].Width = 180;
+                    dGViewShowInformationInternationalLicenses.Columns[4].HeaderText = "Expiration Date";
+                    dGViewShowInformationInternationalLicenses.Columns[4].Width = 180;
 
-                    dGViewInformationInternationalLicenses.Columns[5].HeaderText = "Is Active";
-                    dGViewInformationInternationalLicenses.Columns[5].Width = 120;
+                    dGViewShowInformationInternationalLicenses.Columns[5].HeaderText = "Is Active";
+                    dGViewShowInformationInternationalLicenses.Columns[5].Width = 120;
                 }
                 else
                 {
-                    MessageBox.Show($"عدد الأعمدة المتاحة: {dGViewInformationInternationalLicenses.Columns.Count} - مطلوب 6 أعمدة");
+                    MessageBox.Show($"عدد الأعمدة المتاحة: {dGViewShowInformationInternationalLicenses.Columns.Count} - مطلوب 6 أعمدة");
                 }
             }
             catch (Exception ex)
@@ -129,8 +128,26 @@ namespace DVLD_PresentationLayer.Tests
             {
                 _DriverID = _Driver.DriverID;
             }
-            //_LoadLocalLicenseInfo();
-            _LoadInternationalLicenseInfo();
+            TCDriverLicenses.SelectedIndexChanged += TCDriverLicenses_SelectedIndexChanged;
+
+            LoadTabData(0);
+        }
+        private void LoadTabData(int tabIndex)
+        {
+            switch (tabIndex)
+            {
+                case 0: // Local Licenses
+                    _LoadLocalLicenseInfo();
+                    break;
+                case 1: // International Licenses
+                    _LoadInternationalLicenseInfo();
+                    break;
+            }
+        }
+        private void TCDriverLicenses_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadTabData(TCDriverLicenses.SelectedIndex);
+
         }
     }
 }

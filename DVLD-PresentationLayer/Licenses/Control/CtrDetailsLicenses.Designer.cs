@@ -36,6 +36,8 @@ namespace DVLD_PresentationLayer
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.OFDialogPictureImage = new System.Windows.Forms.OpenFileDialog();
             this.GBUserControlDetailesPerson = new System.Windows.Forms.GroupBox();
+            this.PBExpirationDate = new System.Windows.Forms.PictureBox();
+            this.PBIsDetained = new System.Windows.Forms.PictureBox();
             this.LblvalueIsDetained = new System.Windows.Forms.Label();
             this.LblvalueExpirationDate = new System.Windows.Forms.Label();
             this.PBNotes = new System.Windows.Forms.PictureBox();
@@ -74,10 +76,10 @@ namespace DVLD_PresentationLayer
             this.LblGender = new System.Windows.Forms.Label();
             this.LblIssueDate = new System.Windows.Forms.Label();
             this.LblName = new System.Windows.Forms.Label();
-            this.PBIsDetained = new System.Windows.Forms.PictureBox();
-            this.PBExpirationDate = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.GBUserControlDetailesPerson.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PBExpirationDate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBIsDetained)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBNotes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBIssueReason)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBClass)).BeginInit();
@@ -90,8 +92,6 @@ namespace DVLD_PresentationLayer
             ((System.ComponentModel.ISupportInitialize)(this.PBGender)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBLicenseID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBIsDetained)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBExpirationDate)).BeginInit();
             this.SuspendLayout();
             // 
             // errorProvider1
@@ -152,6 +152,24 @@ namespace DVLD_PresentationLayer
             this.GBUserControlDetailesPerson.TabIndex = 48;
             this.GBUserControlDetailesPerson.TabStop = false;
             this.GBUserControlDetailesPerson.Text = "Diver License Information";
+            // 
+            // PBExpirationDate
+            // 
+            this.PBExpirationDate.Image = ((System.Drawing.Image)(resources.GetObject("PBExpirationDate.Image")));
+            this.PBExpirationDate.Location = new System.Drawing.Point(688, 263);
+            this.PBExpirationDate.Name = "PBExpirationDate";
+            this.PBExpirationDate.Size = new System.Drawing.Size(40, 32);
+            this.PBExpirationDate.TabIndex = 60;
+            this.PBExpirationDate.TabStop = false;
+            // 
+            // PBIsDetained
+            // 
+            this.PBIsDetained.Image = ((System.Drawing.Image)(resources.GetObject("PBIsDetained.Image")));
+            this.PBIsDetained.Location = new System.Drawing.Point(688, 307);
+            this.PBIsDetained.Name = "PBIsDetained";
+            this.PBIsDetained.Size = new System.Drawing.Size(40, 32);
+            this.PBIsDetained.TabIndex = 59;
+            this.PBIsDetained.TabStop = false;
             // 
             // LblvalueIsDetained
             // 
@@ -579,24 +597,6 @@ namespace DVLD_PresentationLayer
             this.LblName.TabIndex = 0;
             this.LblName.Text = "Name:";
             // 
-            // PBIsDetained
-            // 
-            this.PBIsDetained.Image = ((System.Drawing.Image)(resources.GetObject("PBIsDetained.Image")));
-            this.PBIsDetained.Location = new System.Drawing.Point(688, 307);
-            this.PBIsDetained.Name = "PBIsDetained";
-            this.PBIsDetained.Size = new System.Drawing.Size(40, 32);
-            this.PBIsDetained.TabIndex = 59;
-            this.PBIsDetained.TabStop = false;
-            // 
-            // PBExpirationDate
-            // 
-            this.PBExpirationDate.Image = ((System.Drawing.Image)(resources.GetObject("PBExpirationDate.Image")));
-            this.PBExpirationDate.Location = new System.Drawing.Point(688, 263);
-            this.PBExpirationDate.Name = "PBExpirationDate";
-            this.PBExpirationDate.Size = new System.Drawing.Size(40, 32);
-            this.PBExpirationDate.TabIndex = 60;
-            this.PBExpirationDate.TabStop = false;
-            // 
             // CtrDetailsLicenses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -608,6 +608,8 @@ namespace DVLD_PresentationLayer
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.GBUserControlDetailesPerson.ResumeLayout(false);
             this.GBUserControlDetailesPerson.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PBExpirationDate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBIsDetained)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBNotes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBIssueReason)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBClass)).EndInit();
@@ -620,8 +622,6 @@ namespace DVLD_PresentationLayer
             ((System.ComponentModel.ISupportInitialize)(this.PBGender)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBLicenseID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBIsDetained)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBExpirationDate)).EndInit();
             this.ResumeLayout(false);
 
         }
