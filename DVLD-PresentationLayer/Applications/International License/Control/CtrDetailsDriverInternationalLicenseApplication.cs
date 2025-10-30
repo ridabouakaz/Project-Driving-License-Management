@@ -24,40 +24,52 @@ namespace DVLD_PresentationLayer
             InitializeComponent();
         }
 
-        public string ILApplicationID
+        public string Name
         {
-            set => LblValueILApplicationID.Text = value;
+            set => LblValueName.Text = value;
         }
-        public string ApplicationDate
+        public string IntLicenseID
         {
-            set => LblValueApplicationDate.Text = value;
+            set => LblValueIntLicenseID.Text = value;
+        }
+        public string LicenseID
+        {
+            set => LblValueLicenseID.Text = value;
+        }
+        public string NationalNo
+        {
+            set => LblValueNationalNo.Text = value;
+        }
+     
+        public string Gendor
+        {
+            set => LblValueGendor.Text = value;
         }
         public string IssueDate
         {
             set => LblValueIssueDate.Text = value;
         }
-        public string Fees
+        public string ApplicationID
         {
-            set => LblValueFees.Text = value;
+            set => LblvalueApplicationID.Text = value;
         }
-     
-        public string CreatedBy
+        public string IsActive
         {
-            set => LblvalueCreatedBy.Text = value;
+            set => LblvalueIsActive.Text = value;
         }
-        public string LLicenseID
+        public string DateOfBirth
         {
-            set => LblvalueLLicenseID.Text = value;
+            set => LblvalueDateOfBirth.Text = value;
         }
-        public string LocalLicenseID
+        public string DriverID
         {
-            set => LblvalueLocalLicenseID.Text = value;
+            set => LblDriverID.Text = value;
         }
         public string ExpirationDate
         {
             set => LblvalueExpirationDate.Text = value;
         }
-         private void LLEditApplicationInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void LLEditApplicationInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             FOPersonInfo frm = new FOPersonInfo(_Application.ApplicantPersonID);
             frm.ShowDialog();

@@ -32,298 +32,104 @@ namespace DVLD_PresentationLayer
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CtrDetailsInternationalLicenseApplication));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CtrDetailsDriverInternationalLicenseApplication));
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.OFDialogPictureImage = new System.Windows.Forms.OpenFileDialog();
-            this.GBUserControlDetailesApplication = new System.Windows.Forms.GroupBox();
-            this.PBApplicationID = new System.Windows.Forms.PictureBox();
-            this.LblValueILApplicationID = new System.Windows.Forms.Label();
-            this.LblvalueExpirationDate = new System.Windows.Forms.Label();
-            this.LblvalueLocalLicenseID = new System.Windows.Forms.Label();
-            this.LblvalueLLicenseID = new System.Windows.Forms.Label();
-            this.LblvalueCreatedBy = new System.Windows.Forms.Label();
-            this.LblValueIssueDate = new System.Windows.Forms.Label();
-            this.LblValueApplicationDate = new System.Windows.Forms.Label();
-            this.LblValueFees = new System.Windows.Forms.Label();
-            this.PBGender = new System.Windows.Forms.PictureBox();
-            this.LblILApplicationID = new System.Windows.Forms.Label();
-            this.PBCountry = new System.Windows.Forms.PictureBox();
-            this.PBPhone = new System.Windows.Forms.PictureBox();
-            this.PBDateOfBrith = new System.Windows.Forms.PictureBox();
-            this.LblExpirationDate = new System.Windows.Forms.Label();
-            this.LblLocalLicenseID = new System.Windows.Forms.Label();
-            this.LblILLicenseID = new System.Windows.Forms.Label();
-            this.PBEmail = new System.Windows.Forms.PictureBox();
-            this.PBNationalNo = new System.Windows.Forms.PictureBox();
+            this.GBDriverinternationalLicenseInfo = new System.Windows.Forms.GroupBox();
             this.PBName = new System.Windows.Forms.PictureBox();
-            this.LblCreatedBy = new System.Windows.Forms.Label();
-            this.LblFees = new System.Windows.Forms.Label();
+            this.LblValueName = new System.Windows.Forms.Label();
+            this.LblvalueDateOfBirth = new System.Windows.Forms.Label();
+            this.LblvalueIsActive = new System.Windows.Forms.Label();
+            this.LblvalueApplicationID = new System.Windows.Forms.Label();
+            this.LblvalueDriverID = new System.Windows.Forms.Label();
+            this.LblValueIssueDate = new System.Windows.Forms.Label();
+            this.LblValueIntLicenseID = new System.Windows.Forms.Label();
+            this.LblValueNationalNo = new System.Windows.Forms.Label();
+            this.PBGender = new System.Windows.Forms.PictureBox();
+            this.LblName = new System.Windows.Forms.Label();
+            this.PBApplicationID = new System.Windows.Forms.PictureBox();
+            this.PBIsActive = new System.Windows.Forms.PictureBox();
+            this.PBDateOfBrith = new System.Windows.Forms.PictureBox();
+            this.LblDateOfBirth = new System.Windows.Forms.Label();
+            this.LblIsActive = new System.Windows.Forms.Label();
+            this.LblApplicationID = new System.Windows.Forms.Label();
+            this.PBDriverID = new System.Windows.Forms.PictureBox();
+            this.PBLicenseID = new System.Windows.Forms.PictureBox();
+            this.PBIntLicenseID = new System.Windows.Forms.PictureBox();
+            this.LblDriverID = new System.Windows.Forms.Label();
+            this.LblNationalNo = new System.Windows.Forms.Label();
+            this.LblLicenseID = new System.Windows.Forms.Label();
+            this.LblIntLicenseID = new System.Windows.Forms.Label();
+            this.LblGendor = new System.Windows.Forms.Label();
             this.LblIssueDate = new System.Windows.Forms.Label();
-            this.LblApplicationDate = new System.Windows.Forms.Label();
+            this.PBIssueDate = new System.Windows.Forms.PictureBox();
+            this.PBNationalNo = new System.Windows.Forms.PictureBox();
+            this.LblValueLicenseID = new System.Windows.Forms.Label();
+            this.LblValueGendor = new System.Windows.Forms.Label();
+            this.LblExpirationDate = new System.Windows.Forms.Label();
+            this.PBExpirationDate = new System.Windows.Forms.PictureBox();
+            this.LblvalueExpirationDate = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            this.GBUserControlDetailesApplication.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PBApplicationID)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBGender)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBCountry)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBPhone)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBDateOfBrith)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBEmail)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBNationalNo)).BeginInit();
+            this.GBDriverinternationalLicenseInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBGender)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBApplicationID)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBIsActive)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBDateOfBrith)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBDriverID)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBLicenseID)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBIntLicenseID)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBIssueDate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBNationalNo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBExpirationDate)).BeginInit();
             this.SuspendLayout();
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // OFDialogPictureImage
+            // GBDriverinternationalLicenseInfo
             // 
-            this.OFDialogPictureImage.FileName = "OFDialogPictureImage";
-            // 
-            // GBUserControlDetailesApplication
-            // 
-            this.GBUserControlDetailesApplication.BackColor = System.Drawing.Color.White;
-            this.GBUserControlDetailesApplication.Controls.Add(this.PBApplicationID);
-            this.GBUserControlDetailesApplication.Controls.Add(this.LblValueILApplicationID);
-            this.GBUserControlDetailesApplication.Controls.Add(this.LblvalueExpirationDate);
-            this.GBUserControlDetailesApplication.Controls.Add(this.LblvalueLocalLicenseID);
-            this.GBUserControlDetailesApplication.Controls.Add(this.LblvalueLLicenseID);
-            this.GBUserControlDetailesApplication.Controls.Add(this.LblvalueCreatedBy);
-            this.GBUserControlDetailesApplication.Controls.Add(this.LblValueIssueDate);
-            this.GBUserControlDetailesApplication.Controls.Add(this.LblValueApplicationDate);
-            this.GBUserControlDetailesApplication.Controls.Add(this.LblValueFees);
-            this.GBUserControlDetailesApplication.Controls.Add(this.PBGender);
-            this.GBUserControlDetailesApplication.Controls.Add(this.LblILApplicationID);
-            this.GBUserControlDetailesApplication.Controls.Add(this.PBCountry);
-            this.GBUserControlDetailesApplication.Controls.Add(this.PBPhone);
-            this.GBUserControlDetailesApplication.Controls.Add(this.PBDateOfBrith);
-            this.GBUserControlDetailesApplication.Controls.Add(this.LblExpirationDate);
-            this.GBUserControlDetailesApplication.Controls.Add(this.LblLocalLicenseID);
-            this.GBUserControlDetailesApplication.Controls.Add(this.LblILLicenseID);
-            this.GBUserControlDetailesApplication.Controls.Add(this.PBEmail);
-            this.GBUserControlDetailesApplication.Controls.Add(this.PBNationalNo);
-            this.GBUserControlDetailesApplication.Controls.Add(this.PBName);
-            this.GBUserControlDetailesApplication.Controls.Add(this.LblCreatedBy);
-            this.GBUserControlDetailesApplication.Controls.Add(this.LblFees);
-            this.GBUserControlDetailesApplication.Controls.Add(this.LblIssueDate);
-            this.GBUserControlDetailesApplication.Controls.Add(this.LblApplicationDate);
-            this.GBUserControlDetailesApplication.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.GBUserControlDetailesApplication.Location = new System.Drawing.Point(18, 3);
-            this.GBUserControlDetailesApplication.Name = "GBUserControlDetailesApplication";
-            this.GBUserControlDetailesApplication.Size = new System.Drawing.Size(1130, 217);
-            this.GBUserControlDetailesApplication.TabIndex = 48;
-            this.GBUserControlDetailesApplication.TabStop = false;
-            this.GBUserControlDetailesApplication.Text = "Application Basic Info";
-            // 
-            // PBApplicationID
-            // 
-            this.PBApplicationID.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.PBApplicationID.ErrorImage = null;
-            this.PBApplicationID.Image = ((System.Drawing.Image)(resources.GetObject("PBApplicationID.Image")));
-            this.PBApplicationID.InitialImage = null;
-            this.PBApplicationID.Location = new System.Drawing.Point(201, 37);
-            this.PBApplicationID.Name = "PBApplicationID";
-            this.PBApplicationID.Size = new System.Drawing.Size(40, 32);
-            this.PBApplicationID.TabIndex = 47;
-            this.PBApplicationID.TabStop = false;
-            // 
-            // LblValueILApplicationID
-            // 
-            this.LblValueILApplicationID.AutoSize = true;
-            this.LblValueILApplicationID.BackColor = System.Drawing.Color.Transparent;
-            this.LblValueILApplicationID.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.LblValueILApplicationID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblValueILApplicationID.Location = new System.Drawing.Point(282, 37);
-            this.LblValueILApplicationID.Name = "LblValueILApplicationID";
-            this.LblValueILApplicationID.Size = new System.Drawing.Size(90, 25);
-            this.LblValueILApplicationID.TabIndex = 46;
-            this.LblValueILApplicationID.Text = "[????????]";
-            // 
-            // LblvalueExpirationDate
-            // 
-            this.LblvalueExpirationDate.AutoSize = true;
-            this.LblvalueExpirationDate.BackColor = System.Drawing.Color.Transparent;
-            this.LblvalueExpirationDate.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.LblvalueExpirationDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblvalueExpirationDate.Location = new System.Drawing.Point(984, 117);
-            this.LblvalueExpirationDate.Name = "LblvalueExpirationDate";
-            this.LblvalueExpirationDate.Size = new System.Drawing.Size(90, 25);
-            this.LblvalueExpirationDate.TabIndex = 45;
-            this.LblvalueExpirationDate.Text = "[????????]";
-            // 
-            // LblvalueLocalLicenseID
-            // 
-            this.LblvalueLocalLicenseID.AutoSize = true;
-            this.LblvalueLocalLicenseID.BackColor = System.Drawing.Color.Transparent;
-            this.LblvalueLocalLicenseID.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.LblvalueLocalLicenseID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblvalueLocalLicenseID.Location = new System.Drawing.Point(984, 79);
-            this.LblvalueLocalLicenseID.Name = "LblvalueLocalLicenseID";
-            this.LblvalueLocalLicenseID.Size = new System.Drawing.Size(90, 25);
-            this.LblvalueLocalLicenseID.TabIndex = 44;
-            this.LblvalueLocalLicenseID.Text = "[????????]";
-            // 
-            // LblvalueLLicenseID
-            // 
-            this.LblvalueLLicenseID.AutoSize = true;
-            this.LblvalueLLicenseID.BackColor = System.Drawing.Color.Transparent;
-            this.LblvalueLLicenseID.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.LblvalueLLicenseID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblvalueLLicenseID.Location = new System.Drawing.Point(984, 41);
-            this.LblvalueLLicenseID.Name = "LblvalueLLicenseID";
-            this.LblvalueLLicenseID.Size = new System.Drawing.Size(90, 25);
-            this.LblvalueLLicenseID.TabIndex = 43;
-            this.LblvalueLLicenseID.Text = "[????????]";
-            // 
-            // LblvalueCreatedBy
-            // 
-            this.LblvalueCreatedBy.AutoSize = true;
-            this.LblvalueCreatedBy.BackColor = System.Drawing.Color.Transparent;
-            this.LblvalueCreatedBy.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.LblvalueCreatedBy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblvalueCreatedBy.Location = new System.Drawing.Point(984, 158);
-            this.LblvalueCreatedBy.Name = "LblvalueCreatedBy";
-            this.LblvalueCreatedBy.Size = new System.Drawing.Size(90, 25);
-            this.LblvalueCreatedBy.TabIndex = 41;
-            this.LblvalueCreatedBy.Text = "[????????]";
-            // 
-            // LblValueIssueDate
-            // 
-            this.LblValueIssueDate.AutoSize = true;
-            this.LblValueIssueDate.BackColor = System.Drawing.Color.Transparent;
-            this.LblValueIssueDate.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.LblValueIssueDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblValueIssueDate.Location = new System.Drawing.Point(282, 117);
-            this.LblValueIssueDate.Name = "LblValueIssueDate";
-            this.LblValueIssueDate.Size = new System.Drawing.Size(90, 25);
-            this.LblValueIssueDate.TabIndex = 40;
-            this.LblValueIssueDate.Text = "[????????]";
-            // 
-            // LblValueApplicationDate
-            // 
-            this.LblValueApplicationDate.AutoSize = true;
-            this.LblValueApplicationDate.BackColor = System.Drawing.Color.Transparent;
-            this.LblValueApplicationDate.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.LblValueApplicationDate.ForeColor = System.Drawing.Color.Black;
-            this.LblValueApplicationDate.Location = new System.Drawing.Point(282, 79);
-            this.LblValueApplicationDate.Name = "LblValueApplicationDate";
-            this.LblValueApplicationDate.Size = new System.Drawing.Size(90, 25);
-            this.LblValueApplicationDate.TabIndex = 39;
-            this.LblValueApplicationDate.Text = "[????????]";
-            // 
-            // LblValueFees
-            // 
-            this.LblValueFees.AutoSize = true;
-            this.LblValueFees.BackColor = System.Drawing.Color.Transparent;
-            this.LblValueFees.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.LblValueFees.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblValueFees.Location = new System.Drawing.Point(282, 155);
-            this.LblValueFees.Name = "LblValueFees";
-            this.LblValueFees.Size = new System.Drawing.Size(90, 25);
-            this.LblValueFees.TabIndex = 38;
-            this.LblValueFees.Text = "[????????]";
-            // 
-            // PBGender
-            // 
-            this.PBGender.Image = ((System.Drawing.Image)(resources.GetObject("PBGender.Image")));
-            this.PBGender.Location = new System.Drawing.Point(201, 155);
-            this.PBGender.Name = "PBGender";
-            this.PBGender.Size = new System.Drawing.Size(40, 32);
-            this.PBGender.TabIndex = 37;
-            this.PBGender.TabStop = false;
-            // 
-            // LblILApplicationID
-            // 
-            this.LblILApplicationID.AutoSize = true;
-            this.LblILApplicationID.BackColor = System.Drawing.Color.Transparent;
-            this.LblILApplicationID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.LblILApplicationID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblILApplicationID.Location = new System.Drawing.Point(16, 37);
-            this.LblILApplicationID.Name = "LblILApplicationID";
-            this.LblILApplicationID.Size = new System.Drawing.Size(179, 28);
-            this.LblILApplicationID.TabIndex = 36;
-            this.LblILApplicationID.Text = "I.L.Application ID:";
-            // 
-            // PBCountry
-            // 
-            this.PBCountry.Image = ((System.Drawing.Image)(resources.GetObject("PBCountry.Image")));
-            this.PBCountry.Location = new System.Drawing.Point(912, 113);
-            this.PBCountry.Name = "PBCountry";
-            this.PBCountry.Size = new System.Drawing.Size(40, 32);
-            this.PBCountry.TabIndex = 27;
-            this.PBCountry.TabStop = false;
-            // 
-            // PBPhone
-            // 
-            this.PBPhone.Image = ((System.Drawing.Image)(resources.GetObject("PBPhone.Image")));
-            this.PBPhone.Location = new System.Drawing.Point(912, 75);
-            this.PBPhone.Name = "PBPhone";
-            this.PBPhone.Size = new System.Drawing.Size(40, 32);
-            this.PBPhone.TabIndex = 26;
-            this.PBPhone.TabStop = false;
-            // 
-            // PBDateOfBrith
-            // 
-            this.PBDateOfBrith.Image = ((System.Drawing.Image)(resources.GetObject("PBDateOfBrith.Image")));
-            this.PBDateOfBrith.Location = new System.Drawing.Point(912, 37);
-            this.PBDateOfBrith.Name = "PBDateOfBrith";
-            this.PBDateOfBrith.Size = new System.Drawing.Size(40, 32);
-            this.PBDateOfBrith.TabIndex = 25;
-            this.PBDateOfBrith.TabStop = false;
-            // 
-            // LblExpirationDate
-            // 
-            this.LblExpirationDate.AutoSize = true;
-            this.LblExpirationDate.BackColor = System.Drawing.Color.Transparent;
-            this.LblExpirationDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.LblExpirationDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblExpirationDate.Location = new System.Drawing.Point(726, 117);
-            this.LblExpirationDate.Name = "LblExpirationDate";
-            this.LblExpirationDate.Size = new System.Drawing.Size(165, 28);
-            this.LblExpirationDate.TabIndex = 24;
-            this.LblExpirationDate.Text = "Expiration Date:";
-            // 
-            // LblLocalLicenseID
-            // 
-            this.LblLocalLicenseID.AutoSize = true;
-            this.LblLocalLicenseID.BackColor = System.Drawing.Color.Transparent;
-            this.LblLocalLicenseID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.LblLocalLicenseID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblLocalLicenseID.Location = new System.Drawing.Point(726, 79);
-            this.LblLocalLicenseID.Name = "LblLocalLicenseID";
-            this.LblLocalLicenseID.Size = new System.Drawing.Size(168, 28);
-            this.LblLocalLicenseID.TabIndex = 23;
-            this.LblLocalLicenseID.Text = "Local License ID:";
-            // 
-            // LblILLicenseID
-            // 
-            this.LblILLicenseID.AutoSize = true;
-            this.LblILLicenseID.BackColor = System.Drawing.Color.Transparent;
-            this.LblILLicenseID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.LblILLicenseID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblILLicenseID.Location = new System.Drawing.Point(729, 41);
-            this.LblILLicenseID.Name = "LblILLicenseID";
-            this.LblILLicenseID.Size = new System.Drawing.Size(139, 28);
-            this.LblILLicenseID.TabIndex = 22;
-            this.LblILLicenseID.Text = "I.L.License ID:";
-            // 
-            // PBEmail
-            // 
-            this.PBEmail.Image = ((System.Drawing.Image)(resources.GetObject("PBEmail.Image")));
-            this.PBEmail.Location = new System.Drawing.Point(912, 155);
-            this.PBEmail.Name = "PBEmail";
-            this.PBEmail.Size = new System.Drawing.Size(40, 32);
-            this.PBEmail.TabIndex = 11;
-            this.PBEmail.TabStop = false;
-            // 
-            // PBNationalNo
-            // 
-            this.PBNationalNo.Image = ((System.Drawing.Image)(resources.GetObject("PBNationalNo.Image")));
-            this.PBNationalNo.Location = new System.Drawing.Point(201, 117);
-            this.PBNationalNo.Name = "PBNationalNo";
-            this.PBNationalNo.Size = new System.Drawing.Size(40, 32);
-            this.PBNationalNo.TabIndex = 10;
-            this.PBNationalNo.TabStop = false;
+            this.GBDriverinternationalLicenseInfo.BackColor = System.Drawing.Color.White;
+            this.GBDriverinternationalLicenseInfo.Controls.Add(this.LblvalueExpirationDate);
+            this.GBDriverinternationalLicenseInfo.Controls.Add(this.PBExpirationDate);
+            this.GBDriverinternationalLicenseInfo.Controls.Add(this.LblExpirationDate);
+            this.GBDriverinternationalLicenseInfo.Controls.Add(this.LblValueGendor);
+            this.GBDriverinternationalLicenseInfo.Controls.Add(this.LblValueLicenseID);
+            this.GBDriverinternationalLicenseInfo.Controls.Add(this.PBNationalNo);
+            this.GBDriverinternationalLicenseInfo.Controls.Add(this.PBIssueDate);
+            this.GBDriverinternationalLicenseInfo.Controls.Add(this.LblIssueDate);
+            this.GBDriverinternationalLicenseInfo.Controls.Add(this.LblGendor);
+            this.GBDriverinternationalLicenseInfo.Controls.Add(this.PBName);
+            this.GBDriverinternationalLicenseInfo.Controls.Add(this.LblValueName);
+            this.GBDriverinternationalLicenseInfo.Controls.Add(this.LblvalueDateOfBirth);
+            this.GBDriverinternationalLicenseInfo.Controls.Add(this.LblvalueIsActive);
+            this.GBDriverinternationalLicenseInfo.Controls.Add(this.LblvalueApplicationID);
+            this.GBDriverinternationalLicenseInfo.Controls.Add(this.LblvalueDriverID);
+            this.GBDriverinternationalLicenseInfo.Controls.Add(this.LblValueIssueDate);
+            this.GBDriverinternationalLicenseInfo.Controls.Add(this.LblValueIntLicenseID);
+            this.GBDriverinternationalLicenseInfo.Controls.Add(this.LblValueNationalNo);
+            this.GBDriverinternationalLicenseInfo.Controls.Add(this.PBGender);
+            this.GBDriverinternationalLicenseInfo.Controls.Add(this.LblName);
+            this.GBDriverinternationalLicenseInfo.Controls.Add(this.PBApplicationID);
+            this.GBDriverinternationalLicenseInfo.Controls.Add(this.PBIsActive);
+            this.GBDriverinternationalLicenseInfo.Controls.Add(this.PBDateOfBrith);
+            this.GBDriverinternationalLicenseInfo.Controls.Add(this.LblDateOfBirth);
+            this.GBDriverinternationalLicenseInfo.Controls.Add(this.LblIsActive);
+            this.GBDriverinternationalLicenseInfo.Controls.Add(this.LblApplicationID);
+            this.GBDriverinternationalLicenseInfo.Controls.Add(this.PBDriverID);
+            this.GBDriverinternationalLicenseInfo.Controls.Add(this.PBLicenseID);
+            this.GBDriverinternationalLicenseInfo.Controls.Add(this.PBIntLicenseID);
+            this.GBDriverinternationalLicenseInfo.Controls.Add(this.LblDriverID);
+            this.GBDriverinternationalLicenseInfo.Controls.Add(this.LblNationalNo);
+            this.GBDriverinternationalLicenseInfo.Controls.Add(this.LblLicenseID);
+            this.GBDriverinternationalLicenseInfo.Controls.Add(this.LblIntLicenseID);
+            this.GBDriverinternationalLicenseInfo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.GBDriverinternationalLicenseInfo.Location = new System.Drawing.Point(18, 3);
+            this.GBDriverinternationalLicenseInfo.Name = "GBDriverinternationalLicenseInfo";
+            this.GBDriverinternationalLicenseInfo.Size = new System.Drawing.Size(1130, 285);
+            this.GBDriverinternationalLicenseInfo.TabIndex = 48;
+            this.GBDriverinternationalLicenseInfo.TabStop = false;
+            this.GBDriverinternationalLicenseInfo.Text = "Driver international License Info";
             // 
             // PBName
             // 
@@ -331,35 +137,281 @@ namespace DVLD_PresentationLayer
             this.PBName.ErrorImage = null;
             this.PBName.Image = ((System.Drawing.Image)(resources.GetObject("PBName.Image")));
             this.PBName.InitialImage = null;
-            this.PBName.Location = new System.Drawing.Point(201, 78);
+            this.PBName.Location = new System.Drawing.Point(201, 37);
             this.PBName.Name = "PBName";
             this.PBName.Size = new System.Drawing.Size(40, 32);
-            this.PBName.TabIndex = 9;
+            this.PBName.TabIndex = 47;
             this.PBName.TabStop = false;
             // 
-            // LblCreatedBy
+            // LblValueName
             // 
-            this.LblCreatedBy.AutoSize = true;
-            this.LblCreatedBy.BackColor = System.Drawing.Color.Transparent;
-            this.LblCreatedBy.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.LblCreatedBy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblCreatedBy.Location = new System.Drawing.Point(729, 155);
-            this.LblCreatedBy.Name = "LblCreatedBy";
-            this.LblCreatedBy.Size = new System.Drawing.Size(120, 28);
-            this.LblCreatedBy.TabIndex = 3;
-            this.LblCreatedBy.Text = "Created By:";
+            this.LblValueName.AutoSize = true;
+            this.LblValueName.BackColor = System.Drawing.Color.Transparent;
+            this.LblValueName.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.LblValueName.ForeColor = System.Drawing.Color.Red;
+            this.LblValueName.Location = new System.Drawing.Point(282, 37);
+            this.LblValueName.Name = "LblValueName";
+            this.LblValueName.Size = new System.Drawing.Size(90, 25);
+            this.LblValueName.TabIndex = 46;
+            this.LblValueName.Text = "[????????]";
             // 
-            // LblFees
+            // LblvalueDateOfBirth
             // 
-            this.LblFees.AutoSize = true;
-            this.LblFees.BackColor = System.Drawing.Color.Transparent;
-            this.LblFees.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.LblFees.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblFees.Location = new System.Drawing.Point(16, 155);
-            this.LblFees.Name = "LblFees";
-            this.LblFees.Size = new System.Drawing.Size(58, 28);
-            this.LblFees.TabIndex = 2;
-            this.LblFees.Text = "Fees:";
+            this.LblvalueDateOfBirth.AutoSize = true;
+            this.LblvalueDateOfBirth.BackColor = System.Drawing.Color.Transparent;
+            this.LblvalueDateOfBirth.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.LblvalueDateOfBirth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblvalueDateOfBirth.Location = new System.Drawing.Point(984, 155);
+            this.LblvalueDateOfBirth.Name = "LblvalueDateOfBirth";
+            this.LblvalueDateOfBirth.Size = new System.Drawing.Size(90, 25);
+            this.LblvalueDateOfBirth.TabIndex = 45;
+            this.LblvalueDateOfBirth.Text = "[????????]";
+            // 
+            // LblvalueIsActive
+            // 
+            this.LblvalueIsActive.AutoSize = true;
+            this.LblvalueIsActive.BackColor = System.Drawing.Color.Transparent;
+            this.LblvalueIsActive.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.LblvalueIsActive.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblvalueIsActive.Location = new System.Drawing.Point(984, 118);
+            this.LblvalueIsActive.Name = "LblvalueIsActive";
+            this.LblvalueIsActive.Size = new System.Drawing.Size(90, 25);
+            this.LblvalueIsActive.TabIndex = 44;
+            this.LblvalueIsActive.Text = "[????????]";
+            // 
+            // LblvalueApplicationID
+            // 
+            this.LblvalueApplicationID.AutoSize = true;
+            this.LblvalueApplicationID.BackColor = System.Drawing.Color.Transparent;
+            this.LblvalueApplicationID.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.LblvalueApplicationID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblvalueApplicationID.Location = new System.Drawing.Point(984, 77);
+            this.LblvalueApplicationID.Name = "LblvalueApplicationID";
+            this.LblvalueApplicationID.Size = new System.Drawing.Size(90, 25);
+            this.LblvalueApplicationID.TabIndex = 43;
+            this.LblvalueApplicationID.Text = "[????????]";
+            // 
+            // LblvalueDriverID
+            // 
+            this.LblvalueDriverID.AutoSize = true;
+            this.LblvalueDriverID.BackColor = System.Drawing.Color.Transparent;
+            this.LblvalueDriverID.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.LblvalueDriverID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblvalueDriverID.Location = new System.Drawing.Point(984, 195);
+            this.LblvalueDriverID.Name = "LblvalueDriverID";
+            this.LblvalueDriverID.Size = new System.Drawing.Size(90, 25);
+            this.LblvalueDriverID.TabIndex = 41;
+            this.LblvalueDriverID.Text = "[????????]";
+            // 
+            // LblValueIssueDate
+            // 
+            this.LblValueIssueDate.AutoSize = true;
+            this.LblValueIssueDate.BackColor = System.Drawing.Color.Transparent;
+            this.LblValueIssueDate.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.LblValueIssueDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblValueIssueDate.Location = new System.Drawing.Point(282, 233);
+            this.LblValueIssueDate.Name = "LblValueIssueDate";
+            this.LblValueIssueDate.Size = new System.Drawing.Size(90, 25);
+            this.LblValueIssueDate.TabIndex = 40;
+            this.LblValueIssueDate.Text = "[????????]";
+            // 
+            // LblValueIntLicenseID
+            // 
+            this.LblValueIntLicenseID.AutoSize = true;
+            this.LblValueIntLicenseID.BackColor = System.Drawing.Color.Transparent;
+            this.LblValueIntLicenseID.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.LblValueIntLicenseID.ForeColor = System.Drawing.Color.Black;
+            this.LblValueIntLicenseID.Location = new System.Drawing.Point(282, 77);
+            this.LblValueIntLicenseID.Name = "LblValueIntLicenseID";
+            this.LblValueIntLicenseID.Size = new System.Drawing.Size(90, 25);
+            this.LblValueIntLicenseID.TabIndex = 39;
+            this.LblValueIntLicenseID.Text = "[????????]";
+            // 
+            // LblValueNationalNo
+            // 
+            this.LblValueNationalNo.AutoSize = true;
+            this.LblValueNationalNo.BackColor = System.Drawing.Color.Transparent;
+            this.LblValueNationalNo.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.LblValueNationalNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblValueNationalNo.Location = new System.Drawing.Point(282, 157);
+            this.LblValueNationalNo.Name = "LblValueNationalNo";
+            this.LblValueNationalNo.Size = new System.Drawing.Size(90, 25);
+            this.LblValueNationalNo.TabIndex = 38;
+            this.LblValueNationalNo.Text = "[????????]";
+            // 
+            // PBGender
+            // 
+            this.PBGender.Image = ((System.Drawing.Image)(resources.GetObject("PBGender.Image")));
+            this.PBGender.Location = new System.Drawing.Point(201, 195);
+            this.PBGender.Name = "PBGender";
+            this.PBGender.Size = new System.Drawing.Size(40, 32);
+            this.PBGender.TabIndex = 37;
+            this.PBGender.TabStop = false;
+            // 
+            // LblName
+            // 
+            this.LblName.AutoSize = true;
+            this.LblName.BackColor = System.Drawing.Color.Transparent;
+            this.LblName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.LblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblName.Location = new System.Drawing.Point(16, 37);
+            this.LblName.Name = "LblName";
+            this.LblName.Size = new System.Drawing.Size(73, 28);
+            this.LblName.TabIndex = 36;
+            this.LblName.Text = "Name:";
+            // 
+            // PBApplicationID
+            // 
+            this.PBApplicationID.Image = ((System.Drawing.Image)(resources.GetObject("PBApplicationID.Image")));
+            this.PBApplicationID.Location = new System.Drawing.Point(912, 70);
+            this.PBApplicationID.Name = "PBApplicationID";
+            this.PBApplicationID.Size = new System.Drawing.Size(40, 32);
+            this.PBApplicationID.TabIndex = 27;
+            this.PBApplicationID.TabStop = false;
+            // 
+            // PBIsActive
+            // 
+            this.PBIsActive.Image = ((System.Drawing.Image)(resources.GetObject("PBIsActive.Image")));
+            this.PBIsActive.Location = new System.Drawing.Point(912, 111);
+            this.PBIsActive.Name = "PBIsActive";
+            this.PBIsActive.Size = new System.Drawing.Size(40, 32);
+            this.PBIsActive.TabIndex = 26;
+            this.PBIsActive.TabStop = false;
+            // 
+            // PBDateOfBrith
+            // 
+            this.PBDateOfBrith.Image = ((System.Drawing.Image)(resources.GetObject("PBDateOfBrith.Image")));
+            this.PBDateOfBrith.Location = new System.Drawing.Point(912, 150);
+            this.PBDateOfBrith.Name = "PBDateOfBrith";
+            this.PBDateOfBrith.Size = new System.Drawing.Size(40, 32);
+            this.PBDateOfBrith.TabIndex = 25;
+            this.PBDateOfBrith.TabStop = false;
+            // 
+            // LblDateOfBirth
+            // 
+            this.LblDateOfBirth.AutoSize = true;
+            this.LblDateOfBirth.BackColor = System.Drawing.Color.Transparent;
+            this.LblDateOfBirth.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.LblDateOfBirth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblDateOfBirth.Location = new System.Drawing.Point(726, 154);
+            this.LblDateOfBirth.Name = "LblDateOfBirth";
+            this.LblDateOfBirth.Size = new System.Drawing.Size(145, 28);
+            this.LblDateOfBirth.TabIndex = 24;
+            this.LblDateOfBirth.Text = "Date Of Birth:";
+            // 
+            // LblIsActive
+            // 
+            this.LblIsActive.AutoSize = true;
+            this.LblIsActive.BackColor = System.Drawing.Color.Transparent;
+            this.LblIsActive.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.LblIsActive.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblIsActive.Location = new System.Drawing.Point(727, 115);
+            this.LblIsActive.Name = "LblIsActive";
+            this.LblIsActive.Size = new System.Drawing.Size(102, 28);
+            this.LblIsActive.TabIndex = 23;
+            this.LblIsActive.Text = "Is Active?";
+            // 
+            // LblApplicationID
+            // 
+            this.LblApplicationID.AutoSize = true;
+            this.LblApplicationID.BackColor = System.Drawing.Color.Transparent;
+            this.LblApplicationID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.LblApplicationID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblApplicationID.Location = new System.Drawing.Point(726, 74);
+            this.LblApplicationID.Name = "LblApplicationID";
+            this.LblApplicationID.Size = new System.Drawing.Size(153, 28);
+            this.LblApplicationID.TabIndex = 22;
+            this.LblApplicationID.Text = "Application ID:";
+            // 
+            // PBDriverID
+            // 
+            this.PBDriverID.Image = ((System.Drawing.Image)(resources.GetObject("PBDriverID.Image")));
+            this.PBDriverID.Location = new System.Drawing.Point(912, 188);
+            this.PBDriverID.Name = "PBDriverID";
+            this.PBDriverID.Size = new System.Drawing.Size(40, 32);
+            this.PBDriverID.TabIndex = 11;
+            this.PBDriverID.TabStop = false;
+            // 
+            // PBLicenseID
+            // 
+            this.PBLicenseID.Image = ((System.Drawing.Image)(resources.GetObject("PBLicenseID.Image")));
+            this.PBLicenseID.Location = new System.Drawing.Point(201, 117);
+            this.PBLicenseID.Name = "PBLicenseID";
+            this.PBLicenseID.Size = new System.Drawing.Size(40, 32);
+            this.PBLicenseID.TabIndex = 10;
+            this.PBLicenseID.TabStop = false;
+            // 
+            // PBIntLicenseID
+            // 
+            this.PBIntLicenseID.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.PBIntLicenseID.ErrorImage = null;
+            this.PBIntLicenseID.Image = ((System.Drawing.Image)(resources.GetObject("PBIntLicenseID.Image")));
+            this.PBIntLicenseID.InitialImage = null;
+            this.PBIntLicenseID.Location = new System.Drawing.Point(201, 78);
+            this.PBIntLicenseID.Name = "PBIntLicenseID";
+            this.PBIntLicenseID.Size = new System.Drawing.Size(40, 32);
+            this.PBIntLicenseID.TabIndex = 9;
+            this.PBIntLicenseID.TabStop = false;
+            // 
+            // LblDriverID
+            // 
+            this.LblDriverID.AutoSize = true;
+            this.LblDriverID.BackColor = System.Drawing.Color.Transparent;
+            this.LblDriverID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.LblDriverID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblDriverID.Location = new System.Drawing.Point(726, 192);
+            this.LblDriverID.Name = "LblDriverID";
+            this.LblDriverID.Size = new System.Drawing.Size(103, 28);
+            this.LblDriverID.TabIndex = 3;
+            this.LblDriverID.Text = "Driver ID:";
+            // 
+            // LblNationalNo
+            // 
+            this.LblNationalNo.AutoSize = true;
+            this.LblNationalNo.BackColor = System.Drawing.Color.Transparent;
+            this.LblNationalNo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.LblNationalNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblNationalNo.Location = new System.Drawing.Point(16, 155);
+            this.LblNationalNo.Name = "LblNationalNo";
+            this.LblNationalNo.Size = new System.Drawing.Size(133, 28);
+            this.LblNationalNo.TabIndex = 2;
+            this.LblNationalNo.Text = "National No:";
+            // 
+            // LblLicenseID
+            // 
+            this.LblLicenseID.AutoSize = true;
+            this.LblLicenseID.BackColor = System.Drawing.Color.Transparent;
+            this.LblLicenseID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.LblLicenseID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblLicenseID.Location = new System.Drawing.Point(16, 115);
+            this.LblLicenseID.Name = "LblLicenseID";
+            this.LblLicenseID.Size = new System.Drawing.Size(113, 28);
+            this.LblLicenseID.TabIndex = 1;
+            this.LblLicenseID.Text = "License ID:";
+            // 
+            // LblIntLicenseID
+            // 
+            this.LblIntLicenseID.AutoSize = true;
+            this.LblIntLicenseID.BackColor = System.Drawing.Color.Transparent;
+            this.LblIntLicenseID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.LblIntLicenseID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblIntLicenseID.Location = new System.Drawing.Point(16, 79);
+            this.LblIntLicenseID.Name = "LblIntLicenseID";
+            this.LblIntLicenseID.Size = new System.Drawing.Size(144, 28);
+            this.LblIntLicenseID.TabIndex = 0;
+            this.LblIntLicenseID.Text = "Int.License ID:";
+            // 
+            // LblGendor
+            // 
+            this.LblGendor.AutoSize = true;
+            this.LblGendor.BackColor = System.Drawing.Color.Transparent;
+            this.LblGendor.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.LblGendor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblGendor.Location = new System.Drawing.Point(16, 192);
+            this.LblGendor.Name = "LblGendor";
+            this.LblGendor.Size = new System.Drawing.Size(87, 28);
+            this.LblGendor.TabIndex = 48;
+            this.LblGendor.Text = "Gendor:";
             // 
             // LblIssueDate
             // 
@@ -367,74 +419,148 @@ namespace DVLD_PresentationLayer
             this.LblIssueDate.BackColor = System.Drawing.Color.Transparent;
             this.LblIssueDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.LblIssueDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblIssueDate.Location = new System.Drawing.Point(16, 115);
+            this.LblIssueDate.Location = new System.Drawing.Point(16, 233);
             this.LblIssueDate.Name = "LblIssueDate";
             this.LblIssueDate.Size = new System.Drawing.Size(115, 28);
-            this.LblIssueDate.TabIndex = 1;
+            this.LblIssueDate.TabIndex = 49;
             this.LblIssueDate.Text = "Issue Date:";
             // 
-            // LblApplicationDate
+            // PBIssueDate
             // 
-            this.LblApplicationDate.AutoSize = true;
-            this.LblApplicationDate.BackColor = System.Drawing.Color.Transparent;
-            this.LblApplicationDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.LblApplicationDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblApplicationDate.Location = new System.Drawing.Point(16, 79);
-            this.LblApplicationDate.Name = "LblApplicationDate";
-            this.LblApplicationDate.Size = new System.Drawing.Size(177, 28);
-            this.LblApplicationDate.TabIndex = 0;
-            this.LblApplicationDate.Text = "Application Date:";
+            this.PBIssueDate.Image = ((System.Drawing.Image)(resources.GetObject("PBIssueDate.Image")));
+            this.PBIssueDate.Location = new System.Drawing.Point(201, 233);
+            this.PBIssueDate.Name = "PBIssueDate";
+            this.PBIssueDate.Size = new System.Drawing.Size(40, 32);
+            this.PBIssueDate.TabIndex = 50;
+            this.PBIssueDate.TabStop = false;
             // 
-            // CtrDetailsInternationalLicenseApplication
+            // PBNationalNo
+            // 
+            this.PBNationalNo.Image = ((System.Drawing.Image)(resources.GetObject("PBNationalNo.Image")));
+            this.PBNationalNo.Location = new System.Drawing.Point(201, 158);
+            this.PBNationalNo.Name = "PBNationalNo";
+            this.PBNationalNo.Size = new System.Drawing.Size(40, 32);
+            this.PBNationalNo.TabIndex = 51;
+            this.PBNationalNo.TabStop = false;
+            // 
+            // LblValueLicenseID
+            // 
+            this.LblValueLicenseID.AutoSize = true;
+            this.LblValueLicenseID.BackColor = System.Drawing.Color.Transparent;
+            this.LblValueLicenseID.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.LblValueLicenseID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblValueLicenseID.Location = new System.Drawing.Point(282, 115);
+            this.LblValueLicenseID.Name = "LblValueLicenseID";
+            this.LblValueLicenseID.Size = new System.Drawing.Size(90, 25);
+            this.LblValueLicenseID.TabIndex = 52;
+            this.LblValueLicenseID.Text = "[????????]";
+            // 
+            // LblValueGendor
+            // 
+            this.LblValueGendor.AutoSize = true;
+            this.LblValueGendor.BackColor = System.Drawing.Color.Transparent;
+            this.LblValueGendor.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.LblValueGendor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblValueGendor.Location = new System.Drawing.Point(282, 197);
+            this.LblValueGendor.Name = "LblValueGendor";
+            this.LblValueGendor.Size = new System.Drawing.Size(90, 25);
+            this.LblValueGendor.TabIndex = 53;
+            this.LblValueGendor.Text = "[????????]";
+            // 
+            // LblExpirationDate
+            // 
+            this.LblExpirationDate.AutoSize = true;
+            this.LblExpirationDate.BackColor = System.Drawing.Color.Transparent;
+            this.LblExpirationDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.LblExpirationDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblExpirationDate.Location = new System.Drawing.Point(726, 230);
+            this.LblExpirationDate.Name = "LblExpirationDate";
+            this.LblExpirationDate.Size = new System.Drawing.Size(165, 28);
+            this.LblExpirationDate.TabIndex = 54;
+            this.LblExpirationDate.Text = "Expiration Date:";
+            // 
+            // PBExpirationDate
+            // 
+            this.PBExpirationDate.Image = ((System.Drawing.Image)(resources.GetObject("PBExpirationDate.Image")));
+            this.PBExpirationDate.Location = new System.Drawing.Point(912, 226);
+            this.PBExpirationDate.Name = "PBExpirationDate";
+            this.PBExpirationDate.Size = new System.Drawing.Size(40, 32);
+            this.PBExpirationDate.TabIndex = 55;
+            this.PBExpirationDate.TabStop = false;
+            // 
+            // LblvalueExpirationDate
+            // 
+            this.LblvalueExpirationDate.AutoSize = true;
+            this.LblvalueExpirationDate.BackColor = System.Drawing.Color.Transparent;
+            this.LblvalueExpirationDate.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.LblvalueExpirationDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblvalueExpirationDate.Location = new System.Drawing.Point(984, 233);
+            this.LblvalueExpirationDate.Name = "LblvalueExpirationDate";
+            this.LblvalueExpirationDate.Size = new System.Drawing.Size(90, 25);
+            this.LblvalueExpirationDate.TabIndex = 56;
+            this.LblvalueExpirationDate.Text = "[????????]";
+            // 
+            // CtrDetailsDriverInternationalLicenseApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.GBUserControlDetailesApplication);
-            this.Name = "CtrDetailsInternationalLicenseApplication";
-            this.Size = new System.Drawing.Size(1169, 229);
+            this.Controls.Add(this.GBDriverinternationalLicenseInfo);
+            this.Name = "CtrDetailsDriverInternationalLicenseApplication";
+            this.Size = new System.Drawing.Size(1169, 306);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            this.GBUserControlDetailesApplication.ResumeLayout(false);
-            this.GBUserControlDetailesApplication.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PBApplicationID)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBGender)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBCountry)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBPhone)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBDateOfBrith)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBEmail)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBNationalNo)).EndInit();
+            this.GBDriverinternationalLicenseInfo.ResumeLayout(false);
+            this.GBDriverinternationalLicenseInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBGender)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBApplicationID)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBIsActive)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBDateOfBrith)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBDriverID)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBLicenseID)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBIntLicenseID)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBIssueDate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBNationalNo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBExpirationDate)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private ErrorProvider errorProvider1;
-        private OpenFileDialog OFDialogPictureImage;
-        private GroupBox GBUserControlDetailesApplication;
-        private PictureBox PBApplicationID;
-        private Label LblValueILApplicationID;
-        private Label LblvalueExpirationDate;
-        private Label LblvalueLocalLicenseID;
-        private Label LblvalueLLicenseID;
-        private Label LblvalueCreatedBy;
-        private Label LblValueIssueDate;
-        private Label LblValueApplicationDate;
-        private Label LblValueFees;
-        private PictureBox PBGender;
-        private Label LblILApplicationID;
-        private PictureBox PBCountry;
-        private PictureBox PBPhone;
-        private PictureBox PBDateOfBrith;
-        private Label LblExpirationDate;
-        private Label LblLocalLicenseID;
-        private Label LblILLicenseID;
-        private PictureBox PBEmail;
-        private PictureBox PBNationalNo;
+        private GroupBox GBDriverinternationalLicenseInfo;
         private PictureBox PBName;
-        private Label LblCreatedBy;
-        private Label LblFees;
+        private Label LblValueName;
+        private Label LblvalueDateOfBirth;
+        private Label LblvalueIsActive;
+        private Label LblvalueApplicationID;
+        private Label LblvalueDriverID;
+        private Label LblValueIssueDate;
+        private Label LblValueIntLicenseID;
+        private Label LblValueNationalNo;
+        private PictureBox PBGender;
+        private Label LblName;
+        private PictureBox PBApplicationID;
+        private PictureBox PBIsActive;
+        private PictureBox PBDateOfBrith;
+        private Label LblDateOfBirth;
+        private Label LblIsActive;
+        private Label LblApplicationID;
+        private PictureBox PBDriverID;
+        private PictureBox PBLicenseID;
+        private PictureBox PBIntLicenseID;
+        private Label LblDriverID;
+        private Label LblNationalNo;
+        private Label LblLicenseID;
+        private Label LblIntLicenseID;
+        private Label LblExpirationDate;
+        private Label LblValueGendor;
+        private Label LblValueLicenseID;
+        private PictureBox PBNationalNo;
+        private PictureBox PBIssueDate;
         private Label LblIssueDate;
-        private Label LblApplicationDate;
+        private Label LblGendor;
+        private Label LblvalueExpirationDate;
+        private PictureBox PBExpirationDate;
     }
 }
