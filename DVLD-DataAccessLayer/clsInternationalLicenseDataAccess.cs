@@ -107,6 +107,65 @@ namespace DVLD_DataAccessLayer
 
             return (rowsAffected > 0);
         }
+        public static bool GetInternationalLicenseInfoByID(int InternationalLicenseID,
+           ref int ApplicationID,
+           ref int DriverID, ref int IssuedUsingLocalLicenseID,
+           ref DateTime IssueDate, ref DateTime ExpirationDate, ref ActiveStatus isActive, ref int CreatedByUserID)
+        {
+            bool isFound = false;
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+
+            string query = "SELECT * FROM InternationalLicenses WHERE InternationalLicenseID = @InternationalLicenseID";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@InternationalLicenseID", InternationalLicenseID);
+
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+
+                    // The record was found
+                    isFound = true;
+                    ApplicationID = (int)reader["ApplicationID"];
+                    DriverID = (int)reader["DriverID"];
+                    IssuedUsingLocalLicenseID = (int)reader["IssuedUsingLocalLicenseID"];
+                    IssueDate = (DateTime)reader["IssueDate"];
+                    ExpirationDate = (DateTime)reader["ExpirationDate"];
+
+
+                    isActive = reader["isActive"] != DBNull.Value ? (ActiveStatus)Convert.ToInt32(reader["isActive"]) : ActiveStatus.Yes;
+                    CreatedByUserID = (int)reader["DriverID"];
+
+
+                }
+                else
+                {
+                    // The record was not found
+                    isFound = false;
+                }
+
+                reader.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                //Console.WriteLine("Error: " + ex.Message);
+                isFound = false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return isFound;
+        }
         public static int GetActiveInternationalLicenseIDByDriverID(int DriverID)
         {
             int InternationalLicenseID = -1;

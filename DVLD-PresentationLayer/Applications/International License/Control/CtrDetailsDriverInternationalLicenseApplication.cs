@@ -9,6 +9,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Security;
 using System.Windows.Forms;
 using static DVLD_BusinessLayer.clsApplications;
 using static DVLDShared.DVLDShared;
@@ -17,16 +18,78 @@ namespace DVLD_PresentationLayer
 {
     public partial class CtrDetailsDriverInternationalLicenseApplication : UserControl
     {
-        private clsNewLocalDrivingApplication _Application;
-
+        private clsInternationalLicense _InternationalLicense;
+        private int _InternationalLicenseID;
         public CtrDetailsDriverInternationalLicenseApplication()
         {
             InitializeComponent();
         }
 
-        public string Name
+        public void LoadInfo(int InternationalLicenseID)
         {
-            set => LblValueName.Text = value;
+            _InternationalLicenseID = InternationalLicenseID;
+            _InternationalLicense = clsInternationalLicense.Find(_InternationalLicenseID);
+            if (_InternationalLicense == null)
+            {
+                MessageBox.Show("Could not find License ID = " + _InternationalLicenseID.ToString(),
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                _InternationalLicenseID = -1;
+                return;
+            }
+            InternationalLicenseData = _InternationalLicense;
+        }
+        public clsInternationalLicense SelectedLicenseInfo
+        { get { return _InternationalLicense; } }
+        public clsInternationalLicense InternationalLicenseData
+        {
+            get => _InternationalLicense;
+            set
+            {
+                _InternationalLicense = value;
+                FillUIFromPerson();
+            }
+        }
+        private void FillUIFromPerson()
+        {
+            if (_InternationalLicense == null)
+            {
+                IntLicenseID = "[????????]";
+                ApplicationID = "[????????]";
+                LicenseID = "[????????]";
+                IssueDate = "[????????]";
+                ExpirationDate = "[????????]";
+                LblvalueIsActive.Text = "[????????]";
+                DriverID = "[????????]";
+                NamePerson = "[????????]";
+                NationalNo = "[????????]";
+                DateOfBirth = "[????????]";
+                LblValueGendor.Text = "[????????]";
+                ImagePerson = null;
+                return;
+            }
+
+            IntLicenseID = _InternationalLicense.InternationalLicenseID.ToString();
+            ApplicationID = _InternationalLicense.ApplicationID.ToString();
+            LicenseID = _InternationalLicense.IssuedUsingLocalLicenseID.ToString();
+            IssueDate = _InternationalLicense.IssueDate.ToString("dd/MM/yyyy");
+            ExpirationDate = _InternationalLicense.ExpirationDate.ToString("dd/MM/yyyy");
+            IsActive = _InternationalLicense.IsActive;
+            NamePerson = _InternationalLicense.DriverInfo.PersonInfo.FullName;
+            NationalNo = _InternationalLicense.DriverInfo.PersonInfo.NationalNo;
+            DateOfBirth = _InternationalLicense.DriverInfo.PersonInfo.DateOfBirth.ToString("dd/MM/yyyy");
+            Gender = _InternationalLicense.DriverInfo.PersonInfo.PersonGender;
+            if (!string.IsNullOrEmpty(_InternationalLicense.DriverInfo.PersonInfo.ImagePath) && File.Exists(_InternationalLicense.DriverInfo.PersonInfo.ImagePath))
+            {
+                PBImagePerson.ImageLocation = _InternationalLicense.DriverInfo.PersonInfo.ImagePath;
+            }
+            else
+            {
+                ImagePerson = null;
+            }
+        }
+        public string NamePerson
+        {
+            set => LblValueNameperson.Text = value;
         }
         public string IntLicenseID
         {
@@ -40,10 +103,16 @@ namespace DVLD_PresentationLayer
         {
             set => LblValueNationalNo.Text = value;
         }
-     
-        public string Gendor
+
+        public Gender Gender
         {
-            set => LblValueGendor.Text = value;
+            set
+            {
+                if (value == Gender.Male)
+                    LblValueGendor.Text = "Male";
+                else
+                    LblValueGendor.Text = "Female";
+            }
         }
         public string IssueDate
         {
@@ -53,10 +122,17 @@ namespace DVLD_PresentationLayer
         {
             set => LblvalueApplicationID.Text = value;
         }
-        public string IsActive
+        public ActiveStatus IsActive
         {
-            set => LblvalueIsActive.Text = value;
+            set
+            {
+                if (value == ActiveStatus.Yes)
+                    LblvalueIsActive.Text = "Yes";
+                else
+                    LblvalueIsActive.Text = "No";
+            }
         }
+
         public string DateOfBirth
         {
             set => LblvalueDateOfBirth.Text = value;
@@ -69,11 +145,14 @@ namespace DVLD_PresentationLayer
         {
             set => LblvalueExpirationDate.Text = value;
         }
-        private void LLEditApplicationInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        public string ImagePath
         {
-            FOPersonInfo frm = new FOPersonInfo(_Application.ApplicantPersonID);
-            frm.ShowDialog();
+            get => PBImagePerson.ImageLocation;
+            set => PBImagePerson.ImageLocation = value;
         }
-
+        public Image ImagePerson
+        {
+            set => PBImagePerson.Image = value;
+        }
     }
 }

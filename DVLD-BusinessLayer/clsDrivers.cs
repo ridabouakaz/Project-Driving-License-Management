@@ -14,15 +14,17 @@ namespace DVLD_BusinessLayer
     {
         public int DriverID { set; get; }
         public int PersonID { set; get; }
+        public clsPerson PersonInfo;
         public int CreatedByUserID { set; get; }
         public DateTime CreatedDate { set; get; }
-
+       
         public clsDrivers()
         {
             DriverID = -1;
             PersonID = 0;
             CreatedByUserID = 0;
             CreatedDate = DateTime.Today;
+            this.PersonInfo = clsPerson.Find(PersonID);
         }
 
         private clsDrivers(
@@ -34,6 +36,7 @@ namespace DVLD_BusinessLayer
             this.PersonID = PersonID;
             this.CreatedByUserID = CreatedByUserID;
             this.CreatedDate = CreatedDate;
+            this.PersonInfo = clsPerson.Find(PersonID);
         }
         private bool _AddDriver()
         {

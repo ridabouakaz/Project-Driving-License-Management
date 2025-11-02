@@ -17,6 +17,13 @@ namespace DVLD_BusinessLayer
         public clsDrivers DriverInfo;
         public int InternationalLicenseID { set; get; }
         public int DriverID { set; get; }
+        public clsPerson Person
+        {
+            get
+            {
+                return clsPerson.Find(clsApplications.Find(ApplicationID).ApplicantPersonID);
+            }
+        }
         public int IssuedUsingLocalLicenseID { set; get; }
         public DateTime IssueDate { set; get; }
         public DateTime ExpirationDate { set; get; }
@@ -85,6 +92,36 @@ namespace DVLD_BusinessLayer
         {
 
             return clsInternationalLicenseDataAccess.GetActiveInternationalLicenseIDByDriverID(DriverID);
+
+        }
+
+        public static clsInternationalLicense Find(int InternationalLicenseID)
+        {
+            int ApplicationID = -1;
+            int DriverID = -1; int IssuedUsingLocalLicenseID = -1;
+            DateTime IssueDate = DateTime.Now; DateTime ExpirationDate = DateTime.Now;
+            ActiveStatus IsActive = ActiveStatus.Yes; int CreatedByUserID = 1;
+
+            if (clsInternationalLicenseDataAccess.GetInternationalLicenseInfoByID(InternationalLicenseID, ref ApplicationID, ref DriverID,
+                ref IssuedUsingLocalLicenseID,
+            ref IssueDate, ref ExpirationDate, ref IsActive, ref CreatedByUserID))
+            {
+                //now we find the base application
+                clsApplications Application = clsApplications.Find(ApplicationID);
+
+
+                return new clsInternationalLicense(Application.ApplicationID,
+                    Application.ApplicantPersonID,
+                                     Application.ApplicationDate,
+                                    (enApplicationStatus)Application.ApplicationStatus, Application.LastStatusDate,
+                                     Application.PaidFees, Application.CreatedByUserID,
+                                     InternationalLicenseID, DriverID, IssuedUsingLocalLicenseID,
+                                         IssueDate, ExpirationDate, IsActive);
+
+            }
+
+            else
+                return null;
 
         }
         public bool Save()

@@ -219,6 +219,5 @@ namespace DVLD_PresentationLayer
             }
         }
 
-      
     }
 }
