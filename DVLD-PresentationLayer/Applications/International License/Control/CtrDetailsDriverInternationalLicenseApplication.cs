@@ -77,6 +77,7 @@ namespace DVLD_PresentationLayer
             NamePerson = _InternationalLicense.DriverInfo.PersonInfo.FullName;
             NationalNo = _InternationalLicense.DriverInfo.PersonInfo.NationalNo;
             DateOfBirth = _InternationalLicense.DriverInfo.PersonInfo.DateOfBirth.ToString("dd/MM/yyyy");
+            DriverID= _InternationalLicense.DriverID.ToString();
             Gender = _InternationalLicense.DriverInfo.PersonInfo.PersonGender;
             if (!string.IsNullOrEmpty(_InternationalLicense.DriverInfo.PersonInfo.ImagePath) && File.Exists(_InternationalLicense.DriverInfo.PersonInfo.ImagePath))
             {
@@ -139,7 +140,7 @@ namespace DVLD_PresentationLayer
         }
         public string DriverID
         {
-            set => LblDriverID.Text = value;
+            set => LblvalueDriverID.Text = value;
         }
         public string ExpirationDate
         {

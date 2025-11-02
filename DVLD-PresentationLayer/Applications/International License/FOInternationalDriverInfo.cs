@@ -12,10 +12,20 @@ namespace DVLD_PresentationLayer.Applications.International_License
 {
     public partial class FOInternationalDriverInfo : Form
     {
-        public FOInternationalDriverInfo()
+        private int _InternationalLicenseID;
+        public FOInternationalDriverInfo(int InternationalLicenseID)
         {
             InitializeComponent();
+            _InternationalLicenseID = InternationalLicenseID;
+        }
+        private void FOInternationalDriverInfo_Load(object sender, EventArgs e)
+        {
+            ctrDetailsDriverInternationalLicenseApplication1.LoadInfo(_InternationalLicenseID);
         }
 
+        private void BtnAddClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -94,7 +94,6 @@ namespace DVLD_PresentationLayer.Applications.International_License
             ctrDetailsInternationalLicenseApplication1.LLicenseID= InternationalLicense.InternationalLicenseID.ToString();
             _InternationalLicenseID = InternationalLicense.InternationalLicenseID;
             MessageBox.Show("International License Issued Successfully with ID=" + InternationalLicense.InternationalLicenseID.ToString(), "License Issued", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
             BtnIssue.Enabled = false;
             ctrDetailsLicenseWithFilter1.FilterEnabled = false;
             LLShowLicensesinfo.Enabled = true;
@@ -107,12 +106,18 @@ namespace DVLD_PresentationLayer.Applications.International_License
 
         private void LLShowLicensesinfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            FOInternationalDriverInfo frm = new FOInternationalDriverInfo(_InternationalLicenseID);
+            frm.ShowDialog();
         }
         private void LLShowLicensesHistroy_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             FOShowPersonLicenseHistory frm = new FOShowPersonLicenseHistory(ctrDetailsLicenseWithFilter1.SelectedLicenseInfo.DriverInfo.PersonID);
             frm.ShowDialog();
+        }
+
+        private void FONewInternationalLicenseApplication_Load(object sender, EventArgs e)
+        {
+            LLShowLicensesinfo.Enabled = false;
         }
     }
 }

@@ -157,6 +157,7 @@
             this.Name = "FONewInternationalLicenseApplication";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New International License Application";
+            this.Load += new System.EventHandler(this.FONewInternationalLicenseApplication_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
