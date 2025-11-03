@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FONewInternationalLicenseApplication));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FORenewLocalDrivingLicenseApplication));
             this.LblHeaderTitle = new System.Windows.Forms.Label();
             this.BtnIssue = new System.Windows.Forms.Button();
             this.BtnAddClose = new System.Windows.Forms.Button();
@@ -45,11 +45,11 @@
             this.LblHeaderTitle.BackColor = System.Drawing.Color.Transparent;
             this.LblHeaderTitle.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold);
             this.LblHeaderTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
-            this.LblHeaderTitle.Location = new System.Drawing.Point(273, 9);
+            this.LblHeaderTitle.Location = new System.Drawing.Point(353, 9);
             this.LblHeaderTitle.Name = "LblHeaderTitle";
-            this.LblHeaderTitle.Size = new System.Drawing.Size(596, 50);
+            this.LblHeaderTitle.Size = new System.Drawing.Size(485, 50);
             this.LblHeaderTitle.TabIndex = 4;
-            this.LblHeaderTitle.Text = "International License Application";
+            this.LblHeaderTitle.Text = "Renew License Application";
             // 
             // BtnIssue
             // 
@@ -141,7 +141,7 @@
             this.ctrDetailsLicenseWithFilter1.TabIndex = 5;
             this.ctrDetailsLicenseWithFilter1.OnLicenseSelected += new System.Action<int>(this.ctrDetailsLicenseWithFilter1_OnLicenseSelected);
             // 
-            // FONewInternationalLicenseApplication
+            // FORenewLocalDrivingLicenseApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -154,7 +154,7 @@
             this.Controls.Add(this.ctrDetailsInternationalLicenseApplication1);
             this.Controls.Add(this.ctrDetailsLicenseWithFilter1);
             this.Controls.Add(this.LblHeaderTitle);
-            this.Name = "FONewInternationalLicenseApplication";
+            this.Name = "FORenewLocalDrivingLicenseApplication";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New International License Application";
             this.Load += new System.EventHandler(this.FONewInternationalLicenseApplication_Load);

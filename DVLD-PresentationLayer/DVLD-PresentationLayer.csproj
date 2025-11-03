@@ -123,6 +123,12 @@
     <Compile Include="Applications\Local Driving License\FOManageLocalDrivingApplication.Designer.cs">
       <DependentUpon>FOManageLocalDrivingApplication.cs</DependentUpon>
     </Compile>
+    <Compile Include="Applications\Renew Local License\Control\CtrDetailsRenewLocalLicenseApplication.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Applications\Renew Local License\Control\CtrDetailsRenewLocalLicenseApplication.Designer.cs">
+      <DependentUpon>CtrDetailsRenewLocalLicenseApplication.cs</DependentUpon>
+    </Compile>
     <Compile Include="Applications\Renew Local License\FORenewLocalDrivingLicenseApplication.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -320,6 +326,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Applications\Local Driving License\FOManageLocalDrivingApplication.resx">
       <DependentUpon>FOManageLocalDrivingApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\Renew Local License\Control\CtrDetailsRenewLocalLicenseApplication.resx">
+      <DependentUpon>CtrDetailsRenewLocalLicenseApplication.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Applications\Renew Local License\FORenewLocalDrivingLicenseApplication.resx">
       <DependentUpon>FORenewLocalDrivingLicenseApplication.cs</DependentUpon>
