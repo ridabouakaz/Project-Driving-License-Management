@@ -93,5 +93,10 @@ namespace DVLD_PresentationLayer
             FOManageLocalDrivingApplication frm = new FOManageLocalDrivingApplication(_currentUser);
             frm.ShowDialog();
         }
+
+        private void SMItemRenewDrivingLicenses_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

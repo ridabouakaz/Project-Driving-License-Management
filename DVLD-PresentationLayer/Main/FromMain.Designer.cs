@@ -108,6 +108,7 @@ namespace DVLD_PresentationLayer
             this.SMItemReleaseDetainedDrivingLicense,
             this.SMItemRetakeTest});
             this.SMItemDrivingLicensesServices.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SMItemDrivingLicensesServices.Image = ((System.Drawing.Image)(resources.GetObject("SMItemDrivingLicensesServices.Image")));
             this.SMItemDrivingLicensesServices.Name = "SMItemDrivingLicensesServices";
             this.SMItemDrivingLicensesServices.Size = new System.Drawing.Size(436, 70);
             this.SMItemDrivingLicensesServices.Text = "Driving Licenses Services";
@@ -143,6 +144,7 @@ namespace DVLD_PresentationLayer
             this.SMItemRenewDrivingLicenses.Name = "SMItemRenewDrivingLicenses";
             this.SMItemRenewDrivingLicenses.Size = new System.Drawing.Size(552, 38);
             this.SMItemRenewDrivingLicenses.Text = "Renew Driving Licenses";
+            this.SMItemRenewDrivingLicenses.Click += new System.EventHandler(this.SMItemRenewDrivingLicenses_Click);
             // 
             // SMItemReplacementForLostOrDamagedLicenses
             // 
