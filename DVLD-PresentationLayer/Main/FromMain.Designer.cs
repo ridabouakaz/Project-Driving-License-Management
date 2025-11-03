@@ -109,7 +109,7 @@ namespace DVLD_PresentationLayer
             this.SMItemRetakeTest});
             this.SMItemDrivingLicensesServices.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SMItemDrivingLicensesServices.Name = "SMItemDrivingLicensesServices";
-            this.SMItemDrivingLicensesServices.Size = new System.Drawing.Size(404, 38);
+            this.SMItemDrivingLicensesServices.Size = new System.Drawing.Size(436, 70);
             this.SMItemDrivingLicensesServices.Text = "Driving Licenses Services";
             // 
             // SMItemNewDrivingLicenses
@@ -164,11 +164,12 @@ namespace DVLD_PresentationLayer
             this.SMItemRetakeTest.Name = "SMItemRetakeTest";
             this.SMItemRetakeTest.Size = new System.Drawing.Size(552, 38);
             this.SMItemRetakeTest.Text = "Retake Test";
+            this.SMItemRetakeTest.Click += new System.EventHandler(this.SMItemRetakeTest_Click);
             // 
             // SMItemSeparator2
             // 
             this.SMItemSeparator2.Name = "SMItemSeparator2";
-            this.SMItemSeparator2.Size = new System.Drawing.Size(401, 6);
+            this.SMItemSeparator2.Size = new System.Drawing.Size(433, 6);
             // 
             // SMItemManageApplications
             // 
@@ -176,8 +177,10 @@ namespace DVLD_PresentationLayer
             this.SMItemlocalDrivingLicenseApplications,
             this.SMItemInternationalLicenseApplications});
             this.SMItemManageApplications.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SMItemManageApplications.Image = ((System.Drawing.Image)(resources.GetObject("SMItemManageApplications.Image")));
+            this.SMItemManageApplications.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SMItemManageApplications.Name = "SMItemManageApplications";
-            this.SMItemManageApplications.Size = new System.Drawing.Size(404, 38);
+            this.SMItemManageApplications.Size = new System.Drawing.Size(436, 70);
             this.SMItemManageApplications.Text = "Manage Applications";
             // 
             // SMItemlocalDrivingLicenseApplications
@@ -208,7 +211,7 @@ namespace DVLD_PresentationLayer
             this.SMItemReleaseDetainedLicenses});
             this.SMItemDetainLicenses.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SMItemDetainLicenses.Name = "SMItemDetainLicenses";
-            this.SMItemDetainLicenses.Size = new System.Drawing.Size(404, 38);
+            this.SMItemDetainLicenses.Size = new System.Drawing.Size(436, 70);
             this.SMItemDetainLicenses.Text = "Detain Licenses";
             // 
             // SMItemManageDetainedLicenses
@@ -236,9 +239,8 @@ namespace DVLD_PresentationLayer
             // 
             this.SMItemManageApplicationTypes.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SMItemManageApplicationTypes.Image = ((System.Drawing.Image)(resources.GetObject("SMItemManageApplicationTypes.Image")));
-            this.SMItemManageApplicationTypes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SMItemManageApplicationTypes.Name = "SMItemManageApplicationTypes";
-            this.SMItemManageApplicationTypes.Size = new System.Drawing.Size(404, 38);
+            this.SMItemManageApplicationTypes.Size = new System.Drawing.Size(436, 70);
             this.SMItemManageApplicationTypes.Text = "Manage Application Types";
             this.SMItemManageApplicationTypes.Click += new System.EventHandler(this.SMItemManageApplicationTypes_Click);
             // 
@@ -246,9 +248,8 @@ namespace DVLD_PresentationLayer
             // 
             this.SMItemManageTestTypes.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SMItemManageTestTypes.Image = ((System.Drawing.Image)(resources.GetObject("SMItemManageTestTypes.Image")));
-            this.SMItemManageTestTypes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SMItemManageTestTypes.Name = "SMItemManageTestTypes";
-            this.SMItemManageTestTypes.Size = new System.Drawing.Size(404, 38);
+            this.SMItemManageTestTypes.Size = new System.Drawing.Size(436, 70);
             this.SMItemManageTestTypes.Text = "Manage Test Types";
             this.SMItemManageTestTypes.Click += new System.EventHandler(this.SMItemManageTestTypes_Click);
             // 

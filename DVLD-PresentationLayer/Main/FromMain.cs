@@ -88,5 +88,10 @@ namespace DVLD_PresentationLayer
             FONewInternationalLicenseApplication frm = new FONewInternationalLicenseApplication();
             frm.ShowDialog();
         }
+        private void SMItemRetakeTest_Click(object sender, EventArgs e)
+        {
+            FOManageLocalDrivingApplication frm = new FOManageLocalDrivingApplication(_currentUser);
+            frm.ShowDialog();
+        }
     }
 }
