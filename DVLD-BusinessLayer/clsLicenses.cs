@@ -244,9 +244,9 @@ namespace DVLD_BusinessLayer
 
             NewLicense.ExpirationDate = DateTime.Now.AddYears(DefaultValidityLength);
             NewLicense.Notes = Notes;
-            NewLicense.PaidFees = this.LicenseClassIfo.ClassFees;
-            NewLicense.IsActive = true;
-            NewLicense.IssueReason = clsLicense.enIssueReason.Renew;
+            NewLicense.PaidFees = clsManageApplicationTypes.Find((int)clsApplications.enApplicationType.NewDrivingLicense).ApplicationFees;
+            NewLicense.IsActive = ActiveStatus.Yes;
+            NewLicense.IssueReason = IssueReason.Renew;
             NewLicense.CreatedByUserID = CreatedByUserID;
 
 
