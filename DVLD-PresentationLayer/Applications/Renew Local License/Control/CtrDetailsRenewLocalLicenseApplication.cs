@@ -19,7 +19,7 @@ namespace DVLD_PresentationLayer
     {
         private clsNewLocalDrivingApplication _Application;
 
-        public CtrDetailsInternationalLicenseApplication()
+        public CtrDetailsRenewLocalLicenseApplication()
         {
             InitializeComponent();
         }
@@ -36,28 +36,41 @@ namespace DVLD_PresentationLayer
         {
             set => LblValueIssueDate.Text = value;
         }
-        public string Fees
+        public string ApplicationFees
         {
             set => LblValueApplicationFees.Text = value;
         }
-     
-        public string CreatedBy
+
+        public string LicenseFees
         {
-            set => LblvalueCreatedBy.Text = value;
+            set => LblValueLicenseFees.Text = value;
         }
-        public string LLicenseID
+        public string Notes
         {
-            set => LblvalueLLicenseID.Text = value;
+            set => TBNotes.Text = value;
         }
-        public string LocalLicenseID
+        
+        public string RenewedLicenseID
         {
-            set => LblvalueLocalLicenseID.Text = value;
+            set => LblvalueRenewedLicenseID.Text = value;
+        }
+        public string OldLicenseID
+        {
+            set => LblvalueOldLicenseID.Text = value;
         }
         public string ExpirationDate
         {
             set => LblvalueExpirationDate.Text = value;
         }
-         private void LLEditApplicationInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        public string CreatedBy
+        {
+            set => LblvalueCreatedBy.Text = value;
+        }
+        public string TotalFees
+        {
+            set => LblvalueTotalFees.Text = value;
+        }
+        private void LLEditApplicationInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             FOPersonInfo frm = new FOPersonInfo(_Application.ApplicantPersonID);
             frm.ShowDialog();

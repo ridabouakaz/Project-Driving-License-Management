@@ -36,11 +36,17 @@ namespace DVLD_PresentationLayer
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.OFDialogPictureImage = new System.Windows.Forms.OpenFileDialog();
             this.GBUserControlDetailesApplication = new System.Windows.Forms.GroupBox();
+            this.TBNotes = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.LblNotes = new System.Windows.Forms.Label();
+            this.LblValueLicenseFees = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.LblLicenseFees = new System.Windows.Forms.Label();
             this.PBApplicationID = new System.Windows.Forms.PictureBox();
             this.LblValueILApplicationID = new System.Windows.Forms.Label();
             this.LblvalueExpirationDate = new System.Windows.Forms.Label();
-            this.LblvalueLocalLicenseID = new System.Windows.Forms.Label();
-            this.LblvalueLLicenseID = new System.Windows.Forms.Label();
+            this.LblvalueOldLicenseID = new System.Windows.Forms.Label();
+            this.LblvalueRenewedLicenseID = new System.Windows.Forms.Label();
             this.LblvalueCreatedBy = new System.Windows.Forms.Label();
             this.LblValueIssueDate = new System.Windows.Forms.Label();
             this.LblValueApplicationDate = new System.Windows.Forms.Label();
@@ -51,8 +57,8 @@ namespace DVLD_PresentationLayer
             this.PBPhone = new System.Windows.Forms.PictureBox();
             this.PBDateOfBrith = new System.Windows.Forms.PictureBox();
             this.LblExpirationDate = new System.Windows.Forms.Label();
-            this.LblLocalLicenseID = new System.Windows.Forms.Label();
-            this.LblILLicenseID = new System.Windows.Forms.Label();
+            this.LblOldLicenseID = new System.Windows.Forms.Label();
+            this.LblRenewedLicenseID = new System.Windows.Forms.Label();
             this.PBEmail = new System.Windows.Forms.PictureBox();
             this.PBNationalNo = new System.Windows.Forms.PictureBox();
             this.PBName = new System.Windows.Forms.PictureBox();
@@ -60,14 +66,13 @@ namespace DVLD_PresentationLayer
             this.LblApplicationFees = new System.Windows.Forms.Label();
             this.LblIssueDate = new System.Windows.Forms.Label();
             this.LblApplicationDate = new System.Windows.Forms.Label();
-            this.LblLicenseFees = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.LblValueLicenseFees = new System.Windows.Forms.Label();
-            this.LblNotes = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.TBNotes = new System.Windows.Forms.TextBox();
+            this.LblTotalFees = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.LblvalueTotalFees = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.GBUserControlDetailesApplication.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBApplicationID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBGender)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBCountry)).BeginInit();
@@ -76,8 +81,7 @@ namespace DVLD_PresentationLayer
             ((System.ComponentModel.ISupportInitialize)(this.PBEmail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBNationalNo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // errorProvider1
@@ -91,6 +95,9 @@ namespace DVLD_PresentationLayer
             // GBUserControlDetailesApplication
             // 
             this.GBUserControlDetailesApplication.BackColor = System.Drawing.Color.White;
+            this.GBUserControlDetailesApplication.Controls.Add(this.LblvalueTotalFees);
+            this.GBUserControlDetailesApplication.Controls.Add(this.pictureBox3);
+            this.GBUserControlDetailesApplication.Controls.Add(this.LblTotalFees);
             this.GBUserControlDetailesApplication.Controls.Add(this.TBNotes);
             this.GBUserControlDetailesApplication.Controls.Add(this.pictureBox2);
             this.GBUserControlDetailesApplication.Controls.Add(this.LblNotes);
@@ -100,8 +107,8 @@ namespace DVLD_PresentationLayer
             this.GBUserControlDetailesApplication.Controls.Add(this.PBApplicationID);
             this.GBUserControlDetailesApplication.Controls.Add(this.LblValueILApplicationID);
             this.GBUserControlDetailesApplication.Controls.Add(this.LblvalueExpirationDate);
-            this.GBUserControlDetailesApplication.Controls.Add(this.LblvalueLocalLicenseID);
-            this.GBUserControlDetailesApplication.Controls.Add(this.LblvalueLLicenseID);
+            this.GBUserControlDetailesApplication.Controls.Add(this.LblvalueOldLicenseID);
+            this.GBUserControlDetailesApplication.Controls.Add(this.LblvalueRenewedLicenseID);
             this.GBUserControlDetailesApplication.Controls.Add(this.LblvalueCreatedBy);
             this.GBUserControlDetailesApplication.Controls.Add(this.LblValueIssueDate);
             this.GBUserControlDetailesApplication.Controls.Add(this.LblValueApplicationDate);
@@ -112,8 +119,8 @@ namespace DVLD_PresentationLayer
             this.GBUserControlDetailesApplication.Controls.Add(this.PBPhone);
             this.GBUserControlDetailesApplication.Controls.Add(this.PBDateOfBrith);
             this.GBUserControlDetailesApplication.Controls.Add(this.LblExpirationDate);
-            this.GBUserControlDetailesApplication.Controls.Add(this.LblLocalLicenseID);
-            this.GBUserControlDetailesApplication.Controls.Add(this.LblILLicenseID);
+            this.GBUserControlDetailesApplication.Controls.Add(this.LblOldLicenseID);
+            this.GBUserControlDetailesApplication.Controls.Add(this.LblRenewedLicenseID);
             this.GBUserControlDetailesApplication.Controls.Add(this.PBEmail);
             this.GBUserControlDetailesApplication.Controls.Add(this.PBNationalNo);
             this.GBUserControlDetailesApplication.Controls.Add(this.PBName);
@@ -128,6 +135,72 @@ namespace DVLD_PresentationLayer
             this.GBUserControlDetailesApplication.TabIndex = 48;
             this.GBUserControlDetailesApplication.TabStop = false;
             this.GBUserControlDetailesApplication.Text = "Application New License Info";
+            // 
+            // TBNotes
+            // 
+            this.TBNotes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(243)))), ((int)(((byte)(247)))));
+            this.TBNotes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TBNotes.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.TBNotes.ForeColor = System.Drawing.Color.Black;
+            this.TBNotes.Location = new System.Drawing.Point(286, 175);
+            this.TBNotes.Multiline = true;
+            this.TBNotes.Name = "TBNotes";
+            this.TBNotes.Size = new System.Drawing.Size(776, 36);
+            this.TBNotes.TabIndex = 53;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(201, 168);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(28, 24);
+            this.pictureBox2.TabIndex = 52;
+            this.pictureBox2.TabStop = false;
+            // 
+            // LblNotes
+            // 
+            this.LblNotes.AutoSize = true;
+            this.LblNotes.BackColor = System.Drawing.Color.Transparent;
+            this.LblNotes.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.LblNotes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblNotes.Location = new System.Drawing.Point(16, 167);
+            this.LblNotes.Name = "LblNotes";
+            this.LblNotes.Size = new System.Drawing.Size(61, 23);
+            this.LblNotes.TabIndex = 51;
+            this.LblNotes.Text = "Notes:";
+            // 
+            // LblValueLicenseFees
+            // 
+            this.LblValueLicenseFees.AutoSize = true;
+            this.LblValueLicenseFees.BackColor = System.Drawing.Color.Transparent;
+            this.LblValueLicenseFees.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.LblValueLicenseFees.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblValueLicenseFees.Location = new System.Drawing.Point(282, 142);
+            this.LblValueLicenseFees.Name = "LblValueLicenseFees";
+            this.LblValueLicenseFees.Size = new System.Drawing.Size(78, 23);
+            this.LblValueLicenseFees.TabIndex = 50;
+            this.LblValueLicenseFees.Text = "[????????]";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(201, 145);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(28, 24);
+            this.pictureBox1.TabIndex = 49;
+            this.pictureBox1.TabStop = false;
+            // 
+            // LblLicenseFees
+            // 
+            this.LblLicenseFees.AutoSize = true;
+            this.LblLicenseFees.BackColor = System.Drawing.Color.Transparent;
+            this.LblLicenseFees.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.LblLicenseFees.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblLicenseFees.Location = new System.Drawing.Point(16, 141);
+            this.LblLicenseFees.Name = "LblLicenseFees";
+            this.LblLicenseFees.Size = new System.Drawing.Size(111, 23);
+            this.LblLicenseFees.TabIndex = 48;
+            this.LblLicenseFees.Text = "License Fees:";
             // 
             // PBApplicationID
             // 
@@ -159,35 +232,35 @@ namespace DVLD_PresentationLayer
             this.LblvalueExpirationDate.BackColor = System.Drawing.Color.Transparent;
             this.LblvalueExpirationDate.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.LblvalueExpirationDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblvalueExpirationDate.Location = new System.Drawing.Point(984, 93);
+            this.LblvalueExpirationDate.Location = new System.Drawing.Point(984, 88);
             this.LblvalueExpirationDate.Name = "LblvalueExpirationDate";
             this.LblvalueExpirationDate.Size = new System.Drawing.Size(78, 23);
             this.LblvalueExpirationDate.TabIndex = 45;
             this.LblvalueExpirationDate.Text = "[????????]";
             // 
-            // LblvalueLocalLicenseID
+            // LblvalueOldLicenseID
             // 
-            this.LblvalueLocalLicenseID.AutoSize = true;
-            this.LblvalueLocalLicenseID.BackColor = System.Drawing.Color.Transparent;
-            this.LblvalueLocalLicenseID.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.LblvalueLocalLicenseID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblvalueLocalLicenseID.Location = new System.Drawing.Point(984, 65);
-            this.LblvalueLocalLicenseID.Name = "LblvalueLocalLicenseID";
-            this.LblvalueLocalLicenseID.Size = new System.Drawing.Size(78, 23);
-            this.LblvalueLocalLicenseID.TabIndex = 44;
-            this.LblvalueLocalLicenseID.Text = "[????????]";
+            this.LblvalueOldLicenseID.AutoSize = true;
+            this.LblvalueOldLicenseID.BackColor = System.Drawing.Color.Transparent;
+            this.LblvalueOldLicenseID.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.LblvalueOldLicenseID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblvalueOldLicenseID.Location = new System.Drawing.Point(984, 61);
+            this.LblvalueOldLicenseID.Name = "LblvalueOldLicenseID";
+            this.LblvalueOldLicenseID.Size = new System.Drawing.Size(78, 23);
+            this.LblvalueOldLicenseID.TabIndex = 44;
+            this.LblvalueOldLicenseID.Text = "[????????]";
             // 
-            // LblvalueLLicenseID
+            // LblvalueRenewedLicenseID
             // 
-            this.LblvalueLLicenseID.AutoSize = true;
-            this.LblvalueLLicenseID.BackColor = System.Drawing.Color.Transparent;
-            this.LblvalueLLicenseID.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.LblvalueLLicenseID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblvalueLLicenseID.Location = new System.Drawing.Point(984, 34);
-            this.LblvalueLLicenseID.Name = "LblvalueLLicenseID";
-            this.LblvalueLLicenseID.Size = new System.Drawing.Size(78, 23);
-            this.LblvalueLLicenseID.TabIndex = 43;
-            this.LblvalueLLicenseID.Text = "[????????]";
+            this.LblvalueRenewedLicenseID.AutoSize = true;
+            this.LblvalueRenewedLicenseID.BackColor = System.Drawing.Color.Transparent;
+            this.LblvalueRenewedLicenseID.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.LblvalueRenewedLicenseID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblvalueRenewedLicenseID.Location = new System.Drawing.Point(984, 34);
+            this.LblvalueRenewedLicenseID.Name = "LblvalueRenewedLicenseID";
+            this.LblvalueRenewedLicenseID.Size = new System.Drawing.Size(78, 23);
+            this.LblvalueRenewedLicenseID.TabIndex = 43;
+            this.LblvalueRenewedLicenseID.Text = "[????????]";
             // 
             // LblvalueCreatedBy
             // 
@@ -195,7 +268,7 @@ namespace DVLD_PresentationLayer
             this.LblvalueCreatedBy.BackColor = System.Drawing.Color.Transparent;
             this.LblvalueCreatedBy.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.LblvalueCreatedBy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblvalueCreatedBy.Location = new System.Drawing.Point(984, 124);
+            this.LblvalueCreatedBy.Location = new System.Drawing.Point(984, 116);
             this.LblvalueCreatedBy.Name = "LblvalueCreatedBy";
             this.LblvalueCreatedBy.Size = new System.Drawing.Size(78, 23);
             this.LblvalueCreatedBy.TabIndex = 41;
@@ -297,29 +370,29 @@ namespace DVLD_PresentationLayer
             this.LblExpirationDate.TabIndex = 24;
             this.LblExpirationDate.Text = "Expiration Date:";
             // 
-            // LblLocalLicenseID
+            // LblOldLicenseID
             // 
-            this.LblLocalLicenseID.AutoSize = true;
-            this.LblLocalLicenseID.BackColor = System.Drawing.Color.Transparent;
-            this.LblLocalLicenseID.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.LblLocalLicenseID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblLocalLicenseID.Location = new System.Drawing.Point(725, 65);
-            this.LblLocalLicenseID.Name = "LblLocalLicenseID";
-            this.LblLocalLicenseID.Size = new System.Drawing.Size(141, 23);
-            this.LblLocalLicenseID.TabIndex = 23;
-            this.LblLocalLicenseID.Text = "Local License ID:";
+            this.LblOldLicenseID.AutoSize = true;
+            this.LblOldLicenseID.BackColor = System.Drawing.Color.Transparent;
+            this.LblOldLicenseID.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.LblOldLicenseID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblOldLicenseID.Location = new System.Drawing.Point(725, 65);
+            this.LblOldLicenseID.Name = "LblOldLicenseID";
+            this.LblOldLicenseID.Size = new System.Drawing.Size(129, 23);
+            this.LblOldLicenseID.TabIndex = 23;
+            this.LblOldLicenseID.Text = "Old License ID:";
             // 
-            // LblILLicenseID
+            // LblRenewedLicenseID
             // 
-            this.LblILLicenseID.AutoSize = true;
-            this.LblILLicenseID.BackColor = System.Drawing.Color.Transparent;
-            this.LblILLicenseID.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.LblILLicenseID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblILLicenseID.Location = new System.Drawing.Point(725, 34);
-            this.LblILLicenseID.Name = "LblILLicenseID";
-            this.LblILLicenseID.Size = new System.Drawing.Size(119, 23);
-            this.LblILLicenseID.TabIndex = 22;
-            this.LblILLicenseID.Text = "I.L.License ID:";
+            this.LblRenewedLicenseID.AutoSize = true;
+            this.LblRenewedLicenseID.BackColor = System.Drawing.Color.Transparent;
+            this.LblRenewedLicenseID.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.LblRenewedLicenseID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblRenewedLicenseID.Location = new System.Drawing.Point(725, 34);
+            this.LblRenewedLicenseID.Name = "LblRenewedLicenseID";
+            this.LblRenewedLicenseID.Size = new System.Drawing.Size(173, 23);
+            this.LblRenewedLicenseID.TabIndex = 22;
+            this.LblRenewedLicenseID.Text = "Renewed License ID:";
             // 
             // PBEmail
             // 
@@ -357,7 +430,7 @@ namespace DVLD_PresentationLayer
             this.LblCreatedBy.BackColor = System.Drawing.Color.Transparent;
             this.LblCreatedBy.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.LblCreatedBy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblCreatedBy.Location = new System.Drawing.Point(725, 121);
+            this.LblCreatedBy.Location = new System.Drawing.Point(725, 119);
             this.LblCreatedBy.Name = "LblCreatedBy";
             this.LblCreatedBy.Size = new System.Drawing.Size(103, 23);
             this.LblCreatedBy.TabIndex = 3;
@@ -399,71 +472,38 @@ namespace DVLD_PresentationLayer
             this.LblApplicationDate.TabIndex = 0;
             this.LblApplicationDate.Text = "Application Date:";
             // 
-            // LblLicenseFees
+            // LblTotalFees
             // 
-            this.LblLicenseFees.AutoSize = true;
-            this.LblLicenseFees.BackColor = System.Drawing.Color.Transparent;
-            this.LblLicenseFees.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.LblLicenseFees.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblLicenseFees.Location = new System.Drawing.Point(16, 141);
-            this.LblLicenseFees.Name = "LblLicenseFees";
-            this.LblLicenseFees.Size = new System.Drawing.Size(111, 23);
-            this.LblLicenseFees.TabIndex = 48;
-            this.LblLicenseFees.Text = "License Fees:";
+            this.LblTotalFees.AutoSize = true;
+            this.LblTotalFees.BackColor = System.Drawing.Color.Transparent;
+            this.LblTotalFees.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.LblTotalFees.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblTotalFees.Location = new System.Drawing.Point(725, 146);
+            this.LblTotalFees.Name = "LblTotalFees";
+            this.LblTotalFees.Size = new System.Drawing.Size(93, 23);
+            this.LblTotalFees.TabIndex = 54;
+            this.LblTotalFees.Text = "Total Fees:";
             // 
-            // pictureBox1
+            // pictureBox3
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(201, 145);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(28, 24);
-            this.pictureBox1.TabIndex = 49;
-            this.pictureBox1.TabStop = false;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(912, 145);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(40, 24);
+            this.pictureBox3.TabIndex = 55;
+            this.pictureBox3.TabStop = false;
             // 
-            // LblValueLicenseFees
+            // LblvalueTotalFees
             // 
-            this.LblValueLicenseFees.AutoSize = true;
-            this.LblValueLicenseFees.BackColor = System.Drawing.Color.Transparent;
-            this.LblValueLicenseFees.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.LblValueLicenseFees.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblValueLicenseFees.Location = new System.Drawing.Point(282, 142);
-            this.LblValueLicenseFees.Name = "LblValueLicenseFees";
-            this.LblValueLicenseFees.Size = new System.Drawing.Size(78, 23);
-            this.LblValueLicenseFees.TabIndex = 50;
-            this.LblValueLicenseFees.Text = "[????????]";
-            // 
-            // LblNotes
-            // 
-            this.LblNotes.AutoSize = true;
-            this.LblNotes.BackColor = System.Drawing.Color.Transparent;
-            this.LblNotes.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.LblNotes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblNotes.Location = new System.Drawing.Point(16, 167);
-            this.LblNotes.Name = "LblNotes";
-            this.LblNotes.Size = new System.Drawing.Size(61, 23);
-            this.LblNotes.TabIndex = 51;
-            this.LblNotes.Text = "Notes:";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(201, 168);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(28, 24);
-            this.pictureBox2.TabIndex = 52;
-            this.pictureBox2.TabStop = false;
-            // 
-            // TBNotes
-            // 
-            this.TBNotes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(243)))), ((int)(((byte)(247)))));
-            this.TBNotes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TBNotes.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.TBNotes.ForeColor = System.Drawing.Color.Black;
-            this.TBNotes.Location = new System.Drawing.Point(286, 167);
-            this.TBNotes.Multiline = true;
-            this.TBNotes.Name = "TBNotes";
-            this.TBNotes.Size = new System.Drawing.Size(776, 44);
-            this.TBNotes.TabIndex = 53;
+            this.LblvalueTotalFees.AutoSize = true;
+            this.LblvalueTotalFees.BackColor = System.Drawing.Color.Transparent;
+            this.LblvalueTotalFees.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.LblvalueTotalFees.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblvalueTotalFees.Location = new System.Drawing.Point(984, 142);
+            this.LblvalueTotalFees.Name = "LblvalueTotalFees";
+            this.LblvalueTotalFees.Size = new System.Drawing.Size(78, 23);
+            this.LblvalueTotalFees.TabIndex = 56;
+            this.LblvalueTotalFees.Text = "[????????]";
             // 
             // CtrDetailsRenewLocalLicenseApplication
             // 
@@ -476,6 +516,8 @@ namespace DVLD_PresentationLayer
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.GBUserControlDetailesApplication.ResumeLayout(false);
             this.GBUserControlDetailesApplication.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBApplicationID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBGender)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBCountry)).EndInit();
@@ -484,8 +526,7 @@ namespace DVLD_PresentationLayer
             ((System.ComponentModel.ISupportInitialize)(this.PBEmail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBNationalNo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -497,8 +538,8 @@ namespace DVLD_PresentationLayer
         private PictureBox PBApplicationID;
         private Label LblValueILApplicationID;
         private Label LblvalueExpirationDate;
-        private Label LblvalueLocalLicenseID;
-        private Label LblvalueLLicenseID;
+        private Label LblvalueOldLicenseID;
+        private Label LblvalueRenewedLicenseID;
         private Label LblvalueCreatedBy;
         private Label LblValueIssueDate;
         private Label LblValueApplicationDate;
@@ -509,8 +550,8 @@ namespace DVLD_PresentationLayer
         private PictureBox PBPhone;
         private PictureBox PBDateOfBrith;
         private Label LblExpirationDate;
-        private Label LblLocalLicenseID;
-        private Label LblILLicenseID;
+        private Label LblOldLicenseID;
+        private Label LblRenewedLicenseID;
         private PictureBox PBEmail;
         private PictureBox PBNationalNo;
         private PictureBox PBName;
@@ -524,5 +565,8 @@ namespace DVLD_PresentationLayer
         private Label LblLicenseFees;
         private PictureBox pictureBox2;
         private TextBox TBNotes;
+        private Label LblvalueTotalFees;
+        private PictureBox pictureBox3;
+        private Label LblTotalFees;
     }
 }
