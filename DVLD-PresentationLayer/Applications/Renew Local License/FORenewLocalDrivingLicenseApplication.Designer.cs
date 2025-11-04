@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FORenewLocalDrivingLicenseApplication));
             this.LblHeaderTitle = new System.Windows.Forms.Label();
-            this.BtnIssue = new System.Windows.Forms.Button();
+            this.BtnRenew = new System.Windows.Forms.Button();
             this.BtnAddClose = new System.Windows.Forms.Button();
             this.LLShowLicensesHistroy = new System.Windows.Forms.LinkLabel();
             this.LLShowLicensesinfo = new System.Windows.Forms.LinkLabel();
-            this.ctrDetailsInternationalLicenseApplication1 = new DVLD_PresentationLayer.CtrDetailsInternationalLicenseApplication();
+            this.ctrDetailsRenewLocalLicenseApplication1 = new DVLD_PresentationLayer.CtrDetailsRenewLocalLicenseApplication();
             this.ctrDetailsLicenseWithFilter1 = new DVLD_PresentationLayer.Licenses.Control.CtrDetailsLicenseWithFilter();
             this.SuspendLayout();
             // 
@@ -51,28 +51,28 @@
             this.LblHeaderTitle.TabIndex = 4;
             this.LblHeaderTitle.Text = "Renew License Application";
             // 
-            // BtnIssue
+            // BtnRenew
             // 
-            this.BtnIssue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnIssue.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.BtnIssue.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.BtnIssue.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.BtnIssue.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
-            this.BtnIssue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnIssue.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.BtnIssue.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BtnIssue.Image = ((System.Drawing.Image)(resources.GetObject("BtnIssue.Image")));
-            this.BtnIssue.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnIssue.Location = new System.Drawing.Point(993, 787);
-            this.BtnIssue.Name = "BtnIssue";
-            this.BtnIssue.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.BtnIssue.Size = new System.Drawing.Size(155, 50);
-            this.BtnIssue.TabIndex = 57;
-            this.BtnIssue.Text = "Issue";
-            this.BtnIssue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnIssue.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnIssue.UseVisualStyleBackColor = false;
-            this.BtnIssue.Click += new System.EventHandler(this.BtnIssue_Click);
+            this.BtnRenew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnRenew.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnRenew.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BtnRenew.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.BtnRenew.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.BtnRenew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnRenew.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.BtnRenew.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BtnRenew.Image = ((System.Drawing.Image)(resources.GetObject("BtnRenew.Image")));
+            this.BtnRenew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnRenew.Location = new System.Drawing.Point(993, 787);
+            this.BtnRenew.Name = "BtnRenew";
+            this.BtnRenew.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.BtnRenew.Size = new System.Drawing.Size(155, 50);
+            this.BtnRenew.TabIndex = 57;
+            this.BtnRenew.Text = "Renew";
+            this.BtnRenew.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnRenew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnRenew.UseVisualStyleBackColor = false;
+            this.BtnRenew.Click += new System.EventHandler(this.BtnIssue_Click);
             // 
             // BtnAddClose
             // 
@@ -115,19 +115,19 @@
             this.LLShowLicensesinfo.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.LLShowLicensesinfo.Location = new System.Drawing.Point(231, 801);
             this.LLShowLicensesinfo.Name = "LLShowLicensesinfo";
-            this.LLShowLicensesinfo.Size = new System.Drawing.Size(171, 25);
+            this.LLShowLicensesinfo.Size = new System.Drawing.Size(214, 25);
             this.LLShowLicensesinfo.TabIndex = 60;
             this.LLShowLicensesinfo.TabStop = true;
-            this.LLShowLicensesinfo.Text = "Show Licenses Info";
+            this.LLShowLicensesinfo.Text = "Show New Licenses Info";
             this.LLShowLicensesinfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LLShowLicensesinfo_LinkClicked);
             // 
-            // ctrDetailsInternationalLicenseApplication1
+            // ctrDetailsRenewLocalLicenseApplication1
             // 
-            this.ctrDetailsInternationalLicenseApplication1.BackColor = System.Drawing.Color.White;
-            this.ctrDetailsInternationalLicenseApplication1.Location = new System.Drawing.Point(0, 548);
-            this.ctrDetailsInternationalLicenseApplication1.Name = "ctrDetailsInternationalLicenseApplication1";
-            this.ctrDetailsInternationalLicenseApplication1.Size = new System.Drawing.Size(1155, 219);
-            this.ctrDetailsInternationalLicenseApplication1.TabIndex = 6;
+            this.ctrDetailsRenewLocalLicenseApplication1.BackColor = System.Drawing.Color.White;
+            this.ctrDetailsRenewLocalLicenseApplication1.Location = new System.Drawing.Point(0, 557);
+            this.ctrDetailsRenewLocalLicenseApplication1.Name = "ctrDetailsRenewLocalLicenseApplication1";
+            this.ctrDetailsRenewLocalLicenseApplication1.Size = new System.Drawing.Size(1155, 224);
+            this.ctrDetailsRenewLocalLicenseApplication1.TabIndex = 61;
             // 
             // ctrDetailsLicenseWithFilter1
             // 
@@ -137,7 +137,7 @@
             this.ctrDetailsLicenseWithFilter1.Location = new System.Drawing.Point(0, 61);
             this.ctrDetailsLicenseWithFilter1.Margin = new System.Windows.Forms.Padding(2);
             this.ctrDetailsLicenseWithFilter1.Name = "ctrDetailsLicenseWithFilter1";
-            this.ctrDetailsLicenseWithFilter1.Size = new System.Drawing.Size(1155, 482);
+            this.ctrDetailsLicenseWithFilter1.Size = new System.Drawing.Size(1155, 491);
             this.ctrDetailsLicenseWithFilter1.TabIndex = 5;
             this.ctrDetailsLicenseWithFilter1.OnLicenseSelected += new System.Action<int>(this.ctrDetailsLicenseWithFilter1_OnLicenseSelected);
             // 
@@ -147,11 +147,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1167, 860);
+            this.Controls.Add(this.ctrDetailsRenewLocalLicenseApplication1);
             this.Controls.Add(this.LLShowLicensesinfo);
             this.Controls.Add(this.LLShowLicensesHistroy);
             this.Controls.Add(this.BtnAddClose);
-            this.Controls.Add(this.BtnIssue);
-            this.Controls.Add(this.ctrDetailsInternationalLicenseApplication1);
+            this.Controls.Add(this.BtnRenew);
             this.Controls.Add(this.ctrDetailsLicenseWithFilter1);
             this.Controls.Add(this.LblHeaderTitle);
             this.Name = "FORenewLocalDrivingLicenseApplication";
@@ -167,10 +167,10 @@
 
         private System.Windows.Forms.Label LblHeaderTitle;
         private Licenses.Control.CtrDetailsLicenseWithFilter ctrDetailsLicenseWithFilter1;
-        private CtrDetailsInternationalLicenseApplication ctrDetailsInternationalLicenseApplication1;
-        private System.Windows.Forms.Button BtnIssue;
+        private System.Windows.Forms.Button BtnRenew;
         private System.Windows.Forms.Button BtnAddClose;
         private System.Windows.Forms.LinkLabel LLShowLicensesHistroy;
         private System.Windows.Forms.LinkLabel LLShowLicensesinfo;
+        private CtrDetailsRenewLocalLicenseApplication ctrDetailsRenewLocalLicenseApplication1;
     }
 }

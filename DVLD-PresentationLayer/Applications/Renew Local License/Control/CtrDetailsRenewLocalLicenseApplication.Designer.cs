@@ -36,6 +36,9 @@ namespace DVLD_PresentationLayer
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.OFDialogPictureImage = new System.Windows.Forms.OpenFileDialog();
             this.GBUserControlDetailesApplication = new System.Windows.Forms.GroupBox();
+            this.LblvalueTotalFees = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.LblTotalFees = new System.Windows.Forms.Label();
             this.TBNotes = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.LblNotes = new System.Windows.Forms.Label();
@@ -66,11 +69,9 @@ namespace DVLD_PresentationLayer
             this.LblApplicationFees = new System.Windows.Forms.Label();
             this.LblIssueDate = new System.Windows.Forms.Label();
             this.LblApplicationDate = new System.Windows.Forms.Label();
-            this.LblTotalFees = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.LblvalueTotalFees = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.GBUserControlDetailesApplication.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBApplicationID)).BeginInit();
@@ -81,7 +82,6 @@ namespace DVLD_PresentationLayer
             ((System.ComponentModel.ISupportInitialize)(this.PBEmail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBNationalNo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // errorProvider1
@@ -131,10 +131,43 @@ namespace DVLD_PresentationLayer
             this.GBUserControlDetailesApplication.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.GBUserControlDetailesApplication.Location = new System.Drawing.Point(18, 3);
             this.GBUserControlDetailesApplication.Name = "GBUserControlDetailesApplication";
-            this.GBUserControlDetailesApplication.Size = new System.Drawing.Size(1130, 217);
+            this.GBUserControlDetailesApplication.Size = new System.Drawing.Size(1119, 217);
             this.GBUserControlDetailesApplication.TabIndex = 48;
             this.GBUserControlDetailesApplication.TabStop = false;
             this.GBUserControlDetailesApplication.Text = "Application New License Info";
+            // 
+            // LblvalueTotalFees
+            // 
+            this.LblvalueTotalFees.AutoSize = true;
+            this.LblvalueTotalFees.BackColor = System.Drawing.Color.Transparent;
+            this.LblvalueTotalFees.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.LblvalueTotalFees.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblvalueTotalFees.Location = new System.Drawing.Point(984, 142);
+            this.LblvalueTotalFees.Name = "LblvalueTotalFees";
+            this.LblvalueTotalFees.Size = new System.Drawing.Size(78, 23);
+            this.LblvalueTotalFees.TabIndex = 56;
+            this.LblvalueTotalFees.Text = "[????????]";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(912, 145);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(40, 24);
+            this.pictureBox3.TabIndex = 55;
+            this.pictureBox3.TabStop = false;
+            // 
+            // LblTotalFees
+            // 
+            this.LblTotalFees.AutoSize = true;
+            this.LblTotalFees.BackColor = System.Drawing.Color.Transparent;
+            this.LblTotalFees.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.LblTotalFees.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LblTotalFees.Location = new System.Drawing.Point(725, 146);
+            this.LblTotalFees.Name = "LblTotalFees";
+            this.LblTotalFees.Size = new System.Drawing.Size(93, 23);
+            this.LblTotalFees.TabIndex = 54;
+            this.LblTotalFees.Text = "Total Fees:";
             // 
             // TBNotes
             // 
@@ -472,39 +505,6 @@ namespace DVLD_PresentationLayer
             this.LblApplicationDate.TabIndex = 0;
             this.LblApplicationDate.Text = "Application Date:";
             // 
-            // LblTotalFees
-            // 
-            this.LblTotalFees.AutoSize = true;
-            this.LblTotalFees.BackColor = System.Drawing.Color.Transparent;
-            this.LblTotalFees.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.LblTotalFees.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblTotalFees.Location = new System.Drawing.Point(725, 146);
-            this.LblTotalFees.Name = "LblTotalFees";
-            this.LblTotalFees.Size = new System.Drawing.Size(93, 23);
-            this.LblTotalFees.TabIndex = 54;
-            this.LblTotalFees.Text = "Total Fees:";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(912, 145);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(40, 24);
-            this.pictureBox3.TabIndex = 55;
-            this.pictureBox3.TabStop = false;
-            // 
-            // LblvalueTotalFees
-            // 
-            this.LblvalueTotalFees.AutoSize = true;
-            this.LblvalueTotalFees.BackColor = System.Drawing.Color.Transparent;
-            this.LblvalueTotalFees.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.LblvalueTotalFees.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblvalueTotalFees.Location = new System.Drawing.Point(984, 142);
-            this.LblvalueTotalFees.Name = "LblvalueTotalFees";
-            this.LblvalueTotalFees.Size = new System.Drawing.Size(78, 23);
-            this.LblvalueTotalFees.TabIndex = 56;
-            this.LblvalueTotalFees.Text = "[????????]";
-            // 
             // CtrDetailsRenewLocalLicenseApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -512,10 +512,11 @@ namespace DVLD_PresentationLayer
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.GBUserControlDetailesApplication);
             this.Name = "CtrDetailsRenewLocalLicenseApplication";
-            this.Size = new System.Drawing.Size(1169, 229);
+            this.Size = new System.Drawing.Size(1155, 229);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.GBUserControlDetailesApplication.ResumeLayout(false);
             this.GBUserControlDetailesApplication.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBApplicationID)).EndInit();
@@ -526,7 +527,6 @@ namespace DVLD_PresentationLayer
             ((System.ComponentModel.ISupportInitialize)(this.PBEmail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBNationalNo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
