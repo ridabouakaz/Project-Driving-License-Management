@@ -14,9 +14,10 @@ namespace DVLD_BusinessLayer
     {
         public int LocalDrivingLicenseApplicationID { set; get; }
 
-        public int ApplicationID { set; get; }
         public int LicenseClassID { set; get; }
         public clsApplications applications { set; get; }
+
+        public clsLicenseClass LicenseClassInfo;
         public clsNewLocalDrivingApplication()
         {
             LocalDrivingLicenseApplicationID = -1;
@@ -41,6 +42,7 @@ namespace DVLD_BusinessLayer
             this.CreatedByUserID = CreatedByUserID;
             this.CreatedByUserInfo = CreatedByUserInfo;
             this.LicenseClassID = LicenseClassID;
+            this.LicenseClassInfo = clsLicenseClass.Find(LicenseClassID);
             Mode = enMode.Update;
         }
         private bool _AddNewLocalDrivingApplication()
@@ -179,7 +181,7 @@ namespace DVLD_BusinessLayer
             License.IssueDate = DateTime.Now;
             License.ExpirationDate = DateTime.Now.AddYears(clsLicenses.GetDefaultValidityLengthById(this.LicenseClassID));
             License.Notes = Notes;
-            License.PaidFees = this.PaidFees;
+            License.PaidFees = this.LicenseClassInfo.ClassFees;
             License.IsActive = ActiveStatus.Yes;
             License.IssueReason = IssueReason.FirstTime;
             License.CreatedByUserID = CreatedByUserID;

@@ -49,6 +49,7 @@
     <Compile Include="clsDriverFilter.cs" />
     <Compile Include="clsDrivers.cs" />
     <Compile Include="clsInternationalLicense.cs" />
+    <Compile Include="clsLicenseClass.cs" />
     <Compile Include="clsLicenses.cs" />
     <Compile Include="clsManageTestTypes.cs" />
     <Compile Include="clsManageApplicationTypes.cs" />
