@@ -17,7 +17,7 @@ namespace DVLD_BusinessLayer
         public enum enMode { AddNew = 0, Update = 1 };
         public enMode Mode = enMode.AddNew;
         public clsDrivers DriverInfo;
-
+        public clsLicenseClass LicenseClassInfo;
         public int LicenseID { set; get; }
         public int ApplicationID { set; get; }
         public int DriverID { set; get; }
@@ -75,6 +75,7 @@ namespace DVLD_BusinessLayer
             this.IssueReason = issueReason;
             this.CreatedByUserID = createdByUserID;
             this.DriverInfo = clsDrivers.FindByDriverID(this.DriverID);
+            this.LicenseClassInfo = clsLicenseClass.Find(this.LicenseClass);
         }
         private bool _AddNewLicense()
         {
@@ -244,7 +245,7 @@ namespace DVLD_BusinessLayer
 
             NewLicense.ExpirationDate = DateTime.Now.AddYears(DefaultValidityLength);
             NewLicense.Notes = Notes;
-            NewLicense.PaidFees = clsManageApplicationTypes.Find((int)clsApplications.enApplicationType.NewDrivingLicense).ApplicationFees;
+            NewLicense.PaidFees = this.LicenseClassInfo.ClassFees;
             NewLicense.IsActive = ActiveStatus.Yes;
             NewLicense.IssueReason = IssueReason.Renew;
             NewLicense.CreatedByUserID = CreatedByUserID;

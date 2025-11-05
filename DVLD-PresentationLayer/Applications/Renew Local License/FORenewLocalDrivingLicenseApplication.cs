@@ -84,14 +84,17 @@ namespace DVLD_PresentationLayer.Applications.International_License
 
                 return;
             }
-            //ctrDetailsInternationalLicenseApplication1.ILApplicationID = InternationalLicense.ApplicationID.ToString();
-            //ctrDetailsInternationalLicenseApplication1.ApplicationDate = InternationalLicense.ApplicationDate.ToShortDateString();
-            //ctrDetailsInternationalLicenseApplication1.IssueDate= InternationalLicense.IssueDate.ToShortDateString();
-            //ctrDetailsInternationalLicenseApplication1.Fees= InternationalLicense.PaidFees.ToString();
-            //ctrDetailsInternationalLicenseApplication1.LocalLicenseID= InternationalLicense.IssuedUsingLocalLicenseID.ToString();
-            //ctrDetailsInternationalLicenseApplication1.ExpirationDate = InternationalLicense.ExpirationDate.ToShortDateString();
-            //ctrDetailsInternationalLicenseApplication1.CreatedBy=ctrDetailsLicenseWithFilter1.SelectedLicenseInfo.CreatedByUserID.ToString();
-            //ctrDetailsInternationalLicenseApplication1.LLicenseID= InternationalLicense.InternationalLicenseID.ToString();
+            ctrDetailsRenewLocalLicenseApplication1.ILApplicationID = InternationalLicense.ApplicationID.ToString();
+            ctrDetailsRenewLocalLicenseApplication1.ApplicationDate = InternationalLicense.ApplicationDate.ToShortDateString();
+            ctrDetailsRenewLocalLicenseApplication1.IssueDate = InternationalLicense.IssueDate.ToShortDateString();
+            ctrDetailsRenewLocalLicenseApplication1.ApplicationFees = InternationalLicense.IssueDate.ToShortDateString();
+            ctrDetailsRenewLocalLicenseApplication1.LicenseFees = InternationalLicense.PaidFees.ToString();
+            ctrDetailsRenewLocalLicenseApplication1.Notes = InternationalLicense.IssuedUsingLocalLicenseID.ToString();
+            ctrDetailsRenewLocalLicenseApplication1.RenewedLicenseID = InternationalLicense.IssuedUsingLocalLicenseID.ToString();
+            ctrDetailsRenewLocalLicenseApplication1.OldLicenseID = InternationalLicense.IssuedUsingLocalLicenseID.ToString();
+            ctrDetailsRenewLocalLicenseApplication1.ExpirationDate = InternationalLicense.ExpirationDate.ToShortDateString();
+            ctrDetailsRenewLocalLicenseApplication1.CreatedBy = ctrDetailsLicenseWithFilter1.SelectedLicenseInfo.CreatedByUserID.ToString();
+            ctrDetailsRenewLocalLicenseApplication1.TotalFees = InternationalLicense.InternationalLicenseID.ToString();
             _InternationalLicenseID = InternationalLicense.InternationalLicenseID;
             MessageBox.Show("International License Issued Successfully with ID=" + InternationalLicense.InternationalLicenseID.ToString(), "License Issued", MessageBoxButtons.OK, MessageBoxIcon.Information);
             BtnRenew.Enabled = false;
