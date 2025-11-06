@@ -397,7 +397,7 @@ namespace DVLD_PresentationLayer
             this.LblExpirationDate.BackColor = System.Drawing.Color.Transparent;
             this.LblExpirationDate.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.LblExpirationDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblExpirationDate.Location = new System.Drawing.Point(725, 93);
+            this.LblExpirationDate.Location = new System.Drawing.Point(725, 90);
             this.LblExpirationDate.Name = "LblExpirationDate";
             this.LblExpirationDate.Size = new System.Drawing.Size(140, 23);
             this.LblExpirationDate.TabIndex = 24;
@@ -409,7 +409,7 @@ namespace DVLD_PresentationLayer
             this.LblOldLicenseID.BackColor = System.Drawing.Color.Transparent;
             this.LblOldLicenseID.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.LblOldLicenseID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblOldLicenseID.Location = new System.Drawing.Point(725, 65);
+            this.LblOldLicenseID.Location = new System.Drawing.Point(725, 62);
             this.LblOldLicenseID.Name = "LblOldLicenseID";
             this.LblOldLicenseID.Size = new System.Drawing.Size(129, 23);
             this.LblOldLicenseID.TabIndex = 23;
@@ -463,7 +463,7 @@ namespace DVLD_PresentationLayer
             this.LblCreatedBy.BackColor = System.Drawing.Color.Transparent;
             this.LblCreatedBy.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.LblCreatedBy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LblCreatedBy.Location = new System.Drawing.Point(725, 119);
+            this.LblCreatedBy.Location = new System.Drawing.Point(725, 118);
             this.LblCreatedBy.Name = "LblCreatedBy";
             this.LblCreatedBy.Size = new System.Drawing.Size(103, 23);
             this.LblCreatedBy.TabIndex = 3;

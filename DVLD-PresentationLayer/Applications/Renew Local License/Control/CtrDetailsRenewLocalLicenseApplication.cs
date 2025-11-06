@@ -47,9 +47,10 @@ namespace DVLD_PresentationLayer
         }
         public string Notes
         {
+            get => TBNotes.Text.Trim();
             set => TBNotes.Text = value;
         }
-        
+
         public string RenewedLicenseID
         {
             set => LblvalueRenewedLicenseID.Text = value;

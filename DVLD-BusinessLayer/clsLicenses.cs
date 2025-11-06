@@ -117,6 +117,13 @@ namespace DVLD_BusinessLayer
             }
             return false;
         }
+        public Boolean IsLicenseExpired()
+        {
+
+            return (this.ExpirationDate < DateTime.Now);
+
+        }
+
         public static clsLicenses FindByLicenseID(int LicenseID)
         {
             int applicationID = -1;

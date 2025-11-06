@@ -36,18 +36,18 @@ namespace DVLD_PresentationLayer.Applications.International_License
             {
                 return;
             }
-            //check the license class, person could not issue international license without having
-            //normal license of class 3.
 
-
-            //check if person already have an active international license
-            int ActiveInternaionalLicenseID = clsInternationalLicense.GetActiveInternationalLicenseIDByDriverID(ctrDetailsLicenseWithFilter1.SelectedLicenseInfo.DriverID);
-
-            if (ActiveInternaionalLicenseID != -1)
+            if (ctrDetailsLicenseWithFilter1.SelectedLicenseInfo.IsLicenseExpired())
             {
-                MessageBox.Show("Person already have an active international license with ID = " + ActiveInternaionalLicenseID.ToString(), "Not allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Person already have an active  license with ID = " + SelectedLicenseID.ToString(), "Not allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 LLShowLicensesinfo.Enabled = true;
-                _InternationalLicenseID = ActiveInternaionalLicenseID;
+                BtnRenew.Enabled = false;
+                return;
+            }
+            if (ctrDetailsLicenseWithFilter1.SelectedLicenseInfo.IsActive==ActiveStatus.No)
+            {
+                MessageBox.Show("Selected License is not Not Active, choose an active license" , "Not allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                LLShowLicensesinfo.Enabled = true;
                 BtnRenew.Enabled = false;
                 return;
             }
@@ -56,15 +56,31 @@ namespace DVLD_PresentationLayer.Applications.International_License
         }
         private void BtnIssue_Click(object sender, EventArgs e)
         {
-            if (ctrDetailsLicenseWithFilter1.SelectedLicenseInfo.LicenseClass != 3)
-            {
-                MessageBox.Show("Selected License should be Class 3, select another one.", "Not allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            if (MessageBox.Show("Are you sure you want to issue the license?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+
+            if (MessageBox.Show("Are you sure you want to Renew the license?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
             {
                 return;
             }
+            clsLicenses NewLicense =
+                ctrDetailsLicenseWithFilter1.SelectedLicenseInfo.RenewLicense(ctrDetailsRenewLocalLicenseApplication1.Notes,
+                ctrDetailsLicenseWithFilter1.SelectedLicenseInfo.CreatedByUserID);
+            if (NewLicense == null)
+            {
+                MessageBox.Show("Faild to Renew the License", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return;
+            }
+
+            ctrDetailsRenewLocalLicenseApplication1.ILApplicationID = NewLicense.ApplicationID.ToString();
+            ctrDetailsRenewLocalLicenseApplication1.RenewedLicenseID = NewLicense.LicenseID.ToString();
+
+            MessageBox.Show("Licensed Renewed Successfully with ID=" + NewLicense.LicenseID.ToString(), "License Issued", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            BtnRenew.Enabled = false;
+            ctrDetailsLicenseWithFilter1.FilterEnabled = false;
+            //llShowLicenseInfo.Enabled = true;
+        
+
             clsInternationalLicense InternationalLicense = new clsInternationalLicense();
             //those are the information for the base application, because it inhirts from application, they are part of the sub class.
 

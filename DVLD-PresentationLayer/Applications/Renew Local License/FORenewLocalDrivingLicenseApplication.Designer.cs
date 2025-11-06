@@ -95,7 +95,6 @@
             this.BtnAddClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnAddClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnAddClose.UseVisualStyleBackColor = false;
-            this.BtnAddClose.Click += new System.EventHandler(this.BtnAddClose_Click);
             // 
             // LLShowLicensesHistroy
             // 
@@ -107,7 +106,6 @@
             this.LLShowLicensesHistroy.TabIndex = 59;
             this.LLShowLicensesHistroy.TabStop = true;
             this.LLShowLicensesHistroy.Text = "Show Licenses Histroy";
-            this.LLShowLicensesHistroy.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LLShowLicensesHistroy_LinkClicked);
             // 
             // LLShowLicensesinfo
             // 
@@ -119,7 +117,6 @@
             this.LLShowLicensesinfo.TabIndex = 60;
             this.LLShowLicensesinfo.TabStop = true;
             this.LLShowLicensesinfo.Text = "Show New Licenses Info";
-            this.LLShowLicensesinfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LLShowLicensesinfo_LinkClicked);
             // 
             // ctrDetailsRenewLocalLicenseApplication1
             // 
@@ -157,7 +154,6 @@
             this.Name = "FORenewLocalDrivingLicenseApplication";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New International License Application";
-            this.Load += new System.EventHandler(this.FONewInternationalLicenseApplication_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
