@@ -96,7 +96,8 @@ namespace DVLD_PresentationLayer
 
         private void SMItemRenewDrivingLicenses_Click(object sender, EventArgs e)
         {
-
+            FORenewLocalDrivingLicenseApplication frm = new FORenewLocalDrivingLicenseApplication();
+            frm.ShowDialog();
         }
     }
 }

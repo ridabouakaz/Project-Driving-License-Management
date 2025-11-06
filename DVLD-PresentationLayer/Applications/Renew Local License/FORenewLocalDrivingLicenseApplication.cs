@@ -1,4 +1,5 @@
 ﻿using DVLD_BusinessLayer;
+using DVLD_PresentationLayer.Licenses;
 using DVLD_PresentationLayer.Licenses.Control;
 using DVLD_PresentationLayer.Tests;
 using System;
@@ -17,7 +18,7 @@ namespace DVLD_PresentationLayer.Applications.International_License
 {
     public partial class FORenewLocalDrivingLicenseApplication : Form
     {
-        private int _InternationalLicenseID = -1;
+        private int _NewLicenseID = -1;
         public FORenewLocalDrivingLicenseApplication()
         {
             InitializeComponent();
@@ -72,9 +73,10 @@ namespace DVLD_PresentationLayer.Applications.International_License
             }
 
             ctrDetailsRenewLocalLicenseApplication1.ILApplicationID = NewLicense.ApplicationID.ToString();
-            ctrDetailsRenewLocalLicenseApplication1.RenewedLicenseID = NewLicense.LicenseID.ToString();
+            _NewLicenseID = NewLicense.LicenseID;
+            ctrDetailsRenewLocalLicenseApplication1.RenewedLicenseID = _NewLicenseID.ToString();
 
-            MessageBox.Show("Licensed Renewed Successfully with ID=" + NewLicense.LicenseID.ToString(), "License Issued", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Licensed Renewed Successfully with ID=" + _NewLicenseID.ToString(), "License Issued", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             BtnRenew.Enabled = false;
             ctrDetailsLicenseWithFilter1.FilterEnabled = false;
@@ -111,32 +113,34 @@ namespace DVLD_PresentationLayer.Applications.International_License
             ctrDetailsRenewLocalLicenseApplication1.ExpirationDate = InternationalLicense.ExpirationDate.ToShortDateString();
             ctrDetailsRenewLocalLicenseApplication1.CreatedBy = ctrDetailsLicenseWithFilter1.SelectedLicenseInfo.CreatedByUserID.ToString();
             ctrDetailsRenewLocalLicenseApplication1.TotalFees = InternationalLicense.InternationalLicenseID.ToString();
-            _InternationalLicenseID = InternationalLicense.InternationalLicenseID;
+            _NewLicenseID = InternationalLicense.InternationalLicenseID;
             MessageBox.Show("International License Issued Successfully with ID=" + InternationalLicense.InternationalLicenseID.ToString(), "License Issued", MessageBoxButtons.OK, MessageBoxIcon.Information);
             BtnRenew.Enabled = false;
             ctrDetailsLicenseWithFilter1.FilterEnabled = false;
             LLShowLicensesinfo.Enabled = true;
 
         }
-        private void BtnAddClose_Click(object sender, EventArgs e)
+        private void LLShowLicensesinfo_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
-           this.Close();    
-        }
-
-        private void LLShowLicensesinfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            FOInternationalDriverInfo frm = new FOInternationalDriverInfo(_InternationalLicenseID);
+            FOLicenseInfo frm = new FOLicenseInfo(_NewLicenseID);
             frm.ShowDialog();
         }
-        private void LLShowLicensesHistroy_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+
+        private void LLShowLicensesHistroy_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
             FOShowPersonLicenseHistory frm = new FOShowPersonLicenseHistory(ctrDetailsLicenseWithFilter1.SelectedLicenseInfo.DriverInfo.PersonID);
             frm.ShowDialog();
         }
 
-        private void FONewInternationalLicenseApplication_Load(object sender, EventArgs e)
+        private void FORenewLocalDrivingLicenseApplication_Load(object sender, EventArgs e)
         {
             LLShowLicensesinfo.Enabled = false;
+
+        }
+
+        private void BtnAddClose_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

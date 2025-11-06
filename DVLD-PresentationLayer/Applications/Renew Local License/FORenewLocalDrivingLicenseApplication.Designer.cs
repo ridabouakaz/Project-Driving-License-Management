@@ -55,6 +55,7 @@
             // 
             this.BtnRenew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnRenew.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnRenew.Enabled = false;
             this.BtnRenew.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.BtnRenew.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.BtnRenew.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
@@ -63,10 +64,10 @@
             this.BtnRenew.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BtnRenew.Image = ((System.Drawing.Image)(resources.GetObject("BtnRenew.Image")));
             this.BtnRenew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnRenew.Location = new System.Drawing.Point(993, 787);
+            this.BtnRenew.Location = new System.Drawing.Point(967, 787);
             this.BtnRenew.Name = "BtnRenew";
             this.BtnRenew.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.BtnRenew.Size = new System.Drawing.Size(155, 50);
+            this.BtnRenew.Size = new System.Drawing.Size(181, 50);
             this.BtnRenew.TabIndex = 57;
             this.BtnRenew.Text = "Renew";
             this.BtnRenew.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -86,15 +87,16 @@
             this.BtnAddClose.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BtnAddClose.Image = ((System.Drawing.Image)(resources.GetObject("BtnAddClose.Image")));
             this.BtnAddClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAddClose.Location = new System.Drawing.Point(823, 787);
+            this.BtnAddClose.Location = new System.Drawing.Point(781, 787);
             this.BtnAddClose.Name = "BtnAddClose";
             this.BtnAddClose.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.BtnAddClose.Size = new System.Drawing.Size(155, 50);
+            this.BtnAddClose.Size = new System.Drawing.Size(180, 50);
             this.BtnAddClose.TabIndex = 58;
             this.BtnAddClose.Text = "Close";
             this.BtnAddClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnAddClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnAddClose.UseVisualStyleBackColor = false;
+            this.BtnAddClose.Click += new System.EventHandler(this.BtnAddClose_Click_1);
             // 
             // LLShowLicensesHistroy
             // 
@@ -106,6 +108,7 @@
             this.LLShowLicensesHistroy.TabIndex = 59;
             this.LLShowLicensesHistroy.TabStop = true;
             this.LLShowLicensesHistroy.Text = "Show Licenses Histroy";
+            this.LLShowLicensesHistroy.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LLShowLicensesHistroy_LinkClicked_1);
             // 
             // LLShowLicensesinfo
             // 
@@ -117,12 +120,14 @@
             this.LLShowLicensesinfo.TabIndex = 60;
             this.LLShowLicensesinfo.TabStop = true;
             this.LLShowLicensesinfo.Text = "Show New Licenses Info";
+            this.LLShowLicensesinfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LLShowLicensesinfo_LinkClicked_1);
             // 
             // ctrDetailsRenewLocalLicenseApplication1
             // 
             this.ctrDetailsRenewLocalLicenseApplication1.BackColor = System.Drawing.Color.White;
             this.ctrDetailsRenewLocalLicenseApplication1.Location = new System.Drawing.Point(0, 557);
             this.ctrDetailsRenewLocalLicenseApplication1.Name = "ctrDetailsRenewLocalLicenseApplication1";
+            this.ctrDetailsRenewLocalLicenseApplication1.Notes = "";
             this.ctrDetailsRenewLocalLicenseApplication1.Size = new System.Drawing.Size(1155, 224);
             this.ctrDetailsRenewLocalLicenseApplication1.TabIndex = 61;
             // 
@@ -154,6 +159,7 @@
             this.Name = "FORenewLocalDrivingLicenseApplication";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New International License Application";
+            this.Load += new System.EventHandler(this.FORenewLocalDrivingLicenseApplication_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
