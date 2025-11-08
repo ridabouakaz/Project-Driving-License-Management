@@ -328,7 +328,7 @@ namespace DVLD_DataAccessLayer
 
             string query = @"UPDATE Licenses
                            SET 
-                              IsActive = 0
+                              IsActive = 1
                              
                          WHERE LicenseID=@LicenseID";
 

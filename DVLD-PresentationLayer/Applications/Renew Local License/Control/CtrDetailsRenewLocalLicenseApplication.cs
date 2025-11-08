@@ -30,6 +30,7 @@ namespace DVLD_PresentationLayer
         }
         public string ApplicationDate
         {
+            get => LblValueApplicationDate.Text.Trim();
             set => LblValueApplicationDate.Text = value;
         }
         public string IssueDate
@@ -38,11 +39,13 @@ namespace DVLD_PresentationLayer
         }
         public string ApplicationFees
         {
+            get => LblValueApplicationFees.Text.Trim();
             set => LblValueApplicationFees.Text = value;
         }
 
         public string LicenseFees
         {
+            get => LblValueLicenseFees.Text.Trim();
             set => LblValueLicenseFees.Text = value;
         }
         public string Notes
@@ -53,6 +56,7 @@ namespace DVLD_PresentationLayer
 
         public string RenewedLicenseID
         {
+            get => LblvalueRenewedLicenseID.Text.Trim();
             set => LblvalueRenewedLicenseID.Text = value;
         }
         public string OldLicenseID
