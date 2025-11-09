@@ -36,24 +36,24 @@ namespace DVLD_PresentationLayer
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.OFDialogPictureImage = new System.Windows.Forms.OpenFileDialog();
             this.GBUserControlDetailesApplication = new System.Windows.Forms.GroupBox();
+            this.PBApplicationID = new System.Windows.Forms.PictureBox();
             this.LblValueLRApplicationID = new System.Windows.Forms.Label();
             this.LblvalueOldLicenseID = new System.Windows.Forms.Label();
             this.LblvalueReplacedLicenseID = new System.Windows.Forms.Label();
             this.LblvalueCreatedBy = new System.Windows.Forms.Label();
             this.LblValueApplicationDate = new System.Windows.Forms.Label();
             this.LblValueApplicationFees = new System.Windows.Forms.Label();
+            this.PBGender = new System.Windows.Forms.PictureBox();
             this.LblLRApplicationID = new System.Windows.Forms.Label();
+            this.PBPhone = new System.Windows.Forms.PictureBox();
+            this.PBDateOfBrith = new System.Windows.Forms.PictureBox();
             this.LblOldLicenseID = new System.Windows.Forms.Label();
             this.LblReplacedLicenseID = new System.Windows.Forms.Label();
+            this.PBEmail = new System.Windows.Forms.PictureBox();
+            this.PBName = new System.Windows.Forms.PictureBox();
             this.LblCreatedBy = new System.Windows.Forms.Label();
             this.LblApplicationFees = new System.Windows.Forms.Label();
             this.LblApplicationDate = new System.Windows.Forms.Label();
-            this.PBApplicationID = new System.Windows.Forms.PictureBox();
-            this.PBGender = new System.Windows.Forms.PictureBox();
-            this.PBPhone = new System.Windows.Forms.PictureBox();
-            this.PBDateOfBrith = new System.Windows.Forms.PictureBox();
-            this.PBEmail = new System.Windows.Forms.PictureBox();
-            this.PBName = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.GBUserControlDetailesApplication.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBApplicationID)).BeginInit();
@@ -96,10 +96,22 @@ namespace DVLD_PresentationLayer
             this.GBUserControlDetailesApplication.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.GBUserControlDetailesApplication.Location = new System.Drawing.Point(18, 3);
             this.GBUserControlDetailesApplication.Name = "GBUserControlDetailesApplication";
-            this.GBUserControlDetailesApplication.Size = new System.Drawing.Size(1119, 217);
+            this.GBUserControlDetailesApplication.Size = new System.Drawing.Size(1119, 191);
             this.GBUserControlDetailesApplication.TabIndex = 48;
             this.GBUserControlDetailesApplication.TabStop = false;
             this.GBUserControlDetailesApplication.Text = "Application info for License Replacement";
+            // 
+            // PBApplicationID
+            // 
+            this.PBApplicationID.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.PBApplicationID.ErrorImage = null;
+            this.PBApplicationID.Image = ((System.Drawing.Image)(resources.GetObject("PBApplicationID.Image")));
+            this.PBApplicationID.InitialImage = null;
+            this.PBApplicationID.Location = new System.Drawing.Point(215, 49);
+            this.PBApplicationID.Name = "PBApplicationID";
+            this.PBApplicationID.Size = new System.Drawing.Size(40, 32);
+            this.PBApplicationID.TabIndex = 47;
+            this.PBApplicationID.TabStop = false;
             // 
             // LblValueLRApplicationID
             // 
@@ -173,6 +185,15 @@ namespace DVLD_PresentationLayer
             this.LblValueApplicationFees.TabIndex = 38;
             this.LblValueApplicationFees.Text = "[????????]";
             // 
+            // PBGender
+            // 
+            this.PBGender.Image = ((System.Drawing.Image)(resources.GetObject("PBGender.Image")));
+            this.PBGender.Location = new System.Drawing.Point(215, 146);
+            this.PBGender.Name = "PBGender";
+            this.PBGender.Size = new System.Drawing.Size(40, 32);
+            this.PBGender.TabIndex = 37;
+            this.PBGender.TabStop = false;
+            // 
             // LblLRApplicationID
             // 
             this.LblLRApplicationID.AutoSize = true;
@@ -184,6 +205,24 @@ namespace DVLD_PresentationLayer
             this.LblLRApplicationID.Size = new System.Drawing.Size(186, 28);
             this.LblLRApplicationID.TabIndex = 36;
             this.LblLRApplicationID.Text = "L.R.Application ID:";
+            // 
+            // PBPhone
+            // 
+            this.PBPhone.Image = ((System.Drawing.Image)(resources.GetObject("PBPhone.Image")));
+            this.PBPhone.Location = new System.Drawing.Point(936, 96);
+            this.PBPhone.Name = "PBPhone";
+            this.PBPhone.Size = new System.Drawing.Size(40, 32);
+            this.PBPhone.TabIndex = 26;
+            this.PBPhone.TabStop = false;
+            // 
+            // PBDateOfBrith
+            // 
+            this.PBDateOfBrith.Image = ((System.Drawing.Image)(resources.GetObject("PBDateOfBrith.Image")));
+            this.PBDateOfBrith.Location = new System.Drawing.Point(936, 49);
+            this.PBDateOfBrith.Name = "PBDateOfBrith";
+            this.PBDateOfBrith.Size = new System.Drawing.Size(40, 32);
+            this.PBDateOfBrith.TabIndex = 25;
+            this.PBDateOfBrith.TabStop = false;
             // 
             // LblOldLicenseID
             // 
@@ -208,6 +247,27 @@ namespace DVLD_PresentationLayer
             this.LblReplacedLicenseID.Size = new System.Drawing.Size(205, 28);
             this.LblReplacedLicenseID.TabIndex = 22;
             this.LblReplacedLicenseID.Text = "Replaced License ID:";
+            // 
+            // PBEmail
+            // 
+            this.PBEmail.Image = ((System.Drawing.Image)(resources.GetObject("PBEmail.Image")));
+            this.PBEmail.Location = new System.Drawing.Point(936, 141);
+            this.PBEmail.Name = "PBEmail";
+            this.PBEmail.Size = new System.Drawing.Size(40, 32);
+            this.PBEmail.TabIndex = 11;
+            this.PBEmail.TabStop = false;
+            // 
+            // PBName
+            // 
+            this.PBName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.PBName.ErrorImage = null;
+            this.PBName.Image = ((System.Drawing.Image)(resources.GetObject("PBName.Image")));
+            this.PBName.InitialImage = null;
+            this.PBName.Location = new System.Drawing.Point(215, 98);
+            this.PBName.Name = "PBName";
+            this.PBName.Size = new System.Drawing.Size(40, 32);
+            this.PBName.TabIndex = 9;
+            this.PBName.TabStop = false;
             // 
             // LblCreatedBy
             // 
@@ -245,66 +305,6 @@ namespace DVLD_PresentationLayer
             this.LblApplicationDate.TabIndex = 0;
             this.LblApplicationDate.Text = "Application Date:";
             // 
-            // PBApplicationID
-            // 
-            this.PBApplicationID.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.PBApplicationID.ErrorImage = null;
-            this.PBApplicationID.Image = ((System.Drawing.Image)(resources.GetObject("PBApplicationID.Image")));
-            this.PBApplicationID.InitialImage = null;
-            this.PBApplicationID.Location = new System.Drawing.Point(215, 49);
-            this.PBApplicationID.Name = "PBApplicationID";
-            this.PBApplicationID.Size = new System.Drawing.Size(40, 32);
-            this.PBApplicationID.TabIndex = 47;
-            this.PBApplicationID.TabStop = false;
-            // 
-            // PBGender
-            // 
-            this.PBGender.Image = ((System.Drawing.Image)(resources.GetObject("PBGender.Image")));
-            this.PBGender.Location = new System.Drawing.Point(215, 146);
-            this.PBGender.Name = "PBGender";
-            this.PBGender.Size = new System.Drawing.Size(40, 32);
-            this.PBGender.TabIndex = 37;
-            this.PBGender.TabStop = false;
-            // 
-            // PBPhone
-            // 
-            this.PBPhone.Image = ((System.Drawing.Image)(resources.GetObject("PBPhone.Image")));
-            this.PBPhone.Location = new System.Drawing.Point(936, 96);
-            this.PBPhone.Name = "PBPhone";
-            this.PBPhone.Size = new System.Drawing.Size(40, 32);
-            this.PBPhone.TabIndex = 26;
-            this.PBPhone.TabStop = false;
-            // 
-            // PBDateOfBrith
-            // 
-            this.PBDateOfBrith.Image = ((System.Drawing.Image)(resources.GetObject("PBDateOfBrith.Image")));
-            this.PBDateOfBrith.Location = new System.Drawing.Point(936, 49);
-            this.PBDateOfBrith.Name = "PBDateOfBrith";
-            this.PBDateOfBrith.Size = new System.Drawing.Size(40, 32);
-            this.PBDateOfBrith.TabIndex = 25;
-            this.PBDateOfBrith.TabStop = false;
-            // 
-            // PBEmail
-            // 
-            this.PBEmail.Image = ((System.Drawing.Image)(resources.GetObject("PBEmail.Image")));
-            this.PBEmail.Location = new System.Drawing.Point(936, 141);
-            this.PBEmail.Name = "PBEmail";
-            this.PBEmail.Size = new System.Drawing.Size(40, 32);
-            this.PBEmail.TabIndex = 11;
-            this.PBEmail.TabStop = false;
-            // 
-            // PBName
-            // 
-            this.PBName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.PBName.ErrorImage = null;
-            this.PBName.Image = ((System.Drawing.Image)(resources.GetObject("PBName.Image")));
-            this.PBName.InitialImage = null;
-            this.PBName.Location = new System.Drawing.Point(215, 98);
-            this.PBName.Name = "PBName";
-            this.PBName.Size = new System.Drawing.Size(40, 32);
-            this.PBName.TabIndex = 9;
-            this.PBName.TabStop = false;
-            // 
             // CtrDetailsReplaceLostOrDamagedLicenseApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -312,7 +312,7 @@ namespace DVLD_PresentationLayer
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.GBUserControlDetailesApplication);
             this.Name = "CtrDetailsReplaceLostOrDamagedLicenseApplication";
-            this.Size = new System.Drawing.Size(1155, 229);
+            this.Size = new System.Drawing.Size(1155, 204);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.GBUserControlDetailesApplication.ResumeLayout(false);
             this.GBUserControlDetailesApplication.PerformLayout();

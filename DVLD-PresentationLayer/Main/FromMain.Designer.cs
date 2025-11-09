@@ -152,6 +152,7 @@ namespace DVLD_PresentationLayer
             this.SMItemReplacementForLostOrDamagedLicenses.Name = "SMItemReplacementForLostOrDamagedLicenses";
             this.SMItemReplacementForLostOrDamagedLicenses.Size = new System.Drawing.Size(552, 38);
             this.SMItemReplacementForLostOrDamagedLicenses.Text = "Replacement For Lost Or Damaged Licenses";
+            this.SMItemReplacementForLostOrDamagedLicenses.Click += new System.EventHandler(this.SMItemReplacementForLostOrDamagedLicenses_Click);
             // 
             // SMItemReleaseDetainedDrivingLicense
             // 

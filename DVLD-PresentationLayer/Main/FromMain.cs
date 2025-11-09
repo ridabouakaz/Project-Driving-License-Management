@@ -99,5 +99,11 @@ namespace DVLD_PresentationLayer
             FORenewLocalDrivingLicenseApplication frm = new FORenewLocalDrivingLicenseApplication();
             frm.ShowDialog();
         }
+
+        private void SMItemReplacementForLostOrDamagedLicenses_Click(object sender, EventArgs e)
+        {
+            FOReplaceLostOrDamagedLicenseApplication frm = new FOReplaceLostOrDamagedLicenseApplication();
+            frm.ShowDialog();
+        }
     }
 }

@@ -29,7 +29,7 @@ namespace DVLD_PresentationLayer.Applications.International_License
             int SelectedLicenseID = obj;
 
             //ctrDetailsInternationalLicenseApplication1.LocalLicenseID = SelectedLicenseID.ToString();
-            ctrDetailsRenewLocalLicenseApplication1.OldLicenseID = SelectedLicenseID.ToString();
+            ////ctrDetailsRenewLocalLicenseApplication1.OldLicenseID = SelectedLicenseID.ToString();
 
             //llShowLicenseHistory.Enabled = (SelectedLicenseID != -1);
 
@@ -91,7 +91,7 @@ namespace DVLD_PresentationLayer.Applications.International_License
         }
         private void LLShowLicensesinfo_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FOLicenseInfo frm = new FOLicenseInfo(int.Parse(ctrDetailsRenewLocalLicenseApplication1.RenewedLicenseID));
+            FOLicenseInfo frm = new FOLicenseInfo(int.Parse("ctrDetailsRenewLocalLicenseApplication1.RenewedLicenseID"));
             frm.ShowDialog();
         }
 
