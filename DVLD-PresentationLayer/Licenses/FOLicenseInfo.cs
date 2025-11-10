@@ -13,30 +13,21 @@ namespace DVLD_PresentationLayer.Licenses
 {
     public partial class FOLicenseInfo : Form
     {
-        private int _LocalDrivingLicenseApplicationID;
-        private clsLicenses _License;
-        public FOLicenseInfo(int LocalDrivingLicenseApplicationID)
+        private int _LicenseID;
+        public FOLicenseInfo(int LicenseID)
         {
             InitializeComponent();
-            _LocalDrivingLicenseApplicationID = LocalDrivingLicenseApplicationID;
-            _LoadData();
+            _LicenseID = LicenseID;
         }
-        private void _LoadData()
-        {
-            _License = clsLicenses.FindByLocalDrivingLicenseApplicationID(_LocalDrivingLicenseApplicationID);
-
-            if (_License == null)
-            {
-                MessageBox.Show("This form will be closed because No Contact with ID = " + _License.LicenseID);
-                this.Close();
-
-                return;
-            }
-            ctrDetailsLicenses1.LicenseData = _License;
-        }
+      
         private void BtnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void FOLicenseInfo_Load(object sender, EventArgs e)
+        {
+            ctrDetailsLicenses1.LoadInfo(_LicenseID);
         }
     }
 }

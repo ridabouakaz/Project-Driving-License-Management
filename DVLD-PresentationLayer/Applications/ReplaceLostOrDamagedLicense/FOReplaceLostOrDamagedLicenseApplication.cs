@@ -23,15 +23,48 @@ namespace DVLD_PresentationLayer.Applications.International_License
         {
             InitializeComponent();
         }
+        private int _GetApplicationTypeID()
+        {
+            //this will decide which application type to use accirding 
+            // to user selection.
 
+            if (RBDamagedLicense.Checked)
+
+                return (int)clsApplications.enApplicationType.ReplaceDamagedDrivingLicense;
+            else
+                return (int)clsApplications.enApplicationType.ReplaceLostDrivingLicense;
+        }
+        private void RBDamagedLicense_CheckedChanged(object sender, EventArgs e)
+        {
+            LblHeaderTitle.Text = "Replacement for Damaged License";
+            this.Text = LblHeaderTitle.Text;
+            ctrDetailsReplaceLostOrDamagedLicenseApplication1.ApplicationFees = clsManageApplicationTypes.Find(_GetApplicationTypeID()).ApplicationFees.ToString();
+        }
+
+        private void RBLostLicense_CheckedChanged(object sender, EventArgs e)
+        {
+            LblHeaderTitle.Text = "Replacement for Damaged License";
+            this.Text = LblHeaderTitle.Text;
+            ctrDetailsReplaceLostOrDamagedLicenseApplication1.ApplicationFees =
+                clsManageApplicationTypes.Find(_GetApplicationTypeID()).ApplicationFees.ToString();
+        }
+        private IssueReason _GetIssueReason()
+        {
+            //this will decide which reason to issue a replacement for
+
+            if (RBDamagedLicense.Checked)
+
+                return IssueReason.ReplacementforDamaged;
+            else
+                return IssueReason.ReplacementforLost;
+        }
         private void ctrDetailsLicenseWithFilter1_OnLicenseSelected(int obj)
         {
             int SelectedLicenseID = obj;
 
-            //ctrDetailsInternationalLicenseApplication1.LocalLicenseID = SelectedLicenseID.ToString();
-            ////ctrDetailsRenewLocalLicenseApplication1.OldLicenseID = SelectedLicenseID.ToString();
+            ctrDetailsReplaceLostOrDamagedLicenseApplication1.OldLicenseID = SelectedLicenseID.ToString();
 
-            //llShowLicenseHistory.Enabled = (SelectedLicenseID != -1);
+            LLShowLicensesHistroy.Enabled = (SelectedLicenseID != -1);
 
             if (SelectedLicenseID == -1)
 
@@ -39,26 +72,14 @@ namespace DVLD_PresentationLayer.Applications.International_License
                 return;
             }
             int DefaultValidityLength = ctrDetailsLicenseWithFilter1.SelectedLicenseInfo.LicenseClassInfo.DefaultValidityLength;
-            ctrDetailsRenewLocalLicenseApplication1.ExpirationDate = (DateTime.Now.AddYears(DefaultValidityLength)).ToShortDateString();
-            ctrDetailsRenewLocalLicenseApplication1.LicenseFees = ctrDetailsLicenseWithFilter1.SelectedLicenseInfo.LicenseClassInfo.ClassFees.ToString();
-            ctrDetailsRenewLocalLicenseApplication1.TotalFees = (Convert.ToSingle(ctrDetailsRenewLocalLicenseApplication1.ApplicationFees) + Convert.ToSingle(ctrDetailsRenewLocalLicenseApplication1.LicenseFees)).ToString();
-            ctrDetailsRenewLocalLicenseApplication1.Notes = ctrDetailsLicenseWithFilter1.SelectedLicenseInfo.Notes;
-            ctrDetailsRenewLocalLicenseApplication1.CreatedBy = (ctrDetailsLicenseWithFilter1.SelectedLicenseInfo.CreatedByUserID).ToString();
-            if (!ctrDetailsLicenseWithFilter1.SelectedLicenseInfo.IsLicenseExpired())
-            {
-                MessageBox.Show("Person already have an active  license with ID = " + SelectedLicenseID.ToString(), "Not allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                LLShowLicensesinfo.Enabled = true;
-                BtnRenew.Enabled = false;
-                return;
-            }
             if (ctrDetailsLicenseWithFilter1.SelectedLicenseInfo.IsActive==ActiveStatus.No)
             {
                 MessageBox.Show("Selected License is not Not Active, choose an active license" , "Not allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 LLShowLicensesinfo.Enabled = true;
-                BtnRenew.Enabled = false;
+                BtnIssueReplacement.Enabled = false;
                 return;
             }
-            BtnRenew.Enabled = true;
+            BtnIssueReplacement.Enabled = true;
 
         }
         private void BtnIssue_Click(object sender, EventArgs e)
@@ -69,7 +90,7 @@ namespace DVLD_PresentationLayer.Applications.International_License
                 return;
             }
             clsLicenses NewLicense =
-                ctrDetailsLicenseWithFilter1.SelectedLicenseInfo.RenewLicense(ctrDetailsRenewLocalLicenseApplication1.Notes,
+                ctrDetailsLicenseWithFilter1.SelectedLicenseInfo.Replace(_GetIssueReason(),
                 ctrDetailsLicenseWithFilter1.SelectedLicenseInfo.CreatedByUserID);
             if (NewLicense == null)
             {
@@ -78,20 +99,21 @@ namespace DVLD_PresentationLayer.Applications.International_License
                 return;
             }
 
-            ctrDetailsRenewLocalLicenseApplication1.ILApplicationID = NewLicense.ApplicationID.ToString();
+            ctrDetailsReplaceLostOrDamagedLicenseApplication1.LRApplicationID = NewLicense.ApplicationID.ToString();
             _NewLicenseID = NewLicense.LicenseID;
-            ctrDetailsRenewLocalLicenseApplication1.RenewedLicenseID = _NewLicenseID.ToString();
+            ctrDetailsReplaceLostOrDamagedLicenseApplication1.ReplacedLicenseID = _NewLicenseID.ToString();
 
             MessageBox.Show("Licensed Renewed Successfully with ID=" + _NewLicenseID.ToString(), "License Issued", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            BtnRenew.Enabled = false;
+            BtnIssueReplacement.Enabled = false;
+            GBRepalcementFor.Enabled = false;
             ctrDetailsLicenseWithFilter1.FilterEnabled = false;
             LLShowLicensesinfo.Enabled = true;
 
         }
         private void LLShowLicensesinfo_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FOLicenseInfo frm = new FOLicenseInfo(int.Parse("ctrDetailsRenewLocalLicenseApplication1.RenewedLicenseID"));
+            FOLicenseInfo frm = new FOLicenseInfo(_NewLicenseID);
             frm.ShowDialog();
         }
 
@@ -104,14 +126,16 @@ namespace DVLD_PresentationLayer.Applications.International_License
         private void FORenewLocalDrivingLicenseApplication_Load(object sender, EventArgs e)
         {
             LLShowLicensesinfo.Enabled = false;
-            ctrDetailsRenewLocalLicenseApplication1.ApplicationDate = (DateTime.Now).ToShortDateString();
-            ctrDetailsRenewLocalLicenseApplication1.IssueDate = ctrDetailsRenewLocalLicenseApplication1.ApplicationDate;
-            ctrDetailsRenewLocalLicenseApplication1.ApplicationFees = clsManageApplicationTypes.Find((int)clsApplications.enApplicationType.RenewDrivingLicense).ApplicationFees.ToString();
+            ctrDetailsReplaceLostOrDamagedLicenseApplication1.ApplicationDate = (DateTime.Now).ToShortDateString();
+            ctrDetailsReplaceLostOrDamagedLicenseApplication1.CreatedBy = clsManageApplicationTypes.Find((int)clsApplications.enApplicationType.RenewDrivingLicense).ApplicationFees.ToString();
+
         }
 
         private void BtnAddClose_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }
+
+      
     }
 }

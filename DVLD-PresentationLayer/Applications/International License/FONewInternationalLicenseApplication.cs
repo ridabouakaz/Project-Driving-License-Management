@@ -29,8 +29,7 @@ namespace DVLD_PresentationLayer.Applications.International_License
 
             ctrDetailsInternationalLicenseApplication1.LocalLicenseID = SelectedLicenseID.ToString();
 
-            //llShowLicenseHistory.Enabled = (SelectedLicenseID != -1);
-
+            LLShowLicensesHistroy.Enabled = (SelectedLicenseID != -1);
             if (SelectedLicenseID == -1)
 
             {

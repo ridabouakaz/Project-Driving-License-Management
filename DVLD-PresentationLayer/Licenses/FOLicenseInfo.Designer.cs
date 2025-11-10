@@ -117,6 +117,7 @@
             this.Name = "FOLicenseInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "License Info";
+            this.Load += new System.EventHandler(this.FOLicenseInfo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PBDriverLicenseInfo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

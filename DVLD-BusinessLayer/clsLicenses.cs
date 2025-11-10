@@ -268,11 +268,55 @@ namespace DVLD_BusinessLayer
 
             return NewLicense;
         }
+        public clsLicenses Replace(IssueReason IssueReason, int CreatedByUserID)
+        {
+
+
+            //First Create Applicaiton 
+            clsApplications Application = new clsApplications();
+
+            Application.ApplicantPersonID = this.DriverInfo.PersonID;
+            Application.ApplicationDate = DateTime.Now;
+
+            Application.ApplicationTypeID = (IssueReason == IssueReason.ReplacementforDamaged) ?
+                (int)clsApplications.enApplicationType.ReplaceDamagedDrivingLicense :
+                (int)clsApplications.enApplicationType.ReplaceLostDrivingLicense;
+
+            Application.ApplicationStatus = enApplicationStatus.Completed;
+            Application.LastStatusDate = DateTime.Now;
+            Application.PaidFees = clsManageApplicationTypes.Find(Application.ApplicationTypeID).ApplicationFees;
+            Application.CreatedByUserID = CreatedByUserID;
+
+            if (!Application.Save())
+            {
+                return null;
+            }
+
+            clsLicenses NewLicense = new clsLicenses();
+
+            NewLicense.ApplicationID = Application.ApplicationID;
+            NewLicense.DriverID = this.DriverID;
+            NewLicense.LicenseClass = this.LicenseClass;
+            NewLicense.IssueDate = DateTime.Now;
+            NewLicense.ExpirationDate = this.ExpirationDate;
+            NewLicense.Notes = this.Notes;
+            NewLicense.PaidFees = 0;// no fees for the license because it's a replacement.
+            NewLicense.IsActive = ActiveStatus.Yes;
+            NewLicense.IssueReason = IssueReason;
+            NewLicense.CreatedByUserID = CreatedByUserID;
 
 
 
+            if (!NewLicense.Save())
+            {
+                return null;
+            }
 
+            //we need to deactivate the old License.
+            DeactivateCurrentLicense();
 
+            return NewLicense;
+        }
         public static int GetDefaultValidityLengthById(int LicenseClassID)
         {
             return clsLicensesDataAccess.GetDefaultValidityLengthById(LicenseClassID);
