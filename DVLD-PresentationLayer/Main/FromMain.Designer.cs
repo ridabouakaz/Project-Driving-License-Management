@@ -164,6 +164,7 @@ namespace DVLD_PresentationLayer
             // SMItemRetakeTest
             // 
             this.SMItemRetakeTest.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SMItemRetakeTest.Image = ((System.Drawing.Image)(resources.GetObject("SMItemRetakeTest.Image")));
             this.SMItemRetakeTest.Name = "SMItemRetakeTest";
             this.SMItemRetakeTest.Size = new System.Drawing.Size(584, 70);
             this.SMItemRetakeTest.Text = "Retake Test";
@@ -190,9 +191,8 @@ namespace DVLD_PresentationLayer
             // 
             this.SMItemlocalDrivingLicenseApplications.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
             this.SMItemlocalDrivingLicenseApplications.Image = ((System.Drawing.Image)(resources.GetObject("SMItemlocalDrivingLicenseApplications.Image")));
-            this.SMItemlocalDrivingLicenseApplications.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SMItemlocalDrivingLicenseApplications.Name = "SMItemlocalDrivingLicenseApplications";
-            this.SMItemlocalDrivingLicenseApplications.Size = new System.Drawing.Size(455, 38);
+            this.SMItemlocalDrivingLicenseApplications.Size = new System.Drawing.Size(487, 70);
             this.SMItemlocalDrivingLicenseApplications.Text = "Local Driving License Applications";
             this.SMItemlocalDrivingLicenseApplications.Click += new System.EventHandler(this.SMItemlocalDrivingLicenseApplications_Click);
             // 
@@ -200,9 +200,8 @@ namespace DVLD_PresentationLayer
             // 
             this.SMItemInternationalLicenseApplications.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
             this.SMItemInternationalLicenseApplications.Image = ((System.Drawing.Image)(resources.GetObject("SMItemInternationalLicenseApplications.Image")));
-            this.SMItemInternationalLicenseApplications.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SMItemInternationalLicenseApplications.Name = "SMItemInternationalLicenseApplications";
-            this.SMItemInternationalLicenseApplications.Size = new System.Drawing.Size(455, 38);
+            this.SMItemInternationalLicenseApplications.Size = new System.Drawing.Size(487, 70);
             this.SMItemInternationalLicenseApplications.Text = "International License Applications";
             this.SMItemInternationalLicenseApplications.Click += new System.EventHandler(this.SMItemInternationalLicenseApplications_Click);
             // 
