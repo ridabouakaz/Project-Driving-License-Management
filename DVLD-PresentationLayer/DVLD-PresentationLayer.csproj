@@ -147,6 +147,12 @@
     <Compile Include="Applications\ReplaceLostOrDamagedLicense\FOReplaceLostOrDamagedLicenseApplication.Designer.cs">
       <DependentUpon>FOReplaceLostOrDamagedLicenseApplication.cs</DependentUpon>
     </Compile>
+    <Compile Include="Applications\Rlease Detained License\FOReleaseDetainedLicenseApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\Rlease Detained License\FOReleaseDetainedLicenseApplication.Designer.cs">
+      <DependentUpon>FOReleaseDetainedLicenseApplication.cs</DependentUpon>
+    </Compile>
     <Compile Include="drivers\FOManageDrivers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -350,6 +356,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Applications\ReplaceLostOrDamagedLicense\FOReplaceLostOrDamagedLicenseApplication.resx">
       <DependentUpon>FOReplaceLostOrDamagedLicenseApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\Rlease Detained License\FOReleaseDetainedLicenseApplication.resx">
+      <DependentUpon>FOReleaseDetainedLicenseApplication.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="drivers\FOManageDrivers.resx">
       <DependentUpon>FOManageDrivers.cs</DependentUpon>
