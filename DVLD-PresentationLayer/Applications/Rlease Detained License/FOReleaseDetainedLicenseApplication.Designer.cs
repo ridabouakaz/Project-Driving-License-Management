@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FOReleaseDetainedLicenseApplication));
             this.LblHeaderTitle = new System.Windows.Forms.Label();
-            this.BtnIssueReplacement = new System.Windows.Forms.Button();
+            this.BtnRelease = new System.Windows.Forms.Button();
             this.BtnAddClose = new System.Windows.Forms.Button();
             this.LLShowLicensesHistroy = new System.Windows.Forms.LinkLabel();
             this.LLShowLicensesinfo = new System.Windows.Forms.LinkLabel();
@@ -78,35 +78,35 @@
             this.LblHeaderTitle.BackColor = System.Drawing.Color.Transparent;
             this.LblHeaderTitle.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold);
             this.LblHeaderTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
-            this.LblHeaderTitle.Location = new System.Drawing.Point(282, 9);
+            this.LblHeaderTitle.Location = new System.Drawing.Point(418, 9);
             this.LblHeaderTitle.Name = "LblHeaderTitle";
-            this.LblHeaderTitle.Size = new System.Drawing.Size(595, 50);
+            this.LblHeaderTitle.Size = new System.Drawing.Size(455, 50);
             this.LblHeaderTitle.TabIndex = 4;
-            this.LblHeaderTitle.Text = "Replacement License Application";
+            this.LblHeaderTitle.Text = "Release Detained License";
             // 
-            // BtnIssueReplacement
+            // BtnRelease
             // 
-            this.BtnIssueReplacement.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnIssueReplacement.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.BtnIssueReplacement.Enabled = false;
-            this.BtnIssueReplacement.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.BtnIssueReplacement.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.BtnIssueReplacement.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
-            this.BtnIssueReplacement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnIssueReplacement.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.BtnIssueReplacement.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BtnIssueReplacement.Image = ((System.Drawing.Image)(resources.GetObject("BtnIssueReplacement.Image")));
-            this.BtnIssueReplacement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnIssueReplacement.Location = new System.Drawing.Point(851, 787);
-            this.BtnIssueReplacement.Name = "BtnIssueReplacement";
-            this.BtnIssueReplacement.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.BtnIssueReplacement.Size = new System.Drawing.Size(297, 50);
-            this.BtnIssueReplacement.TabIndex = 57;
-            this.BtnIssueReplacement.Text = "Issue Replacement";
-            this.BtnIssueReplacement.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnIssueReplacement.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnIssueReplacement.UseVisualStyleBackColor = false;
-            this.BtnIssueReplacement.Click += new System.EventHandler(this.BtnIssue_Click);
+            this.BtnRelease.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnRelease.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnRelease.Enabled = false;
+            this.BtnRelease.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BtnRelease.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.BtnRelease.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.BtnRelease.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnRelease.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.BtnRelease.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BtnRelease.Image = ((System.Drawing.Image)(resources.GetObject("BtnRelease.Image")));
+            this.BtnRelease.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnRelease.Location = new System.Drawing.Point(975, 787);
+            this.BtnRelease.Name = "BtnRelease";
+            this.BtnRelease.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.BtnRelease.Size = new System.Drawing.Size(173, 50);
+            this.BtnRelease.TabIndex = 57;
+            this.BtnRelease.Text = "Release";
+            this.BtnRelease.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnRelease.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnRelease.UseVisualStyleBackColor = false;
+            this.BtnRelease.Click += new System.EventHandler(this.BtnIssue_Click);
             // 
             // BtnAddClose
             // 
@@ -120,7 +120,7 @@
             this.BtnAddClose.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BtnAddClose.Image = ((System.Drawing.Image)(resources.GetObject("BtnAddClose.Image")));
             this.BtnAddClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAddClose.Location = new System.Drawing.Point(595, 787);
+            this.BtnAddClose.Location = new System.Drawing.Point(789, 787);
             this.BtnAddClose.Name = "BtnAddClose";
             this.BtnAddClose.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.BtnAddClose.Size = new System.Drawing.Size(180, 50);
@@ -458,7 +458,7 @@
             this.Controls.Add(this.LLShowLicensesinfo);
             this.Controls.Add(this.LLShowLicensesHistroy);
             this.Controls.Add(this.BtnAddClose);
-            this.Controls.Add(this.BtnIssueReplacement);
+            this.Controls.Add(this.BtnRelease);
             this.Controls.Add(this.ctrDetailsLicenseWithFilter1);
             this.Controls.Add(this.LblHeaderTitle);
             this.Name = "FOReleaseDetainedLicenseApplication";
@@ -484,7 +484,7 @@
 
         private System.Windows.Forms.Label LblHeaderTitle;
         private Licenses.Control.CtrDetailsLicenseWithFilter ctrDetailsLicenseWithFilter1;
-        private System.Windows.Forms.Button BtnIssueReplacement;
+        private System.Windows.Forms.Button BtnRelease;
         private System.Windows.Forms.Button BtnAddClose;
         private System.Windows.Forms.LinkLabel LLShowLicensesHistroy;
         private System.Windows.Forms.LinkLabel LLShowLicensesinfo;

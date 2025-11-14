@@ -14,7 +14,7 @@ namespace DVLD_DataAccessLayer
     public class clsUserDataAccess
     {
         public static bool GetUserInfoByID(
-        int  ID,
+        int ID,
                 ref int PersonID,
                 ref string UserName,
                 ref string Password,
@@ -42,7 +42,7 @@ namespace DVLD_DataAccessLayer
                         PersonID = (int)reader["PersonID"];
                         UserName = reader["UserName"].ToString();
                         Password = reader["Password"].ToString();
-                        isActive = reader["isActive"] != DBNull.Value? (ActiveStatus)Convert.ToInt32(reader["isActive"]): ActiveStatus.Yes; 
+                        isActive = reader["isActive"] != DBNull.Value ? (ActiveStatus)Convert.ToInt32(reader["isActive"]) : ActiveStatus.Yes;
 
                     }
                 }
@@ -51,6 +51,58 @@ namespace DVLD_DataAccessLayer
                     // Handle error (log or throw)
                     isFound = false;
                 }
+            }
+
+            return isFound;
+        }
+
+        public static bool GetUserInfoByPersonID(int PersonID, ref int UserID, ref string UserName,
+        ref string Password, ref ActiveStatus IsActive)
+        {
+            bool isFound = false;
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+
+            string query = "SELECT * FROM Users WHERE PersonID = @PersonID";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@PersonID", PersonID);
+
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    // The record was found
+                    isFound = true;
+
+                    UserID = (int)reader["UserID"];
+                    UserName = (string)reader["UserName"];
+                    Password = (string)reader["Password"];
+                    IsActive = reader["isActive"] != DBNull.Value ? (ActiveStatus)Convert.ToInt32(reader["isActive"]) : ActiveStatus.Yes;
+
+                }
+                else
+                {
+                    // The record was not found
+                    isFound = false;
+                }
+
+                reader.Close();
+
+            }
+            catch (Exception ex)
+            {
+                //Console.WriteLine("Error: " + ex.Message);
+
+                isFound = false;
+            }
+            finally
+            {
+                connection.Close();
             }
 
             return isFound;

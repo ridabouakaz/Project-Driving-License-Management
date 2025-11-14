@@ -65,7 +65,23 @@ namespace DVLD_BusinessLayer
                 );
 
         }
-    
+
+        public static clsUser FindByPersonID(int PersonID)
+        {
+            int UserID = -1;
+            string UserName = "", Password = "";
+            ActiveStatus IsActive = ActiveStatus.Yes;
+
+            bool IsFound = clsUserDataAccess.GetUserInfoByPersonID
+                                (PersonID, ref UserID, ref UserName, ref Password, ref IsActive);
+
+            if (IsFound)
+                //we return new object of that User with the right data
+                return new clsUser(UserID, UserID, UserName, Password, IsActive);
+            else
+                return null;
+        }
+
         public static clsUser Find(int ID)
         {
             int PersonID = 1;
@@ -121,53 +137,6 @@ namespace DVLD_BusinessLayer
             else
                 return null;
         }
-
-        //public static clsUser Find(int NationalNo)
-        //{
-        //    string firstName = "", secondName = "", thirdName = "", lastName = "";
-        //    string email = "", phone = "", address = "", imagePath = "";
-        //    int ID = 0;
-        //    DateTime dateOfBirth = DateTime.Now;
-        //    int countryID = -1;
-        //    Gender Gender = 0;
-
-        //    bool isFound = clsUserDataAccess.GetUserInfoByNationalNo(
-        //        NationalNo,
-        //        ref firstName,
-        //        ref secondName,
-        //        ref thirdName,
-        //        ref lastName,
-        //        ref ID,
-        //        ref email,
-        //        ref phone,
-        //        ref address,
-        //        ref dateOfBirth,
-        //        ref countryID,
-        //        ref imagePath,
-        //        ref Gender
-        //    );
-
-        //if (isFound)
-        //{
-        //    return new clsUser(
-        //        ID,
-        //        firstName,
-        //        secondName,
-        //            thirdName,
-        //            lastName,
-        //            NationalNo,
-        //            email,
-        //            phone,
-        //            address,
-        //            dateOfBirth,
-        //            countryID,
-        //            imagePath,
-        //            Gender
-        //        );
-        //    }
-        //    else
-        //        return null;
-        //}
         public bool Save()
         {
 

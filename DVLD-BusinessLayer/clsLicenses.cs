@@ -28,6 +28,8 @@ namespace DVLD_BusinessLayer
         public decimal PaidFees { set; get; }
         public ActiveStatus IsActive { set; get; }
         public IssueReason IssueReason { set; get; }
+        public clsDetainedLicense DetainedInfo { set; get; }
+
         public int CreatedByUserID { set; get; }
         public clsPerson Person
         {
@@ -76,6 +78,7 @@ namespace DVLD_BusinessLayer
             this.CreatedByUserID = createdByUserID;
             this.DriverInfo = clsDrivers.FindByDriverID(this.DriverID);
             this.LicenseClassInfo = clsLicenseClass.Find(this.LicenseClass);
+            this.DetainedInfo = clsDetainedLicense.FindByLicenseID(this.LicenseID);
         }
         private bool _AddNewLicense()
         {
@@ -122,6 +125,10 @@ namespace DVLD_BusinessLayer
 
             return (this.ExpirationDate < DateTime.Now);
 
+        }
+        public bool IsDetained
+        {
+            get { return clsDetainedLicense.IsLicenseDetained(this.LicenseID); }
         }
 
         public static clsLicenses FindByLicenseID(int LicenseID)

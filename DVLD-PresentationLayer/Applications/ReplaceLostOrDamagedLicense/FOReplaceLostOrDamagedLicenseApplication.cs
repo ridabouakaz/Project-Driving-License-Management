@@ -43,7 +43,7 @@ namespace DVLD_PresentationLayer.Applications.International_License
 
         private void RBLostLicense_CheckedChanged(object sender, EventArgs e)
         {
-            LblHeaderTitle.Text = "Replacement for Damaged License";
+            LblHeaderTitle.Text = "Replacement for Lost License";
             this.Text = LblHeaderTitle.Text;
             ctrDetailsReplaceLostOrDamagedLicenseApplication1.ApplicationFees =
                 clsManageApplicationTypes.Find(_GetApplicationTypeID()).ApplicationFees.ToString();
