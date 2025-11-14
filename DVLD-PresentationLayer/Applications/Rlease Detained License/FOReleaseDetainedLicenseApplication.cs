@@ -54,7 +54,6 @@ namespace DVLD_PresentationLayer.Applications.International_License
 
             lblvalueDetainID.Text = ctrDetailsLicenseWithFilter1.SelectedLicenseInfo.DetainedInfo.DetainID.ToString();
             lblvalueLicenseID.Text = ctrDetailsLicenseWithFilter1.SelectedLicenseInfo.LicenseID.ToString();
-
             lblvalueCreatedByUser.Text = ctrDetailsLicenseWithFilter1.SelectedLicenseInfo.DetainedInfo.CreatedByUserInfo.UserName;
             lblvalueDetainDate.Text = ctrDetailsLicenseWithFilter1.SelectedLicenseInfo.DetainedInfo.DetainDate.ToShortDateString();
             lblvalueFineFees.Text = ctrDetailsLicenseWithFilter1.SelectedLicenseInfo.DetainedInfo.FineFees.ToString();
@@ -63,35 +62,28 @@ namespace DVLD_PresentationLayer.Applications.International_License
         private void BtnIssue_Click(object sender, EventArgs e)
         {
 
-            if (MessageBox.Show("Are you sure you want to Renew the license?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            if (MessageBox.Show("Are you sure you want to release this detained  license?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
             {
                 return;
             }
-            clsLicenses NewLicense =
-                ctrDetailsLicenseWithFilter1.SelectedLicenseInfo.Replace(_GetIssueReason(),
-                ctrDetailsLicenseWithFilter1.SelectedLicenseInfo.CreatedByUserID);
-            if (NewLicense == null)
+            int ApplicationID = -1;
+            bool IsReleased = ctrDetailsLicenseWithFilter1.SelectedLicenseInfo.ReleaseDetainedLicense(ctrDetailsLicenseWithFilter1.SelectedLicenseInfo.CreatedByUserID, ref ApplicationID); ;
+            lblvalueApplicationID.Text = ApplicationID.ToString();
+            if (!IsReleased)
             {
-                MessageBox.Show("Faild to Renew the License", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                MessageBox.Show("Faild to to release the Detain License", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
-            ctrDetailsReplaceLostOrDamagedLicenseApplication1.LRApplicationID = NewLicense.ApplicationID.ToString();
-            _NewLicenseID = NewLicense.LicenseID;
-            ctrDetailsReplaceLostOrDamagedLicenseApplication1.ReplacedLicenseID = _NewLicenseID.ToString();
-
-            MessageBox.Show("Licensed Renewed Successfully with ID=" + _NewLicenseID.ToString(), "License Issued", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Detained License released Successfully ", "Detained License Released", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             BtnRelease.Enabled = false;
-            GBRepalcementFor.Enabled = false;
             ctrDetailsLicenseWithFilter1.FilterEnabled = false;
             LLShowLicensesinfo.Enabled = true;
 
         }
         private void LLShowLicensesinfo_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FOLicenseInfo frm = new FOLicenseInfo(_NewLicenseID);
+            FOLicenseInfo frm = new FOLicenseInfo(_SelectedLicenseID);
             frm.ShowDialog();
         }
 
@@ -99,14 +91,6 @@ namespace DVLD_PresentationLayer.Applications.International_License
         {
             FOShowPersonLicenseHistory frm = new FOShowPersonLicenseHistory(ctrDetailsLicenseWithFilter1.SelectedLicenseInfo.DriverInfo.PersonID);
             frm.ShowDialog();
-        }
-
-        private void FORenewLocalDrivingLicenseApplication_Load(object sender, EventArgs e)
-        {
-            LLShowLicensesinfo.Enabled = false;
-            ctrDetailsReplaceLostOrDamagedLicenseApplication1.ApplicationDate = (DateTime.Now).ToShortDateString();
-            ctrDetailsReplaceLostOrDamagedLicenseApplication1.CreatedBy = clsManageApplicationTypes.Find((int)clsApplications.enApplicationType.RenewDrivingLicense).ApplicationFees.ToString();
-
         }
 
         private void BtnAddClose_Click_1(object sender, EventArgs e)

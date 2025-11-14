@@ -238,7 +238,7 @@ namespace DVLD_BusinessLayer
             Application.ApplicantPersonID = this.DriverInfo.PersonID;
             Application.ApplicationDate = DateTime.Now;
             Application.ApplicationTypeID = (int)clsApplications.enApplicationType.RenewDrivingLicense;
-            Application.ApplicationStatus =enApplicationStatus.Completed;
+            Application.ApplicationStatus = enApplicationStatus.Completed;
             Application.LastStatusDate = DateTime.Now;
             Application.PaidFees = clsManageApplicationTypes.Find((int)clsApplications.enApplicationType.RenewDrivingLicense).ApplicationFees;
             Application.CreatedByUserID = CreatedByUserID;
@@ -274,6 +274,32 @@ namespace DVLD_BusinessLayer
             DeactivateCurrentLicense();
 
             return NewLicense;
+        }
+        public bool ReleaseDetainedLicense(int ReleasedByUserID, ref int ApplicationID)
+        {
+
+            //First Create Applicaiton 
+            clsApplications Application = new clsApplications();
+
+            Application.ApplicantPersonID = this.DriverInfo.PersonID;
+            Application.ApplicationDate = DateTime.Now;
+            Application.ApplicationTypeID = (int)clsApplications.enApplicationType.ReleaseDetainedDrivingLicsense;
+            Application.ApplicationStatus =enApplicationStatus.Completed;
+            Application.LastStatusDate = DateTime.Now;
+            Application.PaidFees = clsManageApplicationTypes.Find((int)clsApplications.enApplicationType.ReleaseDetainedDrivingLicsense).ApplicationFees;
+            Application.CreatedByUserID = ReleasedByUserID;
+
+            if (!Application.Save())
+            {
+                ApplicationID = -1;
+                return false;
+            }
+
+            ApplicationID = Application.ApplicationID;
+
+
+            return this.DetainedInfo.ReleaseDetainedLicense(ReleasedByUserID, Application.ApplicationID);
+
         }
         public clsLicenses Replace(IssueReason IssueReason, int CreatedByUserID)
         {

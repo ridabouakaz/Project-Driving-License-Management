@@ -464,7 +464,6 @@
             this.Name = "FOReleaseDetainedLicenseApplication";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New International License Application";
-            this.Load += new System.EventHandler(this.FORenewLocalDrivingLicenseApplication_Load);
             this.gpDetain.ResumeLayout(false);
             this.gpDetain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBApplicationID)).EndInit();
