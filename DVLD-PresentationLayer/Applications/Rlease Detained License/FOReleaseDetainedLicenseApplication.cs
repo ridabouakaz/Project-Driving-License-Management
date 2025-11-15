@@ -57,7 +57,9 @@ namespace DVLD_PresentationLayer.Applications.International_License
             lblvalueCreatedByUser.Text = ctrDetailsLicenseWithFilter1.SelectedLicenseInfo.DetainedInfo.CreatedByUserInfo.UserName;
             lblvalueDetainDate.Text = ctrDetailsLicenseWithFilter1.SelectedLicenseInfo.DetainedInfo.DetainDate.ToShortDateString();
             lblvalueFineFees.Text = ctrDetailsLicenseWithFilter1.SelectedLicenseInfo.DetainedInfo.FineFees.ToString();
-            lblvalueTotalFees.Text = (Convert.ToSingle(lblApplicationFees.Text) + Convert.ToSingle(lblFineFees.Text)).ToString();
+            lblvalueTotalFees.Text = (Convert.ToSingle(lblvalueApplicationFees.Text) + Convert.ToSingle(lblvalueFineFees.Text)).ToString();
+            BtnRelease.Enabled = true;
+
         }
         private void BtnIssue_Click(object sender, EventArgs e)
         {

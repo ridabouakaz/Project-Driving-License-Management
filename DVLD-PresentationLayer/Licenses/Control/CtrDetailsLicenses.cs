@@ -78,7 +78,7 @@ namespace DVLD_PresentationLayer
             IssueDate = _License.IssueDate.ToString("dd/MM/yyyy");
             ExpirationDate = _License.ExpirationDate.ToString("dd/MM/yyyy");
             IsActive = _License.IsActive;
-            IsDetained = "No";
+            IsDetained = _License.IsDetained ? "Yes" : "No";
             IssueReason = _License.IssueReason;
             Notes = _License.Notes;
             if (!string.IsNullOrEmpty(_License.Person.ImagePath) && File.Exists(_License.Person.ImagePath))

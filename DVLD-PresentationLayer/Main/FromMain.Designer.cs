@@ -120,28 +120,28 @@ namespace DVLD_PresentationLayer
             this.SMItemNewDrivingLicenses.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SMItemNewDrivingLicenses.Image = ((System.Drawing.Image)(resources.GetObject("SMItemNewDrivingLicenses.Image")));
             this.SMItemNewDrivingLicenses.Name = "SMItemNewDrivingLicenses";
-            this.SMItemNewDrivingLicenses.Size = new System.Drawing.Size(584, 70);
+            this.SMItemNewDrivingLicenses.Size = new System.Drawing.Size(540, 26);
             this.SMItemNewDrivingLicenses.Text = "New Driving Licenses";
             // 
             // SMItemNewDrivingLocalLicenses
             // 
             this.SMItemNewDrivingLocalLicenses.Image = ((System.Drawing.Image)(resources.GetObject("SMItemNewDrivingLocalLicenses.Image")));
             this.SMItemNewDrivingLocalLicenses.Name = "SMItemNewDrivingLocalLicenses";
-            this.SMItemNewDrivingLocalLicenses.Size = new System.Drawing.Size(283, 70);
+            this.SMItemNewDrivingLocalLicenses.Size = new System.Drawing.Size(239, 26);
             this.SMItemNewDrivingLocalLicenses.Text = "Local Licenses";
             this.SMItemNewDrivingLocalLicenses.Click += new System.EventHandler(this.SMItemNewDrivingLocalLicenses_Click);
             // 
             // SMItemSeparator1
             // 
             this.SMItemSeparator1.Name = "SMItemSeparator1";
-            this.SMItemSeparator1.Size = new System.Drawing.Size(581, 6);
+            this.SMItemSeparator1.Size = new System.Drawing.Size(537, 6);
             // 
             // SMItemRenewDrivingLicenses
             // 
             this.SMItemRenewDrivingLicenses.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SMItemRenewDrivingLicenses.Image = ((System.Drawing.Image)(resources.GetObject("SMItemRenewDrivingLicenses.Image")));
             this.SMItemRenewDrivingLicenses.Name = "SMItemRenewDrivingLicenses";
-            this.SMItemRenewDrivingLicenses.Size = new System.Drawing.Size(584, 70);
+            this.SMItemRenewDrivingLicenses.Size = new System.Drawing.Size(540, 26);
             this.SMItemRenewDrivingLicenses.Text = "Renew Driving Licenses";
             this.SMItemRenewDrivingLicenses.Click += new System.EventHandler(this.SMItemRenewDrivingLicenses_Click);
             // 
@@ -150,7 +150,7 @@ namespace DVLD_PresentationLayer
             this.SMItemReplacementForLostOrDamagedLicenses.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SMItemReplacementForLostOrDamagedLicenses.Image = ((System.Drawing.Image)(resources.GetObject("SMItemReplacementForLostOrDamagedLicenses.Image")));
             this.SMItemReplacementForLostOrDamagedLicenses.Name = "SMItemReplacementForLostOrDamagedLicenses";
-            this.SMItemReplacementForLostOrDamagedLicenses.Size = new System.Drawing.Size(584, 70);
+            this.SMItemReplacementForLostOrDamagedLicenses.Size = new System.Drawing.Size(540, 26);
             this.SMItemReplacementForLostOrDamagedLicenses.Text = "Replacement For Lost Or Damaged Licenses";
             this.SMItemReplacementForLostOrDamagedLicenses.Click += new System.EventHandler(this.SMItemReplacementForLostOrDamagedLicenses_Click);
             // 
@@ -158,7 +158,7 @@ namespace DVLD_PresentationLayer
             // 
             this.SMItemReleaseDetainedDrivingLicense.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SMItemReleaseDetainedDrivingLicense.Name = "SMItemReleaseDetainedDrivingLicense";
-            this.SMItemReleaseDetainedDrivingLicense.Size = new System.Drawing.Size(584, 70);
+            this.SMItemReleaseDetainedDrivingLicense.Size = new System.Drawing.Size(540, 26);
             this.SMItemReleaseDetainedDrivingLicense.Text = "Release Detained Driving License";
             // 
             // SMItemRetakeTest
@@ -166,7 +166,7 @@ namespace DVLD_PresentationLayer
             this.SMItemRetakeTest.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SMItemRetakeTest.Image = ((System.Drawing.Image)(resources.GetObject("SMItemRetakeTest.Image")));
             this.SMItemRetakeTest.Name = "SMItemRetakeTest";
-            this.SMItemRetakeTest.Size = new System.Drawing.Size(584, 70);
+            this.SMItemRetakeTest.Size = new System.Drawing.Size(540, 26);
             this.SMItemRetakeTest.Text = "Retake Test";
             this.SMItemRetakeTest.Click += new System.EventHandler(this.SMItemRetakeTest_Click);
             // 
@@ -192,7 +192,7 @@ namespace DVLD_PresentationLayer
             this.SMItemlocalDrivingLicenseApplications.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
             this.SMItemlocalDrivingLicenseApplications.Image = ((System.Drawing.Image)(resources.GetObject("SMItemlocalDrivingLicenseApplications.Image")));
             this.SMItemlocalDrivingLicenseApplications.Name = "SMItemlocalDrivingLicenseApplications";
-            this.SMItemlocalDrivingLicenseApplications.Size = new System.Drawing.Size(487, 70);
+            this.SMItemlocalDrivingLicenseApplications.Size = new System.Drawing.Size(443, 26);
             this.SMItemlocalDrivingLicenseApplications.Text = "Local Driving License Applications";
             this.SMItemlocalDrivingLicenseApplications.Click += new System.EventHandler(this.SMItemlocalDrivingLicenseApplications_Click);
             // 
@@ -201,7 +201,7 @@ namespace DVLD_PresentationLayer
             this.SMItemInternationalLicenseApplications.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
             this.SMItemInternationalLicenseApplications.Image = ((System.Drawing.Image)(resources.GetObject("SMItemInternationalLicenseApplications.Image")));
             this.SMItemInternationalLicenseApplications.Name = "SMItemInternationalLicenseApplications";
-            this.SMItemInternationalLicenseApplications.Size = new System.Drawing.Size(487, 70);
+            this.SMItemInternationalLicenseApplications.Size = new System.Drawing.Size(443, 26);
             this.SMItemInternationalLicenseApplications.Text = "International License Applications";
             this.SMItemInternationalLicenseApplications.Click += new System.EventHandler(this.SMItemInternationalLicenseApplications_Click);
             // 
@@ -229,6 +229,7 @@ namespace DVLD_PresentationLayer
             this.SMItemDetainedLicense.Name = "SMItemDetainedLicense";
             this.SMItemDetainedLicense.Size = new System.Drawing.Size(365, 26);
             this.SMItemDetainedLicense.Text = "Detained License";
+            this.SMItemDetainedLicense.Click += new System.EventHandler(this.SMItemDetainedLicense_Click);
             // 
             // SMItemReleaseDetainedLicenses
             // 
@@ -236,6 +237,7 @@ namespace DVLD_PresentationLayer
             this.SMItemReleaseDetainedLicenses.Name = "SMItemReleaseDetainedLicenses";
             this.SMItemReleaseDetainedLicenses.Size = new System.Drawing.Size(365, 26);
             this.SMItemReleaseDetainedLicenses.Text = "Release Detained Licenses";
+            this.SMItemReleaseDetainedLicenses.Click += new System.EventHandler(this.SMItemReleaseDetainedLicenses_Click);
             // 
             // SMItemManageApplicationTypes
             // 

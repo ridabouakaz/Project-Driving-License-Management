@@ -105,5 +105,17 @@ namespace DVLD_PresentationLayer
             FOReplaceLostOrDamagedLicenseApplication frm = new FOReplaceLostOrDamagedLicenseApplication();
             frm.ShowDialog();
         }
+
+        private void SMItemDetainedLicense_Click(object sender, EventArgs e)
+        {
+            FODetainLicenseApplication frm = new FODetainLicenseApplication(_currentUser);
+            frm.ShowDialog();
+        }
+
+        private void SMItemReleaseDetainedLicenses_Click(object sender, EventArgs e)
+        {
+            FOReleaseDetainedLicenseApplication frm = new FOReleaseDetainedLicenseApplication();
+            frm.ShowDialog();
+        }
     }
 }

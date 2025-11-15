@@ -1,6 +1,6 @@
 ﻿namespace DVLD_PresentationLayer.Applications.International_License
 {
-    partial class FOReleaseDetainedLicenseApplication
+    partial class FODetainLicenseApplication
     {
         /// <summary>
         /// Required designer variable.
@@ -28,24 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FOReleaseDetainedLicenseApplication));
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FODetainLicenseApplication));
             this.LblHeaderTitle = new System.Windows.Forms.Label();
-            this.BtnRelease = new System.Windows.Forms.Button();
+            this.BtnDetain = new System.Windows.Forms.Button();
             this.BtnAddClose = new System.Windows.Forms.Button();
             this.LLShowLicensesHistroy = new System.Windows.Forms.LinkLabel();
             this.LLShowLicensesinfo = new System.Windows.Forms.LinkLabel();
             this.ctrDetailsLicenseWithFilter1 = new DVLD_PresentationLayer.Licenses.Control.CtrDetailsLicenseWithFilter();
             this.gpDetain = new System.Windows.Forms.GroupBox();
-            this.PBApplicationID = new System.Windows.Forms.PictureBox();
-            this.lblvalueApplicationID = new System.Windows.Forms.Label();
-            this.lblvalueTotalFees = new System.Windows.Forms.Label();
-            this.lblApplicationID = new System.Windows.Forms.Label();
-            this.lblTotalFees = new System.Windows.Forms.Label();
-            this.PBTotalFees = new System.Windows.Forms.PictureBox();
-            this.lblvalueApplicationFees = new System.Windows.Forms.Label();
-            this.lblApplicationFees = new System.Windows.Forms.Label();
-            this.PBApplicationFees = new System.Windows.Forms.PictureBox();
-            this.lblvalueFineFees = new System.Windows.Forms.Label();
+            this.txtFineFees = new System.Windows.Forms.TextBox();
             this.PBLicenseID = new System.Windows.Forms.PictureBox();
             this.lblvalueLicenseID = new System.Windows.Forms.Label();
             this.lblLicenseID = new System.Windows.Forms.Label();
@@ -60,15 +52,14 @@
             this.lblDetainDate = new System.Windows.Forms.Label();
             this.lblvalueDetainID = new System.Windows.Forms.Label();
             this.LblDetainID = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.gpDetain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PBApplicationID)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBTotalFees)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBApplicationFees)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBLicenseID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBDetainID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBCreatedByUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBFineFees)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBDetainDate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // LblHeaderTitle
@@ -80,33 +71,33 @@
             this.LblHeaderTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
             this.LblHeaderTitle.Location = new System.Drawing.Point(418, 9);
             this.LblHeaderTitle.Name = "LblHeaderTitle";
-            this.LblHeaderTitle.Size = new System.Drawing.Size(455, 50);
+            this.LblHeaderTitle.Size = new System.Drawing.Size(272, 50);
             this.LblHeaderTitle.TabIndex = 4;
-            this.LblHeaderTitle.Text = "Release Detained License";
+            this.LblHeaderTitle.Text = "Detain License";
             // 
-            // BtnRelease
+            // BtnDetain
             // 
-            this.BtnRelease.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnRelease.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.BtnRelease.Enabled = false;
-            this.BtnRelease.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.BtnRelease.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.BtnRelease.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
-            this.BtnRelease.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnRelease.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.BtnRelease.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BtnRelease.Image = ((System.Drawing.Image)(resources.GetObject("BtnRelease.Image")));
-            this.BtnRelease.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnRelease.Location = new System.Drawing.Point(975, 787);
-            this.BtnRelease.Name = "BtnRelease";
-            this.BtnRelease.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.BtnRelease.Size = new System.Drawing.Size(173, 50);
-            this.BtnRelease.TabIndex = 57;
-            this.BtnRelease.Text = "Release";
-            this.BtnRelease.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnRelease.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnRelease.UseVisualStyleBackColor = false;
-            this.BtnRelease.Click += new System.EventHandler(this.BtnIssue_Click);
+            this.BtnDetain.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnDetain.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnDetain.Enabled = false;
+            this.BtnDetain.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BtnDetain.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.BtnDetain.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.BtnDetain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnDetain.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.BtnDetain.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BtnDetain.Image = ((System.Drawing.Image)(resources.GetObject("BtnDetain.Image")));
+            this.BtnDetain.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnDetain.Location = new System.Drawing.Point(975, 787);
+            this.BtnDetain.Name = "BtnDetain";
+            this.BtnDetain.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.BtnDetain.Size = new System.Drawing.Size(173, 50);
+            this.BtnDetain.TabIndex = 57;
+            this.BtnDetain.Text = "Detain";
+            this.BtnDetain.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnDetain.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnDetain.UseVisualStyleBackColor = false;
+            this.BtnDetain.Click += new System.EventHandler(this.BtnIssue_Click);
             // 
             // BtnAddClose
             // 
@@ -149,10 +140,10 @@
             this.LLShowLicensesinfo.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.LLShowLicensesinfo.Location = new System.Drawing.Point(231, 801);
             this.LLShowLicensesinfo.Name = "LLShowLicensesinfo";
-            this.LLShowLicensesinfo.Size = new System.Drawing.Size(176, 25);
+            this.LLShowLicensesinfo.Size = new System.Drawing.Size(171, 25);
             this.LLShowLicensesinfo.TabIndex = 60;
             this.LLShowLicensesinfo.TabStop = true;
-            this.LLShowLicensesinfo.Text = "Show  Licenses Info";
+            this.LLShowLicensesinfo.Text = "Show Licenses Info";
             this.LLShowLicensesinfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LLShowLicensesinfo_LinkClicked_1);
             // 
             // ctrDetailsLicenseWithFilter1
@@ -169,16 +160,7 @@
             // 
             // gpDetain
             // 
-            this.gpDetain.Controls.Add(this.PBApplicationID);
-            this.gpDetain.Controls.Add(this.lblvalueApplicationID);
-            this.gpDetain.Controls.Add(this.lblvalueTotalFees);
-            this.gpDetain.Controls.Add(this.lblApplicationID);
-            this.gpDetain.Controls.Add(this.lblTotalFees);
-            this.gpDetain.Controls.Add(this.PBTotalFees);
-            this.gpDetain.Controls.Add(this.lblvalueApplicationFees);
-            this.gpDetain.Controls.Add(this.lblApplicationFees);
-            this.gpDetain.Controls.Add(this.PBApplicationFees);
-            this.gpDetain.Controls.Add(this.lblvalueFineFees);
+            this.gpDetain.Controls.Add(this.txtFineFees);
             this.gpDetain.Controls.Add(this.PBLicenseID);
             this.gpDetain.Controls.Add(this.lblvalueLicenseID);
             this.gpDetain.Controls.Add(this.lblLicenseID);
@@ -200,109 +182,13 @@
             this.gpDetain.TabStop = false;
             this.gpDetain.Text = "Detain Info";
             // 
-            // PBApplicationID
+            // txtFineFees
             // 
-            this.PBApplicationID.Image = ((System.Drawing.Image)(resources.GetObject("PBApplicationID.Image")));
-            this.PBApplicationID.Location = new System.Drawing.Point(581, 129);
-            this.PBApplicationID.Name = "PBApplicationID";
-            this.PBApplicationID.Size = new System.Drawing.Size(31, 26);
-            this.PBApplicationID.TabIndex = 203;
-            this.PBApplicationID.TabStop = false;
-            // 
-            // lblvalueApplicationID
-            // 
-            this.lblvalueApplicationID.AutoSize = true;
-            this.lblvalueApplicationID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblvalueApplicationID.Location = new System.Drawing.Point(619, 129);
-            this.lblvalueApplicationID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblvalueApplicationID.Name = "lblvalueApplicationID";
-            this.lblvalueApplicationID.Size = new System.Drawing.Size(74, 25);
-            this.lblvalueApplicationID.TabIndex = 202;
-            this.lblvalueApplicationID.Text = "[????]";
-            // 
-            // lblvalueTotalFees
-            // 
-            this.lblvalueTotalFees.AutoSize = true;
-            this.lblvalueTotalFees.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblvalueTotalFees.Location = new System.Drawing.Point(225, 129);
-            this.lblvalueTotalFees.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblvalueTotalFees.Name = "lblvalueTotalFees";
-            this.lblvalueTotalFees.Size = new System.Drawing.Size(74, 25);
-            this.lblvalueTotalFees.TabIndex = 202;
-            this.lblvalueTotalFees.Text = "[$$$$]";
-            // 
-            // lblApplicationID
-            // 
-            this.lblApplicationID.AutoSize = true;
-            this.lblApplicationID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApplicationID.Location = new System.Drawing.Point(410, 129);
-            this.lblApplicationID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblApplicationID.Name = "lblApplicationID";
-            this.lblApplicationID.Size = new System.Drawing.Size(153, 25);
-            this.lblApplicationID.TabIndex = 200;
-            this.lblApplicationID.Text = "Application ID:";
-            // 
-            // lblTotalFees
-            // 
-            this.lblTotalFees.AutoSize = true;
-            this.lblTotalFees.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalFees.Location = new System.Drawing.Point(16, 129);
-            this.lblTotalFees.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTotalFees.Name = "lblTotalFees";
-            this.lblTotalFees.Size = new System.Drawing.Size(122, 25);
-            this.lblTotalFees.TabIndex = 200;
-            this.lblTotalFees.Text = "Total Fees:";
-            // 
-            // PBTotalFees
-            // 
-            this.PBTotalFees.Image = ((System.Drawing.Image)(resources.GetObject("PBTotalFees.Image")));
-            this.PBTotalFees.Location = new System.Drawing.Point(187, 129);
-            this.PBTotalFees.Name = "PBTotalFees";
-            this.PBTotalFees.Size = new System.Drawing.Size(31, 26);
-            this.PBTotalFees.TabIndex = 201;
-            this.PBTotalFees.TabStop = false;
-            // 
-            // lblvalueApplicationFees
-            // 
-            this.lblvalueApplicationFees.AutoSize = true;
-            this.lblvalueApplicationFees.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblvalueApplicationFees.Location = new System.Drawing.Point(225, 94);
-            this.lblvalueApplicationFees.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblvalueApplicationFees.Name = "lblvalueApplicationFees";
-            this.lblvalueApplicationFees.Size = new System.Drawing.Size(74, 25);
-            this.lblvalueApplicationFees.TabIndex = 199;
-            this.lblvalueApplicationFees.Text = "[$$$$]";
-            // 
-            // lblApplicationFees
-            // 
-            this.lblApplicationFees.AutoSize = true;
-            this.lblApplicationFees.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApplicationFees.Location = new System.Drawing.Point(16, 94);
-            this.lblApplicationFees.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblApplicationFees.Name = "lblApplicationFees";
-            this.lblApplicationFees.Size = new System.Drawing.Size(180, 25);
-            this.lblApplicationFees.TabIndex = 197;
-            this.lblApplicationFees.Text = "Application Fees:";
-            // 
-            // PBApplicationFees
-            // 
-            this.PBApplicationFees.Image = ((System.Drawing.Image)(resources.GetObject("PBApplicationFees.Image")));
-            this.PBApplicationFees.Location = new System.Drawing.Point(187, 94);
-            this.PBApplicationFees.Name = "PBApplicationFees";
-            this.PBApplicationFees.Size = new System.Drawing.Size(31, 26);
-            this.PBApplicationFees.TabIndex = 198;
-            this.PBApplicationFees.TabStop = false;
-            // 
-            // lblvalueFineFees
-            // 
-            this.lblvalueFineFees.AutoSize = true;
-            this.lblvalueFineFees.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblvalueFineFees.Location = new System.Drawing.Point(619, 94);
-            this.lblvalueFineFees.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblvalueFineFees.Name = "lblvalueFineFees";
-            this.lblvalueFineFees.Size = new System.Drawing.Size(74, 25);
-            this.lblvalueFineFees.TabIndex = 196;
-            this.lblvalueFineFees.Text = "[$$$$]";
+            this.txtFineFees.Location = new System.Drawing.Point(230, 95);
+            this.txtFineFees.Name = "txtFineFees";
+            this.txtFineFees.Size = new System.Drawing.Size(102, 22);
+            this.txtFineFees.TabIndex = 197;
+            this.txtFineFees.Validating += new System.ComponentModel.CancelEventHandler(this.txtFineFees_Validating);
             // 
             // PBLicenseID
             // 
@@ -379,7 +265,7 @@
             // 
             this.lblFineFees.AutoSize = true;
             this.lblFineFees.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFineFees.Location = new System.Drawing.Point(410, 94);
+            this.lblFineFees.Location = new System.Drawing.Point(16, 95);
             this.lblFineFees.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFineFees.Name = "lblFineFees";
             this.lblFineFees.Size = new System.Drawing.Size(115, 25);
@@ -389,7 +275,7 @@
             // PBFineFees
             // 
             this.PBFineFees.Image = ((System.Drawing.Image)(resources.GetObject("PBFineFees.Image")));
-            this.PBFineFees.Location = new System.Drawing.Point(581, 94);
+            this.PBFineFees.Location = new System.Drawing.Point(187, 95);
             this.PBFineFees.Name = "PBFineFees";
             this.PBFineFees.Size = new System.Drawing.Size(31, 26);
             this.PBFineFees.TabIndex = 178;
@@ -419,7 +305,7 @@
             // 
             this.lblDetainDate.AutoSize = true;
             this.lblDetainDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDetainDate.Location = new System.Drawing.Point(16, 56);
+            this.lblDetainDate.Location = new System.Drawing.Point(16, 57);
             this.lblDetainDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDetainDate.Name = "lblDetainDate";
             this.lblDetainDate.Size = new System.Drawing.Size(132, 25);
@@ -448,7 +334,11 @@
             this.LblDetainID.TabIndex = 172;
             this.LblDetainID.Text = "Detain ID:";
             // 
-            // FOReleaseDetainedLicenseApplication
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // FODetainLicenseApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -458,22 +348,21 @@
             this.Controls.Add(this.LLShowLicensesinfo);
             this.Controls.Add(this.LLShowLicensesHistroy);
             this.Controls.Add(this.BtnAddClose);
-            this.Controls.Add(this.BtnRelease);
+            this.Controls.Add(this.BtnDetain);
             this.Controls.Add(this.ctrDetailsLicenseWithFilter1);
             this.Controls.Add(this.LblHeaderTitle);
-            this.Name = "FOReleaseDetainedLicenseApplication";
+            this.Name = "FODetainLicenseApplication";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New International License Application";
+            this.Load += new System.EventHandler(this.FODetainLicenseApplication_Load);
             this.gpDetain.ResumeLayout(false);
             this.gpDetain.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PBApplicationID)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBTotalFees)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBApplicationFees)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBLicenseID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBDetainID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBCreatedByUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBFineFees)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBDetainDate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -483,21 +372,11 @@
 
         private System.Windows.Forms.Label LblHeaderTitle;
         private Licenses.Control.CtrDetailsLicenseWithFilter ctrDetailsLicenseWithFilter1;
-        private System.Windows.Forms.Button BtnRelease;
+        private System.Windows.Forms.Button BtnDetain;
         private System.Windows.Forms.Button BtnAddClose;
         private System.Windows.Forms.LinkLabel LLShowLicensesHistroy;
         private System.Windows.Forms.LinkLabel LLShowLicensesinfo;
         private System.Windows.Forms.GroupBox gpDetain;
-        private System.Windows.Forms.PictureBox PBApplicationID;
-        private System.Windows.Forms.Label lblvalueApplicationID;
-        private System.Windows.Forms.Label lblvalueTotalFees;
-        private System.Windows.Forms.Label lblApplicationID;
-        private System.Windows.Forms.Label lblTotalFees;
-        private System.Windows.Forms.PictureBox PBTotalFees;
-        private System.Windows.Forms.Label lblvalueApplicationFees;
-        private System.Windows.Forms.Label lblApplicationFees;
-        private System.Windows.Forms.PictureBox PBApplicationFees;
-        private System.Windows.Forms.Label lblvalueFineFees;
         private System.Windows.Forms.PictureBox PBLicenseID;
         private System.Windows.Forms.Label lblvalueLicenseID;
         private System.Windows.Forms.Label lblLicenseID;
@@ -512,5 +391,7 @@
         private System.Windows.Forms.Label lblDetainDate;
         private System.Windows.Forms.Label lblvalueDetainID;
         private System.Windows.Forms.Label LblDetainID;
+        private System.Windows.Forms.TextBox txtFineFees;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

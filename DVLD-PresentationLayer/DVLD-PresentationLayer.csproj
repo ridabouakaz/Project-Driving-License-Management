@@ -81,10 +81,16 @@
     <Compile Include="Applications\Control\CtrDrivingLicenseApplicationInfo.Designer.cs">
       <DependentUpon>CtrDrivingLicenseApplicationInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Applications\International License\Control\CtrDetailsDriverInternationalLicenseApplication.cs">
+    <Compile Include="Licenses\Detain License\FODetainLicenseApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Licenses\Detain License\FODetainLicenseApplication.Designer.cs">
+      <DependentUpon>FODetainLicenseApplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Licenses\International Licenses\Control\CtrDetailsDriverInternationalLicenseApplication.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Applications\International License\Control\CtrDetailsDriverInternationalLicenseApplication.Designer.cs">
+    <Compile Include="Licenses\International Licenses\Control\CtrDetailsDriverInternationalLicenseApplication.Designer.cs">
       <DependentUpon>CtrDetailsDriverInternationalLicenseApplication.cs</DependentUpon>
     </Compile>
     <Compile Include="Applications\International License\Control\CtrDetailsInternationalLicenseApplication.cs">
@@ -93,10 +99,10 @@
     <Compile Include="Applications\International License\Control\CtrDetailsInternationalLicenseApplication.Designer.cs">
       <DependentUpon>CtrDetailsInternationalLicenseApplication.cs</DependentUpon>
     </Compile>
-    <Compile Include="Applications\International License\FOInternationalDriverInfo.cs">
+    <Compile Include="Licenses\International Licenses\FOInternationalDriverInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Applications\International License\FOInternationalDriverInfo.Designer.cs">
+    <Compile Include="Licenses\International Licenses\FOInternationalDriverInfo.Designer.cs">
       <DependentUpon>FOInternationalDriverInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Applications\International License\FONewInternationalLicenseApplication.cs">
@@ -171,16 +177,16 @@
     <Compile Include="Licenses\Control\CtrDetailsLicenseWithFilter.Designer.cs">
       <DependentUpon>CtrDetailsLicenseWithFilter.cs</DependentUpon>
     </Compile>
-    <Compile Include="Licenses\FOIssueDriverLicenseFirstTime.cs">
+    <Compile Include="Licenses\Local Licenses\FOIssueDriverLicenseFirstTime.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Licenses\FOIssueDriverLicenseFirstTime.Designer.cs">
+    <Compile Include="Licenses\Local Licenses\FOIssueDriverLicenseFirstTime.Designer.cs">
       <DependentUpon>FOIssueDriverLicenseFirstTime.cs</DependentUpon>
     </Compile>
-    <Compile Include="Licenses\FOLicenseInfo.cs">
+    <Compile Include="Licenses\Local Licenses\FOLicenseInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Licenses\FOLicenseInfo.Designer.cs">
+    <Compile Include="Licenses\Local Licenses\FOLicenseInfo.Designer.cs">
       <DependentUpon>FOLicenseInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Licenses\FOShowPersonLicenseHistory.cs">
@@ -324,13 +330,16 @@
     <EmbeddedResource Include="Applications\Control\CtrDrivingLicenseApplicationInfo.resx">
       <DependentUpon>CtrDrivingLicenseApplicationInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Applications\International License\Control\CtrDetailsDriverInternationalLicenseApplication.resx">
+    <EmbeddedResource Include="Licenses\Detain License\FODetainLicenseApplication.resx">
+      <DependentUpon>FODetainLicenseApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Licenses\International Licenses\Control\CtrDetailsDriverInternationalLicenseApplication.resx">
       <DependentUpon>CtrDetailsDriverInternationalLicenseApplication.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Applications\International License\Control\CtrDetailsInternationalLicenseApplication.resx">
       <DependentUpon>CtrDetailsInternationalLicenseApplication.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Applications\International License\FOInternationalDriverInfo.resx">
+    <EmbeddedResource Include="Licenses\International Licenses\FOInternationalDriverInfo.resx">
       <DependentUpon>FOInternationalDriverInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Applications\International License\FONewInternationalLicenseApplication.resx">
@@ -369,10 +378,10 @@
     <EmbeddedResource Include="Licenses\Control\CtrDetailsLicenseWithFilter.resx">
       <DependentUpon>CtrDetailsLicenseWithFilter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Licenses\FOIssueDriverLicenseFirstTime.resx">
+    <EmbeddedResource Include="Licenses\Local Licenses\FOIssueDriverLicenseFirstTime.resx">
       <DependentUpon>FOIssueDriverLicenseFirstTime.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Licenses\FOLicenseInfo.resx">
+    <EmbeddedResource Include="Licenses\Local Licenses\FOLicenseInfo.resx">
       <DependentUpon>FOLicenseInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Licenses\FOShowPersonLicenseHistory.resx">
