@@ -117,5 +117,11 @@ namespace DVLD_PresentationLayer
             FOReleaseDetainedLicenseApplication frm = new FOReleaseDetainedLicenseApplication();
             frm.ShowDialog();
         }
+
+        private void SMItemManageDetainedLicenses_Click(object sender, EventArgs e)
+        {
+            FOManageDetainedLicenses frm = new FOManageDetainedLicenses(_currentUser);
+            frm.ShowDialog();
+        }
     }
 }

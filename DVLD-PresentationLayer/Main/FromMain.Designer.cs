@@ -212,6 +212,7 @@ namespace DVLD_PresentationLayer
             this.SMItemDetainedLicense,
             this.SMItemReleaseDetainedLicenses});
             this.SMItemDetainLicenses.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SMItemDetainLicenses.Image = ((System.Drawing.Image)(resources.GetObject("SMItemDetainLicenses.Image")));
             this.SMItemDetainLicenses.Name = "SMItemDetainLicenses";
             this.SMItemDetainLicenses.Size = new System.Drawing.Size(436, 70);
             this.SMItemDetainLicenses.Text = "Detain Licenses";
@@ -219,23 +220,27 @@ namespace DVLD_PresentationLayer
             // SMItemManageDetainedLicenses
             // 
             this.SMItemManageDetainedLicenses.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
+            this.SMItemManageDetainedLicenses.Image = ((System.Drawing.Image)(resources.GetObject("SMItemManageDetainedLicenses.Image")));
             this.SMItemManageDetainedLicenses.Name = "SMItemManageDetainedLicenses";
-            this.SMItemManageDetainedLicenses.Size = new System.Drawing.Size(365, 26);
+            this.SMItemManageDetainedLicenses.Size = new System.Drawing.Size(409, 70);
             this.SMItemManageDetainedLicenses.Text = "Manage Detained Licenses";
+            this.SMItemManageDetainedLicenses.Click += new System.EventHandler(this.SMItemManageDetainedLicenses_Click);
             // 
             // SMItemDetainedLicense
             // 
             this.SMItemDetainedLicense.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
+            this.SMItemDetainedLicense.Image = ((System.Drawing.Image)(resources.GetObject("SMItemDetainedLicense.Image")));
             this.SMItemDetainedLicense.Name = "SMItemDetainedLicense";
-            this.SMItemDetainedLicense.Size = new System.Drawing.Size(365, 26);
+            this.SMItemDetainedLicense.Size = new System.Drawing.Size(409, 70);
             this.SMItemDetainedLicense.Text = "Detained License";
             this.SMItemDetainedLicense.Click += new System.EventHandler(this.SMItemDetainedLicense_Click);
             // 
             // SMItemReleaseDetainedLicenses
             // 
             this.SMItemReleaseDetainedLicenses.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
+            this.SMItemReleaseDetainedLicenses.Image = ((System.Drawing.Image)(resources.GetObject("SMItemReleaseDetainedLicenses.Image")));
             this.SMItemReleaseDetainedLicenses.Name = "SMItemReleaseDetainedLicenses";
-            this.SMItemReleaseDetainedLicenses.Size = new System.Drawing.Size(365, 26);
+            this.SMItemReleaseDetainedLicenses.Size = new System.Drawing.Size(409, 70);
             this.SMItemReleaseDetainedLicenses.Text = "Release Detained Licenses";
             this.SMItemReleaseDetainedLicenses.Click += new System.EventHandler(this.SMItemReleaseDetainedLicenses_Click);
             // 

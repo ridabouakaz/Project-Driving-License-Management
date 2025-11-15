@@ -81,6 +81,12 @@
     <Compile Include="Applications\Control\CtrDrivingLicenseApplicationInfo.Designer.cs">
       <DependentUpon>CtrDrivingLicenseApplicationInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Applications\Rlease Detained License\FOManageDetainedLicenses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\Rlease Detained License\FOManageDetainedLicenses.Designer.cs">
+      <DependentUpon>FOManageDetainedLicenses.cs</DependentUpon>
+    </Compile>
     <Compile Include="Licenses\Detain License\FODetainLicenseApplication.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -329,6 +335,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Applications\Control\CtrDrivingLicenseApplicationInfo.resx">
       <DependentUpon>CtrDrivingLicenseApplicationInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\Rlease Detained License\FOManageDetainedLicenses.resx">
+      <DependentUpon>FOManageDetainedLicenses.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Licenses\Detain License\FODetainLicenseApplication.resx">
       <DependentUpon>FODetainLicenseApplication.cs</DependentUpon>

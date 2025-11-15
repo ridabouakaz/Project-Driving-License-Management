@@ -107,7 +107,7 @@ namespace DVLD_PresentationLayer
                 case "Full Name":
                     this.MTBsearch.Mask = "";
                     filter = new FullNameFilter(MTBsearch.Text);
-                    break;
+                    break;  
                 case "Is ActiveStatus":
                     this.MTBsearch.Mask = "";
                     filter = new ActiveStatusFilter(CBActiveStatusBy.SelectedItem.ToString());
