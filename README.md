@@ -282,5 +282,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **⭐ If you find this project useful, please give it a star!**
 ```
-
-هذا الـ README يعكس الهيكل الكامل للمشروع مع جميع المجلدات والوحدات المذكورة. يمكنك نسخه ولصقه مباشرة في ملف README.md في مستودع GitHub الخاص بك.
