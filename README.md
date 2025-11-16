@@ -1,267 +1,286 @@
-🚗 Driving License Management System
 
-A complete desktop application for managing driving license applications, testing, issuance, renewal, and driver records, built with C# (.NET Windows Forms) using a clean multi-layer architecture (UI + Business Layer + Data Access Layer).
-
-📌 Overview
-
-The system manages all stages of the driving license lifecycle:
-
-Person records
-
-License applications
-
-Local & international licenses
-
-Theory / Vision / Street tests
-
-License issuance & renewal
-
-Payments & fees
-
-User management
-
-Activity tracking
-
-The project follows best practices, separating responsibilities across multiple layers for cleaner maintainability and scalability.
-
-🏗️ Architecture
-
-The project uses a classic and clean 3-Tier Architecture:
-
-📁 DrivingLicense
- ┣ 📁 UI (Presentation Layer)
- ┣ 📁 BusinessLayer (BLL)
- ┣ 📁 DataAccessLayer (DAL)
- ┣ 📁 GlobalClasses
- ┗ 📁 Properties
-
-1. Presentation Layer (UI)
-
-Contains all Windows Forms pages:
-
-Persons management
-
-Applications
-
-Driving tests
-
-License issuance
-
-License renewal
-
-Drivers list
-
-Reports & search pages
-
-User login & user management
-
-The UI is clean, uses UserControls, and communicates only with the Business Layer.
-
-2. Business Layer (BLL)
-
-Handles the system’s logic and rules.
-
-Categories include:
-
-clsPerson
-
-clsApplication
-
-clsLocalDrivingLicenseApplication
-
-clsDriver
-
-clsLicense
-
-clsTestType / clsTestAppointment
-
-clsUser
-
-enum ActiveStatus / enum IssueReason
-
-This layer:
-
-Validates data
-
-Applies business rules (e.g., cannot issue license without passing all tests)
-
-Coordinates between DAL and UI
-
-Encapsulates logic such as:
-
-Getting person details
-
-Checking test status
-
-Calculating expiration dates
-
-Linking applications to licenses
-
-Permission handling
-
-3. Data Access Layer (DAL)
-
-Handles all interactions with the database:
-
-SQL CRUD functions
-
-Stored procedures calls
-
-Data retrieval for views
-
-Mapping data tables to objects in the BLL
-
-Example objects:
-
-clsPersonData
-
-clsLicenseData
-
-clsApplicationData
-
-🔑 Main Features
-✔ Person Management
-
-Add / edit persons
-
-Upload photos
-
-Full personal info
-
-Search by ID / national number
-
-✔ Driving License Applications
-
-Local license applications
-
-Linked to person records
-
-Fees, notes, and status
-
-✔ Driving Tests
-
-Vision test
-
-Theory test
-
-Practical street test
-
-Test appointments
-
-Pass/fail logic
-
-Prevent issuing license without all passes
-
-✔ License Issuance
-
-Auto-generated expiration date
-
-Issue reason (New, Renew, Replacement)
-
-Active / inactive status
-
-Linking license to driver
-
-✔ License Renewal & Replacement
-
-Damage
-
-Lost license
-
-Expired license
-
-✔ Drivers Management
-
-A driver can hold multiple licenses
-
-Tracking history of licenses
-
-✔ Users & Permissions
-
-Login
-
-CreatedByUserID
-
-Role-based logic
-
-✔ Search & Reports
-
-Search licenses
-
-Search applications
-
-Print or export results
-
-🗄 Database Structure (General Overview)
-
-Your project uses tables such as:
-
-Persons
-
-Applications
-
-LocalDrivingLicenseApplications
-
-TestTypes
-
-TestAppointments
-
-Licenses
-
-Drivers
-
-Users
-
-Views such as:
-
-LocalDrivingLicenseApplications_View
-
-DriversLicenses_View
-
-🧪 Best Practices Used
-
-3-Tier architecture
-
-Clean separation of UI, logic, and data
-
-Enums for status and reason
-
-Nullable checks
-
-Business logic encapsulated in classes
-
-Consistent naming
-
-Reusable UserControls
-
-Centralized database access
-
-🚀 How to Run the Project
-
-Open the solution in Visual Studio
-
-Restore NuGet packages if used
-
-Configure your SQL Server connection string
-
-Run database scripts
-
-Launch the application
-
-📄 Future Improvements
-
-Migrate UI to WPF or MAUI
-
-Add JWT authentication for API version
-
-Add dashboards and analytics
-
-Add unit tests
-
-Add cloud database support
-
-💼 Author
-
-Reda Bouakaz
-Software Engineer • C# Developer
-Driving License Management System (Educational / Training Project)
+# 🚗 Driving License Management System (DVLD)
+
+A comprehensive Windows desktop application for managing driving license issuance, renewals, and international permits. Built with C# .NET and SQL Server.
+
+![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
+![.NET](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
+![SQL Server](https://img.shields.io/badge/Microsoft_SQL_Server-CC2927?style=for-the-badge&logo=microsoft-sql-server&logoColor=white)
+![Windows Forms](https://img.shields.io/badge/Windows_Forms-5C2D91?style=for-the-badge&logo=.net&logoColor=white)
+
+## 📋 Table of Contents
+- [Features](#features)
+- [Project Structure](#project-structure)
+- [Technology Stack](#technology-stack)
+- [Installation](#installation)
+- [Modules](#modules)
+- [Database Schema](#database-schema)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+
+## ✨ Features
+
+### 👥 People Management
+- Complete person registration with personal details
+- Person search and filtering capabilities
+- Personal information updates and management
+- Photo storage and management
+
+### 🪪 License Management
+- **Local Licenses**: New issuance, renewals, replacements
+- **International Licenses**: International driving permit processing
+- License detention and release management
+- License classes and categories management
+
+### 📝 Application Processing
+- **Local Driving License Applications**
+- **International License Applications**
+- **License Renewal Applications**
+- **Replace Lost/Damaged License Applications**
+- **Release Detained License Applications**
+
+### 🧪 Tests Management
+- Driving test types configuration
+- Test appointments scheduling
+- Test results management
+- Test fees calculation
+
+### 👤 Driver Management
+- Driver record creation and maintenance
+- License history tracking
+- Driver status monitoring
+
+### 🔐 User Management
+- User accounts management
+- Role-based access control
+- User permissions configuration
+- Authentication and authorization
+
+## 📁 Complete Project Structure
+
+```
+DVLD/
+├── 📂 DVLD-BusinessLayer/                 # Business Logic Layer
+│   ├── clsPerson.cs                       # Person entity management
+│   ├── clsLicense.cs                      # License operations
+│   ├── clsApplication.cs                  # Application processing
+│   ├── clsDriver.cs                       # Driver management
+│   ├── clsUser.cs                         # User authentication
+│   ├── clsInternationalLicense.cs         # International licenses
+│   └── clsTest.cs                         # Test management
+│
+├── 📂 DVLD-DataAccessLayer/               # Data Access Layer
+│   ├── clsDataAccess.cs                   # Database connection wrapper
+│   ├── clsDataAccessSettings.cs           # Connection configuration
+│   └── StoredProcedures/                  # SQL stored procedures
+│
+├── 📂 DVLD-PresentationLayer/             # Presentation Layer
+│   ├── 📂 Applications/                   # Application Management
+│   │   ├── 📂 Control/                    # Application controls
+│   │   ├── 📂 International License/      # International license apps
+│   │   ├── 📂 Local Driving License/      # Local license applications
+│   │   ├── 📂 Renew Local License/        # License renewal apps
+│   │   ├── 📂 ReplaceLostOrDamagedLicense/ # Replacement applications
+│   │   └── 📂 Release Detained License/   # License release apps
+│   │
+│   ├── 📂 ApplicationTypes/               # Application types management
+│   │
+│   ├── 📂 Drivers/                        # Driver management
+│   │   ├── Driver registration forms
+│   │   └── Driver history views
+│   │
+│   ├── 📂 Licenses/                       # License Management
+│   │   ├── 📂 Control/                    # License controls
+│   │   ├── 📂 Detain License/             # License detention
+│   │   ├── 📂 International Licenses/     # International licenses
+│   │   └── 📂 Local Licenses/             # Local licenses management
+│   │
+│   ├── 📂 Main/                           # Main application forms
+│   │   ├── Main dashboard
+│   │   ├── Login forms
+│   │   └── Navigation
+│   │
+│   ├── 📂 People/                         # People Management
+│   │   ├── 📂 Control/                    # Person controls
+│   │   ├── Person registration forms
+│   │   └── Person search and edit forms
+│   │
+│   ├── 📂 Tests/                          # Tests Management
+│   │   ├── 📂 TestTypes/                  # Test types configuration
+│   │   ├── Test scheduling forms
+│   │   └── Test results entry forms
+│   │
+│   ├── 📂 Users/                          # User Management
+│   │   ├── 📂 Control/                    # User controls
+│   │   ├── User registration forms
+│   │   └── User permissions forms
+│   │
+│   └── GlobalClasses.cs                   # Global utilities and helpers
+│
+└── 📂 DatabaseScripts/                    # Database creation scripts
+```
+
+## 🛠 Technology Stack
+
+### Backend & Database
+- **C# .NET Framework** - Core application logic
+- **SQL Server** - Database management system
+- **ADO.NET** - Data access technology
+- **Stored Procedures** - Database operations
+
+### Frontend & UI
+- **Windows Forms** - Desktop application framework
+- **Syncfusion Controls** - Enhanced UI components
+- **GDI+** - Custom graphics and reporting
+
+### Architecture
+- **3-Tier Architecture** (Presentation, Business, Data Access)
+- **Layered Architecture** - Separation of concerns
+- **Repository Pattern** - Data access abstraction
+
+## 📥 Installation
+
+### Prerequisites
+- Windows 7/10/11
+- .NET Framework 4.8 or later
+- SQL Server 2012 or later
+- Visual Studio 2019 or later
+
+### Setup Instructions
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/ridabouakaz/Project-Driving-License-Management.git
+   cd Project-Driving-License-Management
+   ```
+
+2. **Database Configuration**
+   - Run the database creation scripts in `DatabaseScripts/`
+   - Update connection string in `clsDataAccessSettings.cs`:
+   ```csharp
+   public static string ConnectionString = "Server=.;Database=DVLD;User Id=sa;Password=your_password;";
+   ```
+
+3. **Build and Run**
+   - Open `DVLD.sln` in Visual Studio
+   - Restore NuGet packages
+   - Build solution (Ctrl + Shift + B)
+   - Run application (F5)
+
+4. **Default Login**
+   - Username: `admin`
+   - Password: `admin123`
+
+## 🏗 Modules Overview
+
+### 🔹 People Module
+- Person registration and management
+- Personal information storage
+- Search and filter functionality
+- Photo management
+
+### 🔹 Applications Module
+- **Local Driving License**: New license applications
+- **International License**: International permit applications  
+- **Renew Local License**: License renewal processing
+- **Replace Lost/Damaged License**: Replacement requests
+- **Release Detained License**: License release from detention
+
+### 🔹 Licenses Module
+- Local licenses management
+- International licenses processing
+- License detention and release
+- License status tracking
+
+### 🔹 Tests Module
+- Test types configuration
+- Test appointments management
+- Test results recording
+- Test fees management
+
+### 🔹 Drivers Module
+- Driver registration
+- Driver history tracking
+- License association management
+
+### 🔹 Users Module
+- User account management
+- Role-based permissions
+- Authentication system
+
+## 🗃 Database Schema
+
+### Core Tables
+- **Persons** - Personal information storage
+- **Applications** - All types of license applications
+- **Licenses** - Local driving licenses
+- **InternationalLicenses** - International driving permits
+- **Drivers** - Driver information
+- **Users** - System users
+- **Tests** - Driving test records
+- **TestTypes** - Test categories and configurations
+
+## 🚀 Usage
+
+### For System Administrators
+- Manage all system modules
+- Configure application settings
+- Manage users and permissions
+- Generate comprehensive reports
+
+### For License Officers
+- Process license applications
+- Issue and renew licenses
+- Manage international permits
+- Handle license replacements
+
+### For Test Officers
+- Schedule driving tests
+- Record test results
+- Manage test appointments
+- Update test status
+
+### For End Users
+- Apply for new licenses
+- Renew existing licenses
+- Request international permits
+- Track application status
+
+## 🤝 Contributing
+
+We welcome contributions! Please follow these steps:
+
+1. Fork the project
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+### Development Guidelines
+- Follow C# coding conventions
+- Use meaningful names for variables and methods
+- Add XML comments for public methods
+- Test all changes thoroughly
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📞 Support & Contact
+
+- Developer: Rida Bouakaz
+- Project Link: [https://github.com/ridabouakaz/Project-Driving-License-Management](https://github.com/ridabouakaz/Project-Driving-License-Management)
+
+## 🙏 Acknowledgments
+
+- Syncfusion for providing excellent UI components
+- Microsoft for .NET Framework and SQL Server
+- All contributors and testers
+
+---
+
+**⭐ If you find this project useful, please give it a star!**
+```
+
+هذا الـ README يعكس الهيكل الكامل للمشروع مع جميع المجلدات والوحدات المذكورة. يمكنك نسخه ولصقه مباشرة في ملف README.md في مستودع GitHub الخاص بك.
